@@ -1,9 +1,9 @@
-import {isDevelopmentOrTest} from '../utils/commonFunctions';
+import { isDevelopmentOrTest } from "../utils/commonFunctions";
 
-import i18n from 'i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
-import Backend from 'i18next-http-backend';
-import {initReactI18next} from 'react-i18next';
+import i18n from "i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
+import Backend from "i18next-http-backend";
+import { initReactI18next } from "react-i18next";
 
 const DEBUG = false;
 
@@ -15,11 +15,11 @@ i18n
     debug: isDevelopmentOrTest() && DEBUG,
     keySeparator: false,
     returnEmptyString: false,
-    fallbackLng: 'english',
-    load: 'languageOnly',
+    fallbackLng: "english",
+    load: "languageOnly",
     backend: {
-      loadPath: 'http://localhost:5000/locale_{{lng}}', //'https://api.covid19india.org/locales/locale_{{lng}}.json',
-      addPath: 'http://localhost:9999/',
+      loadPath: "http://localhost:5000/locale_{{lng}}", //'https://api.covid19india.org/locales/locale_{{lng}}.json',
+      addPath: "http://localhost:9999/",
     },
     saveMissing: isDevelopmentOrTest() && DEBUG,
     interpolation: {

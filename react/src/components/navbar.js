@@ -1,36 +1,36 @@
-import locales from '../i18n/locales.json';
+import locales from "../i18n/locales.json";
 
-import React, {useState, useRef} from 'react';
-import * as Icon from 'react-feather';
-import {useTranslation} from 'react-i18next';
-import {Link} from 'react-router-dom';
-import {useSpring, useTransition, animated} from 'react-spring';
-import {useLockBodyScroll, useWindowSize} from 'react-use';
+import React, { useState, useRef } from "react";
+import * as Icon from "react-feather";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { useSpring, useTransition, animated } from "react-spring";
+import { useLockBodyScroll, useWindowSize } from "react-use";
 
 const SLIDE_IN = {
-  position: 'absolute',
-  transform: 'translate3d(-20rem, 0, 0)',
-  height: '100vh',
+  position: "absolute",
+  transform: "translate3d(-20rem, 0, 0)",
+  height: "100vh",
   zIndex: -1,
 };
 
 const SLIDE_OUT = {
-  position: 'absolute',
-  transform: 'translate3d(10rem, 0, 0)',
+  position: "absolute",
+  transform: "translate3d(10rem, 0, 0)",
 };
 
 const SLIDE_IN_MOBILE = {
   opacity: 1,
-  position: 'absolute',
-  height: '100vh',
+  position: "absolute",
+  height: "100vh",
   top: 64,
   zIndex: 999,
 };
 
 const SLIDE_OUT_MOBILE = {
   opacity: 1,
-  position: 'absolute',
-  height: '100vh',
+  position: "absolute",
+  height: "100vh",
   top: 64,
   zIndex: 999,
 };
@@ -41,7 +41,7 @@ function Navbar({
   showLanguageSwitcher,
   setShowLanguageSwitcher,
 }) {
-  const {i18n, t} = useTranslation();
+  const { i18n, t } = useTranslation();
   const currentLanguage = Object.keys(locales).includes(i18n?.language)
     ? i18n?.language
     : i18n?.options?.fallbackLng[0];
@@ -51,15 +51,15 @@ function Navbar({
   useLockBodyScroll(expand);
   const windowSize = useWindowSize();
 
-  const [spring, set, stop] = useSpring(() => ({opacity: 0}));
-  set({opacity: 1});
+  const [spring, set, stop] = useSpring(() => ({ opacity: 0 }));
+  set({ opacity: 1 });
   stop();
 
   const transitions = useTransition(expand, null, {
     from: windowSize.width < 769 ? SLIDE_IN_MOBILE : SLIDE_IN,
     enter: windowSize.width < 769 ? SLIDE_OUT_MOBILE : SLIDE_OUT,
     leave: windowSize.width < 769 ? SLIDE_IN_MOBILE : SLIDE_IN,
-    config: {mass: 1, tension: 210, friction: 26},
+    config: { mass: 1, tension: 210, friction: 26 },
   });
 
   return (
@@ -80,7 +80,9 @@ function Navbar({
             setExpand(false);
           }}
         >
-          Commute<br/><span> NZ</span>
+          Commute
+          <br />
+          <span> NZ</span>
         </Link>
       </div>
 
@@ -96,30 +98,32 @@ function Navbar({
         }}
       >
         {windowSize.width < 769 && (
-          <span>{expand ? t('Close') : t('Menu')}</span>
+          <span>{expand ? t("Close") : t("Menu")}</span>
         )}
 
         {windowSize.width > 769 && (
           <React.Fragment>
             <span>
               <Link to="/">
-                <Icon.Home {...activeNavIcon('/')} />
+                <Icon.Home {...activeNavIcon("/")} />
               </Link>
             </span>
             <span>
               <Link to="/about">
-                <Icon.HelpCircle {...activeNavIcon('/about')} />
+                <Icon.HelpCircle {...activeNavIcon("/about")} />
               </Link>
             </span>
-            <span>{windowSize.width > 768 && <SunMoon {...{darkMode}} />}</span>
+            <span>
+              {windowSize.width > 768 && <SunMoon {...{ darkMode }} />}
+            </span>
           </React.Fragment>
         )}
       </div>
 
-      {transitions.map(({item, key, props}) =>
+      {transitions.map(({ item, key, props }) =>
         item ? (
           <animated.div key={key} style={props}>
-            <Expand {...{pages, setExpand, darkMode, windowSize}} />
+            <Expand {...{ pages, setExpand, darkMode, windowSize }} />
           </animated.div>
         ) : (
           <animated.div key={key} style={props}></animated.div>
@@ -129,9 +133,9 @@ function Navbar({
   );
 }
 
-function Expand({pages, setExpand, darkMode, windowSize}) {
+function Expand({ pages, setExpand, darkMode, windowSize }) {
   const expandElement = useRef(null);
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div
@@ -162,10 +166,10 @@ function Expand({pages, setExpand, darkMode, windowSize}) {
         return null;
       })}
 
-      {windowSize.width < 768 && <SunMoon {...{darkMode}} />}
+      {windowSize.width < 768 && <SunMoon {...{ darkMode }} />}
 
       <div className="expand-bottom">
-        <h5>{t('Powered by NZ Stats')}</h5>
+        <h5>{t("Powered by NZ Stats")}</h5>
       </div>
     </div>
   );
@@ -174,16 +178,16 @@ function Expand({pages, setExpand, darkMode, windowSize}) {
 export default Navbar;
 
 const navLinkProps = (path, animationDelay) => ({
-  className: `${window.location.pathname === path ? 'focused' : ''}`,
+  className: `${window.location.pathname === path ? "focused" : ""}`,
 });
 
 const activeNavIcon = (path) => ({
   style: {
-    stroke: window.location.pathname === path ? '#4c75f2' : '',
+    stroke: window.location.pathname === path ? "#4c75f2" : "",
   },
 });
 
-const SunMoon = ({darkMode}) => {
+const SunMoon = ({ darkMode }) => {
   return (
     <div
       className="SunMoon"
@@ -192,7 +196,7 @@ const SunMoon = ({darkMode}) => {
       }}
     >
       <div>
-        {darkMode.value ? <Icon.Sun color={'#ffc107'} /> : <Icon.Moon />}
+        {darkMode.value ? <Icon.Sun color={"#ffc107"} /> : <Icon.Moon />}
       </div>
     </div>
   );

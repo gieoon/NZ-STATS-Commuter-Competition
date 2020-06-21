@@ -1,36 +1,36 @@
-import React, {lazy, Suspense} from 'react';
-import './App.scss';
+import React, { lazy, Suspense } from "react";
+import "./App.scss";
 // import './App.css';
-import Navbar from './components/navbar.js';
-import {Helmet} from 'react-helmet';
-import ScrollToTop from './utils/scrollToTop';
-import useDarkMode from 'use-dark-mode';
+import Navbar from "./components/navbar.js";
+import { Helmet } from "react-helmet";
+import ScrollToTop from "./utils/scrollToTop";
+import useDarkMode from "use-dark-mode";
 import {
-  BrowserRouter as Router, 
-  Route, 
-  Switch, 
-  Redirect
-} from 'react-router-dom';
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 
 const schemaMarkup = {
-  '@context': 'http://schema.org/',
-  '@type': 'GO',
-  name: 'Visualizing Commuter Data | NZ Statistics',
-  alternateName: 'NZ Commuter Visualization',
-  url: 'http://nz-commuter.com',
-  image: '',
+  "@context": "http://schema.org/",
+  "@type": "GO",
+  name: "Visualizing Commuter Data | NZ Statistics",
+  alternateName: "NZ Commuter Visualization",
+  url: "http://nz-commuter.com",
+  image: "",
 };
 
-const Home = lazy(() => 
-  import('./components/home' /* webpackChunkName: "Home" */)
-)
+const Home = lazy(() =>
+  import("./components/home" /* webpackChunkName: "Home" */)
+);
 
-const FAQ = lazy(() => 
-  import('./components/faq' /* webpackChunkName: "About" */)
-)
+const FAQ = lazy(() =>
+  import("./components/faq" /* webpackChunkName: "About" */)
+);
 
 const District = lazy(() =>
-  import('./components/district' /* webpackChunkName: "District" */)
+  import("./components/district" /* webpackChunkName: "District" */)
 );
 
 function App() {
@@ -39,21 +39,21 @@ function App() {
 
   const pages = [
     {
-      pageLink: '/',
+      pageLink: "/",
       view: Home,
-      displayName: 'Home',
+      displayName: "Home",
       showInNavbar: true,
     },
     {
-      pageLink: '/about',
+      pageLink: "/about",
       view: FAQ,
-      displayName: 'About',
+      displayName: "About",
       showInNavbar: true,
     },
     {
-      pageLink: '/district/:districtCode',
+      pageLink: "/district/:districtCode",
       view: District,
-      displayName: 'Regional District',
+      displayName: "Regional District",
       showInNavbar: false,
     },
   ];
@@ -75,33 +75,32 @@ function App() {
       <Suspense fallback={<div />}>
         <Router>
           <ScrollToTop />
-          <Navbar 
+          <Navbar
             pages={pages}
-            {...{darkMode}}
+            {...{ darkMode }}
             // {...{showLanguageSwitcher, setShowLanguageSwitcher}}
           />
-          <Route 
-            render={({location}) => (
+          <Route
+            render={({ location }) => (
               <React.Fragment>
                 <Switch location={location}>
                   {pages.map((page, index) => {
-                    return(
-                      <Route 
+                    return (
+                      <Route
                         exact
                         path={page.pageLink}
-                        render={({match}) => <page.view />}
+                        render={({ match }) => <page.view />}
                         key={index}
                       />
                     );
                   })}
-                  <Redirect to='/' />
+                  <Redirect to="/" />
                 </Switch>
               </React.Fragment>
             )}
           />
         </Router>
       </Suspense>
-
     </div>
   );
 }

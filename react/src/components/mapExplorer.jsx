@@ -1,4 +1,4 @@
-import MapVisualizerLoader from './loaders/mapVisualizer';
+import MapVisualizerLoader from "./loaders/mapVisualizer";
 
 import {
   MAP_META,
@@ -7,20 +7,20 @@ import {
   MAP_TYPES,
   DISTRICT_NAMES,
   UNKNOWN_DISTRICT_KEY,
-  DISTRICT_POPULATIONS_MIL
-} from '../constants';
+  DISTRICT_POPULATIONS_MIL,
+} from "../constants";
 import {
   capitalize,
   formatNumber,
   formatDate,
   formatLastUpdated,
   getStatistic,
-} from '../utils/commonFunctions';
+} from "../utils/commonFunctions";
 
-import {PinIcon} from '@primer/octicons-v2-react';
-import classnames from 'classnames';
-import equal from 'fast-deep-equal';
-import produce from 'immer';
+import { PinIcon } from "@primer/octicons-v2-react";
+import classnames from "classnames";
+import equal from "fast-deep-equal";
+import produce from "immer";
 import React, {
   useCallback,
   useEffect,
@@ -29,15 +29,15 @@ import React, {
   useState,
   Suspense,
   lazy,
-} from 'react';
-import ReactDOM from 'react-dom';
-import * as Icon from 'react-feather';
-import {useTranslation} from 'react-i18next';
-import {useHistory} from 'react-router-dom';
-import {useSprings, animated} from 'react-spring';
+} from "react";
+import ReactDOM from "react-dom";
+import * as Icon from "react-feather";
+import { useTranslation } from "react-i18next";
+import { useHistory } from "react-router-dom";
+import { useSprings, animated } from "react-spring";
 
 const MapVisualizer = lazy(() =>
-  import('./mapVisualizer' /* webpackChunkName: "MapVisualizer" */)
+  import("./mapVisualizer" /* webpackChunkName: "MapVisualizer" */)
 );
 
 function MapExplorer({
@@ -52,7 +52,7 @@ function MapExplorer({
   setMapStatistic,
   isCountryLoaded = true,
 }) {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   const history = useHistory();
 
   const mapExplorerRef = useRef();
@@ -71,7 +71,7 @@ function MapExplorer({
   const currentMapData =
     currentMapMeta.mapType === MAP_TYPES.COUNTRY
       ? education_data
-      : {[currentMap.code]: education_data[currentMap.code]};
+      : { [currentMap.code]: education_data[currentMap.code] };
 
   useEffect(() => {
     if (regionHighlighted.districtName) {
@@ -97,7 +97,7 @@ function MapExplorer({
       }
     } else if (isCountryLoaded && currentMapMeta.mapType === MAP_TYPES.STATE) {
       setCurrentMap({
-        code: 'NZ',
+        code: "NZ",
         view: MAP_TYPES.COUNTRY,
         option: currentMap.option,
       });
@@ -122,8 +122,8 @@ function MapExplorer({
         const districts = education_data[stateCode].districts || {};
         const topDistrict = Object.keys(districts).sort(
           (a, b) =>
-            getStatistic(districts[b], 'total', mapStatistic) -
-            getStatistic(districts[a], 'total', mapStatistic)
+            getStatistic(districts[b], "total", mapStatistic) -
+            getStatistic(districts[a], "total", mapStatistic)
         )[0];
         ReactDOM.unstable_batchedUpdates(() => {
           setRegionHighlighted({
@@ -142,7 +142,7 @@ function MapExplorer({
       } else {
         ReactDOM.unstable_batchedUpdates(() => {
           setCurrentMap({
-            code: 'NZ',
+            code: "NZ",
             view:
               currentMap.option === MAP_OPTIONS.HOTSPOTS
                 ? MAP_TYPES.COUNTRY
@@ -150,7 +150,7 @@ function MapExplorer({
             option: currentMap.option,
           });
           setRegionHighlighted({
-            stateCode: 'TT',
+            stateCode: "TT",
             districtName: null,
           });
         });
@@ -172,7 +172,12 @@ function MapExplorer({
     return produce(stateData, (draft) => {
       draft.state = DISTRICT_NAMES[stateCode];
     });
-  }, [education_data, regionHighlighted.stateCode, currentMap.view, currentMap.code]);
+  }, [
+    education_data,
+    regionHighlighted.stateCode,
+    currentMap.view,
+    currentMap.code,
+  ]);
 
   const hoveredRegion = useMemo(() => {
     const hoveredData =
@@ -189,7 +194,11 @@ function MapExplorer({
         draft.population_millions =
           DISTRICT_POPULATIONS_MIL[regionHighlighted.stateCode];
     });
-  }, [education_data, regionHighlighted.stateCode, regionHighlighted.districtName]);
+  }, [
+    education_data,
+    regionHighlighted.stateCode,
+    regionHighlighted.districtName,
+  ]);
 
   const handleTabClick = (option) => {
     switch (option) {
@@ -235,7 +244,7 @@ function MapExplorer({
         });
         if (currentMapMeta.mapType === MAP_TYPES.COUNTRY)
           setRegionHighlighted({
-            stateCode: 'NZ',
+            stateCode: "NZ",
             districtName: null,
           });
         return;
@@ -247,11 +256,11 @@ function MapExplorer({
   const springs = useSprings(
     MAP_STATISTICS.length,
     MAP_STATISTICS.map((statistic) => ({
-      total: getStatistic(panelState, 'total', statistic),
-      delta: getStatistic(panelState, 'delta', statistic),
+      total: getStatistic(panelState, "total", statistic),
+      delta: getStatistic(panelState, "delta", statistic),
       from: {
-        total: getStatistic(panelState, 'total', statistic),
-        delta: getStatistic(panelState, 'delta', statistic),
+        total: getStatistic(panelState, "total", statistic),
+        delta: getStatistic(panelState, "delta", statistic),
       },
       config: {
         tension: 500,
@@ -263,16 +272,18 @@ function MapExplorer({
   return (
     <div
       className={classnames(
-        'MapExplorer',
-        {stickied: anchor === 'mapexplorer'},
-        {hidden: anchor && anchor !== 'mapexplorer'}
+        "MapExplorer",
+        { stickied: anchor === "mapexplorer" },
+        { hidden: anchor && anchor !== "mapexplorer" }
       )}
     >
       {window.innerWidth > 769 && (
         <div
-          className={classnames('anchor', {stickied: anchor === 'mapexplorer'})}
+          className={classnames("anchor", {
+            stickied: anchor === "mapexplorer",
+          })}
           onClick={() => {
-            setAnchor(anchor === 'mapexplorer' ? null : 'mapexplorer');
+            setAnchor(anchor === "mapexplorer" ? null : "mapexplorer");
           }}
         >
           <PinIcon />
@@ -281,18 +292,18 @@ function MapExplorer({
 
       <div className="header">
         <h1>
-          {currentMap.code === 'NZ'
-            ? t('Commuting in ')
-            : t(DISTRICT_NAMES[currentMap.code])}{' '}
-          {t('New Zealand')}
+          {currentMap.code === "NZ"
+            ? t("Commuting in ")
+            : t(DISTRICT_NAMES[currentMap.code])}{" "}
+          {t("New Zealand")}
         </h1>
         <h6>
-          {t('{{action}} over a {{mapType}} for more details', {
-            action: t(window.innerWidth <= 769 ? 'Tap' : 'Hover'),
+          {t("{{action}} over a {{mapType}} for more details", {
+            action: t(window.innerWidth <= 769 ? "Tap" : "Hover"),
             mapType: t(
               currentMapMeta.mapType === MAP_TYPES.COUNTRY
-                ? 'Regional District'
-                : 'Regional District'
+                ? "Regional District"
+                : "Regional District"
             ),
           })}
         </h6>
@@ -302,7 +313,7 @@ function MapExplorer({
         {MAP_STATISTICS.map((statistic, index) => (
           <div
             key={statistic}
-            className={classnames('stats', statistic, {
+            className={classnames("stats", statistic, {
               focused: statistic === mapStatistic,
             })}
             onClick={() => setMapStatistic(statistic)}
@@ -314,26 +325,26 @@ function MapExplorer({
                   formatNumber(Math.floor(total))
                 )}
               </animated.h1>
-              {statistic !== 'tested' && statistic !== 'active' && (
+              {statistic !== "tested" && statistic !== "active" && (
                 <animated.h6>
                   {springs[index].delta.interpolate((delta) =>
-                    delta > 0 ? `+${formatNumber(Math.floor(delta))}` : '\u00A0'
+                    delta > 0 ? `+${formatNumber(Math.floor(delta))}` : "\u00A0"
                   )}
                 </animated.h6>
               )}
-              {statistic === 'tested' && (
+              {statistic === "tested" && (
                 <h6>
                   {panelState?.total?.tested &&
-                    t('As of {{date}}', {
+                    t("As of {{date}}", {
                       date: formatDate(
-                        panelState.meta.tested['last_updated'],
-                        'dd MMM'
+                        panelState.meta.tested["last_updated"],
+                        "dd MMM"
                       ),
                     })}
                 </h6>
               )}
             </div>
-            {statistic === 'tested' && panelState?.total?.tested && (
+            {statistic === "tested" && panelState?.total?.tested && (
               <a href={panelState.meta.tested.source} target="_noblank">
                 <Icon.Link />
               </a>
@@ -348,18 +359,18 @@ function MapExplorer({
             className="map-button"
             onClick={() => history.push(`district/${currentMap.code}`)}
           >
-            {t('Visit state page')}
+            {t("Visit state page")}
             <Icon.ArrowRightCircle />
           </div>
         )}
 
         {currentMapMeta.mapType !== MAP_TYPES.DISTRICT &&
-          panelState?.meta?.['last_updated'] && (
+          panelState?.meta?.["last_updated"] && (
             <div className="last-update">
-              <h6>{t('Last updated')}</h6>
+              <h6>{t("Last updated")}</h6>
               <h3>
-                {`${formatLastUpdated(panelState.meta['last_updated'])} ${t(
-                  'ago'
+                {`${formatLastUpdated(panelState.meta["last_updated"])} ${t(
+                  "ago"
                 )}`}
               </h3>
             </div>
@@ -376,8 +387,8 @@ function MapExplorer({
         </h2>
 
         {currentMapMeta.mapType === MAP_TYPES.DISTRICT && (
-          <div className="map-button" onClick={() => switchMap('NZ')}>
-            {t('Back')}
+          <div className="map-button" onClick={() => switchMap("NZ")}>
+            {t("Back")}
           </div>
         )}
 
@@ -386,11 +397,11 @@ function MapExplorer({
             regionHighlighted.districtName) ||
             (currentMap.view === MAP_TYPES.DISTRICTS &&
               currentMap.option !== MAP_OPTIONS.TOTAL)) && (
-            <h1 className={classnames('district', mapStatistic)}>
+            <h1 className={classnames("district", mapStatistic)}>
               {formatNumber(
                 getStatistic(
                   hoveredRegion,
-                  'total',
+                  "total",
                   mapStatistic,
                   currentMap.option === MAP_OPTIONS.PER_MILLION
                     ? hoveredRegion.population_millions
@@ -401,7 +412,7 @@ function MapExplorer({
               <span>
                 {t(mapStatistic)}
                 {currentMap.option === MAP_OPTIONS.PER_MILLION &&
-                  ` ${t('per million')}`}
+                  ` ${t("per million")}`}
               </span>
             </h1>
           )}
@@ -438,7 +449,7 @@ function MapExplorer({
         {Object.values(MAP_OPTIONS).map((option) => (
           <div
             key={option}
-            className={classnames('tab', {
+            className={classnames("tab", {
               focused: currentMap.option === option,
             })}
             onClick={() => handleTabClick(option)}
@@ -451,14 +462,14 @@ function MapExplorer({
         ))}
       </div>
 
-      <h6 className={classnames('footnote')}>
-        &dagger; {`${t('Based on 2018 Census by NZ Statistics, see ')}`}
+      <h6 className={classnames("footnote")}>
+        &dagger; {`${t("Based on 2018 Census by NZ Statistics, see ")}`}
         <a
           href="https://www.stats.govt.nz/2018-census/there-and-back-again-data-visualisation-competition"
           target="_noblank"
-          style={{color: '#6c757d'}}
+          style={{ color: "#6c757d" }}
         >
-          {t('source')}
+          {t("source")}
         </a>
       </h6>
     </div>
@@ -476,12 +487,17 @@ const isEqual = (prevProps, currProps) => {
     return false;
   } else if (
     !equal(
-      prevProps.education_data?.NZ?.meta?.['last_updated'],
-      currProps.education_data?.NZ?.meta?.['last_updated']
+      prevProps.education_data?.NZ?.meta?.["last_updated"],
+      currProps.education_data?.NZ?.meta?.["last_updated"]
     )
   ) {
     return false;
-  } else if (!equal(prevProps.education_data?.NZ?.total, currProps.education_data?.NZ?.total)) {
+  } else if (
+    !equal(
+      prevProps.education_data?.NZ?.total,
+      currProps.education_data?.NZ?.total
+    )
+  ) {
     return false;
   }
   return true;
