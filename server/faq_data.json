@@ -1,0 +1,14 @@
+[
+    {
+        "question": "What is this website?",
+        "answer": "<div><p>This site was created to visualize New Zealand Commuter data as collected by NZ Statistics in the 2018 census.</p></div>"
+    },
+    {
+        "question": "Who created this site?",
+        "answer": "<div><p>Jun Kagaya built this site as an entry for the <a href='https://www.stats.govt.nz/2018-census/there-and-back-again-data-visualisation-competition/' target='_blank'>There & Back Again Data Visualization Competition</a></p></div>"
+    },
+    {
+        "question": "Who do I contact about this site?",
+        "answer": "<div><p>You can send an email to my email address <a href='mailto:jun.a.kagaya@gmail.com'>jun.a.kagaya@gmail.com</a> and I will try and get back to you as soon as possible.</p></div>"
+    }
+]

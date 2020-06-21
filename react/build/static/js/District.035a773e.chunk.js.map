@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/district.js"],"names":["District","props"],"mappings":"8IAAA,mEAEe,SAASA,EAASC,GAC7B,OACI","file":"static/js/District.035a773e.chunk.js","sourcesContent":["import React from 'react';\n\nexport default function District(props){\n    return(\n        <div></div>\n    );\n}\n"],"sourceRoot":""}

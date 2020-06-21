@@ -1,7 +1,7 @@
 # Understand the data
 from flask import Flask
 from flask_cors import CORS
-from flask import make_response
+from flask import make_response, jsonify
 import pandas as pd
 import matplotlib.pyplot as plt
 import descartes
@@ -10,14 +10,15 @@ from shapely.geometry import Point, Polygon
 from math import radians, cos, sin, asin, sqrt
 import numpy as np
 import shapefile
+import json
 
 # %matplotlib inline
 'exec(%matplotlib inline)'
 
  # count = 50870
-DIR = "./CSV/statsnz2018-census-main-means-of-travel-to-work-by-statistical-area-CSV/2018-census-main-means-of-travel-to-work-by-statistical-area.csv"
-DIR2 = "./CSV/statsnzstatistical-area-2-2018-centroid-inside-CSV/statistical-area-2-2018-centroid-inside.csv"
-DIR3 = "CSV/22430 statsnz2018-census-main-means-of-travel-to-education-by-statistical-CSV/2018-census-main-means-of-travel-to-education-by-statistical.csv"
+DIR = "../CSV/statsnz2018-census-main-means-of-travel-to-work-by-statistical-area-CSV/2018-census-main-means-of-travel-to-work-by-statistical-area.csv"
+DIR2 = "../CSV/statsnzstatistical-area-2-2018-centroid-inside-CSV/statistical-area-2-2018-centroid-inside.csv"
+DIR3 = "../CSV/22430 statsnz2018-census-main-means-of-travel-to-education-by-statistical-CSV/2018-census-main-means-of-travel-to-education-by-statistical.csv"
 
 # No truncation
 # pd.set_option('display.max_colwidth', -1)
@@ -28,7 +29,7 @@ work_df = pd.read_csv(DIR)
 departure_centroid_df = pd.read_csv(DIR2)
 departure_centroid_df.columns.values[1] = 'code'
 departure_centroid_df.columns = 'departure_' + departure_centroid_df.columns.values
-print(departure_centroid_df.columns)
+# print(departure_centroid_df.columns)
 destination_centroid_df = pd.read_csv(DIR2)
 destination_centroid_df.columns.values[1] = 'code'
 destination_centroid_df.columns = 'destination_' + destination_centroid_df.columns.values
@@ -110,11 +111,7 @@ work_df_combined['HAVERSINE_DISTANCE'] = work_df_combined.apply(lambda x: havers
 education_df_combined['HAVERSINE_DISTANCE'] = education_df_combined.apply(lambda x: haversine(x['departure_LONGITUDE'], x['departure_LATITUDE'], x['destination_LONGITUDE'], x['destination_LATITUDE']), axis = 1)
 # print(work_df.describe())
 # print(centroid_df.describe())
-print(work_df_combined.columns)
-print(work_df_combined.describe())
-print(education_df_combined.columns)
-print(education_df_combined.tail(5))
-print(education_df_combined.describe())
+
 
 # Pandas merge command to join on column
 # First, rename columns to have something to join on
@@ -125,6 +122,65 @@ print(education_df_combined.describe())
 # Extract columns we care about for now
 # education_df = education_df[['_code','SA2_name_usual_residence_address','LATITUDE','LONGITUDE']]
 # dfM = pd.merge(dfM, df3, on='_code', how='outer')
+# Extract columns to return
+work_df_combined = work_df_combined[[
+    'SA2_name_usual_residence_address',
+    'SA2_name_workplace_address',
+    'Work_at_home',
+    'Drive_a_private_car_truck_or_van',
+    'Drive_a_company_car_truck_or_van',
+    'Passenger_in_a_car_truck_van_or_company_bus',
+    'Public_bus',
+    'Train',
+    'Bicycle',
+    'Walk_or_jog',
+    'Ferry',
+    'Other',
+    'Total',
+    'departure_SA22018_V1_NAME',
+    'departure_LATITUDE',
+    'departure_LONGITUDE',
+    'destination_SA22018_V1_NAME',
+    'destination_LATITUDE',
+    'destination_LONGITUDE',
+    'HAVERSINE_DISTANCE'
+]]
+
+education_df_combined = education_df_combined[[
+    'SA2_name_usual_residence_address',
+    'SA2_name_educational_address',
+    'Study_at_home',
+    'Drive_a_car_truck_or_van',
+    'Passenger_in_a_car_truck_or_van',
+    'Train',
+    'Bicycle',
+    'Walk_or_jog',
+    'School_bus',
+    'Public_bus',
+    'Ferry',
+    'Other',
+    'Total',
+    'departure_SA22018_V1_NAME',
+    'departure_LATITUDE',
+    'departure_LONGITUDE',
+    'destination_SA22018_V1_NAME',
+    'destination_LATITUDE',
+    'destination_LONGITUDE',
+    'HAVERSINE_DISTANCE'
+]]
+
+'''
+print(work_df_combined.columns)
+print(work_df_combined.describe())
+print(education_df_combined.columns)
+print(education_df_combined.tail(5))
+print(education_df_combined.describe())
+'''
+
+education_df_combined = education_df_combined.head(5)
+print(education_df_combined.describe())
+
+
 work_csv_out = work_df_combined.to_csv()
 education_csv_out = education_df_combined.to_csv()
 
@@ -150,6 +206,28 @@ def work_csv():
 @app.route('/education_csv')
 def education_csv():
     response = make_response(education_csv_out)
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
+
+locale_english = {}
+with open('./locale/english.json') as en:
+    locale_english = json.load(en)
+
+@app.route('/locale_en')
+@app.route('/locale_english')
+def locale_en():
+    response = make_response(jsonify(locale_english))
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
+
+faq = []
+with open('./faq_data.json') as f:
+    faq = json.load(f)
+
+@app.route('/faq_data')
+def faq_data():
+    # print(faq)
+    response = make_response(jsonify(faq))
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 

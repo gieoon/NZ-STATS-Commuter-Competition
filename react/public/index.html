@@ -15,15 +15,113 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    
+    <!-- Font Preloading -->
+    <link
+      rel="preload"
+      href="/fonts/Archia/archia-semibold-webfont.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/Archia/archia-medium-webfont.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/Archia/archia-bold-webfont.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+    <style>
+      /* font-face declarations for preloaded fonts */
+      /* These are the only 3 fonts being used.
+      font-face declarations for thin, regular and light fonts should be added as needed */
+      @font-face {
+        font-family: 'Archia';
+        src: url('/fonts/Archia/archia-semibold-webfont.eot');
+        src: local('Archia'),
+          url('/fonts/Archia/archia-semibold-webfont.eot?#iefix')
+            format('embedded-opentype'),
+          url('/fonts/Archia/archia-semibold-webfont.woff2') format('woff2'),
+          url('/fonts/Archia/archia-semibold-webfont.woff') format('woff'),
+          url('/fonts/Archia/archia-semibold-webfont.ttf') format('truetype');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Archia';
+        src: url('/fonts/Archia/archia-medium-webfont.eot');
+        src: local('Archia'),
+          url('/fonts/Archia/archia-medium-webfont.eot?#iefix')
+            format('embedded-opentype'),
+          url('/fonts/Archia/archia-medium-webfont.woff2') format('woff2'),
+          url('/fonts/Archia/archia-medium-webfont.woff') format('woff'),
+          url('/fonts/Archia/archia-medium-webfont.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Archia';
+        src: url('/fonts/Archia/archia-bold-webfont.eot');
+        src: local('Archia'),
+          url('/fonts/Archia/archia-bold-webfont.eot?#iefix')
+            format('embedded-opentype'),
+          url('/fonts/Archia/archia-bold-webfont.woff2') format('woff2'),
+          url('/fonts/Archia/archia-bold-webfont.woff') format('woff'),
+          url('/fonts/Archia/archia-bold-webfont.ttf') format('truetype');
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.nz-commuter.com" />
+    <meta
+      property="og:title"
+      content="Visualizing Commuter data | NZ Statistics"
+    />
+    <meta
+      property="og:description"
+      content="Visualizing Commuter data using New Zealand's Census Statistics."
+    />
+    <meta
+      property="og:image"
+      content="https://www.nz-commuter.com/thumbnail.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.nz-commuter.com" />
+    <meta
+      property="twitter:title"
+      content="Coronavirus in India: Latest Map and Case Count"
+    />
+    <meta name="twitter:site" value="@nzcommuter" />
+    <meta
+      property="twitter:description"
+      content="Visualizing Commuter data using New Zealand's Census Statistics."
+    />
+    <meta
+      property="twitter:image"
+      content="https://www.nz-commuter.com/thumbnail.png"
+    />
+
     <title>Visualization of NZ Commuter Data</title>
   </head>
   <body>
