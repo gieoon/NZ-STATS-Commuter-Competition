@@ -21,8 +21,8 @@ function Home(props) {
     cityName: null,
   });
 
-  /*
-  const { data: work_data } = useStickySWR(
+  
+  const { data: workData } = useStickySWR(
     DATA_URL_ROOT + "/work_csv",
     fetcher,
     {
@@ -31,9 +31,8 @@ function Home(props) {
       revalidateOnFocus: false,
     }
   );
-  */
 
-  const { data: education_data } = useStickySWR(
+  const { data: educationData } = useStickySWR(
     DATA_URL_ROOT + "/education_csv",
     // 'https://api.covid19india.org/v3/min/timeseries.min.json',
     fetcher,
@@ -51,9 +50,9 @@ function Home(props) {
     "NZ",
     ...[
       ...new Set([
-        ...Object.keys(MAP_META).filter((stateCode) => stateCode !== "NZ"),
-        ...Object.keys(education_data || {}).filter(
-          (stateCode) => stateCode !== "NZ"
+        ...Object.keys(MAP_META).filter((districtCode) => districtCode !== "NZ"),
+        ...Object.keys(educationData || {}).filter(
+          (districtCode) => districtCode !== "NZ"
         ),
       ]),
     ].sort(),
@@ -75,11 +74,12 @@ function Home(props) {
           {/* {console.log(education_data)} */}
           {isVisible && (
             <React.Fragment>
-              {education_data && (
+              {educationData && workData && (
                 <Suspense fallback={<div />}>
                   <MapExplorer
                     stateCode="NZ"
-                    {...{ education_data }}
+                    {...{ educationData }}
+                    {...{ workData }}
                     {...{ mapStatistic, setMapStatistic }}
                     {...{ regionHighlighted, setRegionHighlighted }}
                     {...{ anchor, setAnchor }}

@@ -42,8 +42,8 @@ const MapVisualizer = lazy(() =>
 
 function MapExplorer({
   stateCode,
-  education_data,
-  //work_education_data,
+  educationData,
+  workData,
   regionHighlighted,
   setRegionHighlighted,
   anchor,
@@ -65,15 +65,30 @@ function MapExplorer({
         ? MAP_OPTIONS.TOTAL
         : MAP_OPTIONS.HOTSPOTS,
   });
-  // console.log(MAP_META)
+
+  const updateCurrentData = () => {
+    console.log(currentMap.option);
+    return {
+      educationMapData: 
+        currentMap.option !== MAP_OPTIONS.WORK
+        ? educationData
+        : [],
+      workMapData: 
+        currentMap.option !== MAP_OPTIONS.EDUCATION
+        ? workData
+        : []
+    }
+  }
+  // Define data based on the current tab.
+  const [data, setCurrentData] = useState(updateCurrentData);
+
+  
+
   const currentMapMeta = MAP_META[currentMap.code];
 
-  const currentMapData =
-    currentMapMeta.mapType === MAP_TYPES.COUNTRY
-      ? education_data
-      : { [currentMap.code]: education_data[currentMap.code] };
-
+  // Executes after a state update
   useEffect(() => {
+    setCurrentData(updateCurrentData);
     if (regionHighlighted.cityName) {
       if (
         currentMap.code !== regionHighlighted.districtCode &&
@@ -119,7 +134,7 @@ function MapExplorer({
         return;
       }
       if (newMapMeta.mapType === MAP_TYPES.STATE) {
-        const districts = education_data[districtCode].districts || {};
+        const districts = educationData[districtCode].districts || {};
         const topDistrict = Object.keys(districts).sort(
           (a, b) =>
             getStatistic(districts[b], "total", mapStatistic) -
@@ -133,10 +148,10 @@ function MapExplorer({
           setCurrentMap({
             code: districtCode,
             view: MAP_TYPES.COUNTRY,
-            option:
-              currentMap.option === MAP_OPTIONS.PER_MILLION
-                ? MAP_OPTIONS.TOTAL
-                : currentMap.option,
+            option: currentMap.option,
+              // currentMap.option === MAP_OPTIONS.TOTAL
+              //   ? MAP_OPTIONS.TOTAL
+              //   : currentMap.option,
           });
         });
       } else {
@@ -156,7 +171,7 @@ function MapExplorer({
         });
       }
     },
-    [education_data, currentMap.option, mapStatistic, setRegionHighlighted]
+    [educationData, workData, currentMap.option, mapStatistic, setRegionHighlighted]
   );
 
   useEffect(() => {
@@ -168,12 +183,12 @@ function MapExplorer({
       currentMap.view === MAP_TYPES.DISTRICTS
         ? regionHighlighted.districtCode
         : currentMap.code;
-    const districtData = education_data[districtCode] || {};
+    const districtData = educationData[districtCode] || {};
     return produce(districtData, (draft) => {
       draft.state = CITY_NAMES[districtCode];
     });
   }, [
-    education_data,
+    educationData,
     regionHighlighted.districtCode,
     currentMap.view,
     currentMap.code,
@@ -182,10 +197,10 @@ function MapExplorer({
   const hoveredRegion = useMemo(() => {
     const hoveredData =
       (regionHighlighted.districtCode
-        ? education_data[regionHighlighted.districtCode]?.districts?.[
+        ? educationData[regionHighlighted.districtCode]?.districts?.[
             regionHighlighted.cityName
           ]
-        : education_data[regionHighlighted.districtCode]) || {};
+        : educationData[regionHighlighted.districtCode]) || {};
     return produce(hoveredData, (draft) => {
       draft.name =
         regionHighlighted.districtCode ||
@@ -195,7 +210,8 @@ function MapExplorer({
           DISTRICT_POPULATIONS_MIL[regionHighlighted.districtCode];
     });
   }, [
-    education_data,
+    educationData,
+    workData,
     regionHighlighted.districtCode,
     regionHighlighted.cityName,
   ]);
@@ -218,7 +234,7 @@ function MapExplorer({
           });
         return;
       case MAP_OPTIONS.WORK:
-        if (currentMapMeta.mapType === MAP_TYPES.STATE) return;
+        // if (currentMapMeta.mapType === MAP_TYPES.COUNTRY) return;
         setCurrentMap({
           code: currentMap.code,
           view: MAP_TYPES.COUNTRY,
@@ -407,7 +423,7 @@ function MapExplorer({
       </div>
 
       <div ref={mapExplorerRef}>
-        {/* {console.log(currentMapData)} */}
+        {/* {console.log(workMapData)} */}
         {mapStatistic && (
           <Suspense
             fallback={
@@ -422,7 +438,9 @@ function MapExplorer({
           >
             <MapVisualizer
               currentMap={currentMap}
-              data={currentMapData}
+              data={data}
+              // workMapData={workMapData}
+              // educationMapData={educationMapData}
               changeMap={switchMap}
               regionHighlighted={regionHighlighted}
               setRegionHighlighted={setRegionHighlighted}
@@ -444,7 +462,7 @@ function MapExplorer({
           >
             <h4>
               {t(option)}
-              {option === MAP_OPTIONS.PER_MILLION && <sup>&dagger;</sup>}
+              {/* {option === MAP_OPTIONS.EDUCATION && <sup>&dagger;</sup>} */}
             </h4>
           </div>
         ))}
@@ -453,7 +471,7 @@ function MapExplorer({
       <h6 className={classnames("footnote")}>
         &dagger; {`${t("Based on 2018 Census by NZ Statistics, see ")}`}
         <a
-          href="https://www.stats.govt.nz/2018-census/there-and-back-again-data-visualisation-competition"
+          href="https://datafinder.stats.govt.nz/data/category/census/2018/commuter-view/?_ga=2.217129552.794612537.1592401476-705599149.1592401476"
           target="_noblank"
           style={{ color: "#6c757d" }}
         >

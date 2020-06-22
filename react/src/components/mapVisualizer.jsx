@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef } from "react";
+import React, { useEffect, useState, useMemo, useRef } from "react";
 import useSWR from "swr";
 import { json } from "d3-fetch";
 import { scaleOrdinal, scaleSqrt, scaleSequential } from "d3-scale";
@@ -51,6 +51,8 @@ const colorInterpolator = {
 function MapVisualizer({
   currentMap,
   data,
+  // workMapData,
+  // educationMapData,
   changeMap,
   regionHighlighted,
   setRegionHighlighted,
@@ -59,6 +61,11 @@ function MapVisualizer({
 }) {
   const { t } = useTranslation();
   const svgRef = useRef(null);
+
+  // District vs Country view
+  const [currentView, setCurrentView] = useState({
+    view: MAP_TYPES.COUNTRY
+  });
 
   const mapMeta = MAP_META[currentMap.code];
 
@@ -71,22 +78,29 @@ function MapVisualizer({
     { revalidateOnFocus: false, suspense: true }
   );
 
+  // console.log("currentMap.option: ", currentMap.option);
+
+  console.log(data);
+
+  //TODO this needs to be dependent on the tab that is currently showing.
   const statisticMax = useMemo(() => {
-    const stateCodes = Object.keys(data).filter(
+    const districtCodes = Object.keys(data).filter(
       (districtCode) =>
         districtCode !== "NZ" && Object.keys(MAP_META).includes(districtCode)
     );
     return currentMap.view === MAP_TYPES.COUNTRY
-      ? max(stateCodes, (districtCode) =>
+      ? max(districtCodes, (districtCode) =>
           getTotalStatistic(
             data[districtCode],
             statistic,
+            //TODO get the number of entries and total of all combined for this district.
+            // This can be hardcoded as an API endpoint.
             currentMap.option === MAP_OPTIONS.PER_MILLION
               ? DISTRICT_POPULATIONS_MIL[districtCode]
               : 1
           )
         )
-      : max(stateCodes, (districtCode) =>
+      : max(districtCodes, (districtCode) =>
           data[districtCode]?.districts
             ? max(Object.values(data[districtCode].districts), (districtData) =>
                 getTotalStatistic(districtData, statistic)
@@ -128,11 +142,7 @@ function MapVisualizer({
     );
 
     const svg = select(svgRef.current);
-    // console.log(svg.select('.regions'));
 
-    // TODO change this to make it scrollable and update the projection
-    // Click on a region to zoom into it and load data for it.
-    // Set the longitude & latitude for y = 0;
     const projection = geoMercator().fitSize([width, height], topology);
     const path = geoPath(projection);
 
@@ -158,11 +168,8 @@ function MapVisualizer({
           ).features;
 
     // Add id to each feature
-    // var str = ""; //TODO this is used to create the CITY_NAMES dictionary under ../constants
+    // var str = ""; // This is used to create the CITY_NAMES dictionary under ../constants
     features = features.map((f) => {
-      // console.log(f);
-      // const district = f.properties.NAME_1;
-      // const city = f.properties.HASC_2;
       // str += `${f.properties.NAME_2}: "${f.properties.NAME_2}",\n`
       const obj = Object.assign({}, f);
       obj.id = `${currentMap.code}-${f.properties.HASC_2}`; //`${currentMap.code}-${state}${district ? "-" + district : ""}`;
@@ -172,11 +179,10 @@ function MapVisualizer({
     // console.log(str)
 
     const fillColor = (d) => {
-      // console.log(d.id);
       const districtCode = CITY_CODES[d.properties.NAME_1];
       const city = d.properties.NAME_2;
       const districtData = data[districtCode];
-      const cityData = districtData?.districts?.[city]; //TODO, what is this?
+      const cityData = districtData?.districts?.[city];
       let n;
       if (currentMap.option === MAP_OPTIONS.HOTSPOTS) {
         n = cityData?.zone || 0;
@@ -207,7 +213,37 @@ function MapVisualizer({
       return "#ffffff00"; //'#c3c9c8';
     };
 
-    // console.log(data);
+    const districtClicked = (d) => {
+      var x, y, k;
+      var centered = null;
+      
+      // console.log('district clicked: ', width, height, path.centroid(d));
+
+      if(d && centered !== d){
+        var centroid = path.centroid(d);
+        x = centroid[0];
+        y = centroid[1];
+        k = 9; //4 //12
+        centered = d;
+      } else {
+        x = width / 2;
+        y = height / 2;
+        k = 1;
+        centered = null;
+      }
+      // console.log('x: ', x, "y: ", y, centroid);
+  
+      svg.selectAll('path')
+        .classed("active", centered && function(d) { return d === centered; });
+      
+      svg.transition()
+        .duration(D3_TRANSITION_DURATION)
+        .attr("transform", "translate(" + width * (k/2) + "," + height * (k/2.15) + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+        // .style("stroke-width", 1.5 / k + "px");
+        // .style("stroke-width", 0.125 + "rem");
+
+    }
+
     /* Draw map */
     const t = transition().duration(D3_TRANSITION_DURATION);
     let onceTouchedRegion = null;
@@ -223,7 +259,7 @@ function MapVisualizer({
           const sel = enter
             .append("path")
             .attr("d", path)
-            .attr("stroke-width", 1.8) //1.8 //1
+            .attr("stroke-width", .15) //1.8 //1
             .attr("stroke-opacity", 0) //0 //1
             .style("cursor", "pointer")
             .on("mouseenter", (d) => {
@@ -261,19 +297,26 @@ function MapVisualizer({
       )
       .attr("pointer-events", "all")
       .on("click", (d) => {
+        // Setting state here causes interpolation to pause.
+        setCurrentView({
+          view: MAP_TYPES.DISTRICT
+        });
+
         event.stopPropagation();
-        const districtCode = CITY_CODES[d.properties.NAME_1];
+        const districtCode = CITY_CODES[d.properties.NAME_2];
+        // Zoom in on the map
+        districtClicked(d);
         if (
           onceTouchedRegion ||
           mapMeta.mapType === MAP_TYPES.COUNTRY ||
-          !data[districtCode]?.NAME_1
+          !data[districtCode]?.NAME_2
         )
           return;
         // Disable pointer events till the new map is rendered
         svg.attr("pointer-events", "none");
         svg.select(".regions").selectAll("path").attr("pointer-events", "none");
         // Switch map
-        changeMap(CITY_CODES[d.properties.NAME_1]);
+        // changeMap(CITY_CODES[d.properties.NAME_1]);
       });
 
     regionSelection.select("title").text((d) => {
@@ -306,227 +349,59 @@ function MapVisualizer({
 
     /* ------- START OF Commute Lines -------- */
 
-    // Top of map is probably Three Kings Islands
-    // const top = -34.154944; // Latitude
-    // const topLongitude = 172.138113;
-    // Bottom of map is bottom of Stewart Island
-    // const bottom = -47.285522; // Latitude
-    // const bottomLongitude = 167.490438;
-    // const right = 179.794907;
-    // const left = 164.138842;
+    // CLear existing data
+    svg.selectAll('path.route').remove();
+    // svg.selectAll("circle.pin").remove();
 
-    /*
-    const circlesData = [
-      {
-        name: "Auckland",
-        location: {
-          latitude: -36.89981,
-          longitude: 174.537433,
-        },
-      },
-      {
-        name: "Canterbury",
-        location: {
-          latitude: -43.57914,
-          longitude: 172.355433,
-        },
-      },
-    ];
-    */
+    //For each key
+    Object.keys(data).forEach((key) => {
+      console.log(key);
+      const color = 
+        key === "workMapData" 
+        ? ZONE_COLORS.Red
+        : COLORS.active;
 
-    // console.log(data);
-
-    /*
-        const linesData = [
-          {
-            type: "LineString",
-            coordinates: [
-              [174.537433, -36.899810],
-              [172.355433, -43.579140]
-            ]
-          }
-        ]
-        */
-    
-    // const linesData = [
-    //   {
-    //     departure: [174.537433 /* Longitude */, -36.89981 /* Latitude */],
-    //     destination: [172.355433, -43.57914],
-    //   },
-    // ];
-    
-    /*
-        var arcs = svg.append("g")
-          .attr("class","arcs");
-
-        // http://bl.ocks.org/mhkeller/f41cceac3e7ed969eaeb
-        const lngLatToArc = (d, bend) => {
-          bend = bend || 1;
-          const from = d['departure'];
-          const to = d['destination'];
-
-          var sourceXY = projection(from),
-					targetXY = projection(to);
-
-          var sourceX = sourceXY[0],
-              sourceY = sourceXY[1];
-
-          var targetX = targetXY[0],
-              targetY = targetXY[1];
-
-          var dx = targetX - sourceX,
-              dy = targetY - sourceY,
-              dr = Math.sqrt(dx * dx + dy * dy)*bend;
-
-          console.log(dx, dy, dr);
-
-          // To avoid a whirlpool effect, make the bend direction consistent regardless of whether the source is east or west of the target
-          var west_of_source = (targetX - sourceX) < 0;
-          if (west_of_source) return "M" + targetX + "," + targetY + "A" + dr + "," + dr + " 0 0,1 " + sourceX + "," + sourceY;
-          return "M" + sourceX + "," + sourceY + "A" + dr + "," + dr + " 0 0,1 " + targetX + "," + targetY;
-        }
-        
-        svg.selectAll("path")
-          .data(linesData)
-          .enter()
-          .append("path")
-          .attr('d', (d) => lngLatToArc(d, 5));
-*/
-
-    /*
-        svg.selectAll("line")
-          .data(linesData)
-          .enter()
-          .append("line")
+      svg.selectAll('.routes')
+        .data(data[key]) // [] // to debug // data
+        .enter()
+        .append('path')
+          .attr('class', 'route')
           .attr('fill-opacity', 0.5)
-          .attr("stroke", "#ff0000")
-          .attr("stroke-width", 5)
-          .attr("fill", "#ff0000")
-          .attr("x1", d=>projection(d.departure)[0])
-          .attr("y1", d=>projection(d.departure)[1])
-          .attr("x2", d=>projection(d.destination)[0])
-          .attr("y2", d=>projection(d.destination)[1])
-*/
-/*
-        svg.selectAll('.route')
-          .data(linesData)
-          .enter()
-          .append('path')
-            .attr('fill-opacity', 0.5)
-            .attr("stroke", "#007bff")
-            .attr("stroke-width", 3)
-            .attr("fill", "#007bff")
-            .attr('d', function (d) {
-              var coordDepart = d.departure;
-              var coordArrivee = d.destination;
-              return path({
-                type: 'LineString',
-                coordinates: [
-                  coordDepart,
-                  coordArrivee
-                ]
-              });
-            })
-*/
-        svg.selectAll('.routes')
-          .data(data) // [] // to debug
-          .enter()
-          .append('path')
-            .attr('fill-opacity', 0.5)
-            .attr("stroke", "#007bff") //TODO get stroke Color, which sets based on work or education
-            .attr("stroke-width", 1)
-            .attr("fill", "#007bff")
-            .attr('d', function (d) {
-              var coordDepart = [d.departure_LONGITUDE, d.departure_LATITUDE];
-              var coordArrivee = [d.destination_LONGITUDE, d.destination_LATITUDE];
-              return path({
-                type: 'LineString',
-                coordinates: [
-                  coordDepart,
-                  coordArrivee
-                ]
-              });
-            })
+          .attr("stroke", color) //TODO get stroke Color, which sets based on work or education
+          .attr("stroke-width", .15)
+          .attr("fill", color)
+          .attr('d', function (d) {
+            var coordDepart = [d.departure_LONGITUDE, d.departure_LATITUDE];
+            var coordArrivee = [d.destination_LONGITUDE, d.destination_LATITUDE];
+            return path({
+              type: 'LineString',
+              coordinates: [
+                coordDepart,
+                coordArrivee
+              ]
+            });
+          })
 
-/*
-    // 1. Get the longitude & latitude
-    // 2. Find the midpoint
-    // 3. Add 20 to x, and reduce y by 20, this creates a slightly off-center point.
-    // 4. Draw a d3.curve on these three points.
-    // var lineGenerator = d3.line().curve(d3.curveCardinal);
+      // Add circles to each end
+      /*
+      svg
+        .selectAll(".pin")
+        .data(data)
+        .enter()
+        .append("circle", ".pin")
+          .attr('class', 'pin')
+          .attr("r", .15)
+          .attr("fill", color)
+          .attr("transform", function (d) {
+            return (
+              "translate(" +
+              projection([d.departure_LONGITUDE, d.departure_LATITUDE]) +
+              ")"
+            );
+          });
+      */
+    })
 
-    const linesData2 = [
-      {
-        departure: [174.537433, -36.89981],
-        intermediate: [173, -40],
-        destination: [172.355433, -43.57914],
-      },
-    ];
-
-    svg
-      .selectAll("curve")
-      // .attr('d', curve(linesData))
-      .data(linesData2)
-      .enter()
-      .append("path")
-      // .append('curve')
-      .attr("fill-opacity", 0.5)
-      .attr("stroke", "#007bff")
-      .attr("stroke-width", 3)
-      .attr("fill", "#007bff")
-      .attr("x1", (d) => projection(d.departure)[0])
-      .attr("y1", (d) => projection(d.departure)[1])
-      // .attr("x2", d=>projection(d.intermediate)[0])
-      // .attr("y2", d=>projection(d.intermediate)[1])
-      .attr("x2", (d) => projection(d.destination)[0])
-      .attr("y2", (d) => projection(d.destination)[1]);
-*/
-
-    // Plot an example point
-    /*
-    svg
-      .selectAll(".pin")
-      .data(circlesData)
-      .enter()
-      .append("circle", ".pin")
-      .attr("r", 4)
-      .attr("fill", "#007bff")
-      .attr("transform", function (d) {
-        return (
-          "translate(" +
-          projection([d.location.longitude, d.location.latitude]) +
-          ")"
-        );
-      });
-    */
-    /*
-        svg
-          .select('.circles')
-          .selectAll('circle')
-          .data(circlesData, (d) => d.id)
-          .join((enter) => 
-              enter
-                .append('circle')
-                .attr('transform', (d) => `translate(${path.centroid(d)})`)
-                .attr('fill-opacity', 0.5)
-            .style('cursor', 'pointer')
-            .attr('pointer-events', 'all')
-            .on('mouseenter', (d) => {
-              setRegionHighlighted({
-                stateCode: CITY_CODES[d.id],
-                districtName: d.properties.NAME_1 || UNKNOWN_DISTRICT_KEY,
-              });
-            })
-            .on('click', () => {
-              event.stopPropagation();
-            })
-          )
-          .transition(t)
-          .attr('fill', COLORS[statistic] + '70')
-          .attr('stroke', COLORS[statistic] + '70')
-          .attr('r', (d) => mapScale(d.value)
-        );
-        */
 
     /* ------ END OF Commute Lines ------- */
 
@@ -554,14 +429,19 @@ function MapVisualizer({
         ".state-borders"
         // '.district-borders'
       )
-      .attr("fill", "none")
+      .attr("fill", "none") //"none"
       .attr("stroke-width", function () {
         return (
-          mapMeta.mapType === MAP_TYPES.COUNTRY &&
+          // mapMeta.mapType === MAP_TYPES.COUNTRY
+          // console.log(currentView.view),
+          // currentView.view === MAP_TYPES.COUNTRY
           // currentMap.view === MAP_TYPES.DISTRICT
           // ? 0
           // : 1.5;
-          1.5
+          // Make this thinner when zoomed in.
+          // ? 1
+          // : .1
+          .25
         );
       })
       .selectAll("path")
@@ -602,7 +482,7 @@ function MapVisualizer({
           .append("path")
           .attr("d", path)
           .attr("fill", "none")
-          .attr("stroke-width", 1.5)
+          .attr("stroke-width", .15/*1.5*/)
       )
       .transition(t)
       .attr("stroke", "#343a4050");
@@ -749,3 +629,205 @@ function MapVisualizer({
 }
 
 export default MapVisualizer;
+
+// Top of map is probably Three Kings Islands
+    // const top = -34.154944; // Latitude
+    // const topLongitude = 172.138113;
+    // Bottom of map is bottom of Stewart Island
+    // const bottom = -47.285522; // Latitude
+    // const bottomLongitude = 167.490438;
+    // const right = 179.794907;
+    // const left = 164.138842;
+
+    /*
+    const circlesData = [
+      {
+        name: "Auckland",
+        location: {
+          latitude: -36.89981,
+          longitude: 174.537433,
+        },
+      },
+      {
+        name: "Canterbury",
+        location: {
+          latitude: -43.57914,
+          longitude: 172.355433,
+        },
+      },
+    ];
+    */
+
+    // console.log(data);
+
+    /*
+        const linesData = [
+          {
+            type: "LineString",
+            coordinates: [
+              [174.537433, -36.899810],
+              [172.355433, -43.579140]
+            ]
+          }
+        ]
+        */
+    
+    // const linesData = [
+    //   {
+    //     departure: [174.537433 /* Longitude */, -36.89981 /* Latitude */],
+    //     destination: [172.355433, -43.57914],
+    //   },
+    // ];
+    
+    /*
+        var arcs = svg.append("g")
+          .attr("class","arcs");
+
+        // http://bl.ocks.org/mhkeller/f41cceac3e7ed969eaeb
+        const lngLatToArc = (d, bend) => {
+          bend = bend || 1;
+          const from = d['departure'];
+          const to = d['destination'];
+
+          var sourceXY = projection(from),
+					targetXY = projection(to);
+
+          var sourceX = sourceXY[0],
+              sourceY = sourceXY[1];
+
+          var targetX = targetXY[0],
+              targetY = targetXY[1];
+
+          var dx = targetX - sourceX,
+              dy = targetY - sourceY,
+              dr = Math.sqrt(dx * dx + dy * dy)*bend;
+
+          console.log(dx, dy, dr);
+
+          // To avoid a whirlpool effect, make the bend direction consistent regardless of whether the source is east or west of the target
+          var west_of_source = (targetX - sourceX) < 0;
+          if (west_of_source) return "M" + targetX + "," + targetY + "A" + dr + "," + dr + " 0 0,1 " + sourceX + "," + sourceY;
+          return "M" + sourceX + "," + sourceY + "A" + dr + "," + dr + " 0 0,1 " + targetX + "," + targetY;
+        }
+        
+        svg.selectAll("path")
+          .data(linesData)
+          .enter()
+          .append("path")
+          .attr('d', (d) => lngLatToArc(d, 5));
+*/
+
+    /*
+        svg.selectAll("line")
+          .data(linesData)
+          .enter()
+          .append("line")
+          .attr('fill-opacity', 0.5)
+          .attr("stroke", "#ff0000")
+          .attr("stroke-width", 5)
+          .attr("fill", "#ff0000")
+          .attr("x1", d=>projection(d.departure)[0])
+          .attr("y1", d=>projection(d.departure)[1])
+          .attr("x2", d=>projection(d.destination)[0])
+          .attr("y2", d=>projection(d.destination)[1])
+*/
+/*
+        svg.selectAll('.route')
+          .data(linesData)
+          .enter()
+          .append('path')
+            .attr('fill-opacity', 0.5)
+            .attr("stroke", "#007bff")
+            .attr("stroke-width", 3)
+            .attr("fill", "#007bff")
+            .attr('d', function (d) {
+              var coordDepart = d.departure;
+              var coordArrivee = d.destination;
+              return path({
+                type: 'LineString',
+                coordinates: [
+                  coordDepart,
+                  coordArrivee
+                ]
+              });
+            })
+*/
+/*
+    // 1. Get the longitude & latitude
+    // 2. Find the midpoint
+    // 3. Add 20 to x, and reduce y by 20, this creates a slightly off-center point.
+    // 4. Draw a d3.curve on these three points.
+    // var lineGenerator = d3.line().curve(d3.curveCardinal);
+
+    const linesData2 = [
+      {
+        departure: [174.537433, -36.89981],
+        intermediate: [173, -40],
+        destination: [172.355433, -43.57914],
+      },
+    ];
+
+    svg
+      .selectAll("curve")
+      // .attr('d', curve(linesData))
+      .data(linesData2)
+      .enter()
+      .append("path")
+      // .append('curve')
+      .attr("fill-opacity", 0.5)
+      .attr("stroke", "#007bff")
+      .attr("stroke-width", 3)
+      .attr("fill", "#007bff")
+      .attr("x1", (d) => projection(d.departure)[0])
+      .attr("y1", (d) => projection(d.departure)[1])
+      // .attr("x2", d=>projection(d.intermediate)[0])
+      // .attr("y2", d=>projection(d.intermediate)[1])
+      .attr("x2", (d) => projection(d.destination)[0])
+      .attr("y2", (d) => projection(d.destination)[1]);
+*/
+
+    // Plot an example point
+    /*
+    svg
+      .selectAll(".pin")
+      .data(circlesData)
+      .enter()
+      .append("circle", ".pin")
+      .attr("r", 4)
+      .attr("fill", "#007bff")
+      .attr("transform", function (d) {
+        return (
+          "translate(" +
+          projection([d.location.longitude, d.location.latitude]) +
+          ")"
+        );
+      });
+    */
+    /*
+        svg
+          .select('.circles')
+          .selectAll('circle')
+          .data(circlesData, (d) => d.id)
+          .join((enter) => 
+              enter
+                .append('circle')
+                .attr('transform', (d) => `translate(${path.centroid(d)})`)
+                .attr('fill-opacity', 0.5)
+            .style('cursor', 'pointer')
+            .attr('pointer-events', 'all')
+            .on('mouseenter', (d) => {
+              setRegionHighlighted({
+                stateCode: CITY_CODES[d.id],
+                districtName: d.properties.NAME_1 || UNKNOWN_DISTRICT_KEY,
+              });
+            })
+            .on('click', () => {
+              event.stopPropagation();
+            })
+          )
+          .transition(t)
+          .attr('fill', COLORS[statistic] + '70')
+          .attr('stroke', COLORS[statistic] + '70')
+          .attr('r', (d) => mapScale(d.value)
+        );
+        */
