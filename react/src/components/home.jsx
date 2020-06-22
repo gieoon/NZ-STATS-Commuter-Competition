@@ -16,10 +16,12 @@ function Home(props) {
   const [anchor, setAnchor] = useState(null);
 
   const [regionHighlighted, setRegionHighlighted] = useState({
-    stateCode: "NZ",
-    districtName: null,
+    id: "NZ",
+    districtCode: "NZ", // Based on NAME_1
+    cityName: null,
   });
 
+  /*
   const { data: work_data } = useStickySWR(
     DATA_URL_ROOT + "/work_csv",
     fetcher,
@@ -29,6 +31,7 @@ function Home(props) {
       revalidateOnFocus: false,
     }
   );
+  */
 
   const { data: education_data } = useStickySWR(
     DATA_URL_ROOT + "/education_csv",
@@ -55,25 +58,6 @@ function Home(props) {
       ]),
     ].sort(),
   ];
-
-  const getCSVFromText = (allText) => {
-    var allTextLines = allText.split(/\r\n|\n/);
-    var headers = allTextLines[0].split(",");
-    var lines = [];
-
-    for (var i = 1; i < allTextLines.length; i++) {
-      var data = allTextLines[i].split(",");
-      if (data.length == headers.length) {
-        var row = {};
-        // Need to skip the first one, but will do this on the serverside after sanitizing data
-        for (var j = 0; j < headers.length; j++) {
-          row[headers[j]] = data[j];
-        }
-        lines.push(row);
-      }
-    }
-    return lines;
-  };
 
   //TODO render work & education data together.
   return (

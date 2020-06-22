@@ -23,7 +23,8 @@ import {
   MAP_OPTIONS,
   ZONE_COLORS,
   DISTRICT_POPULATIONS_MIL,
-  DISTRICT_CODES,
+  CITY_CODES,
+  CITY_NAMES,
   COLORS,
   UNKNOWN_DISTRICT_KEY,
 } from "../constants";
@@ -61,11 +62,10 @@ function MapVisualizer({
 
   const mapMeta = MAP_META[currentMap.code];
 
+  // Load topoJSON file
   const { data: geoData } = useSWR(
     mapMeta.geoDataFile,
     async (file) => {
-      // const f = await json(file);
-      // console.log(f);
       return await json(file);
     },
     { revalidateOnFocus: false, suspense: true }
@@ -106,7 +106,7 @@ function MapVisualizer({
   }, [data, currentMap.code, currentMap.option, statistic]);
 
   const mapScale = useMemo(() => {
-    console.log(currentMap.option);
+    // console.log(currentMap.option);
     if (currentMap.option === MAP_OPTIONS.ZONES) {
       return scaleOrdinal(Object.keys(ZONE_COLORS), Object.values(ZONE_COLORS));
     } else if (currentMap.option === MAP_OPTIONS.HOTSPOTS) {
@@ -158,32 +158,36 @@ function MapVisualizer({
           ).features;
 
     // Add id to each feature
+    // var str = ""; //TODO this is used to create the CITY_NAMES dictionary under ../constants
     features = features.map((f) => {
       // console.log(f);
-      const district = f.properties.NAME_1;
-      const state = f.properties.HASC_2;
+      // const district = f.properties.NAME_1;
+      // const city = f.properties.HASC_2;
+      // str += `${f.properties.NAME_2}: "${f.properties.NAME_2}",\n`
       const obj = Object.assign({}, f);
-      obj.id = `${currentMap.code}-${state}${district ? "-" + district : ""}`;
+      obj.id = `${currentMap.code}-${f.properties.HASC_2}`; //`${currentMap.code}-${state}${district ? "-" + district : ""}`;
       return obj;
     });
 
+    // console.log(str)
+
     const fillColor = (d) => {
       // console.log(d.id);
-      const stateCode = DISTRICT_CODES[d.properties.HASC_2];
-      const district = d.properties.NAME_1;
-      const stateData = data[stateCode];
-      const districtData = stateData?.districts?.[district];
+      const districtCode = CITY_CODES[d.properties.NAME_1];
+      const city = d.properties.NAME_2;
+      const districtData = data[districtCode];
+      const cityData = districtData?.districts?.[city]; //TODO, what is this?
       let n;
       if (currentMap.option === MAP_OPTIONS.HOTSPOTS) {
-        n = districtData?.zone || 0;
+        n = cityData?.zone || 0;
       } else {
-        if (district) n = getTotalStatistic(districtData, statistic);
+        if (city) n = getTotalStatistic(cityData, statistic);
         else
           n = getTotalStatistic(
-            stateData,
+            districtData,
             statistic,
             currentMap.option === MAP_OPTIONS.PER_MILLION
-              ? DISTRICT_POPULATIONS_MIL[stateCode]
+              ? DISTRICT_POPULATIONS_MIL[districtCode]
               : 1
           );
       }
@@ -193,7 +197,7 @@ function MapVisualizer({
     };
 
     const strokeColor = (d) => {
-      // return '#c3c9c8' //'#d2d6d5'; //'#6c757d91'; //'#000000'; //TODO remove this;
+      return '#000000'; //'#c3c9c8' //'#d2d6d5'; //'#6c757d91'; //'#000000'; //TODO remove this;
       return currentMap.option === MAP_OPTIONS.ZONES
         ? "#343a40"
         : COLORS[statistic];
@@ -203,7 +207,7 @@ function MapVisualizer({
       return "#ffffff00"; //'#c3c9c8';
     };
 
-    // console.log(currentMap.option, features);
+    // console.log(data);
     /* Draw map */
     const t = transition().duration(D3_TRANSITION_DURATION);
     let onceTouchedRegion = null;
@@ -223,10 +227,13 @@ function MapVisualizer({
             .attr("stroke-opacity", 0) //0 //1
             .style("cursor", "pointer")
             .on("mouseenter", (d) => {
-              console.log("region entered: ", d);
+              // console.log("region entered: ", d);
               setRegionHighlighted({
-                stateCode: DISTRICT_CODES[d.properties.HASC_2],
-                districtName: d.properties.NAME_1,
+                districtCode: CITY_CODES[d.properties.NAME_2], // Unique on city names
+                cityName: d.properties.NAME_2,
+                  // d.properties.TYPE_2 === "City"
+                  // ? d.properties.NAME_2
+                  // : d.properties.NAME_1,
               });
               // svg.select(this).style('fill', '#ff0000');
             })
@@ -255,35 +262,34 @@ function MapVisualizer({
       .attr("pointer-events", "all")
       .on("click", (d) => {
         event.stopPropagation();
-        const stateCode = DISTRICT_CODES[d.id];
+        const districtCode = CITY_CODES[d.properties.NAME_1];
         if (
           onceTouchedRegion ||
           mapMeta.mapType === MAP_TYPES.COUNTRY ||
-          !data[stateCode]?.NAME_1
+          !data[districtCode]?.NAME_1
         )
           return;
         // Disable pointer events till the new map is rendered
         svg.attr("pointer-events", "none");
         svg.select(".regions").selectAll("path").attr("pointer-events", "none");
         // Switch map
-        changeMap(DISTRICT_CODES[d.id]);
+        changeMap(CITY_CODES[d.properties.NAME_1]);
       });
 
     regionSelection.select("title").text((d) => {
       if (currentMap.option === MAP_OPTIONS.TOTAL) {
-        const state = d.id;
-        const stateCode = DISTRICT_CODES[state];
         const district = d.properties.NAME_1;
-
-        const stateData = data[stateCode];
-        const districtData = stateData?.districts?.[district];
+        const districtCode = CITY_CODES[district];
+        const city = d.properties.NAME_2;
+        const districtData = data[districtCode];
+        const cityData = districtData?.city?.[city];
         let n;
-        if (district) n = getTotalStatistic(districtData, statistic);
-        else n = getTotalStatistic(stateData, statistic);
+        if (city) n = getTotalStatistic(cityData, statistic);
+        else n = getTotalStatistic(districtData, statistic);
         return (
           formatNumber(100 * (n / (statisticTotal || 0.001))) +
           "% from " +
-          capitalizeAll(district ? district : state)
+          capitalizeAll(city ? city : district)
         );
       }
     });
@@ -309,6 +315,7 @@ function MapVisualizer({
     // const right = 179.794907;
     // const left = 164.138842;
 
+    /*
     const circlesData = [
       {
         name: "Auckland",
@@ -325,8 +332,9 @@ function MapVisualizer({
         },
       },
     ];
+    */
 
-    console.log(data);
+    // console.log(data);
 
     /*
         const linesData = [
@@ -339,13 +347,14 @@ function MapVisualizer({
           }
         ]
         */
-
-    const linesData = [
-      {
-        departure: [174.537433, -36.89981],
-        destination: [172.355433, -43.57914],
-      },
-    ];
+    
+    // const linesData = [
+    //   {
+    //     departure: [174.537433 /* Longitude */, -36.89981 /* Latitude */],
+    //     destination: [172.355433, -43.57914],
+    //   },
+    // ];
+    
     /*
         var arcs = svg.append("g")
           .attr("class","arcs");
@@ -398,15 +407,15 @@ function MapVisualizer({
           .attr("x2", d=>projection(d.destination)[0])
           .attr("y2", d=>projection(d.destination)[1])
 */
-
+/*
         svg.selectAll('.route')
           .data(linesData)
           .enter()
           .append('path')
             .attr('fill-opacity', 0.5)
-            .attr("stroke", "#ff0000")
-            .attr("stroke-width", 5)
-            .attr("fill", "#ff0000")
+            .attr("stroke", "#007bff")
+            .attr("stroke-width", 3)
+            .attr("fill", "#007bff")
             .attr('d', function (d) {
               var coordDepart = d.departure;
               var coordArrivee = d.destination;
@@ -418,7 +427,26 @@ function MapVisualizer({
                 ]
               });
             })
-
+*/
+        svg.selectAll('.routes')
+          .data(data) // [] // to debug
+          .enter()
+          .append('path')
+            .attr('fill-opacity', 0.5)
+            .attr("stroke", "#007bff") //TODO get stroke Color, which sets based on work or education
+            .attr("stroke-width", 1)
+            .attr("fill", "#007bff")
+            .attr('d', function (d) {
+              var coordDepart = [d.departure_LONGITUDE, d.departure_LATITUDE];
+              var coordArrivee = [d.destination_LONGITUDE, d.destination_LATITUDE];
+              return path({
+                type: 'LineString',
+                coordinates: [
+                  coordDepart,
+                  coordArrivee
+                ]
+              });
+            })
 
 /*
     // 1. Get the longitude & latitude
@@ -455,6 +483,7 @@ function MapVisualizer({
 */
 
     // Plot an example point
+    /*
     svg
       .selectAll(".pin")
       .data(circlesData)
@@ -469,6 +498,7 @@ function MapVisualizer({
           ")"
         );
       });
+    */
     /*
         svg
           .select('.circles')
@@ -483,7 +513,7 @@ function MapVisualizer({
             .attr('pointer-events', 'all')
             .on('mouseenter', (d) => {
               setRegionHighlighted({
-                stateCode: DISTRICT_CODES[d.id],
+                stateCode: CITY_CODES[d.id],
                 districtName: d.properties.NAME_1 || UNKNOWN_DISTRICT_KEY,
               });
             })
@@ -581,8 +611,8 @@ function MapVisualizer({
     svg.attr("pointer-events", "auto").on("click", () => {
       if (mapMeta.mapType !== MAP_TYPES.COUNTRY) {
         setRegionHighlighted({
-          stateCode: "NZ",
-          districtName: null,
+          districtCode: "NZ",
+          cityName: null,
         });
       }
     });
@@ -597,6 +627,64 @@ function MapVisualizer({
     mapScale,
     statistic,
     statisticTotal,
+  ]);
+
+  useEffect(() => {
+    // console.log(regionHighlighted);
+    const district = CITY_NAMES[regionHighlighted.districtCode];
+    const city = regionHighlighted.cityName;
+
+    const svg = select(svgRef.current);
+    // if (currentMap.option === MAP_OPTIONS.HOTSPOTS) {
+    //   svg
+    //     .select('.circles')
+    //     .selectAll('circle')
+    //     .attr('fill-opacity', (d) => {
+    //       const highlighted =
+    //         state === d.properties.st_nm &&
+    //         (!district ||
+    //           district === d.properties?.district ||
+    //           (district === UNKNOWN_DISTRICT_KEY && !d.properties.district));
+    //       return highlighted ? 1 : 0.5;
+    //     });
+    // } else {
+      svg
+        .select('.regions')
+        .selectAll('path')
+        .each(function (d) {
+          // console.log('highlighting: ', d);
+          /*
+          const highlighted =
+            district === d.properties.NAME_1 &&
+            (currentMap.view === MAP_TYPES.COUNTRY ||
+              city === d.properties?.NAME_2);
+          */
+          const highlighted =
+            city === d.properties.NAME_2;
+          /*
+          console.log(
+            'highlighted: ', highlighted, 
+            // "currentMap.view: ", currentMap.view,
+            // "currentMap.view === MAP_TYPES.COUNTRY: ", 
+            // currentMap.view === MAP_TYPES.COUNTRY,
+            "district: ", district,
+            "d.properties.NAME_1: ", d.properties.NAME_1,
+            "city: ", city,
+            "d.properties?.NAME_2: ", d.properties?.NAME_2
+          );
+          */
+          if (highlighted) this.parentNode.appendChild(this);
+          select(this).attr('stroke-opacity', highlighted ? 1 : 0);
+        });
+    // }
+  }, [
+    geoData,
+    data,
+    currentMap.option,
+    currentMap.view,
+    regionHighlighted.districtCode,
+    regionHighlighted.cityName,
+    statistic,
   ]);
 
   return (

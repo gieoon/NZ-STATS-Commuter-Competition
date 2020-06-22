@@ -9,9 +9,6 @@ export const PRIMARY_STATISTICS = [
   "deceased",
 ];
 
-// CONVERT FROM id >> Human Friendly Name
-export const DISTRICT_CODES = {};
-
 export const MAP_STATISTICS = [...PRIMARY_STATISTICS, "tested"];
 
 export const MAP_TYPES = {
@@ -21,8 +18,8 @@ export const MAP_TYPES = {
 
 export const MAP_OPTIONS = {
   TOTAL: "Total",
-  PER_MILLION: "Per million",
-  HOTSPOTS: "Hotspots",
+  WORK: "Work",
+  EDUCATION: "Education",
 };
 
 // ISO suffix of things.
@@ -66,23 +63,109 @@ export const MAP_META = {
 export const UNKNOWN_DISTRICT_KEY = "Unknown";
 
 export const DISTRICT_NAMES = {
-  NORTHLAND: "Northland",
-  AUCKLAND: "Auckland",
-  WAIKATO: "Waikato",
-  BAY_OF_PLENTY: "Bay of Plenty",
-  GISBORNE: "Gisborne",
-  HAWKES_BAY: "Hawke's bay",
-  TARANAKI: "Taranaki",
-  MANAWATU_WHANGANUI: "Manawatu Whanganui",
-  WELLINGTON: "Wellington",
-  TASMAN: "Tasman",
-  NELSON: "Nelson",
-  MARLBOROUGH: "Marlborough",
-  WEST_COAST: "West Coast",
-  CANTERBURY: "Canterbury",
-  OTAGO: "Otago",
-  SOUTHLAND: "Southland",
+  Northland: "Northland",
+  Auckland: "Auckland",
+  Waikato: "Waikato",
+  'Bay of Plenty': "Bay of Plenty",
+  Gisborne: "Gisborne",
+  "Hawke's Bay": "Hawke's Bay",
+  Taranaki: "Taranaki",
+  "Manawatu-Wanganui": "Manawatu-Wanganui",
+  Wellington: "Wellington",
+  Tasman: "Tasman",
+  Nelson: "Nelson",
+  Marlborough: "Marlborough",
+  "West Coast": "West Coast",
+  Canterbury: "Canterbury",
+  Otago: "Otago",
+  Southland: "Southland",
 };
+
+export const CITY_NAMES = {
+  Auckland: "Auckland",
+  Franklin: "Franklin",
+  Manukau: "Manukau",
+  Hamilton: "Hamilton",
+  Hauraki: "Hauraki",
+  "Matamata-Piako": "Matamata-Piako",
+  Otorohanga: "Otorohanga",
+  Rotorua: "Rotorua",
+  "South Waikato": "South Waikato",
+  Taupo: "Taupo",
+  "Thames-Coromandel": "Thames-Coromandel",
+  Rodney: "Rodney",
+  Waitakere: "Waitakere",
+  Opotiki: "Opotiki",
+  Rotorua: "Rotorua",
+  Taupo: "Taupo",
+  "Western Bay of Plenty": "Western Bay of Plenty",
+  Whakatane: "Whakatane",
+  Ashburton: "Ashburton",
+  Christchurch: "Christchurch",
+  Hurunui: "Hurunui",
+  Kaikoura: "Kaikoura",
+  Mackenzie: "Mackenzie",
+  Selwyn: "Selwyn",
+  Timaru: "Timaru",
+  Waimakariri: "Waimakariri",
+  Waimate: "Waimate",
+  Waitaki: "Waitaki",
+  Gisborne: "Gisborne",
+  "Central Hawke's Bay": "Central Hawke's Bay",
+  Hastings: "Hastings",
+  "Hastings city": "Hastings city",
+  Napier: "Napier",
+  Wairoa: "Wairoa",
+  Horowhenua: "Horowhenua",
+  Manawatu: "Manawatu",
+  "Palmerston North": "Palmerston North",
+  Rangitikei: "Rangitikei",
+  Ruapehu: "Ruapehu",
+  Tararua: "Tararua",
+  Wanganui: "Wanganui",
+  Marlborough: "Marlborough",
+  Nelson: "Nelson",
+  Tasman: "Tasman",
+  "Far North": "Far North",
+  Kaipara: "Kaipara",
+  Whangarei: "Whangarei",
+  "Central Otago": "Central Otago",
+  Clutha: "Clutha",
+  Dunedin: "Dunedin",
+  "Queenstown-Lakes": "Queenstown-Lakes",
+  Waitaki: "Waitaki",
+  Gore: "Gore",
+  Invercargill: "Invercargill",
+  Southland: "Southland",
+  "New Plymouth": "New Plymouth",
+  "South Taranaki": "South Taranaki",
+  Stratford: "Stratford",
+  Franklin: "Franklin",
+  Waikato: "Waikato",
+  Waipa: "Waipa",
+  Waitomo: "Waitomo",
+  Carterton: "Carterton",
+  "Hutt city": "Hutt city",
+  "Kapiti Coast": "Kapiti Coast",
+  Masterton: "Masterton",
+  Porirua: "Porirua",
+  "South Wairarapa": "South Wairarapa",
+  "Upper Hutt": "Upper Hutt",
+  Wellington: "Wellington",
+  Buller: "Buller",
+  Grey: "Grey",
+  Westland: "Westland",
+}
+
+// CONVERT FROM id >> Human Friendly Name
+// This is required for the highlighting functionality.
+const cityCodesMap = {};
+// Reverse dictionary of DISTRICT_NAMES;
+Object.keys(CITY_NAMES).map((key, index) => {
+  cityCodesMap[CITY_NAMES[key]] = key;
+  return null;
+});
+export const CITY_CODES = cityCodesMap;
 
 // https://en.wikipedia.org/wiki/Regions_of_New_Zealand
 export const DISTRICT_POPULATIONS_MIL = {

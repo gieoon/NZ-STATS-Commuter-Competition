@@ -145,6 +145,7 @@ work_df_combined = work_df_combined[[
     'destination_LONGITUDE',
     'HAVERSINE_DISTANCE'
 ]]
+# work_df_combined.drop(work_df_combined.columns[[1]], axis=1, inplace=True)
 
 education_df_combined = education_df_combined[[
     'SA2_name_usual_residence_address',
@@ -168,6 +169,7 @@ education_df_combined = education_df_combined[[
     'destination_LONGITUDE',
     'HAVERSINE_DISTANCE'
 ]]
+# education_df_combined.drop(education_df_combined.columns[[1]], axis=1, inplace=True)
 
 '''
 print(work_df_combined.columns)
@@ -177,12 +179,13 @@ print(education_df_combined.tail(5))
 print(education_df_combined.describe())
 '''
 
-education_df_combined = education_df_combined.head(5)
+# education_df_combined = education_df_combined.head(5)
+# education_df_combined = education_df_combined.sample(10000, axis=0) # 100 random rows
 print(education_df_combined.describe())
 
 
-work_csv_out = work_df_combined.to_csv()
-education_csv_out = education_df_combined.to_csv()
+work_csv_out = work_df_combined.to_csv(index=False)
+education_csv_out = education_df_combined.to_csv(index=False)
 
 # print(dfM.describe()) # count = 50970
 # print(dfM.columns)

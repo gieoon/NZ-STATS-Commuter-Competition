@@ -106,8 +106,35 @@ export const getStatistic = (data, type, statistic, normalizer = 1) => {
 };
 
 export const fetcher = (url) => {
-  return fetch(url).then((response) => {
-    // console.log('got response: ', response.body.getReader());
-    return response; //.json();
+  return fetch(url).then( (response) => {
+    // console.log('got response: ', await response.text());
+    return response.text().then((csv) =>
+      txt2Array(csv)
+    ) //.json();
+  })
+  .catch(function(err) {
+    console.log("Error fetching data: ", err);
   });
 };
+
+// Convert input text into an array of objects
+export const txt2Array = (allText) => {
+  // console.log(allText);
+  var allTextLines = allText.split(/\r\n|\n/);
+  var headers = allTextLines[0].split(",");
+  var lines = [];
+
+  for (var i = 1; i < allTextLines.length; i++) {
+    var data = allTextLines[i].split(",");
+    if (data.length == headers.length) {
+      var row = {};
+      // Need to skip the first one, but will do this on the serverside after sanitizing data
+      for (var j = 0; j < headers.length; j++) {
+        row[headers[j]] = data[j];
+      }
+      lines.push(row);
+    }
+  }
+  return lines;
+};
+
