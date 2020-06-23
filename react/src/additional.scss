@@ -1,0 +1,33 @@
+$gray: #6c757d;
+
+// Protruding left panel
+.leftPanel {
+
+    position: fixed!important;
+    left: 0;
+    top: 0;
+    min-width: 15rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 999;
+
+    .header {
+        color: $gray;
+    }
+}
+
+.App {
+    overflow: hidden;
+    max-height: 100vh;
+}
+
+.MapExplorer .header {
+    position: absolute;
+}
+
+.MapExplorer .map-stats {
+    position: absolute;
+}

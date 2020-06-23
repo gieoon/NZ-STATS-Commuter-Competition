@@ -2,6 +2,18 @@
 export const DATA_URL_ROOT = "http://localhost:5000";
 export const BASE_URL = "http://localhost:3000/";
 
+export const MODES_OF_TRANSPORT = [
+  "Work/Study from home",
+  "Drive car/truck/van",
+  "Passenger in car/truck/van",
+  "Train",
+  "Bicycle",
+  "Walk/jog",
+  "School/Public bus",
+  "Ferry",
+  "Other"
+]
+
 // What to show at the top
 export const DISTRICT_STATISTICS_TOTAL = [
   "Total",

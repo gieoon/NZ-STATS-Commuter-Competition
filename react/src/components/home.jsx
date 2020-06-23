@@ -5,6 +5,7 @@ import { fetcher } from "../utils/commonFunctions";
 import useStickySWR from "../hooks/useStickySwr";
 import { useIsVisible } from "react-is-visible";
 import { Helmet } from "react-helmet";
+import LeftPanel from "./leftPanel";
 
 const MapExplorer = lazy(() =>
   import("./mapExplorer" /* webpackChunkName: "MapExplorer" */)
@@ -58,7 +59,6 @@ function Home(props) {
     ].sort(),
   ];
 
-  //TODO render work & education data together.
   return (
     <React.Fragment>
       <Helmet>
@@ -69,9 +69,9 @@ function Home(props) {
         />
       </Helmet>
       <div className="Home">
+        <LeftPanel />
+        
         <div className="home-right" ref={nzMap}>
-          {/* {console.log(work_data)} */}
-          {/* {console.log(education_data)} */}
           {isVisible && (
             <React.Fragment>
               {educationData && workData && (

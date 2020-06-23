@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import "./App.scss";
+import './additional.scss';
 // import './App.css';
 import Navbar from "./components/navbar.js";
 import { Helmet } from "react-helmet";
@@ -75,11 +76,11 @@ function App() {
       <Suspense fallback={<div />}>
         <Router>
           <ScrollToTop />
-          <Navbar
+          {/* <Navbar
             pages={pages}
             {...{ darkMode }}
             // {...{showLanguageSwitcher, setShowLanguageSwitcher}}
-          />
+          /> */}
           <Route
             render={({ location }) => (
               <React.Fragment>

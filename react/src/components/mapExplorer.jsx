@@ -3,6 +3,7 @@ import MapVisualizerLoader from "./loaders/mapVisualizer";
 import {
   MAP_META,
   MAP_OPTIONS,
+  MODES_OF_TRANSPORT,
   DISTRICT_STATISTICS_TOTAL,
   DISTRICT_STATISTICS_WORK,
   DISTRICT_STATISTICS_EDUCATION,
@@ -71,7 +72,7 @@ function MapExplorer({
   });
 
   // What to display at the top
-  const [currentMapStatistics, setCurrentMapStatistics] = useState(() => DISTRICT_STATISTICS_TOTAL
+  const [currentMapStatistics, setCurrentMapStatistics] = useState(() => MODES_OF_TRANSPORT
   );
 
   const updateCurrentData = () => {
@@ -291,7 +292,7 @@ function MapExplorer({
         </div>
       )}
 
-      <div className="header">
+      {/* <div className="header">
         <h1>
           {currentMap.code === "NZ"
             ? t("Commuting in ")
@@ -308,7 +309,7 @@ function MapExplorer({
             ),
           })}
         </h6>
-      </div>
+      </div> */}
 
       {/* The numbers at the top */}
       <div className="map-stats">
