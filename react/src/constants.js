@@ -2,14 +2,90 @@
 export const DATA_URL_ROOT = "http://localhost:5000";
 export const BASE_URL = "http://localhost:3000/";
 
-export const PRIMARY_STATISTICS = [
-  "confirmed",
-  "active",
-  "recovered",
-  "deceased",
+// What to show at the top
+export const DISTRICT_STATISTICS_TOTAL = [
+  "Total",
+  // Combine these two into one.
+  "Study at home",
+  "Work from home",
+  // -------------------
+  // Combine these 3 into one
+  "Drive private car/truck/van",
+  "Drive company car/truck/van",
+  "Drive a car/truck/van",
+  // -------------------
+  "Passenger in car/truck/van", // Combine between work & student
+  "Train",
+  "Bicycle",
+  "Walk/jog",
+  "School bus",
+  "Public bus",
+  "Ferry",
+  "Other",
+  "Commute distance" 
 ];
 
-export const MAP_STATISTICS = [...PRIMARY_STATISTICS, "tested"];
+export const DISTRICT_STATISTICS_WORK = [
+  "Total",
+  "Work from home",
+  "Drive private car/truck/van",
+  "Drive company car/truck/van",
+  "Passenger in car/truck/van",
+  "Train",
+  "Bicycle",
+  "Walk/jog",
+  "Public bus",
+  "Ferry",
+  "Other",
+  "Commute distance",
+]
+
+export const DISTRICT_STATISTICS_EDUCATION = [
+  "Total",
+  "Study at home",
+  "Drive a car/truck/van",
+  "Passenger in car/truck/van",
+  "Train",
+  "Bicycle",
+  "Walk/jog",
+  "School bus",
+  "Public bus",
+  "Ferry",
+  "Other",
+  "Commute distance" 
+]
+
+// Data to show for overall data
+export const DISTRICT_SUMMARY = [
+  "Total",
+  "Number of routes",
+  "Drive a car/truck/van",
+  "Passenger in car/truck/van",
+  "Train",
+  "Bicycle",
+  "Walk/jog",
+  "School bus",
+  "Public bus",
+  "Ferry",
+  "Other",
+  "Average commute distance", // Sum / total of all Haversine distances.
+]
+
+// Data created for each circle
+export const CENTROID_SUMMARY = [
+  "Total",
+  "Study at home",
+  "Drive a car/truck/van",
+  "Passenger in car/truck/van",
+  "Train",
+  "Bicycle",
+  "Walk/jog",
+  "School bus",
+  "Public bus",
+  "Ferry",
+  "Other",
+  "Average commute distance from here", 
+]
 
 export const MAP_TYPES = {
   COUNTRY: 0,

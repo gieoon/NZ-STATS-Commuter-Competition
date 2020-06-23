@@ -80,7 +80,7 @@ function MapVisualizer({
 
   // console.log("currentMap.option: ", currentMap.option);
 
-  console.log(data);
+  // console.log(data);
 
   //TODO this needs to be dependent on the tab that is currently showing.
   const statisticMax = useMemo(() => {
@@ -261,15 +261,14 @@ function MapVisualizer({
             .attr("d", path)
             .attr("stroke-width", .15) //1.8 //1
             .attr("stroke-opacity", 0) //0 //1
+            // .attr('fill', "#ff0000")
+            // .attr('fill-opacity', 1)
             .style("cursor", "pointer")
             .on("mouseenter", (d) => {
               // console.log("region entered: ", d);
               setRegionHighlighted({
                 districtCode: CITY_CODES[d.properties.NAME_2], // Unique on city names
                 cityName: d.properties.NAME_2,
-                  // d.properties.TYPE_2 === "City"
-                  // ? d.properties.NAME_2
-                  // : d.properties.NAME_1,
               });
               // svg.select(this).style('fill', '#ff0000');
             })
@@ -351,11 +350,11 @@ function MapVisualizer({
 
     // CLear existing data
     svg.selectAll('path.route').remove();
-    // svg.selectAll("circle.pin").remove();
+    svg.selectAll("circle.pin").remove();
 
     //For each key
     Object.keys(data).forEach((key) => {
-      console.log(key);
+      // console.log(key);
       const color = 
         key === "workMapData" 
         ? ZONE_COLORS.Red
@@ -366,9 +365,10 @@ function MapVisualizer({
         .enter()
         .append('path')
           .attr('class', 'route')
+          .attr('cursor', 'pointer')
           .attr('fill-opacity', 0.5)
           .attr("stroke", color) //TODO get stroke Color, which sets based on work or education
-          .attr("stroke-width", .15)
+          .attr("stroke-width", .05) //.15
           .attr("fill", color)
           .attr('d', function (d) {
             var coordDepart = [d.departure_LONGITUDE, d.departure_LATITUDE];
@@ -381,16 +381,31 @@ function MapVisualizer({
               ]
             });
           })
+          // .attr("pointer-events", "all")
+          // .on("click", (d) => {
+          .on("mouseenter", (d) => {
+            console.log('path hovered: ', d);
+          });
+    });
 
       // Add circles to each end
-      /*
+    Object.keys(data).forEach((key) => { 
+      const color = 
+        key === "workMapData" 
+        ? ZONE_COLORS.Red
+        : COLORS.active;
+
       svg
         .selectAll(".pin")
-        .data(data)
+        .data(data[key])
         .enter()
         .append("circle", ".pin")
+          .on("mouseenter", (d) => {
+            console.log('circle hovered: ', d);
+          })
           .attr('class', 'pin')
-          .attr("r", .15)
+          .attr('cursor', 'pointer')
+          .attr("r", .15) //.35 //.15
           .attr("fill", color)
           .attr("transform", function (d) {
             return (
@@ -398,8 +413,8 @@ function MapVisualizer({
               projection([d.departure_LONGITUDE, d.departure_LATITUDE]) +
               ")"
             );
-          });
-      */
+          })
+      
     })
 
 
@@ -429,7 +444,7 @@ function MapVisualizer({
         ".state-borders"
         // '.district-borders'
       )
-      .attr("fill", "none") //"none"
+      .attr("fill", 'none') //"none"
       .attr("stroke-width", function () {
         return (
           // mapMeta.mapType === MAP_TYPES.COUNTRY
@@ -481,8 +496,8 @@ function MapVisualizer({
         enter
           .append("path")
           .attr("d", path)
-          .attr("fill", "none")
-          .attr("stroke-width", .15/*1.5*/)
+          .attr("fill", "none") //"none"
+          .attr("stroke-width", .05/* .15 // 1.5*/)
       )
       .transition(t)
       .attr("stroke", "#343a4050");
@@ -555,6 +570,8 @@ function MapVisualizer({
           */
           if (highlighted) this.parentNode.appendChild(this);
           select(this).attr('stroke-opacity', highlighted ? 1 : 0);
+          select(this).attr('fill-opacity', highlighted ? .95 : 0);
+          select(this).attr('fill', highlighted ? '#000000' : 0);
         });
     // }
   }, [

@@ -3,7 +3,11 @@ import MapVisualizerLoader from "./loaders/mapVisualizer";
 import {
   MAP_META,
   MAP_OPTIONS,
-  MAP_STATISTICS,
+  DISTRICT_STATISTICS_TOTAL,
+  DISTRICT_STATISTICS_WORK,
+  DISTRICT_STATISTICS_EDUCATION,
+  DISTRICT_SUMMARY,
+  CENTROID_SUMMARY,
   MAP_TYPES,
   CITY_NAMES,
   UNKNOWN_DISTRICT_KEY,
@@ -41,7 +45,7 @@ const MapVisualizer = lazy(() =>
 );
 
 function MapExplorer({
-  stateCode,
+  districtCode,
   educationData,
   workData,
   regionHighlighted,
@@ -58,16 +62,20 @@ function MapExplorer({
   const mapExplorerRef = useRef();
 
   const [currentMap, setCurrentMap] = useState({
-    code: stateCode,
+    code: districtCode,
     view: MAP_TYPES.COUNTRY,
     option:
-      MAP_META[stateCode].mapType === MAP_TYPES.COUNTRY
+      MAP_META[districtCode].mapType === MAP_TYPES.COUNTRY
         ? MAP_OPTIONS.TOTAL
         : MAP_OPTIONS.HOTSPOTS,
   });
 
+  // What to display at the top
+  const [currentMapStatistics, setCurrentMapStatistics] = useState(() => DISTRICT_STATISTICS_TOTAL
+  );
+
   const updateCurrentData = () => {
-    console.log(currentMap.option);
+    // console.log(currentMap.option);
     return {
       educationMapData: 
         currentMap.option !== MAP_OPTIONS.WORK
@@ -149,9 +157,6 @@ function MapExplorer({
             code: districtCode,
             view: MAP_TYPES.COUNTRY,
             option: currentMap.option,
-              // currentMap.option === MAP_OPTIONS.TOTAL
-              //   ? MAP_OPTIONS.TOTAL
-              //   : currentMap.option,
           });
         });
       } else {
@@ -159,9 +164,6 @@ function MapExplorer({
           setCurrentMap({
             code: "NZ",
             view: MAP_TYPES.COUNTRY,
-              // currentMap.option === MAP_OPTIONS.HOTSPOTS
-              //   ? MAP_TYPES.COUNTRY
-              //   : MAP_TYPES.DISTRICT,
             option: currentMap.option,
           });
           setRegionHighlighted({
@@ -175,14 +177,12 @@ function MapExplorer({
   );
 
   useEffect(() => {
-    switchMap(stateCode);
-  }, [stateCode, switchMap]);
+    switchMap(districtCode);
+  }, [districtCode, switchMap]);
 
+  // Set the values to be used at the top.
   const panelState = useMemo(() => {
-    const districtCode =
-      currentMap.view === MAP_TYPES.DISTRICTS
-        ? regionHighlighted.districtCode
-        : currentMap.code;
+    const districtCode = regionHighlighted.districtCode
     const districtData = educationData[districtCode] || {};
     return produce(districtData, (draft) => {
       draft.state = CITY_NAMES[districtCode];
@@ -222,9 +222,6 @@ function MapExplorer({
         setCurrentMap({
           code: currentMap.code,
           view: MAP_TYPES.COUNTRY,
-            // currentMapMeta.mapType === MAP_TYPES.COUNTRY
-            //   ? MAP_TYPES.DISTRICTS
-            //   : MAP_TYPES.COUNTRY,
           option: MAP_OPTIONS.TOTAL,
         });
         if (currentMapMeta.mapType === MAP_TYPES.COUNTRY)
@@ -258,8 +255,8 @@ function MapExplorer({
   };
 
   const springs = useSprings(
-    MAP_STATISTICS.length,
-    MAP_STATISTICS.map((statistic) => ({
+    currentMapStatistics.length,
+    currentMapStatistics.map((statistic) => ({
       total: getStatistic(panelState, "total", statistic),
       delta: getStatistic(panelState, "delta", statistic),
       from: {
@@ -313,8 +310,9 @@ function MapExplorer({
         </h6>
       </div>
 
+      {/* The numbers at the top */}
       <div className="map-stats">
-        {MAP_STATISTICS.map((statistic, index) => (
+        {currentMapStatistics.map((statistic, index) => (
           <div
             key={statistic}
             className={classnames("stats", statistic, {
@@ -493,15 +491,15 @@ const isEqual = (prevProps, currProps) => {
     return false;
   } else if (
     !equal(
-      prevProps.education_data?.NZ?.meta?.["last_updated"],
-      currProps.education_data?.NZ?.meta?.["last_updated"]
+      prevProps.educationData?.NZ?.meta?.["last_updated"],
+      currProps.educationData?.NZ?.meta?.["last_updated"]
     )
   ) {
     return false;
   } else if (
     !equal(
-      prevProps.education_data?.NZ?.total,
-      currProps.education_data?.NZ?.total
+      prevProps.educationData?.NZ?.total,
+      currProps.educationData?.NZ?.total
     )
   ) {
     return false;

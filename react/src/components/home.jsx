@@ -77,7 +77,7 @@ function Home(props) {
               {educationData && workData && (
                 <Suspense fallback={<div />}>
                   <MapExplorer
-                    stateCode="NZ"
+                    districtCode="NZ"
                     {...{ educationData }}
                     {...{ workData }}
                     {...{ mapStatistic, setMapStatistic }}
