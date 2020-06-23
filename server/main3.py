@@ -180,9 +180,11 @@ print(education_df_combined.describe())
 '''
 
 # education_df_combined = education_df_combined.head(5)
-# education_df_combined = education_df_combined.sample(10000, axis=0) # 100 random rows
+work_df_combined = work_df_combined.sample(int(len(work_df_combined.index) / 3), axis=0)
+education_df_combined = education_df_combined.sample(int(len(education_df_combined.index) / 3), axis=0) # 100 random rows
 print(education_df_combined.describe())
-
+print("education columns: ", education_df_combined.columns)
+print("work columns: ", work_df_combined.columns)
 
 work_csv_out = work_df_combined.to_csv(index=False)
 education_csv_out = education_df_combined.to_csv(index=False)

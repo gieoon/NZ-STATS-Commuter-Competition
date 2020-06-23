@@ -5,8 +5,8 @@ function LeftPanel(props){
     
     
     return(
-        <div className="leftPanel Navbar">
-            <div className="navbar-middle"> 
+        <div className="LeftPanel">
+            <div className=""> 
                 <Link
                     to="/"
                     // onClick={() => {
