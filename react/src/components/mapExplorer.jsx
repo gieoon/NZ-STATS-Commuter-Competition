@@ -71,9 +71,18 @@ function MapExplorer({
         : MAP_OPTIONS.HOTSPOTS,
   });
 
+  // District vs Country view
+  const [currentView, setCurrentView] = useState({
+    view: MAP_TYPES.COUNTRY
+  });  
+
   // What to display at the top
-  const [currentMapStatistics, setCurrentMapStatistics] = useState(() => MODES_OF_TRANSPORT
-  );
+  const [currentMapStatistics, setCurrentMapStatistics] = useState(MODES_OF_TRANSPORT);
+// console.log(currentMapStatistics)
+  const [hoveredData, setHoveredData] = useState({
+    hoveredData: {},
+    hoveredDestination: "",
+  })
 
   const updateCurrentData = () => {
     // console.log(currentMap.option);
@@ -182,27 +191,31 @@ function MapExplorer({
   }, [districtCode, switchMap]);
 
   // Set the values to be used at the top.
-  const panelState = useMemo(() => {
-    const districtCode = regionHighlighted.districtCode
-    const districtData = educationData[districtCode] || {};
-    return produce(districtData, (draft) => {
-      draft.state = CITY_NAMES[districtCode];
+  // const panelState = useState({
+  //   data: hoveredData.hoveredData
+  // },[data]);
+  /*() => {
+    return produce(data, (draft) => {
+      draft.district = regionHighlighted.districtCode;
     });
   }, [
-    educationData,
+    data,
     regionHighlighted.districtCode,
     currentMap.view,
     currentMap.code,
   ]);
+  */
+  // console.log(panelState);
 
   const hoveredRegion = useMemo(() => {
-    const hoveredData =
+    // console.log(hoveredData);
+    const hovered =
       (regionHighlighted.districtCode
         ? educationData[regionHighlighted.districtCode]?.districts?.[
             regionHighlighted.cityName
           ]
         : educationData[regionHighlighted.districtCode]) || {};
-    return produce(hoveredData, (draft) => {
+    return produce(hovered, (draft) => {
       draft.name =
         regionHighlighted.districtCode ||
         CITY_NAMES[regionHighlighted.districtCode];
@@ -258,11 +271,12 @@ function MapExplorer({
   const springs = useSprings(
     currentMapStatistics.length,
     currentMapStatistics.map((statistic) => ({
-      total: getStatistic(panelState, "total", statistic),
-      delta: getStatistic(panelState, "delta", statistic),
+      //TODO try to use hoveredState here
+      total: getStatistic(hoveredData.hoveredData, statistic),
+      delta: 64,
       from: {
-        total: getStatistic(panelState, "total", statistic),
-        delta: getStatistic(panelState, "delta", statistic),
+        total: 128,
+        delta: 23,
       },
       config: {
         tension: 500,
@@ -288,137 +302,81 @@ function MapExplorer({
             setAnchor(anchor === "mapexplorer" ? null : "mapexplorer");
           }}
         >
-          <PinIcon />
+          {/* <PinIcon /> */}
         </div>
       )}
 
-      {/* <div className="header">
-        <h1>
-          {currentMap.code === "NZ"
-            ? t("Commuting in ")
-            : t(CITY_NAMES[currentMap.code])}{" "}
-          {t("New Zealand")}
-        </h1>
-        <h6>
-          {t("{{action}} over a {{mapType}} for more details", {
-            action: t(window.innerWidth <= 769 ? "Tap" : "Hover"),
-            mapType: t(
-              currentMapMeta.mapType === MAP_TYPES.COUNTRY
-                ? "Regional District"
-                : "Regional District"
-            ),
-          })}
-        </h6>
-      </div> */}
-
-      {/* The numbers at the top */}
-      <div className="map-stats">
-        {currentMapStatistics.map((statistic, index) => (
-          <div
-            key={statistic}
-            className={classnames("stats", statistic, {
-              focused: statistic === mapStatistic,
+      <div className="header">
+        { currentView.view === MAP_TYPES.COUNTRY 
+          ? <h6>
+            {t("{{action}} over a {{mapType}} for more details", {
+              action: t(window.innerWidth <= 769 ? "Tap" : "Hover"),
+              mapType: t(
+                currentMapMeta.mapType === MAP_TYPES.COUNTRY
+                  ? "Regional District"
+                  : "Regional District"
+              ),
             })}
-            onClick={() => setMapStatistic(statistic)}
-          >
-            <h5>{t(capitalize(statistic))}</h5>
-            <div className="stats-bottom">
-              <animated.h1>
-                {springs[index].total.interpolate((total) =>
-                  formatNumber(Math.floor(total))
-                )}
-              </animated.h1>
-              {statistic !== "tested" && statistic !== "active" && (
-                <animated.h6>
-                  {springs[index].delta.interpolate((delta) =>
-                    delta > 0 ? `+${formatNumber(Math.floor(delta))}` : "\u00A0"
-                  )}
-                </animated.h6>
-              )}
-              {statistic === "tested" && (
-                <h6>
-                  {panelState?.total?.tested &&
-                    t("As of {{date}}", {
-                      date: formatDate(
-                        panelState.meta.tested["last_updated"],
-                        "dd MMM"
-                      ),
-                    })}
-                </h6>
-              )}
-            </div>
-            {statistic === "tested" && panelState?.total?.tested && (
-              <a href={panelState.meta.tested.source} target="_noblank">
-                <Icon.Link />
-              </a>
-            )}
-          </div>
-        ))}
+          </h6>
+          : ""
+        }
       </div>
 
-      <div className="meta">
-        {currentMapMeta.mapType === MAP_TYPES.DISTRICT && (
-          <div
-            className="map-button"
-            onClick={() => history.push(`district/${currentMap.code}`)}
-          >
-            {t("Visit state page")}
-            <Icon.ArrowRightCircle />
+      <div className="details-container-wrapper">
+        <div className="details-container">
+          <div className="meta">
+            <h2
+              className={classnames(mapStatistic, {
+                [hoveredRegion?.zone]: currentMap.option === MAP_OPTIONS.HOTSPOTS,
+              })}
+            >
+              <div>
+                {t("From ")}
+                {t(hoveredRegion.name)}
+                {hoveredData.hoveredData.departure_SA22018_V1_NAME && hoveredData.hoveredData.departure_SA22018_V1_NAME.length ? ", " : ""}
+                {t(hoveredData.hoveredData.departure_SA22018_V1_NAME)}
+                <div>
+                  {t("To ")}
+                  {hoveredData.hoveredDestination}
+                  {hoveredData.hoveredDestination.length 
+                    ? ", "
+                    : ""  
+                  }
+                  {hoveredData.hoveredData.destination_SA22018_V1_NAME}
+                </div>
+              </div>
+              
+              <div style={{alignSelf: "center"}}>
+                {/* {t("Distance ")} */}
+                {!isNaN(Number(hoveredData.hoveredData.HAVERSINE_DISTANCE))
+                  ? Number(hoveredData.hoveredData.HAVERSINE_DISTANCE).toFixed(2) + "km"
+                  : ""
+                }
+              </div>
+            </h2>
           </div>
-        )}
-
-        {currentMapMeta.mapType !== MAP_TYPES.DISTRICT &&
-          panelState?.meta?.["last_updated"] && (
-            <div className="last-update">
-              <h6>{t("Last updated")}</h6>
-              <h3>
-                {`${formatLastUpdated(panelState.meta["last_updated"])} ${t(
-                  "ago"
-                )}`}
-              </h3>
-            </div>
-          )}
-
-        <h2
-          className={classnames(mapStatistic, {
-            [hoveredRegion?.zone]: currentMap.option === MAP_OPTIONS.HOTSPOTS,
-          })}
-        >
-          {t(hoveredRegion.name)}
-          {hoveredRegion.name === UNKNOWN_DISTRICT_KEY &&
-            ` (${t(CITY_NAMES[regionHighlighted.districtCode])})`}
-        </h2>
-
-        {currentMapMeta.mapType === MAP_TYPES.DISTRICT && (
-          <div className="map-button" onClick={() => switchMap("NZ")}>
-            {t("Back")}
+          {/* The numbers at the top */}
+          <div className="map-stats">
+            {currentMapStatistics.map((statistic, index) => (
+              <div
+                key={statistic}
+                className={classnames("stats", statistic, {
+                  focused: statistic === mapStatistic,
+                })}
+                onClick={() => setMapStatistic(statistic)}
+              >
+                <h5>{t(capitalize(statistic))}</h5>
+                <div className="stats-bottom">
+                  <animated.h1>
+                    {springs[index].total.interpolate((total) =>
+                      formatNumber(Math.floor(total))
+                    )}
+                  </animated.h1>
+                </div>
+              </div>
+            ))}
           </div>
-        )}
-
-        {currentMap.option !== MAP_OPTIONS.ZONES &&
-          ((currentMap.view === MAP_TYPES.COUNTRY &&
-            regionHighlighted.cityName) ||
-            (currentMap.view === MAP_TYPES.DISTRICT &&
-              currentMap.option !== MAP_OPTIONS.TOTAL)) && (
-            <h1 className={classnames("district", mapStatistic)}>
-              {formatNumber(
-                getStatistic(
-                  hoveredRegion,
-                  "total",
-                  mapStatistic,
-                  currentMap.option === MAP_OPTIONS.PER_MILLION
-                    ? hoveredRegion.population_millions
-                    : 1
-                )
-              )}
-              <br />
-              <span>
-                {t(mapStatistic)}
-                {currentMap.option === MAP_OPTIONS.PER_MILLION &&
-                  ` ${t("per million")}`}
-              </span>
-            </h1>
-          )}
+        </div>
       </div>
 
       <div ref={mapExplorerRef}>
@@ -440,9 +398,12 @@ function MapExplorer({
               data={data}
               // workMapData={workMapData}
               // educationMapData={educationMapData}
+              currentView={currentView}
+              setCurrentView={setCurrentView}
               changeMap={switchMap}
               regionHighlighted={regionHighlighted}
               setRegionHighlighted={setRegionHighlighted}
+              setHoveredData={setHoveredData}
               statistic={mapStatistic}
               isCountryLoaded={isCountryLoaded}
             />
@@ -450,33 +411,36 @@ function MapExplorer({
         )}
       </div>
 
-      <div className="tabs-map">
-        {Object.values(MAP_OPTIONS).map((option) => (
-          <div
-            key={option}
-            className={classnames("tab", {
-              focused: currentMap.option === option,
-            })}
-            onClick={() => handleTabClick(option)}
-          >
-            <h4>
-              {t(option)}
-              {/* {option === MAP_OPTIONS.EDUCATION && <sup>&dagger;</sup>} */}
-            </h4>
-          </div>
-        ))}
-      </div>
+      <div className="tabs-container">
+        <div className="tabs-map">
+          {Object.values(MAP_OPTIONS).map((option) => (
+            <div
+              key={option}
+              className={classnames("tab", {
+                focused: currentMap.option === option,
+              })}
+              onClick={() => handleTabClick(option)}
+            >
+              <h4>
+                {t(option)}
+                {/* {option === MAP_OPTIONS.EDUCATION && <sup>&dagger;</sup>} */}
+              </h4>
+            </div>
+          ))}
+        </div>
 
-      <h6 className={classnames("footnote")}>
-        &dagger; {`${t("Based on 2018 Census by NZ Statistics, see ")}`}
-        <a
-          href="https://datafinder.stats.govt.nz/data/category/census/2018/commuter-view/?_ga=2.217129552.794612537.1592401476-705599149.1592401476"
-          target="_noblank"
-          style={{ color: "#6c757d" }}
-        >
-          {t("source")}
-        </a>
-      </h6>
+        <h6 className={classnames("footnote")}>
+          &dagger; {`${t("Based on 2018 Census by NZ Statistics, see ")}`}
+          <a
+            href="https://datafinder.stats.govt.nz/data/category/census/2018/commuter-view/?_ga=2.217129552.794612537.1592401476-705599149.1592401476"
+            target="_noblank"
+            style={{ color: "#6c757d" }}
+          >
+            {t("source")}
+          </a>
+          {t(".  \tLocations have been approximated to protect user privacy")}
+        </h6>
+      </div>
     </div>
   );
 }

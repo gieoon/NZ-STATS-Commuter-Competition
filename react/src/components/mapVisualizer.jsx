@@ -11,15 +11,20 @@ import {
 } from "d3-scale-chromatic";
 import { max } from "d3-array";
 import { select, event, selectAll } from "d3-selection";
-import { geoMercator, geoPath } from "d3-geo";
+import { geoMercator, geoPath, geoContains } from "d3-geo";
 import { transition } from "d3-transition";
 import { useTranslation } from "react-i18next";
 import * as topojson from "topojson";
 import * as Icon from "react-feather";
 import {
+  DATA_URL_ROOT,
   MAP_META,
   D3_TRANSITION_DURATION,
   MAP_TYPES,
+  MAP_STROKE_WIDTH,
+  MAP_STROKE_WIDTH_HIGHLIGHTED,
+  MAP_CIRCLE_RADIUS,
+  REGION_STROKE_WIDTH,
   MAP_OPTIONS,
   ZONE_COLORS,
   DISTRICT_POPULATIONS_MIL,
@@ -33,11 +38,13 @@ import {
   formatNumber,
   getStatistic,
 } from "../utils/commonFunctions";
+import { CodeSquareIcon } from "@primer/octicons-v2-react";
 
 const [width, height] = [432, 488];
 
+//TODO create a separate value for this (district value)
 const getTotalStatistic = (data, statistic, normalizer = 1) => {
-  return getStatistic(data, "total", statistic, normalizer);
+  return "0";//getStatistic(data, "total", statistic, normalizer);
 };
 
 const colorInterpolator = {
@@ -53,19 +60,17 @@ function MapVisualizer({
   data,
   // workMapData,
   // educationMapData,
+  currentView,
+  setCurrentView,
   changeMap,
   regionHighlighted,
   setRegionHighlighted,
+  setHoveredData,
   statistic,
   isCountryLoaded,
 }) {
   const { t } = useTranslation();
   const svgRef = useRef(null);
-
-  // District vs Country view
-  const [currentView, setCurrentView] = useState({
-    view: MAP_TYPES.COUNTRY
-  });
 
   const mapMeta = MAP_META[currentMap.code];
 
@@ -259,18 +264,16 @@ function MapVisualizer({
           const sel = enter
             .append("path")
             .attr("d", path)
-            .attr("stroke-width", .15) //1.8 //1
+            .attr("stroke-width", REGION_STROKE_WIDTH) //1.8 //1
             .attr("stroke-opacity", 0) //0 //1
             // .attr('fill', "#ff0000")
             // .attr('fill-opacity', 1)
             .style("cursor", "pointer")
             .on("mouseenter", (d) => {
-              // console.log("region entered: ", d);
               setRegionHighlighted({
                 districtCode: CITY_CODES[d.properties.NAME_2], // Unique on city names
                 cityName: d.properties.NAME_2,
               });
-              // svg.select(this).style('fill', '#ff0000');
             })
             .on("mouseleave", (d) => {
               if (onceTouchedRegion === d) onceTouchedRegion = null;
@@ -305,6 +308,7 @@ function MapVisualizer({
         const districtCode = CITY_CODES[d.properties.NAME_2];
         // Zoom in on the map
         districtClicked(d);
+        // setupDataframe();
         if (
           onceTouchedRegion ||
           mapMeta.mapType === MAP_TYPES.COUNTRY ||
@@ -316,6 +320,7 @@ function MapVisualizer({
         svg.select(".regions").selectAll("path").attr("pointer-events", "none");
         // Switch map
         // changeMap(CITY_CODES[d.properties.NAME_1]);
+
       });
 
     regionSelection.select("title").text((d) => {
@@ -329,8 +334,8 @@ function MapVisualizer({
         if (city) n = getTotalStatistic(cityData, statistic);
         else n = getTotalStatistic(districtData, statistic);
         return (
-          formatNumber(100 * (n / (statisticTotal || 0.001))) +
-          "% from " +
+          // formatNumber(100 * (n / (statisticTotal || 0.001))) +
+          // "% from " +
           capitalizeAll(city ? city : district)
         );
       }
@@ -368,7 +373,7 @@ function MapVisualizer({
           .attr('cursor', 'pointer')
           .attr('fill-opacity', 0.5)
           .attr("stroke", color) //TODO get stroke Color, which sets based on work or education
-          .attr("stroke-width", .05) //.15
+          .attr("stroke-width", MAP_STROKE_WIDTH) //.15
           .attr("fill", color)
           .attr('d', function (d) {
             var coordDepart = [d.departure_LONGITUDE, d.departure_LATITUDE];
@@ -384,7 +389,32 @@ function MapVisualizer({
           // .attr("pointer-events", "all")
           // .on("click", (d) => {
           .on("mouseenter", (d) => {
-            console.log('path hovered: ', d);
+            // console.log('path hovered: ', d);
+            
+            const features = topojson.feature(
+              geoData,
+              geoData.objects[mapMeta.graphObjectDistricts]
+            ).features;
+            // console.log(features);
+            // features.some() <= this function is good, but only returns boolean.
+            for(var f of features){
+              if(geoContains(
+                f, 
+                [d.destination_LONGITUDE, d.destination_LATITUDE]
+              )){
+                // console.log(f)
+                setHoveredData({
+                  hoveredData: d,
+                  hoveredDestination: f.properties.NAME_1
+                });
+                break;
+              }
+            }
+            //TODO highlighted change stroke width
+            // console.log("Make this highlighting work!!! ", d);
+            // const highlighted = true; //d.id === select(this).id;
+            // if (highlighted) this.parentNode.appendChild(this);
+            // select(this).style('stroke-width', highlighted ? MAP_STROKE_WIDTH_HIGHLIGHTED : REGION_STROKE_WIDTH);
           });
     });
 
@@ -402,10 +432,14 @@ function MapVisualizer({
         .append("circle", ".pin")
           .on("mouseenter", (d) => {
             console.log('circle hovered: ', d);
+            setHoveredData({
+              hoveredData: d,
+              hoveredDestination: "",
+            })
           })
           .attr('class', 'pin')
           .attr('cursor', 'pointer')
-          .attr("r", .15) //.35 //.15
+          .attr("r", MAP_CIRCLE_RADIUS) //.35 //.15
           .attr("fill", color)
           .attr("transform", function (d) {
             return (
@@ -456,7 +490,9 @@ function MapVisualizer({
           // Make this thinner when zoomed in.
           // ? 1
           // : .1
-          .25
+          currentView.view === MAP_TYPES.COUNTRY
+          ? .25 
+          : .15
         );
       })
       .selectAll("path")
@@ -583,6 +619,97 @@ function MapVisualizer({
     regionHighlighted.cityName,
     statistic,
   ]);
+
+  // Add NAME_1 to each departure and destination
+  const setupDataframe = () => {
+    // TODO remove this after running once
+    // POST request to /setup to create the dataframe
+    // 1. Create the data first
+    const work_departures= [];
+    const work_destinations= [];
+    const education_departures= [];
+    const education_destinations= [];
+
+    const features = topojson.feature(
+      geoData,
+      geoData.objects[mapMeta.graphObjectDistricts]
+    ).features;
+
+    var b = false;
+
+    console.log(data.educationMapData.length);
+    console.log(data.workMapData.length);
+    for(var r of data.educationMapData){
+      b = false;
+      for(var f of features){
+        if(geoContains(f, [r.departure_LONGITUDE, r.departure_LATITUDE])){
+          education_departures.push(f.properties.NAME_2) //NAME_1
+          console.log("found feature education_departures");
+          b = true;
+          break;
+        }
+      }
+      if(!b) education_departures.push("");
+    }
+
+    for(var r of data.educationMapData){
+      b = false;
+      for(var f of features){
+        if(geoContains(f, [r.destination_LONGITUDE, r.destination_LATITUDE])){
+          education_destinations.push(f.properties.NAME_2) //NAME_1
+          console.log('found feature education_destinations')
+          b = true;
+          break;
+        }
+      }
+      if(!b) education_destinations.push("");
+    }
+
+    for(var r of data.workMapData){
+      b = false;
+      for(var f of features){
+        if(geoContains(f, [r.departure_LONGITUDE, r.departure_LATITUDE])){
+          work_departures.push(f.properties.NAME_2) //NAME_1
+          console.log('found feature work_departures')
+          b = true;
+          break;
+        }
+      }
+      if(!b) work_departures.push("");
+    }
+
+    for(var r of data.workMapData){
+      b = false;
+      for(var f of features){
+        if(geoContains(f, [r.destination_LONGITUDE, r.destination_LATITUDE])){
+          work_destinations.push(f.properties.NAME_2) //NAME_1
+          console.log("found feature work_destinations")
+          b = true;
+          break;
+        }
+      }
+      if(!b) work_destinations.push("");
+    }
+    console.log(work_departures.length, work_destinations.length, education_departures.length, education_destinations.length)
+  
+    fetch(DATA_URL_ROOT + "/setup", {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      // credentials: 'same-origin',
+      body: JSON.stringify({
+        work_departures: work_departures,
+        work_destinations: work_destinations,
+        education_departures: education_departures,
+        education_destinations: education_destinations,
+      })
+    }).then(()=>{console.log('sent /setup SUCCESS')})
+    .catch((err) =>{console.error("Error sending request: ", err)})
+    
+  }
 
   return (
     <React.Fragment>

@@ -2,6 +2,11 @@
 export const DATA_URL_ROOT = "http://localhost:5000";
 export const BASE_URL = "http://localhost:3000/";
 
+export const MAP_STROKE_WIDTH = 0.25; //0.05
+export const MAP_STROKE_WIDTH_HIGHLIGHTED = 0.5;
+export const MAP_CIRCLE_RADIUS = 0.5;
+export const REGION_STROKE_WIDTH = 0.2;
+
 export const MODES_OF_TRANSPORT = [
   "Work/Study from home",
   "Drive car/truck/van",

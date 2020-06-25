@@ -1,22 +1,55 @@
 $gray: #6c757d;
+$white: white;
+// $light-gray: #bdbdbd;
+$title-first-color: #bdbdbd; //rgba(0,0,0,.85);//red; //orange
+$default-font: "archia";
+$title-span-color: #4c75f2;
+$navbar-background: #1e1e30;
 
 // Protruding left panel
-.leftPanel {
-
-    position: fixed!important;
+.LeftPanel {
+    background: $navbar-background; //$white;
     left: 0;
     top: 0;
-    min-width: 15rem;
-    height: 100%;
     display: flex;
+    min-width: 20rem;
     flex-direction: column;
+    height: 100%;
     justify-content: flex-start;
-    align-items: center;
+    position: fixed; /* relative */
     z-index: 999;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 
     .header {
         color: $gray;
     }
+
+    .title {
+        color: $title-first-color;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+        text-align: center;
+        order: 1;
+        font-size: 1.25rem;
+        font-family: $default-font;
+        text-transform: uppercase;
+        font-weight: 900;
+
+        span {
+            color: $title-span-color;
+        }
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+.tabs-container {
+    position: fixed;
+    bottom: 8px;
 }
 
 .App {
@@ -26,8 +59,52 @@ $gray: #6c757d;
 
 .MapExplorer .header {
     position: absolute;
+    bottom: 0;
+    right: 24px;
+    width: fit-content;
+    text-align: right;
 }
 
-.MapExplorer .map-stats {
-    position: absolute;
+.MapExplorer .details-container-wrapper {
+    position: fixed;
+    pointer-events: none;
+    // width: calc(100% - 5rem);
+    width: 105%;
+    background-color: rgba(0,0,0,.45);
+    // background-color: black;
+    // left: 5rem;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.MapExplorer .details-container {
+    // position: absolute;
+    
+    padding-top: 1rem;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    width: 45rem;
+    margin: auto;
+}
+
+.MapExplorer .meta h2 {
+    // position: fixed;
+    // z-index: 999;
+    display: flex;
+    justify-content: space-between;
+}
+
+.MapExplorer .meta h2 div {
+    // margin-right: 12px;
+}
+
+.MapExplorer .svg-parent {
+    margin-top: 4.5rem;
+}
+
+.MapExplorer .map-stats .stats {
+    pointer-events: all!important;
+    // position: absolute;
 }

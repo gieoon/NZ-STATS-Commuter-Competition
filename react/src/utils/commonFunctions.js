@@ -91,19 +91,29 @@ export const toTitleCase = (str) => {
   });
 };
 
-export const getStatistic = (data, type, statistic, normalizer = 1) => {
-  let count;
-  if (statistic === "active") {
-    const confirmed = data?.[type]?.confirmed || 0;
-    const deceased = data?.[type]?.deceased || 0;
-    const recovered = data?.[type]?.recovered || 0;
-    const migrated = data?.[type]?.migrated || 0;
-    count = confirmed - deceased - recovered - migrated;
-  } else {
-    count = data?.[type]?.[statistic] || 0;
-  }
-  return count / normalizer;
+export const getStatistic = (data, statistic, normalizer = 1) => {
+  let count = 0;
+  
+  // console.log(data, statistic);
+  // const work_at_home = data?.[type]?.
+  // const deceased = data?.[type]?.deceased || 0;
+  // const recovered = data?.[type]?.recovered || 0;
+  // const migrated = data?.[type]?.migrated || 0;
+  // count = confirmed - deceased - recovered - migrated;
+  // console.log(educationStatistic2Key(statistic), data[educationStatistic2Key(statistic)]);
+  return Math.max(data[educationStatistic2Key(statistic)] || 0, 0); // Convert -999 to 0
 };
+
+const educationStatistic2Key = (s) => {
+  switch(s){
+    case "School/Public bus": return "School_bus";
+    case "Work/Study from home": return "Study_at_home";
+    case "Drive car/truck/van": return "Drive_a_car_truck_or_van";
+    case "Passenger in car/truck/van": return "Passenger_in_a_car_truck_or_van";
+    case "Walk/jog": return "Walk_or_jog";
+    default: return s;
+  }
+}
 
 export const fetcher = (url) => {
   return fetch(url).then( (response) => {

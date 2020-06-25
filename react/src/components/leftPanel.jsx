@@ -6,17 +6,20 @@ function LeftPanel(props){
     
     return(
         <div className="LeftPanel">
-            <div className=""> 
+            <div className="title"> 
                 <Link
                     to="/"
                     // onClick={() => {
                     //     setExpand(false);
                     // }}
                     >
-                    Commute
-                    {/* <br /> */}
+                    Commute in
+                    <br />
                     <span> New Zealand</span>
                     </Link>
+            </div>
+            <div className="map-stats">
+
             </div>
 
         </div>

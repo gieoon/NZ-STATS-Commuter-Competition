@@ -1,7 +1,8 @@
 # Understand the data
+import ast
 from flask import Flask
 from flask_cors import CORS
-from flask import make_response, jsonify
+from flask import make_response, request, jsonify
 import pandas as pd
 import matplotlib.pyplot as plt
 import descartes
@@ -29,7 +30,7 @@ work_df = pd.read_csv(DIR)
 departure_centroid_df = pd.read_csv(DIR2)
 departure_centroid_df.columns.values[1] = 'code'
 departure_centroid_df.columns = 'departure_' + departure_centroid_df.columns.values
-# print(departure_centroid_df.columns)
+print(departure_centroid_df.columns)
 destination_centroid_df = pd.read_csv(DIR2)
 destination_centroid_df.columns.values[1] = 'code'
 destination_centroid_df.columns = 'destination_' + destination_centroid_df.columns.values
@@ -180,8 +181,9 @@ print(education_df_combined.describe())
 '''
 
 # education_df_combined = education_df_combined.head(5)
-work_df_combined = work_df_combined.sample(int(len(work_df_combined.index) / 3), axis=0)
-education_df_combined = education_df_combined.sample(int(len(education_df_combined.index) / 3), axis=0) # 100 random rows
+SIZE_DIVISOR = 5
+work_df_combined = work_df_combined.sample(int(len(work_df_combined.index) / SIZE_DIVISOR), axis=0)
+education_df_combined = education_df_combined.sample(int(len(education_df_combined.index) / SIZE_DIVISOR), axis=0) # 100 random rows
 print(education_df_combined.describe())
 print("education columns: ", education_df_combined.columns)
 print("work columns: ", work_df_combined.columns)
@@ -233,6 +235,42 @@ with open('./faq_data.json') as f:
 def faq_data():
     # print(faq)
     response = make_response(jsonify(faq))
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
+
+# This is only run once to create data which is saved serverside.
+# To set up new dataframe, retrieve series of each destination & departure region name.
+@app.route('/setup', methods=["POST"])
+def setup():
+    global work_df_combined
+    global education_df_combined
+    data = ast.literal_eval(request.data.decode("utf-8"))
+    # print(ast.literal_eval(request.data.decode("utf-8")))
+    work_departure_series = data['work_departures']
+    work_destination_series = data['work_destinations']
+    education_departure_series = data['education_departures']
+    education_destination_series = data['education_destinations']
+    print(
+        len(work_departure_series), 
+        len(work_destination_series),
+        len(education_departure_series),
+        len(education_destination_series)
+    )
+
+    # https://stackoverflow.com/questions/12555323/adding-new-column-to-existing-dataframe-in-python-pandas
+    work_df_combined = work_df_combined.assign(DEPARTURE_NAME_1=pd.Series(work_departure_series).values)
+    work_df_combined = work_df_combined.assign(DESTINATION_NAME_1=pd.Series(work_destination_series).values)
+    education_df_combined = education_df_combined.assign(DEPARTURE_NAME_1=pd.Series(education_departure_series).values)
+    education_df_combined = education_df_combined.assign(DESTINATION_NAME_1=pd.Series(education_destination_series).values)
+
+    print(work_df_combined.columns)
+    print(education_df_combined.columns)
+
+    # Save locally
+    work_df_combined.to_csv('./out/work.csv', index=False)
+    education_df_combined.to_csv('./out/education.csv', index=False)
+
+    response = make_response("done")
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 

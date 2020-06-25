@@ -252,6 +252,7 @@ h6 {
   justify-content: center;
   margin-left: 10rem;
   margin-right: 5rem;
+  position: relative;
 
   .home-left,
   .home-right {
@@ -1946,8 +1947,9 @@ abbr {
 
 .MapExplorer {
   align-self: center;
-  position: relative;
+  // position: relative;
   width: 30rem;
+  // width: 100vw;
 
   &.stickied {
     position: sticky !important;
@@ -1970,7 +1972,8 @@ abbr {
     }
 
     h6 {
-      margin-bottom: 2rem;
+      // margin-bottom: 2rem;
+      margin-bottom: 8px;
       margin-top: 0.75rem;
     }
   }
@@ -1978,7 +1981,7 @@ abbr {
   .svg-parent {
     display: block;
     margin: auto;
-    margin-top: 2rem;
+    // margin-top: 2rem;
     overflow: visible;
     position: relative;
     width: 90%;
@@ -2059,14 +2062,16 @@ abbr {
   }
 
   .meta {
-    height: 4rem;
-    justify-content: space-between;
-    position: relative;
+    // height: 4rem;
+    // justify-content: space-between;
+    // position: relative;
+    // position: absolute;
+    // left: 16px;
 
     h2 {
       font-weight: 900;
       margin-top: 0;
-      width: calc(100% - 10rem);
+      // width: calc(100% - 10rem);
       word-wrap: break-word;
 
       &.confirmed {
@@ -2147,8 +2152,11 @@ abbr {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-bottom: 1rem;
-    position: relative;
+    // margin-bottom: 1rem;
+    // position: relative;
+    left: 12px;
+    top: 3rem;
+    // position: fixed;
     width: 100%;
     z-index: 10;
 
@@ -2170,12 +2178,13 @@ abbr {
       display: flex;
       flex: 1;
       flex-direction: column;
-      margin-bottom: 1rem;
+      // margin-bottom: 1rem;
       margin-left: 0.25rem;
       margin-right: 0.25rem;
       padding: 0.25rem;
       position: relative;
       transition: all 0.1s ease-in-out;
+      justify-content: space-evenly;
 
       .stats-bottom {
         display: flex;
@@ -4484,7 +4493,7 @@ footer {
 @media (min-width: 769px) {
   .Home,
   .State {
-    padding-top: 5rem;
+    // padding-top: 1rem;
   }
 
   .Navbar {
@@ -4494,7 +4503,7 @@ footer {
     justify-content: flex-start;
     min-width: 5rem;
     position: fixed;
-    z-index: 999;
+    z-index: 9999;
 
     .navbar-left {
       margin-bottom: .5rem;
@@ -4586,7 +4595,7 @@ footer {
   }
 
   .Home,
-  .State, {
+  .State {
     display: flex;
     flex-direction: column;
     margin-left: 0;

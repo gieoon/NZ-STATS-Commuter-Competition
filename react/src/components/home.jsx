@@ -5,7 +5,7 @@ import { fetcher } from "../utils/commonFunctions";
 import useStickySWR from "../hooks/useStickySwr";
 import { useIsVisible } from "react-is-visible";
 import { Helmet } from "react-helmet";
-import LeftPanel from "./leftPanel";
+// import LeftPanel from "./leftPanel";
 
 const MapExplorer = lazy(() =>
   import("./mapExplorer" /* webpackChunkName: "MapExplorer" */)
@@ -22,7 +22,6 @@ function Home(props) {
     cityName: null,
   });
 
-  
   const { data: workData } = useStickySWR(
     DATA_URL_ROOT + "/work_csv",
     fetcher,
@@ -47,17 +46,17 @@ function Home(props) {
   const nzMap = useRef();
   const isVisible = useIsVisible(nzMap, { once: true });
 
-  const stateCodes = [
-    "NZ",
-    ...[
-      ...new Set([
-        ...Object.keys(MAP_META).filter((districtCode) => districtCode !== "NZ"),
-        ...Object.keys(educationData || {}).filter(
-          (districtCode) => districtCode !== "NZ"
-        ),
-      ]),
-    ].sort(),
-  ];
+  // const stateCodes = [
+  //   "NZ",
+  //   ...[
+  //     ...new Set([
+  //       ...Object.keys(MAP_META).filter((districtCode) => districtCode !== "NZ"),
+  //       ...Object.keys(educationData || {}).filter(
+  //         (districtCode) => districtCode !== "NZ"
+  //       ),
+  //     ]),
+  //   ].sort(),
+  // ];
 
   return (
     <React.Fragment>
@@ -69,8 +68,8 @@ function Home(props) {
         />
       </Helmet>
       <div className="Home">
-        <LeftPanel />
-        
+        {/* <LeftPanel /> */}
+
         <div className="home-right" ref={nzMap}>
           {isVisible && (
             <React.Fragment>
