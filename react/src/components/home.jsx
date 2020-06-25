@@ -1,7 +1,7 @@
 import React, { lazy, useState, useRef, Suspense } from "react";
 import { MAP_META, DATA_URL_ROOT } from "../constants";
 // import axios from 'axios';
-import { fetcher } from "../utils/commonFunctions";
+import { fetcher, fetcherJSON } from "../utils/commonFunctions";
 import useStickySWR from "../hooks/useStickySwr";
 import { useIsVisible } from "react-is-visible";
 import { Helmet } from "react-helmet";
@@ -43,6 +43,24 @@ function Home(props) {
     }
   );
 
+  const { data: regionalWorkData } = useStickySWR(
+    DATA_URL_ROOT + '/work_regional_data',
+    fetcherJSON,
+    {
+      revalidateOnMount: true,
+      revalidateOnFocus: false,
+    }
+  )
+
+  const { data: regionalEducationData } = useStickySWR(
+    DATA_URL_ROOT + '/education_regional_data',
+    fetcherJSON,
+    {
+      revalidateOnMount: true,
+      revalidateOnFocus: false,
+    }
+  )
+
   const nzMap = useRef();
   const isVisible = useIsVisible(nzMap, { once: true });
 
@@ -68,6 +86,8 @@ function Home(props) {
         />
       </Helmet>
       <div className="Home">
+        {console.log(regionalEducationData)}
+        {console.log(regionalWorkData)}
         {/* <LeftPanel /> */}
 
         <div className="home-right" ref={nzMap}>
@@ -79,6 +99,8 @@ function Home(props) {
                     districtCode="NZ"
                     {...{ educationData }}
                     {...{ workData }}
+                    {...{ regionalWorkData }}
+                    {...{ regionalEducationData }}
                     {...{ mapStatistic, setMapStatistic }}
                     {...{ regionHighlighted, setRegionHighlighted }}
                     {...{ anchor, setAnchor }}

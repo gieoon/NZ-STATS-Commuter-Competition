@@ -1,4 +1,4 @@
-# Understand the data
+
 import ast
 from flask import Flask
 from flask_cors import CORS
@@ -12,6 +12,7 @@ from math import radians, cos, sin, asin, sqrt
 import numpy as np
 import shapefile
 import json
+import csv
 
 # %matplotlib inline
 'exec(%matplotlib inline)'
@@ -181,7 +182,7 @@ print(education_df_combined.describe())
 '''
 
 # education_df_combined = education_df_combined.head(5)
-SIZE_DIVISOR = 5
+SIZE_DIVISOR = 10
 work_df_combined = work_df_combined.sample(int(len(work_df_combined.index) / SIZE_DIVISOR), axis=0)
 education_df_combined = education_df_combined.sample(int(len(education_df_combined.index) / SIZE_DIVISOR), axis=0) # 100 random rows
 print(education_df_combined.describe())
@@ -238,6 +239,26 @@ def faq_data():
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
+with open('./regional_data/work.json') as work_file:
+    work_regional_dict = work_file.read()
+    work_regional_dict = json.loads(work_regional_dict)
+
+with open('./regional_data/education.json') as education_file:
+    education_regional_dict = education_file.read()
+    education_regional_dict = json.loads(education_regional_dict)
+
+@app.route('/work_regional_data')
+def work_regional_data():
+    response = make_response(jsonify(work_regional_dict))
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
+
+@app.route('/education_regional_data')
+def education_regional_data():
+    response = make_response(jsonify(education_regional_dict))
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
+
 # This is only run once to create data which is saved serverside.
 # To set up new dataframe, retrieve series of each destination & departure region name.
 @app.route('/setup', methods=["POST"])
@@ -258,10 +279,10 @@ def setup():
     )
 
     # https://stackoverflow.com/questions/12555323/adding-new-column-to-existing-dataframe-in-python-pandas
-    work_df_combined = work_df_combined.assign(DEPARTURE_NAME_1=pd.Series(work_departure_series).values)
-    work_df_combined = work_df_combined.assign(DESTINATION_NAME_1=pd.Series(work_destination_series).values)
-    education_df_combined = education_df_combined.assign(DEPARTURE_NAME_1=pd.Series(education_departure_series).values)
-    education_df_combined = education_df_combined.assign(DESTINATION_NAME_1=pd.Series(education_destination_series).values)
+    work_df_combined = work_df_combined.assign(DEPARTURE_NAME_2=pd.Series(work_departure_series).values)
+    work_df_combined = work_df_combined.assign(DESTINATION_NAME_2=pd.Series(work_destination_series).values)
+    education_df_combined = education_df_combined.assign(DEPARTURE_NAME_2=pd.Series(education_departure_series).values)
+    education_df_combined = education_df_combined.assign(DESTINATION_NAME_2=pd.Series(education_destination_series).values)
 
     print(work_df_combined.columns)
     print(education_df_combined.columns)

@@ -59,10 +59,31 @@ out_work = pd.DataFrame(columns=[
     "Walk_or_jog"
 ])
 
+# Convert -999 values to 0
+def noNegatives(df):
+    for c in ['Bicycle', 
+        "Ferry", 
+        "Public_bus", 
+        "Train", 
+        "Drive_a_private_car_truck_or_van", 
+        "Drive_a_company_car_truck_or_van",
+        "Other",
+        "Work_at_home",
+        "Walk_or_jog",
+        "Study_at_home",
+        "School_bus",
+        "Drive_a_car_truck_or_van",
+        "Passenger_in_a_car_truck_or_van"
+    ]:
+        if(c in df.columns):
+            df[c] = df[c].clip(lower=0)
+
+    return df
+
 
 # Work csv
 count = 0
-for region, df_region in work_df.groupby('DEPARTURE_NAME_1'):
+for region, df_region in work_df.groupby('DEPARTURE_NAME_2'):
     count += 1
     print(region)
     # print("Center: ", df_region['DEPARTURE_NAME_1'].iloc[0])
@@ -77,25 +98,29 @@ for region, df_region in work_df.groupby('DEPARTURE_NAME_1'):
         "Commute_distance_average": total_distance / len(df_region),
         "Number_of_pax": df_region['Total'].sum(),
         "Number_of_destinations": len(df_region),
-        "Bicycle": df_region['Bicycle'].sum(),
-        "Ferry": df_region['Ferry'].sum(),
-        "Public bus": df_region['Public_bus'].sum(),
-        "Train": df_region['Train'].sum(),
-        "Drive_a_private_car_truck_or_van": df_region['Drive_a_private_car_truck_or_van'].sum(),
-        "Drive_a_company_car_truck_or_van": df_region['Drive_a_company_car_truck_or_van'].sum(),
-        "Passenger_in_a_car_truck_van_or_company_bus": df_region['Passenger_in_a_car_truck_van_or_company_bus'].sum(),
-        "Other": df_region['Other'].sum(),
-        "Work_at_home": df_region['Work_at_home'].sum(),
-        "Walk_or_jog": df_region['Walk_or_jog'].sum(),
+        "Bicycle": df_region['Bicycle'].clip(lower=0).sum(),
+        "Ferry": df_region['Ferry'].clip(lower=0).sum(),
+        "Public_bus": df_region['Public_bus'].clip(lower=0).sum(),
+        "Train": df_region['Train'].clip(lower=0).sum(),
+        "Drive_a_private_car_truck_or_van": df_region['Drive_a_private_car_truck_or_van'].clip(lower=0).sum(),
+        "Drive_a_company_car_truck_or_van": df_region['Drive_a_company_car_truck_or_van'].clip(lower=0).sum(),
+        "Passenger_in_a_car_truck_van_or_company_bus": df_region['Passenger_in_a_car_truck_van_or_company_bus'].clip(lower=0).sum(),
+        "Other": df_region['Other'].clip(lower=0).sum(),
+        "Work_at_home": df_region['Work_at_home'].clip(lower=0).sum(),
+        "Walk_or_jog": df_region['Walk_or_jog'].clip(lower=0).sum(),
     }
     # out_work.append(pd.Series(d),ignore_index=True)
     out_work.loc[region] = pd.Series(d)
     
+#out_work.mask(out_work < 0, 0)   #.clip(lower=0)
+out_work = out_work.replace(to_replace=-999,value=0)
+# out_work = noNegatives(out_work)
 out_work.to_csv('./regional_data/work.csv',index=False)
+out_work.set_index('Name').to_json('./regional_data/work.json',orient='index')
 
 count = 0
 # Education csv
-for region, df_region in education_df.groupby('DEPARTURE_NAME_1'):
+for region, df_region in education_df.groupby('DEPARTURE_NAME_2'):
     count += 1
     print(region)
     # print("Center: ", df_region['DEPARTURE_NAME_1'].iloc[0])
@@ -110,19 +135,21 @@ for region, df_region in education_df.groupby('DEPARTURE_NAME_1'):
         "Commute_distance_average": total_distance / len(df_region),
         "Number_of_pax": df_region['Total'].sum(),
         "Number_of_destinations": len(df_region),
-        "Bicycle": df_region['Bicycle'].sum(),
-        "Ferry": df_region['Ferry'].sum(),
-        "Public bus": df_region['Public_bus'].sum(),
-        "School bus": df_region['School_bus'].sum(),
-        "Train": df_region['Train'].sum(),
-        "Drive_a_car_truck_or_van": df_region['Drive_a_car_truck_or_van'].sum(),
-        "Passenger_in_a_car_truck_or_van": df_region['Passenger_in_a_car_truck_or_van'].sum(),
-        "Other": df_region['Other'].sum(),
-        "Study_at_home": df_region['Study_at_home'].sum(),
-        "Walk_or_jog": df_region['Walk_or_jog'].sum(),
+        "Bicycle": df_region['Bicycle'].clip(lower=0).sum(),
+        "Ferry": df_region['Ferry'].clip(lower=0).sum(),
+        "Public_bus": df_region['Public_bus'].clip(lower=0).sum(),
+        "School_bus": df_region['School_bus'].clip(lower=0).sum(),
+        "Train": df_region['Train'].clip(lower=0).sum(),
+        "Drive_a_car_truck_or_van": df_region['Drive_a_car_truck_or_van'].clip(lower=0).sum(),
+        "Passenger_in_a_car_truck_or_van": df_region['Passenger_in_a_car_truck_or_van'].clip(lower=0).sum(),
+        "Other": df_region['Other'].clip(lower=0).sum(),
+        "Study_at_home": df_region['Study_at_home'].clip(lower=0).sum(),
+        "Walk_or_jog": df_region['Walk_or_jog'].clip(lower=0).sum(),
     }
     out_education.loc[region] = pd.Series(d)
 
+#out_education.mask(out_education < 0, 0)
+# out_education = noNegatives(out_education)
+out_education = out_education.replace(to_replace=-999,value=0)
 out_education.to_csv('./regional_data/education.csv',index=False)
-
-
+out_education.set_index('Name').to_json('./regional_data/education.json',orient='index')

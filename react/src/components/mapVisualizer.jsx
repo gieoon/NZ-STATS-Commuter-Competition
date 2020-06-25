@@ -58,8 +58,8 @@ const colorInterpolator = {
 function MapVisualizer({
   currentMap,
   data,
-  // workMapData,
-  // educationMapData,
+  regionalEducationData,
+  regionalWorkData,
   currentView,
   setCurrentView,
   changeMap,
@@ -270,7 +270,10 @@ function MapVisualizer({
             // .attr('fill-opacity', 1)
             .style("cursor", "pointer")
             .on("mouseenter", (d) => {
+              console.log(regionalEducationData)
               setRegionHighlighted({
+                regionalEducationData: (regionalEducationData || {})[d.properties.NAME_2],
+                regionalWorkData: (regionalWorkData || {})[d.properties.NAME_2],
                 districtCode: CITY_CODES[d.properties.NAME_2], // Unique on city names
                 cityName: d.properties.NAME_2,
               });
@@ -308,7 +311,7 @@ function MapVisualizer({
         const districtCode = CITY_CODES[d.properties.NAME_2];
         // Zoom in on the map
         districtClicked(d);
-        // setupDataframe();
+        // setupDataframe(); // Only use this to create the initial dataframe
         if (
           onceTouchedRegion ||
           mapMeta.mapType === MAP_TYPES.COUNTRY ||
@@ -542,6 +545,8 @@ function MapVisualizer({
     svg.attr("pointer-events", "auto").on("click", () => {
       if (mapMeta.mapType !== MAP_TYPES.COUNTRY) {
         setRegionHighlighted({
+          regionalEducationData: {},
+          regionalWorkData: {},
           districtCode: "NZ",
           cityName: null,
         });

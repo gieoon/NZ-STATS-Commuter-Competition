@@ -49,6 +49,8 @@ function MapExplorer({
   districtCode,
   educationData,
   workData,
+  regionalEducationData,
+  regionalWorkData,
   regionHighlighted,
   setRegionHighlighted,
   anchor,
@@ -160,6 +162,8 @@ function MapExplorer({
         )[0];
         ReactDOM.unstable_batchedUpdates(() => {
           setRegionHighlighted({
+            regionalEducationData: {},
+            regionalWorkData: {},
             districtCode: districtCode,
             cityName: topDistrict,
           });
@@ -177,6 +181,8 @@ function MapExplorer({
             option: currentMap.option,
           });
           setRegionHighlighted({
+            regionalEducationData: {},
+            regionalWorkData: {},
             districtCode: "NZ",
             cityName: null,
           });
@@ -240,6 +246,8 @@ function MapExplorer({
         });
         if (currentMapMeta.mapType === MAP_TYPES.COUNTRY)
           setRegionHighlighted({
+            regionalEducationData: {},
+            regionalWorkData: {},
             districtCode: regionHighlighted.districtCode,
             cityName: null,
           });
@@ -252,6 +260,8 @@ function MapExplorer({
           option: MAP_OPTIONS.WORK,
         });
         setRegionHighlighted({
+          regionalEducationData: {},
+          regionalWorkData: {},
           districtCode: regionHighlighted.districtCode,
           cityName: null,
         });
@@ -357,24 +367,40 @@ function MapExplorer({
           </div>
           {/* The numbers at the top */}
           <div className="map-stats">
-            {currentMapStatistics.map((statistic, index) => (
-              <div
-                key={statistic}
-                className={classnames("stats", statistic, {
-                  focused: statistic === mapStatistic,
-                })}
-                onClick={() => setMapStatistic(statistic)}
-              >
-                <h5>{t(capitalize(statistic))}</h5>
-                <div className="stats-bottom">
-                  <animated.h1>
-                    {springs[index].total.interpolate((total) =>
-                      formatNumber(Math.floor(total))
-                    )}
-                  </animated.h1>
+            { currentView.view === MAP_TYPES.COUNTRY
+            ? <div>
+              {console.log(regionHighlighted.regionalEducationData)}
+              {Object.keys(regionHighlighted.regionalEducationData || {}).map((statistic, index) => (
+                <div>
+                  {statistic}
+                  ,
+                  {regionHighlighted.regionalEducationData[statistic]}
                 </div>
-              </div>
-            ))}
+                )
+              )
+              }
+            </div>
+            : <div>{currentMapStatistics.map((statistic, index) => (
+                <div
+                  key={statistic}
+                  className={classnames("stats", statistic, {
+                    focused: statistic === mapStatistic,
+                  })}
+                  onClick={() => setMapStatistic(statistic)}
+                >
+                  <h5>{t(capitalize(statistic))}</h5>
+                  <div className="stats-bottom">
+                    <animated.h1>
+                      {springs[index].total.interpolate((total) =>
+                        formatNumber(Math.floor(total))
+                      )}
+                    </animated.h1>
+                  </div>
+                </div>
+              ))}
+            </div>
+            }
+            
           </div>
         </div>
       </div>
@@ -396,8 +422,8 @@ function MapExplorer({
             <MapVisualizer
               currentMap={currentMap}
               data={data}
-              // workMapData={workMapData}
-              // educationMapData={educationMapData}
+              regionalEducationData={regionalEducationData}
+              regionalWorkData={regionalWorkData}
               currentView={currentView}
               setCurrentView={setCurrentView}
               changeMap={switchMap}

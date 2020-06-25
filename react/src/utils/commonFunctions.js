@@ -127,6 +127,15 @@ export const fetcher = (url) => {
   });
 };
 
+export const fetcherJSON = (url) => {
+  return fetch(url).then((response) => {
+    return response.json();
+  })
+  .catch(err => {
+    console.error("Error fetching data: ", err);
+  })
+}
+
 // Convert input text into an array of objects
 export const txt2Array = (allText) => {
   var allTextLines = allText.split(/\r\n|\n/);
