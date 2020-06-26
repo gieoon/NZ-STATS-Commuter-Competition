@@ -39,6 +39,7 @@ import {
   getStatistic,
 } from "../utils/commonFunctions";
 import { CodeSquareIcon } from "@primer/octicons-v2-react";
+import LeafletMap from './leafletMap';
 
 const [width, height] = [432, 488];
 
@@ -60,6 +61,8 @@ function MapVisualizer({
   data,
   regionalEducationData,
   regionalWorkData,
+  regionalTotalData,
+  setRegionalData,
   currentView,
   setCurrentView,
   changeMap,
@@ -72,7 +75,7 @@ function MapVisualizer({
   const { t } = useTranslation();
   const svgRef = useRef(null);
 
-  const mapMeta = MAP_META[currentMap.code];
+  const mapMeta = MAP_META['NZ'];
 
   // Load topoJSON file
   const { data: geoData } = useSWR(
@@ -151,6 +154,8 @@ function MapVisualizer({
     const projection = geoMercator().fitSize([width, height], topology);
     const path = geoPath(projection);
 
+    
+
     let features =
       currentMap.view === MAP_TYPES.DISTRICT
         ? topojson.feature(geoData, geoData.objects[mapMeta.graphObjectStates])
@@ -218,6 +223,17 @@ function MapVisualizer({
       return "#ffffff00"; //'#c3c9c8';
     };
 
+    // takes in d.properties.NAME_2
+    const getRegionalData = (districtName) => {
+      console.log(currentMap.option, regionalTotalData)
+      switch(currentMap.option){
+        case(MAP_OPTIONS.TOTAL): return (regionalTotalData || {})[districtName];
+        case(MAP_OPTIONS.WORK): return (regionalWorkData || {})[districtName];
+        case(MAP_OPTIONS.EDUCATION): return (regionalEducationData || {})[districtName];
+        default: return (regionalTotalData || {})[districtName];
+      }
+    }
+
     const districtClicked = (d) => {
       var x, y, k;
       var centered = null;
@@ -246,7 +262,6 @@ function MapVisualizer({
         .attr("transform", "translate(" + width * (k/2) + "," + height * (k/2.15) + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
         // .style("stroke-width", 1.5 / k + "px");
         // .style("stroke-width", 0.125 + "rem");
-
     }
 
     /* Draw map */
@@ -270,13 +285,12 @@ function MapVisualizer({
             // .attr('fill-opacity', 1)
             .style("cursor", "pointer")
             .on("mouseenter", (d) => {
-              console.log(regionalEducationData)
+              // console.log(currentMap.option, currentMap.option === MAP_OPTIONS.TOTAL)
               setRegionHighlighted({
-                regionalEducationData: (regionalEducationData || {})[d.properties.NAME_2],
-                regionalWorkData: (regionalWorkData || {})[d.properties.NAME_2],
                 districtCode: CITY_CODES[d.properties.NAME_2], // Unique on city names
                 cityName: d.properties.NAME_2,
               });
+              setRegionalData(getRegionalData(d.properties.NAME_2))
             })
             .on("mouseleave", (d) => {
               if (onceTouchedRegion === d) onceTouchedRegion = null;
@@ -398,7 +412,6 @@ function MapVisualizer({
               geoData,
               geoData.objects[mapMeta.graphObjectDistricts]
             ).features;
-            // console.log(features);
             // features.some() <= this function is good, but only returns boolean.
             for(var f of features){
               if(geoContains(
@@ -545,16 +558,19 @@ function MapVisualizer({
     svg.attr("pointer-events", "auto").on("click", () => {
       if (mapMeta.mapType !== MAP_TYPES.COUNTRY) {
         setRegionHighlighted({
-          regionalEducationData: {},
-          regionalWorkData: {},
           districtCode: "NZ",
           cityName: null,
         });
       }
     });
+
+    // console.log("regionHighlighted.cityName: ", regionHighlighted.cityName);
+    // const regionalData = getRegionalData(regionHighlighted.cityName)
+
   }, [
     geoData,
     data,
+    // regionalData,
     mapMeta,
     currentMap,
     setRegionHighlighted,
@@ -569,7 +585,7 @@ function MapVisualizer({
     // console.log(regionHighlighted);
     const district = CITY_NAMES[regionHighlighted.districtCode];
     const city = regionHighlighted.cityName;
-
+    
     const svg = select(svgRef.current);
     // if (currentMap.option === MAP_OPTIONS.HOTSPOTS) {
     //   svg
@@ -642,8 +658,8 @@ function MapVisualizer({
 
     var b = false;
 
-    console.log(data.educationMapData.length);
-    console.log(data.workMapData.length);
+    // console.log(data.educationMapData.length);
+    // console.log(data.workMapData.length);
     for(var r of data.educationMapData){
       b = false;
       for(var f of features){
@@ -718,10 +734,8 @@ function MapVisualizer({
 
   return (
     <React.Fragment>
-      {/* {console.log(data)} */}
-      {/* {console.log("currentMap: ", currentMap)} */}
-      {/* {console.log(data[currentMap.code])} */}
-      <div className="svg-parent">
+      <LeafletMap />
+      {/* <div className="svg-parent">
         <svg
           id="chart"
           viewBox={`0 0 ${width} ${height}`}
@@ -737,6 +751,7 @@ function MapVisualizer({
             <g className="circles" />
           )}
         </svg>
+    
         {mapMeta.mapType === MAP_TYPES.DISTRICT &&
           !!getTotalStatistic(
             data[currentMap.code]?.districts?.[UNKNOWN_DISTRICT_KEY],
@@ -749,7 +764,7 @@ function MapVisualizer({
               })}
             </div>
           )}
-      </div>
+      </div> */}
 
       {/* {mapScale && (
             <MapLegend
@@ -760,7 +775,7 @@ function MapVisualizer({
             />
             )} */}
 
-      <svg style={{ position: "absolute", height: 0 }}>
+      {/* <svg style={{ position: "absolute", height: 0 }}>
         <defs>
           <filter id="balance-color" colorInterpolationFilters="sRGB">
             <feColorMatrix
@@ -772,7 +787,7 @@ function MapVisualizer({
             />
           </filter>
         </defs>
-      </svg>
+      </svg> */}
     </React.Fragment>
   );
 }

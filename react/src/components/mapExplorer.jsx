@@ -51,6 +51,7 @@ function MapExplorer({
   workData,
   regionalEducationData,
   regionalWorkData,
+  regionalTotalData,
   regionHighlighted,
   setRegionHighlighted,
   anchor,
@@ -67,16 +68,17 @@ function MapExplorer({
   const [currentMap, setCurrentMap] = useState({
     code: districtCode,
     view: MAP_TYPES.COUNTRY,
-    option:
-      MAP_META[districtCode].mapType === MAP_TYPES.COUNTRY
-        ? MAP_OPTIONS.TOTAL
-        : MAP_OPTIONS.HOTSPOTS,
+    option: MAP_OPTIONS.TOTAL
   });
 
   // District vs Country view
   const [currentView, setCurrentView] = useState({
     view: MAP_TYPES.COUNTRY
-  });  
+  }); 
+  
+  const [regionalData, setRegionalData] = useState(
+    undefined
+  )
 
   // What to display at the top
   const [currentMapStatistics, setCurrentMapStatistics] = useState(MODES_OF_TRANSPORT);
@@ -102,49 +104,50 @@ function MapExplorer({
   // Define data based on the current tab.
   const [data, setCurrentData] = useState(updateCurrentData);
 
-  
-
   const currentMapMeta = MAP_META[currentMap.code];
 
   // Executes after a state update
   useEffect(() => {
     setCurrentData(updateCurrentData);
-    if (regionHighlighted.cityName) {
-      if (
-        currentMap.code !== regionHighlighted.districtCode &&
-        !(
-          currentMapMeta.mapType === MAP_TYPES.COUNTRY &&
-          currentMap.view === MAP_TYPES.COUNTRY
-        )
-      ) {
-        const newMapMeta = MAP_META[regionHighlighted.districtCode];
-        if (!newMapMeta) {
-          return;
-        }
-        setCurrentMap({
-          code: regionHighlighted.districtCode,
-          view: MAP_TYPES.COUNTRY,
-          option:
-            currentMap.option === MAP_OPTIONS.PER_MILLION
-              ? MAP_OPTIONS.TOTAL
-              : currentMap.option,
-        });
-      }
-    } else if (isCountryLoaded && currentMapMeta.mapType === MAP_TYPES.COUNTRY) {
-      setCurrentMap({
-        code: "NZ",
-        view: MAP_TYPES.COUNTRY,
-        option: currentMap.option,
-      });
-    }
+    // console.log("currentMap.option: ", currentMap.option);
+    setCurrentMap({
+      code: regionHighlighted.districtCode,
+      view: MAP_TYPES.COUNTRY,
+      option: currentMap.option,
+    });
+    // if (regionHighlighted.cityName) {
+    //   if (
+    //     currentMap.code !== regionHighlighted.districtCode &&
+    //     !(
+    //       currentMapMeta.mapType === MAP_TYPES.COUNTRY &&
+    //       currentMap.view === MAP_TYPES.COUNTRY
+    //     )
+    //   ) {
+    //     const newMapMeta = MAP_META[regionHighlighted.districtCode];
+    //     if (!newMapMeta) {
+    //       return;
+    //     }
+    //     // setCurrentMap({
+    //     //   code: regionHighlighted.districtCode,
+    //     //   view: MAP_TYPES.COUNTRY,
+    //     //   option: currentMap.option,
+    //     // });
+    //   }
+    // } else if (isCountryLoaded && currentMapMeta.mapType === MAP_TYPES.COUNTRY) {
+    //   // setCurrentMap({
+    //   //   code: "NZ",
+    //   //   view: MAP_TYPES.COUNTRY,
+    //   //   option: currentMap.option,
+    //   // });
+    // }
   }, [
     isCountryLoaded,
-    regionHighlighted.stateCode,
+    regionHighlighted.districtCode,
     regionHighlighted.districtName,
     currentMap.code,
     currentMap.option,
     currentMap.view,
-    currentMapMeta.mapType,
+    // currentMapMeta.mapType,
   ]);
 
   const switchMap = useCallback(
@@ -162,8 +165,6 @@ function MapExplorer({
         )[0];
         ReactDOM.unstable_batchedUpdates(() => {
           setRegionHighlighted({
-            regionalEducationData: {},
-            regionalWorkData: {},
             districtCode: districtCode,
             cityName: topDistrict,
           });
@@ -181,8 +182,6 @@ function MapExplorer({
             option: currentMap.option,
           });
           setRegionHighlighted({
-            regionalEducationData: {},
-            regionalWorkData: {},
             districtCode: "NZ",
             cityName: null,
           });
@@ -237,45 +236,18 @@ function MapExplorer({
   ]);
 
   const handleTabClick = (option) => {
-    switch (option) {
-      case MAP_OPTIONS.TOTAL:
-        setCurrentMap({
-          code: currentMap.code,
-          view: MAP_TYPES.COUNTRY,
-          option: MAP_OPTIONS.TOTAL,
-        });
-        if (currentMapMeta.mapType === MAP_TYPES.COUNTRY)
-          setRegionHighlighted({
-            regionalEducationData: {},
-            regionalWorkData: {},
-            districtCode: regionHighlighted.districtCode,
-            cityName: null,
-          });
-        return;
-      case MAP_OPTIONS.WORK:
-        // if (currentMapMeta.mapType === MAP_TYPES.COUNTRY) return;
-        setCurrentMap({
-          code: currentMap.code,
-          view: MAP_TYPES.COUNTRY,
-          option: MAP_OPTIONS.WORK,
-        });
-        setRegionHighlighted({
-          regionalEducationData: {},
-          regionalWorkData: {},
-          districtCode: regionHighlighted.districtCode,
-          cityName: null,
-        });
-        return;
-      case MAP_OPTIONS.EDUCATION:
-        setCurrentMap({
-          code: currentMap.code,
-          view: MAP_TYPES.COUNTRY,
-          option: MAP_OPTIONS.EDUCATION,
-        });
-        return;
-      default:
-        return;
-    }
+    console.log('moving to tab: ', option);
+    setCurrentMap({
+      code: currentMap.code,
+      view: MAP_TYPES.COUNTRY,
+      option: option,
+    });
+    if (currentView.view === MAP_TYPES.COUNTRY)
+      setRegionHighlighted({
+        districtCode: regionHighlighted.districtCode,
+        cityName: null,
+      });
+    return;
   };
 
   const springs = useSprings(
@@ -321,11 +293,7 @@ function MapExplorer({
           ? <h6>
             {t("{{action}} over a {{mapType}} for more details", {
               action: t(window.innerWidth <= 769 ? "Tap" : "Hover"),
-              mapType: t(
-                currentMapMeta.mapType === MAP_TYPES.COUNTRY
-                  ? "Regional District"
-                  : "Regional District"
-              ),
+              mapType: t("Regional District"),
             })}
           </h6>
           : ""
@@ -369,12 +337,15 @@ function MapExplorer({
           <div className="map-stats">
             { currentView.view === MAP_TYPES.COUNTRY
             ? <div>
-              {console.log(regionHighlighted.regionalEducationData)}
-              {Object.keys(regionHighlighted.regionalEducationData || {}).map((statistic, index) => (
-                <div>
+              {regionalData
+                ? console.log(regionalData)
+                : ""
+              }
+              {Object.keys(regionalData || {}).map((statistic, index) => (
+                <div key={index}>
                   {statistic}
                   ,
-                  {regionHighlighted.regionalEducationData[statistic]}
+                  {regionalData[statistic]}
                 </div>
                 )
               )
@@ -424,6 +395,8 @@ function MapExplorer({
               data={data}
               regionalEducationData={regionalEducationData}
               regionalWorkData={regionalWorkData}
+              regionalTotalData={regionalTotalData}
+              setRegionalData={setRegionalData}
               currentView={currentView}
               setCurrentView={setCurrentView}
               changeMap={switchMap}

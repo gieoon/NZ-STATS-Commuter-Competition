@@ -18,6 +18,7 @@ function Home(props) {
 
   const [regionHighlighted, setRegionHighlighted] = useState({
     id: "NZ",
+    regionalData: {},
     districtCode: "NZ", // Based on NAME_1
     cityName: null,
   });
@@ -61,6 +62,15 @@ function Home(props) {
     }
   )
 
+  const { data: regionalTotalData } = useStickySWR(
+    DATA_URL_ROOT + '/total_regional_data',
+    fetcherJSON,
+    {
+      revalidateOnMount: true,
+      revalidateOnFocus: false
+    }
+  )
+
   const nzMap = useRef();
   const isVisible = useIsVisible(nzMap, { once: true });
 
@@ -86,10 +96,9 @@ function Home(props) {
         />
       </Helmet>
       <div className="Home">
-        {console.log(regionalEducationData)}
-        {console.log(regionalWorkData)}
+        {/* {console.log(regionalEducationData)} */}
+        {/* {console.log(regionalWorkData)} */}
         {/* <LeftPanel /> */}
-
         <div className="home-right" ref={nzMap}>
           {isVisible && (
             <React.Fragment>
@@ -101,6 +110,7 @@ function Home(props) {
                     {...{ workData }}
                     {...{ regionalWorkData }}
                     {...{ regionalEducationData }}
+                    {...{ regionalTotalData }}
                     {...{ mapStatistic, setMapStatistic }}
                     {...{ regionHighlighted, setRegionHighlighted }}
                     {...{ anchor, setAnchor }}

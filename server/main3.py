@@ -247,6 +247,10 @@ with open('./regional_data/education.json') as education_file:
     education_regional_dict = education_file.read()
     education_regional_dict = json.loads(education_regional_dict)
 
+with open('./regional_data/total.json') as total_file:
+    total_regional_dict = total_file.read()
+    total_regional_dict = json.loads(total_regional_dict)
+
 @app.route('/work_regional_data')
 def work_regional_data():
     response = make_response(jsonify(work_regional_dict))
@@ -256,6 +260,12 @@ def work_regional_data():
 @app.route('/education_regional_data')
 def education_regional_data():
     response = make_response(jsonify(education_regional_dict))
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
+
+@app.route('/total_regional_data')
+def total_regional_data():
+    response = make_response(jsonify(total_regional_dict))
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
