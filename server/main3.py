@@ -182,7 +182,7 @@ print(education_df_combined.describe())
 '''
 
 # education_df_combined = education_df_combined.head(5)
-SIZE_DIVISOR = 10
+SIZE_DIVISOR = 20
 work_df_combined = work_df_combined.sample(int(len(work_df_combined.index) / SIZE_DIVISOR), axis=0)
 education_df_combined = education_df_combined.sample(int(len(education_df_combined.index) / SIZE_DIVISOR), axis=0) # 100 random rows
 print(education_df_combined.describe())
