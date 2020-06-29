@@ -8,17 +8,27 @@
 
 /* Hide bottom right fields */
 .leaflet-control-attribution.leaflet-control {
-  display: none;
+  /* display: none; */
 }
 
 /* Position zoom controls more conveniently */
-.leaflet-control-container {
+.leaflet-control-container > div:nth-child(1) {
+  position: absolute;
+  right: 20px;
+  bottom: 100px;
+  left: inherit;
+    top: inherit;
+}
+
+/* .leaflet-control-attribution leaflet-control {
   position: absolute;
   right: 50px;
   bottom: 20%;
-}
+} */
+
+
 
 .leaflet-tile-pane {
-  -webkit-filter: grayscale(80%);
-  filter: grayscale(80%);
+  /* -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); */
 }

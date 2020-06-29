@@ -337,10 +337,10 @@ function MapExplorer({
           <div className="map-stats">
             { currentView.view === MAP_TYPES.COUNTRY
             ? <div>
-              {regionalData
+              {/* {regionalData
                 ? console.log(regionalData)
                 : ""
-              }
+              } */}
               {Object.keys(regionalData || {}).map((statistic, index) => (
                 <div key={index}>
                   {statistic}

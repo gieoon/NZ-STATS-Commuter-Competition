@@ -225,7 +225,7 @@ function MapVisualizer({
 
     // takes in d.properties.NAME_2
     const getRegionalData = (districtName) => {
-      console.log(currentMap.option, regionalTotalData)
+      // console.log(currentMap.option, regionalTotalData)
       switch(currentMap.option){
         case(MAP_OPTIONS.TOTAL): return (regionalTotalData || {})[districtName];
         case(MAP_OPTIONS.WORK): return (regionalWorkData || {})[districtName];
@@ -734,7 +734,10 @@ function MapVisualizer({
 
   return (
     <React.Fragment>
-      <LeafletMap />
+      <LeafletMap 
+        data={data}
+        setHoveredData={setHoveredData}
+      />
       {/* <div className="svg-parent">
         <svg
           id="chart"

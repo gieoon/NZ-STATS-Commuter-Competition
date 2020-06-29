@@ -14,9 +14,11 @@ import shapefile
 import json
 import csv
 
+SIZE_DIVISOR = 50 # 5 # 100
+
 # %matplotlib inline
 'exec(%matplotlib inline)'
-
+'''
  # count = 50870
 DIR = "../CSV/statsnz2018-census-main-means-of-travel-to-work-by-statistical-area-CSV/2018-census-main-means-of-travel-to-work-by-statistical-area.csv"
 DIR2 = "../CSV/statsnzstatistical-area-2-2018-centroid-inside-CSV/statistical-area-2-2018-centroid-inside.csv"
@@ -31,7 +33,7 @@ work_df = pd.read_csv(DIR)
 departure_centroid_df = pd.read_csv(DIR2)
 departure_centroid_df.columns.values[1] = 'code'
 departure_centroid_df.columns = 'departure_' + departure_centroid_df.columns.values
-print(departure_centroid_df.columns)
+# print(departure_centroid_df.columns)
 destination_centroid_df = pd.read_csv(DIR2)
 destination_centroid_df.columns.values[1] = 'code'
 destination_centroid_df.columns = 'destination_' + destination_centroid_df.columns.values
@@ -39,7 +41,7 @@ destination_centroid_df.columns = 'destination_' + destination_centroid_df.colum
 # centroid_df.set_index("SA22018_V1_00", drop=True, inplace=True)
 # centroid_dict = centroid_df.to_dict(orient = 'index')
 
-'''
+
 # Retrieves data from centroid object based on code
 def getDataFromCode(prepend, code):
     return {
@@ -48,13 +50,13 @@ def getDataFromCode(prepend, code):
         prepend + "latitude": centroid_dict[code]['LATITUDE'],
         prepend + 'longitude': centroid_dict[code]['LONGITUDE']
     }
-'''
+
 
 def haversine(lon1, lat1, lon2, lat2):
-    '''
-    Calculate the great circle distance between two points on the Earth (specified in decimal degree)
-    This is the shortest distance over the Earth's surface (as the crow flies)
-    '''
+    
+    # Calculate the great circle distance between two points on the Earth (specified in decimal degree)
+    # This is the shortest distance over the Earth's surface (as the crow flies)
+    
     lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
 
     #haversine formula
@@ -173,24 +175,33 @@ education_df_combined = education_df_combined[[
 ]]
 # education_df_combined.drop(education_df_combined.columns[[1]], axis=1, inplace=True)
 
-'''
-print(work_df_combined.columns)
-print(work_df_combined.describe())
-print(education_df_combined.columns)
-print(education_df_combined.tail(5))
-print(education_df_combined.describe())
-'''
+
 
 # education_df_combined = education_df_combined.head(5)
-SIZE_DIVISOR = 20
+
 work_df_combined = work_df_combined.sample(int(len(work_df_combined.index) / SIZE_DIVISOR), axis=0)
 education_df_combined = education_df_combined.sample(int(len(education_df_combined.index) / SIZE_DIVISOR), axis=0) # 100 random rows
+# print(education_df_combined.describe())
+# print("education columns: ", education_df_combined.columns)
+# print("work columns: ", work_df_combined.columns)
+
+print(work_df_combined.describe())
 print(education_df_combined.describe())
-print("education columns: ", education_df_combined.columns)
-print("work columns: ", work_df_combined.columns)
 
 work_csv_out = work_df_combined.to_csv(index=False)
 education_csv_out = education_df_combined.to_csv(index=False)
+'''
+
+work_csv_out = pd.read_csv('./out/work.csv')
+work_csv_out = work_csv_out.sample(int(len(work_csv_out.index) / SIZE_DIVISOR), axis=0)
+work_csv_out = work_csv_out.to_csv(index=False)
+education_csv_out = pd.read_csv('./out/education.csv')
+education_csv_out = education_csv_out.sample(int(len(education_csv_out.index) / SIZE_DIVISOR), axis=0)
+education_csv_out = education_csv_out.to_csv(index=False)
+
+# with open('./out/work.csv') as work_csv:
+#     work_csv_reader = csv.reader(work_csv, delimiter=',')
+#     return 
 
 # print(dfM.describe()) # count = 50970
 # print(dfM.columns)
@@ -268,6 +279,37 @@ def total_regional_data():
     response = make_response(jsonify(total_regional_dict))
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
+
+# Load all zone files
+with open('./zoneData/5.csv') as zone_5_file:
+    zone_5_dict = zone_5_file.read()
+
+# Handle zone data, retrieve data based on the current visible boundary
+@app.route('/zoneData')
+def get_zone_data():
+    left = request.args.get('left')
+    top = request.args.get('top')
+    right = request.args.get('right')
+    bottom = request.args.get('bottom')
+    print(left,top,right,bottom)
+    response = make_response(jsonify(zone_5_dict))
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
+
+# Same as above, but loading for a specific commute type
+@app.route('/zoneDataWithCommuteType')
+def get_zone_data_with_commute_type():
+    left = request.args.get('left')
+    top = request.args.get('top')
+    right = request.args.get('right')
+    bottom = request.args.get('bottom')
+    commuteType = request.args.get('commuteType')
+    print(left,top,right,bottom,commuteType)
+
+    response = make_response(jsonify("{}"))
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
+
 
 # This is only run once to create data which is saved serverside.
 # To set up new dataframe, retrieve series of each destination & departure region name.
