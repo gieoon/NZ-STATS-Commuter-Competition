@@ -737,6 +737,7 @@ function MapVisualizer({
       <LeafletMap 
         data={data}
         setHoveredData={setHoveredData}
+        currentMap={currentMap}
       />
       {/* <div className="svg-parent">
         <svg

@@ -14,6 +14,8 @@ import shapefile
 import json
 import csv
 
+from zoom import handleZoom
+
 SIZE_DIVISOR = 50 # 5 # 100
 
 # %matplotlib inline
@@ -280,10 +282,6 @@ def total_regional_data():
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
-# Load all zone files
-with open('./zoneData/5.csv') as zone_5_file:
-    zone_5_dict = zone_5_file.read()
-
 # Handle zone data, retrieve data based on the current visible boundary
 @app.route('/zoneData')
 def get_zone_data():
@@ -291,8 +289,10 @@ def get_zone_data():
     top = request.args.get('top')
     right = request.args.get('right')
     bottom = request.args.get('bottom')
-    print(left,top,right,bottom)
-    response = make_response(jsonify(zone_5_dict))
+    zoom = request.args.get('zoom')
+    data_type = request.args.get('data_type')
+    data = handleZoom(left, top, right, bottom, zoom, data_type)
+    response = make_response(data)
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 

@@ -11,17 +11,23 @@ import {
 } from '../utils/commonFunctions';
 // import { Curve } from 'react-leaflet-curve';
 
-const MAX_ZOOM = 5;
+const MIN_ZOOM = 5;
+const MAX_ZOOM = 13;
+const INITIAL_STROKE_WEIGHT = 1;
+const HIGHLIGHTED_STROKE_WEIGHT = INITIAL_STROKE_WEIGHT * 3.5;
 
 function LeafletMap({
     data,
     setHoveredData,
+    currentMap,
 }){
     // Center of New Zealand
     // const position = [173.299, -41.273]
     const position = [-41.273, 173.299]
     const topLeft = L.latLng(-31.154944, 162.138842);
     const bottomRight = L.latLng(-49.285522, 179.794907);
+
+    const curves = [];
 
     // const mapRef = React.createRef();
     const mapRef = useRef(null);
@@ -31,10 +37,10 @@ function LeafletMap({
 
     // The variables that we last requested from server, only request again if these have changed
     const [lastRequestedLatLng, setLastRequestedLatLng] = useState({
-       left: 162.138842,
-       top: -31.15494,
-       right: 179.794907,
-       bottom: -49.285522, 
+       left: 0,//162.138842,
+       top: 0,//-31.15494,
+       right: 0,//179.794907,
+       bottom: 0,//-49.285522, 
     });
 
     // Data for zoom & boundary
@@ -48,8 +54,15 @@ function LeafletMap({
             setMap(mapRef.current.leafletElement);
         }
 
+        L.control.scale().addTo(mapRef.current.leafletElement);
+
+        var bounds = mapRef.current.leafletElement.getBounds();
+        console.log(bounds)
         // Load initial data
-        API_zoneData({
+        API_zoneData(bounds, mapRef.current.leafletElement.getZoom());
+        /*
+        {
+            {
             _northEast: {
                 lat: lastRequestedLatLng.top, 
                 lng: lastRequestedLatLng.right
@@ -58,13 +71,16 @@ function LeafletMap({
                 lat: lastRequestedLatLng.bottom, 
                 lng: lastRequestedLatLng.left
             }
-        });
+        }
+        */
 
         // Listen when bounds change so we can load different data
         mapRef.current.leafletElement.on('moveend', function(e) {
             var bounds = this.getBounds();
-            // console.log("Visible boundary: ", bounds);
-            API_zoneData(bounds);
+            var zoom = this.getZoom();
+
+            console.log("Visible zoom: ", zoom);
+            API_zoneData(bounds, zoom);
         });
     },[
         // lastRequestedLatLng
@@ -73,14 +89,12 @@ function LeafletMap({
 
     
 
-    const API_zoneData = async (bounds) => {
-        // console.log("API_zoneData called with m: ", mapRef.current?.leafletElement);
-        
+    const API_zoneData = async (bounds, zoom) => {
         if(
-            lastRequestedLatLng.top !== bounds._northEast.lat
-            && lastRequestedLatLng.bottom !== bounds._southWest.lat
-            && lastRequestedLatLng.left !== bounds._southWest.lng
-            && lastRequestedLatLng.right !== bounds._northEast.lng
+               lastRequestedLatLng.top      !== bounds._northEast.lat
+            && lastRequestedLatLng.bottom   !== bounds._southWest.lat
+            && lastRequestedLatLng.left     !== bounds._southWest.lng
+            && lastRequestedLatLng.right    !== bounds._northEast.lng
         ){
             setLastRequestedLatLng({
                 top: bounds._northEast.lat,
@@ -90,16 +104,24 @@ function LeafletMap({
             });
             // Request new data
             fetch(
-                DATA_URL_ROOT + `/zoneData?left=${bounds._southWest.lng}&top=${bounds._northEast.lat}&right=${bounds._northEast.lng}&bottom=${bounds._southWest.lat}`,
+                DATA_URL_ROOT + `/zoneData?left=${bounds._southWest.lng}&top=${bounds._northEast.lat}&right=${bounds._northEast.lng}&bottom=${bounds._southWest.lat}&zoom=${zoom}&data_type=${currentMap.option.toUpperCase()}`,
             ).then(async (d)=>{
                 // console.log("zone data: ", await d.json());
                 // setZoneData(d);
                 // return await d.json();
-                const data = txt2Array(await d.json());
+                const data = txt2Array(await d.text());
                 setZoneData(data);
                 //return await d.json();
                 // console.log('updating curves: ', data);
+                
+
+                curves.forEach(curve => {
+                    curve.remove();
+                })
+                curves.length = 0;
                 updateCurves(data);
+
+                
             })
             .catch(err => {
                 console.error("Error fetching data: ", err);
@@ -128,7 +150,7 @@ function LeafletMap({
         // console.log(mapRef.current, document.getElementById('mapObj').leafletElement);
 
         // if(mapRef.current === null) return;
-        console.log(mapRef)
+        // console.log(mapRef)
         // console.log('mapRef is not null');
         const points = [];
         var delta_x = lon2 - lon1,
@@ -149,9 +171,8 @@ function LeafletMap({
 
         points.push([lon1, lat1], midpointLatLng, [lon2, lat2]);
 
-        const INITIAL_STROKE_WEIGHT = 2;
         var pathOptions = {
-            color: '#007bff',
+            color: obj.TYPE === "WORK" ? "#fee08b" : '#007bff',
             weight: INITIAL_STROKE_WEIGHT,
         }
 
@@ -168,7 +189,7 @@ function LeafletMap({
         .on('mouseover', function(e) {
             // console.log('mouseover: ', e, obj)
             this.setStyle({
-                weight: INITIAL_STROKE_WEIGHT * 2.5 
+                weight: HIGHLIGHTED_STROKE_WEIGHT
             })
             setHoveredData({
                 hoveredData: obj,
@@ -182,7 +203,7 @@ function LeafletMap({
         })
         //.addTo(mapRef.current.leafletElement)
         .addTo(m || mapRef.current.leafletElement)
-
+        curves.push(curve);
         // console.log(mapRef.current.leafletElement)
         // return curve;  
     }
@@ -210,10 +231,11 @@ function LeafletMap({
             <Map
                 ref={mapRef}
                 center={position} 
-                zoom={MAX_ZOOM}  //13
+                zoom={MIN_ZOOM}  //13
                 zoomControl={true}
                 maxBounds={L.latLngBounds(topLeft, bottomRight)}
                 minZoom={5}
+                maxZoom={MAX_ZOOM}
                 layers={[]}
 
                 // setPath={createCurve(170.138842, -31.154944, 179.794907, -49.285522)}
@@ -223,8 +245,8 @@ function LeafletMap({
                     // This defines what kind of tiles we want, and the type of the map
                     // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     //attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
-                    // url="http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg"
-                    url="http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg"
+                    url="http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg"
+                    // url="http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg"
                     // WHEN USING HTTPS
                     // url="https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg"
                     // url="http://tile.stamen.com/toner/{z}/{x}/{y}.png"
