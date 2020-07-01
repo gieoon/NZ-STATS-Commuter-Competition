@@ -4,7 +4,9 @@ import L from 'leaflet';
 import '@elfalem/leaflet-curve'
 import './leaflet.css';
 import {
-    DATA_URL_ROOT
+    DATA_URL_ROOT,
+    WORK_COLOUR,
+    EDUCATION_COLOUR,
 } from '../constants';
 import {
     txt2Array
@@ -17,15 +19,15 @@ const INITIAL_STROKE_WEIGHT = 1;
 const HIGHLIGHTED_STROKE_WEIGHT = INITIAL_STROKE_WEIGHT * 3.5;
 
 function LeafletMap({
-    data,
     setHoveredData,
+    setHighlightedData,
     currentMap,
 }){
     // Center of New Zealand
     // const position = [173.299, -41.273]
     const position = [-41.273, 173.299]
     const topLeft = L.latLng(-31.154944, 162.138842);
-    const bottomRight = L.latLng(-49.285522, 179.794907);
+    const bottomRight = L.latLng(-49.285522, 181.794907); // 179
 
     const curves = [];
 
@@ -44,7 +46,9 @@ function LeafletMap({
     });
 
     // Data for zoom & boundary
-    const [zoneData, setZoneData] = useState({});
+    const [workZoneData, setWorkZoneData] = useState([]);
+
+    const [educationZoneData, setEducationZoneData] = useState([]);
 
     useEffect(() => {
         // console.log('this.leafletElement: ', this);
@@ -59,7 +63,16 @@ function LeafletMap({
         var bounds = mapRef.current.leafletElement.getBounds();
         console.log(bounds)
         // Load initial data
-        API_zoneData(bounds, mapRef.current.leafletElement.getZoom());
+        const zoom = mapRef.current.leafletElement.getZoom();
+        const dataType = currentMap.option.toUpperCase();
+        // If total, request both data types
+        if(dataType === "TOTAL"){
+            API_zoneData(bounds, zoom, "EDUCATION");
+            API_zoneData(bounds, zoom, "WORK");
+        } else {
+            // Otherwise just search directly
+            API_zoneData(bounds, zoom, dataType);
+        }
         /*
         {
             {
@@ -80,7 +93,22 @@ function LeafletMap({
             var zoom = this.getZoom();
 
             console.log("Visible zoom: ", zoom);
-            API_zoneData(bounds, zoom);
+            
+            curves.forEach(curve => {
+                curve.remove();
+            })
+            curves.length = 0;
+
+            const dataType = currentMap.option.toUpperCase();
+            
+            // If total, request both data types
+            if(dataType === "TOTAL"){
+                API_zoneData(bounds, zoom, "EDUCATION");
+                API_zoneData(bounds, zoom, "WORK");
+            } else {
+                // Otherwise just search directly
+                API_zoneData(bounds, zoom, dataType);
+            }
         });
     },[
         // lastRequestedLatLng
@@ -89,7 +117,7 @@ function LeafletMap({
 
     
 
-    const API_zoneData = async (bounds, zoom) => {
+    const API_zoneData = async (bounds, zoom, dataType) => {
         if(
                lastRequestedLatLng.top      !== bounds._northEast.lat
             && lastRequestedLatLng.bottom   !== bounds._southWest.lat
@@ -104,24 +132,21 @@ function LeafletMap({
             });
             // Request new data
             fetch(
-                DATA_URL_ROOT + `/zoneData?left=${bounds._southWest.lng}&top=${bounds._northEast.lat}&right=${bounds._northEast.lng}&bottom=${bounds._southWest.lat}&zoom=${zoom}&data_type=${currentMap.option.toUpperCase()}`,
+                DATA_URL_ROOT + `/zoneData?left=${bounds._southWest.lng}&top=${bounds._northEast.lat}&right=${bounds._northEast.lng}&bottom=${bounds._southWest.lat}&zoom=${zoom}&data_type=${dataType}`,
             ).then(async (d)=>{
                 // console.log("zone data: ", await d.json());
                 // setZoneData(d);
                 // return await d.json();
                 const data = txt2Array(await d.text());
-                setZoneData(data);
-                //return await d.json();
-                // console.log('updating curves: ', data);
-                
 
-                curves.forEach(curve => {
-                    curve.remove();
-                })
-                curves.length = 0;
-                updateCurves(data);
-
-                
+                if(dataType === "WORK"){
+                    setWorkZoneData(data);
+                    updateCurves(data, "WORK");
+                }
+                if(dataType === "EDUCATION"){
+                    setEducationZoneData(data);
+                    updateCurves(data, "EDUCATION");
+                }
             })
             .catch(err => {
                 console.error("Error fetching data: ", err);
@@ -131,21 +156,22 @@ function LeafletMap({
 
     
 
-    const updateCurves = (d) =>{
+    const updateCurves = (d, dataType) =>{
         console.log('updating zone data: ', d);
-        if(!d && !zoneData) return;
+        if(!d) return;
         for(var r of d){
             createCurve(
                 Number(r.departure_LONGITUDE), 
                 Number(r.departure_LATITUDE), 
                 Number(r.destination_LONGITUDE), 
                 Number(r.destination_LATITUDE),
-                r
+                r,
+                dataType
             );
         }
     }
 
-    const createCurve = (lon1, lat1, lon2, lat2, obj) => {
+    const createCurve = (lon1, lat1, lon2, lat2, obj, dataType) => {
         // console.log(lon1,lat1,lon2,lat2);
         // console.log(mapRef.current, document.getElementById('mapObj').leafletElement);
 
@@ -172,7 +198,7 @@ function LeafletMap({
         points.push([lon1, lat1], midpointLatLng, [lon2, lat2]);
 
         var pathOptions = {
-            color: obj.TYPE === "WORK" ? "#fee08b" : '#007bff',
+            color: dataType === "WORK" ? WORK_COLOUR : EDUCATION_COLOUR,
             weight: INITIAL_STROKE_WEIGHT,
         }
 
@@ -195,6 +221,7 @@ function LeafletMap({
                 hoveredData: obj,
                 hoveredDestination: obj.destination_SA22018_V1_NAME//f.properties.NAME_1
             });
+            setHighlightedData(obj)
         })
         .on('mouseout', function() {
             this.setStyle({
@@ -245,11 +272,11 @@ function LeafletMap({
                     // This defines what kind of tiles we want, and the type of the map
                     // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     //attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
-                    url="http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg"
+                    // url="http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg"
                     // url="http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg"
                     // WHEN USING HTTPS
                     // url="https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg"
-                    // url="http://tile.stamen.com/toner/{z}/{x}/{y}.png"
+                    url="http://tile.stamen.com/toner/{z}/{x}/{y}.png"
                     attribution='Map tiles by <a href="http://stamen.com" style="pointer-events: initial;">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0" style="pointer-events: initial;">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org" style="pointer-events: initial;">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright" style="pointer-events: initial;">ODbL</a>.'
                 />
                 

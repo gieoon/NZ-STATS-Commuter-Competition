@@ -40,6 +40,7 @@ import * as Icon from "react-feather";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { useSprings, animated } from "react-spring";
+import LeftPanel from "./leftPanel";
 
 const MapVisualizer = lazy(() =>
   import("./mapVisualizer" /* webpackChunkName: "MapVisualizer" */)
@@ -79,6 +80,8 @@ function MapExplorer({
   const [regionalData, setRegionalData] = useState(
     undefined
   )
+
+  const [highlightedData, setHighlightedData] = useState({});
 
   // What to display at the top
   const [currentMapStatistics, setCurrentMapStatistics] = useState(MODES_OF_TRANSPORT);
@@ -253,7 +256,6 @@ function MapExplorer({
   const springs = useSprings(
     currentMapStatistics.length,
     currentMapStatistics.map((statistic) => ({
-      //TODO try to use hoveredState here
       total: getStatistic(hoveredData.hoveredData, statistic),
       delta: 64,
       from: {
@@ -288,7 +290,7 @@ function MapExplorer({
         </div>
       )}
 
-      <div className="header">
+      {/* <div className="header">
         { currentView.view === MAP_TYPES.COUNTRY 
           ? <h6>
             {t("{{action}} over a {{mapType}} for more details", {
@@ -298,9 +300,15 @@ function MapExplorer({
           </h6>
           : ""
         }
-      </div>
+      </div> */}
 
-      <div className="details-container-wrapper">
+      <LeftPanel 
+        hoveredRegion={hoveredRegion}
+        hoveredData={hoveredData}
+        highlightedData={highlightedData}
+      />
+      
+      {/* <div className="details-container-wrapper">
         <div className="details-container">
           <div className="meta">
             <h2
@@ -325,7 +333,6 @@ function MapExplorer({
               </div>
               
               <div style={{alignSelf: "center"}}>
-                {/* {t("Distance ")} */}
                 {!isNaN(Number(hoveredData.hoveredData.HAVERSINE_DISTANCE))
                   ? Number(hoveredData.hoveredData.HAVERSINE_DISTANCE).toFixed(2) + "km"
                   : ""
@@ -333,19 +340,13 @@ function MapExplorer({
               </div>
             </h2>
           </div>
-          {/* The numbers at the top */}
           <div className="map-stats">
-            { currentView.view === MAP_TYPES.COUNTRY
-            ? <div>
-              {/* {regionalData
-                ? console.log(regionalData)
-                : ""
-              } */}
-              {Object.keys(regionalData || {}).map((statistic, index) => (
+            <div>
+              {Object.keys(highlightedData || {}).map((statistic, index) => (
                 <div key={index}>
                   {statistic}
                   ,
-                  {regionalData[statistic]}
+                  {highlightedData[statistic]}
                 </div>
                 )
               )
@@ -374,7 +375,7 @@ function MapExplorer({
             
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div ref={mapExplorerRef}>
         {/* {console.log(workMapData)} */}
@@ -402,6 +403,7 @@ function MapExplorer({
               changeMap={switchMap}
               regionHighlighted={regionHighlighted}
               setRegionHighlighted={setRegionHighlighted}
+              setHighlightedData={setHighlightedData}
               setHoveredData={setHoveredData}
               statistic={mapStatistic}
               isCountryLoaded={isCountryLoaded}

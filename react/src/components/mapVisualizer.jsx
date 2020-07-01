@@ -69,6 +69,7 @@ function MapVisualizer({
   regionHighlighted,
   setRegionHighlighted,
   setHoveredData,
+  setHighlightedData,
   statistic,
   isCountryLoaded,
 }) {
@@ -735,8 +736,8 @@ function MapVisualizer({
   return (
     <React.Fragment>
       <LeafletMap 
-        data={data}
         setHoveredData={setHoveredData}
+        setHighlightedData={setHighlightedData}
         currentMap={currentMap}
       />
       {/* <div className="svg-parent">

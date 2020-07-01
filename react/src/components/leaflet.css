@@ -23,6 +23,7 @@
 /* scale bar */
 .leaflet-control-container > div:nth-child(3) {
   left: 6.5rem!important;
+  bottom: 6px;
 }
 
 /* .leaflet-control-attribution leaflet-control {

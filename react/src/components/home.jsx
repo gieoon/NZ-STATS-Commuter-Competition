@@ -5,7 +5,6 @@ import { fetcher, fetcherJSON } from "../utils/commonFunctions";
 import useStickySWR from "../hooks/useStickySwr";
 import { useIsVisible } from "react-is-visible";
 import { Helmet } from "react-helmet";
-// import LeftPanel from "./leftPanel";
 
 const MapExplorer = lazy(() =>
   import("./mapExplorer" /* webpackChunkName: "MapExplorer" */)
@@ -23,6 +22,7 @@ function Home(props) {
     cityName: null,
   });
 
+  
   const { data: workData } = useStickySWR(
     DATA_URL_ROOT + "/work_csv",
     fetcher,
@@ -43,6 +43,7 @@ function Home(props) {
       revalidateOnFocus: false,
     }
   );
+  
 
   const { data: regionalWorkData } = useStickySWR(
     DATA_URL_ROOT + '/work_regional_data',

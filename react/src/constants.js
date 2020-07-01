@@ -140,6 +140,9 @@ export const COLORS = {
   tested: "#4b1eaa",
 };
 
+export const WORK_COLOUR = "#fc7703";
+export const EDUCATION_COLOUR = "#007bff";
+
 export const MAPS_DIR =
   process.env.NODE_ENV === "production" ? "/maps" : "/maps";
 

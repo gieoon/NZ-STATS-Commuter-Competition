@@ -220,13 +220,15 @@ def hello():
 # @cross_origin(origin='localhost',headers=['Content-Type','Authorization'])
 def work_csv():
     # Convert to CSV and export
-    response = make_response(work_csv_out)
+    # response = make_response(work_csv_out)
+    response = make_response("")
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
 @app.route('/education_csv')
 def education_csv():
-    response = make_response(education_csv_out)
+    # response = make_response(education_csv_out)
+    response = make_response("")
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 

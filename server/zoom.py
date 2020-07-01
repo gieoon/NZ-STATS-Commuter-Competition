@@ -54,13 +54,13 @@ def handleZoom(left, top, right, bottom, zoom, data_type):
     # delta_y = float(top) - float(bottom)
     # Get zoom data
 
-    if data_type == "TOTAL":
+    if data_type == "EDUCATION":
         # Concatenate both together and return back
-        df = e_zoom_data[float(zoom)].join(w_zoom_data[float(zoom)])
+        df = e_zoom_data[float(zoom)]#.join(w_zoom_data[float(zoom)])
     elif data_type == "WORK":
         df = w_zoom_data[float(zoom)]
-    else:
-        df = e_zoom_data[float(zoom)]
+    # else:
+    #     df = e_zoom_data[float(zoom)]
         
     print("original zoom df size: ", df.describe())
     df = getVisibleData(df, left, top, right, bottom)
