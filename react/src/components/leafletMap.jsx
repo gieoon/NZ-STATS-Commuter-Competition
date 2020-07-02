@@ -2,11 +2,10 @@ import React, {useState, useMemo, useEffect, useRef} from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import L from 'leaflet';
 import '@elfalem/leaflet-curve'
-import './leaflet.css';
+import './leaflet.scss';
 import {
     DATA_URL_ROOT,
-    WORK_COLOUR,
-    EDUCATION_COLOUR,
+    COMMUTE_PURPOSE_COLOUR,
 } from '../constants';
 import {
     txt2Array
@@ -26,8 +25,8 @@ function LeafletMap({
     // Center of New Zealand
     // const position = [173.299, -41.273]
     const position = [-41.273, 173.299]
-    const topLeft = L.latLng(-31.154944, 162.138842);
-    const bottomRight = L.latLng(-49.285522, 181.794907); // 179
+    const topLeft = L.latLng(-31.154944, 150.138842); //162
+    const bottomRight = L.latLng(-49.285522, 191.794907); // 179
 
     const curves = [];
 
@@ -51,14 +50,30 @@ function LeafletMap({
     const [educationZoneData, setEducationZoneData] = useState([]);
 
     useEffect(() => {
-        // console.log('this.leafletElement: ', this);
+        console.log('currentMap.option: ', currentMap.option);
         // console.log(mapRef.current.leafletElement)
-        if(!m){
-            // console.log("assigning map: ", mapRef.current.leafletElement)
-            setMap(mapRef.current.leafletElement);
-        }
+        // if(!m){
+        //     // console.log("assigning map: ", mapRef.current.leafletElement)
+        //     setMap(mapRef.current.leafletElement);
+        // }
 
+                
         L.control.scale().addTo(mapRef.current.leafletElement);
+        /*
+        var legend = L.control()//({ position: "topright" });
+        legend.onAdd = function(map){
+            var div = L.DomUtil.create('div', 'info legend');
+
+            for (var commutePurpose of Object.keys(COMMUTE_PURPOSE_COLOUR)){
+                div.innerHTML += 
+                    '<i style="background:' + COMMUTE_PURPOSE_COLOUR[commutePurpose] + '"></i> ' + 
+                    '<span>' + commutePurpose + '</span>';
+            }
+            return div;
+        }
+        legend.addTo(mapRef.current.leafletElement);
+        */
+        
 
         var bounds = mapRef.current.leafletElement.getBounds();
         console.log(bounds)
@@ -73,6 +88,7 @@ function LeafletMap({
             // Otherwise just search directly
             API_zoneData(bounds, zoom, dataType);
         }
+
         /*
         {
             {
@@ -91,8 +107,6 @@ function LeafletMap({
         mapRef.current.leafletElement.on('moveend', function(e) {
             var bounds = this.getBounds();
             var zoom = this.getZoom();
-
-            console.log("Visible zoom: ", zoom);
             
             curves.forEach(curve => {
                 curve.remove();
@@ -100,7 +114,7 @@ function LeafletMap({
             curves.length = 0;
 
             const dataType = currentMap.option.toUpperCase();
-            
+            console.log("dataType: ", dataType);
             // If total, request both data types
             if(dataType === "TOTAL"){
                 API_zoneData(bounds, zoom, "EDUCATION");
@@ -198,7 +212,9 @@ function LeafletMap({
         points.push([lon1, lat1], midpointLatLng, [lon2, lat2]);
 
         var pathOptions = {
-            color: dataType === "WORK" ? WORK_COLOUR : EDUCATION_COLOUR,
+            color: dataType === "WORK" 
+                ? COMMUTE_PURPOSE_COLOUR.WORK 
+                : COMMUTE_PURPOSE_COLOUR.EDUCATION,
             weight: INITIAL_STROKE_WEIGHT,
         }
 
@@ -273,10 +289,10 @@ function LeafletMap({
                     // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     //attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
                     // url="http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg"
-                    // url="http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg"
+                    url="http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg"
                     // WHEN USING HTTPS
                     // url="https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg"
-                    url="http://tile.stamen.com/toner/{z}/{x}/{y}.png"
+                    // url="http://tile.stamen.com/toner/{z}/{x}/{y}.png"
                     attribution='Map tiles by <a href="http://stamen.com" style="pointer-events: initial;">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0" style="pointer-events: initial;">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org" style="pointer-events: initial;">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright" style="pointer-events: initial;">ODbL</a>.'
                 />
                 

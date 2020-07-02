@@ -8,16 +8,43 @@ export const MAP_CIRCLE_RADIUS = 0.5;
 export const REGION_STROKE_WIDTH = 0.2;
 
 export const MODES_OF_TRANSPORT = [
-  "Work/Study from home",
-  "Drive car/truck/van",
-  "Passenger in car/truck/van",
+  "Stay home", //"Work/Study from home",
+  "Drive own vehicle",
+  "Passenger in vehicle",//"Passenger in car/truck/van",
   "Train",
   "Bicycle",
   "Walk/jog",
-  "School/Public bus",
+  "Bus", //"School/Public bus",
   "Ferry",
   "Other"
-]
+];
+
+export const COLORS = {
+  Stay_home: "#ff073a",
+  Drive_own_vehicle: "#007bff",
+  Passenger_in_vehicle: "#28a745",
+  Train: "#6c757d",
+  Bicycle: "#4b1eaa",
+  Walk_jog: "#d73027",
+  Bus: "#fee08b",
+  Ferry: "blue",
+  Other: "gray"
+};
+
+export const COMMUTE_PURPOSE_COLOUR = {
+  // TOTAL: "#d73027",
+  WORK: "#fc7703",//"#fee08b",
+  EDUCATION: "#007bff"//"#66bd63",
+}
+
+
+//export const WORK_COLOUR = ;
+//export const EDUCATION_COLOUR = ;
+
+export const COMMUTE_TYPE_COLOUR_KEYS = {};
+MODES_OF_TRANSPORT.forEach((value)=>{
+  COMMUTE_TYPE_COLOUR_KEYS[value] = value.replace(/[ ]|\//g,'_');
+});
 
 // What to show at the top
 export const DISTRICT_STATISTICS_TOTAL = [
@@ -132,16 +159,6 @@ export const ZONE_COLORS = {
   Green: "#66bd63",
 };
 
-export const COLORS = {
-  confirmed: "#ff073a",
-  active: "#007bff",
-  recovered: "#28a745",
-  deceased: "#6c757d",
-  tested: "#4b1eaa",
-};
-
-export const WORK_COLOUR = "#fc7703";
-export const EDUCATION_COLOUR = "#007bff";
 
 export const MAPS_DIR =
   process.env.NODE_ENV === "production" ? "/maps" : "/maps";

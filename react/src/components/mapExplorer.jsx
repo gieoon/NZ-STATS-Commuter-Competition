@@ -8,6 +8,7 @@ import {
   DISTRICT_STATISTICS_WORK,
   DISTRICT_STATISTICS_EDUCATION,
   DISTRICT_SUMMARY,
+  COMMUTE_PURPOSE_COLOUR,
   CENTROID_SUMMARY,
   MAP_TYPES,
   CITY_NAMES,
@@ -41,10 +42,15 @@ import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { useSprings, animated } from "react-spring";
 import LeftPanel from "./leftPanel";
+import { differenceInSeconds } from "date-fns/esm";
 
 const MapVisualizer = lazy(() =>
   import("./mapVisualizer" /* webpackChunkName: "MapVisualizer" */)
 );
+
+const CommuteTab = lazy(() => 
+  import("./commuteTab" /* webpackChunkName: "CommuteTab" */)
+)
 
 function MapExplorer({
   districtCode,
@@ -90,6 +96,10 @@ function MapExplorer({
     hoveredData: {},
     hoveredDestination: "",
   })
+
+  const [currentCommuteType, setCurrentCommuteType] = useState(
+    "ALL" // Default to show all
+  )
 
   const updateCurrentData = () => {
     // console.log(currentMap.option);
@@ -302,11 +312,11 @@ function MapExplorer({
         }
       </div> */}
 
-      <LeftPanel 
+      {/* <LeftPanel 
         hoveredRegion={hoveredRegion}
         hoveredData={hoveredData}
         highlightedData={highlightedData}
-      />
+      /> */}
       
       {/* <div className="details-container-wrapper">
         <div className="details-container">
@@ -378,7 +388,6 @@ function MapExplorer({
       </div> */}
 
       <div ref={mapExplorerRef}>
-        {/* {console.log(workMapData)} */}
         {mapStatistic && (
           <Suspense
             fallback={
@@ -386,61 +395,90 @@ function MapExplorer({
                 className="map-loader"
                 {...{
                   width: mapExplorerRef.current?.clientWidth,
-                  statistic: mapStatistic,
+                  statistic: mapStatistic, // the color to set for the loader
                 }}
               />
             }
           >
-            <MapVisualizer
-              currentMap={currentMap}
-              data={data}
-              regionalEducationData={regionalEducationData}
-              regionalWorkData={regionalWorkData}
-              regionalTotalData={regionalTotalData}
-              setRegionalData={setRegionalData}
-              currentView={currentView}
-              setCurrentView={setCurrentView}
-              changeMap={switchMap}
-              regionHighlighted={regionHighlighted}
-              setRegionHighlighted={setRegionHighlighted}
-              setHighlightedData={setHighlightedData}
-              setHoveredData={setHoveredData}
-              statistic={mapStatistic}
-              isCountryLoaded={isCountryLoaded}
-            />
+            <div className="main-wrapper">
+              <LeftPanel 
+                hoveredRegion={hoveredRegion}
+                hoveredData={hoveredData}
+                highlightedData={highlightedData}
+              />
+
+              <div className="map-wrapper">
+
+                <MapVisualizer
+                  currentMap={currentMap}
+                  data={data}
+                  regionalEducationData={regionalEducationData}
+                  regionalWorkData={regionalWorkData}
+                  regionalTotalData={regionalTotalData}
+                  setRegionalData={setRegionalData}
+                  currentView={currentView}
+                  setCurrentView={setCurrentView}
+                  changeMap={switchMap}
+                  regionHighlighted={regionHighlighted}
+                  setRegionHighlighted={setRegionHighlighted}
+                  setHighlightedData={setHighlightedData}
+                  setHoveredData={setHoveredData}
+                  statistic={mapStatistic}
+                  isCountryLoaded={isCountryLoaded}
+                />
+
+                <div className="tabs-container">
+                  <div className="tabs-map">
+                    {Object.values(MAP_OPTIONS).map((option) => (
+                      <div
+                        key={option}
+                        className={classnames("tab", {
+                          focused: currentMap.option === option,
+                        })}
+                        onClick={() => handleTabClick(option)}
+                      >
+                        <h4 className={option}
+                          style={{
+                            color: COMMUTE_PURPOSE_COLOUR[option.toUpperCase()],
+                          }}
+                        >
+                          {t(option)}
+                          {/* {option === MAP_OPTIONS.EDUCATION && <sup>&dagger;</sup>} */}
+                        </h4>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* <div className="info legend">
+                {
+                  Object.keys(COMMUTE_PURPOSE_COLOUR).map((commutePurpose, index) => (
+                    <div key={index}>
+                      <i style={{"background": COMMUTE_PURPOSE_COLOUR[commutePurpose]}}></i>
+                      <span>{ commutePurpose }</span>
+                    </div>
+                  ))
+                }
+                </div> */}
+
+              </div>
+
+              <div className="commutes-wrapper">
+                {Object.values(MODES_OF_TRANSPORT).map((commuteType, i)=>(
+                    <CommuteTab 
+                      commuteType={commuteType} 
+                      currentCommuteType={currentCommuteType}
+                      setCurrentCommuteType={setCurrentCommuteType}
+                      key={i} 
+                    />
+                  ))
+                }
+              </div>
+
+            </div>
+
           </Suspense>
         )}
-      </div>
-
-      <div className="tabs-container">
-        <div className="tabs-map">
-          {Object.values(MAP_OPTIONS).map((option) => (
-            <div
-              key={option}
-              className={classnames("tab", {
-                focused: currentMap.option === option,
-              })}
-              onClick={() => handleTabClick(option)}
-            >
-              <h4>
-                {t(option)}
-                {/* {option === MAP_OPTIONS.EDUCATION && <sup>&dagger;</sup>} */}
-              </h4>
-            </div>
-          ))}
-        </div>
-
-        <h6 className={classnames("footnote")}>
-          &dagger; {`${t("Based on 2018 Census by NZ Statistics, see ")}`}
-          <a
-            href="https://datafinder.stats.govt.nz/data/category/census/2018/commuter-view/?_ga=2.217129552.794612537.1592401476-705599149.1592401476"
-            target="_noblank"
-            style={{ color: "#6c757d" }}
-          >
-            {t("source")}
-          </a>
-          {t(".  \tLocations have been approximated to protect user privacy")}
-        </h6>
       </div>
     </div>
   );

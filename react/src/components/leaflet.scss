@@ -1,9 +1,14 @@
+$panel-width: 408px;
+
 .leaflet-container {
-    height: 100vh;
+    /* height: 100vh;
     width: 100vw;
     position: fixed!important;
     left: 0;
-    top: 0;
+    top: 0; */
+    height: 100vh;
+    width: calc(100vw - $panel-width);
+    position: relative;
 }
 
 /* Hide bottom right fields */
@@ -14,16 +19,16 @@
 /* Position zoom controls more conveniently */
 .leaflet-control-container > div:nth-child(1) {
   position: absolute;
-  right: 20px;
-  bottom: 100px;
+  right: 12px; // 20px;
+  bottom: 36px;
   left: inherit;
-    top: inherit;
+  top: inherit;
 }
 
 /* scale bar */
 .leaflet-control-container > div:nth-child(3) {
-  left: 6.5rem!important;
-  bottom: 6px;
+  /* left: 6.5rem!important; */
+  /* bottom: 6px; */
 }
 
 /* .leaflet-control-attribution leaflet-control {

@@ -1,9 +1,10 @@
-import React, {useState} from 'react';
+import React, {useState, lazy, Suspense} from 'react';
 import {Link} from 'react-router-dom';
 import './leftPanel.scss';
 import classnames from "classnames";
 import { useTranslation } from "react-i18next";
 import { useSprings, animated } from "react-spring";
+import help from '../assets/help_white.svg';
 
 import {
     MAP_OPTIONS,
@@ -15,13 +16,15 @@ import {
     getStatistic,
 } from '../utils/commonFunctions'
 
+const SearchBar = lazy(() => import('./searchbar'));
+
 function LeftPanel({
     hoveredRegion,
     hoveredData,
     highlightedData,
 }){
     const { t } = useTranslation();
-    
+
     const [currentMapStatistics, setCurrentMapStatistics] = useState(MODES_OF_TRANSPORT);
 
     const [currentCommuteType, setCurrentCommuteType] = useState("Total");
@@ -54,6 +57,11 @@ function LeftPanel({
                     <span> New Zealand</span>
                 </Link>
             </div>
+
+            <Suspense fallback={<div></div>}>
+                <SearchBar />
+            </Suspense>
+
             <div className="meta">
             <h2 className={classnames("total")}>
 
@@ -114,6 +122,24 @@ function LeftPanel({
             </div>
           </div>
 
+          <div className="about-wrapper">
+            <Link to="/about">
+              <img src={help} alt="" />
+            </Link>
+          
+            <h6 className={classnames("footnote")}>
+              &dagger; {`${t("Based on 2018 Census by NZ Statistics, see ")}`}
+              <a
+                  href="https://datafinder.stats.govt.nz/data/category/census/2018/commuter-view/?_ga=2.217129552.794612537.1592401476-705599149.1592401476"
+                  target="_noblank"
+                  style={{ color: "#6c757d" }}
+              >
+                  {t("source")}
+              </a>
+              <br/>
+              {t("Locations have been approximated to protect user privacy")}
+            </h6>
+          </div>
         </div>
     )
 }

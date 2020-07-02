@@ -1,6 +1,6 @@
 $gray: #6c757d;
 $white: white;
-// $light-gray: #bdbdbd;
+$light-gray: #bdbdbd;
 $title-first-color: #bdbdbd; //rgba(0,0,0,.85);//red; //orange
 $default-font: "archia";
 $title-span-color: #4c75f2;
@@ -77,20 +77,94 @@ $dark-m-white: #e1e1e1;
 $dark-m-purple: #7ba1ea;
 $dark-m-blue: #3391ff;
 
+$panel-width: 408px; 
+$border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
+
+.about-wrapper {
+    display: flex;
+    width: 100%;
+    margin-left: 24px;
+
+    img {
+        opacity: .75;
+        cursor: pointer;
+        margin-right: 6px;
+    }
+
+    a {
+        align-self: flex-end;
+        margin-bottom: 4px;
+    }
+}
+
+.Home {
+    margin-left: 0!important;
+    margin-right: 0!important;
+
+    .home-right {
+        margin-left: 0!important;
+        margin-right: 0!important;
+    }
+}
+
 // Protruding left panel
 .LeftPanel {
-    background: $navbar-background; //$white;
-    left: 0;
-    top: 0;
+    // background-color: white;
+    // background: $navbar-background; //$white;
     display: flex;
-    min-width: 20rem;
+    width: $panel-width;
+    min-width: $panel-width;
     flex-direction: column;
-    height: 100%;
+    height: 100vh;
     justify-content: flex-start;
-    position: fixed; /* relative */
+    position: relative; /* relative */ /* fixed */
     z-index: 999;
     align-items: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    // box-shadow: 0 0 20px $border-color;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    
+    // padding-left: 12px;
+    // padding-right: 6px;
+
+    .SearchBar {
+        
+        width: calc(408px - 12px - 12px);
+        margin-bottom: 12px;
+        // overflow-x: hidden;
+        // border-bottom: 1px solid $border-color;
+        // border-radius: 8px 8px 0 0;
+        
+        // box-shadow: 0 2px 4px rgba(0,0,0,0.2), 0 -1px 0px rgba(0,0,0,0.02);
+        position: relative;
+        color: white;
+        
+        input {
+            //width: calc(408px - 8px); // This adds default input margins on the side, 4px on each side.
+            width: 95%;
+            height: 24px;
+            color: $light-gray;
+            background-color: white; //$light-gray;
+            outline: none;
+            border-radius: 12px;
+            padding-left: 12px;
+
+            &::placeholder {
+                color: $light-gray;
+            }
+        }
+
+        .search-img {
+            position: absolute;
+            right: 5%;
+            top: 3px;
+            opacity: .3;
+            transition: opacity 125ms linear;
+
+            .good2go {
+                opacity: 1;
+            }
+        }
+    }
 
     .header {
         color: $gray;
@@ -119,13 +193,175 @@ $dark-m-blue: #3391ff;
 }
 
 .tabs-container {
-    position: fixed;
-    bottom: 8px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: white;
+    border-radius: 6px;
+    z-index: 9999;
+    padding: 2px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+}
+
+.tabs-map {
+    .tab {
+        margin-top: 0!important;
+
+        // h4.Work {
+
+        // }
+        // h4.Education {
+        //     color: blue;
+        // }
+    }
+
+    .tab:last-child {
+        margin-right: 0!important;
+    }
+}
+
+.legend {
+    line-height: 18px;
+    color: #555;
+    border-radius: 6px;
+    overflow: hidden;
+    opacity: .85;
+    padding-left: 8px;
+    position: absolute;
+    left: 250px;
+    top: 8px;
+    height: 36px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+
+
+    div {
+        position: relative;
+        width: 75px;
+
+        i {
+            width: 75px;
+            height: 3px;
+            float: left;
+            margin-right: 8px;
+            border-radius: 64px;
+        }
+
+        span {
+            text-transform: lowercase;
+            margin-right: 8px;
+            font-size: 12px;
+        }
+
+        span::first-letter {
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+.commutes-wrapper {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background-color: white;
+    border-radius: 6px;
+    z-index: 9999;
+    padding: 2px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+
+    .CommuteTab {
+        width: 45px;
+        // text-align: center;
+        margin-bottom: 6px;
+        background: $gray-light;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        // color: $gray-light;
+        // height: 2rem;
+        cursor: pointer;
+        margin-left: 0.15rem;
+        margin-right: 0.15rem;
+        margin-top: 0.15rem;
+        padding-left: .1rem;
+        padding-right: .1rem;
+        padding-top: .2rem;
+        padding-bottom: .2rem;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+
+        img {
+            // margin-right: 6px;
+            margin: auto;
+            width: 18px;
+        }
+        h4 {
+            display: table-cell;
+            font-family: 'archia';
+            font-size: 8.5px !important;
+            font-weight: 900;
+            margin-bottom: 0;
+            margin-top: 0;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        &.Stay_home {
+            color: #ff073a;
+        }
+        &.Drive_own_vehicle {
+            color: #007bff;
+        }
+        &.Passenger_in_vehicle {
+            color: #28a745;
+        }
+        &.Train {
+            color: $cherry-mid;
+        }
+        &.Bicycle {
+            color: #4b1eaa;
+        }
+        &.Walk_jog {
+            color: #d73027;
+        }
+        &.Bus {
+            color: #fee08b;
+        }
+        &.Ferry {
+            color: blue;
+        }
+        &.Other {
+            color: #6c757d;
+        }
+
+        &.focused {
+            background: $gray-opaque;
+        }
+
+        &:hover {
+            background: $gray-hover;
+        }
+    }
 }
 
 .App {
     overflow: hidden;
     max-height: 100vh;
+}
+
+.main-wrapper {
+    display: flex;
+    position: relative;
+
+    .map-wrapper {
+        position: relative;
+        width: 100%;
+    }
 }
 
 .MapExplorer .header {
@@ -137,7 +373,7 @@ $dark-m-blue: #3391ff;
 }
 
 .MapExplorer .details-container-wrapper {
-    position: fixed;
+    // position: fixed;
     pointer-events: none;
     // width: calc(100% - 5rem);
     width: 105%;
@@ -175,18 +411,38 @@ $dark-m-blue: #3391ff;
     margin-top: 4.5rem;
 }
 
-.MapExplorer .map-stats .stats {
-    pointer-events: all!important;
-    // position: absolute;
+.MapExplorer {
+    width: 100vw!important;
+
+    .map-stats {
+
+        padding-top: 6px;
+        padding-left: 6px;
+        flex-grow: 1;
+
+        .stats {
+            pointer-events: all!important;
+        }
+    }
 }
 
 .meta {
+
+    width: 100%;
+    height: 82px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(255,255,255,.25);
+
 
     h2 {
         font-weight: 900;
         margin-top: 0;
         // width: calc(100% - 10rem);
         word-wrap: break-word;
+        margin-left: 12px;
+        margin-right: 12px;
         
         &.total {
         //   color: $brick;
@@ -230,4 +486,8 @@ $dark-m-blue: #3391ff;
             color: grey;
         }
     }
+}
+
+.footnote {
+    padding: 6px;
 }
