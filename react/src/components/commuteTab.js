@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import classnames from "classnames";
 import {
     COMMUTE_TYPE_COLOUR_KEYS
@@ -16,9 +16,17 @@ import other from '../assets/other.svg';
 
 function CommuteTab({
     commuteType,
-    currentCommuteType,
-    setCurrentCommuteType,
+    currentCommuteTypes,
+    setCurrentCommuteTypes,
 }) {
+
+    const commuteBtnRef = useRef(null);
+
+    const [focused, setFocused] = useState(true);
+
+    useEffect(()=>{
+        // console.log("useEffect: ", currentCommuteTypes);
+    })
 
     const getIcon = () => {
         switch(commuteType){
@@ -35,19 +43,39 @@ function CommuteTab({
         }
     }
 
-    const handleClick = () => {
-        console.log('setting current commute type: ', commuteType);
-        setCurrentCommuteType(commuteType);
+    const handleClick = (e) => {
+        //if(e.target.classList.contains(commuteType)){
+        if(currentCommuteTypes.includes(commuteType)){
+            // Remove from commute types
+            currentCommuteTypes.splice(currentCommuteTypes.indexOf(commuteType), 1);
+        } else {
+            // Add to commute types
+            currentCommuteTypes.push(commuteType)
+        }
+        
+        setCurrentCommuteTypes(currentCommuteTypes);
+        setFocused(!focused);
+        // console.log(
+        //     commuteType, 
+        //     currentCommuteTypes,
+        //     // e.target.classList.contains(commuteType),
+        //     focused
+        //     // e.target.classList,
+        //     // e.target.classList.contains(commuteType)
+        // );
     }
 
+    // console.log('focused: ', currentCommuteTypes.includes(commuteType));
     return (
-        <div className={classnames(
-            "CommuteTab",
-            COMMUTE_TYPE_COLOUR_KEYS[commuteType],
-            {focused: commuteType === currentCommuteType}
-        )}
-            onClick={()=>{
-                handleClick()
+        <div
+            ref={commuteBtnRef} 
+            className={classnames(
+                "CommuteTab",
+                COMMUTE_TYPE_COLOUR_KEYS[commuteType],
+                {focused: focused}
+            )}
+            onClick={(e)=>{
+                handleClick(e)
             }}
         >
             <img src={getIcon()} />

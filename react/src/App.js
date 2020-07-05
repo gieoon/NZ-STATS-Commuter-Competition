@@ -39,24 +39,32 @@ function App() {
   // const [showLanguageSwitcher, setShowLanguageSwitcher] = useState(false);
 
   const pages = [
+    // Lat/Lon coordinates as a route destination
+    // :latlng is 
     {
-      pageLink: "/",
+      pageLink: "/(location)?/:lat?/:lng?",
       view: Home,
       displayName: "Home",
       showInNavbar: true,
     },
+    // {
+    //   pageLink: "/",
+    //   view: Home,
+    //   displayName: "Home",
+    //   showInNavbar: true,
+    // },
     {
       pageLink: "/about",
       view: FAQ,
       displayName: "About",
       showInNavbar: true,
     },
-    {
-      pageLink: "/district/:districtCode",
-      view: District,
-      displayName: "Regional District",
-      showInNavbar: false,
-    },
+    // {
+    //   pageLink: "/district/:districtCode",
+    //   view: District,
+    //   displayName: "Regional District",
+    //   showInNavbar: false,
+    // },
   ];
 
   return (
@@ -95,7 +103,7 @@ function App() {
                       />
                     );
                   })}
-                  <Redirect to="/" />
+                  {/* <Redirect to="/" /> */}
                 </Switch>
               </React.Fragment>
             )}

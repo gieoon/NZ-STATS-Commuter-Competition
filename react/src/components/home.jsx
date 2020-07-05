@@ -1,7 +1,7 @@
 import React, { lazy, useState, useRef, Suspense } from "react";
 import { MAP_META, DATA_URL_ROOT } from "../constants";
 // import axios from 'axios';
-import { fetcher, fetcherJSON } from "../utils/commonFunctions";
+import { fetcher, fetcherJSON, fetcherDICT } from "../utils/commonFunctions";
 import useStickySWR from "../hooks/useStickySwr";
 import { useIsVisible } from "react-is-visible";
 import { Helmet } from "react-helmet";
@@ -72,6 +72,15 @@ function Home(props) {
     }
   )
 
+  const { data: centroidData } = useStickySWR(
+    DATA_URL_ROOT + '/centroidData',
+    fetcherDICT,
+    {
+      revalidateOnMount: true,
+      revalidateOnFocus: false
+    }
+  )
+
   const nzMap = useRef();
   const isVisible = useIsVisible(nzMap, { once: true });
 
@@ -98,7 +107,7 @@ function Home(props) {
       </Helmet>
       <div className="Home">
         {/* {console.log(regionalEducationData)} */}
-        {/* {console.log(regionalWorkData)} */}
+        {/* {console.log("centroidData: ", centroidData)} */}
         {/* <LeftPanel /> */}
         <div className="home-right" ref={nzMap}>
           {isVisible && (
@@ -112,6 +121,7 @@ function Home(props) {
                     {...{ regionalWorkData }}
                     {...{ regionalEducationData }}
                     {...{ regionalTotalData }}
+                    {...{ centroidData }}
                     {...{ mapStatistic, setMapStatistic }}
                     {...{ regionHighlighted, setRegionHighlighted }}
                     {...{ anchor, setAnchor }}

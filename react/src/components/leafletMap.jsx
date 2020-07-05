@@ -1,5 +1,6 @@
 import React, {useState, useMemo, useEffect, useRef} from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
+import {useLocation} from 'react-router-dom';
 import L from 'leaflet';
 import '@elfalem/leaflet-curve'
 import './leaflet.scss';
@@ -20,7 +21,9 @@ const HIGHLIGHTED_STROKE_WEIGHT = INITIAL_STROKE_WEIGHT * 3.5;
 function LeafletMap({
     setHoveredData,
     setHighlightedData,
+    centroidData,
     currentMap,
+    history,
 }){
     // Center of New Zealand
     // const position = [173.299, -41.273]
@@ -29,6 +32,7 @@ function LeafletMap({
     const bottomRight = L.latLng(-49.285522, 191.794907); // 179
 
     const curves = [];
+    const circles = [];
 
     // const mapRef = React.createRef();
     const mapRef = useRef(null);
@@ -49,95 +53,115 @@ function LeafletMap({
 
     const [educationZoneData, setEducationZoneData] = useState([]);
 
-    useEffect(() => {
-        console.log('currentMap.option: ', currentMap.option);
-        // console.log(mapRef.current.leafletElement)
-        // if(!m){
-        //     // console.log("assigning map: ", mapRef.current.leafletElement)
-        //     setMap(mapRef.current.leafletElement);
-        // }
+    const [commutePurpose, setCommutePurpose] = useState("TOTAL");
 
-                
+    const [currentLatLng, setCurrentLatLng] = useState({
+        lat: position[0],
+        lng: position[1],
+    })
+
+    // Circle highlighting current selection on the map
+    const [currentPositionCircle, setCurrentPositionCircle] = useState(null);
+
+    const [initializing, setInitializing] = useState(true);
+
+    const location = useLocation();
+
+    useEffect(()=>{
         L.control.scale().addTo(mapRef.current.leafletElement);
-        /*
-        var legend = L.control()//({ position: "topright" });
-        legend.onAdd = function(map){
-            var div = L.DomUtil.create('div', 'info legend');
+    },[])
 
-            for (var commutePurpose of Object.keys(COMMUTE_PURPOSE_COLOUR)){
-                div.innerHTML += 
-                    '<i style="background:' + COMMUTE_PURPOSE_COLOUR[commutePurpose] + '"></i> ' + 
-                    '<span>' + commutePurpose + '</span>';
+    useEffect(()=>{
+        // console.log("Location updated: ", location);
+        var reg = /[\-0-9.]+\/[\-0-9.]+$/;
+        var match = location.pathname.match(reg);
+        if(match && match.length){
+            var lat = match[0].split('/')[0];
+            var lng = match[0].split('/')[1];
+            // console.log(lat, lng);
+            setCurrentLatLng({
+                lat: lat,
+                lng: lng
+            });
+            // Zoom into this location, but not the first time
+            if(!initializing){
+                mapRef.current.leafletElement.setView([lat,lng], 9);
+                var circle = createCurrentLatLngCircle(lat, lng);
+                setCurrentPositionCircle(circle);
             }
-            return div;
+            setInitializing(false);
         }
-        legend.addTo(mapRef.current.leafletElement);
-        */
-        
+        updateData();
+    }, [location])
 
-        var bounds = mapRef.current.leafletElement.getBounds();
-        console.log(bounds)
-        // Load initial data
-        const zoom = mapRef.current.leafletElement.getZoom();
-        const dataType = currentMap.option.toUpperCase();
+    useEffect(() => {
+        // console.log('currentMap.option: ', currentMap.option);
+        setCommutePurpose(currentMap.option.toUpperCase());
+        mapRef.current.leafletElement.commuteType = currentMap.option.toUpperCase();
+        // console.log('set data type: ', currentMap.option.toUpperCase());
+        // console.log("commutePurpose: ", commutePurpose);
+    }, [
+        currentMap.option,
+        // commutePurpose,
+    ])
+
+    useEffect(() => {
+        // Listen when bounds change so we can load different data
+        mapRef.current.leafletElement.off('moveend');
+        mapRef.current.leafletElement.on('moveend', updateData);
+
+        updateData();
+    },[
+        commutePurpose
+    ])
+
+    const updateData = () => {
+        const map = mapRef.current.leafletElement;
+        var bounds = map.getBounds();
+        var zoom = map.getZoom();
+        console.log('current zoom level: ', zoom)
+        
+        curves.forEach(curve => {
+            console.log('removing curve');
+            curve.remove();
+        })
+        curves.length = 0;
+
+        circles.forEach(circle => {
+            circle.remove();
+        })
+        circles.length = 0;
+
+        //const dataType = currentMap.option.toUpperCase();
+        console.log("updating data with commutePurpose: ", commutePurpose);
+        // const c = mapRef.current.leafletElement.commutePurpose;
         // If total, request both data types
-        if(dataType === "TOTAL"){
+        // Can also do if !== education, request work, if !== work, request education, so total will request both.
+        if(commutePurpose === "TOTAL"){
             API_zoneData(bounds, zoom, "EDUCATION");
             API_zoneData(bounds, zoom, "WORK");
         } else {
             // Otherwise just search directly
-            API_zoneData(bounds, zoom, dataType);
+            API_zoneData(bounds, zoom, commutePurpose);
         }
 
-        /*
-        {
-            {
-            _northEast: {
-                lat: lastRequestedLatLng.top, 
-                lng: lastRequestedLatLng.right
-            },
-            _southWest: {
-                lat: lastRequestedLatLng.bottom, 
-                lng: lastRequestedLatLng.left
-            }
+
+        // Circle information
+        for(var c of centroidData[zoom]){
+            // console.log(c);
+            createCircle(c.departure_LATITUDE, c.departure_LONGITUDE, c.cluster_count);
         }
-        */
+        // console.log(centroidData[zoom])
+    }
 
-        // Listen when bounds change so we can load different data
-        mapRef.current.leafletElement.on('moveend', function(e) {
-            var bounds = this.getBounds();
-            var zoom = this.getZoom();
-            
-            curves.forEach(curve => {
-                curve.remove();
-            })
-            curves.length = 0;
-
-            const dataType = currentMap.option.toUpperCase();
-            console.log("dataType: ", dataType);
-            // If total, request both data types
-            if(dataType === "TOTAL"){
-                API_zoneData(bounds, zoom, "EDUCATION");
-                API_zoneData(bounds, zoom, "WORK");
-            } else {
-                // Otherwise just search directly
-                API_zoneData(bounds, zoom, dataType);
-            }
-        });
-    },[
-        // lastRequestedLatLng
-        // Making this empty makes it only update once.
-    ])
-
-    
-
-    const API_zoneData = async (bounds, zoom, dataType) => {
-        if(
-               lastRequestedLatLng.top      !== bounds._northEast.lat
-            && lastRequestedLatLng.bottom   !== bounds._southWest.lat
-            && lastRequestedLatLng.left     !== bounds._southWest.lng
-            && lastRequestedLatLng.right    !== bounds._northEast.lng
-        ){
+    const API_zoneData = async (bounds, zoom, type) => {
+        // console.log('requesting data with type: ', type);
+        // if(
+        //        lastRequestedLatLng.top      !== bounds._northEast.lat
+        //     && lastRequestedLatLng.bottom   !== bounds._southWest.lat
+        //     && lastRequestedLatLng.left     !== bounds._southWest.lng
+        //     && lastRequestedLatLng.right    !== bounds._northEast.lng
+        // ){
             setLastRequestedLatLng({
                 top: bounds._northEast.lat,
                 bottom: bounds._southWest.lat,
@@ -146,18 +170,20 @@ function LeafletMap({
             });
             // Request new data
             fetch(
-                DATA_URL_ROOT + `/zoneData?left=${bounds._southWest.lng}&top=${bounds._northEast.lat}&right=${bounds._northEast.lng}&bottom=${bounds._southWest.lat}&zoom=${zoom}&data_type=${dataType}`,
+                DATA_URL_ROOT + `/zoneData?left=${bounds._southWest.lng}&top=${bounds._northEast.lat}&right=${bounds._northEast.lng}&bottom=${bounds._southWest.lat}&zoom=${zoom}&data_type=${type}`,
             ).then(async (d)=>{
-                // console.log("zone data: ", await d.json());
+                console.log("zone data: ");
                 // setZoneData(d);
                 // return await d.json();
                 const data = txt2Array(await d.text());
 
-                if(dataType === "WORK"){
+                if(type === "WORK"){
                     setWorkZoneData(data);
+                    // setEducationZoneData([]);
                     updateCurves(data, "WORK");
                 }
-                if(dataType === "EDUCATION"){
+                if(type === "EDUCATION"){
+                    // setWorkZoneData([]);
                     setEducationZoneData(data);
                     updateCurves(data, "EDUCATION");
                 }
@@ -165,13 +191,11 @@ function LeafletMap({
             .catch(err => {
                 console.error("Error fetching data: ", err);
             })
-        }
+        // }
     }
 
-    
-
     const updateCurves = (d, dataType) =>{
-        console.log('updating zone data: ', d);
+        // console.log('updating zone data: ', d);
         if(!d) return;
         for(var r of d){
             createCurve(
@@ -183,6 +207,44 @@ function LeafletMap({
                 dataType
             );
         }
+    }
+
+    // Draw cluster circles.
+    const createCircle = (lat, lon, clusterCount) => {
+        var circleCenter = [lat, lon];
+        var options = {
+            weight: 1.5,
+            color: 'rgba(255,0,0,.35)',
+            fillColor: '#f03',
+            fillOpacity: 0.35,
+        }
+
+        // Radius dependent on number of commutes in this circle.
+        var radius = clusterCount * 3.25 + 2500;
+
+        const circle = L.circle(circleCenter, radius, options)
+            .addTo(mapRef.current.leafletElement);
+        circles.push(circle);
+    }  
+    
+    const createCurrentLatLngCircle = () => {
+        if(currentPositionCircle !== null)
+            currentPositionCircle.remove();
+
+        var circleCenter = [currentLatLng.lat, currentLatLng.lng];
+        var options = {
+            weight: 1.5,
+            color: 'rgba(0,0,255,.5)',
+            fillColor: '#f03',
+            fillOpacity: 0.35,
+        }
+
+        // Radius dependent on number of commutes in this circle.
+        var radius = 2500;
+
+        var circle = L.circle(circleCenter, radius, options)
+            .addTo(mapRef.current.leafletElement);
+        return circle;
     }
 
     const createCurve = (lon1, lat1, lon2, lat2, obj, dataType) => {
@@ -311,3 +373,59 @@ export default LeafletMap;
                 </Marker> */}
 
                 {/* <Curve positions={pathOne} option={{color:'red',fill:true}}/> */}
+
+
+// setDataType("TOTAL");
+// console.log(mapRef.current.leafletElement)
+// if(!m){
+//     // console.log("assigning map: ", mapRef.current.leafletElement)
+//     setMap(mapRef.current.leafletElement);
+// }
+
+        
+
+/*
+var legend = L.control()//({ position: "topright" });
+legend.onAdd = function(map){
+    var div = L.DomUtil.create('div', 'info legend');
+
+    for (var commutePurpose of Object.keys(COMMUTE_PURPOSE_COLOUR)){
+        div.innerHTML += 
+            '<i style="background:' + COMMUTE_PURPOSE_COLOUR[commutePurpose] + '"></i> ' + 
+            '<span>' + commutePurpose + '</span>';
+    }
+    return div;
+}
+legend.addTo(mapRef.current.leafletElement);
+*/
+
+/*
+var bounds = mapRef.current.leafletElement.getBounds();
+console.log(bounds)
+// Load initial data
+const zoom = mapRef.current.leafletElement.getZoom();
+// const dataType = currentMap.option.toUpperCase();
+// If total, request both data types
+if(commutePurpose === "TOTAL"){
+    API_zoneData(bounds, zoom, "EDUCATION");
+    API_zoneData(bounds, zoom, "WORK");
+} else {
+    // Otherwise just search directly
+    API_zoneData(bounds, zoom, commutePurpose);
+}
+*/
+
+/*
+{
+    {
+    _northEast: {
+        lat: lastRequestedLatLng.top, 
+        lng: lastRequestedLatLng.right
+    },
+    _southWest: {
+        lat: lastRequestedLatLng.bottom, 
+        lng: lastRequestedLatLng.left
+    }
+}
+*/
+// mapRef.current.leafletElement.commuteType = "TOTAL";

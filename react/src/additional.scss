@@ -82,8 +82,14 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
 
 .about-wrapper {
     display: flex;
-    width: 100%;
-    margin-left: 24px;
+    width: calc(100% - 24px);
+    padding-left: 24px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #161625;
+    border-top: 1px solid rgba(255,255,255,0.25);
+    z-index: 99999;
 
     img {
         opacity: .75;
@@ -116,6 +122,7 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
     min-width: $panel-width;
     flex-direction: column;
     height: 100vh;
+    max-height: 100vh;
     justify-content: flex-start;
     position: relative; /* relative */ /* fixed */
     z-index: 999;
@@ -126,9 +133,17 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
     // padding-left: 12px;
     // padding-right: 6px;
 
+    .Search {
+
+        .results {
+            max-height: calc(100vh - 45px - 38px - 64px - 1rem - 1rem - 14px - 1rem);
+            overflow: scroll;
+        }
+    }
+
     .SearchBar {
         
-        width: calc(408px - 12px - 12px);
+        width: calc(408px - 12px - 12px - 150px);
         margin-bottom: 12px;
         // overflow-x: hidden;
         // border-bottom: 1px solid $border-color;
@@ -176,7 +191,7 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
         padding-top: 1rem;
         text-align: center;
         // order: 1;
-        font-size: .85rem;
+        font-size: .65rem;
         font-family: $default-font;
         text-transform: uppercase;
         font-weight: 900;
@@ -223,37 +238,49 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
 .legend {
     line-height: 18px;
     color: #555;
-    border-radius: 6px;
+    // border-radius: 6px;
     overflow: hidden;
-    opacity: .85;
-    padding-left: 8px;
+    // opacity: .65;//.85;
+    padding-left: 4px;
+    padding-top: 2px;
     position: absolute;
-    left: 250px;
-    top: 8px;
-    height: 36px;
+    background-color: rgba(255,255,255,.55);
+    // left: 250px;
+    // top: 8px;
+    bottom: 48px;
+    left: 6px;
+    // height: 16px;
     z-index: 9999;
-    display: flex;
+    display: block;
     flex-direction: column;
+    // flex-wrap: nowrap;
     text-align: left;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
-
+    // box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+    // width: 128px;
+    align-content: center;
 
     div {
         position: relative;
-        width: 75px;
+        // width: fit-content;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
 
         i {
-            width: 75px;
-            height: 3px;
+            width: 33px;
+            height: 2px;
             float: left;
-            margin-right: 8px;
+            // margin-right: 8px;
             border-radius: 64px;
         }
 
         span {
             text-transform: lowercase;
             margin-right: 8px;
-            font-size: 12px;
+            font-size: 10px;
+            margin-left: 6px;
+            // display: contents;
+            // display: flex;
         }
 
         span::first-letter {
@@ -276,7 +303,7 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
     .CommuteTab {
         width: 45px;
         // text-align: center;
-        margin-bottom: 6px;
+        margin-bottom: 4px;
         background: $gray-light;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
@@ -294,6 +321,19 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
         padding-bottom: .2rem;
         text-align: center;
         transition: all 0.3s ease-in-out;
+
+        &.focused {
+            // background: $dark-mid-subtext!important;//$gray-opaque;
+            background: $navbar-background!important;
+        }
+
+        &:hover {
+            background: $gray-hover;
+        }
+
+        &:last-child {
+            margin-bottom: 2px!important;
+        }
 
         img {
             // margin-right: 6px;
@@ -339,13 +379,6 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
             color: #6c757d;
         }
 
-        &.focused {
-            background: $gray-opaque;
-        }
-
-        &:hover {
-            background: $gray-hover;
-        }
     }
 }
 
@@ -423,6 +456,10 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
         .stats {
             pointer-events: all!important;
         }
+    }
+
+    .footnote {
+        margin-top: 0!important;
     }
 }
 

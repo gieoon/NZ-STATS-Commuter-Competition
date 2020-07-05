@@ -62,6 +62,7 @@ function MapVisualizer({
   regionalEducationData,
   regionalWorkData,
   regionalTotalData,
+  centroidData,
   setRegionalData,
   currentView,
   setCurrentView,
@@ -143,6 +144,10 @@ function MapVisualizer({
       ).clamp(true);
     }
   }, [currentMap.option, statistic, statisticMax]);
+
+  useEffect(()=>{
+    // setupDataframe(); // Only use this to create the initial dataframe
+  }, []);
 
   useEffect(() => {
     const topology = topojson.feature(
@@ -326,7 +331,6 @@ function MapVisualizer({
         const districtCode = CITY_CODES[d.properties.NAME_2];
         // Zoom in on the map
         districtClicked(d);
-        // setupDataframe(); // Only use this to create the initial dataframe
         if (
           onceTouchedRegion ||
           mapMeta.mapType === MAP_TYPES.COUNTRY ||
@@ -642,7 +646,7 @@ function MapVisualizer({
     statistic,
   ]);
 
-  // Add NAME_1 to each departure and destination
+  // Add NAME_1, NAME_2 to each departure and destination
   const setupDataframe = () => {
     // TODO remove this after running once
     // POST request to /setup to create the dataframe
@@ -651,6 +655,11 @@ function MapVisualizer({
     const work_destinations= [];
     const education_departures= [];
     const education_destinations= [];
+    // NAME_1 for region location
+    const work_departures_DISTRICT = [];
+    const work_destinations_DISTRICT = [];
+    const education_departures_DISTRICT = [];
+    const education_destinations_DISTRICT = [];
 
     const features = topojson.feature(
       geoData,
@@ -665,13 +674,17 @@ function MapVisualizer({
       b = false;
       for(var f of features){
         if(geoContains(f, [r.departure_LONGITUDE, r.departure_LATITUDE])){
-          education_departures.push(f.properties.NAME_2) //NAME_1
+          education_departures.push(f.properties.NAME_2)
+          education_departures_DISTRICT.push(f.properties.NAME_1)
           console.log("found feature education_departures");
           b = true;
           break;
         }
       }
-      if(!b) education_departures.push("");
+      if(!b) {
+        education_departures.push("");
+        education_departures_DISTRICT.push("");
+      }
     }
 
     for(var r of data.educationMapData){
@@ -679,12 +692,16 @@ function MapVisualizer({
       for(var f of features){
         if(geoContains(f, [r.destination_LONGITUDE, r.destination_LATITUDE])){
           education_destinations.push(f.properties.NAME_2) //NAME_1
+          education_destinations_DISTRICT.push(f.properties.NAME_1)
           console.log('found feature education_destinations')
           b = true;
           break;
         }
       }
-      if(!b) education_destinations.push("");
+      if(!b) {
+        education_destinations.push("");
+        education_destinations_DISTRICT.push("");
+      }
     }
 
     for(var r of data.workMapData){
@@ -692,12 +709,16 @@ function MapVisualizer({
       for(var f of features){
         if(geoContains(f, [r.departure_LONGITUDE, r.departure_LATITUDE])){
           work_departures.push(f.properties.NAME_2) //NAME_1
+          work_departures_DISTRICT.push(f.properties.NAME_1)
           console.log('found feature work_departures')
           b = true;
           break;
         }
       }
-      if(!b) work_departures.push("");
+      if(!b) {
+        work_departures.push("");
+        work_departures_DISTRICT.push("");
+      }
     }
 
     for(var r of data.workMapData){
@@ -705,12 +726,16 @@ function MapVisualizer({
       for(var f of features){
         if(geoContains(f, [r.destination_LONGITUDE, r.destination_LATITUDE])){
           work_destinations.push(f.properties.NAME_2) //NAME_1
+          work_destinations_DISTRICT.push(f.properties.NAME_1);
           console.log("found feature work_destinations")
           b = true;
           break;
         }
       }
-      if(!b) work_destinations.push("");
+      if(!b) {
+        work_destinations.push("");
+        work_destinations_DISTRICT.push("");
+      }
     }
     console.log(work_departures.length, work_destinations.length, education_departures.length, education_destinations.length)
   
@@ -727,6 +752,10 @@ function MapVisualizer({
         work_destinations: work_destinations,
         education_departures: education_departures,
         education_destinations: education_destinations,
+        work_departures_DISTRICT: work_departures_DISTRICT,
+        work_destinations_DISTRICT: work_destinations_DISTRICT,
+        education_departures_DISTRICT: education_departures_DISTRICT,
+        education_destinations_DISTRICT: education_destinations_DISTRICT,
       })
     }).then(()=>{console.log('sent /setup SUCCESS')})
     .catch((err) =>{console.error("Error sending request: ", err)})
@@ -739,6 +768,7 @@ function MapVisualizer({
         setHoveredData={setHoveredData}
         setHighlightedData={setHighlightedData}
         currentMap={currentMap}
+        centroidData={centroidData}
       />
       {/* <div className="svg-parent">
         <svg

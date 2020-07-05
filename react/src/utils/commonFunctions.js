@@ -136,6 +136,21 @@ export const fetcherJSON = (url) => {
   })
 }
 
+// Centroid data fetcher dict{key: txt2Array(csv)}
+export const fetcherDICT = (url) => {
+  return fetch(url).then((response) => {
+    return response.json().then(dict => {
+      const d = {};
+      // console.log("dict: ", dict);
+      Object.keys(dict).forEach((k) => {
+        d[k] = txt2Array(dict[k]);
+      })
+      // console.log("d: ", d);
+      return d;
+    })
+  })
+}
+
 // Convert input text into an array of objects
 export const txt2Array = (allText) => {
   var allTextLines = allText.split(/\r\n|\n/);

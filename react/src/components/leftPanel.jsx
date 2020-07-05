@@ -22,6 +22,7 @@ function LeftPanel({
     hoveredRegion,
     hoveredData,
     highlightedData,
+    centroidData
 }){
     const { t } = useTranslation();
 
@@ -53,13 +54,15 @@ function LeftPanel({
         <div className="LeftPanel">
             <div className="title"> 
                 <Link to="/">
-                    Commuting in
+                    Commute
                     <span> New Zealand</span>
                 </Link>
             </div>
 
             <Suspense fallback={<div></div>}>
-                <SearchBar />
+                <SearchBar 
+                  centroidData={centroidData}
+                />
             </Suspense>
 
             <div className="meta">

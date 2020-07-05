@@ -1,14 +1,19 @@
 import React, {} from 'react';
 import search from '../assets/search.svg';
+import Search from './search';
 
 function SearchBar({
-
+    centroidData
 }) {
     return(
-        <div className="SearchBar">
-            <input type="text" />
-            <img src={search} className="search-img" />
-        </div>
+        <React.Fragment>
+            {/* <div className="SearchBar">
+                <input type="text" />
+                <img src={search} className="search-img" />
+            </div> */}
+
+            <Search centroidData={centroidData} />
+        </React.Fragment>
     )
 }
 

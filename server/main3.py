@@ -15,11 +15,13 @@ import json
 import csv
 
 from zoom import handleZoom
+from centroid import getAllCentroidData
 
 SIZE_DIVISOR = 50 # 5 # 100
 
 # %matplotlib inline
 'exec(%matplotlib inline)'
+
 '''
  # count = 50870
 DIR = "../CSV/statsnz2018-census-main-means-of-travel-to-work-by-statistical-area-CSV/2018-census-main-means-of-travel-to-work-by-statistical-area.csv"
@@ -181,8 +183,10 @@ education_df_combined = education_df_combined[[
 
 # education_df_combined = education_df_combined.head(5)
 
-work_df_combined = work_df_combined.sample(int(len(work_df_combined.index) / SIZE_DIVISOR), axis=0)
-education_df_combined = education_df_combined.sample(int(len(education_df_combined.index) / SIZE_DIVISOR), axis=0) # 100 random rows
+# Make data smaller
+# work_df_combined = work_df_combined.sample(int(len(work_df_combined.index) / SIZE_DIVISOR), axis=0)
+# education_df_combined = education_df_combined.sample(int(len(education_df_combined.index) / SIZE_DIVISOR), axis=0) # 100 random rows
+
 # print(education_df_combined.describe())
 # print("education columns: ", education_df_combined.columns)
 # print("work columns: ", work_df_combined.columns)
@@ -195,10 +199,10 @@ education_csv_out = education_df_combined.to_csv(index=False)
 '''
 
 work_csv_out = pd.read_csv('./out/work.csv')
-work_csv_out = work_csv_out.sample(int(len(work_csv_out.index) / SIZE_DIVISOR), axis=0)
+# work_csv_out = work_csv_out.sample(int(len(work_csv_out.index) / SIZE_DIVISOR), axis=0)
 work_csv_out = work_csv_out.to_csv(index=False)
 education_csv_out = pd.read_csv('./out/education.csv')
-education_csv_out = education_csv_out.sample(int(len(education_csv_out.index) / SIZE_DIVISOR), axis=0)
+# education_csv_out = education_csv_out.sample(int(len(education_csv_out.index) / SIZE_DIVISOR), axis=0)
 education_csv_out = education_csv_out.to_csv(index=False)
 
 # with open('./out/work.csv') as work_csv:
@@ -220,15 +224,15 @@ def hello():
 # @cross_origin(origin='localhost',headers=['Content-Type','Authorization'])
 def work_csv():
     # Convert to CSV and export
-    # response = make_response(work_csv_out)
-    response = make_response("")
+    response = make_response(work_csv_out)
+    # response = make_response("")
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
 @app.route('/education_csv')
 def education_csv():
-    # response = make_response(education_csv_out)
-    response = make_response("")
+    response = make_response(education_csv_out)
+    # response = make_response("")
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
@@ -312,6 +316,14 @@ def get_zone_data_with_commute_type():
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
+# All centroid data, loaded once on page load
+@app.route('/centroidData')
+def get_centroid_data():
+    data = getAllCentroidData()
+    response = make_response(data)
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
+
 
 # This is only run once to create data which is saved serverside.
 # To set up new dataframe, retrieve series of each destination & departure region name.
@@ -325,12 +337,20 @@ def setup():
     work_destination_series = data['work_destinations']
     education_departure_series = data['education_departures']
     education_destination_series = data['education_destinations']
-    print(
+    
+    work_departure_series_DISTRICT = data['work_departures_DISTRICT']
+    work_destination_series_DISTRICT = data['work_destinations_DISTRICT']
+    education_departure_series_DISTRICT = data['education_departures_DISTRICT']
+    education_destination_series_DISTRICT = data['education_destinations_DISTRICT']
+
+    print("SERIES LENGTHS: ",
         len(work_departure_series), 
         len(work_destination_series),
         len(education_departure_series),
         len(education_destination_series)
     )
+
+    print("work_df_combined.describe(): ", work_df_combined.describe())
 
     # https://stackoverflow.com/questions/12555323/adding-new-column-to-existing-dataframe-in-python-pandas
     work_df_combined = work_df_combined.assign(DEPARTURE_NAME_2=pd.Series(work_departure_series).values)
@@ -338,10 +358,15 @@ def setup():
     education_df_combined = education_df_combined.assign(DEPARTURE_NAME_2=pd.Series(education_departure_series).values)
     education_df_combined = education_df_combined.assign(DESTINATION_NAME_2=pd.Series(education_destination_series).values)
 
+    work_df_combined = work_df_combined.assign(DEPARTURE_NAME_1=pd.Series(work_departure_series_DISTRICT).values)
+    work_df_combined = work_df_combined.assign(DESTINATION_NAME_1=pd.Series(work_destination_series_DISTRICT).values)
+    education_df_combined = education_df_combined.assign(DEPARTURE_NAME_1=pd.Series(education_departure_series_DISTRICT).values)
+    education_df_combined = education_df_combined.assign(DESTINATION_NAME_1=pd.Series(education_destination_series_DISTRICT).values)
+
     print(work_df_combined.columns)
     print(education_df_combined.columns)
 
-    # Save locally
+    # Save locally and override existing one
     work_df_combined.to_csv('./out/work.csv', index=False)
     education_df_combined.to_csv('./out/education.csv', index=False)
 

@@ -59,6 +59,7 @@ function MapExplorer({
   regionalEducationData,
   regionalWorkData,
   regionalTotalData,
+  centroidData,
   regionHighlighted,
   setRegionHighlighted,
   anchor,
@@ -97,8 +98,8 @@ function MapExplorer({
     hoveredDestination: "",
   })
 
-  const [currentCommuteType, setCurrentCommuteType] = useState(
-    "ALL" // Default to show all
+  const [currentCommuteTypes, setCurrentCommuteTypes] = useState(
+    [] // Empty = show all
   )
 
   const updateCurrentData = () => {
@@ -249,7 +250,7 @@ function MapExplorer({
   ]);
 
   const handleTabClick = (option) => {
-    console.log('moving to tab: ', option);
+    // console.log('moving to tab: ', option);
     setCurrentMap({
       code: currentMap.code,
       view: MAP_TYPES.COUNTRY,
@@ -405,6 +406,7 @@ function MapExplorer({
                 hoveredRegion={hoveredRegion}
                 hoveredData={hoveredData}
                 highlightedData={highlightedData}
+                centroidData={centroidData}
               />
 
               <div className="map-wrapper">
@@ -415,6 +417,7 @@ function MapExplorer({
                   regionalEducationData={regionalEducationData}
                   regionalWorkData={regionalWorkData}
                   regionalTotalData={regionalTotalData}
+                  centroidData={centroidData}
                   setRegionalData={setRegionalData}
                   currentView={currentView}
                   setCurrentView={setCurrentView}
@@ -450,7 +453,7 @@ function MapExplorer({
                   </div>
                 </div>
 
-                {/* <div className="info legend">
+                <div className="info legend">
                 {
                   Object.keys(COMMUTE_PURPOSE_COLOUR).map((commutePurpose, index) => (
                     <div key={index}>
@@ -459,7 +462,7 @@ function MapExplorer({
                     </div>
                   ))
                 }
-                </div> */}
+                </div>
 
               </div>
 
@@ -467,8 +470,8 @@ function MapExplorer({
                 {Object.values(MODES_OF_TRANSPORT).map((commuteType, i)=>(
                     <CommuteTab 
                       commuteType={commuteType} 
-                      currentCommuteType={currentCommuteType}
-                      setCurrentCommuteType={setCurrentCommuteType}
+                      currentCommuteTypes={currentCommuteTypes}
+                      setCurrentCommuteTypes={setCurrentCommuteTypes}
                       key={i} 
                     />
                   ))
