@@ -11,12 +11,18 @@ import {
 import {
     txt2Array
 } from '../utils/commonFunctions';
+import { eachWeekOfInterval } from 'date-fns/esm';
 // import { Curve } from 'react-leaflet-curve';
 
 const MIN_ZOOM = 5;
 const MAX_ZOOM = 13;
 const INITIAL_STROKE_WEIGHT = 1;
 const HIGHLIGHTED_STROKE_WEIGHT = INITIAL_STROKE_WEIGHT * 3.5;
+
+const curvesWork = {}, 
+    curvesEducation = {};
+global.curvesWork = curvesWork; // Allows for console debugging by calling >> curves in Chrome
+global.curvesEducation = curvesEducation;
 
 function LeafletMap({
     setHoveredData,
@@ -31,8 +37,10 @@ function LeafletMap({
     const topLeft = L.latLng(-31.154944, 150.138842); //162
     const bottomRight = L.latLng(-49.285522, 191.794907); // 179
 
-    const curves = [];
-    const circles = [];
+    // const [curvesWork, setCurvesWork] = useState({});
+    // const [curvesEducation, setCurvesEducation] = useState({});
+
+    const [circles, setCircles] = useState([]);
 
     // const mapRef = React.createRef();
     const mapRef = useRef(null);
@@ -86,8 +94,8 @@ function LeafletMap({
             // Zoom into this location, but not the first time
             if(!initializing){
                 mapRef.current.leafletElement.setView([lat,lng], 9);
-                var circle = createCurrentLatLngCircle(lat, lng);
-                setCurrentPositionCircle(circle);
+                // var circle = createCurrentLatLngCircle(lat, lng);
+                // setCurrentPositionCircle(circle);
             }
             setInitializing(false);
         }
@@ -95,21 +103,25 @@ function LeafletMap({
     }, [location])
 
     useEffect(() => {
-        // console.log('currentMap.option: ', currentMap.option);
         setCommutePurpose(currentMap.option.toUpperCase());
         mapRef.current.leafletElement.commuteType = currentMap.option.toUpperCase();
-        // console.log('set data type: ', currentMap.option.toUpperCase());
-        // console.log("commutePurpose: ", commutePurpose);
+        clearDrawnObjects(
+            currentMap.option.toUpperCase() === "WORK"
+            ? curvesEducation
+            : curvesWork,
+            currentMap.option.toUpperCase() === "WORK"
+            ? "EDUCATION"
+            : "WORK"
+        );
     }, [
         currentMap.option,
-        // commutePurpose,
     ])
 
     useEffect(() => {
         // Listen when bounds change so we can load different data
-        mapRef.current.leafletElement.off('moveend');
-        mapRef.current.leafletElement.on('moveend', updateData);
-
+        // Disable current listeners
+        mapRef.current.leafletElement.off('movestart');
+        mapRef.current.leafletElement.on('movestart', updateData);
         updateData();
     },[
         commutePurpose
@@ -119,22 +131,6 @@ function LeafletMap({
         const map = mapRef.current.leafletElement;
         var bounds = map.getBounds();
         var zoom = map.getZoom();
-        console.log('current zoom level: ', zoom)
-        
-        curves.forEach(curve => {
-            console.log('removing curve');
-            curve.remove();
-        })
-        curves.length = 0;
-
-        circles.forEach(circle => {
-            circle.remove();
-        })
-        circles.length = 0;
-
-        //const dataType = currentMap.option.toUpperCase();
-        console.log("updating data with commutePurpose: ", commutePurpose);
-        // const c = mapRef.current.leafletElement.commutePurpose;
         // If total, request both data types
         // Can also do if !== education, request work, if !== work, request education, so total will request both.
         if(commutePurpose === "TOTAL"){
@@ -148,8 +144,7 @@ function LeafletMap({
 
         // Circle information
         for(var c of centroidData[zoom]){
-            // console.log(c);
-            createCircle(c.departure_LATITUDE, c.departure_LONGITUDE, c.cluster_count);
+            //TODO add this back in, createCircle(c.departure_LATITUDE, c.departure_LONGITUDE, c.cluster_count);
         }
         // console.log(centroidData[zoom])
     }
@@ -172,18 +167,16 @@ function LeafletMap({
             fetch(
                 DATA_URL_ROOT + `/zoneData?left=${bounds._southWest.lng}&top=${bounds._northEast.lat}&right=${bounds._northEast.lng}&bottom=${bounds._southWest.lat}&zoom=${zoom}&data_type=${type}`,
             ).then(async (d)=>{
-                console.log("zone data: ");
+                // console.log("zone data: ");
                 // setZoneData(d);
                 // return await d.json();
                 const data = txt2Array(await d.text());
 
                 if(type === "WORK"){
                     setWorkZoneData(data);
-                    // setEducationZoneData([]);
                     updateCurves(data, "WORK");
                 }
                 if(type === "EDUCATION"){
-                    // setWorkZoneData([]);
                     setEducationZoneData(data);
                     updateCurves(data, "EDUCATION");
                 }
@@ -197,8 +190,12 @@ function LeafletMap({
     const updateCurves = (d, dataType) =>{
         // console.log('updating zone data: ', d);
         if(!d) return;
-        for(var r of d){
-            createCurve(
+        var curvesToAdd = checkCurvesExist(d, dataType);
+        
+        // console.log("curves to add: ", curvesToAdd);
+        // console.log("state curves: ", Object.keys(curves).length);
+        for(var r of curvesToAdd){
+            const curve = createCurve(
                 Number(r.departure_LONGITUDE), 
                 Number(r.departure_LATITUDE), 
                 Number(r.destination_LONGITUDE), 
@@ -206,7 +203,107 @@ function LeafletMap({
                 r,
                 dataType
             );
+            if(dataType === "WORK")
+                curvesWork[r.id] = curve;
+            else if(dataType === "EDUCATION")
+                curvesEducation[r.id] = curve;
         }
+    }
+
+    // Checks if the curve is already drawn on the map, if it is, exclude it.
+    // Returns the new curves to add to the map
+    const checkCurvesExist = (newData, dataType) => {
+        // Dictionary of row id;
+        var toAdd = [];
+        const toDelete = (dataType === "WORK" 
+            ? curvesWork : curvesEducation);
+
+        console.log("curves of this commute: ", toDelete);
+        // console.log(workZoneData, row, dataType);
+        console.log('incoming data: ', newData);
+        // If the new curve is not in the existing curves, remove it.
+
+        for(var r of newData){
+            // console.log("checking r.id: ", r.id);
+            // If new curve is not in existing curves, add it to list of new curves
+            if(!toDelete[r.id]){
+                toAdd.push(r);
+            }
+            // If new curve is in existing curves, it means it is already drawn, 
+            // delete it from the toRemove dictionary
+            if(toDelete[r.id]){
+                toDelete[r.id] = undefined;
+                delete toDelete[r.id];
+            }
+            // If commute purpose is education, and key starts with 'E'
+            // Delete until proven otherwise.
+            if((dataType === "EDUCATION" && commutePurpose !== "TOTAL") && r.id.substring(0,1) === 'W'){
+                // toDelete[r.id] = undefined;
+                // delete toDelete[r.id];
+            }
+            if((dataType === "WORK" && commutePurpose !== "TOTAL") && r.id.substring(0, 1) === 'E') {
+                // toDelete[r.id] = undefined;
+                // delete toDelete[r.id];
+            }
+            
+            // Otherwise leave it in the array to be removed as it no longer should be drawn
+        }
+
+        console.log("actually removing: ", Object.keys(toDelete));
+
+        clearDrawnObjects(toDelete, dataType);
+
+        return toAdd;
+    }
+
+    const clearDrawnObjects = (toDelete, dataType) => {
+        // console.log(dataType);
+        // console.log(curvesWork);
+        // console.log(curvesEducation);
+        for(var id of Object.keys(toDelete)){
+            var el = document.getElementById(id);
+            if(el){
+                el.classList.remove('pathFadeIn');
+                el.classList.add('pathFadeOut');
+                // console.log(el.classList);
+                // setTimeout(()=>{
+                    // Wait for animation to expire and remove from DOM
+                    el.remove();
+                    // for(var el of Array.from(document.getElementsByClassName(id))){
+                    //     el.remove();
+                    // }
+                // },500)
+                if(dataType === "WORK"){
+                    // console.log('deleting: ', curvesWork[id]);
+                    curvesWork[id].remove();
+                    curvesWork[id] = undefined;
+                    delete curvesWork[id];
+                }
+                else if(dataType === "EDUCATION"){
+                    curvesEducation[id].remove();
+                    curvesEducation[id] = undefined;
+                    delete curvesEducation[id];
+                }
+            }
+            
+        };
+
+        // Object.values(curves).forEach(curve => {
+
+        // })
+
+        // toRemove = {};
+        // var c = curves;
+        // c.length = 0;
+        // console.log("current curves: ", curves);
+        // setCurves(curves);
+
+        circles.forEach(circle => {
+            circle.remove();
+        })
+        var ci = circles;
+        ci.length = 0;
+        setCircles(ci);
     }
 
     // Draw cluster circles.
@@ -214,7 +311,7 @@ function LeafletMap({
         var circleCenter = [lat, lon];
         var options = {
             weight: 1.5,
-            color: 'rgba(255,0,0,.35)',
+            color: 'rgba(255,0,0,0)',//'rgba(255,0,0,.35)',
             fillColor: '#f03',
             fillOpacity: 0.35,
         }
@@ -307,10 +404,14 @@ function LeafletMap({
             })
         })
         //.addTo(mapRef.current.leafletElement)
-        .addTo(m || mapRef.current.leafletElement)
-        curves.push(curve);
+        .addTo(mapRef.current.leafletElement)
+        // console.log(curve._path);
+        curve._path.id = obj.id;
+        // curve._path.classList.add(obj.id);
+        curve._path.classList.add('pathFadeIn');
+        // curves.push(curve);
         // console.log(mapRef.current.leafletElement)
-        // return curve;  
+        return curve;  
     }
     
     //TODO get curves based on zoom level
@@ -351,10 +452,11 @@ function LeafletMap({
                     // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     //attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
                     // url="http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg"
-                    url="http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg"
+                    // url="http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg"
+                    // url="http://b.tile.openstreetmap.fr/hot/${z}/${x}/${y}.png"
                     // WHEN USING HTTPS
                     // url="https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg"
-                    // url="http://tile.stamen.com/toner/{z}/{x}/{y}.png"
+                    url="http://tile.stamen.com/toner/{z}/{x}/{y}.png"
                     attribution='Map tiles by <a href="http://stamen.com" style="pointer-events: initial;">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0" style="pointer-events: initial;">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org" style="pointer-events: initial;">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright" style="pointer-events: initial;">ODbL</a>.'
                 />
                 
@@ -429,3 +531,22 @@ if(commutePurpose === "TOTAL"){
 }
 */
 // mapRef.current.leafletElement.commuteType = "TOTAL";
+
+// If incoming data is work, and row is education, then ignore it.
+        // if(commutePurpose === "TOTAL"){
+        //     Object.keys(toDelete).forEach((id)=>{
+        //         if(id.substring(0,1) !== dataType.substring(0,1)){
+        //             toDelete[id] = undefined;
+        //             delete toDelete[id];
+        //         }
+        //     })
+        // } 
+        // else if(dataType === "EDUCATION" && commutePurpose === "TOTAL"){
+        //     Object.keys(toDelete).forEach((id)=>{
+        //         console.log(id)
+        //         if(id.substring(0,1) === 'W'){
+        //             toDelete[id] = undefined;
+        //             delete toDelete[id];
+        //         }
+        //     })
+        // }

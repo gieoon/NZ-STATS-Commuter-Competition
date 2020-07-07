@@ -30,8 +30,8 @@ const FAQ = lazy(() =>
   import("./components/faq" /* webpackChunkName: "About" */)
 );
 
-const District = lazy(() =>
-  import("./components/district" /* webpackChunkName: "District" */)
+const Statistics = lazy(() =>
+  import("./components/statistics" /* webpackChunkName: "District" */)
 );
 
 function App() {
@@ -39,6 +39,18 @@ function App() {
   // const [showLanguageSwitcher, setShowLanguageSwitcher] = useState(false);
 
   const pages = [
+    {
+      pageLink: "/about",
+      view: FAQ,
+      displayName: "About",
+      showInNavbar: true,
+    },
+    {
+      pageLink: "/stats",
+      view: Statistics,
+      displayName: "Statistics",
+      showInNavbar: true,
+    },
     // Lat/Lon coordinates as a route destination
     // :latlng is 
     {
@@ -53,12 +65,6 @@ function App() {
     //   displayName: "Home",
     //   showInNavbar: true,
     // },
-    {
-      pageLink: "/about",
-      view: FAQ,
-      displayName: "About",
-      showInNavbar: true,
-    },
     // {
     //   pageLink: "/district/:districtCode",
     //   view: District,
@@ -103,7 +109,7 @@ function App() {
                       />
                     );
                   })}
-                  {/* <Redirect to="/" /> */}
+                  <Redirect to="/" />
                 </Switch>
               </React.Fragment>
             )}

@@ -200,10 +200,21 @@ education_csv_out = education_df_combined.to_csv(index=False)
 
 work_csv_out = pd.read_csv('./out/work.csv')
 # work_csv_out = work_csv_out.sample(int(len(work_csv_out.index) / SIZE_DIVISOR), axis=0)
+# work_csv_out = work_csv_out.to_csv('./out/work.csv',index=True,index_label="id")
+# work_csv_out = work_csv_out.to_csv(index=True)
+# work_csv_out.drop(work_csv_out.columns[1], axis=1,inplace=True)
+# work_csv_out['id'] = 'W' + work_csv_out['id'].astype(str)
+# work_csv_out = work_csv_out.to_csv('./out/work.csv',index=False)
 work_csv_out = work_csv_out.to_csv(index=False)
+
 education_csv_out = pd.read_csv('./out/education.csv')
 # education_csv_out = education_csv_out.sample(int(len(education_csv_out.index) / SIZE_DIVISOR), axis=0)
+# education_csv_out = education_csv_out.to_csv('./out/education.csv',index=True,index_label="id")
+# education_csv_out.drop(education_csv_out.columns[1], axis=1,inplace=True)
+# education_csv_out['id'] = 'E' + education_csv_out['id'].astype(str)
+# education_csv_out = education_csv_out.to_csv('./out/education.csv',index=False)
 education_csv_out = education_csv_out.to_csv(index=False)
+
 
 # with open('./out/work.csv') as work_csv:
 #     work_csv_reader = csv.reader(work_csv, delimiter=',')

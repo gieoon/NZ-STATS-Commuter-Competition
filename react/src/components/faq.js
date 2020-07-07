@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 
-const DATA_ROOT = "http://localhost:5000";
-const DATA_URL = DATA_ROOT + "/faq_data";
+import {
+  DATA_URL_ROOT
+} from '../constants';
 
 function FAQ(props) {
   const [faq, setFaq] = useState([]);
@@ -16,12 +17,14 @@ function FAQ(props) {
   }, []);
 
   const getFAQs = () => {
-    fetch(DATA_URL)
+    fetch(DATA_URL_ROOT + "/faq_data")
       .then((response) => {
+
         return response.json();
       })
       .then((data) => {
-        setFaq(data.faq);
+        console.log(data);
+        setFaq(data);
       })
       .catch((error) => {
         console.log(error);
