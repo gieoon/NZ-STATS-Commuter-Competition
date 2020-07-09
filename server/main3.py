@@ -14,7 +14,7 @@ import shapefile
 import json
 import csv
 
-from zoom import handleZoom
+from zoom2 import handleZoom
 from centroid import getAllCentroidData
 
 SIZE_DIVISOR = 50 # 5 # 100
@@ -308,8 +308,11 @@ def get_zone_data():
     bottom = request.args.get('bottom')
     zoom = request.args.get('zoom')
     data_type = request.args.get('data_type')
-    data = handleZoom(left, top, right, bottom, zoom, data_type)
-    response = make_response(data)
+    # Multiple parameters of commute_type
+    commute_types = request.args.getlist('commute_type')
+    # print("commute_types: ", commute_types)
+    data = handleZoom(left, top, right, bottom, zoom, data_type, commute_types)
+    response = make_response(jsonify(data))
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 

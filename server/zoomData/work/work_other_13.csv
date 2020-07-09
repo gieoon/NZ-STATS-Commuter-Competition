@@ -1,0 +1,452 @@
+id,SA2_name_usual_residence_address,SA2_name_workplace_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1
+W0,North Cape,North Cape,OTHER,6,EDUCATION,North Cape,-34.50545276,172.77554997,North Cape,-34.50545276,172.77554997,0.0,Far North,Far North,Northland,Northland
+W279,Puketona-Waitangi,Puketona-Waitangi,OTHER,6,EDUCATION,Puketona-Waitangi,-35.27991822,174.00095246,Puketona-Waitangi,-35.27991822,174.00095246,0.0,Far North,Far North,Northland,Northland
+W403,Kensington (Whangarei District),Whangarei Central,OTHER,6,EDUCATION,Kensington (Whangarei District),-35.71310137,174.30833235,Whangarei Central,-35.72846995,174.32430322,2.235870213746053,Whangarei,Whangarei,Northland,Northland
+W406,Maunu-Horahora,Whangarei Central,OTHER,9,EDUCATION,Maunu-Horahora,-35.73757136,174.29037127,Whangarei Central,-35.72846995,174.32430322,3.2256429060483325,Whangarei,Whangarei,Northland,Northland
+W439,Mataraua Forest,Mataraua Forest,OTHER,6,EDUCATION,Mataraua Forest,-35.54715526,173.80536516,Mataraua Forest,-35.54715526,173.80536516,0.0,Far North,Far North,Northland,Northland
+W477,Raumanga,Port-Limeburners,OTHER,6,EDUCATION,Raumanga,-35.74968804,174.29896302,Port-Limeburners,-35.74927345,174.33075178,2.8690992824162254,Whangarei,Whangarei,Northland,Northland
+W497,Maromaku,Maromaku,OTHER,6,EDUCATION,Maromaku,-35.47825535,174.14132759999995,Maromaku,-35.47825535,174.14132759999995,0.0,Far North,Far North,Northland,Northland
+W499,Mangakahia-Hukerenui,Mangakahia-Hukerenui,OTHER,24,EDUCATION,Mangakahia-Hukerenui,-35.65301955,174.0023164,Mangakahia-Hukerenui,-35.65301955,174.0023164,0.0,Whangarei,Whangarei,Northland,Northland
+W521,Kauri,Kauri,OTHER,6,EDUCATION,Kauri,-35.62944367,174.28665672,Kauri,-35.62944367,174.28665672,0.0,Whangarei,Whangarei,Northland,Northland
+W666,Maungatapere,Maungatapere,OTHER,12,EDUCATION,Maungatapere,-35.76206371,174.15473729,Maungatapere,-35.76206371,174.15473729,0.0,Whangarei,Whangarei,Northland,Northland
+W750,Whangaruru,Whangaruru,OTHER,6,EDUCATION,Whangaruru,-35.48991999,174.33501130000005,Whangaruru,-35.48991999,174.33501130000005,0.0,Whangarei,Whangarei,Northland,Northland
+W1016,Bream Bay,Bream Bay,OTHER,9,EDUCATION,Bream Bay,-35.91496801,174.38390319,Bream Bay,-35.91496801,174.38390319,0.0,Whangarei,Whangarei,Northland,Northland
+W1091,Oakleigh-Mangapai,Oakleigh-Mangapai,OTHER,9,EDUCATION,Oakleigh-Mangapai,-35.89588695,174.21595621,Oakleigh-Mangapai,-35.89588695,174.21595621,0.0,Whangarei,Whangarei,Northland,Northland
+W1132,Kaipara Coastal,Kaipara Coastal,OTHER,45,EDUCATION,Kaipara Coastal,-35.72900181,173.65124289,Kaipara Coastal,-35.72900181,173.65124289,0.0,Kaipara,Kaipara,Northland,Northland
+W1138,Ruawai-Matakohe,Ruawai-Matakohe,OTHER,27,EDUCATION,Ruawai-Matakohe,-36.08477059,174.14649781,Ruawai-Matakohe,-36.08477059,174.14649781,0.0,Kaipara,Kaipara,Northland,Northland
+W1142,Maungaru,Maungaru,OTHER,15,EDUCATION,Maungaru,-35.87696287,173.97089153,Maungaru,-35.87696287,173.97089153,0.0,Kaipara,Kaipara,Northland,Northland
+W1155,Otamatea (Kaipara District),Otamatea (Kaipara District),OTHER,6,EDUCATION,Otamatea (Kaipara District),-36.20622411,174.32331996,Otamatea (Kaipara District),-36.20622411,174.32331996,0.0,Kaipara,Kaipara,Northland,Northland
+W1227,Cape Rodney,Cape Rodney,OTHER,12,EDUCATION,Cape Rodney,-36.25433822,174.62638047,Cape Rodney,-36.25433822,174.62638047,0.0,Rodney,Rodney,Auckland,Auckland
+W1295,Awaruku,North Harbour,OTHER,6,EDUCATION,Awaruku,-36.69990012,174.72732927,North Harbour,-36.74630474,174.71502975,5.275116603314532,Waitakere,Waitakere,Auckland,Auckland
+W1697,Okahukura Peninsula,Okahukura Peninsula,OTHER,15,EDUCATION,Okahukura Peninsula,-36.31614337,174.47831639,Okahukura Peninsula,-36.31614337,174.47831639,0.0,Rodney,Rodney,Auckland,Auckland
+W1879,Westmere South-Western Springs,Quay Street-Customs Street,OTHER,9,EDUCATION,Westmere South-Western Springs,-36.86042307,174.72244945,Quay Street-Customs Street,-36.84601989,174.77646293,5.065705107358832,Waitakere,Waitakere,Auckland,Auckland
+W1880,Ponsonby West,Quay Street-Customs Street,OTHER,6,EDUCATION,Ponsonby West,-36.85019424,174.73436269,Quay Street-Customs Street,-36.84601989,174.77646293,3.774781265540133,Waitakere,Waitakere,Auckland,Auckland
+W1888,Ponsonby East,Quay Street-Customs Street,OTHER,6,EDUCATION,Ponsonby East,-36.85137951,174.74159318,Quay Street-Customs Street,-36.84601989,174.77646293,3.159448792879436,Waitakere,Waitakere,Auckland,Auckland
+W1894,Freemans Bay,Quay Street-Customs Street,OTHER,6,EDUCATION,Freemans Bay,-36.85220128,174.7504171,Quay Street-Customs Street,-36.84601989,174.77646293,2.4173388207571787,Waitakere,Waitakere,Auckland,Auckland
+W1920,Kingsland,Quay Street-Customs Street,OTHER,9,EDUCATION,Kingsland,-36.87030191,174.74585155,Quay Street-Customs Street,-36.84601989,174.77646293,3.835043450635547,Waitakere,Waitakere,Auckland,Auckland
+W1939,Parnell West,Quay Street-Customs Street,OTHER,6,EDUCATION,Parnell West,-36.85679261,174.77798053,Quay Street-Customs Street,-36.84601989,174.77646293,1.2054586555330555,Waitakere,Waitakere,Auckland,Auckland
+W1949,Parnell East,Quay Street-Customs Street,OTHER,9,EDUCATION,Parnell East,-36.85621249,174.78751844,Quay Street-Customs Street,-36.84601989,174.77646293,1.5007241746985167,Waitakere,Waitakere,Auckland,Auckland
+W1973,Mount Eden South,Quay Street-Customs Street,OTHER,6,EDUCATION,Mount Eden South,-36.89582511,174.75448765,Quay Street-Customs Street,-36.84601989,174.77646293,5.872961787732155,Waitakere,Waitakere,Auckland,Auckland
+W2213,Dome Valley-Matakana,Dome Valley-Matakana,OTHER,6,EDUCATION,Dome Valley-Matakana,-36.34097815,174.68669921,Dome Valley-Matakana,-36.34097815,174.68669921,0.0,Rodney,Rodney,Auckland,Auckland
+W2365,Glenfield Central,Takapuna West,OTHER,6,EDUCATION,Glenfield Central,-36.78480405,174.72587699,Takapuna West,-36.78910918,174.76117008,3.1791829574212147,Waitakere,Waitakere,Auckland,Auckland
+W3330,Saint Marys Bay,Wynyard-Viaduct,OTHER,9,EDUCATION,Saint Marys Bay,-36.84071817,174.74666884,Wynyard-Viaduct,-36.843309399999995,174.75788827,1.0391441851455203,Waitakere,Waitakere,Auckland,Auckland
+W3340,Ponsonby East,Wynyard-Viaduct,OTHER,6,EDUCATION,Ponsonby East,-36.85137951,174.74159318,Wynyard-Viaduct,-36.843309399999995,174.75788827,1.7051885208181825,Waitakere,Waitakere,Auckland,Auckland
+W3344,Grey Lynn North,Wynyard-Viaduct,OTHER,6,EDUCATION,Grey Lynn North,-36.85879216,174.73576481,Wynyard-Viaduct,-36.843309399999995,174.75788827,2.6151306512178483,Waitakere,Waitakere,Auckland,Auckland
+W3364,Morningside (Auckland),Wynyard-Viaduct,OTHER,6,EDUCATION,Morningside (Auckland),-36.87312613,174.73197443,Wynyard-Viaduct,-36.843309399999995,174.75788827,4.038299256921299,Waitakere,Waitakere,Auckland,Auckland
+W3391,Parnell West,Wynyard-Viaduct,OTHER,6,EDUCATION,Parnell West,-36.85679261,174.77798053,Wynyard-Viaduct,-36.843309399999995,174.75788827,2.3332354507313124,Waitakere,Waitakere,Auckland,Auckland
+W3397,Sandringham Central,Wynyard-Viaduct,OTHER,6,EDUCATION,Sandringham Central,-36.88819147,174.73385278,Wynyard-Viaduct,-36.843309399999995,174.75788827,5.429423341157489,Waitakere,Waitakere,Auckland,Auckland
+W5626,South Head,South Head,OTHER,9,EDUCATION,South Head,-36.59353204,174.31227374,South Head,-36.59353204,174.31227374,0.0,Rodney,Rodney,Auckland,Auckland
+W6327,Kingsland,Auckland Airport,OTHER,6,EDUCATION,Kingsland,-36.87030191,174.74585155,Auckland Airport,-36.9891029,174.77400859,13.445064171565313,Waitakere,Manukau,Auckland,Auckland
+W6356,Parnell East,Auckland Airport,OTHER,6,EDUCATION,Parnell East,-36.85621249,174.78751844,Auckland Airport,-36.9891029,174.77400859,14.825461491822072,Waitakere,Manukau,Auckland,Auckland
+W6392,Mission Bay,Auckland Airport,OTHER,6,EDUCATION,Mission Bay,-36.855756,174.83237219,Auckland Airport,-36.9891029,174.77400859,15.708987195124983,Waitakere,Manukau,Auckland,Auckland
+W6602,Papakura East,Auckland Airport,OTHER,6,EDUCATION,Papakura East,-37.05846123,174.97920854,Auckland Airport,-36.9891029,174.77400859,19.782199241910305,Franklin,Manukau,Auckland,Auckland
+W7407,Remuera North,Newmarket,OTHER,6,EDUCATION,Remuera North,-36.86848079999999,174.80400649999999,Newmarket,-36.86853889,174.77706299,2.3968375301146323,Waitakere,Waitakere,Auckland,Auckland
+W8015,Parnell West,Parnell West,OTHER,6,EDUCATION,Parnell West,-36.85679261,174.77798053,Parnell West,-36.85679261,174.77798053,0.0,Waitakere,Waitakere,Auckland,Auckland
+W8025,Parnell East,Parnell West,OTHER,9,EDUCATION,Parnell East,-36.85621249,174.78751844,Parnell West,-36.85679261,174.77798053,0.8510506987885089,Waitakere,Waitakere,Auckland,Auckland
+W8446,Sunnyvale East,Henderson Central,OTHER,6,EDUCATION,Sunnyvale East,-36.89955638,174.64253379,Henderson Central,-36.88968581,174.62928426,1.6102447896284608,Waitakere,Waitakere,Auckland,Auckland
+W8929,Otara Central,East Tamaki,OTHER,9,EDUCATION,Otara Central,-36.95593456,174.87677994,East Tamaki,-36.93823242,174.88712871,2.1726285242983816,Manukau,Manukau,Auckland,Auckland
+W9294,Parnell East,Queen Street,OTHER,9,EDUCATION,Parnell East,-36.85621249,174.78751844,Queen Street,-36.84774104,174.76524972,2.1939176629250574,Waitakere,Waitakere,Auckland,Auckland
+W10953,Stanley Point,Stanley Point,OTHER,15,EDUCATION,Stanley Point,-36.82656718,174.7841077,Stanley Point,-36.82656718,174.7841077,0.0,,,,
+W11411,Grey Lynn Central,Victoria Park ,OTHER,6,EDUCATION,Grey Lynn Central,-36.86209925,174.74622031,Victoria Park,-36.84857807,174.75659124,1.7640594257799151,Waitakere,Waitakere,Auckland,Auckland
+W11419,Morningside (Auckland),Victoria Park ,OTHER,6,EDUCATION,Morningside (Auckland),-36.87312613,174.73197443,Victoria Park,-36.84857807,174.75659124,3.4996047788457028,Waitakere,Waitakere,Auckland,Auckland
+W12670,Barrier Islands,Barrier Islands,OTHER,6,EDUCATION,Barrier Islands,-36.20109801,175.42316367,Barrier Islands,-36.20109801,175.42316367,0.0,Auckland,Auckland,Auckland,Auckland
+W12829,Grey Lynn Central,Grey Lynn East,OTHER,6,EDUCATION,Grey Lynn Central,-36.86209925,174.74622031,Grey Lynn East,-36.86181959,174.75208551,0.5227243873153866,Waitakere,Waitakere,Auckland,Auckland
+W21560,Marlborough Sounds East,Marlborough Sounds East,OTHER,6,EDUCATION,Marlborough Sounds East,-41.321267799999994,174.04011823,Marlborough Sounds East,-41.321267799999994,174.04011823,0.0,Marlborough,Marlborough,Marlborough,Marlborough
+W22539,Surfdale,Oneroa West,OTHER,6,EDUCATION,Surfdale,-36.79613493,175.02985004,Oneroa West,-36.78767524,174.99965402,2.8486507206886875,Auckland,Auckland,Auckland,Auckland
+W22552,Ostend,Ostend,OTHER,9,EDUCATION,Ostend,-36.79263832,175.05220466,Ostend,-36.79263832,175.05220466,0.0,Auckland,Auckland,Auckland,Auckland
+W23380,Glenbrook,Glenbrook,OTHER,6,EDUCATION,Glenbrook,-37.20183488,174.75527205,Glenbrook,-37.20183488,174.75527205,0.0,Franklin,Franklin,Auckland,Auckland
+W23555,Aka Aka,Aka Aka,OTHER,9,EDUCATION,Aka Aka,-37.29132737,174.77509206,Aka Aka,-37.29132737,174.77509206,0.0,Franklin,Franklin,Auckland,Auckland
+W24408,Mangatangi,Mangatangi,OTHER,9,EDUCATION,Mangatangi,-37.1550063,175.17580209,Mangatangi,-37.1550063,175.17580209,0.0,Franklin,Franklin,Waikato,Waikato
+W24444,Whitianga South,Whitianga South,OTHER,12,EDUCATION,Whitianga South,-36.8336234,175.69356396,Whitianga South,-36.8336234,175.69356396,0.0,Thames-Coromandel,Thames-Coromandel,Waikato,Waikato
+W24503,Matatoki-Puriri,Matatoki-Puriri,OTHER,6,EDUCATION,Matatoki-Puriri,-37.23726446,175.66087396,Matatoki-Puriri,-37.23726446,175.66087396,0.0,Thames-Coromandel,Thames-Coromandel,Waikato,Waikato
+W24549,Whangamata,Whangamata,OTHER,9,EDUCATION,Whangamata,-37.21349281,175.86658897,Whangamata,-37.21349281,175.86658897,0.0,Thames-Coromandel,Thames-Coromandel,Waikato,Waikato
+W24555,Waihi Rural,Waihi Rural,OTHER,9,EDUCATION,Waihi Rural,-37.43661886,175.78432191,Waihi Rural,-37.43661886,175.78432191,0.0,Hauraki,Hauraki,Waikato,Waikato
+W24577,Hauraki Plains North,Hauraki Plains North,OTHER,21,EDUCATION,Hauraki Plains North,-37.26398219,175.39649071,Hauraki Plains North,-37.26398219,175.39649071,0.0,Hauraki,Hauraki,Waikato,Waikato
+W24583,Hauraki Plains East,Hauraki Plains East,OTHER,6,EDUCATION,Hauraki Plains East,-37.23819335,175.54353689,Hauraki Plains East,-37.23819335,175.54353689,0.0,Hauraki,Hauraki,Waikato,Waikato
+W24589,Hauraki Plains South,Hauraki Plains South,OTHER,24,EDUCATION,Hauraki Plains South,-37.355292,175.48248555,Hauraki Plains South,-37.355292,175.48248555,0.0,Hauraki,Hauraki,Waikato,Waikato
+W24607,Paeroa Rural,Paeroa Rural,OTHER,12,EDUCATION,Paeroa Rural,-37.39345524,175.57864603,Paeroa Rural,-37.39345524,175.57864603,0.0,Hauraki,Hauraki,Waikato,Waikato
+W24678,Rototuna South,Te Rapa South,OTHER,6,EDUCATION,Rototuna South,-37.73648973,175.26994776,Te Rapa South,-37.76141322,175.24114614,3.7540615315721833,Hamilton,Hamilton,Waikato,Waikato
+W24858,Mount Maunganui North,Tauranga Central,OTHER,6,EDUCATION,Mount Maunganui North,-37.63000366,176.1731587,Tauranga Central,-37.67947411,176.16704264,5.527150259218256,,,,
+W24862,Otumoetai North,Tauranga Central,OTHER,6,EDUCATION,Otumoetai North,-37.66946351,176.14903993,Tauranga Central,-37.67947411,176.16704264,1.936350911527547,Western Bay of Plenty,,Bay of Plenty,
+W24863,Otumoetai South,Tauranga Central,OTHER,6,EDUCATION,Otumoetai South,-37.67691846,176.14437130000005,Tauranga Central,-37.67947411,176.16704264,2.0153477161360165,Western Bay of Plenty,,Bay of Plenty,
+W24865,Bethlehem Central,Tauranga Central,OTHER,6,EDUCATION,Bethlehem Central,-37.706587899999995,176.11498118,Tauranga Central,-37.67947411,176.16704264,5.483926067590736,Western Bay of Plenty,,Bay of Plenty,
+W24866,Brookfield East,Tauranga Central,OTHER,6,EDUCATION,Brookfield East,-37.68730456,176.14143485,Tauranga Central,-37.67947411,176.16704264,2.4158430955715047,Western Bay of Plenty,,Bay of Plenty,
+W24873,Omanu Beach,Tauranga Central,OTHER,6,EDUCATION,Omanu Beach,-37.65870852,176.20775005,Tauranga Central,-37.67947411,176.16704264,4.2625128106653225,Western Bay of Plenty,,Bay of Plenty,
+W24876,Gate Pa,Tauranga Central,OTHER,9,EDUCATION,Gate Pa,-37.71588753,176.13556748,Tauranga Central,-37.67947411,176.16704264,4.905422507572762,Western Bay of Plenty,,Bay of Plenty,
+W24884,Pyes Pa North,Tauranga Central,OTHER,6,EDUCATION,Pyes Pa North,-37.74119093,176.12802796,Tauranga Central,-37.67947411,176.16704264,7.672946004429022,Western Bay of Plenty,,Bay of Plenty,
+W24896,Welcome Bay West,Tauranga Central,OTHER,6,EDUCATION,Welcome Bay West,-37.73107452,176.18502146,Tauranga Central,-37.67947411,176.16704264,5.951714713204134,Western Bay of Plenty,,Bay of Plenty,
+W24919,Rangiriri,Rangiriri,OTHER,6,EDUCATION,Rangiriri,-37.38966720000001,175.09012212,Rangiriri,-37.38966720000001,175.09012212,0.0,Waikato,Waikato,Waikato,Waikato
+W24944,Huntly Rural,Huntly Rural,OTHER,24,EDUCATION,Huntly Rural,-37.53043725,175.19128309,Huntly Rural,-37.53043725,175.19128309,0.0,Waikato,Waikato,Waikato,Waikato
+W25183,Hamilton East,Hamilton Central,OTHER,6,EDUCATION,Hamilton East,-37.80128004,175.30076378,Hamilton Central,-37.78938082,175.28203067,2.1118845200458574,Hamilton,Hamilton,Waikato,Waikato
+W25186,Bader,Hamilton Central,OTHER,6,EDUCATION,Bader,-37.80931055,175.2924365,Hamilton Central,-37.78938082,175.28203067,2.3972765246241394,Hamilton,Hamilton,Waikato,Waikato
+W25230,Te Akau,Te Akau,OTHER,12,EDUCATION,Te Akau,-37.69707947,175.04556188,Te Akau,-37.69707947,175.04556188,0.0,Waikato,Waikato,Waikato,Waikato
+W25300,Melville North,Hamilton West,OTHER,6,EDUCATION,Melville North,-37.81091872,175.27938651,Hamilton West,-37.80074182,175.2844169,1.2148560376932236,Hamilton,Hamilton,Waikato,Waikato
+W25606,Taupiri-Lake Kainui,Taupiri-Lake Kainui,OTHER,9,EDUCATION,Taupiri-Lake Kainui,-37.65858387,175.18844215,Taupiri-Lake Kainui,-37.65858387,175.18844215,0.0,Waikato,Waikato,Waikato,Waikato
+W25610,Waerenga,Waerenga,OTHER,15,EDUCATION,Waerenga,-37.42381266,175.30852178,Waerenga,-37.42381266,175.30852178,0.0,Waikato,Waikato,Waikato,Waikato
+W25733,Hamilton Park,Hamilton Park,OTHER,6,EDUCATION,Hamilton Park,-37.74851528,175.3389199,Hamilton Park,-37.74851528,175.3389199,0.0,Waikato,Waikato,Waikato,Waikato
+W25865,Te Uku,Te Uku,OTHER,9,EDUCATION,Te Uku,-37.88322634,174.93821165,Te Uku,-37.88322634,174.93821165,0.0,Waikato,Waikato,Waikato,Waikato
+W25870,Whitikahu,Whitikahu,OTHER,48,EDUCATION,Whitikahu,-37.57098670000001,175.31718590000003,Whitikahu,-37.57098670000001,175.31718590000003,0.0,Waikato,Waikato,Waikato,Waikato
+W25876,Kainui-Gordonton,Kainui-Gordonton,OTHER,21,EDUCATION,Kainui-Gordonton,-37.65939637,175.27496356,Kainui-Gordonton,-37.65939637,175.27496356,0.0,Waikato,Waikato,Waikato,Waikato
+W26238,Lake Cameron,Lake Cameron,OTHER,12,EDUCATION,Lake Cameron,-37.85237531,175.29365388,Lake Cameron,-37.85237531,175.29365388,0.0,Waipa,Waipa,Waikato,Waikato
+W26336,Eureka-Tauwhare,Eureka-Tauwhare,OTHER,24,EDUCATION,Eureka-Tauwhare,-37.73963043,175.43296094,Eureka-Tauwhare,-37.73963043,175.43296094,0.0,Waikato,Waikato,Waikato,Waikato
+W26340,Pukemoremore,Pukemoremore,OTHER,9,EDUCATION,Pukemoremore,-37.79999562,175.42305312,Pukemoremore,-37.79999562,175.42305312,0.0,Waikato,Waikato,Waikato,Waikato
+W26601,Karapiro,Karapiro,OTHER,18,EDUCATION,Karapiro,-37.87109072,175.56894865,Karapiro,-37.87109072,175.56894865,0.0,Waipa,Waipa,Waikato,Waikato
+W26610,Tahuna-Mangateparu,Tahuna-Mangateparu,OTHER,15,EDUCATION,Tahuna-Mangateparu,-37.52132213,175.46480172,Tahuna-Mangateparu,-37.52132213,175.46480172,0.0,Matamata-Piako,Matamata-Piako,Waikato,Waikato
+W26643,Waitoa-Ngarua,Waitoa-Ngarua,OTHER,33,EDUCATION,Waitoa-Ngarua,-37.64354365,175.70496716,Waitoa-Ngarua,-37.64354365,175.70496716,0.0,Matamata-Piako,Matamata-Piako,Waikato,Waikato
+W26652,Tahuroa,Tahuroa,OTHER,24,EDUCATION,Tahuroa,-37.69903344,175.52480796,Tahuroa,-37.69903344,175.52480796,0.0,Matamata-Piako,Matamata-Piako,Waikato,Waikato
+W26656,Waitoa-Ngarua,Tahuroa,OTHER,6,EDUCATION,Waitoa-Ngarua,-37.64354365,175.70496716,Tahuroa,-37.69903344,175.52480796,17.014735893046716,Matamata-Piako,Matamata-Piako,Waikato,Waikato
+W26659,Tatuanui,Tatuanui,OTHER,30,EDUCATION,Tatuanui,-37.64163374,175.59349461,Tatuanui,-37.64163374,175.59349461,0.0,Matamata-Piako,Matamata-Piako,Waikato,Waikato
+W26681,Mangaiti,Mangaiti,OTHER,21,EDUCATION,Mangaiti,-37.50073616,175.62867197,Mangaiti,-37.50073616,175.62867197,0.0,Matamata-Piako,Matamata-Piako,Waikato,Waikato
+W26690,Waihou-Manawaru,Waihou-Manawaru,OTHER,21,EDUCATION,Waihou-Manawaru,-37.59772787,175.76835054,Waihou-Manawaru,-37.59772787,175.76835054,0.0,Matamata-Piako,Matamata-Piako,Waikato,Waikato
+W26691,Waitoa-Ngarua,Waihou-Manawaru,OTHER,6,EDUCATION,Waitoa-Ngarua,-37.64354365,175.70496716,Waihou-Manawaru,-37.59772787,175.76835054,7.557602063572594,Matamata-Piako,Matamata-Piako,Waikato,Waikato
+W26701,Waharoa-Peria,Waharoa-Peria,OTHER,9,EDUCATION,Waharoa-Peria,-37.78764074,175.7349705,Waharoa-Peria,-37.78764074,175.7349705,0.0,Matamata-Piako,Matamata-Piako,Waikato,Waikato
+W26728,Richmond Downs-Wardville,Richmond Downs-Wardville,OTHER,33,EDUCATION,Richmond Downs-Wardville,-37.71603663,175.7456246,Richmond Downs-Wardville,-37.71603663,175.7456246,0.0,Matamata-Piako,Matamata-Piako,Waikato,Waikato
+W26734,Hinuera,Hinuera,OTHER,18,EDUCATION,Hinuera,-37.87610156,175.72059543,Hinuera,-37.87610156,175.72059543,0.0,Matamata-Piako,Matamata-Piako,Waikato,Waikato
+W26745,Okauia,Okauia,OTHER,15,EDUCATION,Okauia,-37.77286251,175.84579003,Okauia,-37.77286251,175.84579003,0.0,Matamata-Piako,Matamata-Piako,Waikato,Waikato
+W26752,Te Poi,Te Poi,OTHER,21,EDUCATION,Te Poi,-37.87153608,175.87306966,Te Poi,-37.87153608,175.87306966,0.0,Matamata-Piako,Matamata-Piako,Waikato,Waikato
+W26758,Tirau,Tirau,OTHER,36,EDUCATION,Tirau,-37.95916018,175.81429616,Tirau,-37.95916018,175.81429616,0.0,South Waikato,South Waikato,Waikato,Waikato
+W27112,Kaipaki,Kaipaki,OTHER,6,EDUCATION,Kaipaki,-37.88426455,175.35405891,Kaipaki,-37.88426455,175.35405891,0.0,Waipa,Waipa,Waikato,Waikato
+W27142,Te Pahu,Te Pahu,OTHER,21,EDUCATION,Te Pahu,-37.92511289,175.12769727,Te Pahu,-37.92511289,175.12769727,0.0,Waipa,Waipa,Waikato,Waikato
+W27158,Otorohanga,Otorohanga,OTHER,9,EDUCATION,Otorohanga,-38.18318495,175.21677363,Otorohanga,-38.18318495,175.21677363,0.0,Otorohanga,Otorohanga,Waikato,Waikato
+W27172,Ngahinapouri,Ngahinapouri,OTHER,6,EDUCATION,Ngahinapouri,-37.86550268,175.20500766,Ngahinapouri,-37.86550268,175.20500766,0.0,Waipa,Waipa,Waikato,Waikato
+W27173,Lake Ngaroto,Lake Ngaroto,OTHER,21,EDUCATION,Lake Ngaroto,-37.93011525,175.24270782,Lake Ngaroto,-37.93011525,175.24270782,0.0,Waipa,Waipa,Waikato,Waikato
+W27230,Pokuru,Pokuru,OTHER,15,EDUCATION,Pokuru,-38.02371113,175.25791046,Pokuru,-38.02371113,175.25791046,0.0,Waipa,Waipa,Waikato,Waikato
+W27262,Te Rahu,Te Rahu,OTHER,12,EDUCATION,Te Rahu,-37.94962706,175.34864156,Te Rahu,-37.94962706,175.34864156,0.0,Waipa,Waipa,Waikato,Waikato
+W27316,Maungatautari,Maungatautari,OTHER,12,EDUCATION,Maungatautari,-37.99001963,175.59740495,Maungatautari,-37.99001963,175.59740495,0.0,Waipa,Waipa,Waikato,Waikato
+W27329,Pukerimu,Pukerimu,OTHER,9,EDUCATION,Pukerimu,-37.93423692,175.41630478,Pukerimu,-37.93423692,175.41630478,0.0,Waipa,Waipa,Waikato,Waikato
+W27373,Otara-Tirohanga ,Otara-Tirohanga ,OTHER,9,EDUCATION,Otara-Tirohanga,-38.02845968,177.34799230000004,Otara-Tirohanga,-38.02845968,177.34799230000004,0.0,Opotiki,Opotiki,Bay of Plenty,Bay of Plenty
+W27408,Thornton-Awakeri,Thornton-Awakeri,OTHER,24,EDUCATION,Thornton-Awakeri,-37.98393622,176.90843855,Thornton-Awakeri,-37.98393622,176.90843855,0.0,Whakatane,Whakatane,Bay of Plenty,Bay of Plenty
+W27424,Waingarara-Waimana,Waingarara-Waimana,OTHER,30,EDUCATION,Waingarara-Waimana,-38.28225314,177.02173872,Waingarara-Waimana,-38.28225314,177.02173872,0.0,Whakatane,Whakatane,Bay of Plenty,Bay of Plenty
+W27518,Coastlands,Whakatane Central,OTHER,6,EDUCATION,Coastlands,-37.94356079,176.96233432,Whakatane Central,-37.95356587,176.99232736,2.8555467960061645,Whakatane,Whakatane,Bay of Plenty,Bay of Plenty
+W27555,Puniu,Puniu,OTHER,48,EDUCATION,Puniu,-38.28518422,175.55136504,Puniu,-38.28518422,175.55136504,0.0,Otorohanga,Otorohanga,Waikato,Waikato
+W27560,Rotoorangi,Rotoorangi,OTHER,30,EDUCATION,Rotoorangi,-38.02123915,175.43705434,Rotoorangi,-38.02123915,175.43705434,0.0,Waipa,Waipa,Waikato,Waikato
+W27570,Rotongata,Rotongata,OTHER,36,EDUCATION,Rotongata,-38.09897589,175.54852216,Rotongata,-38.09897589,175.54852216,0.0,Waipa,Waipa,Waikato,Waikato
+W27572,Honikiwi,Honikiwi,OTHER,18,EDUCATION,Honikiwi,-38.12541932,175.13996614,Honikiwi,-38.12541932,175.13996614,0.0,Otorohanga,Otorohanga,Waikato,Waikato
+W27589,Te Kuiti West,Te Kuiti East,OTHER,9,EDUCATION,Te Kuiti West,-38.33639894,175.16019027,Te Kuiti East,-38.33422954,175.1750142,1.3152632364284378,Waitomo,Waitomo,Waikato,Waikato
+W27596,Maihiihi,Maihiihi,OTHER,39,EDUCATION,Maihiihi,-38.25985712,175.35339708,Maihiihi,-38.25985712,175.35339708,0.0,Otorohanga,Otorohanga,Waikato,Waikato
+W27602,Hangatiki,Hangatiki,OTHER,18,EDUCATION,Hangatiki,-38.28355305,175.06938344,Hangatiki,-38.28355305,175.06938344,0.0,Waitomo,Waitomo,Waikato,Waikato
+W27607,Te Kawa,Te Kawa,OTHER,21,EDUCATION,Te Kawa,-38.12026201,175.25944879,Te Kawa,-38.12026201,175.25944879,0.0,Otorohanga,Otorohanga,Waikato,Waikato
+W27618,Stanley Park,Tokoroa Central,OTHER,6,EDUCATION,Stanley Park,-38.22081091,175.86351739,Tokoroa Central,-38.2230221,175.8734232,0.8995943088467308,South Waikato,South Waikato,Waikato,Waikato
+W27628,Putararu Rural,Putararu Rural,OTHER,69,EDUCATION,Putararu Rural,-38.09657792,175.73244372,Putararu Rural,-38.09657792,175.73244372,0.0,South Waikato,South Waikato,Waikato,Waikato
+W27641,Kinleith,Kinleith,OTHER,69,EDUCATION,Kinleith,-38.29131119,175.79670359,Kinleith,-38.29131119,175.79670359,0.0,South Waikato,South Waikato,Waikato,Waikato
+W27733,Marotiri,Marotiri,OTHER,96,EDUCATION,Marotiri,-38.51214377,175.78064218,Marotiri,-38.51214377,175.78064218,0.0,Taupo,Taupo,Waikato,Waikato
+W27743,Herangi,Herangi,OTHER,9,EDUCATION,Herangi,-38.45166436,174.80364536,Herangi,-38.45166436,174.80364536,0.0,Waitomo,Waitomo,Waikato,Waikato
+W27748,Aria,Aria,OTHER,27,EDUCATION,Aria,-38.542289200000006,175.02022119,Aria,-38.542289200000006,175.02022119,0.0,Waitomo,Waitomo,Waikato,Waikato
+W27756,Waipa Valley,Waipa Valley,OTHER,24,EDUCATION,Waipa Valley,-38.45839327,175.27657366,Waipa Valley,-38.45839327,175.27657366,0.0,Waitomo,Waitomo,Waikato,Waikato
+W27762,Lake Taupo Bays,Lake Taupo Bays,OTHER,9,EDUCATION,Lake Taupo Bays,-38.87191067,175.73166979,Lake Taupo Bays,-38.87191067,175.73166979,0.0,Taupo,Taupo,Waikato,Waikato
+W27771,Ohakuri,Ohakuri,OTHER,54,EDUCATION,Ohakuri,-38.52137003,176.09477746,Ohakuri,-38.52137003,176.09477746,0.0,Taupo,Taupo,Bay of Plenty,Bay of Plenty
+W27787,Wairakei-Broadlands,Wairakei-Broadlands,OTHER,6,EDUCATION,Wairakei-Broadlands,-38.68443198,176.26217734,Wairakei-Broadlands,-38.68443198,176.26217734,0.0,Taupo,Taupo,Bay of Plenty,Bay of Plenty
+W27827,Mountview,Taupo Central West,OTHER,9,EDUCATION,Mountview,-38.68673952,176.09245067,Taupo Central West,-38.6847684,176.07304191,1.6988240409688624,Taupo,Taupo,Waikato,Waikato
+W27829,Hilltop (Taupo District),Taupo Central West,OTHER,6,EDUCATION,Hilltop (Taupo District),-38.69976213,176.09915047,Taupo Central West,-38.6847684,176.07304191,2.8132088075346835,Taupo,Taupo,Waikato,Waikato
+W27887,Golden Springs,Golden Springs,OTHER,51,EDUCATION,Golden Springs,-38.43903714,176.35043100000001,Golden Springs,-38.43903714,176.35043100000001,0.0,Rotorua,Rotorua,Waikato,Waikato
+W28020,Rangataiki,Rangataiki,OTHER,6,EDUCATION,Rangataiki,-38.71838874,176.47059091,Rangataiki,-38.71838874,176.47059091,0.0,Taupo,Taupo,Bay of Plenty,Bay of Plenty
+W28135,Tauranga South,Mount Maunganui Central,OTHER,6,EDUCATION,Tauranga South,-37.708425899999995,176.15681961,Mount Maunganui Central,-37.66423891,176.19448097,5.926565657882255,Western Bay of Plenty,Western Bay of Plenty,Bay of Plenty,Bay of Plenty
+W28157,Palm Beach North,Mount Maunganui Central,OTHER,6,EDUCATION,Palm Beach North,-37.69284374,176.26278414,Mount Maunganui Central,-37.66423891,176.19448097,6.8007136210037835,Western Bay of Plenty,Western Bay of Plenty,Bay of Plenty,Bay of Plenty
+W28172,Aongatete,Aongatete,OTHER,6,EDUCATION,Aongatete,-37.61688515,175.89393796,Aongatete,-37.61688515,175.89393796,0.0,Western Bay of Plenty,Western Bay of Plenty,Bay of Plenty,Bay of Plenty
+W28326,Rangiuru,Rangiuru,OTHER,15,EDUCATION,Rangiuru,-37.85543327,176.33462575,Rangiuru,-37.85543327,176.33462575,0.0,Western Bay of Plenty,Western Bay of Plenty,Bay of Plenty,Bay of Plenty
+W28394,Tauranga South,Greerton South,OTHER,6,EDUCATION,Tauranga South,-37.708425899999995,176.15681961,Greerton South,-37.72765679,176.12518714,3.5091482602967026,Western Bay of Plenty,Western Bay of Plenty,Bay of Plenty,Bay of Plenty
+W28967,Otawa,Otawa,OTHER,6,EDUCATION,Otawa,-37.80633865,176.27291154,Otawa,-37.80633865,176.27291154,0.0,Western Bay of Plenty,Western Bay of Plenty,Bay of Plenty,Bay of Plenty
+W28984,Pongakawa,Pongakawa,OTHER,27,EDUCATION,Pongakawa,-37.89305456,176.49614474,Pongakawa,-37.89305456,176.49614474,0.0,Western Bay of Plenty,Western Bay of Plenty,Bay of Plenty,Bay of Plenty
+W29378,Tui Ridge,Tui Ridge,OTHER,9,EDUCATION,Tui Ridge,-38.01697507,176.12931898,Tui Ridge,-38.01697507,176.12931898,0.0,Rotorua,Rotorua,Bay of Plenty,Bay of Plenty
+W29538,Ngongotaha Valley,Ngongotaha Valley,OTHER,6,EDUCATION,Ngongotaha Valley,-38.14347351,176.15742503,Ngongotaha Valley,-38.14347351,176.15742503,0.0,Rotorua,Rotorua,Waikato,Waikato
+W29625,Kaingaroa-Whakarewarewa,Kaingaroa-Whakarewarewa,OTHER,9,EDUCATION,Kaingaroa-Whakarewarewa,-38.25763217,176.45697211,Kaingaroa-Whakarewarewa,-38.25763217,176.45697211,0.0,Rotorua,Rotorua,Bay of Plenty,Bay of Plenty
+W29858,Ngakuru,Ngakuru,OTHER,39,EDUCATION,Ngakuru,-38.3265856,176.19950049,Ngakuru,-38.3265856,176.19950049,0.0,Rotorua,Rotorua,Waikato,Waikato
+W29874,Matata-Otakiri,Matata-Otakiri,OTHER,18,EDUCATION,Matata-Otakiri,-37.93846406,176.80043803,Matata-Otakiri,-37.93846406,176.80043803,0.0,Whakatane,Whakatane,Bay of Plenty,Bay of Plenty
+W29881,Onepu Spring,Onepu Spring,OTHER,9,EDUCATION,Onepu Spring,-38.04128543,176.74994854,Onepu Spring,-38.04128543,176.74994854,0.0,Whakatane,Whakatane,Bay of Plenty,Bay of Plenty
+W29893,Galatea,Galatea,OTHER,21,EDUCATION,Galatea,-38.59477922,176.83164675,Galatea,-38.59477922,176.83164675,0.0,Whakatane,Whakatane,Bay of Plenty,Bay of Plenty
+W29896,Waiotahi,Waiotahi,OTHER,6,EDUCATION,Waiotahi,-38.04672615,177.2017177,Waiotahi,-38.04672615,177.2017177,0.0,Opotiki,Opotiki,Bay of Plenty,Bay of Plenty
+W29912,East Cape,East Cape,OTHER,9,EDUCATION,East Cape,-37.68457303,178.25309634,East Cape,-37.68457303,178.25309634,0.0,Gisborne,Gisborne,Gisborne,Gisborne
+W29933,Whataupoko West,Gisborne Central,OTHER,6,EDUCATION,Whataupoko West,-38.65837976,178.02898274,Gisborne Central,-38.66778237,178.02299313,1.167717937869824,Gisborne,Gisborne,Gisborne,Gisborne
+W29935,Kaiti North,Gisborne Central,OTHER,9,EDUCATION,Kaiti North,-38.66763381,178.04468182,Gisborne Central,-38.66778237,178.02299313,1.883064386784782,Gisborne,Gisborne,Gisborne,Gisborne
+W29944,Hangaroa,Hangaroa,OTHER,30,EDUCATION,Hangaroa,-38.67842084,177.63331484,Hangaroa,-38.67842084,177.63331484,0.0,Gisborne,Gisborne,Gisborne,Gisborne
+W29957,Tokomaru,Tokomaru,OTHER,6,EDUCATION,Tokomaru,-38.07908632,178.14017739,Tokomaru,-38.07908632,178.14017739,0.0,Gisborne,Gisborne,Gisborne,Gisborne
+W29962,Waipaoa,Waipaoa,OTHER,15,EDUCATION,Waipaoa,-38.34127548,177.70733968,Waipaoa,-38.34127548,177.70733968,0.0,Gisborne,Gisborne,Gisborne,Gisborne
+W29982,Elgin,Makaraka-Awapuni,OTHER,6,EDUCATION,Elgin,-38.65935883,177.99213863,Makaraka-Awapuni,-38.65787303,177.97255068,1.7088289194444943,Gisborne,Gisborne,Gisborne,Gisborne
+W30146,Wharekaka,Wharekaka,OTHER,12,EDUCATION,Wharekaka,-38.432262200000004,178.15682921,Wharekaka,-38.432262200000004,178.15682921,0.0,Gisborne,Gisborne,Gisborne,Gisborne
+W30281,Maungataniwha-Raupunga,Maungataniwha-Raupunga,OTHER,15,EDUCATION,Maungataniwha-Raupunga,-38.971756899999995,177.05706012,Maungataniwha-Raupunga,-38.971756899999995,177.05706012,0.0,Wairoa,Wairoa,Hawke's Bay,Hawke's Bay
+W30287,Frasertown-Ruakituri,Frasertown-Ruakituri,OTHER,9,EDUCATION,Frasertown-Ruakituri,-38.79568211,177.34997241,Frasertown-Ruakituri,-38.79568211,177.34997241,0.0,Wairoa,Wairoa,Hawke's Bay,Hawke's Bay
+W30293,Wairoa,Wairoa,OTHER,9,EDUCATION,Wairoa,-39.03908469,177.41898076,Wairoa,-39.03908469,177.41898076,0.0,Wairoa,Wairoa,Hawke's Bay,Hawke's Bay
+W30300,Mahia,Mahia,OTHER,6,EDUCATION,Mahia,-38.98042026,177.71581946,Mahia,-38.98042026,177.71581946,0.0,Wairoa,Wairoa,Hawke's Bay,Hawke's Bay
+W30301,Puketitiri-Tutira,Puketitiri-Tutira,OTHER,39,EDUCATION,Puketitiri-Tutira,-39.19745874,176.64300698,Puketitiri-Tutira,-39.19745874,176.64300698,0.0,Hastings,Hastings,Hawke's Bay,Hawke's Bay
+W30638,Maraenui,Onekawa West,OTHER,6,EDUCATION,Maraenui,-39.51577224,176.90367746,Onekawa West,-39.49700088,176.88218064,2.785333483482716,Hastings,Hastings,Hawke's Bay,Hawke's Bay
+W31002,Sherenden-Crownthorpe,Sherenden-Crownthorpe,OTHER,15,EDUCATION,Sherenden-Crownthorpe,-39.47575154,176.49801476,Sherenden-Crownthorpe,-39.47575154,176.49801476,0.0,Hastings,Hastings,Hawke's Bay,Hawke's Bay
+W31228,Maraekakaho,Maraekakaho,OTHER,9,EDUCATION,Maraekakaho,-39.62634976,176.29699518,Maraekakaho,-39.62634976,176.29699518,0.0,Hastings,Hastings,Hawke's Bay,Hawke's Bay
+W31696,Kahuranaki,Kahuranaki,OTHER,6,EDUCATION,Kahuranaki,-39.765249600000004,176.93488506,Kahuranaki,-39.765249600000004,176.93488506,0.0,Hastings,Hastings,Hawke's Bay,Hawke's Bay
+W31888,Mangaonuku,Mangaonuku,OTHER,9,EDUCATION,Mangaonuku,-39.80378374,176.41709256,Mangaonuku,-39.80378374,176.41709256,0.0,Central Hawke's Bay,Central Hawke's Bay,Hawke's Bay,Hawke's Bay
+W31897,Mangarara,Mangarara,OTHER,21,EDUCATION,Mangarara,-39.99003717,176.76264858,Mangarara,-39.99003717,176.76264858,0.0,Central Hawke's Bay,Central Hawke's Bay,Hawke's Bay,Hawke's Bay
+W31901,Makaretu,Makaretu,OTHER,39,EDUCATION,Makaretu,-39.94160872,176.31273142,Makaretu,-39.94160872,176.31273142,0.0,Central Hawke's Bay,Central Hawke's Bay,Hawke's Bay,Hawke's Bay
+W31916,Taurekaitai,Taurekaitai,OTHER,12,EDUCATION,Taurekaitai,-40.20716661,176.53337716,Taurekaitai,-40.20716661,176.53337716,0.0,Central Hawke's Bay,Central Hawke's Bay,Hawke's Bay,Hawke's Bay
+W32032,Tikorangi,Tikorangi,OTHER,12,EDUCATION,Tikorangi,-39.04099797,174.34313238,Tikorangi,-39.04099797,174.34313238,0.0,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32059,Spotswood,New Plymouth Central,OTHER,12,EDUCATION,Spotswood,-39.07096507,174.02427884,New Plymouth Central,-39.05700192,174.07537454,4.676678260173191,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32062,Moturoa,New Plymouth Central,OTHER,9,EDUCATION,Moturoa,-39.06270468,174.04833643,New Plymouth Central,-39.05700192,174.07537454,2.4191015122571127,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32064,Blagdon-Lynmouth,New Plymouth Central,OTHER,12,EDUCATION,Blagdon-Lynmouth,-39.07074008,174.04322204,New Plymouth Central,-39.05700192,174.07537454,3.168507117936862,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32065,Kawaroa,New Plymouth Central,OTHER,6,EDUCATION,Kawaroa,-39.06419765,174.06571362,New Plymouth Central,-39.05700192,174.07537454,1.1558453890640843,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32067,Marfell,New Plymouth Central,OTHER,6,EDUCATION,Marfell,-39.07502389,174.04711191,New Plymouth Central,-39.05700192,174.07537454,3.157459312924842,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32070,Westown ,New Plymouth Central,OTHER,9,EDUCATION,Westown,-39.0747742,174.06011109,New Plymouth Central,-39.05700192,174.07537454,2.3752474262974883,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32071,Bell Block West,New Plymouth Central,OTHER,6,EDUCATION,Bell Block West,-39.02995252,174.13758616,New Plymouth Central,-39.05700192,174.07537454,6.157306318194827,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32074,Lower Vogeltown,New Plymouth Central,OTHER,6,EDUCATION,Lower Vogeltown,-39.07209853,174.0782174,New Plymouth Central,-39.05700192,174.07537454,1.6965146918672798,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32075,Hurdon,New Plymouth Central,OTHER,6,EDUCATION,Hurdon,-39.09534718,174.05059554,New Plymouth Central,-39.05700192,174.07537454,4.770234378406955,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32076,Frankleigh Park,New Plymouth Central,OTHER,12,EDUCATION,Frankleigh Park,-39.08421237,174.07012898,New Plymouth Central,-39.05700192,174.07537454,3.059363873885445,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32077,Merrilands,New Plymouth Central,OTHER,9,EDUCATION,Merrilands,-39.06454623,174.10205958,New Plymouth Central,-39.05700192,174.07537454,2.4519662999261223,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32079,Welbourn,New Plymouth Central,OTHER,9,EDUCATION,Welbourn,-39.08571024,174.09311599999995,New Plymouth Central,-39.05700192,174.07537454,3.540619801023281,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32080,Fitzroy-Glen Avon,New Plymouth Central,OTHER,9,EDUCATION,Fitzroy-Glen Avon,-39.07427128,174.12360445,New Plymouth Central,-39.05700192,174.07537454,4.585358308177256,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32082,Upper Vogeltown,New Plymouth Central,OTHER,9,EDUCATION,Upper Vogeltown,-39.09023955,174.08332265,New Plymouth Central,-39.05700192,174.07537454,3.759003656507081,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32083,Highlands Park (New Plymouth District),New Plymouth Central,OTHER,9,EDUCATION,Highlands Park (New Plymouth District),-39.08069461,174.10443117,New Plymouth Central,-39.05700192,174.07537454,3.6377288121712215,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32190,Westown ,Waiwhakaiho-Bell Block South,OTHER,9,EDUCATION,Westown,-39.0747742,174.06011109,Waiwhakaiho-Bell Block South,-39.03639644,174.16426596,9.95453017846476,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32191,Bell Block West,Waiwhakaiho-Bell Block South,OTHER,6,EDUCATION,Bell Block West,-39.02995252,174.13758616,Waiwhakaiho-Bell Block South,-39.03639644,174.16426596,2.4132726140683007,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32201,Waitara West,Waiwhakaiho-Bell Block South,OTHER,6,EDUCATION,Waitara West,-38.9975014,174.2265459,Waiwhakaiho-Bell Block South,-39.03639644,174.16426596,6.903333385911418,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32293,Kaitake,Kaitake,OTHER,9,EDUCATION,Kaitake,-39.19318761,173.94218883,Kaitake,-39.19318761,173.94218883,0.0,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32420,Mangorei,Mangorei,OTHER,9,EDUCATION,Mangorei,-39.18102935,174.06017628,Mangorei,-39.18102935,174.06017628,0.0,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32496,Cape Egmont,Cape Egmont,OTHER,63,EDUCATION,Cape Egmont,-39.31360193,173.87159509999995,Cape Egmont,-39.31360193,173.87159509999995,0.0,South Taranaki,South Taranaki,Taranaki,Taranaki
+W32503,Mangaoraka,Mangaoraka,OTHER,6,EDUCATION,Mangaoraka,-39.13469225,174.16388593,Mangaoraka,-39.13469225,174.16388593,0.0,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32547,Toko,Toko,OTHER,12,EDUCATION,Toko,-39.31711879,174.34830199,Toko,-39.31711879,174.34830199,0.0,Stratford,Stratford,Taranaki,Taranaki
+W32572,Everett Park,Everett Park,OTHER,18,EDUCATION,Everett Park,-39.22793305,174.18116727,Everett Park,-39.22793305,174.18116727,0.0,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32591,Eltham,Eltham,OTHER,9,EDUCATION,Eltham,-39.4310866,174.29903566,Eltham,-39.4310866,174.29903566,0.0,South Taranaki,South Taranaki,Taranaki,Taranaki
+W32628,Manaia-Kapuni,Manaia-Kapuni,OTHER,12,EDUCATION,Manaia-Kapuni,-39.51778061,174.12379578,Manaia-Kapuni,-39.51778061,174.12379578,0.0,South Taranaki,South Taranaki,Taranaki,Taranaki
+W32639,Mount Messenger,Mount Messenger,OTHER,9,EDUCATION,Mount Messenger,-38.92321069,174.62433902,Mount Messenger,-38.92321069,174.62433902,0.0,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32662,Pembroke,Pembroke,OTHER,12,EDUCATION,Pembroke,-39.34019567,174.18536541,Pembroke,-39.34019567,174.18536541,0.0,Stratford,Stratford,Taranaki,Taranaki
+W32704,Douglas,Douglas,OTHER,6,EDUCATION,Douglas,-39.24071688,174.62972523,Douglas,-39.24071688,174.62972523,0.0,Stratford,Stratford,Taranaki,Taranaki
+W32707,Kaponga-Mangatoki,Kaponga-Mangatoki,OTHER,30,EDUCATION,Kaponga-Mangatoki,-39.43452513,174.22980453,Kaponga-Mangatoki,-39.43452513,174.22980453,0.0,South Taranaki,South Taranaki,Taranaki,Taranaki
+W32733,Taungatara,Taungatara,OTHER,42,EDUCATION,Taungatara,-39.44771938,173.97542033,Taungatara,-39.44771938,173.97542033,0.0,South Taranaki,South Taranaki,Taranaki,Taranaki
+W32766,Okaiawa,Okaiawa,OTHER,15,EDUCATION,Okaiawa,-39.5375084,174.21758799999995,Okaiawa,-39.5375084,174.21758799999995,0.0,South Taranaki,South Taranaki,Taranaki,Taranaki
+W32786,Te Roti-Moeroa,Te Roti-Moeroa,OTHER,12,EDUCATION,Te Roti-Moeroa,-39.43904821,174.49347034,Te Roti-Moeroa,-39.43904821,174.49347034,0.0,South Taranaki,South Taranaki,Taranaki,Taranaki
+W32792,Manutahi-Waitotora,Manutahi-Waitotora,OTHER,42,EDUCATION,Manutahi-Waitotora,-39.78384701,174.57529167,Manutahi-Waitotora,-39.78384701,174.57529167,0.0,South Taranaki,South Taranaki,Taranaki,Taranaki
+W32800,Ohangai,Ohangai,OTHER,21,EDUCATION,Ohangai,-39.53843359,174.44896319,Ohangai,-39.53843359,174.44896319,0.0,South Taranaki,South Taranaki,Taranaki,Taranaki
+W32804,Mangawhio,Mangawhio,OTHER,18,EDUCATION,Mangawhio,-39.61067493,174.74556695,Mangawhio,-39.61067493,174.74556695,0.0,South Taranaki,South Taranaki,Taranaki,Taranaki
+W32813,Castlecliff East,Whanganui Central,OTHER,6,EDUCATION,Castlecliff East,-39.93653060000001,174.99269163,Whanganui Central,-39.93513676,175.04701799,4.634471151197247,Wanganui,Wanganui,Manawatu-Wanganui,Manawatu-Wanganui
+W32817,St Johns Hill West,Whanganui Central,OTHER,6,EDUCATION,St Johns Hill West,-39.92023434,175.030642,Whanganui Central,-39.93513676,175.04701799,2.1669770888550257,Wanganui,Wanganui,Manawatu-Wanganui,Manawatu-Wanganui
+W32818,Titoki,Whanganui Central,OTHER,6,EDUCATION,Titoki,-39.93592026,175.00997642,Whanganui Central,-39.93513676,175.04701799,3.1593889215731066,Wanganui,Wanganui,Manawatu-Wanganui,Manawatu-Wanganui
+W32821,Upper Aramoho,Whanganui Central,OTHER,6,EDUCATION,Upper Aramoho,-39.89595181,175.06983054,Whanganui Central,-39.93513676,175.04701799,4.7718121877641035,Wanganui,Wanganui,Manawatu-Wanganui,Manawatu-Wanganui
+W32822,Laird Park,Whanganui Central,OTHER,6,EDUCATION,Laird Park,-39.91964278,175.04579452,Whanganui Central,-39.93513676,175.04701799,1.7260077838212151,Wanganui,Wanganui,Manawatu-Wanganui,Manawatu-Wanganui
+W32875,Otangiwai-Ohura,Otangiwai-Ohura,OTHER,18,EDUCATION,Otangiwai-Ohura,-38.86696248,175.00298022,Otangiwai-Ohura,-38.86696248,175.00298022,0.0,Ruapehu,Ruapehu,Manawatu-Wanganui,Manawatu-Wanganui
+W32899,National Park,National Park,OTHER,9,EDUCATION,National Park,-39.11630156,175.37193356,National Park,-39.11630156,175.37193356,0.0,Ruapehu,Ruapehu,Manawatu-Wanganui,Manawatu-Wanganui
+W32901,Tangiwai,Tangiwai,OTHER,12,EDUCATION,Tangiwai,-39.36236325,175.16766499,Tangiwai,-39.36236325,175.16766499,0.0,Ruapehu,Ruapehu,Manawatu-Wanganui,Manawatu-Wanganui
+W33107,Mowhanau,Mowhanau,OTHER,6,EDUCATION,Mowhanau,-39.84344675,174.90288293,Mowhanau,-39.84344675,174.90288293,0.0,Wanganui,Wanganui,Manawatu-Wanganui,Manawatu-Wanganui
+W33288,Milson North,Palmerston North Central,OTHER,6,EDUCATION,Milson North,-40.32708272,175.60731249,Palmerston North Central,-40.35537702,175.61010962,3.1551014275129723,Palmerston North,Palmerston North,Manawatu-Wanganui,Manawatu-Wanganui
+W33294,Takaro North,Palmerston North Central,OTHER,6,EDUCATION,Takaro North,-40.34988583,175.59869127,Palmerston North Central,-40.35537702,175.61010962,1.144127530098867,Palmerston North,Palmerston North,Manawatu-Wanganui,Manawatu-Wanganui
+W33305,Awapuni North ,Palmerston North Central,OTHER,9,EDUCATION,Awapuni North,-40.37027268,175.58870846,Palmerston North Central,-40.35537702,175.61010962,2.455853639591499,Palmerston North,Palmerston North,Manawatu-Wanganui,Manawatu-Wanganui
+W33306,Terrace End,Palmerston North Central,OTHER,6,EDUCATION,Terrace End,-40.34168056,175.63362604,Palmerston North Central,-40.35537702,175.61010962,2.50818702336797,Palmerston North,Palmerston North,Manawatu-Wanganui,Manawatu-Wanganui
+W33308,Papaioea South,Palmerston North Central,OTHER,6,EDUCATION,Papaioea South,-40.35209317,175.62547171,Palmerston North Central,-40.35537702,175.61010962,1.35198647524199,Palmerston North,Palmerston North,Manawatu-Wanganui,Manawatu-Wanganui
+W33310,West End,Palmerston North Central,OTHER,12,EDUCATION,West End,-40.36797536,175.60339294,Palmerston North Central,-40.35537702,175.61010962,1.5120517903053703,Palmerston North,Palmerston North,Manawatu-Wanganui,Manawatu-Wanganui
+W33311,Awapuni South ,Palmerston North Central,OTHER,6,EDUCATION,Awapuni South,-40.37784493,175.59343472,Palmerston North Central,-40.35537702,175.61010962,2.870080247218473,Palmerston North,Palmerston North,Manawatu-Wanganui,Manawatu-Wanganui
+W33348,Mokai Patea,Mokai Patea,OTHER,21,EDUCATION,Mokai Patea,-39.59566818,175.89442958,Mokai Patea,-39.59566818,175.89442958,0.0,Rangitikei,Rangitikei,Manawatu-Wanganui,Manawatu-Wanganui
+W33352,Otairi,Otairi,OTHER,24,EDUCATION,Otairi,-39.8895865,175.52547495,Otairi,-39.8895865,175.52547495,0.0,Rangitikei,Rangitikei,Manawatu-Wanganui,Manawatu-Wanganui
+W33360,Turakina,Turakina,OTHER,6,EDUCATION,Turakina,-40.0113956,175.25773896,Turakina,-40.0113956,175.25773896,0.0,Rangitikei,Rangitikei,Manawatu-Wanganui,Manawatu-Wanganui
+W33365,Marton Rural,Marton Rural,OTHER,6,EDUCATION,Marton Rural,-40.10983805,175.37739628,Marton Rural,-40.10983805,175.37739628,0.0,Rangitikei,Rangitikei,Manawatu-Wanganui,Manawatu-Wanganui
+W33448,Ohakea-Sanson,Ohakea-Sanson,OTHER,9,EDUCATION,Ohakea-Sanson,-40.21459412,175.39491461,Ohakea-Sanson,-40.21459412,175.39491461,0.0,Manawatu,Manawatu,Manawatu-Wanganui,Manawatu-Wanganui
+W33500,Westbrook,Tremaine,OTHER,6,EDUCATION,Westbrook,-40.35570204,175.57802859,Tremaine,-40.33969042,175.59865691,2.495170767022937,Palmerston North,Palmerston North,Manawatu-Wanganui,Manawatu-Wanganui
+W33551,Parewanui,Parewanui,OTHER,18,EDUCATION,Parewanui,-40.17938557,175.28477582,Parewanui,-40.17938557,175.28477582,0.0,Rangitikei,Rangitikei,Manawatu-Wanganui,Manawatu-Wanganui
+W33662,Kiwitea,Kiwitea,OTHER,18,EDUCATION,Kiwitea,-40.00817686,175.69603871,Kiwitea,-40.00817686,175.69603871,0.0,Manawatu,Manawatu,Manawatu-Wanganui,Manawatu-Wanganui
+W33687,Pohangina-Apiti,Pohangina-Apiti,OTHER,12,EDUCATION,Pohangina-Apiti,-40.07201708,175.91250803,Pohangina-Apiti,-40.07201708,175.91250803,0.0,Manawatu,Manawatu,Manawatu-Wanganui,Manawatu-Wanganui
+W33703,Awahuri,Awahuri,OTHER,9,EDUCATION,Awahuri,-40.24996829,175.47223109,Awahuri,-40.24996829,175.47223109,0.0,Manawatu,Manawatu,Manawatu-Wanganui,Manawatu-Wanganui
+W33769,Taonui,Taonui,OTHER,6,EDUCATION,Taonui,-40.23630115,175.69344838,Taonui,-40.23630115,175.69344838,0.0,Manawatu,Manawatu,Manawatu-Wanganui,Manawatu-Wanganui
+W33823,Oroua Downs,Oroua Downs,OTHER,9,EDUCATION,Oroua Downs,-40.32828797,175.2906718,Oroua Downs,-40.32828797,175.2906718,0.0,Manawatu,Manawatu,Manawatu-Wanganui,Manawatu-Wanganui
+W33915,Taikorea,Taikorea,OTHER,21,EDUCATION,Taikorea,-40.35854632,175.39433243,Taikorea,-40.35854632,175.39433243,0.0,Manawatu,Manawatu,Manawatu-Wanganui,Manawatu-Wanganui
+W33925,Kauwhata,Kauwhata,OTHER,18,EDUCATION,Kauwhata,-40.37673467,175.4759989,Kauwhata,-40.37673467,175.4759989,0.0,Manawatu,Manawatu,Manawatu-Wanganui,Manawatu-Wanganui
+W34176,Pihauatua,Pihauatua,OTHER,18,EDUCATION,Pihauatua,-40.45284951,175.60466791,Pihauatua,-40.45284951,175.60466791,0.0,Palmerston North,Palmerston North,Manawatu-Wanganui,Manawatu-Wanganui
+W34558,Brooklyn East,Thorndon,OTHER,6,EDUCATION,Brooklyn East,-41.30788268,174.76585404,Thorndon,-41.27246445,174.77422734,3.9999800926788533,Wellington,Wellington,Wellington,Wellington
+W34566,Owhiro Bay,Thorndon,OTHER,6,EDUCATION,Owhiro Bay,-41.33789607,174.76120032,Thorndon,-41.27246445,174.77422734,7.356585913607037,Wellington,Wellington,Wellington,Wellington
+W34609,Norsewood,Norsewood,OTHER,21,EDUCATION,Norsewood,-40.11138214,176.15105007,Norsewood,-40.11138214,176.15105007,0.0,Tararua,Tararua,Manawatu-Wanganui,Manawatu-Wanganui
+W34623,Papatawa,Papatawa,OTHER,15,EDUCATION,Papatawa,-40.2208018,175.99586663,Papatawa,-40.2208018,175.99586663,0.0,Tararua,Tararua,Manawatu-Wanganui,Manawatu-Wanganui
+W34630,Mangatainoka,Mangatainoka,OTHER,30,EDUCATION,Mangatainoka,-40.39758846,175.82546085,Mangatainoka,-40.39758846,175.82546085,0.0,Tararua,Tararua,Manawatu-Wanganui,Manawatu-Wanganui
+W34640,Nireaha-Eketahuna,Nireaha-Eketahuna,OTHER,27,EDUCATION,Nireaha-Eketahuna,-40.65364269,175.79396455,Nireaha-Eketahuna,-40.65364269,175.79396455,0.0,Tararua,Tararua,Manawatu-Wanganui,Manawatu-Wanganui
+W34644,Waitahora,Waitahora,OTHER,6,EDUCATION,Waitahora,-40.30073659,176.21621287,Waitahora,-40.30073659,176.21621287,0.0,Tararua,Tararua,Manawatu-Wanganui,Manawatu-Wanganui
+W34646,Owhanga,Owhanga,OTHER,9,EDUCATION,Owhanga,-40.51321329,176.31039241,Owhanga,-40.51321329,176.31039241,0.0,Tararua,Tararua,Manawatu-Wanganui,Manawatu-Wanganui
+W34647,Kaitawa,Kaitawa,OTHER,6,EDUCATION,Kaitawa,-40.47250224,175.97682513,Kaitawa,-40.47250224,175.97682513,0.0,Tararua,Tararua,Manawatu-Wanganui,Manawatu-Wanganui
+W34680,Lansdowne East,Masterton Central,OTHER,6,EDUCATION,Lansdowne East,-40.94138749,175.68119066,Masterton Central,-40.95047108,175.66167048,1.925636233405347,Masterton,Masterton,Wellington,Wellington
+W34695,Kere Kere,Kere Kere,OTHER,36,EDUCATION,Kere Kere,-40.52713273,175.31641185,Kere Kere,-40.52713273,175.31641185,0.0,Horowhenua,Horowhenua,Manawatu-Wanganui,Manawatu-Wanganui
+W34779,Miranui,Miranui,OTHER,27,EDUCATION,Miranui,-40.53552154,175.48107991,Miranui,-40.53552154,175.48107991,0.0,Horowhenua,Horowhenua,Manawatu-Wanganui,Manawatu-Wanganui
+W34890,Whitby,Wellington Central,OTHER,6,EDUCATION,Whitby,-41.11717134,174.89107268,Wellington Central,-41.2849345,174.77572593,21.002740828457913,Porirua,Wellington,Wellington,Wellington
+W34892,Endeavour,Wellington Central,OTHER,12,EDUCATION,Endeavour,-41.11459136,174.90415779,Wellington Central,-41.2849345,174.77572593,21.77688622922424,Porirua,Wellington,Wellington,Wellington
+W34906,Trentham North,Wellington Central,OTHER,9,EDUCATION,Trentham North,-41.1328255,175.04564394,Wellington Central,-41.2849345,174.77572593,28.211870151397534,Upper Hutt,Wellington,Wellington,Wellington
+W34907,Totara Park,Wellington Central,OTHER,6,EDUCATION,Totara Park,-41.1093256,175.08443163,Wellington Central,-41.2849345,174.77572593,32.37941862879475,Upper Hutt,Wellington,Wellington,Wellington
+W34918,Maungaraki,Wellington Central,OTHER,9,EDUCATION,Maungaraki,-41.20840978,174.87990307,Wellington Central,-41.2849345,174.77572593,12.17642051078858,Hutt city,Wellington,Wellington,Wellington
+W34922,Belmont (Lower Hutt City),Wellington Central,OTHER,9,EDUCATION,Belmont (Lower Hutt City),-41.1900686,174.92123901,Wellington Central,-41.2849345,174.77572593,16.103320950047152,Hutt city,Wellington,Wellington,Wellington
+W34935,Stokes Valley North,Wellington Central,OTHER,6,EDUCATION,Stokes Valley North,-41.166931700000006,174.99312135,Wellington Central,-41.2849345,174.77572593,22.42144847957863,Hutt city,Wellington,Wellington,Wellington
+W34937,Epuni West,Wellington Central,OTHER,6,EDUCATION,Epuni West,-41.20573675,174.92732065,Wellington Central,-41.2849345,174.77572593,15.43344580398304,Hutt city,Wellington,Wellington,Wellington
+W34958,Homedale East,Wellington Central,OTHER,6,EDUCATION,Homedale East,-41.269130600000004,174.95843259,Wellington Central,-41.2849345,174.77572593,15.36889132522634,Hutt city,Wellington,Wellington,Wellington
+W34963,Tawa South,Wellington Central,OTHER,9,EDUCATION,Tawa South,-41.18147753,174.81690066,Wellington Central,-41.2849345,174.77572593,12.008104799702025,Wellington,Wellington,Wellington,Wellington
+W34965,Grenada North,Wellington Central,OTHER,6,EDUCATION,Grenada North,-41.17727395,174.83897037,Wellington Central,-41.2849345,174.77572593,13.087540032895546,Porirua,Wellington,Wellington,Wellington
+W34966,Churton Park North,Wellington Central,OTHER,12,EDUCATION,Churton Park North,-41.19767254,174.81365567,Wellington Central,-41.2849345,174.77572593,10.208209016198225,Wellington,Wellington,Wellington,Wellington
+W34968,Churton Park South,Wellington Central,OTHER,6,EDUCATION,Churton Park South,-41.21086631,174.8069531,Wellington Central,-41.2849345,174.77572593,8.63988187419395,Wellington,Wellington,Wellington,Wellington
+W34969,Johnsonville West,Wellington Central,OTHER,15,EDUCATION,Johnsonville West,-41.22309862,174.79383525,Wellington Central,-41.2849345,174.77572593,7.04051803238128,Wellington,Wellington,Wellington,Wellington
+W34971,Johnsonville North,Wellington Central,OTHER,18,EDUCATION,Johnsonville North,-41.21764248,174.80300624,Wellington Central,-41.2849345,174.77572593,7.822368793546183,Wellington,Wellington,Wellington,Wellington
+W34972,Paparangi,Wellington Central,OTHER,6,EDUCATION,Paparangi,-41.21674369,174.81983715,Wellington Central,-41.2849345,174.77572593,8.431660345625271,Wellington,Wellington,Wellington,Wellington
+W34973,Ngaio North,Wellington Central,OTHER,18,EDUCATION,Ngaio North,-41.24641459,174.77163121,Wellington Central,-41.2849345,174.77572593,4.296869701172399,Wellington,Wellington,Wellington,Wellington
+W34974,Johnsonville Central,Wellington Central,OTHER,9,EDUCATION,Johnsonville Central,-41.22372125,174.80743127,Wellington Central,-41.2849345,174.77572593,7.304419301704594,Wellington,Wellington,Wellington,Wellington
+W34975,Broadmeadows,Wellington Central,OTHER,9,EDUCATION,Broadmeadows,-41.23505672,174.79326105,Wellington Central,-41.2849345,174.77572593,5.736566696636095,Wellington,Wellington,Wellington,Wellington
+W34976,Crofton Downs,Wellington Central,OTHER,12,EDUCATION,Crofton Downs,-41.25754511,174.76182629,Wellington Central,-41.2849345,174.77572593,3.2595792627196603,Wellington,Wellington,Wellington,Wellington
+W34979,Karori Park,Wellington Central,OTHER,27,EDUCATION,Karori Park,-41.28258876,174.72565725,Wellington Central,-41.2849345,174.77572593,4.191739670867302,Wellington,Wellington,Wellington,Wellington
+W34980,Newlands North,Wellington Central,OTHER,12,EDUCATION,Newlands North,-41.22406312,174.82053599,Wellington Central,-41.2849345,174.77572593,7.735989699280242,Wellington,Wellington,Wellington,Wellington
+W34981,Ngaio South,Wellington Central,OTHER,18,EDUCATION,Ngaio South,-41.2531632,174.77602584,Wellington Central,-41.2849345,174.77572593,3.5328962917193505,Wellington,Wellington,Wellington,Wellington
+W34982,Newlands South,Wellington Central,OTHER,18,EDUCATION,Newlands South,-41.23454859,174.82124819,Wellington Central,-41.2849345,174.77572593,6.772648812709585,Wellington,Wellington,Wellington,Wellington
+W34983,Woodridge,Wellington Central,OTHER,6,EDUCATION,Woodridge,-41.21623239,174.83461826,Wellington Central,-41.2849345,174.77572593,9.088408163984571,Wellington,Wellington,Wellington,Wellington
+W34984,Karori North,Wellington Central,OTHER,15,EDUCATION,Karori North,-41.27758715,174.74437222,Wellington Central,-41.2849345,174.77572593,2.744367655699049,Wellington,Wellington,Wellington,Wellington
+W34985,Khandallah North,Wellington Central,OTHER,9,EDUCATION,Khandallah North,-41.24289834,174.79769751,Wellington Central,-41.2849345,174.77572593,5.022027978576703,Wellington,Wellington,Wellington,Wellington
+W34986,Wilton,Wellington Central,OTHER,12,EDUCATION,Wilton,-41.26835527,174.76073653,Wellington Central,-41.2849345,174.77572593,2.2288183917487205,Wellington,Wellington,Wellington,Wellington
+W34987,Khandallah South,Wellington Central,OTHER,12,EDUCATION,Khandallah South,-41.25262817,174.78863328,Wellington Central,-41.2849345,174.77572593,3.7507772139751374,Wellington,Wellington,Wellington,Wellington
+W34988,Wadestown,Wellington Central,OTHER,24,EDUCATION,Wadestown,-41.26222883,174.77572711,Wellington Central,-41.2849345,174.77572593,2.524755311990939,Wellington,Wellington,Wellington,Wellington
+W34989,Karori South,Wellington Central,OTHER,24,EDUCATION,Karori South,-41.28902351,174.73328551,Wellington Central,-41.2849345,174.77572593,3.5750736394412006,Wellington,Wellington,Wellington,Wellington
+W34990,Onslow,Wellington Central,OTHER,12,EDUCATION,Onslow,-41.24952131,174.80282147,Wellington Central,-41.2849345,174.77572593,4.542518052311738,Wellington,Wellington,Wellington,Wellington
+W34991,Karori East,Wellington Central,OTHER,21,EDUCATION,Karori East,-41.28702587,174.747422,Wellington Central,-41.2849345,174.77572593,2.3763329243874507,Wellington,Wellington,Wellington,Wellington
+W34993,Northland (Wellington City),Wellington Central,OTHER,27,EDUCATION,Northland (Wellington City),-41.27908062,174.76019207,Wellington Central,-41.2849345,174.77572593,1.4520741712613487,Wellington,Wellington,Wellington,Wellington
+W34994,Thorndon,Wellington Central,OTHER,12,EDUCATION,Thorndon,-41.27246445,174.77422734,Wellington Central,-41.2849345,174.77572593,1.3922496640599926,Wellington,Wellington,Wellington,Wellington
+W34996,Kelburn,Wellington Central,OTHER,24,EDUCATION,Kelburn,-41.28798133,174.76045619,Wellington Central,-41.2849345,174.77572593,1.3200650851241322,Wellington,Wellington,Wellington,Wellington
+W34997,Aro Valley,Wellington Central,OTHER,12,EDUCATION,Aro Valley,-41.29574618,174.75986554,Wellington Central,-41.2849345,174.77572593,1.7892015470786458,Wellington,Wellington,Wellington,Wellington
+W34998,Wellington University,Wellington Central,OTHER,12,EDUCATION,Wellington University,-41.289084,174.7676253,Wellington Central,-41.2849345,174.77572593,0.8191452139851778,Wellington,Wellington,Wellington,Wellington
+W35000,Brooklyn North,Wellington Central,OTHER,18,EDUCATION,Brooklyn North,-41.30427883,174.75585667,Wellington Central,-41.2849345,174.77572593,2.7170205327245283,Wellington,Wellington,Wellington,Wellington
+W35001,Dixon Street,Wellington Central,OTHER,9,EDUCATION,Dixon Street,-41.29101921,174.77469531,Wellington Central,-41.2849345,174.77572593,0.6820465805127623,Wellington,Wellington,Wellington,Wellington
+W35002,Vivian West,Wellington Central,OTHER,9,EDUCATION,Vivian West,-41.2946931,174.77283972,Wellington Central,-41.2849345,174.77572593,1.1115783342898091,Wellington,Wellington,Wellington,Wellington
+W35004,Brooklyn East,Wellington Central,OTHER,12,EDUCATION,Brooklyn East,-41.30788268,174.76585404,Wellington Central,-41.2849345,174.77572593,2.6816840675671747,Wellington,Wellington,Wellington,Wellington
+W35005,Mount Cook West,Wellington Central,OTHER,15,EDUCATION,Mount Cook West,-41.30328333,174.77184245,Wellington Central,-41.2849345,174.77572593,2.065931770274838,Wellington,Wellington,Wellington,Wellington
+W35006,Vivian East,Wellington Central,OTHER,6,EDUCATION,Vivian East,-41.29691524,174.78007236,Wellington Central,-41.2849345,174.77572593,1.380803685404157,Wellington,Wellington,Wellington,Wellington
+W35007,Brooklyn South,Wellington Central,OTHER,6,EDUCATION,Brooklyn South,-41.31685108,174.75650937,Wellington Central,-41.2849345,174.77572593,3.895126721470087,Wellington,Wellington,Wellington,Wellington
+W35008,Oriental Bay,Wellington Central,OTHER,9,EDUCATION,Oriental Bay,-41.29186473,174.79287237,Wellington Central,-41.2849345,174.77572593,1.6267186733287644,Wellington,Wellington,Wellington,Wellington
+W35009,Mount Cook East,Wellington Central,OTHER,9,EDUCATION,Mount Cook East,-41.30251481,174.77750144,Wellington Central,-41.2849345,174.77572593,1.9604610665058828,Wellington,Wellington,Wellington,Wellington
+W35010,Mount Victoria,Wellington Central,OTHER,15,EDUCATION,Mount Victoria,-41.29882878,174.78763827,Wellington Central,-41.2849345,174.77572593,1.8377839564476781,Wellington,Wellington,Wellington,Wellington
+W35011,Roseneath ,Wellington Central,OTHER,18,EDUCATION,Roseneath,-41.29229126,174.80079878,Wellington Central,-41.2849345,174.77572593,2.2489245997769705,,Wellington,,Wellington
+W35012,Owhiro Bay,Wellington Central,OTHER,15,EDUCATION,Owhiro Bay,-41.33789607,174.76120032,Wellington Central,-41.2849345,174.77572593,6.0127265836260655,Wellington,Wellington,Wellington,Wellington
+W35013,Kingston-Mornington-Vogeltown,Wellington Central,OTHER,24,EDUCATION,Kingston-Mornington-Vogeltown,-41.31951669,174.76580188,Wellington Central,-41.2849345,174.77572593,3.9337077983062168,Wellington,Wellington,Wellington,Wellington
+W35014,Newtown North,Wellington Central,OTHER,12,EDUCATION,Newtown North,-41.30900081,174.78319441,Wellington Central,-41.2849345,174.77572593,2.747822813362659,Wellington,Wellington,Wellington,Wellington
+W35015,Newtown West,Wellington Central,OTHER,15,EDUCATION,Newtown West,-41.31289315,174.77608237,Wellington Central,-41.2849345,174.77572593,3.109002629892073,Wellington,Wellington,Wellington,Wellington
+W35016,Hataitai North,Wellington Central,OTHER,24,EDUCATION,Hataitai North,-41.30162529,174.79629811,Wellington Central,-41.2849345,174.77572593,2.529514901003451,Wellington,Wellington,Wellington,Wellington
+W35017,Evans Bay,Wellington Central,OTHER,9,EDUCATION,Evans Bay,-41.31155628,174.79670032,Wellington Central,-41.2849345,174.77572593,3.4399067330845763,Wellington,Wellington,Wellington,Wellington
+W35018,Berhampore,Wellington Central,OTHER,6,EDUCATION,Berhampore,-41.323265299999996,174.77378029,Wellington Central,-41.2849345,174.77572593,4.265287948743138,Wellington,Wellington,Wellington,Wellington
+W35019,Hataitai South,Wellington Central,OTHER,12,EDUCATION,Hataitai South,-41.30906949,174.79244614,Wellington Central,-41.2849345,174.77572593,3.025438736870081,Wellington,Wellington,Wellington,Wellington
+W35021,Newtown South,Wellington Central,OTHER,12,EDUCATION,Newtown South,-41.32048296,174.78439861,Wellington Central,-41.2849345,174.77572593,4.018648140107553,Wellington,Wellington,Wellington,Wellington
+W35022,Kilbirnie Central,Wellington Central,OTHER,12,EDUCATION,Kilbirnie Central,-41.31694317,174.79267899,Wellington Central,-41.2849345,174.77572593,3.830599411531741,Wellington,Wellington,Wellington,Wellington
+W35023,Island Bay West,Wellington Central,OTHER,18,EDUCATION,Island Bay West,-41.34095916,174.76904840000003,Wellington Central,-41.2849345,174.77572593,6.254572482925598,Wellington,Wellington,Wellington,Wellington
+W35025,Island Bay East,Wellington Central,OTHER,27,EDUCATION,Island Bay East,-41.33666605,174.77592354,Wellington Central,-41.2849345,174.77572593,5.752309586155361,Wellington,Wellington,Wellington,Wellington
+W35028,Lyall Bay,Wellington Central,OTHER,12,EDUCATION,Lyall Bay,-41.32710382,174.79417852,Wellington Central,-41.2849345,174.77572593,4.935842985163873,Wellington,Wellington,Wellington,Wellington
+W35031,Karaka Bay-Worser Bay,Wellington Central,OTHER,6,EDUCATION,Karaka Bay-Worser Bay,-41.31756605,174.82576397,Wellington Central,-41.2849345,174.77572593,5.535124393125788,Wellington,Wellington,Wellington,Wellington
+W35032,Houghton Bay,Wellington Central,OTHER,9,EDUCATION,Houghton Bay,-41.33776631,174.7873919,Wellington Central,-41.2849345,174.77572593,5.9548854644883775,Wellington,Wellington,Wellington,Wellington
+W35033,Miramar East,Wellington Central,OTHER,18,EDUCATION,Miramar East,-41.31890777,174.82187288,Wellington Central,-41.2849345,174.77572593,5.397274333957193,Wellington,Wellington,Wellington,Wellington
+W35034,Miramar South,Wellington Central,OTHER,15,EDUCATION,Miramar South,-41.32072604,174.81420546,Wellington Central,-41.2849345,174.77572593,5.1157533583273365,Wellington,Wellington,Wellington,Wellington
+W35035,Strathmore (Wellington City),Wellington Central,OTHER,12,EDUCATION,Strathmore (Wellington City),-41.33164104,174.82054496,Wellington Central,-41.2849345,174.77572593,6.402109105950933,Wellington,Wellington,Wellington,Wellington
+W35036,Seatoun,Wellington Central,OTHER,9,EDUCATION,Seatoun,-41.32569332,174.83335901,Wellington Central,-41.2849345,174.77572593,6.6118110247744335,Wellington,Wellington,Wellington,Wellington
+W35424,Karori Park,Pipitea-Kaiwharawhara,OTHER,9,EDUCATION,Karori Park,-41.28258876,174.72565725,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,5.2343897471536405,Wellington,Wellington,Wellington,Wellington
+W35425,Newlands North,Pipitea-Kaiwharawhara,OTHER,9,EDUCATION,Newlands North,-41.22406312,174.82053599,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,6.4183367400703055,Wellington,Wellington,Wellington,Wellington
+W35426,Ngaio South,Pipitea-Kaiwharawhara,OTHER,6,EDUCATION,Ngaio South,-41.2531632,174.77602584,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,2.746918576646185,Wellington,Wellington,Wellington,Wellington
+W35431,Wilton,Pipitea-Kaiwharawhara,OTHER,9,EDUCATION,Wilton,-41.26835527,174.76073653,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,2.420335458916825,Wellington,Wellington,Wellington,Wellington
+W35442,Aro Valley,Pipitea-Kaiwharawhara,OTHER,6,EDUCATION,Aro Valley,-41.29574618,174.75986554,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,3.1811454449650425,Wellington,Wellington,Wellington,Wellington
+W35446,Dixon Street,Pipitea-Kaiwharawhara,OTHER,6,EDUCATION,Dixon Street,-41.29101921,174.77469531,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,1.9705990334297987,Wellington,Wellington,Wellington,Wellington
+W35455,Mount Victoria,Pipitea-Kaiwharawhara,OTHER,9,EDUCATION,Mount Victoria,-41.29882878,174.78763827,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,2.5108545077162137,Wellington,Wellington,Wellington,Wellington
+W35457,Owhiro Bay,Pipitea-Kaiwharawhara,OTHER,6,EDUCATION,Owhiro Bay,-41.33789607,174.76120032,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,7.204109589178178,Wellington,Wellington,Wellington,Wellington
+W35461,Hataitai North,Pipitea-Kaiwharawhara,OTHER,6,EDUCATION,Hataitai North,-41.30162529,174.79629811,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,2.9112660817859286,Wellington,Wellington,Wellington,Wellington
+W35708,Northland (Wellington City),Dixon Street,OTHER,6,EDUCATION,Northland (Wellington City),-41.27908062,174.76019207,Dixon Street,-41.29101921,174.77469531,1.7974481182186215,Wellington,Wellington,Wellington,Wellington
+W35715,Brooklyn North,Dixon Street,OTHER,6,EDUCATION,Brooklyn North,-41.30427883,174.75585667,Dixon Street,-41.29101921,174.77469531,2.156532517359175,Wellington,Wellington,Wellington,Wellington
+W35728,Kingston-Mornington-Vogeltown,Dixon Street,OTHER,6,EDUCATION,Kingston-Mornington-Vogeltown,-41.31951669,174.76580188,Dixon Street,-41.29101921,174.77469531,3.2546873205629905,Wellington,Wellington,Wellington,Wellington
+W35730,Newtown West,Dixon Street,OTHER,6,EDUCATION,Newtown West,-41.31289315,174.77608237,Dixon Street,-41.29101921,174.77469531,2.4350293903269087,Wellington,Wellington,Wellington,Wellington
+W35731,Hataitai North,Dixon Street,OTHER,6,EDUCATION,Hataitai North,-41.30162529,174.79629811,Dixon Street,-41.29101921,174.77469531,2.15589828612176,Wellington,Wellington,Wellington,Wellington
+W35942,Aro Valley,Courtenay,OTHER,9,EDUCATION,Aro Valley,-41.29574618,174.75986554,Courtenay,-41.29206034,174.78280365,1.959691024967526,Wellington,Wellington,Wellington,Wellington
+W35954,Mount Cook East,Courtenay,OTHER,6,EDUCATION,Mount Cook East,-41.30251481,174.77750144,Courtenay,-41.29206034,174.78280365,1.2440144364828147,Wellington,Wellington,Wellington,Wellington
+W35955,Mount Victoria,Courtenay,OTHER,9,EDUCATION,Mount Victoria,-41.29882878,174.78763827,Courtenay,-41.29206034,174.78280365,0.8541449948069977,Wellington,Wellington,Wellington,Wellington
+W37246,Island Bay West,Vivian West,OTHER,6,EDUCATION,Island Bay West,-41.34095916,174.76904840000003,Vivian West,-41.2946931,174.77283972,5.154285575064941,Wellington,Wellington,Wellington,Wellington
+W37468,Strathmore (Wellington City),Miramar South,OTHER,9,EDUCATION,Strathmore (Wellington City),-41.33164104,174.82054496,Miramar South,-41.32072604,174.81420546,1.3241151468214392,Wellington,Wellington,Wellington,Wellington
+W38000,Newlands South,Mount Cook East,OTHER,9,EDUCATION,Newlands South,-41.23454859,174.82124819,Mount Cook East,-41.30251481,174.77750144,8.395460741117653,Wellington,Wellington,Wellington,Wellington
+W39225,Whareama,Whareama,OTHER,24,EDUCATION,Whareama,-40.91901694,175.98994746,Whareama,-40.91901694,175.98994746,0.0,Masterton,Masterton,Wellington,Wellington
+W39238,Kokotau,Kokotau,OTHER,9,EDUCATION,Kokotau,-41.0381449,175.58145467,Kokotau,-41.0381449,175.58145467,0.0,Carterton,Carterton,Wellington,Wellington
+W39304,Homebush-Te Ore Ore,Homebush-Te Ore Ore,OTHER,9,EDUCATION,Homebush-Te Ore Ore,-40.98154193,175.71227861,Homebush-Te Ore Ore,-40.98154193,175.71227861,0.0,Masterton,Masterton,Wellington,Wellington
+W39329,Upper Plain,Upper Plain,OTHER,6,EDUCATION,Upper Plain,-40.89511815,175.57935646,Upper Plain,-40.89511815,175.57935646,0.0,Masterton,Masterton,Wellington,Wellington
+W39444,Tauherenikau,Tauherenikau,OTHER,9,EDUCATION,Tauherenikau,-41.06390044,175.36907465,Tauherenikau,-41.06390044,175.36907465,0.0,South Wairarapa,South Wairarapa,Wellington,Wellington
+W39457,Aorangi Forest,Aorangi Forest,OTHER,18,EDUCATION,Aorangi Forest,-41.37490301,175.45793738,Aorangi Forest,-41.37490301,175.45793738,0.0,South Wairarapa,South Wairarapa,Wellington,Wellington
+W39460,Kahutara,Kahutara,OTHER,21,EDUCATION,Kahutara,-41.33273164,175.08046255,Kahutara,-41.33273164,175.08046255,0.0,South Wairarapa,South Wairarapa,Wellington,Wellington
+W39465,Golden Bay/Mohua,Golden Bay/Mohua,OTHER,18,EDUCATION,Golden Bay/Mohua,-40.86935481,172.57195655,Golden Bay/Mohua,-40.86935481,172.57195655,0.0,Tasman,Tasman,Nelson,Nelson
+W39584,Aldinga,Nelson Airport,OTHER,6,EDUCATION,Aldinga,-41.31388017,173.22157736,Nelson Airport,-41.2956675,173.22975091,2.1371465472126583,Nelson,Nelson,Nelson,Nelson
+W39591,Omaio,Nelson Airport,OTHER,6,EDUCATION,Omaio,-41.32459713,173.24438648,Nelson Airport,-41.2956675,173.22975091,3.4412626940646898,Nelson,Nelson,Nelson,Nelson
+W39693,Atawhai,Nelson Central-Trafalgar,OTHER,9,EDUCATION,Atawhai,-41.24786852,173.31976671,Nelson Central-Trafalgar,-41.27273863,173.28210878,4.189969136599114,Nelson,Nelson,Nelson,Nelson
+W39694,Broadgreen-Monaco,Nelson Central-Trafalgar,OTHER,9,EDUCATION,Broadgreen-Monaco,-41.30725889,173.22687972,Nelson Central-Trafalgar,-41.27273863,173.28210878,6.002188396786162,Nelson,Nelson,Nelson,Nelson
+W39698,The Wood,Nelson Central-Trafalgar,OTHER,9,EDUCATION,The Wood,-41.26709294,173.29239874,Nelson Central-Trafalgar,-41.27273863,173.28210878,1.064741402919004,Nelson,Nelson,Nelson,Nelson
+W39699,Toi Toi,Nelson Central-Trafalgar,OTHER,9,EDUCATION,Toi Toi,-41.28540651,173.26170072,Nelson Central-Trafalgar,-41.27273863,173.28210878,2.2118888949460187,Nelson,Nelson,Nelson,Nelson
+W39703,Rutherford,Nelson Central-Trafalgar,OTHER,9,EDUCATION,Rutherford,-41.28072441,173.28230759,Nelson Central-Trafalgar,-41.27273863,173.28210878,0.8881336285081866,Nelson,Nelson,Nelson,Nelson
+W39704,Maitlands,Nelson Central-Trafalgar,OTHER,6,EDUCATION,Maitlands,-41.30875019,173.24301865,Nelson Central-Trafalgar,-41.27273863,173.28210878,5.1672732927347775,Nelson,Nelson,Nelson,Nelson
+W39706,Grampians,Nelson Central-Trafalgar,OTHER,6,EDUCATION,Grampians,-41.29660057,173.27351504,Nelson Central-Trafalgar,-41.27273863,173.28210878,2.748773418261476,Nelson,Nelson,Nelson,Nelson
+W39851,Golden Downs,Golden Downs,OTHER,9,EDUCATION,Golden Downs,-41.50890922,172.78826525,Golden Downs,-41.50890922,172.78826525,0.0,Tasman,Tasman,Nelson,Nelson
+W39964,Murchison-Nelson Lakes,Murchison-Nelson Lakes,OTHER,9,EDUCATION,Murchison-Nelson Lakes,-41.88459953,172.4650349,Murchison-Nelson Lakes,-41.88459953,172.4650349,0.0,Tasman,Tasman,Nelson,Nelson
+W40238,Lower Waitaki,Lower Waitaki,OTHER,15,EDUCATION,Lower Waitaki,-45.00239341,171.02035686,Lower Waitaki,-45.00239341,171.02035686,0.0,Waitaki,Waitaki,Otago,Otago
+W40319,Marlborough Sounds West,Marlborough Sounds West,OTHER,12,EDUCATION,Marlborough Sounds West,-41.25619764,173.62635385,Marlborough Sounds West,-41.25619764,173.62635385,0.0,Marlborough,Marlborough,Marlborough,Marlborough
+W40568,Witherlea West,Blenheim Central,OTHER,6,EDUCATION,Witherlea West,-41.5400542,173.94535630000001,Blenheim Central,-41.51522392,173.96254647,3.1097994455976967,Marlborough,Marlborough,Marlborough,Marlborough
+W40569,Redwoodtown East,Blenheim Central,OTHER,9,EDUCATION,Redwoodtown East,-41.52801744,173.95981668,Blenheim Central,-41.51522392,173.96254647,1.440613034201368,Marlborough,Marlborough,Marlborough,Marlborough
+W40706,Kaikoura Ranges,Kaikoura Ranges,OTHER,6,EDUCATION,Kaikoura Ranges,-42.19710797,173.64408497,Kaikoura Ranges,-42.19710797,173.64408497,0.0,Kaikoura,Kaikoura,Canterbury,Canterbury
+W40709,Kaikoura,Kaikoura,OTHER,6,EDUCATION,Kaikoura,-42.4127248,173.67667951,Kaikoura,-42.4127248,173.67667951,0.0,Kaikoura,Kaikoura,Canterbury,Canterbury
+W40710,Karamea,Karamea,OTHER,12,EDUCATION,Karamea,-41.29229662,172.26451215,Karamea,-41.29229662,172.26451215,0.0,Buller,Buller,West Coast,West Coast
+W40736,Inangahua,Inangahua,OTHER,15,EDUCATION,Inangahua,-42.17196452,171.99565878,Inangahua,-42.17196452,171.99565878,0.0,Buller,Buller,West Coast,West Coast
+W40763,Nelson Creek,Nelson Creek,OTHER,6,EDUCATION,Nelson Creek,-42.43145547,171.68813975,Nelson Creek,-42.43145547,171.68813975,0.0,Grey,Grey,West Coast,West Coast
+W40764,Barrytown,Barrytown,OTHER,6,EDUCATION,Barrytown,-42.31021412,171.43339948,Barrytown,-42.31021412,171.43339948,0.0,Grey,Grey,West Coast,West Coast
+W42555,Casebrook,Christchurch Airport,OTHER,6,EDUCATION,Casebrook,-43.47930829,172.59864558,Christchurch Airport,-43.48221523,172.54383636,4.4340052229774995,Christchurch,Christchurch,Canterbury,Canterbury
+W42772,Hornby South,Islington-Hornby Industrial,OTHER,9,EDUCATION,Hornby South,-43.54829435,172.53309133,Islington-Hornby Industrial,-43.552606299999994,172.50828849,2.0555741522150712,Christchurch,Christchurch,Canterbury,Canterbury
+W42780,Awatea North,Islington-Hornby Industrial,OTHER,6,EDUCATION,Awatea North,-43.55272616,172.53849075,Islington-Hornby Industrial,-43.552606299999994,172.50828849,2.43396288652725,Christchurch,Christchurch,Canterbury,Canterbury
+W43700,Phillipstown,Lancaster Park,OTHER,9,EDUCATION,Phillipstown,-43.53685957,172.66374679,Lancaster Park,-43.541388399999995,172.6534567,0.970343095924483,Christchurch,Christchurch,Canterbury,Canterbury
+W44875,Hornby South,Hornby Central,OTHER,6,EDUCATION,Hornby South,-43.54829435,172.53309133,Hornby Central,-43.53921804,172.53566342,1.030311448737645,Christchurch,Christchurch,Canterbury,Canterbury
+W45112,Lake Brunner,Lake Brunner,OTHER,9,EDUCATION,Lake Brunner,-42.66149957,171.69470271,Lake Brunner,-42.66149957,171.69470271,0.0,Grey,Grey,West Coast,West Coast
+W45126,Hokitika Valley-Otira,Hokitika Valley-Otira,OTHER,18,EDUCATION,Hokitika Valley-Otira,-42.87811794,171.30442912,Hokitika Valley-Otira,-42.87811794,171.30442912,0.0,Westland,Westland,West Coast,West Coast
+W45130,Whataroa-Harihari,Whataroa-Harihari,OTHER,12,EDUCATION,Whataroa-Harihari,-43.25841799,170.43905254,Whataroa-Harihari,-43.25841799,170.43905254,0.0,Westland,Westland,West Coast,West Coast
+W45135,Amuri,Amuri,OTHER,114,EDUCATION,Amuri,-42.64453066,172.95870738,Amuri,-42.64453066,172.95870738,0.0,Hurunui,Hurunui,Canterbury,Canterbury
+W45161,Upper Hurunui,Upper Hurunui,OTHER,6,EDUCATION,Upper Hurunui,-42.93387941,172.54733326,Upper Hurunui,-42.93387941,172.54733326,0.0,Hurunui,Hurunui,Canterbury,Canterbury
+W45167,Omihi,Omihi,OTHER,6,EDUCATION,Omihi,-42.98563474,172.94683521,Omihi,-42.98563474,172.94683521,0.0,Hurunui,Hurunui,Canterbury,Canterbury
+W45455,Ashley Gorge,Ashley Gorge,OTHER,9,EDUCATION,Ashley Gorge,-43.284114,172.07365277,Ashley Gorge,-43.284114,172.07365277,0.0,Waimakariri,Waimakariri,Canterbury,Canterbury
+W45460,Eyrewell,Eyrewell,OTHER,24,EDUCATION,Eyrewell,-43.39853546,172.28813683,Eyrewell,-43.39853546,172.28813683,0.0,Waimakariri,Waimakariri,Canterbury,Canterbury
+W45804,Waikuku,Waikuku,OTHER,6,EDUCATION,Waikuku,-43.29270375,172.66440938,Waikuku,-43.29270375,172.66440938,0.0,Waimakariri,Waimakariri,Canterbury,Canterbury
+W46465,Newtons Road,Newtons Road,OTHER,9,EDUCATION,Newtons Road,-43.56941172,172.31944743,Newtons Road,-43.56941172,172.31944743,0.0,Selwyn,Selwyn,Canterbury,Canterbury
+W47246,Bankside,Bankside,OTHER,99,EDUCATION,Bankside,-43.65857485,172.03741575,Bankside,-43.65857485,172.03741575,0.0,Selwyn,Selwyn,Canterbury,Canterbury
+W47588,Glenroy-Hororata,Glenroy-Hororata,OTHER,24,EDUCATION,Glenroy-Hororata,-43.48288665,171.78713574,Glenroy-Hororata,-43.48288665,171.78713574,0.0,Selwyn,Selwyn,Canterbury,Canterbury
+W47626,Charing Cross,Charing Cross,OTHER,15,EDUCATION,Charing Cross,-43.56459027,172.15086518,Charing Cross,-43.56459027,172.15086518,0.0,Selwyn,Selwyn,Canterbury,Canterbury
+W47665,Southbridge,Southbridge,OTHER,48,EDUCATION,Southbridge,-43.79254412,172.21023844,Southbridge,-43.79254412,172.21023844,0.0,Selwyn,Selwyn,Canterbury,Canterbury
+W47672,Springston,Springston,OTHER,15,EDUCATION,Springston,-43.65558055,172.37556591,Springston,-43.65558055,172.37556591,0.0,Selwyn,Selwyn,Canterbury,Canterbury
+W47715,Cairnbrae,Cairnbrae,OTHER,48,EDUCATION,Cairnbrae,-43.66455634,171.77355459,Cairnbrae,-43.66455634,171.77355459,0.0,Ashburton,Ashburton,Canterbury,Canterbury
+W47733,Winchmore-Wakanui,Winchmore-Wakanui,OTHER,45,EDUCATION,Winchmore-Wakanui,-43.96318598,171.82829097,Winchmore-Wakanui,-43.96318598,171.82829097,0.0,Ashburton,Ashburton,Canterbury,Canterbury
+W47745,Hampstead,Winchmore-Wakanui,OTHER,6,EDUCATION,Hampstead,-43.91158863,171.75646729,Winchmore-Wakanui,-43.96318598,171.82829097,8.123515713080026,Ashburton,Ashburton,Canterbury,Canterbury
+W47765,Ashburton Forks,Ashburton Forks,OTHER,105,EDUCATION,Ashburton Forks,-43.78492258,171.43181981,Ashburton Forks,-43.78492258,171.43181981,0.0,Ashburton,Ashburton,Canterbury,Canterbury
+W47797,Eiffelton,Eiffelton,OTHER,66,EDUCATION,Eiffelton,-43.95897704,171.66500519,Eiffelton,-43.95897704,171.66500519,0.0,Ashburton,Ashburton,Canterbury,Canterbury
+W47808,Ashburton Forks,Ealing-Lowcliffe,OTHER,9,EDUCATION,Ashburton Forks,-43.78492258,171.43181981,Ealing-Lowcliffe,-44.03656373,171.49741748,28.470367780342674,Ashburton,Ashburton,Canterbury,Canterbury
+W47809,Ealing-Lowcliffe,Ealing-Lowcliffe,OTHER,141,EDUCATION,Ealing-Lowcliffe,-44.03656373,171.49741748,Ealing-Lowcliffe,-44.03656373,171.49741748,0.0,Ashburton,Ashburton,Canterbury,Canterbury
+W47818,Chertsey,Chertsey,OTHER,57,EDUCATION,Chertsey,-43.82506248,171.96646486,Chertsey,-43.82506248,171.96646486,0.0,Ashburton,Ashburton,Canterbury,Canterbury
+W47930,Waitohi (Timaru District),Waitohi (Timaru District),OTHER,36,EDUCATION,Waitohi (Timaru District),-44.18539597,171.37833391,Waitohi (Timaru District),-44.18539597,171.37833391,0.0,Timaru,Timaru,Canterbury,Canterbury
+W47965,Arundel,Arundel,OTHER,15,EDUCATION,Arundel,-44.06044997,171.05797729,Arundel,-44.06044997,171.05797729,0.0,Timaru,Timaru,Canterbury,Canterbury
+W48026,Rangitata,Rangitata,OTHER,36,EDUCATION,Rangitata,-44.11035618,171.32575726,Rangitata,-44.11035618,171.32575726,0.0,Timaru,Timaru,Canterbury,Canterbury
+W48097,Levels Valley,Levels Valley,OTHER,9,EDUCATION,Levels Valley,-44.27189292,171.01446242,Levels Valley,-44.27189292,171.01446242,0.0,Timaru,Timaru,Canterbury,Canterbury
+W48111,Opua (Mackenzie District),Opua (Mackenzie District),OTHER,12,EDUCATION,Opua (Mackenzie District),-43.856187299999995,171.06857118,Opua (Mackenzie District),-43.856187299999995,171.06857118,0.0,Mackenzie,Mackenzie,Canterbury,Canterbury
+W48356,Danseys Pass,Danseys Pass,OTHER,27,EDUCATION,Danseys Pass,-44.89434996,170.50210901,Danseys Pass,-44.89434996,170.50210901,0.0,Waitaki,Waitaki,Canterbury,Canterbury
+W48360,Makikihi-Willowbridge,Makikihi-Willowbridge,OTHER,12,EDUCATION,Makikihi-Willowbridge,-44.68813769,171.05113933,Makikihi-Willowbridge,-44.68813769,171.05113933,0.0,Waimate,Waimate,Canterbury,Canterbury
+W48368,Morven-Glenavy-Ikawai,Morven-Glenavy-Ikawai,OTHER,69,EDUCATION,Morven-Glenavy-Ikawai,-44.85372568,171.00103288,Morven-Glenavy-Ikawai,-44.85372568,171.00103288,0.0,Waimate,Waimate,Canterbury,Canterbury
+W48375,Maungati,Maungati,OTHER,9,EDUCATION,Maungati,-44.49962787,170.93976175,Maungati,-44.49962787,170.93976175,0.0,Waimate,Waimate,Canterbury,Canterbury
+W48380,Lyalldale,Lyalldale,OTHER,6,EDUCATION,Lyalldale,-44.49021445,171.10964227,Lyalldale,-44.49021445,171.10964227,0.0,Waimate,Waimate,Canterbury,Canterbury
+W48406,Ngapara,Ngapara,OTHER,69,EDUCATION,Ngapara,-45.06213909,170.69741781,Ngapara,-45.06213909,170.69741781,0.0,Waitaki,Waitaki,Otago,Otago
+W48509,Wakari,Dunedin Central,OTHER,9,EDUCATION,Wakari,-45.85838705,170.48621864,Dunedin Central,-45.87712471,170.50291221,2.4518861798554057,Dunedin,Dunedin,Otago,Otago
+W48515,Roslyn (Dunedin City),Dunedin Central,OTHER,6,EDUCATION,Roslyn (Dunedin City),-45.86711907,170.4917572,Dunedin Central,-45.87712471,170.50291221,1.408432814734888,Dunedin,Dunedin,Otago,Otago
+W48520,Belleknowes,Dunedin Central,OTHER,6,EDUCATION,Belleknowes,-45.87481662,170.4813773,Dunedin Central,-45.87712471,170.50291221,1.6867740622768352,Dunedin,Dunedin,Otago,Otago
+W48601,Queenstown East,Queenstown Central,OTHER,6,EDUCATION,Queenstown East,-45.03289461,168.67249766,Queenstown Central,-45.0327315,168.65460343,1.4062749824232708,Queenstown-Lakes,Queenstown-Lakes,Otago,Otago
+W48603,Frankton,Queenstown Central,OTHER,9,EDUCATION,Frankton,-45.01825697,168.74585281,Queenstown Central,-45.0327315,168.65460343,7.3498342948868265,Queenstown-Lakes,Queenstown-Lakes,Otago,Otago
+W48794,Maniototo,Maniototo,OTHER,21,EDUCATION,Maniototo,-45.25282329,170.02086908,Maniototo,-45.25282329,170.02086908,0.0,Central Otago,Central Otago,Otago,Otago
+W49211,Pine Hill-Dalmore,Campus South,OTHER,6,EDUCATION,Pine Hill-Dalmore,-45.84825689,170.51388061,Campus South,-45.86793792,170.51211679,2.192689200261846,Dunedin,Dunedin,Otago,Otago
+W49415,Momona,Momona,OTHER,18,EDUCATION,Momona,-45.93568773,170.20271369,Momona,-45.93568773,170.20271369,0.0,Dunedin,Dunedin,Otago,Otago
+W49584,Bruce,Bruce,OTHER,9,EDUCATION,Bruce,-46.07247342,170.08655606,Bruce,-46.07247342,170.08655606,0.0,Clutha,Clutha,Otago,Otago
+W50045,West Otago,West Otago,OTHER,27,EDUCATION,West Otago,-45.83535422,169.21290702,West Otago,-45.83535422,169.21290702,0.0,Clutha,Clutha,Otago,Otago
+W50083,Prestonville-Grasmere,Invercargill Central,OTHER,9,EDUCATION,Prestonville-Grasmere,-46.38023874,168.34165711,Invercargill Central,-46.41489239,168.32850731,3.9830729280186783,Invercargill,Invercargill,Southland,Southland
+W50086,Otatara,Invercargill Central,OTHER,6,EDUCATION,Otatara,-46.43520129,168.28791931,Invercargill Central,-46.41489239,168.32850731,3.844174023598104,Invercargill,Invercargill,Southland,Southland
+W50093,Richmond (Invercargill City),Invercargill Central,OTHER,6,EDUCATION,Richmond (Invercargill City),-46.40719619,168.36918138,Invercargill Central,-46.41489239,168.32850731,3.2336411984953366,Invercargill,Invercargill,Southland,Southland
+W50095,Turnbull Thompson Park,Invercargill Central,OTHER,6,EDUCATION,Turnbull Thompson Park,-46.4103152,168.38551814,Invercargill Central,-46.41489239,168.32850731,4.4002394339240345,Invercargill,Invercargill,Southland,Southland
+W50137,Clinton,Clinton,OTHER,21,EDUCATION,Clinton,-46.23295914,169.36302838,Clinton,-46.23295914,169.36302838,0.0,Clutha,Clutha,Otago,Otago
+W50173,Waikaka,Waikaka,OTHER,15,EDUCATION,Waikaka,-45.96604044,168.98043741,Waikaka,-45.96604044,168.98043741,0.0,Gore,Gore,Southland,Southland
+W50185,Clutha Valley,Clutha Valley,OTHER,48,EDUCATION,Clutha Valley,-46.14666172,169.61562874,Clutha Valley,-46.14666172,169.61562874,0.0,Clutha,Clutha,Otago,Otago
+W50202,Catlins,Catlins,OTHER,9,EDUCATION,Catlins,-46.45964433,169.46517021,Catlins,-46.45964433,169.46517021,0.0,Clutha,Clutha,Otago,Otago
+W50211,Kaitangata-Matau,Kaitangata-Matau,OTHER,12,EDUCATION,Kaitangata-Matau,-46.26457502,169.85724189,Kaitangata-Matau,-46.26457502,169.85724189,0.0,Clutha,Clutha,Otago,Otago
+W50218,Te Anau,Te Anau,OTHER,6,EDUCATION,Te Anau,-45.413515600000004,167.72303047,Te Anau,-45.413515600000004,167.72303047,0.0,Southland,Southland,Southland,Southland
+W50222,Mararoa,Mararoa,OTHER,9,EDUCATION,Mararoa,-45.26618632,167.98136027,Mararoa,-45.26618632,167.98136027,0.0,Southland,Southland,Southland,Southland
+W50226,Mossburn,Mossburn,OTHER,33,EDUCATION,Mossburn,-45.5465414,168.37465706,Mossburn,-45.5465414,168.37465706,0.0,Southland,Southland,Southland,Southland
+W50235,Riversdale-Piano Flat,Riversdale-Piano Flat,OTHER,27,EDUCATION,Riversdale-Piano Flat,-45.48645863,169.03162811,Riversdale-Piano Flat,-45.48645863,169.03162811,0.0,Southland,Southland,Southland,Southland
+W50240,Lumsden-Balfour,Lumsden-Balfour,OTHER,21,EDUCATION,Lumsden-Balfour,-45.74921739,168.61002109,Lumsden-Balfour,-45.74921739,168.61002109,0.0,Southland,Southland,Southland,Southland
+W50244,Longwood Forest,Longwood Forest,OTHER,39,EDUCATION,Longwood Forest,-46.01707924,167.67301087,Longwood Forest,-46.01707924,167.67301087,0.0,Southland,Southland,Southland,Southland
+W50254,Otautau,Otautau,OTHER,57,EDUCATION,Otautau,-46.19250679,168.05347842,Otautau,-46.19250679,168.05347842,0.0,Southland,Southland,Southland,Southland
+W50284,Ohai-Nightcaps,Ohai-Nightcaps,OTHER,51,EDUCATION,Ohai-Nightcaps,-45.89093509,168.02614043,Ohai-Nightcaps,-45.89093509,168.02614043,0.0,Southland,Southland,Southland,Southland
+W50290,Oreti River,Oreti River,OTHER,45,EDUCATION,Oreti River,-46.00268489,168.31789888,Oreti River,-46.00268489,168.31789888,0.0,Southland,Southland,Southland,Southland
+W50300,Hedgehope,Hedgehope,OTHER,30,EDUCATION,Hedgehope,-46.12903119,168.56584014,Hedgehope,-46.12903119,168.56584014,0.0,Southland,Southland,Southland,Southland
+W50310,Wallacetown,Wallacetown,OTHER,6,EDUCATION,Wallacetown,-46.33578429,168.25553448,Wallacetown,-46.33578429,168.25553448,0.0,Southland,Southland,Southland,Southland
+W50343,Edendale-Woodlands,Edendale-Woodlands,OTHER,42,EDUCATION,Edendale-Woodlands,-46.3334381,168.67007113,Edendale-Woodlands,-46.3334381,168.67007113,0.0,Southland,Southland,Southland,Southland
+W50437,Waianiwa,Waianiwa,OTHER,33,EDUCATION,Waianiwa,-46.24535244,168.33027044,Waianiwa,-46.24535244,168.33027044,0.0,Southland,Southland,Southland,Southland
+W50565,Woodend-Greenhills ,Woodend-Greenhills ,OTHER,6,EDUCATION,Woodend-Greenhills,-46.52117182,168.37470824,Woodend-Greenhills,-46.52117182,168.37470824,0.0,Invercargill,Invercargill,Southland,Southland
+W50567,Grove Bush,Grove Bush,OTHER,9,EDUCATION,Grove Bush,-46.30068372,168.47812714,Grove Bush,-46.30068372,168.47812714,0.0,Southland,Southland,Southland,Southland
+W50571,Wyndham-Catlins,Wyndham-Catlins,OTHER,27,EDUCATION,Wyndham-Catlins,-46.47283276,168.99193119999995,Wyndham-Catlins,-46.47283276,168.99193119999995,0.0,Southland,Southland,Southland,Southland
+W50635,Awarua Plains,Awarua Plains,OTHER,42,EDUCATION,Awarua Plains,-46.48269183,168.60409879,Awarua Plains,-46.48269183,168.60409879,0.0,Southland,Southland,Southland,Southland
+W50656,Waimumu-Kaiwera,Waimumu-Kaiwera,OTHER,9,EDUCATION,Waimumu-Kaiwera,-46.20791261,169.07308711,Waimumu-Kaiwera,-46.20791261,169.07308711,0.0,Gore,Gore,Southland,Southland
+W50703,Bluff,Bluff,OTHER,9,EDUCATION,Bluff,-46.60724545,168.33224564,Bluff,-46.60724545,168.33224564,0.0,Invercargill,Invercargill,Southland,Southland

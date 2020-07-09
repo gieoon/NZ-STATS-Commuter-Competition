@@ -1,4 +1,11 @@
-import React, {useState, useMemo, useEffect, useRef} from 'react';
+import React, {
+    useState, 
+    useMemo, 
+    useEffect, 
+    useRef, 
+    forwardRef,
+    useImperativeHandle // Child only exposes certain properties to parent.
+} from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import {useLocation} from 'react-router-dom';
 import L from 'leaflet';
@@ -20,16 +27,21 @@ const INITIAL_STROKE_WEIGHT = 1;
 const HIGHLIGHTED_STROKE_WEIGHT = INITIAL_STROKE_WEIGHT * 3.5;
 
 const curvesWork = {}, 
-    curvesEducation = {};
-global.curvesWork2 = curvesWork; // Allows for console debugging by calling >> curves in Chrome
-global.curvesEducation2 = curvesEducation;
+    curvesEducation = {},
+    commuteWorkCurves = {},
+    commuteEducationCurves = {};
 
-function LeafletMap({
+// Allows for console debugging by calling >> curves in Chrome
+global.commuteWorkCurves = commuteWorkCurves; 
+global.commuteEducationCurves = commuteEducationCurves;
+
+forwardRef(function LeafletMap({
     setHoveredData,
     setHighlightedData,
     centroidData,
     currentMap,
     history,
+    currentCommuteTypes,
 }){
     // Center of New Zealand
     // const position = [173.299, -41.273]
@@ -75,6 +87,13 @@ function LeafletMap({
 
     const location = useLocation();
 
+    useImperativeHandle(ref, () => {
+        return {
+            updateData: updateData()
+        }
+    });
+
+    // componentDidMount
     useEffect(()=>{
         L.control.scale().addTo(mapRef.current.leafletElement);
     },[])
@@ -93,7 +112,7 @@ function LeafletMap({
             });
             // Zoom into this location, but not the first time
             if(!initializing){
-                mapRef.current.leafletElement.setView([lat,lng], 9);
+                mapRef.current.leafletElement.setView([lat,lng], 12); //9
                 // var circle = createCurrentLatLngCircle(lat, lng);
                 // setCurrentPositionCircle(circle);
             }
@@ -141,12 +160,38 @@ function LeafletMap({
             API_zoneData(bounds, zoom, commutePurpose);
         }
 
-
         // Circle information
+        //TODO add this back in
+        /*
         for(var c of centroidData[zoom]){
-            //TODO add this back in, createCircle(c.departure_LATITUDE, c.departure_LONGITUDE, c.cluster_count);
+            createCircle(c.departure_LATITUDE, c.departure_LONGITUDE, c.cluster_count);
         }
-        // console.log(centroidData[zoom])
+        */
+    }
+
+    
+
+    const commuteType2Key = (commute_type) => {
+        if(commute_type === "Stay home")
+            return "home"
+        else if(commute_type === "Drive own vehicle")
+            return "own_vehicle"
+        else if(commute_type === "Passenger in vehicle")
+            return "passenger"
+        else if(commute_type === "Train")
+            return "train"
+        else if(commute_type === "Bicycle")
+            return "bicycle"
+        else if(commute_type === "Walk or jog")
+            return "walk_or_jog"
+        else if(commute_type === "Bus")
+            return "bus"
+        else if(commute_type === "Ferry")
+            return "ferry"
+        else if(commute_type === "Ferry")
+            return "other";
+        else
+            return commute_type
     }
 
     const API_zoneData = async (bounds, zoom, type) => {
@@ -163,22 +208,23 @@ function LeafletMap({
                 left: bounds._southWest.lng,
                 right: bounds._northEast.lng,
             });
+            var commuteTypes = "";
+            for(var commuteType of currentCommuteTypes){
+                commuteTypes += "&commute_type=" + commuteType2Key(commuteType);
+            }
+
             // Request new data
             fetch(
-                DATA_URL_ROOT + `/zoneData?left=${bounds._southWest.lng}&top=${bounds._northEast.lat}&right=${bounds._northEast.lng}&bottom=${bounds._southWest.lat}&zoom=${zoom}&data_type=${type}`,
+                DATA_URL_ROOT + `/zoneData?left=${bounds._southWest.lng}&top=${bounds._northEast.lat}&right=${bounds._northEast.lng}&bottom=${bounds._southWest.lat}&zoom=${zoom}&data_type=${type.toLowerCase()}${commuteTypes}`,
             ).then(async (d)=>{
-                // console.log("zone data: ");
-                // setZoneData(d);
-                // return await d.json();
-                const data = txt2Array(await d.text());
-
+                const data = await d.json();
                 if(type === "WORK"){
                     setWorkZoneData(data);
-                    updateCurves(data, "WORK");
+                    updateCurvesCommute(data, "WORK");
                 }
                 if(type === "EDUCATION"){
                     setEducationZoneData(data);
-                    updateCurves(data, "EDUCATION");
+                    updateCurvesCommute(data, "EDUCATION");
                 }
             })
             .catch(err => {
@@ -187,13 +233,36 @@ function LeafletMap({
         // }
     }
 
-    const updateCurves = (d, dataType) =>{
-        console.log("dataType: ", dataType)
+    const updateCurvesCommute = (d, dataType) => {
         if(!d) return;
-        var curvesToAdd = checkCurvesExist(d, dataType);
-        
-        console.log("curves to add: ", curvesToAdd.length);
-        // console.log("state curves: ", Object.keys(curves).length);
+        var curvesToAdd = checkCurvesExistCommute(d, dataType);
+        for(var commuteType of Object.keys(curvesToAdd)){
+            for(var r of curvesToAdd[commuteType]){
+                const curve = createCurve(
+                    Number(r.departure_LONGITUDE), 
+                    Number(r.departure_LATITUDE), 
+                    Number(r.destination_LONGITUDE), 
+                    Number(r.destination_LATITUDE),
+                    r,
+                    dataType
+                );
+                if(dataType === "WORK"){
+                    if(!commuteWorkCurves[commuteType])
+                        commuteWorkCurves[commuteType] = {};
+                    commuteWorkCurves[commuteType][r.id] = curve;
+                }
+                else if(dataType === "EDUCATION"){
+                    if(!commuteEducationCurves[commuteType])
+                        commuteEducationCurves[commuteType] = {};
+                    commuteEducationCurves[commuteType][r.id] = curve;
+                }
+            }
+        }
+    }
+
+    const updateCurves = (d, dataType) =>{
+        if(!d) return;
+        var curvesToAdd = checkCurvesExist(d, dataType); //checkCurvesExist(d, dataType);
         for(var r of curvesToAdd){
             const curve = createCurve(
                 Number(r.departure_LONGITUDE), 
@@ -210,8 +279,27 @@ function LeafletMap({
                 curvesEducation[r.id] = curve;
             }
         }
-        console.log("curvesWork: ", Object.keys(curvesWork).length)
-        console.log("curvesEducation: ", Object.keys(curvesEducation).length)
+    }
+
+    const checkCurvesExistCommute = (newData, dataType) => {
+        var toAdd = {};
+        // What is actually drawn on the screen right now
+        const toDelete = dataType === "WORK"
+            ? commuteWorkCurves : commuteEducationCurves;
+        
+        // console.log("newData: ", newData);
+        for(var commuteType of Object.keys(newData)){
+            toAdd[commuteType] = [];
+            newData = txt2Array(newData[commuteType])
+            for(var r of newData){
+                // If new curve is not in existing curves, add it to list of new curves
+                if(!toDelete[r.id]){
+                    toAdd[commuteType].push(r);
+                }
+            }
+    
+            return toAdd;
+        }
     }
 
     // Checks if the curve is already drawn on the map, if it is, exclude it.
@@ -222,15 +310,9 @@ function LeafletMap({
         const toDelete = (dataType === "WORK" 
             ? curvesWork : curvesEducation);
 
-        // console.log("curves of this commute: ", toDelete);
-        // console.log('curvesWork: ', Object.keys(curvesWork).length)
-        // console.log("curvesEducation: ", Object.keys(curvesEducation).length);
-        // console.log(workZoneData, row, dataType);
-        console.log('incoming data: ', newData.length);
         // If the new curve is not in the existing curves, remove it.
 
         for(var r of newData){
-            // console.log("checking r.id: ", r.id);
             // If new curve is not in existing curves, add it to list of new curves
             if(!toDelete[r.id]){
                 toAdd.push(r);
@@ -261,9 +343,34 @@ function LeafletMap({
 
         return toAdd;
     }
+    
+    const clearDrawnObjectsCommute = (toDelete, dataType) => {
+        for(var commuteType of Object.keys(toDelete)){
+            for(var id of Object.keys(toDelete)){
+                for(var el of Array.from(document.getElementsByClassName(id))){
+                    if(el){
+                        el.classList.remove('pathFadeIn');
+                        el.classList.add('pathFadeOut');
+                        // Wait for animation to expire and remove from DOM
+                        el.remove();
+                    }
+                }
+                if(dataType === "WORK"){
+                    commuteWorkCurves[commuteType][id].remove();
+                    commuteWorkCurves[commuteType][id] = undefined;
+                    delete commuteWorkCurves[commuteType][id];
+                }
+                else if(dataType === "EDUCATION"){
+                    commuteEducationCurves[commuteType][id].remove();
+                    commuteEducationCurves[commuteType][id] = undefined;
+                    delete commuteEducationCurves[commuteType][id];
+                }
+            }
+        }
+    }
 
     const clearDrawnObjects = (toDelete, dataType) => {
-        console.log("deleting data: ", Object.keys(toDelete).length);
+        // console.log("deleting data: ", Object.keys(toDelete).length);
         // console.log(curvesWork);
         // console.log(curvesEducation);
         for(var id of Object.keys(toDelete)){
@@ -384,7 +491,7 @@ function LeafletMap({
             [lat2, lon2]//[lon2, lat2]
         ], pathOptions)
         .on('mouseover', function(e) {
-            // console.log('mouseover: ', e, obj)
+            console.log('mouseover: ', obj)
             this.setStyle({
                 weight: HIGHLIGHTED_STROKE_WEIGHT
             })
@@ -429,39 +536,37 @@ function LeafletMap({
     */
 
     return(
-        // <div id="mapId">
-            <Map
-                ref={mapRef}
-                center={position} 
-                zoom={MIN_ZOOM}  //13
-                zoomControl={true}
-                maxBounds={L.latLngBounds(topLeft, bottomRight)}
-                minZoom={5}
-                maxZoom={MAX_ZOOM}
-                layers={[]}
+        <Map
+            ref={mapRef}
+            center={position} 
+            zoom={MIN_ZOOM}  //13
+            zoomControl={true}
+            maxBounds={L.latLngBounds(topLeft, bottomRight)}
+            minZoom={5}
+            maxZoom={MAX_ZOOM}
+            layers={[]}
 
-                // setPath={createCurve(170.138842, -31.154944, 179.794907, -49.285522)}
-            >
-                {/* {console.log("mapRef.current ", mapRef.current)} */}
-                <TileLayer
-                    // This defines what kind of tiles we want, and the type of the map
-                    // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                    //attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
-                    // url="http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg"
-                    // url="http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg"
-                    // url="http://b.tile.openstreetmap.fr/hot/${z}/${x}/${y}.png"
-                    // WHEN USING HTTPS
-                    // url="https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg"
-                    url="http://tile.stamen.com/toner/{z}/{x}/{y}.png"
-                    attribution='Map tiles by <a href="http://stamen.com" style="pointer-events: initial;">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0" style="pointer-events: initial;">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org" style="pointer-events: initial;">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright" style="pointer-events: initial;">ODbL</a>.'
-                />
-                
-            </Map>
-        // </div>
-        
-
+            // setPath={createCurve(170.138842, -31.154944, 179.794907, -49.285522)}
+        >
+            {/* {console.log("mapRef.current ", mapRef.current)} */}
+            <TileLayer
+                // This defines what kind of tiles we want, and the type of the map
+                // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                url="https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=9Ada5vIEJbJjNQrKmV7i"
+                //attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+                // url="http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg"
+                // url="http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg"
+                // url="http://b.tile.openstreetmap.fr/hot/${z}/${x}/${y}.png"
+                // WHEN USING HTTPS
+                // url="https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg"
+                // url="http://tile.stamen.com/toner/{z}/{x}/{y}.png"
+                // attribution='Map tiles by <a href="http://stamen.com" style="pointer-events: initial;">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0" style="pointer-events: initial;">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org" style="pointer-events: initial;">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright" style="pointer-events: initial;">ODbL</a>.'
+                attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+            />
+            
+        </Map>
     );
-}
+})
 
 export default LeafletMap;
 

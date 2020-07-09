@@ -13,7 +13,7 @@ export const MODES_OF_TRANSPORT = [
   "Passenger in vehicle",//"Passenger in car/truck/van",
   "Train",
   "Bicycle",
-  "Walk/jog",
+  "Walk or jog",
   "Bus", //"School/Public bus",
   "Ferry",
   "Other"

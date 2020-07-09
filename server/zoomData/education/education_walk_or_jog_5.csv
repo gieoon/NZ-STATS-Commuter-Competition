@@ -1,0 +1,27 @@
+id,SA2_name_usual_residence_address,SA2_name_educational_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1
+E612,Kaikohe,Manurewa East,WALK_OR_JOG,6,EDUCATION,Kaikohe,-35.40792422,173.79767516,Manurewa East,-37.02583832,174.90610927,205.55176863120468,Far North,Franklin,Northland,Auckland
+E1497,Tamahere North,Auckland-University,WALK_OR_JOG,9,EDUCATION,Tamahere North,-37.8125973,175.35271026,Auckland-University,-36.85143057,174.76906469,118.68173085826952,Waikato,Waitakere,Waikato,Auckland
+E1505,Hamilton Lake,Auckland-University,WALK_OR_JOG,9,EDUCATION,Hamilton Lake,-37.79791394,175.27349231,Auckland-University,-36.85143057,174.76906469,114.30510280473995,Hamilton,Waitakere,Waikato,Auckland
+E1508,Hamilton West,Auckland-University,WALK_OR_JOG,9,EDUCATION,Hamilton West,-37.80074182,175.2844169,Auckland-University,-36.85143057,174.76906469,114.97375248901724,Hamilton,Waitakere,Waikato,Auckland
+E1510,Melville North,Auckland-University,WALK_OR_JOG,12,EDUCATION,Melville North,-37.81091872,175.27938651,Auckland-University,-36.85143057,174.76906469,115.83839313838122,Hamilton,Waitakere,Waikato,Auckland
+E1520,Bethlehem Central,Auckland-University,WALK_OR_JOG,6,EDUCATION,Bethlehem Central,-37.706587899999995,176.11498118,Auckland-University,-36.85143057,174.76906469,152.38687826070344,Western Bay of Plenty,Waitakere,Bay of Plenty,Auckland
+E1529,Westown ,Auckland-University,WALK_OR_JOG,9,EDUCATION,Westown,-39.0747742,174.06011109,Auckland-University,-36.85143057,174.76906469,254.9145330895776,New Plymouth,Waitakere,Taranaki,Auckland
+E6222,Wellington University,Shortland Street,WALK_OR_JOG,9,EDUCATION,Wellington University,-41.289084,174.7676253,Shortland Street,-36.84736853,174.76823915,493.8962287015338,Wellington,Waitakere,Wellington,Auckland
+E6223,Wellington Central,Shortland Street,WALK_OR_JOG,9,EDUCATION,Wellington Central,-41.2849345,174.77572593,Shortland Street,-36.84736853,174.76823915,493.43524522729035,Wellington,Waitakere,Wellington,Auckland
+E6930,Glendowie North,Campus South,WALK_OR_JOG,6,EDUCATION,Glendowie North,-36.85540475,174.87371093,Campus South,-45.86793792,170.51211679,1065.7696583901904,Waitakere,Dunedin,Auckland,Otago
+E6932,Highfield North,Campus South,WALK_OR_JOG,6,EDUCATION,Highfield North,-44.38615156,171.22318733,Campus South,-45.86793792,170.51211679,173.95244993771018,Timaru,Dunedin,Canterbury,Otago
+E12138,Waipaoa,McLean Park,WALK_OR_JOG,6,EDUCATION,Waipaoa,-38.34127548,177.70733968,McLean Park,-39.5083024,176.9160949,146.71124415193358,Gisborne,Hastings,Gisborne,Hawke's Bay
+E12181,Owhanga,McLean Park,WALK_OR_JOG,6,EDUCATION,Owhanga,-40.51321329,176.31039241,McLean Park,-39.5083024,176.9160949,123.07281493441424,Tararua,Hastings,Manawatu-Wanganui,Hawke's Bay
+E17478,Ilam North,Nelson Central-Trafalgar,WALK_OR_JOG,9,EDUCATION,Ilam North,-43.51329549,172.56911159999999,Nelson Central-Trafalgar,-41.27273863,173.28210878,255.923551473046,Christchurch,Nelson,Canterbury,Nelson
+E17479,Ilam University,Nelson Central-Trafalgar,WALK_OR_JOG,12,EDUCATION,Ilam University,-43.52336127,172.57826459,Nelson Central-Trafalgar,-41.27273863,173.28210878,256.8420781589935,Christchurch,Nelson,Canterbury,Nelson
+E17480,Bush Inn,Nelson Central-Trafalgar,WALK_OR_JOG,9,EDUCATION,Bush Inn,-43.52942223,172.576402,Nelson Central-Trafalgar,-41.27273863,173.28210878,257.5325046118435,Christchurch,Nelson,Canterbury,Nelson
+E17983,Woodbourne,Merivale,WALK_OR_JOG,6,EDUCATION,Woodbourne,-41.5308031,173.90363794,Merivale,-43.51635206,172.61911331,244.58588522909253,Marlborough,Christchurch,Marlborough,Canterbury
+E17984,Kaikoura Ranges,Merivale,WALK_OR_JOG,6,EDUCATION,Kaikoura Ranges,-42.19710797,173.64408497,Merivale,-43.51635206,172.61911331,168.81331358532404,Kaikoura,Christchurch,Canterbury,Canterbury
+E17985,Amuri,Merivale,WALK_OR_JOG,9,EDUCATION,Amuri,-42.64453066,172.95870738,Merivale,-43.51635206,172.61911331,100.78892437609659,Hurunui,Christchurch,Canterbury,Canterbury
+E18234,Amuri,Deans Bush,WALK_OR_JOG,6,EDUCATION,Amuri,-42.64453066,172.95870738,Deans Bush,-43.52473249,172.59447189,102.24586973323143,Hurunui,Christchurch,Canterbury,Canterbury
+E19223,North East Valley Knox,Hagley Park,WALK_OR_JOG,18,EDUCATION,North East Valley Knox,-45.85238619,170.52237253,Hagley Park,-43.53053792,172.61981252,306.80483091680685,Dunedin,Christchurch,Otago,Canterbury
+E19224,Gardens (Dunedin City),Hagley Park,WALK_OR_JOG,27,EDUCATION,Gardens (Dunedin City),-45.85877849,170.51916854,Hagley Park,-43.53053792,172.61981252,307.53471216146283,Dunedin,Christchurch,Otago,Canterbury
+E19225,Campus West,Hagley Park,WALK_OR_JOG,24,EDUCATION,Campus West,-45.86290217,170.50786264,Hagley Park,-43.53053792,172.61981252,308.4000174635847,Dunedin,Christchurch,Otago,Canterbury
+E19226,Royal Terrace,Hagley Park,WALK_OR_JOG,9,EDUCATION,Royal Terrace,-45.86668004,170.50466615,Hagley Park,-43.53053792,172.61981252,308.8869183522036,Dunedin,Christchurch,Otago,Canterbury
+E19227,Campus North,Hagley Park,WALK_OR_JOG,30,EDUCATION,Campus North,-45.86491215,170.51950247,Hagley Park,-43.53053792,172.61981252,308.08999776914015,Dunedin,Christchurch,Otago,Canterbury
+E19228,Campus South,Hagley Park,WALK_OR_JOG,15,EDUCATION,Campus South,-45.86793792,170.51211679,Hagley Park,-43.53053792,172.61981252,308.68555238380503,Dunedin,Christchurch,Otago,Canterbury

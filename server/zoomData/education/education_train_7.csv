@@ -1,0 +1,5 @@
+id,SA2_name_usual_residence_address,SA2_name_educational_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1
+E1492,Aka Aka,Auckland-University,TRAIN,9,EDUCATION,Aka Aka,-37.29132737,174.77509206,Auckland-University,-36.85143057,174.76906469,48.91721536050543,Franklin,Waitakere,Auckland,Auckland
+E1493,Tuakau Rural,Auckland-University,TRAIN,6,EDUCATION,Tuakau Rural,-37.28621227,174.95229059,Auckland-University,-36.85143057,174.76906469,51.005482817673766,Franklin,Waitakere,Waikato,Auckland
+E1494,Tuakau North,Auckland-University,TRAIN,9,EDUCATION,Tuakau North,-37.25721309,174.94816256,Auckland-University,-36.85143057,174.76906469,47.83820749743529,Franklin,Waitakere,Waikato,Auckland
+E1496,Pokeno,Auckland-University,TRAIN,21,EDUCATION,Pokeno,-37.24416888,175.02021530000005,Auckland-University,-36.85143057,174.76906469,49.02974914074906,Franklin,Waitakere,Waikato,Auckland

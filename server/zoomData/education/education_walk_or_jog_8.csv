@@ -1,0 +1,72 @@
+id,SA2_name_usual_residence_address,SA2_name_educational_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1
+E100,Kaipara Coastal,Whangarei Central,WALK_OR_JOG,9,EDUCATION,Kaipara Coastal,-35.72900181,173.65124289,Whangarei Central,-35.72846995,174.32430322,60.75505575069115,Kaipara,Whangarei,Northland,Northland
+E103,Ruawai-Matakohe,Whangarei Central,WALK_OR_JOG,6,EDUCATION,Ruawai-Matakohe,-36.08477059,174.14649781,Whangarei Central,-35.72846995,174.32430322,42.73287395865936,Kaipara,Whangarei,Northland,Northland
+E612,Kaikohe,Manurewa East,WALK_OR_JOG,6,EDUCATION,Kaikohe,-35.40792422,173.79767516,Manurewa East,-37.02583832,174.90610927,205.55176863120468,Far North,Franklin,Northland,Auckland
+E1497,Tamahere North,Auckland-University,WALK_OR_JOG,9,EDUCATION,Tamahere North,-37.8125973,175.35271026,Auckland-University,-36.85143057,174.76906469,118.68173085826952,Waikato,Waitakere,Waikato,Auckland
+E1505,Hamilton Lake,Auckland-University,WALK_OR_JOG,9,EDUCATION,Hamilton Lake,-37.79791394,175.27349231,Auckland-University,-36.85143057,174.76906469,114.30510280473995,Hamilton,Waitakere,Waikato,Auckland
+E1508,Hamilton West,Auckland-University,WALK_OR_JOG,9,EDUCATION,Hamilton West,-37.80074182,175.2844169,Auckland-University,-36.85143057,174.76906469,114.97375248901724,Hamilton,Waitakere,Waikato,Auckland
+E1510,Melville North,Auckland-University,WALK_OR_JOG,12,EDUCATION,Melville North,-37.81091872,175.27938651,Auckland-University,-36.85143057,174.76906469,115.83839313838122,Hamilton,Waitakere,Waikato,Auckland
+E1520,Bethlehem Central,Auckland-University,WALK_OR_JOG,6,EDUCATION,Bethlehem Central,-37.706587899999995,176.11498118,Auckland-University,-36.85143057,174.76906469,152.38687826070344,Western Bay of Plenty,Waitakere,Bay of Plenty,Auckland
+E1529,Westown ,Auckland-University,WALK_OR_JOG,9,EDUCATION,Westown,-39.0747742,174.06011109,Auckland-University,-36.85143057,174.76906469,254.9145330895776,New Plymouth,Waitakere,Taranaki,Auckland
+E6222,Wellington University,Shortland Street,WALK_OR_JOG,9,EDUCATION,Wellington University,-41.289084,174.7676253,Shortland Street,-36.84736853,174.76823915,493.8962287015338,Wellington,Waitakere,Wellington,Auckland
+E6223,Wellington Central,Shortland Street,WALK_OR_JOG,9,EDUCATION,Wellington Central,-41.2849345,174.77572593,Shortland Street,-36.84736853,174.76823915,493.43524522729035,Wellington,Waitakere,Wellington,Auckland
+E6930,Glendowie North,Campus South,WALK_OR_JOG,6,EDUCATION,Glendowie North,-36.85540475,174.87371093,Campus South,-45.86793792,170.51211679,1065.7696583901904,Waitakere,Dunedin,Auckland,Otago
+E6932,Highfield North,Campus South,WALK_OR_JOG,6,EDUCATION,Highfield North,-44.38615156,171.22318733,Campus South,-45.86793792,170.51211679,173.95244993771018,Timaru,Dunedin,Canterbury,Otago
+E6933,South Hill,Campus South,WALK_OR_JOG,6,EDUCATION,South Hill,-45.10579567,170.96138565,Campus South,-45.86793792,170.51211679,91.69778078392817,Waitaki,Dunedin,Otago,Otago
+E9110,Waipa Valley,Hamilton East Village,WALK_OR_JOG,6,EDUCATION,Waipa Valley,-38.45839327,175.27657366,Hamilton East Village,-37.79028168,175.29324653,74.30493317984525,Waitomo,Hamilton,Waikato,Waikato
+E9439,Waipa Valley,Hamilton Lake,WALK_OR_JOG,6,EDUCATION,Waipa Valley,-38.45839327,175.27657366,Hamilton Lake,-37.79791394,175.27349231,73.44244519432014,Waitomo,Hamilton,Waikato,Waikato
+E10886,Toko,Strandon,WALK_OR_JOG,6,EDUCATION,Toko,-39.31711879,174.34830199,Strandon,-39.05369313,174.09475657,36.54486924025962,Stratford,New Plymouth,Taranaki,Taranaki
+E10889,Cape Egmont,Strandon,WALK_OR_JOG,6,EDUCATION,Cape Egmont,-39.31360193,173.87159509999995,Strandon,-39.05369313,174.09475657,34.715940049187175,South Taranaki,New Plymouth,Taranaki,Taranaki
+E10891,Manaia-Kapuni,Strandon,WALK_OR_JOG,9,EDUCATION,Manaia-Kapuni,-39.51778061,174.12379578,Strandon,-39.05369313,174.09475657,51.66465759439807,South Taranaki,New Plymouth,Taranaki,Taranaki
+E10892,Okaiawa,Strandon,WALK_OR_JOG,9,EDUCATION,Okaiawa,-39.5375084,174.21758799999995,Strandon,-39.05369313,174.09475657,54.826321711557206,South Taranaki,New Plymouth,Taranaki,Taranaki
+E10894,Manutahi-Waitotora,Strandon,WALK_OR_JOG,6,EDUCATION,Manutahi-Waitotora,-39.78384701,174.57529167,Strandon,-39.05369313,174.09475657,91.079927396796,South Taranaki,New Plymouth,Taranaki,Taranaki
+E11733,Te Teko Lakes,Kuirau,WALK_OR_JOG,6,EDUCATION,Te Teko Lakes,-38.05714893,176.80257253,Kuirau,-38.13474084,176.24242829,49.77056805043964,Whakatane,Rotorua,Bay of Plenty,Waikato
+E12138,Waipaoa,McLean Park,WALK_OR_JOG,6,EDUCATION,Waipaoa,-38.34127548,177.70733968,McLean Park,-39.5083024,176.9160949,146.71124415193358,Gisborne,Hastings,Gisborne,Hawke's Bay
+E12140,Puketitiri-Tutira,McLean Park,WALK_OR_JOG,9,EDUCATION,Puketitiri-Tutira,-39.19745874,176.64300698,McLean Park,-39.5083024,176.9160949,41.785447505828685,Hastings,Hastings,Hawke's Bay,Hawke's Bay
+E12141,Sherenden-Crownthorpe,McLean Park,WALK_OR_JOG,6,EDUCATION,Sherenden-Crownthorpe,-39.47575154,176.49801476,McLean Park,-39.5083024,176.9160949,36.057788465172116,Hastings,Hastings,Hawke's Bay,Hawke's Bay
+E12180,Taurekaitai,McLean Park,WALK_OR_JOG,9,EDUCATION,Taurekaitai,-40.20716661,176.53337716,McLean Park,-39.5083024,176.9160949,84.29716362707585,Central Hawke's Bay,Hastings,Hawke's Bay,Hawke's Bay
+E12181,Owhanga,McLean Park,WALK_OR_JOG,6,EDUCATION,Owhanga,-40.51321329,176.31039241,McLean Park,-39.5083024,176.9160949,123.07281493441424,Tararua,Hastings,Manawatu-Wanganui,Hawke's Bay
+E12445,Mahia,Bluff Hill,WALK_OR_JOG,9,EDUCATION,Mahia,-38.98042026,177.71581946,Bluff Hill,-39.48081517,176.91538913,88.59440367972334,Wairoa,Napier,Hawke's Bay,Hawke's Bay
+E12446,Puketitiri-Tutira,Bluff Hill,WALK_OR_JOG,9,EDUCATION,Puketitiri-Tutira,-39.19745874,176.64300698,Bluff Hill,-39.48081517,176.91538913,39.26128833130325,Hastings,Napier,Hawke's Bay,Hawke's Bay
+E12447,Maraekakaho,Bluff Hill,WALK_OR_JOG,9,EDUCATION,Maraekakaho,-39.62634976,176.29699518,Bluff Hill,-39.48081517,176.91538913,55.43233881782803,Hastings,Napier,Hawke's Bay,Hawke's Bay
+E12484,Mangarara,Bluff Hill,WALK_OR_JOG,6,EDUCATION,Mangarara,-39.99003717,176.76264858,Bluff Hill,-39.48081517,176.91538913,58.109662575558794,Central Hawke's Bay,Napier,Hawke's Bay,Hawke's Bay
+E13741,Mokai Patea,Kimbolton North,WALK_OR_JOG,18,EDUCATION,Mokai Patea,-39.59566818,175.89442958,Kimbolton North,-40.2074565,175.58214784,73.05728120299966,Rangitikei,Manawatu,Manawatu-Wanganui,Manawatu-Wanganui
+E13743,Otairi,Kimbolton North,WALK_OR_JOG,9,EDUCATION,Otairi,-39.8895865,175.52547495,Kimbolton North,-40.2074565,175.58214784,35.6731996495062,Rangitikei,Manawatu,Manawatu-Wanganui,Manawatu-Wanganui
+E13744,Taihape,Kimbolton North,WALK_OR_JOG,12,EDUCATION,Taihape,-39.67806733,175.79677339,Kimbolton North,-40.2074565,175.58214784,61.64343589147225,Rangitikei,Manawatu,Manawatu-Wanganui,Manawatu-Wanganui
+E13769,Owhanga,Kimbolton North,WALK_OR_JOG,6,EDUCATION,Owhanga,-40.51321329,176.31039241,Kimbolton North,-40.2074565,175.58214784,70.44980341127182,Tararua,Manawatu,Manawatu-Wanganui,Manawatu-Wanganui
+E13943,Kopuaranga,Turitea,WALK_OR_JOG,15,EDUCATION,Kopuaranga,-40.79823344,175.63791121,Turitea,-40.39053678,175.60862529,45.40118686638255,Masterton,Palmerston North,Wellington,Manawatu-Wanganui
+E14049,Mokai Patea,Tremaine,WALK_OR_JOG,6,EDUCATION,Mokai Patea,-39.59566818,175.89442958,Tremaine,-40.33969042,175.59865691,86.4858979723622,Rangitikei,Palmerston North,Manawatu-Wanganui,Manawatu-Wanganui
+E14109,Dannevirke East,Tremaine,WALK_OR_JOG,6,EDUCATION,Dannevirke East,-40.21019552,176.10213546,Tremaine,-40.33969042,175.59865691,45.07494842818035,Tararua,Palmerston North,Manawatu-Wanganui,Manawatu-Wanganui
+E17478,Ilam North,Nelson Central-Trafalgar,WALK_OR_JOG,9,EDUCATION,Ilam North,-43.51329549,172.56911159999999,Nelson Central-Trafalgar,-41.27273863,173.28210878,255.923551473046,Christchurch,Nelson,Canterbury,Nelson
+E17479,Ilam University,Nelson Central-Trafalgar,WALK_OR_JOG,12,EDUCATION,Ilam University,-43.52336127,172.57826459,Nelson Central-Trafalgar,-41.27273863,173.28210878,256.8420781589935,Christchurch,Nelson,Canterbury,Nelson
+E17480,Bush Inn,Nelson Central-Trafalgar,WALK_OR_JOG,9,EDUCATION,Bush Inn,-43.52942223,172.576402,Nelson Central-Trafalgar,-41.27273863,173.28210878,257.5325046118435,Christchurch,Nelson,Canterbury,Nelson
+E17983,Woodbourne,Merivale,WALK_OR_JOG,6,EDUCATION,Woodbourne,-41.5308031,173.90363794,Merivale,-43.51635206,172.61911331,244.58588522909253,Marlborough,Christchurch,Marlborough,Canterbury
+E17984,Kaikoura Ranges,Merivale,WALK_OR_JOG,6,EDUCATION,Kaikoura Ranges,-42.19710797,173.64408497,Merivale,-43.51635206,172.61911331,168.81331358532404,Kaikoura,Christchurch,Canterbury,Canterbury
+E17985,Amuri,Merivale,WALK_OR_JOG,9,EDUCATION,Amuri,-42.64453066,172.95870738,Merivale,-43.51635206,172.61911331,100.78892437609659,Hurunui,Christchurch,Canterbury,Canterbury
+E18062,Southbridge,Merivale,WALK_OR_JOG,6,EDUCATION,Southbridge,-43.79254412,172.21023844,Merivale,-43.51635206,172.61911331,45.00238874435411,Selwyn,Christchurch,Canterbury,Canterbury
+E18069,Chertsey,Merivale,WALK_OR_JOG,9,EDUCATION,Chertsey,-43.82506248,171.96646486,Merivale,-43.51635206,172.61911331,62.71952602062064,Ashburton,Christchurch,Canterbury,Canterbury
+E18234,Amuri,Deans Bush,WALK_OR_JOG,6,EDUCATION,Amuri,-42.64453066,172.95870738,Deans Bush,-43.52473249,172.59447189,102.24586973323143,Hurunui,Christchurch,Canterbury,Canterbury
+E18235,Upper Hurunui,Deans Bush,WALK_OR_JOG,6,EDUCATION,Upper Hurunui,-42.93387941,172.54733326,Deans Bush,-43.52473249,172.59447189,65.81076939306023,Hurunui,Christchurch,Canterbury,Canterbury
+E18493,Springston,Christchurch Central-South,WALK_OR_JOG,6,EDUCATION,Springston,-43.65558055,172.37556591,Christchurch Central-South,-43.53815861,172.64240289,25.143777766665245,Selwyn,Christchurch,Canterbury,Canterbury
+E19223,North East Valley Knox,Hagley Park,WALK_OR_JOG,18,EDUCATION,North East Valley Knox,-45.85238619,170.52237253,Hagley Park,-43.53053792,172.61981252,306.80483091680685,Dunedin,Christchurch,Otago,Canterbury
+E19224,Gardens (Dunedin City),Hagley Park,WALK_OR_JOG,27,EDUCATION,Gardens (Dunedin City),-45.85877849,170.51916854,Hagley Park,-43.53053792,172.61981252,307.53471216146283,Dunedin,Christchurch,Otago,Canterbury
+E19225,Campus West,Hagley Park,WALK_OR_JOG,24,EDUCATION,Campus West,-45.86290217,170.50786264,Hagley Park,-43.53053792,172.61981252,308.4000174635847,Dunedin,Christchurch,Otago,Canterbury
+E19226,Royal Terrace,Hagley Park,WALK_OR_JOG,9,EDUCATION,Royal Terrace,-45.86668004,170.50466615,Hagley Park,-43.53053792,172.61981252,308.8869183522036,Dunedin,Christchurch,Otago,Canterbury
+E19227,Campus North,Hagley Park,WALK_OR_JOG,30,EDUCATION,Campus North,-45.86491215,170.51950247,Hagley Park,-43.53053792,172.61981252,308.08999776914015,Dunedin,Christchurch,Otago,Canterbury
+E19228,Campus South,Hagley Park,WALK_OR_JOG,15,EDUCATION,Campus South,-45.86793792,170.51211679,Hagley Park,-43.53053792,172.61981252,308.68555238380503,Dunedin,Christchurch,Otago,Canterbury
+E20845,Opua (Mackenzie District),Highfield North,WALK_OR_JOG,6,EDUCATION,Opua (Mackenzie District),-43.856187299999995,171.06857118,Highfield North,-44.38615156,171.22318733,60.20786677870886,Mackenzie,Timaru,Canterbury,Canterbury
+E20848,Ashburton Forks,Fraser Park,WALK_OR_JOG,9,EDUCATION,Ashburton Forks,-43.78492258,171.43181981,Fraser Park,-44.39596592,171.23045071,69.82222952863627,Ashburton,Timaru,Canterbury,Canterbury
+E20849,Ealing-Lowcliffe,Fraser Park,WALK_OR_JOG,6,EDUCATION,Ealing-Lowcliffe,-44.03656373,171.49741748,Fraser Park,-44.39596592,171.23045071,45.27420611317113,Ashburton,Timaru,Canterbury,Canterbury
+E20850,Eiffelton,Fraser Park,WALK_OR_JOG,6,EDUCATION,Eiffelton,-43.95897704,171.66500519,Fraser Park,-44.39596592,171.23045071,59.682430270544025,Ashburton,Timaru,Canterbury,Canterbury
+E21016,Opua (Mackenzie District),Parkside,WALK_OR_JOG,6,EDUCATION,Opua (Mackenzie District),-43.856187299999995,171.06857118,Parkside,-44.40469035,171.24632921,62.61899140570246,Mackenzie,Timaru,Canterbury,Canterbury
+E21267,Manuherikia-Ida Valleys,Alexandra North,WALK_OR_JOG,6,EDUCATION,Manuherikia-Ida Valleys,-45.0524266,169.7255609,Alexandra North,-45.24363835,169.38984744,33.84095169202304,Central Otago,Central Otago,Otago,Otago
+E21273,Teviot Valley,Alexandra North,WALK_OR_JOG,6,EDUCATION,Teviot Valley,-45.58227059,169.42667896,Alexandra North,-45.24363835,169.38984744,37.763782807920975,Central Otago,Central Otago,Otago,Otago
+E21280,Maniototo,Maori Hill,WALK_OR_JOG,9,EDUCATION,Maniototo,-45.25282329,170.02086908,Maori Hill,-45.85777797,170.50064652,76.94399039747528,Central Otago,Dunedin,Otago,Otago
+E21307,West Otago,Maori Hill,WALK_OR_JOG,6,EDUCATION,West Otago,-45.83535422,169.21290702,Maori Hill,-45.85777797,170.50064652,99.77375411734371,Clutha,Dunedin,Otago,Otago
+E21308,Bruce,Maori Hill,WALK_OR_JOG,6,EDUCATION,Bruce,-46.07247342,170.08655606,Maori Hill,-45.85777797,170.50064652,39.928297542435004,Clutha,Dunedin,Otago,Otago
+E22023,Lumsden-Balfour,Gore West,WALK_OR_JOG,6,EDUCATION,Lumsden-Balfour,-45.74921739,168.61002109,Gore West,-46.10626401,168.92356176,46.52201231633494,Southland,Gore,Southland,Southland
+E22085,Mossburn,Gladstone (Invercargill City),WALK_OR_JOG,6,EDUCATION,Mossburn,-45.5465414,168.37465706,Gladstone (Invercargill City),-46.39213483,168.35330059,94.0401841133203,Southland,Invercargill,Southland,Southland
+E22088,Oreti River,Gladstone (Invercargill City),WALK_OR_JOG,9,EDUCATION,Oreti River,-46.00268489,168.31789888,Gladstone (Invercargill City),-46.39213483,168.35330059,43.39049192113564,Southland,Invercargill,Southland,Southland
+E22098,Wyndham-Catlins,Gladstone (Invercargill City),WALK_OR_JOG,12,EDUCATION,Wyndham-Catlins,-46.47283276,168.99193119999995,Gladstone (Invercargill City),-46.39213483,168.35330059,49.75806846609748,Southland,Invercargill,Southland,Southland
+E22127,Longwood Forest,Georgetown,WALK_OR_JOG,6,EDUCATION,Longwood Forest,-46.01707924,167.67301087,Georgetown,-46.41932389,168.36900636,69.77017212768735,Southland,Invercargill,Southland,Southland
+E22139,Wyndham-Catlins,Georgetown,WALK_OR_JOG,15,EDUCATION,Wyndham-Catlins,-46.47283276,168.99193119999995,Georgetown,-46.41932389,168.36900636,48.09620416044082,Southland,Invercargill,Southland,Southland

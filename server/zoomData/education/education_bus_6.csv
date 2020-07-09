@@ -1,0 +1,23 @@
+id,SA2_name_usual_residence_address,SA2_name_educational_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1
+E13,North Cape,Kaitaia West,BUS,-936,EDUCATION,North Cape,-34.50545276,172.77554997,Kaitaia West,-35.12178170000001,173.26717397,81.92088293451681,Far North,Far North,Northland,Northland
+E894,Kaipara Coastal,Pukenui,BUS,-993,EDUCATION,Kaipara Coastal,-35.72900181,173.65124289,Pukenui,-35.74644668,174.25502298,54.52970094582493,Kaipara,Whangarei,Northland,Northland
+E1573,Bream Bay,Hilltop (Taupo District),BUS,-993,EDUCATION,Bream Bay,-35.91496801,174.38390319,Hilltop (Taupo District),-38.69976213,176.09915047,344.7999792325415,Whangarei,Taupo,Northland,Waikato
+E1816,Cape Rodney,Albany Central,BUS,-990,EDUCATION,Cape Rodney,-36.25433822,174.62638047,Albany Central,-36.72820186,174.70483518,53.15593788759575,Rodney,Waitakere,Auckland,Auckland
+E10296,Lynmore,Bethlehem Central,BUS,-993,EDUCATION,Lynmore,-38.14940578,176.28895362,Bethlehem Central,-37.706587899999995,176.11498118,51.549200174394855,Rotorua,Western Bay of Plenty,Bay of Plenty,Bay of Plenty
+E13356,Te Roti-Moeroa,Westown ,BUS,-993,EDUCATION,Te Roti-Moeroa,-39.43904821,174.49347034,Westown,-39.0747742,174.06011109,55.07155859424114,South Taranaki,New Plymouth,Taranaki,Taranaki
+E17627,Upper Wairau ,Murchison-Nelson Lakes,BUS,-987,EDUCATION,Upper Wairau,-41.71793751,173.30406264,Murchison-Nelson Lakes,-41.88459953,172.4650349,71.97462388348177,Marlborough,Tasman,Marlborough,Nelson
+E17839,Upper Wairau ,Springlands,BUS,-969,EDUCATION,Upper Wairau,-41.71793751,173.30406264,Springlands,-41.50422292,173.93617831,57.675318050976756,Marlborough,Marlborough,Marlborough,Marlborough
+E17843,Awatere,Springlands,BUS,-981,EDUCATION,Awatere,-42.09611412,173.2944504,Springlands,-41.50422292,173.93617831,84.62406138014046,Marlborough,Marlborough,Marlborough,Marlborough
+E17875,Upper Wairau ,Whitney East,BUS,-972,EDUCATION,Upper Wairau,-41.71793751,173.30406264,Whitney East,-41.52059859,173.95891011,58.69127006639549,Marlborough,Marlborough,Marlborough,Marlborough
+E17878,Awatere,Whitney East,BUS,-981,EDUCATION,Awatere,-42.09611412,173.2944504,Whitney East,-41.52059859,173.95891011,84.42810407181892,Marlborough,Marlborough,Marlborough,Marlborough
+E17932,Upper Wairau ,Woodbourne,BUS,-981,EDUCATION,Upper Wairau,-41.71793751,173.30406264,Woodbourne,-41.5308031,173.90363794,54.00615928036586,Marlborough,Marlborough,Marlborough,Marlborough
+E18095,Amuri,Kaikoura,BUS,-990,EDUCATION,Amuri,-42.64453066,172.95870738,Kaikoura,-42.4127248,173.67667951,64.2317982033704,Hurunui,Kaikoura,Canterbury,Canterbury
+E18097,Karamea,Buller Coalfields,BUS,-993,EDUCATION,Karamea,-41.29229662,172.26451215,Buller Coalfields,-41.7281935,171.86681611,58.70155508425428,Buller,Buller,West Coast,West Coast
+E20829,Ben McLeod,Geraldine,BUS,-993,EDUCATION,Ben McLeod,-43.68469309,170.89087582,Geraldine,-44.09410338,171.23854167,53.372846848828964,Timaru,Timaru,Canterbury,Canterbury
+E21150,Aviemore,Danseys Pass,BUS,-990,EDUCATION,Aviemore,-44.47471306,169.95056342,Danseys Pass,-44.89434996,170.50210901,63.863845528753956,Waitaki,Waitaki,Canterbury,Canterbury
+E22022,Riversdale-Piano Flat,Gore West,BUS,-966,EDUCATION,Riversdale-Piano Flat,-45.48645863,169.03162811,Gore West,-46.10626401,168.92356176,69.42654933603336,Southland,Gore,Southland,Southland
+E22076,Longwood Forest,Winton,BUS,-981,EDUCATION,Longwood Forest,-46.01707924,167.67301087,Winton,-46.14486071,168.32382512,52.16891342021668,Southland,Southland,Southland,Southland
+E22167,Mossburn,Oreti River,BUS,-990,EDUCATION,Mossburn,-45.5465414,168.37465706,Oreti River,-46.00268489,168.31789888,50.91149867794292,Southland,Southland,Southland,Southland
+E22183,Waikaka,Riversdale-Piano Flat,BUS,-981,EDUCATION,Waikaka,-45.96604044,168.98043741,Riversdale-Piano Flat,-45.48645863,169.03162811,53.47490072323534,Gore,Southland,Southland,Southland
+E22184,Riversdale-Piano Flat,Gore Main,BUS,-987,EDUCATION,Riversdale-Piano Flat,-45.48645863,169.03162811,Gore Main,-46.10427676,168.9374566,69.08508774502185,Southland,Gore,Southland,Southland
+E22192,Riversdale-Piano Flat,Gore North,BUS,-993,EDUCATION,Riversdale-Piano Flat,-45.48645863,169.03162811,Gore North,-46.09161463,168.93868798,67.67502791406037,Southland,Gore,Southland,Southland

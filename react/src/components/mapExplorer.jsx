@@ -72,6 +72,7 @@ function MapExplorer({
   const history = useHistory();
 
   const mapExplorerRef = useRef();
+  const leafletMapRef = useRef();
 
   const [currentMap, setCurrentMap] = useState({
     code: districtCode,
@@ -98,9 +99,22 @@ function MapExplorer({
     hoveredDestination: "",
   })
 
-  const [currentCommuteTypes, setCurrentCommuteTypes] = useState(
-    [] // Empty = show all
+  const [currentCommuteTypes] = useState(
+    // Object.values(MODES_OF_TRANSPORT) // Select all
+    [
+      "Drive own vehicle"
+    ]
   )
+
+  const setCurrentCommuteTypes = (e) => {
+    console.log('setCurrentCommuteTypes: ', currentCommuteTypes);
+    console.log(leafletMapRef);
+    leafletMapRef.current.updateData();
+  }
+
+  useEffect(()=>{
+    console.log('current commute types changed: ', currentCommuteTypes)
+  })
 
   const updateCurrentData = () => {
     // console.log(currentMap.option);
@@ -428,6 +442,8 @@ function MapExplorer({
                   setHoveredData={setHoveredData}
                   statistic={mapStatistic}
                   isCountryLoaded={isCountryLoaded}
+                  currentCommuteTypes={currentCommuteTypes}
+                  leafletMapRef={leafletMapRef}
                 />
 
                 <div className="tabs-container">

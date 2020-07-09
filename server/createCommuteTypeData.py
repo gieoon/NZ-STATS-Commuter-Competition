@@ -8,6 +8,7 @@ pd.options.mode.chained_assignment = None  # default='warn'
 
 def extractColumnsE(df):
     return df[[
+        'id',
         'SA2_name_usual_residence_address',
         'SA2_name_educational_address',
         'COMMUTE_TYPE',
@@ -21,11 +22,14 @@ def extractColumnsE(df):
         'destination_LONGITUDE',
         'HAVERSINE_DISTANCE',
         'DEPARTURE_NAME_2',
-        'DESTINATION_NAME_2'
+        'DESTINATION_NAME_2',
+        'DEPARTURE_NAME_1',
+        'DESTINATION_NAME_1'
     ]]
 
 def extractColumnsW(df):
     return df[[
+        'id',
         'SA2_name_usual_residence_address',
         'SA2_name_workplace_address',
         'COMMUTE_TYPE',
@@ -39,7 +43,9 @@ def extractColumnsW(df):
         'destination_LONGITUDE',
         'HAVERSINE_DISTANCE',
         'DEPARTURE_NAME_2',
-        'DESTINATION_NAME_2'
+        'DESTINATION_NAME_2',
+        'DEPARTURE_NAME_1',
+        'DESTINATION_NAME_1'
     ]]
 '''
     EDUCATION
@@ -91,17 +97,17 @@ walk_or_jog_df['COMMUTE_TYPE'] = 'WALK_OR_JOG'
 walk_or_jog_df = extractColumnsE(walk_or_jog_df)
 walk_or_jog_df.to_csv('./commuteData/education/walk_or_jog.csv', index=False)
 
-school_bus_df = education_df.loc[education_df['School_bus'] > 0]
-school_bus_df['COUNT'] = school_bus_df['School_bus']
-school_bus_df['COMMUTE_TYPE'] = 'SCHOOL_BUS'
+school_bus_df = education_df.loc[(education_df['School_bus'] > 0) | (education_df['Public_bus'] > 0)]
+school_bus_df['COUNT'] = school_bus_df['School_bus'] + school_bus_df['Public_bus']
+school_bus_df['COMMUTE_TYPE'] = 'BUS'#'SCHOOL_BUS'
 school_bus_df = extractColumnsE(school_bus_df)
-school_bus_df.to_csv('./commuteData/education/school_bus.csv', index=False)
+school_bus_df.to_csv('./commuteData/education/bus.csv', index=False)
 
-public_bus_df = education_df.loc[education_df['Public_bus'] > 0]
-public_bus_df['COUNT'] = public_bus_df['Public_bus']
-public_bus_df['COMMUTE_TYPE'] = 'PUBLIC_BUS'
-public_bus_df = extractColumnsE(public_bus_df)
-public_bus_df.to_csv('./commuteData/education/public_bus.csv', index=False)
+# public_bus_df = education_df.loc[education_df['Public_bus'] > 0]
+# public_bus_df['COUNT'] = public_bus_df['Public_bus']
+# public_bus_df['COMMUTE_TYPE'] = 'PUBLIC_BUS'
+# public_bus_df = extractColumnsE(public_bus_df)
+# public_bus_df.to_csv('./commuteData/education/public_bus.csv', index=False)
 
 ferry_df = education_df.loc[education_df['Ferry'] > 0]
 ferry_df['COUNT'] = ferry_df['Ferry']
@@ -130,17 +136,17 @@ work_at_home_df['COMMUTE_TYPE'] = 'WORK_AT_HOME'
 work_at_home_df = extractColumnsW(work_at_home_df)
 work_at_home_df.to_csv('./commuteData/work/home.csv', index=False)
 
-w_own_vehicle_df = work_df.loc[work_df['Drive_a_private_car_truck_or_van'] > 0]
-w_own_vehicle_df['COUNT'] = w_own_vehicle_df['Drive_a_private_car_truck_or_van']
+w_own_vehicle_df = work_df.loc[(work_df['Drive_a_private_car_truck_or_van'] > 0) | (work_df['Drive_a_company_car_truck_or_van'] > 0)]
+w_own_vehicle_df['COUNT'] = w_own_vehicle_df['Drive_a_private_car_truck_or_van'] + w_own_vehicle_df['Drive_a_company_car_truck_or_van']
 w_own_vehicle_df['COMMUTE_TYPE'] = 'DRIVE_OWN_VEHICLE'
 w_own_vehicle_df = extractColumnsW(w_own_vehicle_df)
 w_own_vehicle_df.to_csv('./commuteData/work/own_vehicle.csv', index=False)
 
-w_company_vehicle_df = work_df.loc[work_df['Drive_a_company_car_truck_or_van'] > 0]
-w_company_vehicle_df['COUNT'] = w_company_vehicle_df['Drive_a_company_car_truck_or_van']
-w_company_vehicle_df['COMMUTE_TYPE'] = 'DRIVE_COMPANY_VEHICLE'
-w_company_vehicle_df = extractColumnsW(w_company_vehicle_df)
-w_company_vehicle_df.to_csv('./commuteData/work/company_vehicle.csv', index=False)
+# w_company_vehicle_df = work_df.loc[work_df['Drive_a_company_car_truck_or_van'] > 0]
+# w_company_vehicle_df['COUNT'] = w_company_vehicle_df['Drive_a_company_car_truck_or_van']
+# w_company_vehicle_df['COMMUTE_TYPE'] = 'DRIVE_COMPANY_VEHICLE'
+# w_company_vehicle_df = extractColumnsW(w_company_vehicle_df)
+# w_company_vehicle_df.to_csv('./commuteData/work/company_vehicle.csv', index=False)
 
 w_passenger_in_vehicle = work_df.loc[work_df['Passenger_in_a_car_truck_van_or_company_bus'] > 0]
 w_passenger_in_vehicle['COUNT'] = w_passenger_in_vehicle['Passenger_in_a_car_truck_van_or_company_bus']
@@ -152,7 +158,7 @@ w_public_bus = work_df.loc[work_df['Public_bus'] > 0]
 w_public_bus['COUNT'] = w_public_bus['Public_bus']
 w_public_bus['COMMUTE_TYPE'] = 'PUBLIC_BUS'
 w_public_bus = extractColumnsW(w_public_bus)
-w_public_bus.to_csv('./commuteData/work/public_bus.csv', index=False)
+w_public_bus.to_csv('./commuteData/work/bus.csv', index=False)
 
 w_train_df = work_df.loc[work_df['Train'] > 0]
 w_train_df['COUNT'] = w_train_df['Train']

@@ -119,7 +119,7 @@ function Search({
     return (
         <div className="Search">
           <animated.label style={trail[0]}>
-            {t('Search your regional district')}
+            {t('Search a location in NZ')}
           </animated.label>
           <animated.div className="line" style={trail[1]}></animated.div>
     
@@ -187,6 +187,11 @@ function Search({
                       to={"../../location/" + result.departure_LATITUDE + "/" + result.departure_LONGITUDE}
                       // target="_noblank"
                       className="essential-result"
+
+                      onClick={()=>{
+                        setSearchValue('');
+                        setResults([]);
+                      }}
                     >
                       <div className="result-top">
                         <div className="result-top-left">

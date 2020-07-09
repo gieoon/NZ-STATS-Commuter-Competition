@@ -73,6 +73,8 @@ function MapVisualizer({
   setHighlightedData,
   statistic,
   isCountryLoaded,
+  currentCommuteTypes,
+  leafletMapRef,
 }) {
   const { t } = useTranslation();
   const svgRef = useRef(null);
@@ -159,8 +161,6 @@ function MapVisualizer({
 
     const projection = geoMercator().fitSize([width, height], topology);
     const path = geoPath(projection);
-
-    
 
     let features =
       currentMap.view === MAP_TYPES.DISTRICT
@@ -769,6 +769,8 @@ function MapVisualizer({
         setHighlightedData={setHighlightedData}
         currentMap={currentMap}
         centroidData={centroidData}
+        currentCommuteTypes={currentCommuteTypes}
+        ref={leafletMapRef}
       />
       {/* <div className="svg-parent">
         <svg

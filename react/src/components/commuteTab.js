@@ -22,11 +22,9 @@ function CommuteTab({
 
     const commuteBtnRef = useRef(null);
 
-    const [focused, setFocused] = useState(true);
-
-    useEffect(()=>{
-        // console.log("useEffect: ", currentCommuteTypes);
-    })
+    const [focused, setFocused] = useState(
+        currentCommuteTypes.includes(commuteType)
+    );
 
     const getIcon = () => {
         switch(commuteType){

@@ -1,0 +1,2 @@
+id,SA2_name_usual_residence_address,SA2_name_educational_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1
+E1573,Bream Bay,Hilltop (Taupo District),BUS,-993,EDUCATION,Bream Bay,-35.91496801,174.38390319,Hilltop (Taupo District),-38.69976213,176.09915047,344.7999792325415,Whangarei,Taupo,Northland,Waikato
