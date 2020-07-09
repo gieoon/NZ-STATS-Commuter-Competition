@@ -21,8 +21,8 @@ const HIGHLIGHTED_STROKE_WEIGHT = INITIAL_STROKE_WEIGHT * 3.5;
 
 const curvesWork = {}, 
     curvesEducation = {};
-global.curvesWork = curvesWork; // Allows for console debugging by calling >> curves in Chrome
-global.curvesEducation = curvesEducation;
+global.curvesWork2 = curvesWork; // Allows for console debugging by calling >> curves in Chrome
+global.curvesEducation2 = curvesEducation;
 
 function LeafletMap({
     setHoveredData,
@@ -188,11 +188,11 @@ function LeafletMap({
     }
 
     const updateCurves = (d, dataType) =>{
-        // console.log('updating zone data: ', d);
+        console.log("dataType: ", dataType)
         if(!d) return;
         var curvesToAdd = checkCurvesExist(d, dataType);
         
-        // console.log("curves to add: ", curvesToAdd);
+        console.log("curves to add: ", curvesToAdd.length);
         // console.log("state curves: ", Object.keys(curves).length);
         for(var r of curvesToAdd){
             const curve = createCurve(
@@ -203,11 +203,15 @@ function LeafletMap({
                 r,
                 dataType
             );
-            if(dataType === "WORK")
+            if(dataType === "WORK"){
                 curvesWork[r.id] = curve;
-            else if(dataType === "EDUCATION")
+            }
+            else if(dataType === "EDUCATION"){
                 curvesEducation[r.id] = curve;
+            }
         }
+        console.log("curvesWork: ", Object.keys(curvesWork).length)
+        console.log("curvesEducation: ", Object.keys(curvesEducation).length)
     }
 
     // Checks if the curve is already drawn on the map, if it is, exclude it.
@@ -218,9 +222,11 @@ function LeafletMap({
         const toDelete = (dataType === "WORK" 
             ? curvesWork : curvesEducation);
 
-        console.log("curves of this commute: ", toDelete);
+        // console.log("curves of this commute: ", toDelete);
+        // console.log('curvesWork: ', Object.keys(curvesWork).length)
+        // console.log("curvesEducation: ", Object.keys(curvesEducation).length);
         // console.log(workZoneData, row, dataType);
-        console.log('incoming data: ', newData);
+        console.log('incoming data: ', newData.length);
         // If the new curve is not in the existing curves, remove it.
 
         for(var r of newData){
@@ -232,65 +238,55 @@ function LeafletMap({
             // If new curve is in existing curves, it means it is already drawn, 
             // delete it from the toRemove dictionary
             if(toDelete[r.id]){
-                toDelete[r.id] = undefined;
-                delete toDelete[r.id];
+                // toDelete[r.id] = undefined;
+                // delete toDelete[r.id];
             }
             // If commute purpose is education, and key starts with 'E'
             // Delete until proven otherwise.
-            if((dataType === "EDUCATION" && commutePurpose !== "TOTAL") && r.id.substring(0,1) === 'W'){
+            // if((dataType === "EDUCATION" && commutePurpose !== "TOTAL") && r.id.substring(0,1) === 'W'){
                 // toDelete[r.id] = undefined;
                 // delete toDelete[r.id];
-            }
-            if((dataType === "WORK" && commutePurpose !== "TOTAL") && r.id.substring(0, 1) === 'E') {
+            // }
+            // if((dataType === "WORK" && commutePurpose !== "TOTAL") && r.id.substring(0, 1) === 'E') {
                 // toDelete[r.id] = undefined;
                 // delete toDelete[r.id];
-            }
+            // }
             
             // Otherwise leave it in the array to be removed as it no longer should be drawn
         }
 
-        console.log("actually removing: ", Object.keys(toDelete));
+        // console.log("actually removing: ", Object.keys(toDelete).length);
 
-        clearDrawnObjects(toDelete, dataType);
+        // clearDrawnObjects(toDelete, dataType);
 
         return toAdd;
     }
 
     const clearDrawnObjects = (toDelete, dataType) => {
-        // console.log(dataType);
+        console.log("deleting data: ", Object.keys(toDelete).length);
         // console.log(curvesWork);
         // console.log(curvesEducation);
         for(var id of Object.keys(toDelete)){
-            var el = document.getElementById(id);
-            if(el){
-                el.classList.remove('pathFadeIn');
-                el.classList.add('pathFadeOut');
-                // console.log(el.classList);
-                // setTimeout(()=>{
+            // var el = document.getElementById(id);
+            for(var el of Array.from(document.getElementsByClassName(id))){
+                if(el){
+                    el.classList.remove('pathFadeIn');
+                    el.classList.add('pathFadeOut');
                     // Wait for animation to expire and remove from DOM
                     el.remove();
-                    // for(var el of Array.from(document.getElementsByClassName(id))){
-                    //     el.remove();
-                    // }
-                // },500)
-                if(dataType === "WORK"){
-                    // console.log('deleting: ', curvesWork[id]);
-                    curvesWork[id].remove();
-                    curvesWork[id] = undefined;
-                    delete curvesWork[id];
-                }
-                else if(dataType === "EDUCATION"){
-                    curvesEducation[id].remove();
-                    curvesEducation[id] = undefined;
-                    delete curvesEducation[id];
                 }
             }
-            
+            if(dataType === "WORK"){
+                curvesWork[id].remove();
+                curvesWork[id] = undefined;
+                delete curvesWork[id];
+            }
+            else if(dataType === "EDUCATION"){
+                curvesEducation[id].remove();
+                curvesEducation[id] = undefined;
+                delete curvesEducation[id];
+            }
         };
-
-        // Object.values(curves).forEach(curve => {
-
-        // })
 
         // toRemove = {};
         // var c = curves;
@@ -406,8 +402,8 @@ function LeafletMap({
         //.addTo(mapRef.current.leafletElement)
         .addTo(mapRef.current.leafletElement)
         // console.log(curve._path);
-        curve._path.id = obj.id;
-        // curve._path.classList.add(obj.id);
+        // curve._path.id = obj.id;
+        curve._path.classList.add(obj.id);
         curve._path.classList.add('pathFadeIn');
         // curves.push(curve);
         // console.log(mapRef.current.leafletElement)
