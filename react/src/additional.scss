@@ -343,7 +343,7 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
         h4 {
             display: table-cell;
             font-family: 'archia';
-            font-size: 8.5px !important;
+            font-size: 7.85px !important;
             font-weight: 900;
             margin-bottom: 0;
             margin-top: 0;
@@ -455,6 +455,11 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
 
         .stats {
             pointer-events: all!important;
+        }
+
+        .stats-bottom {
+            padding-left: 6px;
+            font-family: $default-font;
         }
     }
 

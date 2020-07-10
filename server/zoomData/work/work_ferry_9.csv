@@ -2,70 +2,36 @@ id,SA2_name_usual_residence_address,SA2_name_workplace_address,COMMUTE_TYPE,COUN
 W1739,Tindalls-Matakatia,Quay Street-Customs Street,FERRY,6,EDUCATION,Tindalls-Matakatia,-36.61663904,174.77704003,Quay Street-Customs Street,-36.84601989,174.77646293,25.506038639502037,Rodney,Waitakere,Auckland,Auckland
 W1742,Gulf Harbour North,Quay Street-Customs Street,FERRY,21,EDUCATION,Gulf Harbour North,-36.60949658,174.79413674,Quay Street-Customs Street,-36.84601989,174.77646293,26.347316169433345,Rodney,Waitakere,Auckland,Auckland
 W1745,Army Bay,Quay Street-Customs Street,FERRY,9,EDUCATION,Army Bay,-36.60509803,174.82325733,Quay Street-Customs Street,-36.84601989,174.77646293,27.111969899505766,Rodney,Waitakere,Auckland,Auckland
-W1747,Gulf Harbour South,Quay Street-Customs Street,FERRY,15,EDUCATION,Gulf Harbour South,-36.62319574,174.79598006,Quay Street-Customs Street,-36.84601989,174.77646293,24.83788324227945,Rodney,Waitakere,Auckland,Auckland
-W2018,Oneroa West,Quay Street-Customs Street,FERRY,12,EDUCATION,Oneroa West,-36.78767524,174.99965402,Quay Street-Customs Street,-36.84601989,174.77646293,20.900348924465625,Auckland,Waitakere,Auckland,Auckland
 W2039,Oneroa East-Palm Beach,Quay Street-Customs Street,FERRY,6,EDUCATION,Oneroa East-Palm Beach,-36.77927556,175.05218612,Quay Street-Customs Street,-36.84601989,174.77646293,25.64304420144819,Auckland,Waitakere,Auckland,Auckland
-W2044,Surfdale,Quay Street-Customs Street,FERRY,12,EDUCATION,Surfdale,-36.79613493,175.02985004,Quay Street-Customs Street,-36.84601989,174.77646293,23.22675492173999,Auckland,Waitakere,Auckland,Auckland
 W2053,Ostend,Quay Street-Customs Street,FERRY,9,EDUCATION,Ostend,-36.79263832,175.05220466,Quay Street-Customs Street,-36.84601989,174.77646293,25.252609033378164,Auckland,Waitakere,Auckland,Auckland
 W2074,Onetangi,Quay Street-Customs Street,FERRY,12,EDUCATION,Onetangi,-36.79584373,175.07839806,Quay Street-Customs Street,-36.84601989,174.77646293,27.44912715147734,Auckland,Waitakere,Auckland,Auckland
-W2108,Sunkist Bay,Quay Street-Customs Street,FERRY,12,EDUCATION,Sunkist Bay,-36.88262674,174.99783159,Quay Street-Customs Street,-36.84601989,174.77646293,20.10975999838137,Manukau,Waitakere,Auckland,Auckland
-W2120,Te Puru,Quay Street-Customs Street,FERRY,18,EDUCATION,Te Puru,-36.89631822,175.00316112,Quay Street-Customs Street,-36.84601989,174.77646293,20.927030085568962,Manukau,Waitakere,Auckland,Auckland
-W2129,Maraetai,Quay Street-Customs Street,FERRY,9,EDUCATION,Maraetai,-36.88774867,175.03797111,Quay Street-Customs Street,-36.84601989,174.77646293,23.721839285271848,Manukau,Waitakere,Auckland,Auckland
 W3195,Gulf Harbour North,Wynyard-Viaduct,FERRY,15,EDUCATION,Gulf Harbour North,-36.60949658,174.79413674,Wynyard-Viaduct,-36.843309399999995,174.75788827,26.198741756764413,Rodney,Waitakere,Auckland,Auckland
-W3200,Gulf Harbour South,Wynyard-Viaduct,FERRY,9,EDUCATION,Gulf Harbour South,-36.62319574,174.79598006,Wynyard-Viaduct,-36.843309399999995,174.75788827,24.70979705086731,Rodney,Waitakere,Auckland,Auckland
-W3470,Oneroa West,Wynyard-Viaduct,FERRY,15,EDUCATION,Oneroa West,-36.78767524,174.99965402,Wynyard-Viaduct,-36.843309399999995,174.75788827,22.393242804301977,Auckland,Waitakere,Auckland,Auckland
 W3489,Oneroa East-Palm Beach,Wynyard-Viaduct,FERRY,6,EDUCATION,Oneroa East-Palm Beach,-36.77927556,175.05218612,Wynyard-Viaduct,-36.843309399999995,174.75788827,27.14989362676351,Auckland,Waitakere,Auckland,Auckland
-W3494,Surfdale,Wynyard-Viaduct,FERRY,15,EDUCATION,Surfdale,-36.79613493,175.02985004,Wynyard-Viaduct,-36.843309399999995,174.75788827,24.770278397540146,Auckland,Waitakere,Auckland,Auckland
 W3502,Ostend,Wynyard-Viaduct,FERRY,12,EDUCATION,Ostend,-36.79263832,175.05220466,Wynyard-Viaduct,-36.843309399999995,174.75788827,26.797980392383998,Auckland,Waitakere,Auckland,Auckland
-W3517,Mellons Bay,Wynyard-Viaduct,FERRY,15,EDUCATION,Mellons Bay,-36.88715946,174.93040248,Wynyard-Viaduct,-36.843309399999995,174.75788827,16.103038376530428,Manukau,Waitakere,Auckland,Auckland
 W3527,Waiheke East,Wynyard-Viaduct,FERRY,6,EDUCATION,Waiheke East,-36.79798055,175.12796937,Wynyard-Viaduct,-36.843309399999995,174.75788827,33.32547234331552,Auckland,Waitakere,Auckland,Auckland
-W3532,Howick East,Wynyard-Viaduct,FERRY,9,EDUCATION,Howick East,-36.90088621,174.930388,Wynyard-Viaduct,-36.843309399999995,174.75788827,16.626494797242074,Manukau,Waitakere,Auckland,Auckland
-W3539,Cockle Bay,Wynyard-Viaduct,FERRY,6,EDUCATION,Cockle Bay,-36.89765568,174.94328238,Wynyard-Viaduct,-36.843309399999995,174.75788827,17.564080657517962,Manukau,Waitakere,Auckland,Auckland
-W3547,Shelly Park,Wynyard-Viaduct,FERRY,9,EDUCATION,Shelly Park,-36.90830816,174.94645122,Wynyard-Viaduct,-36.843309399999995,174.75788827,18.26345251533308,Manukau,Waitakere,Auckland,Auckland
-W3552,Sunkist Bay,Wynyard-Viaduct,FERRY,12,EDUCATION,Sunkist Bay,-36.88262674,174.99783159,Wynyard-Viaduct,-36.843309399999995,174.75788827,21.789412434038038,Manukau,Waitakere,Auckland,Auckland
-W3563,Te Puru,Wynyard-Viaduct,FERRY,18,EDUCATION,Te Puru,-36.89631822,175.00316112,Wynyard-Viaduct,-36.843309399999995,174.75788827,22.600653831585397,Manukau,Waitakere,Auckland,Auckland
 W3571,Maraetai,Wynyard-Viaduct,FERRY,6,EDUCATION,Maraetai,-36.88774867,175.03797111,Wynyard-Viaduct,-36.843309399999995,174.75788827,25.401711841870146,Manukau,Waitakere,Auckland,Auckland
 W3653,Gulf Harbour North,Shortland Street,FERRY,9,EDUCATION,Gulf Harbour North,-36.60949658,174.79413674,Shortland Street,-36.84736853,174.76823915,26.550659273978628,Rodney,Waitakere,Auckland,Auckland
 W3656,Army Bay,Shortland Street,FERRY,9,EDUCATION,Army Bay,-36.60509803,174.82325733,Shortland Street,-36.84736853,174.76823915,27.38186040358205,Rodney,Waitakere,Auckland,Auckland
 W3658,Gulf Harbour South,Shortland Street,FERRY,9,EDUCATION,Gulf Harbour South,-36.62319574,174.79598006,Shortland Street,-36.84736853,174.76823915,25.049156781397176,Rodney,Waitakere,Auckland,Auckland
-W3915,Oneroa West,Shortland Street,FERRY,9,EDUCATION,Oneroa West,-36.78767524,174.99965402,Shortland Street,-36.84736853,174.76823915,21.642791030204087,Auckland,Waitakere,Auckland,Auckland
 W3936,Oneroa East-Palm Beach,Shortland Street,FERRY,9,EDUCATION,Oneroa East-Palm Beach,-36.77927556,175.05218612,Shortland Street,-36.84736853,174.76823915,26.387089924747205,Auckland,Waitakere,Auckland,Auckland
-W3941,Surfdale,Shortland Street,FERRY,6,EDUCATION,Surfdale,-36.79613493,175.02985004,Shortland Street,-36.84736853,174.76823915,23.9732260198065,Auckland,Waitakere,Auckland,Auckland
 W3963,Onetangi,Shortland Street,FERRY,9,EDUCATION,Onetangi,-36.79584373,175.07839806,Shortland Street,-36.84736853,174.76823915,28.196110787158013,Auckland,Waitakere,Auckland,Auckland
-W3995,Te Puru,Shortland Street,FERRY,9,EDUCATION,Te Puru,-36.89631822,175.00316112,Shortland Street,-36.84736853,174.76823915,21.594381644034407,Manukau,Waitakere,Auckland,Auckland
-W4002,Maraetai,Shortland Street,FERRY,9,EDUCATION,Maraetai,-36.88774867,175.03797111,Shortland Street,-36.84736853,174.76823915,24.411473516984724,Manukau,Waitakere,Auckland,Auckland
 W5212,Surfdale,Eden Terrace,FERRY,9,EDUCATION,Surfdale,-36.79613493,175.02985004,Eden Terrace,-36.86462613,174.75964083,25.22622097234701,Auckland,Waitakere,Auckland,Auckland
-W5575,Oneroa West,Auckland-University,FERRY,9,EDUCATION,Oneroa West,-36.78767524,174.99965402,Auckland-University,-36.85143057,174.76906469,21.715568532434105,Auckland,Waitakere,Auckland,Auckland
-W5593,Surfdale,Auckland-University,FERRY,9,EDUCATION,Surfdale,-36.79613493,175.02985004,Auckland-University,-36.85143057,174.76906469,24.012921337476158,Auckland,Waitakere,Auckland,Auckland
 W5595,Ostend,Auckland-University,FERRY,12,EDUCATION,Ostend,-36.79263832,175.05220466,Auckland-University,-36.85143057,174.76906469,26.036816218688504,Auckland,Waitakere,Auckland,Auckland
-W7446,Oneroa West,Newmarket,FERRY,9,EDUCATION,Oneroa West,-36.78767524,174.99965402,Newmarket,-36.86853889,174.77706299,21.75659316853788,Auckland,Waitakere,Auckland,Auckland
-W7472,Surfdale,Newmarket,FERRY,12,EDUCATION,Surfdale,-36.79613493,175.02985004,Newmarket,-36.86853889,174.77706299,23.895096357044874,Auckland,Waitakere,Auckland,Auckland
 W8112,Oneroa East-Palm Beach,Parnell West,FERRY,6,EDUCATION,Oneroa East-Palm Beach,-36.77927556,175.05218612,Parnell West,-36.85679261,174.77798053,25.885962132275573,Auckland,Waitakere,Auckland,Auckland
-W8117,Surfdale,Parnell West,FERRY,6,EDUCATION,Surfdale,-36.79613493,175.02985004,Parnell West,-36.85679261,174.77798053,23.41068021638673,Auckland,Waitakere,Auckland,Auckland
 W8123,Ostend,Parnell West,FERRY,9,EDUCATION,Ostend,-36.79263832,175.05220466,Parnell West,-36.85679261,174.77798053,25.42936331999981,Auckland,Waitakere,Auckland,Auckland
 W8141,Onetangi,Parnell West,FERRY,9,EDUCATION,Onetangi,-36.79584373,175.07839806,Parnell West,-36.85679261,174.77798053,27.58464241462782,Auckland,Waitakere,Auckland,Auckland
 W9088,Gulf Harbour North,Queen Street,FERRY,12,EDUCATION,Gulf Harbour North,-36.60949658,174.79413674,Queen Street,-36.84774104,174.76524972,26.6163700337956,Rodney,Waitakere,Auckland,Auckland
 W9093,Gulf Harbour South,Queen Street,FERRY,18,EDUCATION,Gulf Harbour South,-36.62319574,174.79598006,Queen Street,-36.84774104,174.76524972,25.118021239568023,Rodney,Waitakere,Auckland,Auckland
-W9363,Oneroa West,Queen Street,FERRY,9,EDUCATION,Oneroa West,-36.78767524,174.99965402,Queen Street,-36.84774104,174.76524972,21.908772383768568,Auckland,Waitakere,Auckland,Auckland
 W9384,Oneroa East-Palm Beach,Queen Street,FERRY,6,EDUCATION,Oneroa East-Palm Beach,-36.77927556,175.05218612,Queen Street,-36.84774104,174.76524972,26.65387398328959,Auckland,Waitakere,Auckland,Auckland
-W9389,Surfdale,Queen Street,FERRY,21,EDUCATION,Surfdale,-36.79613493,175.02985004,Queen Street,-36.84774104,174.76524972,24.24149667327109,Auckland,Waitakere,Auckland,Auckland
 W9398,Ostend,Queen Street,FERRY,6,EDUCATION,Ostend,-36.79263832,175.05220466,Queen Street,-36.84774104,174.76524972,26.267534619531652,Auckland,Waitakere,Auckland,Auckland
 W9420,Onetangi,Queen Street,FERRY,9,EDUCATION,Onetangi,-36.79584373,175.07839806,Queen Street,-36.84774104,174.76524972,28.46500810760049,Auckland,Waitakere,Auckland,Auckland
 W9426,Waiheke East,Queen Street,FERRY,12,EDUCATION,Waiheke East,-36.79798055,175.12796937,Queen Street,-36.84774104,174.76524972,32.756599137986484,Auckland,Waitakere,Auckland,Auckland
-W9467,Te Puru,Queen Street,FERRY,9,EDUCATION,Te Puru,-36.89631822,175.00316112,Queen Street,-36.84774104,174.76524972,21.84148871487581,Manukau,Waitakere,Auckland,Auckland
-W9474,Maraetai,Queen Street,FERRY,9,EDUCATION,Maraetai,-36.88774867,175.03797111,Queen Street,-36.84774104,174.76524972,24.66535775264418,Manukau,Waitakere,Auckland,Auckland
 W9652,Gulf Harbour North,Hobson Ridge North,FERRY,9,EDUCATION,Gulf Harbour North,-36.60949658,174.79413674,Hobson Ridge North,-36.84707104,174.76276914,26.56457442318769,Rodney,Waitakere,Auckland,Auckland
 W9657,Gulf Harbour South,Hobson Ridge North,FERRY,6,EDUCATION,Gulf Harbour South,-36.62319574,174.79598006,Hobson Ridge North,-36.84707104,174.76276914,25.0691012750588,Rodney,Waitakere,Auckland,Auckland
 W9943,Oneroa East-Palm Beach,Hobson Ridge North,FERRY,12,EDUCATION,Oneroa East-Palm Beach,-36.77927556,175.05218612,Hobson Ridge North,-36.84707104,174.76276914,26.84466540356451,Auckland,Waitakere,Auckland,Auckland
-W9948,Surfdale,Hobson Ridge North,FERRY,12,EDUCATION,Surfdale,-36.79613493,175.02985004,Hobson Ridge North,-36.84707104,174.76276914,24.438805586523586,Auckland,Waitakere,Auckland,Auckland
 W9977,Onetangi,Hobson Ridge North,FERRY,6,EDUCATION,Onetangi,-36.79584373,175.07839806,Hobson Ridge North,-36.84707104,174.76276914,28.666482748623064,Auckland,Waitakere,Auckland,Auckland
-W10011,Sunkist Bay,Hobson Ridge North,FERRY,9,EDUCATION,Sunkist Bay,-36.88262674,174.99783159,Hobson Ridge North,-36.84707104,174.76276914,21.28203746612029,Manukau,Waitakere,Auckland,Auckland
-W10024,Te Puru,Hobson Ridge North,FERRY,12,EDUCATION,Te Puru,-36.89631822,175.00316112,Hobson Ridge North,-36.84707104,174.76276914,22.073812831913067,Manukau,Waitakere,Auckland,Auckland
-W10032,Maraetai,Hobson Ridge North,FERRY,6,EDUCATION,Maraetai,-36.88774867,175.03797111,Hobson Ridge North,-36.84707104,174.76276914,24.895972203965698,Manukau,Waitakere,Auckland,Auckland
-W10763,Oneroa West,Grafton,FERRY,6,EDUCATION,Oneroa West,-36.78767524,174.99965402,Grafton,-36.86013178,174.76828549,22.113889119931468,Auckland,Waitakere,Auckland,Auckland
 W10795,Ostend,Grafton,FERRY,6,EDUCATION,Ostend,-36.79263832,175.05220466,Grafton,-36.86013178,174.76828549,26.361531368285274,Auckland,Waitakere,Auckland,Auckland
 W11255,Gulf Harbour North,Victoria Park ,FERRY,9,EDUCATION,Gulf Harbour North,-36.60949658,174.79413674,Victoria Park,-36.84857807,174.75659124,26.79439329881931,Rodney,Waitakere,Auckland,Auckland
-W11523,Oneroa West,Victoria Park ,FERRY,6,EDUCATION,Oneroa West,-36.78767524,174.99965402,Victoria Park,-36.84857807,174.75659124,22.671565265839767,Auckland,Waitakere,Auckland,Auckland
 W11547,Surfdale,Victoria Park ,FERRY,12,EDUCATION,Surfdale,-36.79613493,175.02985004,Victoria Park,-36.84857807,174.75659124,25.012369876698642,Auckland,Waitakere,Auckland,Auckland
 W11602,Maraetai,Victoria Park ,FERRY,6,EDUCATION,Maraetai,-36.88774867,175.03797111,Victoria Park,-36.84857807,174.75659124,25.407093878763018,Manukau,Waitakere,Auckland,Auckland
 W12956,Surfdale,Grey Lynn East,FERRY,6,EDUCATION,Surfdale,-36.79613493,175.02985004,Grey Lynn East,-36.86181959,174.75208551,25.778360487848506,Auckland,Waitakere,Auckland,Auckland

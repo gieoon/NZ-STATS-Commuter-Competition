@@ -81,6 +81,15 @@ function Home(props) {
     }
   )
 
+  const { data: destinationData } = useStickySWR(
+    DATA_URL_ROOT + '/destinations',
+    fetcherJSON,
+    {
+      revalidateOnMount: true,
+      revalidateOnFocus: false
+    }
+  )
+
   const nzMap = useRef();
   const isVisible = useIsVisible(nzMap, { once: true });
 
@@ -122,6 +131,7 @@ function Home(props) {
                     {...{ regionalEducationData }}
                     {...{ regionalTotalData }}
                     {...{ centroidData }}
+                    {...{ destinationData }}
                     {...{ mapStatistic, setMapStatistic }}
                     {...{ regionHighlighted, setRegionHighlighted }}
                     {...{ anchor, setAnchor }}

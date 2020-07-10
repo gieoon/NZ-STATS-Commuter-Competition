@@ -16,6 +16,7 @@ import csv
 
 from zoom2 import handleZoom
 from centroid import getAllCentroidData
+from destination import getDestinations
 
 SIZE_DIVISOR = 50 # 5 # 100
 
@@ -335,6 +336,13 @@ def get_zone_data_with_commute_type():
 def get_centroid_data():
     data = getAllCentroidData()
     response = make_response(data)
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
+
+@app.route('/destinations')
+def get_destinations():
+    data = getDestinations()
+    response = make_response(jsonify(data))
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 

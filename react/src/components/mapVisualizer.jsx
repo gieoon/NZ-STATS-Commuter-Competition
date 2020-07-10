@@ -770,7 +770,7 @@ function MapVisualizer({
         currentMap={currentMap}
         centroidData={centroidData}
         currentCommuteTypes={currentCommuteTypes}
-        ref={leafletMapRef}
+        // ref={leafletMapRef} // Can use ref on React.forwardRef components
       />
       {/* <div className="svg-parent">
         <svg

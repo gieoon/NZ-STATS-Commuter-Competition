@@ -1,19 +1,7 @@
 id,SA2_name_usual_residence_address,SA2_name_workplace_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1
-W6327,Kingsland,Auckland Airport,OTHER,6,EDUCATION,Kingsland,-36.87030191,174.74585155,Auckland Airport,-36.9891029,174.77400859,13.445064171565313,Waitakere,Manukau,Auckland,Auckland
-W6356,Parnell East,Auckland Airport,OTHER,6,EDUCATION,Parnell East,-36.85621249,174.78751844,Auckland Airport,-36.9891029,174.77400859,14.825461491822072,Waitakere,Manukau,Auckland,Auckland
-W6392,Mission Bay,Auckland Airport,OTHER,6,EDUCATION,Mission Bay,-36.855756,174.83237219,Auckland Airport,-36.9891029,174.77400859,15.708987195124983,Waitakere,Manukau,Auckland,Auckland
-W6602,Papakura East,Auckland Airport,OTHER,6,EDUCATION,Papakura East,-37.05846123,174.97920854,Auckland Airport,-36.9891029,174.77400859,19.782199241910305,Franklin,Manukau,Auckland,Auckland
-W26656,Waitoa-Ngarua,Tahuroa,OTHER,6,EDUCATION,Waitoa-Ngarua,-37.64354365,175.70496716,Tahuroa,-37.69903344,175.52480796,17.014735893046716,Matamata-Piako,Matamata-Piako,Waikato,Waikato
 W34890,Whitby,Wellington Central,OTHER,6,EDUCATION,Whitby,-41.11717134,174.89107268,Wellington Central,-41.2849345,174.77572593,21.002740828457913,Porirua,Wellington,Wellington,Wellington
 W34892,Endeavour,Wellington Central,OTHER,12,EDUCATION,Endeavour,-41.11459136,174.90415779,Wellington Central,-41.2849345,174.77572593,21.77688622922424,Porirua,Wellington,Wellington,Wellington
 W34906,Trentham North,Wellington Central,OTHER,9,EDUCATION,Trentham North,-41.1328255,175.04564394,Wellington Central,-41.2849345,174.77572593,28.211870151397534,Upper Hutt,Wellington,Wellington,Wellington
 W34907,Totara Park,Wellington Central,OTHER,6,EDUCATION,Totara Park,-41.1093256,175.08443163,Wellington Central,-41.2849345,174.77572593,32.37941862879475,Upper Hutt,Wellington,Wellington,Wellington
-W34918,Maungaraki,Wellington Central,OTHER,9,EDUCATION,Maungaraki,-41.20840978,174.87990307,Wellington Central,-41.2849345,174.77572593,12.17642051078858,Hutt city,Wellington,Wellington,Wellington
-W34922,Belmont (Lower Hutt City),Wellington Central,OTHER,9,EDUCATION,Belmont (Lower Hutt City),-41.1900686,174.92123901,Wellington Central,-41.2849345,174.77572593,16.103320950047152,Hutt city,Wellington,Wellington,Wellington
 W34935,Stokes Valley North,Wellington Central,OTHER,6,EDUCATION,Stokes Valley North,-41.166931700000006,174.99312135,Wellington Central,-41.2849345,174.77572593,22.42144847957863,Hutt city,Wellington,Wellington,Wellington
-W34937,Epuni West,Wellington Central,OTHER,6,EDUCATION,Epuni West,-41.20573675,174.92732065,Wellington Central,-41.2849345,174.77572593,15.43344580398304,Hutt city,Wellington,Wellington,Wellington
-W34958,Homedale East,Wellington Central,OTHER,6,EDUCATION,Homedale East,-41.269130600000004,174.95843259,Wellington Central,-41.2849345,174.77572593,15.36889132522634,Hutt city,Wellington,Wellington,Wellington
-W34963,Tawa South,Wellington Central,OTHER,9,EDUCATION,Tawa South,-41.18147753,174.81690066,Wellington Central,-41.2849345,174.77572593,12.008104799702025,Wellington,Wellington,Wellington,Wellington
-W34965,Grenada North,Wellington Central,OTHER,6,EDUCATION,Grenada North,-41.17727395,174.83897037,Wellington Central,-41.2849345,174.77572593,13.087540032895546,Porirua,Wellington,Wellington,Wellington
-W34966,Churton Park North,Wellington Central,OTHER,12,EDUCATION,Churton Park North,-41.19767254,174.81365567,Wellington Central,-41.2849345,174.77572593,10.208209016198225,Wellington,Wellington,Wellington,Wellington
 W47808,Ashburton Forks,Ealing-Lowcliffe,OTHER,9,EDUCATION,Ashburton Forks,-43.78492258,171.43181981,Ealing-Lowcliffe,-44.03656373,171.49741748,28.470367780342674,Ashburton,Ashburton,Canterbury,Canterbury

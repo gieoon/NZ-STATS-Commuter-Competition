@@ -1,8 +1,2 @@
 id,SA2_name_usual_residence_address,SA2_name_educational_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1
-E1007,Tindalls-Matakatia,Auckland-University,FERRY,9,EDUCATION,Tindalls-Matakatia,-36.61663904,174.77704003,Auckland-University,-36.85143057,174.76906469,26.11729881063943,Rodney,Waitakere,Auckland,Auckland
-E1010,Gulf Harbour North,Auckland-University,FERRY,12,EDUCATION,Gulf Harbour North,-36.60949658,174.79413674,Auckland-University,-36.85143057,174.76906469,26.99446198050268,Rodney,Waitakere,Auckland,Auckland
-E1015,Gulf Harbour South,Auckland-University,FERRY,18,EDUCATION,Gulf Harbour South,-36.62319574,174.79598006,Auckland-University,-36.85143057,174.76906469,25.49163615605761,Rodney,Waitakere,Auckland,Auckland
-E1311,Oneroa East-Palm Beach,Auckland-University,FERRY,15,EDUCATION,Oneroa East-Palm Beach,-36.77927556,175.05218612,Auckland-University,-36.85143057,174.76906469,26.449550398740286,Auckland,Waitakere,Auckland,Auckland
-E1325,Ostend,Auckland-University,FERRY,18,EDUCATION,Ostend,-36.79263832,175.05220466,Auckland-University,-36.85143057,174.76906469,26.036816218688504,Auckland,Waitakere,Auckland,Auckland
-E1348,Onetangi,Auckland-University,FERRY,6,EDUCATION,Onetangi,-36.79584373,175.07839806,Auckland-University,-36.85143057,174.76906469,28.218929613998352,Auckland,Waitakere,Auckland,Auckland
 E1354,Waiheke East,Auckland-University,FERRY,9,EDUCATION,Waiheke East,-36.79798055,175.12796937,Auckland-University,-36.85143057,174.76906469,32.49372812952238,Auckland,Waitakere,Auckland,Auckland

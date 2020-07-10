@@ -1,10 +1,20 @@
 import React, {useEffect, useRef, useState} from 'react';
 import classnames from "classnames";
 import {
-    COMMUTE_TYPE_COLOUR_KEYS
+    COMMUTE_METHOD_COLOUR,
 } from '../constants';
 
 // Icons
+import home_selected from '../assets/coloured_icons/home.svg';
+import train_selected from '../assets/coloured_icons/train.svg';
+import bicycle_selected from '../assets/coloured_icons/bicycle.svg';
+import bus_selected from '../assets/coloured_icons/bus.svg';
+import ferry_selected from '../assets/coloured_icons/ferry.svg';
+import own_vehicle_selected from '../assets/coloured_icons/own_vehicle.svg';
+import passenger_vehicle_selected from '../assets/coloured_icons/passenger_vehicle.svg';
+import walk_or_jog_selected from '../assets/coloured_icons/walk_or_jog.svg';
+import other_selected from '../assets/coloured_icons/other.svg';
+
 import home from '../assets/home.svg';
 import train from '../assets/train.svg';
 import bicycle from '../assets/bicycle.svg';
@@ -28,30 +38,38 @@ function CommuteTab({
 
     const getIcon = () => {
         switch(commuteType){
-            case "Stay home": return home;
-            case "Drive own vehicle": return own_vehicle;
-            case "Passenger in vehicle": return own_vehicle;
-            case "Train": return train;
-            case "Bicycle": return bicycle;
-            case "Walk/jog": return walk_or_jog;
-            case "Bus": return bus;
-            case "Ferry": return ferry;
-            case "Other": return other;
+            case "Stay home": return focused ? home_selected : home;
+            case "Drive own vehicle": return focused ? own_vehicle_selected : own_vehicle;
+            case "Passenger in vehicle": return focused ? passenger_vehicle_selected : own_vehicle;
+            case "Train": return focused ? train_selected : train;
+            case "Bicycle": return focused ? bicycle_selected: bicycle;
+            case "Walk or jog": return focused ? walk_or_jog_selected : walk_or_jog;
+            case "Bus": return focused ? bus_selected : bus;
+            case "Ferry": return focused ? ferry_selected : ferry;
+            case "Other": return focused ? other_selected : other;
             default: return other;
         }
     }
 
     const handleClick = (e) => {
         //if(e.target.classList.contains(commuteType)){
-        if(currentCommuteTypes.includes(commuteType)){
+        
+        // Check if this is the only active one, if so, do not disable it
+        if(focused && currentCommuteTypes.length === 1){
+            return;
+        }
+        const c = currentCommuteTypes;
+        if(c.includes(commuteType)){
             // Remove from commute types
-            currentCommuteTypes.splice(currentCommuteTypes.indexOf(commuteType), 1);
+            c.splice(c.indexOf(commuteType), 1);
         } else {
             // Add to commute types
-            currentCommuteTypes.push(commuteType)
+            c.push(commuteType)
         }
+        console.log('saving new commute types: ', c);
         
-        setCurrentCommuteTypes(currentCommuteTypes);
+        // Need to use spread operator here to force the array to register as changed and propagate change to others using this state variable
+        setCurrentCommuteTypes([...c]);
         setFocused(!focused);
         // console.log(
         //     commuteType, 
@@ -69,9 +87,12 @@ function CommuteTab({
             ref={commuteBtnRef} 
             className={classnames(
                 "CommuteTab",
-                COMMUTE_TYPE_COLOUR_KEYS[commuteType],
+                //COMMUTE_METHOD_COLOUR[commuteType],
                 {focused: focused}
             )}
+            style={{
+                color: focused ? COMMUTE_METHOD_COLOUR[commuteType] : "gray" 
+            }}
             onClick={(e)=>{
                 handleClick(e)
             }}

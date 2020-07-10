@@ -22,13 +22,16 @@ data = {}
 
 for commute_purpose in ["education","work"]:
     for mode in MODES_OF_TRANSPORT:
-        for zoom_level in range(5,13):
+        for zoom_level in range(5,16):
             df = pd.read_csv('./zoomData/{}/{}_{}_{}.csv'.format(commute_purpose, commute_purpose, mode, zoom_level))
             data["{}_{}_{}".format(commute_purpose,mode,zoom_level)] = df
 
 def handleZoom(left, top, right, bottom, zoom, data_type, commute_types):
     print(left,top,right,bottom, zoom, data_type, commute_types)
     
+    # Dataset created only for zoom up to 16
+    zoom = min(int(zoom), 16)
+
     res = {}
     for commute_type in commute_types:
         commute_type = commuteType2Key(commute_type)

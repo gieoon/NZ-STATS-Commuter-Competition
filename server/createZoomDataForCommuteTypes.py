@@ -20,29 +20,39 @@ def createZoomData(dataType,commuteType):
     zoom_5_df = commute_df.loc[commute_df['HAVERSINE_DISTANCE'] >= 100] # 100 = 85 rows
     print("zoom 5: ", zoom_5_df.describe())
 
-    zoom_6_df = commute_df.loc[commute_df['HAVERSINE_DISTANCE'] >= 50]
+    zoom_6_df = commute_df.loc[commute_df['HAVERSINE_DISTANCE'] >= 65]
     print("zoom 6: ", zoom_6_df.describe())
 
     zoom_7_df = commute_df.loc[commute_df['HAVERSINE_DISTANCE'] >= 45]
     print("zoom_7: ", zoom_7_df.describe())
 
-    zoom_8_df = commute_df.loc[commute_df['HAVERSINE_DISTANCE'] >= 25]
+    zoom_8_df = commute_df.loc[commute_df['HAVERSINE_DISTANCE'] >= 32]
     print("zoom_8: ", zoom_8_df.describe())
 
-    zoom_9_df = commute_df.loc[commute_df['HAVERSINE_DISTANCE'] >= 15]
+    zoom_9_df = commute_df.loc[commute_df['HAVERSINE_DISTANCE'] >= 25]
     print("zoom_9: ", zoom_9_df.describe())
 
-    zoom_10_df = commute_df.loc[commute_df['HAVERSINE_DISTANCE'] >= 10]
+    zoom_10_df = commute_df.loc[commute_df['HAVERSINE_DISTANCE'] >= 20]
     print("zoom_10: ", zoom_10_df.describe())
 
-    zoom_11_df = commute_df.loc[commute_df['HAVERSINE_DISTANCE'] >= 5]
+    zoom_11_df = commute_df.loc[commute_df['HAVERSINE_DISTANCE'] >= 15]
     print("zoom_11: ", zoom_11_df.describe())
 
-    zoom_12_df = commute_df.loc[commute_df['HAVERSINE_DISTANCE'] >= 3]
+    zoom_12_df = commute_df.loc[commute_df['HAVERSINE_DISTANCE'] >= 10]
     print("zoom_12: ", zoom_12_df.describe())
 
-    zoom_13_df = commute_df
+    zoom_13_df = commute_df.loc[commute_df['HAVERSINE_DISTANCE'] >= 7]
     print("zoom_13: ", zoom_13_df.describe())
+
+    zoom_14_df = commute_df.loc[commute_df['HAVERSINE_DISTANCE'] >= 5]
+    print("zoom_14: ", zoom_14_df.describe())
+
+    zoom_15_df = commute_df.loc[commute_df['HAVERSINE_DISTANCE'] >= 3]
+    print("zoom_15: ", zoom_15_df.describe())
+
+    zoom_16_df = commute_df
+    print("zoom_16: ", zoom_16_df.describe())
+
 
     zoom_5_df.to_csv('./zoomData/{}/{}_{}_5.csv'.format(dataType,dataType, commuteType), index=False)
     zoom_6_df.to_csv('./zoomData/{}/{}_{}_6.csv'.format(dataType,dataType, commuteType), index=False)
@@ -53,6 +63,9 @@ def createZoomData(dataType,commuteType):
     zoom_11_df.to_csv('./zoomData/{}/{}_{}_11.csv'.format(dataType,dataType,commuteType), index=False)
     zoom_12_df.to_csv('./zoomData/{}/{}_{}_12.csv'.format(dataType,dataType,commuteType), index=False)
     zoom_13_df.to_csv('./zoomData/{}/{}_{}_13.csv'.format(dataType,dataType,commuteType), index=False)
+    zoom_14_df.to_csv('./zoomData/{}/{}_{}_14.csv'.format(dataType,dataType,commuteType), index=False)
+    zoom_15_df.to_csv('./zoomData/{}/{}_{}_15.csv'.format(dataType,dataType,commuteType), index=False)
+    zoom_16_df.to_csv('./zoomData/{}/{}_{}_16.csv'.format(dataType,dataType,commuteType), index=False)
 
 for mode in MODES_OF_TRANSPORT:
     print("processing: ", mode)

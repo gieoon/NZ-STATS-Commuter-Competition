@@ -37,6 +37,30 @@ export const COMMUTE_PURPOSE_COLOUR = {
   EDUCATION: "#007bff"//"#66bd63",
 }
 
+export const COMMUTE_METHOD_COLOUR = {
+  "Stay home": "#f54242",
+  "Drive own vehicle": "#f08c22",
+  "Passenger in vehicle": "#f5ea20",
+  "Train": "#a9ed21",
+  "Bicycle": "#1de05e",
+  "Walk or jog": "#1d89db",
+  "Bus": "#791bde",
+  "Ferry": "#384fe8",
+  "Other": "#a1a3b3",
+}
+
+export const DB_2_COMMUTE_METHOD = {
+  "HOME": "Stay home",
+  "DRIVE_OWN_VEHICLE": "Drive own vehicle",
+  "PASSENGER_IN_VEHICLE": "Passenger in vehicle",
+  "TRAIN": "Train",
+  "BICYCLE": "Bicycle",
+  "BUS": "Bus",
+  "FERRY": "Ferry",
+  "OTHER": "Other"
+}
+
+
 
 //export const WORK_COLOUR = ;
 //export const EDUCATION_COLOUR = ;

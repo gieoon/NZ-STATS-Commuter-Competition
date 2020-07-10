@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import './leftPanel.scss';
 import classnames from "classnames";
 import { useTranslation } from "react-i18next";
-import { useSprings, animated } from "react-spring";
+import { useSprings, useSpring, animated } from "react-spring";
 import help from '../assets/help_white.svg';
 
 import {
@@ -22,33 +22,41 @@ function LeftPanel({
     hoveredRegion,
     hoveredData,
     highlightedData,
-    centroidData
+    centroidData,
+    destinationData,
 }){
     const { t } = useTranslation();
 
     const [currentMapStatistics, setCurrentMapStatistics] = useState(MODES_OF_TRANSPORT);
 
     const [currentCommuteType, setCurrentCommuteType] = useState("Total");
+    
+    const spring = useSpring({
+      // This is the default to: value
+      // count: Math.floor(Math.random() * 100),
+      count: Math.floor(hoveredData.hoveredData.COUNT) || 0,
+      from: {
+          count: Math.floor(hoveredData.hoveredData.COUNT) || 0,
+      },
+      config: {
+        tension: 500,
+        clamp: true,
+        duration: 350,
+      }
+    })
 
-    const springs = useSprings(
-        currentMapStatistics.length,
-        currentMapStatistics.map((statistic) => ({
-          total: getStatistic(hoveredData.hoveredData, statistic),
-          delta: 64,
-          from: {
-            total: 128,
-            delta: 23,
-          },
-          config: {
-            tension: 500,
-            clamp: true,
-          },
-        }))
-    );
-
-    const clickedCommuteType = (commuteType) => {
-        console.log(commuteType);
-    }
+    // console.log(Math.floor(hoveredData.hoveredData.HAVERSINE_DISTANCE))
+    const km = useSpring({
+      distance: Math.floor(hoveredData.hoveredData.HAVERSINE_DISTANCE) || 0,
+      from: {
+        distance: Math.floor(hoveredData.hoveredData.HAVERSINE_DISTANCE) || 0,
+      },
+      config: {
+        tension: 500,
+        clamp: true,
+        duration: 350,
+      }
+    })
     
     return(
         <div className="LeftPanel">
@@ -70,13 +78,16 @@ function LeftPanel({
 
               <div>
                 {t("From ")}
-                {t(hoveredRegion.name)}
+                {/* {t(hoveredRegion.name)} */}
+                {hoveredData.hoveredData.DEPARTURE_NAME_1}
                 {hoveredData.hoveredData.departure_SA22018_V1_NAME && hoveredData.hoveredData.departure_SA22018_V1_NAME.length ? ", " : ""}
                 {t(hoveredData.hoveredData.departure_SA22018_V1_NAME)}
                 <div>
                   {t("To ")}
-                  {hoveredData.hoveredDestination}
-                  {hoveredData.hoveredDestination.length 
+                  {hoveredData.hoveredData.DESTINATION_NAME_1}
+                  {/* {hoveredData.hoveredDestination} */}
+                  { hoveredData.hoveredData.DESTINATION_NAME_1 //Or, use DESTINATION_NAME_2
+                  //hoveredData.hoveredDestination.length 
                     ? ", "
                     : ""  
                   }
@@ -85,43 +96,68 @@ function LeftPanel({
               </div>
               
               <div style={{alignSelf: "center"}}>
-                {!isNaN(Number(hoveredData.hoveredData.HAVERSINE_DISTANCE))
+                {/* {!isNaN(Number(hoveredData.hoveredData.HAVERSINE_DISTANCE))
                   ? Number(hoveredData.hoveredData.HAVERSINE_DISTANCE).toFixed(2) + "km"
                   : ""
-                }
+                } */}
+                <animated.h1>
+                  {km.distance.interpolate((distance) => 
+                        // !isNaN(distance) ? distance.toFixed(2) + "km" : ""
+                        distance.toFixed(2).toString() + "km"
+                  )}
+                </animated.h1>
               </div>
             </h2>
           </div>
           <div className="map-stats">
-            {/* <div>
-              {Object.keys(highlightedData || {}).map((statistic, index) => (
-                <div key={index}>
-                  {statistic}
-                  ,
-                  {highlightedData[statistic]}
-                </div>
-                )
-              )
-              }
-            </div> */}
-            <div>{currentMapStatistics.map((statistic, index) => (
-                <div
-                  key={statistic}
-                  className={classnames("stats", statistic, {
-                    focused: statistic === currentCommuteType,
-                  })}
-                  onClick={() => clickedCommuteType(statistic)}
+            <div
+                  // key={statistic}
+                  // className={classnames("stats", statistic, {
+                  //   focused: statistic === currentCommuteType,
+                  // })}
+                  // onClick={() => clickedCommuteType(statistic)}
                 >
-                  <h5>{t(capitalize(statistic))}</h5>
-                  <div className="stats-bottom">
-                    <animated.h1>
-                      {springs[index].total.interpolate((total) =>
-                        formatNumber(Math.floor(total))
-                      )}
-                    </animated.h1>
-                  </div>
-                </div>
-              ))}
+              {/* <h5>{t(capitalize(statistic))}</h5> */}
+              <div className="stats-bottom">
+                {(hoveredData.hoveredData.COMMUTE_TYPE || "")
+                  .replace(/[_]/g,' ')
+                  .toLowerCase()
+                  .charAt(0)
+                  .toUpperCase()
+                  + 
+                  (hoveredData.hoveredData.COMMUTE_TYPE || "")
+                    .replace(/[_]/g,' ')
+                    .substring(1)
+                    .toLowerCase()
+                }
+                <animated.h1>
+                  {/* {spring.count.interpolate((count) => 
+                    formatNumber(Math.floor(count))
+                  )} */}
+                  {spring.count.interpolate((count) => 
+                      count > 0
+                      ? Math.floor(count).toFixed() + " people"//" commutes"
+                      : ""
+                  )
+                  // {spring.count 
+                  // ? spring.count + " Commute"
+                  // : ""
+                  }
+                </animated.h1>
+                <h2>
+                  {
+                    hoveredData.hoveredData.TYPE 
+                    ? "Commuting for "
+                    : ""
+                  }
+                  {(hoveredData.hoveredData.TYPE || "")
+                    .charAt(0)
+                  + (hoveredData.hoveredData.TYPE || "")
+                    .substring(1)
+                    .toLowerCase()
+                  }
+                </h2>
+              </div>
             </div>
           </div>
 
@@ -147,4 +183,30 @@ function LeftPanel({
     )
 }
 
-export default LeftPanel
+export default LeftPanel;
+
+/*
+<div>{currentMapStatistics.map((statistic, index) => (
+  <div
+    key={statistic}
+    className={classnames("stats", statistic, {
+      focused: statistic === currentCommuteType,
+    })}
+    onClick={() => clickedCommuteType(statistic)}
+  >
+    <h5>{t(capitalize(statistic))}</h5>
+    <div className="stats-bottom">
+      {hoveredData.hoveredData.COMMUTE_TYPE}
+      <animated.h1>
+        {springs[index].total.interpolate((total) =>
+          formatNumber(Math.floor(total))
+        )}
+        {spring.count.interpolate((count) => 
+          formatNumber(Math.floor(count))
+        )}
+      </animated.h1>
+    </div>
+  </div>
+))}
+</div>
+*/

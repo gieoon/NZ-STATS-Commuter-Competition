@@ -153,6 +153,7 @@ export const fetcherDICT = (url) => {
 
 // Convert input text into an array of objects
 export const txt2Array = (allText) => {
+  // console.log('allText: ', allText)
   var allTextLines = allText.split(/\r\n|\n/);
   // console.log(allTextLines.length);
   var headers = allTextLines[0].split(",");

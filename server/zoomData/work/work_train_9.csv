@@ -1,42 +1,4 @@
 id,SA2_name_usual_residence_address,SA2_name_workplace_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1
-W1792,Swanson Rural,Quay Street-Customs Street,TRAIN,9,EDUCATION,Swanson Rural,-36.881095,174.57106823,Quay Street-Customs Street,-36.84601989,174.77646293,18.68418946323501,Waitakere,Waitakere,Auckland,Auckland
-W1801,Swanson,Quay Street-Customs Street,TRAIN,6,EDUCATION,Swanson,-36.86489607,174.58462975,Quay Street-Customs Street,-36.84601989,174.77646293,17.196497445633494,Waitakere,Waitakere,Auckland,Auckland
-W1811,Ranui North,Quay Street-Customs Street,TRAIN,9,EDUCATION,Ranui North,-36.86005874,174.60220592,Quay Street-Customs Street,-36.84601989,174.77646293,15.583001438574215,Waitakere,Waitakere,Auckland,Auckland
-W1818,Ranui Domain,Quay Street-Customs Street,TRAIN,9,EDUCATION,Ranui Domain,-36.86589923,174.60427343,Quay Street-Customs Street,-36.84601989,174.77646293,15.478720987693114,Waitakere,Waitakere,Auckland,Auckland
-W1821,Ranui South West,Quay Street-Customs Street,TRAIN,9,EDUCATION,Ranui South West,-36.87146189,174.59392367,Quay Street-Customs Street,-36.84601989,174.77646293,16.484882610253905,Waitakere,Waitakere,Auckland,Auckland
-W1829,Ranui South East,Quay Street-Customs Street,TRAIN,9,EDUCATION,Ranui South East,-36.87189045,174.6046809,Quay Street-Customs Street,-36.84601989,174.77646293,15.551592223610866,Waitakere,Waitakere,Auckland,Auckland
-W1838,Summerland South,Quay Street-Customs Street,TRAIN,12,EDUCATION,Summerland South,-36.88167753,174.6052759,Quay Street-Customs Street,-36.84601989,174.77646293,15.736981624869133,Waitakere,Waitakere,Auckland,Auckland
-W1847,Western Heights (Auckland),Quay Street-Customs Street,TRAIN,12,EDUCATION,Western Heights (Auckland),-36.88738067,174.61313879,Quay Street-Customs Street,-36.84601989,174.77646293,15.239788122776275,Waitakere,Waitakere,Auckland,Auckland
-W1860,McLaren Park,Quay Street-Customs Street,TRAIN,21,EDUCATION,McLaren Park,-36.89892389,174.62097855,Quay Street-Customs Street,-36.84601989,174.77646293,15.029850658645694,Waitakere,Waitakere,Auckland,Auckland
-W1872,Glen Eden West,Quay Street-Customs Street,TRAIN,12,EDUCATION,Glen Eden West,-36.91301994,174.62881821,Quay Street-Customs Street,-36.84601989,174.77646293,15.098298193481064,Waitakere,Waitakere,Auckland,Auckland
-W1876,Oratia,Quay Street-Customs Street,TRAIN,12,EDUCATION,Oratia,-36.94487953,174.61183121,Quay Street-Customs Street,-36.84601989,174.77646293,18.30766750735696,Waitakere,Waitakere,Auckland,Auckland
-W1942,Titirangi South,Quay Street-Customs Street,TRAIN,9,EDUCATION,Titirangi South,-36.94580721,174.65622649,Quay Street-Customs Street,-36.84601989,174.77646293,15.409046186875296,Waitakere,Waitakere,Auckland,Auckland
-W1950,Laingholm,Quay Street-Customs Street,TRAIN,6,EDUCATION,Laingholm,-36.96456984,174.63077158,Quay Street-Customs Street,-36.84601989,174.77646293,18.481822567661506,Waitakere,Waitakere,Auckland,Auckland
-W2098,Somerville,Quay Street-Customs Street,TRAIN,12,EDUCATION,Somerville,-36.91234246,174.93394109,Quay Street-Customs Street,-36.84601989,174.77646293,15.829727347386491,Manukau,Waitakere,Auckland,Auckland
-W2099,Northpark South,Quay Street-Customs Street,TRAIN,6,EDUCATION,Northpark South,-36.9227022,174.91641035,Quay Street-Customs Street,-36.84601989,174.77646293,15.087312762582743,Manukau,Waitakere,Auckland,Auckland
-W2100,Papatoetoe North,Quay Street-Customs Street,TRAIN,12,EDUCATION,Papatoetoe North,-36.97093119,174.8493612,Quay Street-Customs Street,-36.84601989,174.77646293,15.327346185707547,Manukau,Waitakere,Auckland,Auckland
-W2101,Dingwall,Quay Street-Customs Street,TRAIN,9,EDUCATION,Dingwall,-36.96337293,174.86069682,Quay Street-Customs Street,-36.84601989,174.77646293,15.045711752689595,Manukau,Waitakere,Auckland,Auckland
-W2102,Aorere South,Quay Street-Customs Street,TRAIN,9,EDUCATION,Aorere South,-36.98140868,174.83755849,Quay Street-Customs Street,-36.84601989,174.77646293,16.004456793609542,Manukau,Waitakere,Auckland,Auckland
-W2106,Papatoetoe West,Quay Street-Customs Street,TRAIN,15,EDUCATION,Papatoetoe West,-36.98008106,174.84650545,Quay Street-Customs Street,-36.84601989,174.77646293,16.155308925473346,Manukau,Waitakere,Auckland,Auckland
-W2107,Papatoetoe Central,Quay Street-Customs Street,TRAIN,6,EDUCATION,Papatoetoe Central,-36.97461746,174.85800659,Quay Street-Customs Street,-36.84601989,174.77646293,16.032296259647087,Manukau,Waitakere,Auckland,Auckland
-W2113,Papatoetoe East,Quay Street-Customs Street,TRAIN,12,EDUCATION,Papatoetoe East,-36.97237736,174.87353637,Quay Street-Customs Street,-36.84601989,174.77646293,16.48945349414155,Manukau,Waitakere,Auckland,Auckland
-W2116,Papatoetoe South West,Quay Street-Customs Street,TRAIN,9,EDUCATION,Papatoetoe South West,-36.98945511,174.84681066,Quay Street-Customs Street,-36.84601989,174.77646293,17.131571068406387,Franklin,Waitakere,Auckland,Auckland
-W2117,Dannemora North,Quay Street-Customs Street,TRAIN,9,EDUCATION,Dannemora North,-36.94584124,174.91221484,Quay Street-Customs Street,-36.84601989,174.77646293,16.39910093203267,Manukau,Waitakere,Auckland,Auckland
-W2121,Puhinui North,Quay Street-Customs Street,TRAIN,12,EDUCATION,Puhinui North,-36.98354464,174.86235623,Quay Street-Customs Street,-36.84601989,174.77646293,17.092654155204475,Manukau,Waitakere,Auckland,Auckland
-W2123,Puhinui South,Quay Street-Customs Street,TRAIN,6,EDUCATION,Puhinui South,-36.98905465,174.85892926,Quay Street-Customs Street,-36.84601989,174.77646293,17.51309564506901,Manukau,Waitakere,Auckland,Auckland
-W2124,Baverstock,Quay Street-Customs Street,TRAIN,9,EDUCATION,Baverstock,-36.95525862,174.91670173,Quay Street-Customs Street,-36.84601989,174.77646293,17.408234463799175,Manukau,Waitakere,Auckland,Auckland
-W2135,Ormiston South,Quay Street-Customs Street,TRAIN,6,EDUCATION,Ormiston South,-36.97596797,174.9175859,Quay Street-Customs Street,-36.84601989,174.77646293,19.13677721822211,Manukau,Waitakere,Auckland,Auckland
-W2139,Goodwood Heights,Quay Street-Customs Street,TRAIN,9,EDUCATION,Goodwood Heights,-36.99421746,174.89732834,Quay Street-Customs Street,-36.84601989,174.77646293,19.672269790862238,Franklin,Waitakere,Auckland,Auckland
-W2142,Homai East,Quay Street-Customs Street,TRAIN,6,EDUCATION,Homai East,-37.0133257,174.88546124,Quay Street-Customs Street,-36.84601989,174.77646293,20.9751834014914,Franklin,Waitakere,Auckland,Auckland
-W2144,The Gardens (Auckland),Quay Street-Customs Street,TRAIN,12,EDUCATION,The Gardens (Auckland),-37.00156996,174.91303846,Quay Street-Customs Street,-36.84601989,174.77646293,21.131949585286765,Franklin,Waitakere,Auckland,Auckland
-W2149,Rowandale East,Quay Street-Customs Street,TRAIN,6,EDUCATION,Rowandale East,-37.02529361,174.88087913,Quay Street-Customs Street,-36.84601989,174.77646293,21.988719954275226,Franklin,Waitakere,Auckland,Auckland
-W2151,Weymouth North,Quay Street-Customs Street,TRAIN,9,EDUCATION,Weymouth North,-37.03938307,174.86530684,Quay Street-Customs Street,-36.84601989,174.77646293,22.90489929176177,Franklin,Waitakere,Auckland,Auckland
-W2152,Hillpark South,Quay Street-Customs Street,TRAIN,6,EDUCATION,Hillpark South,-37.01717082,174.90042465,Quay Street-Customs Street,-36.84601989,174.77646293,21.99054886845903,Franklin,Waitakere,Auckland,Auckland
-W2153,Alfriston,Quay Street-Customs Street,TRAIN,9,EDUCATION,Alfriston,-37.01247699,174.92080195,Quay Street-Customs Street,-36.84601989,174.77646293,22.52097148950559,Franklin,Waitakere,Auckland,Auckland
-W2155,Leabank,Quay Street-Customs Street,TRAIN,9,EDUCATION,Leabank,-37.03219654,174.88734352,Quay Street-Customs Street,-36.84601989,174.77646293,22.927721599523483,Franklin,Waitakere,Auckland,Auckland
-W2158,Manurewa South,Quay Street-Customs Street,TRAIN,6,EDUCATION,Manurewa South,-37.03138834,174.90040876,Quay Street-Customs Street,-36.84601989,174.77646293,23.370984672984925,Franklin,Waitakere,Auckland,Auckland
-W2160,Wattle Downs West,Quay Street-Customs Street,TRAIN,9,EDUCATION,Wattle Downs West,-37.05128128,174.87522682,Quay Street-Customs Street,-36.84601989,174.77646293,24.45330390468596,Franklin,Waitakere,Auckland,Auckland
-W2162,Randwick Park West,Quay Street-Customs Street,TRAIN,6,EDUCATION,Randwick Park West,-37.02624737,174.91357933,Quay Street-Customs Street,-36.84601989,174.77646293,23.454915022098866,Franklin,Waitakere,Auckland,Auckland
 W2166,Takanini West,Quay Street-Customs Street,TRAIN,12,EDUCATION,Takanini West,-37.04068506,174.92112941,Quay Street-Customs Street,-36.84601989,174.77646293,25.17598854419459,Franklin,Waitakere,Auckland,Auckland
 W2167,Takanini South,Quay Street-Customs Street,TRAIN,24,EDUCATION,Takanini South,-37.04157360000001,174.93888309,Quay Street-Customs Street,-36.84601989,174.77646293,26.099305596697306,Franklin,Waitakere,Auckland,Auckland
 W2172,Papakura West,Quay Street-Customs Street,TRAIN,6,EDUCATION,Papakura West,-37.05653671,174.93416803,Quay Street-Customs Street,-36.84601989,174.77646293,27.282605594629803,Franklin,Waitakere,Auckland,Auckland
@@ -45,62 +7,14 @@ W2178,Karaka Lakes,Quay Street-Customs Street,TRAIN,6,EDUCATION,Karaka Lakes,-37
 W2181,Rosehill,Quay Street-Customs Street,TRAIN,9,EDUCATION,Rosehill,-37.080743299999995,174.93811005,Quay Street-Customs Street,-36.84601989,174.77646293,29.79051567534904,Franklin,Waitakere,Auckland,Auckland
 W2183,Papakura East,Quay Street-Customs Street,TRAIN,9,EDUCATION,Papakura East,-37.05846123,174.97920854,Quay Street-Customs Street,-36.84601989,174.77646293,29.70844541689761,Franklin,Waitakere,Auckland,Auckland
 W2184,Opaheke,Quay Street-Customs Street,TRAIN,9,EDUCATION,Opaheke,-37.07682576,174.94797761,Quay Street-Customs Street,-36.84601989,174.77646293,29.847751945967264,Franklin,Waitakere,Auckland,Auckland
-W3243,Swanson Rural,Wynyard-Viaduct,TRAIN,9,EDUCATION,Swanson Rural,-36.881095,174.57106823,Wynyard-Viaduct,-36.843309399999995,174.75788827,17.14326762832649,Waitakere,Waitakere,Auckland,Auckland
-W3252,Swanson,Wynyard-Viaduct,TRAIN,6,EDUCATION,Swanson,-36.86489607,174.58462975,Wynyard-Viaduct,-36.843309399999995,174.75788827,15.601314544472034,Waitakere,Waitakere,Auckland,Auckland
-W3402,Laingholm,Wynyard-Viaduct,TRAIN,6,EDUCATION,Laingholm,-36.96456984,174.63077158,Wynyard-Viaduct,-36.843309399999995,174.75788827,17.594257006793278,Waitakere,Waitakere,Auckland,Auckland
-W3517,Mellons Bay,Wynyard-Viaduct,TRAIN,6,EDUCATION,Mellons Bay,-36.88715946,174.93040248,Wynyard-Viaduct,-36.843309399999995,174.75788827,16.103038376530428,Manukau,Waitakere,Auckland,Auckland
-W3523,Highland Park (Auckland),Wynyard-Viaduct,TRAIN,9,EDUCATION,Highland Park (Auckland),-36.90473104,174.90937089,Wynyard-Viaduct,-36.843309399999995,174.75788827,15.10659741747086,Manukau,Waitakere,Auckland,Auckland
-W3531,Botany Downs West,Wynyard-Viaduct,TRAIN,6,EDUCATION,Botany Downs West,-36.90954846,174.91414564,Wynyard-Viaduct,-36.843309399999995,174.75788827,15.729821127757385,Manukau,Waitakere,Auckland,Auckland
-W3532,Howick East,Wynyard-Viaduct,TRAIN,9,EDUCATION,Howick East,-36.90088621,174.930388,Wynyard-Viaduct,-36.843309399999995,174.75788827,16.626494797242074,Manukau,Waitakere,Auckland,Auckland
-W3542,Somerville,Wynyard-Viaduct,TRAIN,6,EDUCATION,Somerville,-36.91234246,174.93394109,Wynyard-Viaduct,-36.843309399999995,174.75788827,17.439524911513093,Manukau,Waitakere,Auckland,Auckland
-W3544,Papatoetoe North,Wynyard-Viaduct,TRAIN,6,EDUCATION,Papatoetoe North,-36.97093119,174.8493612,Wynyard-Viaduct,-36.843309399999995,174.75788827,16.35630334179243,Manukau,Waitakere,Auckland,Auckland
-W3546,Aorere South,Wynyard-Viaduct,TRAIN,9,EDUCATION,Aorere South,-36.98140868,174.83755849,Wynyard-Viaduct,-36.843309399999995,174.75788827,16.910839778243965,Manukau,Waitakere,Auckland,Auckland
-W3550,Papatoetoe West,Wynyard-Viaduct,TRAIN,6,EDUCATION,Papatoetoe West,-36.98008106,174.84650545,Wynyard-Viaduct,-36.843309399999995,174.75788827,17.127954230720235,Manukau,Waitakere,Auckland,Auckland
-W3551,Papatoetoe Central,Wynyard-Viaduct,TRAIN,6,EDUCATION,Papatoetoe Central,-36.97461746,174.85800659,Wynyard-Viaduct,-36.843309399999995,174.75788827,17.10031563623438,Manukau,Waitakere,Auckland,Auckland
-W3555,Botany South,Wynyard-Viaduct,TRAIN,6,EDUCATION,Botany South,-36.9385812,174.91414624,Wynyard-Viaduct,-36.843309399999995,174.75788827,17.473774204496678,Manukau,Waitakere,Auckland,Auckland
-W3570,Ormiston North,Wynyard-Viaduct,TRAIN,6,EDUCATION,Ormiston North,-36.96413048,174.91309841,Wynyard-Viaduct,-36.843309399999995,174.75788827,19.26009774833248,Manukau,Waitakere,Auckland,Auckland
-W3575,Clover Park South,Wynyard-Viaduct,TRAIN,9,EDUCATION,Clover Park South,-36.98563252,174.89012173,Wynyard-Viaduct,-36.843309399999995,174.75788827,19.71434046599925,Manukau,Waitakere,Auckland,Auckland
-W3577,Ormiston South,Wynyard-Viaduct,TRAIN,12,EDUCATION,Ormiston South,-36.97596797,174.9175859,Wynyard-Viaduct,-36.843309399999995,174.75788827,20.474190116233665,Manukau,Waitakere,Auckland,Auckland
-W3578,Mission Heights South,Wynyard-Viaduct,TRAIN,6,EDUCATION,Mission Heights South,-36.96503986,174.9321751,Wynyard-Viaduct,-36.843309399999995,174.75788827,20.575991534166192,Manukau,Waitakere,Auckland,Auckland
-W3579,Hilltop (Auckland),Wynyard-Viaduct,TRAIN,6,EDUCATION,Hilltop (Auckland),-36.98571899,174.9077134,Wynyard-Viaduct,-36.843309399999995,174.75788827,20.692455186156167,Manukau,Waitakere,Auckland,Auckland
-W3580,Goodwood Heights,Wynyard-Viaduct,TRAIN,9,EDUCATION,Goodwood Heights,-36.99421746,174.89732834,Wynyard-Viaduct,-36.843309399999995,174.75788827,20.86236083915539,Franklin,Waitakere,Auckland,Auckland
-W3587,The Gardens (Auckland),Wynyard-Viaduct,TRAIN,9,EDUCATION,The Gardens (Auckland),-37.00156996,174.91303846,Wynyard-Viaduct,-36.843309399999995,174.75788827,22.35847412430851,Franklin,Waitakere,Auckland,Auckland
 W3604,Takanini South,Wynyard-Viaduct,TRAIN,12,EDUCATION,Takanini South,-37.04157360000001,174.93888309,Wynyard-Viaduct,-36.843309399999995,174.75788827,27.290288264658518,Franklin,Waitakere,Auckland,Auckland
 W3609,Pahurehure,Wynyard-Viaduct,TRAIN,9,EDUCATION,Pahurehure,-37.06864785,174.93272857,Wynyard-Viaduct,-36.843309399999995,174.75788827,29.48185766703625,Franklin,Waitakere,Auckland,Auckland
 W3611,Karaka Lakes,Wynyard-Viaduct,TRAIN,9,EDUCATION,Karaka Lakes,-37.08456461,174.92648385,Wynyard-Viaduct,-36.843309399999995,174.75788827,30.725001680255765,Franklin,Waitakere,Auckland,Auckland
 W3612,Papakura Massey Park,Wynyard-Viaduct,TRAIN,6,EDUCATION,Papakura Massey Park,-37.0662997,174.95483864,Wynyard-Viaduct,-36.843309399999995,174.75788827,30.34921272331697,Franklin,Waitakere,Auckland,Auckland
 W3613,Rosehill,Wynyard-Viaduct,TRAIN,6,EDUCATION,Rosehill,-37.080743299999995,174.93811005,Wynyard-Viaduct,-36.843309399999995,174.75788827,30.877719918315005,Franklin,Waitakere,Auckland,Auckland
-W3705,Swanson,Shortland Street,TRAIN,9,EDUCATION,Swanson,-36.86489607,174.58462975,Shortland Street,-36.84736853,174.76823915,16.451937049854187,Waitakere,Waitakere,Auckland,Auckland
-W3975,Cockle Bay,Shortland Street,TRAIN,6,EDUCATION,Cockle Bay,-36.89765568,174.94328238,Shortland Street,-36.84736853,174.76823915,16.54419502154964,Manukau,Waitakere,Auckland,Auckland
-W3979,Somerville,Shortland Street,TRAIN,6,EDUCATION,Somerville,-36.91234246,174.93394109,Shortland Street,-36.84736853,174.76823915,16.413812217078494,Manukau,Waitakere,Auckland,Auckland
-W3981,Papatoetoe North,Shortland Street,TRAIN,6,EDUCATION,Papatoetoe North,-36.97093119,174.8493612,Shortland Street,-36.84736853,174.76823915,15.517610009522695,Manukau,Waitakere,Auckland,Auckland
-W3986,Papatoetoe West,Shortland Street,TRAIN,6,EDUCATION,Papatoetoe West,-36.98008106,174.84650545,Shortland Street,-36.84736853,174.76823915,16.31518118265736,Manukau,Waitakere,Auckland,Auckland
-W3987,Papatoetoe Central,Shortland Street,TRAIN,6,EDUCATION,Papatoetoe Central,-36.97461746,174.85800659,Shortland Street,-36.84736853,174.76823915,16.245109985688668,Manukau,Waitakere,Auckland,Auckland
 W4027,Takanini South,Shortland Street,TRAIN,6,EDUCATION,Takanini South,-37.04157360000001,174.93888309,Shortland Street,-36.84736853,174.76823915,26.387552950425324,Franklin,Waitakere,Auckland,Auckland
 W4032,Karaka Lakes,Shortland Street,TRAIN,6,EDUCATION,Karaka Lakes,-37.08456461,174.92648385,Shortland Street,-36.84736853,174.76823915,29.88808638140468,Franklin,Waitakere,Auckland,Auckland
-W4522,Sunnyvale East,Penrose,TRAIN,9,EDUCATION,Sunnyvale East,-36.89955638,174.64253379,Penrose,-36.91999811,174.82258914,16.16918961894468,Waitakere,Waitakere,Auckland,Auckland
-W4532,Glen Eden Rosier,Penrose,TRAIN,6,EDUCATION,Glen Eden Rosier,-36.91539926,174.63643274,Penrose,-36.91999811,174.82258914,16.557246413491846,Waitakere,Waitakere,Auckland,Auckland
-W4837,Takanini South,Penrose,TRAIN,12,EDUCATION,Takanini South,-37.04157360000001,174.93888309,Penrose,-36.91999811,174.82258914,17.013546668779647,Franklin,Waitakere,Auckland,Auckland
-W4848,Papakura Central,Penrose,TRAIN,9,EDUCATION,Papakura Central,-37.06542305,174.94281885,Penrose,-36.91999811,174.82258914,19.37791409856868,Franklin,Waitakere,Auckland,Auckland
-W4855,Papakura East,Penrose,TRAIN,6,EDUCATION,Papakura East,-37.05846123,174.97920854,Penrose,-36.91999811,174.82258914,20.74967167942843,Franklin,Waitakere,Auckland,Auckland
-W4856,Opaheke,Penrose,TRAIN,12,EDUCATION,Opaheke,-37.07682576,174.94797761,Penrose,-36.91999811,174.82258914,20.69040568780269,Franklin,Waitakere,Auckland,Auckland
 W4868,Pukekohe North West,Penrose,TRAIN,6,EDUCATION,Pukekohe North West,-37.18225476,174.89580342,Penrose,-36.91999811,174.82258914,29.87666234364347,Franklin,Waitakere,Auckland,Auckland
-W5375,Swanson Rural,Auckland-University,TRAIN,6,EDUCATION,Swanson Rural,-36.881095,174.57106823,Auckland-University,-36.85143057,174.76906469,17.919992447816817,Waitakere,Waitakere,Auckland,Auckland
-W6043,Hillpark South,Ellerslie West,TRAIN,6,EDUCATION,Hillpark South,-37.01717082,174.90042465,Ellerslie West,-36.89897117,174.80612464,15.586817169243286,Franklin,Waitakere,Auckland,Auckland
-W6056,Takanini North,Ellerslie West,TRAIN,6,EDUCATION,Takanini North,-37.02622521,174.93229242,Ellerslie West,-36.89897117,174.80612464,18.052166509692107,Franklin,Waitakere,Auckland,Auckland
-W6060,Takanini South,Ellerslie West,TRAIN,9,EDUCATION,Takanini South,-37.04157360000001,174.93888309,Ellerslie West,-36.89897117,174.80612464,19.761955476455814,Franklin,Waitakere,Auckland,Auckland
-W6067,Papakura North,Ellerslie West,TRAIN,6,EDUCATION,Papakura North,-37.05741406,174.94794613,Ellerslie West,-36.89897117,174.80612464,21.658803354555026,Franklin,Waitakere,Auckland,Auckland
-W6068,Pahurehure,Ellerslie West,TRAIN,6,EDUCATION,Pahurehure,-37.06864785,174.93272857,Ellerslie West,-36.89897117,174.80612464,21.964254613906064,Franklin,Waitakere,Auckland,Auckland
-W6069,Papakura Central,Ellerslie West,TRAIN,9,EDUCATION,Papakura Central,-37.06542305,174.94281885,Ellerslie West,-36.89897117,174.80612464,22.135785484130974,Franklin,Waitakere,Auckland,Auckland
-W6593,Papakura North,Auckland Airport,TRAIN,6,EDUCATION,Papakura North,-37.05741406,174.94794613,Auckland Airport,-36.9891029,174.77400859,17.208769550288803,Franklin,Manukau,Auckland,Auckland
-W7220,Swanson Rural,Newmarket,TRAIN,9,EDUCATION,Swanson Rural,-36.881095,174.57106823,Newmarket,-36.86853889,174.77706299,18.376389197214355,Waitakere,Waitakere,Auckland,Auckland
-W7229,Swanson,Newmarket,TRAIN,12,EDUCATION,Swanson,-36.86489607,174.58462975,Newmarket,-36.86853889,174.77706299,17.123581281386368,Waitakere,Waitakere,Auckland,Auckland
-W7246,Ranui Domain,Newmarket,TRAIN,6,EDUCATION,Ranui Domain,-36.86589923,174.60427343,Newmarket,-36.86853889,174.77706299,15.373996910367339,Waitakere,Waitakere,Auckland,Auckland
-W7304,Oratia,Newmarket,TRAIN,9,EDUCATION,Oratia,-36.94487953,174.61183121,Newmarket,-36.86853889,174.77706299,16.96734969429301,Waitakere,Waitakere,Auckland,Auckland
-W7350,Waima-Woodlands Park,Newmarket,TRAIN,12,EDUCATION,Waima-Woodlands Park,-36.94665584,174.63541623,Newmarket,-36.86853889,174.77706299,15.299067910140858,Waitakere,Waitakere,Auckland,Auckland
-W7378,Laingholm,Newmarket,TRAIN,9,EDUCATION,Laingholm,-36.96456984,174.63077158,Newmarket,-36.86853889,174.77706299,16.82756252364108,Waitakere,Waitakere,Auckland,Auckland
-W7580,Hillpark South,Newmarket,TRAIN,6,EDUCATION,Hillpark South,-37.01717082,174.90042465,Newmarket,-36.86853889,174.77706299,19.83276414135922,Franklin,Waitakere,Auckland,Auckland
-W7597,Takanini South,Newmarket,TRAIN,15,EDUCATION,Takanini South,-37.04157360000001,174.93888309,Newmarket,-36.86853889,174.77706299,24.019769457668644,Franklin,Waitakere,Auckland,Auckland
 W7600,Hingaia,Newmarket,TRAIN,6,EDUCATION,Hingaia,-37.07369960000001,174.91419445,Newmarket,-36.86853889,174.77706299,25.861892526685143,Franklin,Waitakere,Auckland,Auckland
 W7604,Papakura North,Newmarket,TRAIN,9,EDUCATION,Papakura North,-37.05741406,174.94794613,Newmarket,-36.86853889,174.77706299,25.91507149510457,Franklin,Waitakere,Auckland,Auckland
 W7606,Papakura Central,Newmarket,TRAIN,6,EDUCATION,Papakura Central,-37.06542305,174.94281885,Newmarket,-36.86853889,174.77706299,26.38452250088007,Franklin,Waitakere,Auckland,Auckland
@@ -111,51 +25,14 @@ W7614,Opaheke,Newmarket,TRAIN,6,EDUCATION,Opaheke,-37.07682576,174.94797761,Newm
 W7615,Red Hill,Newmarket,TRAIN,6,EDUCATION,Red Hill,-37.06738541,174.97729374,Newmarket,-36.86853889,174.77706299,28.378256291627952,Franklin,Waitakere,Auckland,Auckland
 W7617,Drury Rural,Newmarket,TRAIN,6,EDUCATION,Drury Rural,-37.11220768,174.97476145,Newmarket,-36.86853889,174.77706299,32.28669120153291,Franklin,Waitakere,Auckland,Auckland
 W7619,Pukekohe North West,Newmarket,TRAIN,9,EDUCATION,Pukekohe North West,-37.18225476,174.89580342,Newmarket,-36.86853889,174.77706299,36.441474656349406,Franklin,Waitakere,Auckland,Auckland
-W9145,Swanson,Queen Street,TRAIN,9,EDUCATION,Swanson,-36.86489607,174.58462975,Queen Street,-36.84774104,174.76524972,16.18289165940453,Waitakere,Waitakere,Auckland,Auckland
-W9197,Waiatarua,Queen Street,TRAIN,6,EDUCATION,Waiatarua,-36.92234659,174.59471127,Queen Street,-36.84774104,174.76524972,17.287842221153472,Waitakere,Waitakere,Auckland,Auckland
-W9415,Mellons Bay,Queen Street,TRAIN,6,EDUCATION,Mellons Bay,-36.88715946,174.93040248,Queen Street,-36.84774104,174.76524972,15.331680493768886,Manukau,Waitakere,Auckland,Auckland
-W9435,Mangere South East,Queen Street,TRAIN,9,EDUCATION,Mangere South East,-36.98695925,174.82743938,Queen Street,-36.84774104,174.76524972,16.438004840332518,Manukau,Waitakere,Auckland,Auckland
-W9436,Botany Downs East,Queen Street,TRAIN,6,EDUCATION,Botany Downs East,-36.91003877,174.92177547,Queen Street,-36.84774104,174.76524972,15.550405398562459,Manukau,Waitakere,Auckland,Auckland
-W9443,Northpark North,Queen Street,TRAIN,6,EDUCATION,Northpark North,-36.91724964,174.92247912,Queen Street,-36.84774104,174.76524972,15.977945736180992,Manukau,Waitakere,Auckland,Auckland
-W9444,Somerville,Queen Street,TRAIN,9,EDUCATION,Somerville,-36.91234246,174.93394109,Queen Street,-36.84774104,174.76524972,16.635011779605772,Manukau,Waitakere,Auckland,Auckland
-W9446,Papatoetoe North,Queen Street,TRAIN,6,EDUCATION,Papatoetoe North,-36.97093119,174.8493612,Queen Street,-36.84774104,174.76524972,15.60654226663248,Manukau,Waitakere,Auckland,Auckland
-W9447,Dingwall,Queen Street,TRAIN,6,EDUCATION,Dingwall,-36.96337293,174.86069682,Queen Street,-36.84774104,174.76524972,15.40592742106294,Manukau,Waitakere,Auckland,Auckland
-W9448,Aorere South,Queen Street,TRAIN,6,EDUCATION,Aorere South,-36.98140868,174.83755849,Queen Street,-36.84774104,174.76524972,16.193813176989952,Manukau,Waitakere,Auckland,Auckland
-W9454,Papatoetoe Central,Queen Street,TRAIN,9,EDUCATION,Papatoetoe Central,-36.97461746,174.85800659,Queen Street,-36.84774104,174.76524972,16.341539771602548,Manukau,Waitakere,Auckland,Auckland
-W9465,Papatoetoe South,Queen Street,TRAIN,6,EDUCATION,Papatoetoe South,-36.97749183,174.86726543,Queen Street,-36.84774104,174.76524972,17.041659071320332,Manukau,Waitakere,Auckland,Auckland
-W9468,Puhinui North,Queen Street,TRAIN,9,EDUCATION,Puhinui North,-36.98354464,174.86235623,Queen Street,-36.84774104,174.76524972,17.394231996119366,Manukau,Waitakere,Auckland,Auckland
-W9475,Chapel Downs,Queen Street,TRAIN,6,EDUCATION,Chapel Downs,-36.97187248,174.90214003,Queen Street,-36.84774104,174.76524972,18.4023401693988,Manukau,Waitakere,Auckland,Auckland
-W9480,Ormiston South,Queen Street,TRAIN,9,EDUCATION,Ormiston South,-36.97596797,174.9175859,Queen Street,-36.84774104,174.76524972,19.665428064465324,Manukau,Waitakere,Auckland,Auckland
-W9484,Goodwood Heights,Queen Street,TRAIN,6,EDUCATION,Goodwood Heights,-36.99421746,174.89732834,Queen Street,-36.84774104,174.76524972,20.078317544274164,Franklin,Waitakere,Auckland,Auckland
-W9489,Homai West,Queen Street,TRAIN,6,EDUCATION,Homai West,-37.01888813,174.87799595,Queen Street,-36.84774104,174.76524972,21.50789684366481,Franklin,Waitakere,Auckland,Auckland
-W9498,Hillpark South,Queen Street,TRAIN,6,EDUCATION,Hillpark South,-37.01717082,174.90042465,Queen Street,-36.84774104,174.76524972,22.344789793337256,Franklin,Waitakere,Auckland,Auckland
-W9505,Randwick Park East,Queen Street,TRAIN,6,EDUCATION,Randwick Park East,-37.01986261,174.91783022,Queen Street,-36.84774104,174.76524972,23.45674935070882,Franklin,Waitakere,Auckland,Auckland
 W9515,Takanini South,Queen Street,TRAIN,15,EDUCATION,Takanini South,-37.04157360000001,174.93888309,Queen Street,-36.84774104,174.76524972,26.507410092894787,Franklin,Waitakere,Auckland,Auckland
 W9523,Karaka Lakes,Queen Street,TRAIN,6,EDUCATION,Karaka Lakes,-37.08456461,174.92648385,Queen Street,-36.84774104,174.76524972,29.977523937443447,Franklin,Waitakere,Auckland,Auckland
 W9526,Rosehill,Queen Street,TRAIN,6,EDUCATION,Rosehill,-37.080743299999995,174.93811005,Queen Street,-36.84774104,174.76524972,30.118509194281106,Franklin,Waitakere,Auckland,Auckland
 W9527,Papakura East,Queen Street,TRAIN,6,EDUCATION,Papakura East,-37.05846123,174.97920854,Queen Street,-36.84774104,174.76524972,30.174052544429536,Franklin,Waitakere,Auckland,Auckland
-W9728,Ranui South West,Hobson Ridge North,TRAIN,6,EDUCATION,Ranui South West,-36.87146189,174.59392367,Hobson Ridge North,-36.84707104,174.76276914,15.26476458117324,Waitakere,Waitakere,Auckland,Auckland
-W10000,Somerville,Hobson Ridge North,TRAIN,6,EDUCATION,Somerville,-36.91234246,174.93394109,Hobson Ridge North,-36.84707104,174.76276914,16.866268222047413,Manukau,Waitakere,Auckland,Auckland
-W10009,Papatoetoe West,Hobson Ridge North,TRAIN,6,EDUCATION,Papatoetoe West,-36.98008106,174.84650545,Hobson Ridge North,-36.84707104,174.76276914,16.557988564545337,Manukau,Waitakere,Auckland,Auckland
-W10010,Papatoetoe Central,Hobson Ridge North,TRAIN,6,EDUCATION,Papatoetoe Central,-36.97461746,174.85800659,Hobson Ridge North,-36.84707104,174.76276914,16.517881268734026,Manukau,Waitakere,Auckland,Auckland
-W10025,Puhinui North,Hobson Ridge North,TRAIN,6,EDUCATION,Puhinui North,-36.98354464,174.86235623,Hobson Ridge North,-36.84707104,174.76276914,17.569060172215522,Manukau,Waitakere,Auckland,Auckland
-W10036,Clover Park South,Hobson Ridge North,TRAIN,6,EDUCATION,Clover Park South,-36.98563252,174.89012173,Hobson Ridge North,-36.84707104,174.76276914,19.11990166081464,Manukau,Waitakere,Auckland,Auckland
-W10048,Homai West,Hobson Ridge North,TRAIN,6,EDUCATION,Homai West,-37.01888813,174.87799595,Hobson Ridge North,-36.84707104,174.76276914,21.677158138873654,Franklin,Waitakere,Auckland,Auckland
-W10057,Hillpark South,Hobson Ridge North,TRAIN,12,EDUCATION,Hillpark South,-37.01717082,174.90042465,Hobson Ridge North,-36.84707104,174.76276914,22.526657576178852,Franklin,Waitakere,Auckland,Auckland
-W10064,Wattle Downs West,Hobson Ridge North,TRAIN,6,EDUCATION,Wattle Downs West,-37.05128128,174.87522682,Hobson Ridge North,-36.84707104,174.76276914,24.80890625807575,Franklin,Waitakere,Auckland,Auckland
 W10068,Takanini West,Hobson Ridge North,TRAIN,6,EDUCATION,Takanini West,-37.04068506,174.92112941,Hobson Ridge North,-36.84707104,174.76276914,25.720699123363445,Franklin,Waitakere,Auckland,Auckland
 W10069,Takanini South,Hobson Ridge North,TRAIN,6,EDUCATION,Takanini South,-37.04157360000001,174.93888309,Hobson Ridge North,-36.84707104,174.76276914,26.69669919453983,Franklin,Waitakere,Auckland,Auckland
 W10071,Papakura North,Hobson Ridge North,TRAIN,12,EDUCATION,Papakura North,-37.05741406,174.94794613,Hobson Ridge North,-36.84707104,174.76276914,28.597362271550274,Franklin,Waitakere,Auckland,Auckland
 W10079,Opaheke,Hobson Ridge North,TRAIN,6,EDUCATION,Opaheke,-37.07682576,174.94797761,Hobson Ridge North,-36.84707104,174.76276914,30.38849911114282,Franklin,Waitakere,Auckland,Auckland
-W11303,Swanson Rural,Victoria Park ,TRAIN,6,EDUCATION,Swanson Rural,-36.881095,174.57106823,Victoria Park,-36.84857807,174.75659124,16.895879636399048,Waitakere,Waitakere,Auckland,Auckland
-W15342,Quay Street-Customs Street,Manukau Central,TRAIN,6,EDUCATION,Quay Street-Customs Street,-36.84601989,174.77646293,Manukau Central,-36.99138991,174.86947528,18.156530588495254,Waitakere,Manukau,Auckland,Auckland
-W15350,Anzac Avenue,Manukau Central,TRAIN,6,EDUCATION,Anzac Avenue,-36.84768561,174.77203569999998,Manukau Central,-36.99138991,174.86947528,18.176027554287504,Waitakere,Manukau,Auckland,Auckland
-W15625,Drury Rural,Manukau Central,TRAIN,6,EDUCATION,Drury Rural,-37.11220768,174.97476145,Manukau Central,-36.99138991,174.86947528,16.364033831056965,Franklin,Manukau,Auckland,Auckland
-W15637,Rooseville Park,Manukau Central,TRAIN,6,EDUCATION,Rooseville Park,-37.19697684,174.91307633,Manukau Central,-36.99138991,174.86947528,23.185009646450442,Franklin,Manukau,Auckland,Auckland
-W17031,Papakura Kelvin,Middlemore,TRAIN,6,EDUCATION,Papakura Kelvin,-37.05933436,174.96239449,Middlemore,-36.96044494,174.84306701,15.270054739082433,Franklin,Manukau,Auckland,Auckland
-W17033,Rosehill,Middlemore,TRAIN,6,EDUCATION,Rosehill,-37.080743299999995,174.93811005,Middlemore,-36.96044494,174.84306701,15.815538012494061,Franklin,Manukau,Auckland,Auckland
-W17036,Opaheke,Middlemore,TRAIN,12,EDUCATION,Opaheke,-37.07682576,174.94797761,Middlemore,-36.96044494,174.84306701,15.944370862437134,Franklin,Manukau,Auckland,Auckland
-W17040,Drury Rural,Middlemore,TRAIN,6,EDUCATION,Drury Rural,-37.11220768,174.97476145,Middlemore,-36.96044494,174.84306701,20.52843224893313,Franklin,Manukau,Auckland,Auckland
 W17051,Cloverlea (Auckland),Middlemore,TRAIN,6,EDUCATION,Cloverlea (Auckland),-37.21592548,174.8926362,Middlemore,-36.96044494,174.84306701,28.746383233508162,Franklin,Manukau,Auckland,Auckland
 W17054,Ararimu,Middlemore,TRAIN,6,EDUCATION,Ararimu,-37.14686222,175.08246983,Middlemore,-36.96044494,174.84306701,29.68205753387101,Franklin,Manukau,Waikato,Auckland
 W34415,Te Horo,Thorndon,TRAIN,15,EDUCATION,Te Horo,-40.79710947,175.10587813,Thorndon,-41.27246445,174.77422734,59.72990237488364,Kapiti Coast,Wellington,Wellington,Wellington
@@ -177,29 +54,11 @@ W34432,Paraparaumu East,Thorndon,TRAIN,12,EDUCATION,Paraparaumu East,-40.9193466
 W34433,Raumati South,Thorndon,TRAIN,21,EDUCATION,Raumati South,-40.94126612,174.98329156,Thorndon,-41.27246445,174.77422734,40.78091906845685,Kapiti Coast,Wellington,Wellington,Wellington
 W34434,Paekakariki,Thorndon,TRAIN,21,EDUCATION,Paekakariki,-40.97186832,174.96895136,Thorndon,-41.27246445,174.77422734,37.192175408524655,Kapiti Coast,Wellington,Wellington,Wellington
 W34435,Pukerua Bay,Thorndon,TRAIN,33,EDUCATION,Pukerua Bay,-41.04419545,174.87349264,Thorndon,-41.27246445,174.77422734,26.70813596540657,Porirua,Wellington,Wellington,Wellington
-W34436,Plimmerton,Thorndon,TRAIN,18,EDUCATION,Plimmerton,-41.06768493,174.86039572,Thorndon,-41.27246445,174.77422734,23.885430280378973,Porirua,Wellington,Wellington,Wellington
-W34437,Titahi Bay North,Thorndon,TRAIN,12,EDUCATION,Titahi Bay North,-41.0986598,174.84388615,Thorndon,-41.27246445,174.77422734,20.18618661433491,Porirua,Wellington,Wellington,Wellington
-W34438,Titahi Bay South,Thorndon,TRAIN,15,EDUCATION,Titahi Bay South,-41.11339531,174.82698818,Thorndon,-41.27246445,174.77422734,18.23029308709136,Porirua,Wellington,Wellington,Wellington
-W34439,Elsdon-Takapuwahia,Thorndon,TRAIN,9,EDUCATION,Elsdon-Takapuwahia,-41.13204408,174.80949296,Thorndon,-41.27246445,174.77422734,15.890336218880785,Porirua,Wellington,Wellington,Wellington
-W34440,Pauatahanui,Thorndon,TRAIN,6,EDUCATION,Pauatahanui,-41.09485489,174.94674014,Thorndon,-41.27246445,174.77422734,24.463356599218844,Porirua,Wellington,Wellington,Wellington
-W34441,Onepoto,Thorndon,TRAIN,9,EDUCATION,Onepoto,-41.10398798,174.85284499,Thorndon,-41.27246445,174.77422734,19.855273097766737,Porirua,Wellington,Wellington,Wellington
-W34442,Camborne,Thorndon,TRAIN,21,EDUCATION,Camborne,-41.08897126,174.87453415,Thorndon,-41.27246445,174.77422734,22.06292407082534,Porirua,Wellington,Wellington,Wellington
-W34443,Paremata,Thorndon,TRAIN,24,EDUCATION,Paremata,-41.09886842,174.8670634,Thorndon,-41.27246445,174.77422734,20.8076879950231,,Wellington,,Wellington
-W34444,Papakowhai,Thorndon,TRAIN,27,EDUCATION,Papakowhai,-41.11593264,174.86350564,Thorndon,-41.27246445,174.77422734,18.940836763385587,Porirua,Wellington,Wellington,Wellington
-W34445,Aotea,Thorndon,TRAIN,48,EDUCATION,Aotea,-41.128257700000006,174.85723027,Thorndon,-41.27246445,174.77422734,17.474193078073785,Porirua,Wellington,Wellington,Wellington
-W34446,Postgate,Thorndon,TRAIN,24,EDUCATION,Postgate,-41.11331454,174.88235004,Thorndon,-41.27246445,174.77422734,19.87512471011353,Porirua,Wellington,Wellington,Wellington
-W34447,Ascot Park,Thorndon,TRAIN,12,EDUCATION,Ascot Park,-41.12000324,174.87336814,Thorndon,-41.27246445,174.77422734,18.873505686953926,Porirua,Wellington,Wellington,Wellington
-W34448,Whitby,Thorndon,TRAIN,27,EDUCATION,Whitby,-41.11717134,174.89107268,Thorndon,-41.27246445,174.77422734,19.843360470774233,Porirua,Wellington,Wellington,Wellington
-W34449,Porirua East,Thorndon,TRAIN,9,EDUCATION,Porirua East,-41.14311394,174.85567585,Thorndon,-41.27246445,174.77422734,15.915358251948485,Porirua,Wellington,Wellington,Wellington
-W34450,Endeavour,Thorndon,TRAIN,51,EDUCATION,Endeavour,-41.11459136,174.90415779,Thorndon,-41.27246445,174.77422734,20.64848559426104,Porirua,Wellington,Wellington,Wellington
-W34451,Cannons Creek North,Thorndon,TRAIN,12,EDUCATION,Cannons Creek North,-41.13969216,174.86263001,Thorndon,-41.27246445,174.77422734,16.512338884910854,Porirua,Wellington,Wellington,Wellington
-W34454,Cannons Creek East,Thorndon,TRAIN,12,EDUCATION,Cannons Creek East,-41.13722514,174.87140063,Thorndon,-41.27246445,174.77422734,17.09461352350044,Porirua,Wellington,Wellington,Wellington
 W34457,Riverstone Terraces,Thorndon,TRAIN,21,EDUCATION,Riverstone Terraces,-41.11205217,175.03826653,Thorndon,-41.27246445,174.77422734,28.394992889160388,Upper Hutt,Wellington,Wellington,Wellington
 W34458,Heretaunga,Thorndon,TRAIN,21,EDUCATION,Heretaunga,-41.13877359,175.01905143,Thorndon,-41.27246445,174.77422734,25.307635695264306,Upper Hutt,Wellington,Wellington,Wellington
 W34459,Birchville-Brown Owl,Thorndon,TRAIN,18,EDUCATION,Birchville-Brown Owl,-41.08596013,175.11315290000005,Thorndon,-41.27246445,174.77422734,35.13765788089391,Upper Hutt,Wellington,Wellington,Wellington
 W34460,Poets Block,Thorndon,TRAIN,21,EDUCATION,Poets Block,-41.12290419,175.04604601,Thorndon,-41.27246445,174.77422734,28.17419675091239,Upper Hutt,Wellington,Wellington,Wellington
 W34461,Brentwood (Upper Hutt City),Thorndon,TRAIN,6,EDUCATION,Brentwood (Upper Hutt City),-41.12890914,175.03679072,Thorndon,-41.27246445,174.77422734,27.15429781160825,Upper Hutt,Wellington,Wellington,Wellington
-W34462,Silverstream (Upper Hutt City),Thorndon,TRAIN,57,EDUCATION,Silverstream (Upper Hutt City),-41.15226988,175.00981756,Thorndon,-41.27246445,174.77422734,23.811420559933314,Upper Hutt,Wellington,Wellington,Wellington
 W34463,Elderslea,Thorndon,TRAIN,18,EDUCATION,Elderslea,-41.1201997,175.05787956,Thorndon,-41.27246445,174.77422734,29.15330855132803,Upper Hutt,Wellington,Wellington,Wellington
 W34464,Trentham North,Thorndon,TRAIN,21,EDUCATION,Trentham North,-41.1328255,175.04564394,Thorndon,-41.27246445,174.77422734,27.50822088600148,Upper Hutt,Wellington,Wellington,Wellington
 W34465,Totara Park,Thorndon,TRAIN,15,EDUCATION,Totara Park,-41.1093256,175.08443163,Thorndon,-41.27246445,174.77422734,31.66731383396185,Upper Hutt,Wellington,Wellington,Wellington
@@ -209,24 +68,7 @@ W34468,Ebdentown,Thorndon,TRAIN,21,EDUCATION,Ebdentown,-41.11875719,175.07244049
 W34469,Wallaceville,Thorndon,TRAIN,24,EDUCATION,Wallaceville,-41.12888528,175.06086829,Thorndon,-41.27246445,174.77422734,28.809724988489233,Upper Hutt,Wellington,Wellington,Wellington
 W34470,Maoribank,Thorndon,TRAIN,27,EDUCATION,Maoribank,-41.10626518,175.10879212,Thorndon,-41.27246445,174.77422734,33.54537884562817,Upper Hutt,Wellington,Wellington,Wellington
 W34471,Te Marua,Thorndon,TRAIN,9,EDUCATION,Te Marua,-41.08870706,175.14335145,Thorndon,-41.27246445,174.77422734,37.037868109643966,Upper Hutt,Wellington,Wellington,Wellington
-W34472,Pinehaven,Thorndon,TRAIN,30,EDUCATION,Pinehaven,-41.16844867,175.01768274,Thorndon,-41.27246445,174.77422734,23.41781328315457,Upper Hutt,Wellington,Wellington,Wellington
 W34473,Clouston Park,Thorndon,TRAIN,9,EDUCATION,Clouston Park,-41.11739699,175.08712646,Thorndon,-41.27246445,174.77422734,31.348608722358154,Upper Hutt,Wellington,Wellington,Wellington
-W34477,Kelson,Thorndon,TRAIN,24,EDUCATION,Kelson,-41.17271184,174.94294237,Thorndon,-41.27246445,174.77422734,17.948302640189056,Hutt city,Wellington,Wellington,Wellington
-W34479,Belmont (Lower Hutt City),Thorndon,TRAIN,24,EDUCATION,Belmont (Lower Hutt City),-41.1900686,174.92123901,Thorndon,-41.27246445,174.77422734,15.332317449000197,Hutt city,Wellington,Wellington,Wellington
-W34484,Taita North,Thorndon,TRAIN,21,EDUCATION,Taita North,-41.17126316,174.96462745,Thorndon,-41.27246445,174.77422734,19.49921413704116,Hutt city,Wellington,Wellington,Wellington
-W34487,Avalon West,Thorndon,TRAIN,21,EDUCATION,Avalon West,-41.19088299,174.94107219,Thorndon,-41.27246445,174.77422734,16.642018476007102,Hutt city,Wellington,Wellington,Wellington
-W34488,Stokes Valley Central,Thorndon,TRAIN,9,EDUCATION,Stokes Valley Central,-41.16891621,174.97736126,Thorndon,-41.27246445,174.77422734,20.52376543819664,Hutt city,Wellington,Wellington,Wellington
-W34489,Taita South,Thorndon,TRAIN,9,EDUCATION,Taita South,-41.18492338,174.95918534,Thorndon,-41.27246445,174.77422734,18.27571656837378,Hutt city,Wellington,Wellington,Wellington
-W34492,Stokes Valley North,Thorndon,TRAIN,18,EDUCATION,Stokes Valley North,-41.166931700000006,174.99312135,Thorndon,-41.27246445,174.77422734,21.74609810858398,Hutt city,Wellington,Wellington,Wellington
-W34495,Avalon East,Thorndon,TRAIN,18,EDUCATION,Avalon East,-41.19581347,174.94455461,Thorndon,-41.27246445,174.77422734,16.598383479077434,Hutt city,Wellington,Wellington,Wellington
-W34497,Naenae Central,Thorndon,TRAIN,18,EDUCATION,Naenae Central,-41.19973943,174.94956607,Thorndon,-41.27246445,174.77422734,16.743818492608202,Hutt city,Wellington,Wellington,Wellington
-W34499,Epuni East,Thorndon,TRAIN,27,EDUCATION,Epuni East,-41.20891382,174.93484484,Thorndon,-41.27246445,174.77422734,15.17534838730865,Hutt city,Wellington,Wellington,Wellington
-W34501,Delaney,Thorndon,TRAIN,6,EDUCATION,Delaney,-41.1864706,174.97924526,Thorndon,-41.27246445,174.77422734,19.631238186842147,Hutt city,Wellington,Wellington,Wellington
-W34504,Naenae North,Thorndon,TRAIN,6,EDUCATION,Naenae North,-41.19737756,174.96248511,Thorndon,-41.27246445,174.77422734,17.81922672917467,Hutt city,Wellington,Wellington,Wellington
-W34505,Manuka,Thorndon,TRAIN,9,EDUCATION,Manuka,-41.18502912,174.98698353,Thorndon,-41.27246445,174.77422734,20.275412004454914,Hutt city,Wellington,Wellington,Wellington
-W34506,Naenae South,Thorndon,TRAIN,12,EDUCATION,Naenae South,-41.20946486,174.95050323,Thorndon,-41.27246445,174.77422734,16.318900843408922,Hutt city,Wellington,Wellington,Wellington
-W34510,Glendale,Thorndon,TRAIN,12,EDUCATION,Glendale,-41.2429916,174.95473935,Thorndon,-41.27246445,174.77422734,15.44094698324135,Hutt city,Wellington,Wellington,Wellington
-W34513,Homedale East,Thorndon,TRAIN,9,EDUCATION,Homedale East,-41.269130600000004,174.95843259,Thorndon,-41.27246445,174.77422734,15.39925773897346,Hutt city,Wellington,Wellington,Wellington
 W34591,Mount Holdsworth,Thorndon,TRAIN,9,EDUCATION,Mount Holdsworth,-40.91709663,175.45136445,Thorndon,-41.27246445,174.77422734,69.14632558371403,Carterton,Wellington,Wellington,Wellington
 W34592,Carterton North,Thorndon,TRAIN,12,EDUCATION,Carterton North,-41.01943446,175.52683939,Thorndon,-41.27246445,174.77422734,69.01427092523795,Carterton,Wellington,Wellington,Wellington
 W34593,Carterton South,Thorndon,TRAIN,9,EDUCATION,Carterton South,-41.03427242,175.51425212,Thorndon,-41.27246445,174.77422734,67.38141062217629,Carterton,Wellington,Wellington,Wellington
@@ -263,32 +105,13 @@ W34875,Paekakariki,Wellington Central,TRAIN,81,EDUCATION,Paekakariki,-40.9718683
 W34876,Pukerua Bay,Wellington Central,TRAIN,90,EDUCATION,Pukerua Bay,-41.04419545,174.87349264,Wellington Central,-41.2849345,174.77572593,27.99206389199421,Porirua,Wellington,Wellington,Wellington
 W34877,Paekakariki Hill,Wellington Central,TRAIN,12,EDUCATION,Paekakariki Hill,-41.05684778,174.90903283,Wellington Central,-41.2849345,174.77572593,27.708063468417038,Porirua,Wellington,Wellington,Wellington
 W34878,Plimmerton,Wellington Central,TRAIN,102,EDUCATION,Plimmerton,-41.06768493,174.86039572,Wellington Central,-41.2849345,174.77572593,25.1749968021169,Porirua,Wellington,Wellington,Wellington
-W34879,Titahi Bay North,Wellington Central,TRAIN,69,EDUCATION,Titahi Bay North,-41.0986598,174.84388615,Wellington Central,-41.2849345,174.77572593,21.483666306676284,Porirua,Wellington,Wellington,Wellington
-W34880,Titahi Bay South,Wellington Central,TRAIN,69,EDUCATION,Titahi Bay South,-41.11339531,174.82698818,Wellington Central,-41.2849345,174.77572593,19.550525236821343,Porirua,Wellington,Wellington,Wellington
-W34881,Elsdon-Takapuwahia,Wellington Central,TRAIN,33,EDUCATION,Elsdon-Takapuwahia,-41.13204408,174.80949296,Wellington Central,-41.2849345,174.77572593,17.233713557883824,Porirua,Wellington,Wellington,Wellington
 W34882,Pauatahanui,Wellington Central,TRAIN,18,EDUCATION,Pauatahanui,-41.09485489,174.94674014,Wellington Central,-41.2849345,174.77572593,25.524557773770837,Porirua,Wellington,Wellington,Wellington
-W34883,Onepoto,Wellington Central,TRAIN,51,EDUCATION,Onepoto,-41.10398798,174.85284499,Wellington Central,-41.2849345,174.77572593,21.129717945621355,Porirua,Wellington,Wellington,Wellington
-W34884,Camborne,Wellington Central,TRAIN,117,EDUCATION,Camborne,-41.08897126,174.87453415,Wellington Central,-41.2849345,174.77572593,23.30612841185629,Porirua,Wellington,Wellington,Wellington
-W34885,Paremata,Wellington Central,TRAIN,114,EDUCATION,Paremata,-41.09886842,174.8670634,Wellington Central,-41.2849345,174.77572593,22.056063556324922,,Wellington,,Wellington
-W34886,Papakowhai,Wellington Central,TRAIN,93,EDUCATION,Papakowhai,-41.11593264,174.86350564,Wellington Central,-41.2849345,174.77572593,20.17620681060206,Porirua,Wellington,Wellington,Wellington
-W34887,Aotea,Wellington Central,TRAIN,159,EDUCATION,Aotea,-41.128257700000006,174.85723027,Wellington Central,-41.2849345,174.77572593,18.708399888019507,Porirua,Wellington,Wellington,Wellington
-W34888,Postgate,Wellington Central,TRAIN,138,EDUCATION,Postgate,-41.11331454,174.88235004,Wellington Central,-41.2849345,174.77572593,21.0654109896476,Porirua,Wellington,Wellington,Wellington
-W34889,Ascot Park,Wellington Central,TRAIN,51,EDUCATION,Ascot Park,-41.12000324,174.87336814,Wellington Central,-41.2849345,174.77572593,20.076571898900333,Porirua,Wellington,Wellington,Wellington
-W34890,Whitby,Wellington Central,TRAIN,123,EDUCATION,Whitby,-41.11717134,174.89107268,Wellington Central,-41.2849345,174.77572593,21.002740828457913,Porirua,Wellington,Wellington,Wellington
-W34891,Porirua East,Wellington Central,TRAIN,30,EDUCATION,Porirua East,-41.14311394,174.85567585,Wellington Central,-41.2849345,174.77572593,17.129144317249278,Porirua,Wellington,Wellington,Wellington
-W34892,Endeavour,Wellington Central,TRAIN,201,EDUCATION,Endeavour,-41.11459136,174.90415779,Wellington Central,-41.2849345,174.77572593,21.77688622922424,Porirua,Wellington,Wellington,Wellington
-W34893,Cannons Creek North,Wellington Central,TRAIN,21,EDUCATION,Cannons Creek North,-41.13969216,174.86263001,Wellington Central,-41.2849345,174.77572593,17.71084272430239,Porirua,Wellington,Wellington,Wellington
-W34894,Waitangirua,Wellington Central,TRAIN,21,EDUCATION,Waitangirua,-41.12984631,174.87999879,Wellington Central,-41.2849345,174.77572593,19.325652220703844,Porirua,Wellington,Wellington,Wellington
-W34895,Ranui Heights ,Wellington Central,TRAIN,39,EDUCATION,Ranui Heights,-41.15160958,174.85007214,Wellington Central,-41.2849345,174.77572593,16.07640847542434,Porirua,Wellington,Wellington,Wellington
-W34896,Cannons Creek East,Wellington Central,TRAIN,27,EDUCATION,Cannons Creek East,-41.13722514,174.87140063,Wellington Central,-41.2849345,174.77572593,18.270659236379164,Porirua,Wellington,Wellington,Wellington
-W34897,Cannons Creek South,Wellington Central,TRAIN,12,EDUCATION,Cannons Creek South,-41.14999717,174.87143178,Wellington Central,-41.2849345,174.77572593,17.006216260912225,Porirua,Wellington,Wellington,Wellington
 W34898,Akatarawa,Wellington Central,TRAIN,12,EDUCATION,Akatarawa,-41.01655002,175.13338376,Wellington Central,-41.2849345,174.77572593,42.27708142437986,Upper Hutt,Wellington,Wellington,Wellington
 W34899,Riverstone Terraces,Wellington Central,TRAIN,51,EDUCATION,Riverstone Terraces,-41.11205217,175.03826653,Wellington Central,-41.2849345,174.77572593,29.189845455088896,Upper Hutt,Wellington,Wellington,Wellington
 W34900,Heretaunga,Wellington Central,TRAIN,78,EDUCATION,Heretaunga,-41.13877359,175.01905143,Wellington Central,-41.2849345,174.77572593,26.046615581438274,Upper Hutt,Wellington,Wellington,Wellington
 W34901,Birchville-Brown Owl,Wellington Central,TRAIN,60,EDUCATION,Birchville-Brown Owl,-41.08596013,175.11315290000005,Wellington Central,-41.2849345,174.77572593,35.872525045557325,Upper Hutt,Wellington,Wellington,Wellington
 W34902,Poets Block,Wellington Central,TRAIN,72,EDUCATION,Poets Block,-41.12290419,175.04604601,Wellington Central,-41.2849345,174.77572593,28.914400844689087,Upper Hutt,Wellington,Wellington,Wellington
 W34903,Brentwood (Upper Hutt City),Wellington Central,TRAIN,66,EDUCATION,Brentwood (Upper Hutt City),-41.12890914,175.03679072,Wellington Central,-41.2849345,174.77572593,27.891981591315236,Upper Hutt,Wellington,Wellington,Wellington
-W34904,Silverstream (Upper Hutt City),Wellington Central,TRAIN,147,EDUCATION,Silverstream (Upper Hutt City),-41.15226988,175.00981756,Wellington Central,-41.2849345,174.77572593,24.514736296570806,Upper Hutt,Wellington,Wellington,Wellington
 W34905,Elderslea,Wellington Central,TRAIN,69,EDUCATION,Elderslea,-41.1201997,175.05787956,Wellington Central,-41.2849345,174.77572593,29.87891109687889,Upper Hutt,Wellington,Wellington,Wellington
 W34906,Trentham North,Wellington Central,TRAIN,78,EDUCATION,Trentham North,-41.1328255,175.04564394,Wellington Central,-41.2849345,174.77572593,28.211870151397534,Upper Hutt,Wellington,Wellington,Wellington
 W34907,Totara Park,Wellington Central,TRAIN,60,EDUCATION,Totara Park,-41.1093256,175.08443163,Wellington Central,-41.2849345,174.77572593,32.37941862879475,Upper Hutt,Wellington,Wellington,Wellington
@@ -298,32 +121,8 @@ W34910,Ebdentown,Wellington Central,TRAIN,48,EDUCATION,Ebdentown,-41.11875719,17
 W34911,Wallaceville,Wellington Central,TRAIN,63,EDUCATION,Wallaceville,-41.12888528,175.06086829,Wellington Central,-41.2849345,174.77572593,29.49731621138305,Upper Hutt,Wellington,Wellington,Wellington
 W34912,Maoribank,Wellington Central,TRAIN,69,EDUCATION,Maoribank,-41.10626518,175.10879212,Wellington Central,-41.2849345,174.77572593,34.22443175980301,Upper Hutt,Wellington,Wellington,Wellington
 W34913,Te Marua,Wellington Central,TRAIN,15,EDUCATION,Te Marua,-41.08870706,175.14335145,Wellington Central,-41.2849345,174.77572593,37.715747207991576,Upper Hutt,Wellington,Wellington,Wellington
-W34914,Pinehaven,Wellington Central,TRAIN,81,EDUCATION,Pinehaven,-41.16844867,175.01768274,Wellington Central,-41.2849345,174.77572593,24.02550394678793,Upper Hutt,Wellington,Wellington,Wellington
 W34915,Clouston Park,Wellington Central,TRAIN,66,EDUCATION,Clouston Park,-41.11739699,175.08712646,Wellington Central,-41.2849345,174.77572593,32.02805540599576,Upper Hutt,Wellington,Wellington,Wellington
 W34916,Upper Hutt Central,Wellington Central,TRAIN,27,EDUCATION,Upper Hutt Central,-41.12711172,175.07626489999996,Wellington Central,-41.2849345,174.77572593,30.661028316734928,Upper Hutt,Wellington,Wellington,Wellington
-W34917,Belmont Park,Wellington Central,TRAIN,9,EDUCATION,Belmont Park,-41.1693145,174.91554299,Wellington Central,-41.2849345,174.77572593,17.378428935423912,Hutt city,Wellington,Wellington,Wellington
-W34920,Kelson,Wellington Central,TRAIN,114,EDUCATION,Kelson,-41.17271184,174.94294237,Wellington Central,-41.2849345,174.77572593,18.742089428339966,Hutt city,Wellington,Wellington,Wellington
-W34922,Belmont (Lower Hutt City),Wellington Central,TRAIN,96,EDUCATION,Belmont (Lower Hutt City),-41.1900686,174.92123901,Wellington Central,-41.2849345,174.77572593,16.103320950047152,Hutt city,Wellington,Wellington,Wellington
-W34925,Manor Park,Wellington Central,TRAIN,12,EDUCATION,Manor Park,-41.1557617,174.97990009999995,Wellington Central,-41.2849345,174.77572593,22.314229006971804,Hutt city,Wellington,Wellington,Wellington
-W34927,Taita North,Wellington Central,TRAIN,60,EDUCATION,Taita North,-41.17126316,174.96462745,Wellington Central,-41.2849345,174.77572593,20.23179170014314,Hutt city,Wellington,Wellington,Wellington
-W34928,Boulcott,Wellington Central,TRAIN,105,EDUCATION,Boulcott,-41.19937004,174.92439872,Wellington Central,-41.2849345,174.77572593,15.653866863733635,Hutt city,Wellington,Wellington,Wellington
-W34930,Avalon West,Wellington Central,TRAIN,96,EDUCATION,Avalon West,-41.19088299,174.94107219,Wellington Central,-41.2849345,174.77572593,17.335476708601675,Hutt city,Wellington,Wellington,Wellington
-W34931,Stokes Valley Central,Wellington Central,TRAIN,51,EDUCATION,Stokes Valley Central,-41.16891621,174.97736126,Wellington Central,-41.2849345,174.77572593,21.231602582819,Hutt city,Wellington,Wellington,Wellington
-W34932,Taita South,Wellington Central,TRAIN,63,EDUCATION,Taita South,-41.18492338,174.95918534,Wellington Central,-41.2849345,174.77572593,18.94764128257319,Hutt city,Wellington,Wellington,Wellington
-W34935,Stokes Valley North,Wellington Central,TRAIN,75,EDUCATION,Stokes Valley North,-41.166931700000006,174.99312135,Wellington Central,-41.2849345,174.77572593,22.42144847957863,Hutt city,Wellington,Wellington,Wellington
-W34937,Epuni West,Wellington Central,TRAIN,153,EDUCATION,Epuni West,-41.20573675,174.92732065,Wellington Central,-41.2849345,174.77572593,15.43344580398304,Hutt city,Wellington,Wellington,Wellington
-W34938,Avalon East,Wellington Central,TRAIN,72,EDUCATION,Avalon East,-41.19581347,174.94455461,Wellington Central,-41.2849345,174.77572593,17.247424051371752,Hutt city,Wellington,Wellington,Wellington
-W34940,Naenae Central,Wellington Central,TRAIN,81,EDUCATION,Naenae Central,-41.19973943,174.94956607,Wellington Central,-41.2849345,174.77572593,17.349496316262474,Hutt city,Wellington,Wellington,Wellington
-W34942,Epuni East,Wellington Central,TRAIN,126,EDUCATION,Epuni East,-41.20891382,174.93484484,Wellington Central,-41.2849345,174.77572593,15.761573639259668,Hutt city,Wellington,Wellington,Wellington
-W34945,Delaney,Wellington Central,TRAIN,39,EDUCATION,Delaney,-41.1864706,174.97924526,Wellington Central,-41.2849345,174.77572593,20.235833380402735,Hutt city,Wellington,Wellington,Wellington
-W34948,Naenae North,Wellington Central,TRAIN,36,EDUCATION,Naenae North,-41.19737756,174.96248511,Wellington Central,-41.2849345,174.77572593,18.401783334753066,Hutt city,Wellington,Wellington,Wellington
-W34949,Manuka,Wellington Central,TRAIN,42,EDUCATION,Manuka,-41.18502912,174.98698353,Wellington Central,-41.2849345,174.77572593,20.868006456182915,Hutt city,Wellington,Wellington,Wellington
-W34950,Naenae South,Wellington Central,TRAIN,48,EDUCATION,Naenae South,-41.20946486,174.95050323,Wellington Central,-41.2849345,174.77572593,16.850446900525146,Hutt city,Wellington,Wellington,Wellington
-W34951,Arakura,Wellington Central,TRAIN,39,EDUCATION,Arakura,-41.23870795,174.94479641,Wellington Central,-41.2849345,174.77572593,15.037643785213067,Hutt city,Wellington,Wellington,Wellington
-W34953,Pencarrow,Wellington Central,TRAIN,18,EDUCATION,Pencarrow,-41.27707617,175.02703281,Wellington Central,-41.2849345,174.77572593,21.017640358705297,Hutt city,Wellington,Wellington,Wellington
-W34955,Glendale,Wellington Central,TRAIN,51,EDUCATION,Glendale,-41.2429916,174.95473935,Wellington Central,-41.2849345,174.77572593,15.672476389923824,Hutt city,Wellington,Wellington,Wellington
-W34958,Homedale East,Wellington Central,TRAIN,48,EDUCATION,Homedale East,-41.269130600000004,174.95843259,Wellington Central,-41.2849345,174.77572593,15.36889132522634,Hutt city,Wellington,Wellington,Wellington
-W34962,Linden,Wellington Central,TRAIN,225,EDUCATION,Linden,-41.15666441,174.83380144,Wellington Central,-41.2849345,174.77572593,15.067391342728918,Porirua,Wellington,Wellington,Wellington
 W35037,Upper Plain,Wellington Central,TRAIN,6,EDUCATION,Upper Plain,-40.89511815,175.57935646,Wellington Central,-41.2849345,174.77572593,80.090919224693,Masterton,Wellington,Wellington,Wellington
 W35038,Opaki,Wellington Central,TRAIN,6,EDUCATION,Opaki,-40.90223549,175.65959234,Wellington Central,-41.2849345,174.77572593,85.4218603361617,Masterton,Wellington,Wellington,Wellington
 W35039,Ngaumutawa,Wellington Central,TRAIN,6,EDUCATION,Ngaumutawa,-40.94117259,175.636236,Wellington Central,-41.2849345,174.77572593,81.59643332135757,Masterton,Wellington,Wellington,Wellington
@@ -346,8 +145,6 @@ W35120,Paraparaumu Beach West,Porirua Central,TRAIN,9,EDUCATION,Paraparaumu Beac
 W35124,Paraparaumu North,Porirua Central,TRAIN,9,EDUCATION,Paraparaumu North,-40.89457279999999,175.01141009,Porirua Central,-41.14584359,174.82583047,31.98498720841358,Kapiti Coast,Porirua,Wellington,Wellington
 W35129,Waikanae East,Porirua Central,TRAIN,6,EDUCATION,Waikanae East,-40.86699218,175.07883134,Porirua Central,-41.14584359,174.82583047,37.57823690769003,Kapiti Coast,Porirua,Wellington,Wellington
 W35132,Raumati South,Porirua Central,TRAIN,6,EDUCATION,Raumati South,-40.94126612,174.98329156,Porirua Central,-41.14584359,174.82583047,26.3030765786217,Kapiti Coast,Porirua,Wellington,Wellington
-W35241,Dixon Street,Porirua Central,TRAIN,9,EDUCATION,Dixon Street,-41.29101921,174.77469531,Porirua Central,-41.14584359,174.82583047,16.699774728173796,Wellington,Porirua,Wellington,Wellington
-W35296,Pukerua Bay,Paraparaumu Central,TRAIN,6,EDUCATION,Pukerua Bay,-41.04419545,174.87349264,Paraparaumu Central,-40.90799495,174.99886348,18.442854023656164,Porirua,Kapiti Coast,Wellington,Wellington
 W35303,Ohau-Manakau,Pipitea-Kaiwharawhara,TRAIN,6,EDUCATION,Ohau-Manakau,-40.69886257,175.20752463,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,73.23582541289976,Horowhenua,Wellington,Manawatu-Wanganui,Wellington
 W35304,Otaki,Pipitea-Kaiwharawhara,TRAIN,9,EDUCATION,Otaki,-40.75304139,175.13966802,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,65.2424314321358,Kapiti Coast,Wellington,Wellington,Wellington
 W35305,Te Horo,Pipitea-Kaiwharawhara,TRAIN,6,EDUCATION,Te Horo,-40.79710947,175.10587813,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,59.58662728791817,Kapiti Coast,Wellington,Wellington,Wellington
@@ -368,29 +165,10 @@ W35321,Paraparaumu East,Pipitea-Kaiwharawhara,TRAIN,12,EDUCATION,Paraparaumu Eas
 W35322,Raumati South,Pipitea-Kaiwharawhara,TRAIN,21,EDUCATION,Raumati South,-40.94126612,174.98329156,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,40.69265542622574,Kapiti Coast,Wellington,Wellington,Wellington
 W35323,Paekakariki,Pipitea-Kaiwharawhara,TRAIN,18,EDUCATION,Paekakariki,-40.97186832,174.96895136,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,37.0936630004339,Kapiti Coast,Wellington,Wellington,Wellington
 W35324,Pukerua Bay,Pipitea-Kaiwharawhara,TRAIN,21,EDUCATION,Pukerua Bay,-41.04419545,174.87349264,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,26.78341291414037,Porirua,Wellington,Wellington,Wellington
-W35325,Plimmerton,Pipitea-Kaiwharawhara,TRAIN,24,EDUCATION,Plimmerton,-41.06768493,174.86039572,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,23.975550721356694,Porirua,Wellington,Wellington,Wellington
-W35326,Titahi Bay North,Pipitea-Kaiwharawhara,TRAIN,12,EDUCATION,Titahi Bay North,-41.0986598,174.84388615,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,20.29843480765781,Porirua,Wellington,Wellington,Wellington
-W35327,Titahi Bay South,Pipitea-Kaiwharawhara,TRAIN,18,EDUCATION,Titahi Bay South,-41.11339531,174.82698818,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,18.403981897511454,Porirua,Wellington,Wellington,Wellington
-W35328,Elsdon-Takapuwahia,Pipitea-Kaiwharawhara,TRAIN,12,EDUCATION,Elsdon-Takapuwahia,-41.13204408,174.80949296,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,16.13783649828159,Porirua,Wellington,Wellington,Wellington
-W35330,Onepoto,Pipitea-Kaiwharawhara,TRAIN,9,EDUCATION,Onepoto,-41.10398798,174.85284499,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,19.914430008758558,Porirua,Wellington,Wellington,Wellington
-W35331,Camborne,Pipitea-Kaiwharawhara,TRAIN,18,EDUCATION,Camborne,-41.08897126,174.87453415,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,22.055037112893768,Porirua,Wellington,Wellington,Wellington
-W35332,Paremata,Pipitea-Kaiwharawhara,TRAIN,21,EDUCATION,Paremata,-41.09886842,174.8670634,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,20.811090464775273,,Wellington,,Wellington
-W35333,Papakowhai,Pipitea-Kaiwharawhara,TRAIN,30,EDUCATION,Papakowhai,-41.11593264,174.86350564,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,18.92028469581585,Porirua,Wellington,Wellington,Wellington
-W35334,Aotea,Pipitea-Kaiwharawhara,TRAIN,33,EDUCATION,Aotea,-41.128257700000006,174.85723027,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,17.452944930468366,Porirua,Wellington,Wellington,Wellington
-W35335,Postgate,Pipitea-Kaiwharawhara,TRAIN,30,EDUCATION,Postgate,-41.11331454,174.88235004,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,19.771785608197472,Porirua,Wellington,Wellington,Wellington
-W35336,Ascot Park,Pipitea-Kaiwharawhara,TRAIN,12,EDUCATION,Ascot Park,-41.12000324,174.87336814,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,18.793256929166574,Porirua,Wellington,Wellington,Wellington
-W35337,Whitby,Pipitea-Kaiwharawhara,TRAIN,12,EDUCATION,Whitby,-41.11717134,174.89107268,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,19.68889956281437,Porirua,Wellington,Wellington,Wellington
-W35338,Porirua East,Pipitea-Kaiwharawhara,TRAIN,6,EDUCATION,Porirua East,-41.14311394,174.85567585,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,15.85759973996474,Porirua,Wellington,Wellington,Wellington
-W35339,Endeavour,Pipitea-Kaiwharawhara,TRAIN,42,EDUCATION,Endeavour,-41.11459136,174.90415779,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,20.445534191179842,Porirua,Wellington,Wellington,Wellington
-W35340,Cannons Creek North,Pipitea-Kaiwharawhara,TRAIN,6,EDUCATION,Cannons Creek North,-41.13969216,174.86263001,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,16.426419184629708,Porirua,Wellington,Wellington,Wellington
-W35341,Waitangirua,Pipitea-Kaiwharawhara,TRAIN,9,EDUCATION,Waitangirua,-41.12984631,174.87999879,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,18.016730970986604,Porirua,Wellington,Wellington,Wellington
-W35343,Cannons Creek East,Pipitea-Kaiwharawhara,TRAIN,12,EDUCATION,Cannons Creek East,-41.13722514,174.87140063,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,16.96962523011702,Porirua,Wellington,Wellington,Wellington
 W35346,Riverstone Terraces,Pipitea-Kaiwharawhara,TRAIN,12,EDUCATION,Riverstone Terraces,-41.11205217,175.03826653,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,27.79932365986244,Upper Hutt,Wellington,Wellington,Wellington
-W35347,Heretaunga,Pipitea-Kaiwharawhara,TRAIN,24,EDUCATION,Heretaunga,-41.13877359,175.01905143,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,24.660842776477946,Upper Hutt,Wellington,Wellington,Wellington
 W35348,Birchville-Brown Owl,Pipitea-Kaiwharawhara,TRAIN,18,EDUCATION,Birchville-Brown Owl,-41.08596013,175.11315290000005,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,34.48804632455844,Upper Hutt,Wellington,Wellington,Wellington
 W35349,Poets Block,Pipitea-Kaiwharawhara,TRAIN,18,EDUCATION,Poets Block,-41.12290419,175.04604601,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,27.528765318541584,Upper Hutt,Wellington,Wellington,Wellington
 W35350,Brentwood (Upper Hutt City),Pipitea-Kaiwharawhara,TRAIN,18,EDUCATION,Brentwood (Upper Hutt City),-41.12890914,175.03679072,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,26.506548216991447,Upper Hutt,Wellington,Wellington,Wellington
-W35351,Silverstream (Upper Hutt City),Pipitea-Kaiwharawhara,TRAIN,33,EDUCATION,Silverstream (Upper Hutt City),-41.15226988,175.00981756,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,23.13346060821088,Upper Hutt,Wellington,Wellington,Wellington
 W35352,Elderslea,Pipitea-Kaiwharawhara,TRAIN,15,EDUCATION,Elderslea,-41.1201997,175.05787956,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,28.495172510996913,Upper Hutt,Wellington,Wellington,Wellington
 W35353,Trentham North,Pipitea-Kaiwharawhara,TRAIN,30,EDUCATION,Trentham North,-41.1328255,175.04564394,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,26.83104744965227,Upper Hutt,Wellington,Wellington,Wellington
 W35354,Totara Park,Pipitea-Kaiwharawhara,TRAIN,15,EDUCATION,Totara Park,-41.1093256,175.08443163,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,30.997769420287852,Upper Hutt,Wellington,Wellington,Wellington
@@ -399,20 +177,7 @@ W35356,Mangaroa,Pipitea-Kaiwharawhara,TRAIN,9,EDUCATION,Mangaroa,-41.15669260000
 W35357,Ebdentown,Pipitea-Kaiwharawhara,TRAIN,12,EDUCATION,Ebdentown,-41.11875719,175.07244049,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,29.565796618245944,Upper Hutt,Wellington,Wellington,Wellington
 W35358,Wallaceville,Pipitea-Kaiwharawhara,TRAIN,27,EDUCATION,Wallaceville,-41.12888528,175.06086829,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,28.119183904221305,Upper Hutt,Wellington,Wellington,Wellington
 W35359,Maoribank,Pipitea-Kaiwharawhara,TRAIN,21,EDUCATION,Maoribank,-41.10626518,175.10879212,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,32.84825474478566,Upper Hutt,Wellington,Wellington,Wellington
-W35361,Pinehaven,Pipitea-Kaiwharawhara,TRAIN,18,EDUCATION,Pinehaven,-41.16844867,175.01768274,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,22.66224237064461,Upper Hutt,Wellington,Wellington,Wellington
 W35362,Clouston Park,Pipitea-Kaiwharawhara,TRAIN,15,EDUCATION,Clouston Park,-41.11739699,175.08712646,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,30.65159144523557,Upper Hutt,Wellington,Wellington,Wellington
-W35367,Kelson,Pipitea-Kaiwharawhara,TRAIN,27,EDUCATION,Kelson,-41.17271184,174.94294237,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,17.350942438625435,Hutt city,Wellington,Wellington,Wellington
-W35374,Taita North,Pipitea-Kaiwharawhara,TRAIN,15,EDUCATION,Taita North,-41.17126316,174.96462745,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,18.845944541824547,Hutt city,Wellington,Wellington,Wellington
-W35377,Avalon West,Pipitea-Kaiwharawhara,TRAIN,18,EDUCATION,Avalon West,-41.19088299,174.94107219,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,15.954059000290306,Hutt city,Wellington,Wellington,Wellington
-W35378,Stokes Valley Central,Pipitea-Kaiwharawhara,TRAIN,6,EDUCATION,Stokes Valley Central,-41.16891621,174.97736126,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,19.849099912546734,Hutt city,Wellington,Wellington,Wellington
-W35379,Taita South,Pipitea-Kaiwharawhara,TRAIN,12,EDUCATION,Taita South,-41.18492338,174.95918534,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,17.5701307652152,Hutt city,Wellington,Wellington,Wellington
-W35382,Stokes Valley North,Pipitea-Kaiwharawhara,TRAIN,24,EDUCATION,Stokes Valley North,-41.166931700000006,174.99312135,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,21.044241225437688,Hutt city,Wellington,Wellington,Wellington
-W35385,Avalon East,Pipitea-Kaiwharawhara,TRAIN,9,EDUCATION,Avalon East,-41.19581347,174.94455461,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,15.873394062355642,Hutt city,Wellington,Wellington,Wellington
-W35387,Naenae Central,Pipitea-Kaiwharawhara,TRAIN,15,EDUCATION,Naenae Central,-41.19973943,174.94956607,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,15.984417538361859,Hutt city,Wellington,Wellington,Wellington
-W35391,Delaney,Pipitea-Kaiwharawhara,TRAIN,9,EDUCATION,Delaney,-41.1864706,174.97924526,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,18.872168700066126,Hutt city,Wellington,Wellington,Wellington
-W35394,Naenae North,Pipitea-Kaiwharawhara,TRAIN,9,EDUCATION,Naenae North,-41.19737756,174.96248511,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,17.04260046562065,Hutt city,Wellington,Wellington,Wellington
-W35395,Manuka,Pipitea-Kaiwharawhara,TRAIN,12,EDUCATION,Manuka,-41.18502912,174.98698353,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,19.50736529356984,Hutt city,Wellington,Wellington,Wellington
-W35396,Naenae South,Pipitea-Kaiwharawhara,TRAIN,12,EDUCATION,Naenae South,-41.20946486,174.95050323,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,15.503883826864207,Hutt city,Wellington,Wellington,Wellington
 W35484,Carterton North,Pipitea-Kaiwharawhara,TRAIN,9,EDUCATION,Carterton North,-41.01943446,175.52683939,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,68.15729059019465,Carterton,Wellington,Wellington,Wellington
 W35486,Carterton South,Pipitea-Kaiwharawhara,TRAIN,9,EDUCATION,Carterton South,-41.03427242,175.51425212,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,66.51115874345014,Carterton,Wellington,Wellington,Wellington
 W35487,Tauherenikau,Pipitea-Kaiwharawhara,TRAIN,6,EDUCATION,Tauherenikau,-41.06390044,175.36907465,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,54.086596609477866,South Wairarapa,Wellington,Wellington,Wellington
@@ -431,33 +196,7 @@ W35595,Waikanae East,Dixon Street,TRAIN,9,EDUCATION,Waikanae East,-40.86699218,1
 W35598,Raumati South,Dixon Street,TRAIN,12,EDUCATION,Raumati South,-40.94126612,174.98329156,Dixon Street,-41.29101921,174.77469531,42.636210442432755,Kapiti Coast,Wellington,Wellington,Wellington
 W35599,Paekakariki,Dixon Street,TRAIN,24,EDUCATION,Paekakariki,-40.97186832,174.96895136,Dixon Street,-41.29101921,174.77469531,39.039544082789135,Kapiti Coast,Wellington,Wellington,Wellington
 W35601,Plimmerton,Dixon Street,TRAIN,12,EDUCATION,Plimmerton,-41.06768493,174.86039572,Dixon Street,-41.29101921,174.77469531,25.84863989284576,Porirua,Wellington,Wellington,Wellington
-W35602,Titahi Bay North,Dixon Street,TRAIN,6,EDUCATION,Titahi Bay North,-41.0986598,174.84388615,Dixon Street,-41.29101921,174.77469531,22.159011338214466,Porirua,Wellington,Wellington,Wellington
-W35603,Titahi Bay South,Dixon Street,TRAIN,9,EDUCATION,Titahi Bay South,-41.11339531,174.82698818,Dixon Street,-41.29101921,174.77469531,20.22960712986816,Porirua,Wellington,Wellington,Wellington
-W35604,Elsdon-Takapuwahia,Dixon Street,TRAIN,6,EDUCATION,Elsdon-Takapuwahia,-41.13204408,174.80949296,Dixon Street,-41.29101921,174.77469531,17.91527999507899,Porirua,Wellington,Wellington,Wellington
-W35607,Camborne,Dixon Street,TRAIN,9,EDUCATION,Camborne,-41.08897126,174.87453415,Dixon Street,-41.29101921,174.77469531,23.96969809505628,Porirua,Wellington,Wellington,Wellington
-W35608,Paremata,Dixon Street,TRAIN,6,EDUCATION,Paremata,-41.09886842,174.8670634,Dixon Street,-41.29101921,174.77469531,22.72101358634345,,Wellington,,Wellington
-W35610,Aotea,Dixon Street,TRAIN,6,EDUCATION,Aotea,-41.128257700000006,174.85723027,Dixon Street,-41.29101921,174.77469531,19.37047562296224,Porirua,Wellington,Wellington,Wellington
-W35611,Postgate,Dixon Street,TRAIN,9,EDUCATION,Postgate,-41.11331454,174.88235004,Dixon Street,-41.29101921,174.77469531,21.715678239274688,Porirua,Wellington,Wellington,Wellington
-W35613,Whitby,Dixon Street,TRAIN,6,EDUCATION,Whitby,-41.11717134,174.89107268,Dixon Street,-41.29101921,174.77469531,21.64436248625763,Porirua,Wellington,Wellington,Wellington
-W35615,Endeavour,Dixon Street,TRAIN,12,EDUCATION,Endeavour,-41.11459136,174.90415779,Dixon Street,-41.29101921,174.77469531,22.409173200013317,Porirua,Wellington,Wellington,Wellington
-W35616,Cannons Creek North,Dixon Street,TRAIN,6,EDUCATION,Cannons Creek North,-41.13969216,174.86263001,Dixon Street,-41.29101921,174.77469531,18.36413949841261,Porirua,Wellington,Wellington,Wellington
-W35625,Silverstream (Upper Hutt City),Dixon Street,TRAIN,6,EDUCATION,Silverstream (Upper Hutt City),-41.15226988,175.00981756,Dixon Street,-41.29101921,174.77469531,24.994772412665785,Upper Hutt,Wellington,Wellington,Wellington
 W35627,Trentham North,Dixon Street,TRAIN,9,EDUCATION,Trentham North,-41.1328255,175.04564394,Dixon Street,-41.29101921,174.77469531,28.68985263511561,Upper Hutt,Wellington,Wellington,Wellington
-W35634,Pinehaven,Dixon Street,TRAIN,6,EDUCATION,Pinehaven,-41.16844867,175.01768274,Dixon Street,-41.29101921,174.77469531,24.46767116902668,Upper Hutt,Wellington,Wellington,Wellington
-W35638,Kelson,Dixon Street,TRAIN,9,EDUCATION,Kelson,-41.17271184,174.94294237,Dixon Street,-41.29101921,174.77469531,19.26159210404573,Hutt city,Wellington,Wellington,Wellington
-W35642,Tirohanga,Dixon Street,TRAIN,6,EDUCATION,Tirohanga,-41.19825451,174.90584966,Dixon Street,-41.29101921,174.77469531,15.054589734678855,Hutt city,Wellington,Wellington,Wellington
-W35644,Taita North,Dixon Street,TRAIN,12,EDUCATION,Taita North,-41.17126316,174.96462745,Dixon Street,-41.29101921,174.77469531,20.726649193303107,Hutt city,Wellington,Wellington,Wellington
-W35645,Boulcott,Dixon Street,TRAIN,12,EDUCATION,Boulcott,-41.19937004,174.92439872,Dixon Street,-41.29101921,174.77469531,16.140354699844348,Hutt city,Wellington,Wellington,Wellington
-W35646,Avalon West,Dixon Street,TRAIN,9,EDUCATION,Avalon West,-41.19088299,174.94107219,Dixon Street,-41.29101921,174.77469531,17.818541043288647,Hutt city,Wellington,Wellington,Wellington
-W35647,Stokes Valley Central,Dixon Street,TRAIN,6,EDUCATION,Stokes Valley Central,-41.16891621,174.97736126,Dixon Street,-41.29101921,174.77469531,21.715963965227555,Hutt city,Wellington,Wellington,Wellington
-W35648,Taita South,Dixon Street,TRAIN,6,EDUCATION,Taita South,-41.18492338,174.95918534,Dixon Street,-41.29101921,174.77469531,19.420314640736613,Hutt city,Wellington,Wellington,Wellington
-W35651,Stokes Valley North,Dixon Street,TRAIN,9,EDUCATION,Stokes Valley North,-41.166931700000006,174.99312135,Dixon Street,-41.29101921,174.77469531,22.89203068538361,Hutt city,Wellington,Wellington,Wellington
-W35656,Naenae Central,Dixon Street,TRAIN,6,EDUCATION,Naenae Central,-41.19973943,174.94956607,Dixon Street,-41.29101921,174.77469531,17.79815325425028,Hutt city,Wellington,Wellington,Wellington
-W35658,Epuni East,Dixon Street,TRAIN,12,EDUCATION,Epuni East,-41.20891382,174.93484484,Dixon Street,-41.29101921,174.77469531,16.205146341502616,Hutt city,Wellington,Wellington,Wellington
-W35662,Waterloo East,Dixon Street,TRAIN,15,EDUCATION,Waterloo East,-41.21794009,174.92916885,Dixon Street,-41.29101921,174.77469531,15.257244106850033,Hutt city,Wellington,Wellington,Wellington
-W35663,Naenae North,Dixon Street,TRAIN,9,EDUCATION,Naenae North,-41.19737756,174.96248511,Dixon Street,-41.29101921,174.77469531,18.839677564723445,Hutt city,Wellington,Wellington,Wellington
-W35670,Glendale,Dixon Street,TRAIN,6,EDUCATION,Glendale,-41.2429916,174.95473935,Dixon Street,-41.29101921,174.77469531,15.967447994406214,Hutt city,Wellington,Wellington,Wellington
-W35677,Linden,Dixon Street,TRAIN,24,EDUCATION,Linden,-41.15666441,174.83380144,Dixon Street,-41.29101921,174.77469531,15.736167033428517,Porirua,Wellington,Wellington,Wellington
 W35752,Featherston,Dixon Street,TRAIN,12,EDUCATION,Featherston,-41.11610965,175.32429671,Dixon Street,-41.29101921,174.77469531,49.9238430152958,South Wairarapa,Wellington,Wellington,Wellington
 W35830,Paraparaumu Beach North,Courtenay,TRAIN,9,EDUCATION,Paraparaumu Beach North,-40.88107643,174.99882094,Courtenay,-41.29206034,174.78280365,49.15475334624428,Kapiti Coast,Wellington,Wellington,Wellington
 W35832,Paraparaumu North,Courtenay,TRAIN,6,EDUCATION,Paraparaumu North,-40.89457279999999,175.01141009,Courtenay,-41.29206034,174.78280365,48.17175953032122,Kapiti Coast,Wellington,Wellington,Wellington
@@ -467,17 +206,7 @@ W35835,Raumati Beach West,Courtenay,TRAIN,6,EDUCATION,Raumati Beach West,-40.915
 W35839,Paekakariki,Courtenay,TRAIN,6,EDUCATION,Paekakariki,-40.97186832,174.96895136,Courtenay,-41.29206034,174.78280365,38.867426442623454,Kapiti Coast,Wellington,Wellington,Wellington
 W35840,Pukerua Bay,Courtenay,TRAIN,6,EDUCATION,Pukerua Bay,-41.04419545,174.87349264,Courtenay,-41.29206034,174.78280365,28.587614721544252,Porirua,Wellington,Wellington,Wellington
 W35841,Plimmerton,Courtenay,TRAIN,6,EDUCATION,Plimmerton,-41.06768493,174.86039572,Courtenay,-41.29206034,174.78280365,25.780633712758235,Porirua,Wellington,Wellington,Wellington
-W35843,Titahi Bay South,Courtenay,TRAIN,6,EDUCATION,Titahi Bay South,-41.11339531,174.82698818,Courtenay,-41.29206034,174.78280365,20.207619697396947,Porirua,Wellington,Wellington,Wellington
-W35846,Camborne,Courtenay,TRAIN,6,EDUCATION,Camborne,-41.08897126,174.87453415,Courtenay,-41.29206034,174.78280365,23.851302721038408,Porirua,Wellington,Wellington,Wellington
-W35849,Aotea,Courtenay,TRAIN,6,EDUCATION,Aotea,-41.128257700000006,174.85723027,Courtenay,-41.29206034,174.78280365,19.248702660725296,Porirua,Wellington,Wellington,Wellington
-W35856,Ranui Heights ,Courtenay,TRAIN,6,EDUCATION,Ranui Heights,-41.15160958,174.85007214,Courtenay,-41.29206034,174.78280365,16.59990193363583,Porirua,Wellington,Wellington,Wellington
 W35861,Poets Block,Courtenay,TRAIN,6,EDUCATION,Poets Block,-41.12290419,175.04604601,Courtenay,-41.29206034,174.78280365,28.96098156675374,Upper Hutt,Wellington,Wellington,Wellington
-W35862,Silverstream (Upper Hutt City),Courtenay,TRAIN,9,EDUCATION,Silverstream (Upper Hutt City),-41.15226988,175.00981756,Courtenay,-41.29206034,174.78280365,24.537861143402022,Upper Hutt,Wellington,Wellington,Wellington
-W35887,Epuni West,Courtenay,TRAIN,9,EDUCATION,Epuni West,-41.20573675,174.92732065,Courtenay,-41.29206034,174.78280365,15.430780110219825,Hutt city,Wellington,Wellington,Wellington
-W35890,Naenae Central,Courtenay,TRAIN,6,EDUCATION,Naenae Central,-41.19973943,174.94956607,Courtenay,-41.29206034,174.78280365,17.313913184776553,Hutt city,Wellington,Wellington,Wellington
-W35908,Linden,Courtenay,TRAIN,9,EDUCATION,Linden,-41.15666441,174.83380144,Courtenay,-41.29206034,174.78280365,15.647829227604502,Porirua,Wellington,Wellington,Wellington
-W36346,Tawa North,Vivian East,TRAIN,6,EDUCATION,Tawa North,-41.16425548,174.82107209,Vivian East,-41.29691524,174.78007236,15.144312204207239,Porirua,Wellington,Wellington,Wellington
 W37132,Paraparaumu Central,Vivian West,TRAIN,6,EDUCATION,Paraparaumu Central,-40.90799495,174.99886348,Vivian West,-41.2946931,174.77283972,46.984810310236156,Kapiti Coast,Wellington,Wellington,Wellington
 W37135,Paekakariki,Vivian West,TRAIN,6,EDUCATION,Paekakariki,-40.97186832,174.96895136,Vivian West,-41.2946931,174.77283972,39.47548123751738,Kapiti Coast,Wellington,Wellington,Wellington
-W37186,Linden,Vivian West,TRAIN,6,EDUCATION,Linden,-41.15666441,174.83380144,Vivian West,-41.2946931,174.77283972,16.172721901084998,Porirua,Wellington,Wellington,Wellington
 W37260,Featherston,Vivian West,TRAIN,6,EDUCATION,Featherston,-41.11610965,175.32429671,Vivian West,-41.2946931,174.77283972,50.225765313650854,South Wairarapa,Wellington,Wellington,Wellington

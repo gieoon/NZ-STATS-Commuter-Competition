@@ -1,29 +1,7 @@
 id,SA2_name_usual_residence_address,SA2_name_educational_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1
-E599,Papakura North,Queen Street,TRAIN,6,EDUCATION,Papakura North,-37.05741406,174.94794613,Queen Street,-36.84774104,174.76524972,28.409890803280987,Franklin,Waitakere,Auckland,Auckland
 E1426,Clarks Beach,Auckland-University,TRAIN,6,EDUCATION,Clarks Beach,-37.13836247,174.70757601,Auckland-University,-36.85143057,174.76906469,32.36932385714348,Franklin,Waitakere,Auckland,Auckland
-E1446,Kingseat-Karaka,Auckland-University,TRAIN,9,EDUCATION,Kingseat-Karaka,-37.12442419,174.82148593,Auckland-University,-36.85143057,174.76906469,30.71049702125323,Franklin,Waitakere,Auckland,Auckland
-E1449,Conifer Grove West,Auckland-University,TRAIN,33,EDUCATION,Conifer Grove West,-37.0486937,174.91293014,Auckland-University,-36.85143057,174.76906469,25.388298967801642,Franklin,Waitakere,Auckland,Auckland
-E1451,Takanini West,Auckland-University,TRAIN,15,EDUCATION,Takanini West,-37.04068506,174.92112941,Auckland-University,-36.85143057,174.76906469,25.00943190314374,Franklin,Waitakere,Auckland,Auckland
-E1452,Takanini South,Auckland-University,TRAIN,48,EDUCATION,Takanini South,-37.04157360000001,174.93888309,Auckland-University,-36.85143057,174.76906469,25.97628616292119,Franklin,Waitakere,Auckland,Auckland
-E1453,Ardmore,Auckland-University,TRAIN,6,EDUCATION,Ardmore,-37.06183843,175.01147993,Auckland-University,-36.85143057,174.76906469,31.801668977361256,Franklin,Waitakere,Auckland,Auckland
 E1454,Glenbrook,Auckland-University,TRAIN,6,EDUCATION,Glenbrook,-37.20183488,174.75527205,Auckland-University,-36.85143057,174.76906469,38.98241522424926,Franklin,Waitakere,Auckland,Auckland
-E1455,Hingaia,Auckland-University,TRAIN,21,EDUCATION,Hingaia,-37.07369960000001,174.91419445,Auckland-University,-36.85143057,174.76906469,27.876647804562374,Franklin,Waitakere,Auckland,Auckland
-E1456,Takanini South East,Auckland-University,TRAIN,9,EDUCATION,Takanini South East,-37.04902013,174.94514981,Auckland-University,-36.85143057,174.76906469,26.973342524614658,Franklin,Waitakere,Auckland,Auckland
-E1458,Papakura West,Auckland-University,TRAIN,15,EDUCATION,Papakura West,-37.05653671,174.93416803,Auckland-University,-36.85143057,174.76906469,27.117861011614,Franklin,Waitakere,Auckland,Auckland
-E1459,Clevedon,Auckland-University,TRAIN,9,EDUCATION,Clevedon,-37.01480977,175.04590674,Auckland-University,-36.85143057,174.76906469,30.586084233388554,Manukau,Waitakere,Auckland,Auckland
-E1460,Papakura North,Auckland-University,TRAIN,18,EDUCATION,Papakura North,-37.05741406,174.94794613,Auckland-University,-36.85143057,174.76906469,27.87931585018937,Franklin,Waitakere,Auckland,Auckland
-E1461,Pahurehure,Auckland-University,TRAIN,24,EDUCATION,Pahurehure,-37.06864785,174.93272857,Auckland-University,-36.85143057,174.76906469,28.19307118347816,Franklin,Waitakere,Auckland,Auckland
-E1462,Papakura Central,Auckland-University,TRAIN,27,EDUCATION,Papakura Central,-37.06542305,174.94281885,Auckland-University,-36.85143057,174.76906469,28.364480731937213,Franklin,Waitakere,Auckland,Auckland
-E1463,Papakura North East,Auckland-University,TRAIN,18,EDUCATION,Papakura North East,-37.05143433,174.96594275,Auckland-University,-36.85143057,174.76906469,28.295880749990143,Franklin,Waitakere,Auckland,Auckland
-E1464,Karaka Lakes,Auckland-University,TRAIN,21,EDUCATION,Karaka Lakes,-37.08456461,174.92648385,Auckland-University,-36.85143057,174.76906469,29.45519248377344,Franklin,Waitakere,Auckland,Auckland
-E1465,Papakura Kelvin,Auckland-University,TRAIN,15,EDUCATION,Papakura Kelvin,-37.05933436,174.96239449,Auckland-University,-36.85143057,174.76906469,28.801686752896828,Franklin,Waitakere,Auckland,Auckland
-E1466,Papakura Massey Park,Auckland-University,TRAIN,15,EDUCATION,Papakura Massey Park,-37.0662997,174.95483864,Auckland-University,-36.85143057,174.76906469,29.039732292776808,Franklin,Waitakere,Auckland,Auckland
-E1467,Rosehill,Auckland-University,TRAIN,36,EDUCATION,Rosehill,-37.080743299999995,174.93811005,Auckland-University,-36.85143057,174.76906469,29.5926936299158,Franklin,Waitakere,Auckland,Auckland
 E1468,Patumahoe,Auckland-University,TRAIN,12,EDUCATION,Patumahoe,-37.17691755,174.83514067,Auckland-University,-36.85143057,174.76906469,36.66490702246012,Franklin,Waitakere,Auckland,Auckland
-E1469,Papakura East,Auckland-University,TRAIN,27,EDUCATION,Papakura East,-37.05846123,174.97920854,Auckland-University,-36.85143057,174.76906469,29.641598575282174,Franklin,Waitakere,Auckland,Auckland
-E1470,Opaheke,Auckland-University,TRAIN,27,EDUCATION,Opaheke,-37.07682576,174.94797761,Auckland-University,-36.85143057,174.76906469,29.678558093700403,Franklin,Waitakere,Auckland,Auckland
-E1471,Red Hill,Auckland-University,TRAIN,12,EDUCATION,Red Hill,-37.06738541,174.97729374,Auckland-University,-36.85143057,174.76906469,30.313888865928092,Franklin,Waitakere,Auckland,Auckland
-E1472,Drury,Auckland-University,TRAIN,9,EDUCATION,Drury,-37.10606959,174.93669402,Auckland-University,-36.85143057,174.76906469,31.99118964946456,Franklin,Waitakere,Auckland,Auckland
 E1474,Hamilton Estate,Auckland-University,TRAIN,6,EDUCATION,Hamilton Estate,-37.24583465,174.73952417,Auckland-University,-36.85143057,174.76906469,43.934021413509605,Franklin,Waitakere,Auckland,Auckland
 E1475,Drury Rural,Auckland-University,TRAIN,30,EDUCATION,Drury Rural,-37.11220768,174.97476145,Auckland-University,-36.85143057,174.76906469,34.27335660965497,Franklin,Waitakere,Auckland,Auckland
 E1478,Puni,Auckland-University,TRAIN,15,EDUCATION,Puni,-37.21369487,174.847442,Auckland-University,-36.85143057,174.76906469,40.8783392257299,Franklin,Waitakere,Auckland,Auckland
@@ -44,5 +22,3 @@ E1492,Aka Aka,Auckland-University,TRAIN,9,EDUCATION,Aka Aka,-37.29132737,174.775
 E1493,Tuakau Rural,Auckland-University,TRAIN,6,EDUCATION,Tuakau Rural,-37.28621227,174.95229059,Auckland-University,-36.85143057,174.76906469,51.005482817673766,Franklin,Waitakere,Waikato,Auckland
 E1494,Tuakau North,Auckland-University,TRAIN,9,EDUCATION,Tuakau North,-37.25721309,174.94816256,Auckland-University,-36.85143057,174.76906469,47.83820749743529,Franklin,Waitakere,Waikato,Auckland
 E1496,Pokeno,Auckland-University,TRAIN,21,EDUCATION,Pokeno,-37.24416888,175.02021530000005,Auckland-University,-36.85143057,174.76906469,49.02974914074906,Franklin,Waitakere,Waikato,Auckland
-E1530,Takanini Central,Auckland-University,TRAIN,12,EDUCATION,Takanini Central,-37.05069884,174.92586896,Auckland-University,-36.85143057,174.76906469,26.174632852648514,Franklin,Waitakere,Auckland,Auckland
-E4719,Kingseat-Karaka,Mount Eden North East,TRAIN,6,EDUCATION,Kingseat-Karaka,-37.12442419,174.82148593,Mount Eden North East,-36.86913097,174.76555025,28.81866945497997,Franklin,Waitakere,Auckland,Auckland

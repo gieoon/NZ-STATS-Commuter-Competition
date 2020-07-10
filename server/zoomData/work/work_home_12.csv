@@ -1,2 +1,1 @@
 id,SA2_name_usual_residence_address,SA2_name_workplace_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1
-W17061,Paremoremo East,Paremoremo West,WORK_AT_HOME,18,EDUCATION,Paremoremo East,-36.74982031,174.66020526,Paremoremo West,-36.75507226,174.61584322,3.995237657058479,Waitakere,Rodney,Auckland,Auckland

@@ -60,6 +60,7 @@ function MapExplorer({
   regionalWorkData,
   regionalTotalData,
   centroidData,
+  destinationData,
   regionHighlighted,
   setRegionHighlighted,
   anchor,
@@ -99,22 +100,22 @@ function MapExplorer({
     hoveredDestination: "",
   })
 
-  const [currentCommuteTypes] = useState(
+  const [currentCommuteTypes, setCurrentCommuteTypes] = useState(
     // Object.values(MODES_OF_TRANSPORT) // Select all
     [
       "Drive own vehicle"
     ]
   )
 
-  const setCurrentCommuteTypes = (e) => {
-    console.log('setCurrentCommuteTypes: ', currentCommuteTypes);
-    console.log(leafletMapRef);
-    leafletMapRef.current.updateData();
-  }
+  // const setCurrentCommuteTypes = (e) => {
+    // console.log('setCurrentCommuteTypes: ', currentCommuteTypes);
+    // console.log(leafletMapRef);
+    // leafletMapRef.current.updateData();
+  // }
 
-  useEffect(()=>{
-    console.log('current commute types changed: ', currentCommuteTypes)
-  })
+  // useEffect(()=>{
+  //   console.log('current commute types changed: ', currentCommuteTypes)
+  // })
 
   const updateCurrentData = () => {
     // console.log(currentMap.option);
@@ -278,22 +279,6 @@ function MapExplorer({
     return;
   };
 
-  const springs = useSprings(
-    currentMapStatistics.length,
-    currentMapStatistics.map((statistic) => ({
-      total: getStatistic(hoveredData.hoveredData, statistic),
-      delta: 64,
-      from: {
-        total: 128,
-        delta: 23,
-      },
-      config: {
-        tension: 500,
-        clamp: true,
-      },
-    }))
-  );
-
   return (
     <div
       className={classnames(
@@ -421,6 +406,7 @@ function MapExplorer({
                 hoveredData={hoveredData}
                 highlightedData={highlightedData}
                 centroidData={centroidData}
+                destinationData={destinationData}
               />
 
               <div className="map-wrapper">

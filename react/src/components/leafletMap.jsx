@@ -13,7 +13,8 @@ import '@elfalem/leaflet-curve'
 import './leaflet.scss';
 import {
     DATA_URL_ROOT,
-    COMMUTE_PURPOSE_COLOUR,
+    COMMUTE_METHOD_COLOUR,
+    DB_2_COMMUTE_METHOD,
 } from '../constants';
 import {
     txt2Array
@@ -22,9 +23,13 @@ import { eachWeekOfInterval } from 'date-fns/esm';
 // import { Curve } from 'react-leaflet-curve';
 
 const MIN_ZOOM = 5;
-const MAX_ZOOM = 13;
+const MAX_ZOOM = 18;
 const INITIAL_STROKE_WEIGHT = 1;
 const HIGHLIGHTED_STROKE_WEIGHT = INITIAL_STROKE_WEIGHT * 3.5;
+const STROKE_COUNT_MULTIPLIER = 0.1;
+const INITIAL_OPACITY = 0.35;
+const OPACITY_MULTIPLIER = 0.01;
+const HIGHLIGHTED_OPACITY = 1;
 
 const curvesWork = {}, 
     curvesEducation = {},
@@ -35,7 +40,8 @@ const curvesWork = {},
 global.commuteWorkCurves = commuteWorkCurves; 
 global.commuteEducationCurves = commuteEducationCurves;
 
-forwardRef(function LeafletMap({
+//forwardRef(
+    function LeafletMap({
     setHoveredData,
     setHighlightedData,
     centroidData,
@@ -56,6 +62,8 @@ forwardRef(function LeafletMap({
 
     // const mapRef = React.createRef();
     const mapRef = useRef(null);
+
+    const isInitialMount = useRef(true);
 
     // Need to save this because it becomes null after updates
     const [m, setMap] = useState();
@@ -87,16 +95,26 @@ forwardRef(function LeafletMap({
 
     const location = useLocation();
 
-    useImperativeHandle(ref, () => {
-        return {
-            updateData: updateData()
-        }
-    });
+    // useImperativeHandle(ref, () => {
+    //     return {
+    //         updateData: updateData()
+    //     }
+    // });
 
     // componentDidMount
     useEffect(()=>{
         L.control.scale().addTo(mapRef.current.leafletElement);
     },[])
+
+    // useEffect(()=>{
+    //     if(isInitialMount.current)
+    //         isInitialMount.current = false;
+    //     else {
+    //         // console.log('update data called');
+    //         updateData();
+    //     }
+    //     console.log(currentCommuteTypes)
+    // }, [currentCommuteTypes])
 
     useEffect(()=>{
         // console.log("Location updated: ", location);
@@ -115,15 +133,17 @@ forwardRef(function LeafletMap({
                 mapRef.current.leafletElement.setView([lat,lng], 12); //9
                 // var circle = createCurrentLatLngCircle(lat, lng);
                 // setCurrentPositionCircle(circle);
+                // console.log('update data called');
+                updateData();
             }
             setInitializing(false);
         }
-        updateData();
     }, [location])
 
     useEffect(() => {
         setCommutePurpose(currentMap.option.toUpperCase());
         mapRef.current.leafletElement.commuteType = currentMap.option.toUpperCase();
+        /*
         clearDrawnObjects(
             currentMap.option.toUpperCase() === "WORK"
             ? curvesEducation
@@ -132,6 +152,15 @@ forwardRef(function LeafletMap({
             ? "EDUCATION"
             : "WORK"
         );
+        */
+       clearDrawnObjectsCommute(
+           currentMap.option.toUpperCase() === "WORK"
+           ? commuteEducationCurves
+           : commuteWorkCurves,
+           currentMap.option.toUpperCase() === "WORK"
+           ? "EDUCATION"
+           : "WORK"
+       )
     }, [
         currentMap.option,
     ])
@@ -141,15 +170,25 @@ forwardRef(function LeafletMap({
         // Disable current listeners
         mapRef.current.leafletElement.off('movestart');
         mapRef.current.leafletElement.on('movestart', updateData);
+
+        // mapRef.current.leafletElement.off('viewreset');
+        // mapRef.current.leafletElement.on('viewreset', updateData);
+
+        mapRef.current.leafletElement.off('zoomstart');
+        mapRef.current.leafletElement.on('zoomstart', updateData);
+        // console.log('update data called');
         updateData();
+        
     },[
-        commutePurpose
+        commutePurpose,
+        currentCommuteTypes
     ])
 
     const updateData = () => {
         const map = mapRef.current.leafletElement;
         var bounds = map.getBounds();
         var zoom = map.getZoom();
+        console.log('requesting data with zoom: ', zoom);
         // If total, request both data types
         // Can also do if !== education, request work, if !== work, request education, so total will request both.
         if(commutePurpose === "TOTAL"){
@@ -213,17 +252,19 @@ forwardRef(function LeafletMap({
                 commuteTypes += "&commute_type=" + commuteType2Key(commuteType);
             }
 
+            console.log("currentCommuteTypes: ", currentCommuteTypes)
             // Request new data
             fetch(
                 DATA_URL_ROOT + `/zoneData?left=${bounds._southWest.lng}&top=${bounds._northEast.lat}&right=${bounds._northEast.lng}&bottom=${bounds._southWest.lat}&zoom=${zoom}&data_type=${type.toLowerCase()}${commuteTypes}`,
             ).then(async (d)=>{
                 const data = await d.json();
+                // console.log(data);
                 if(type === "WORK"){
-                    setWorkZoneData(data);
+                    // setWorkZoneData(data);
                     updateCurvesCommute(data, "WORK");
                 }
                 if(type === "EDUCATION"){
-                    setEducationZoneData(data);
+                    // setEducationZoneData(data);
                     updateCurvesCommute(data, "EDUCATION");
                 }
             })
@@ -284,22 +325,28 @@ forwardRef(function LeafletMap({
     const checkCurvesExistCommute = (newData, dataType) => {
         var toAdd = {};
         // What is actually drawn on the screen right now
-        const toDelete = dataType === "WORK"
-            ? commuteWorkCurves : commuteEducationCurves;
+        const toDelete = dataType === "WORK" 
+        ? commuteWorkCurves : commuteEducationCurves;
         
         // console.log("newData: ", newData);
+        // global.newData = newData;
+        // console.log("newData: ", Object.keys(newData));
         for(var commuteType of Object.keys(newData)){
+            // console.log('handling commuteType: ', commuteType, newData[commuteType]);
             toAdd[commuteType] = [];
-            newData = txt2Array(newData[commuteType])
-            for(var r of newData){
+            var d = txt2Array(newData[commuteType])
+            console.log(commuteType, d);
+            for(var r of d){
                 // If new curve is not in existing curves, add it to list of new curves
                 if(!toDelete[r.id]){
                     toAdd[commuteType].push(r);
                 }
             }
     
-            return toAdd;
         }
+        clearDrawnObjectsCommute(toDelete, dataType);
+
+        return toAdd;
     }
 
     // Checks if the curve is already drawn on the map, if it is, exclude it.
@@ -345,10 +392,13 @@ forwardRef(function LeafletMap({
     }
     
     const clearDrawnObjectsCommute = (toDelete, dataType) => {
+        
         for(var commuteType of Object.keys(toDelete)){
-            for(var id of Object.keys(toDelete)){
+            
+            for(var id of Object.keys(toDelete[commuteType])){
                 for(var el of Array.from(document.getElementsByClassName(id))){
                     if(el){
+                        // console.log('removing curve from DOM');
                         el.classList.remove('pathFadeIn');
                         el.classList.add('pathFadeOut');
                         // Wait for animation to expire and remove from DOM
@@ -356,19 +406,38 @@ forwardRef(function LeafletMap({
                     }
                 }
                 if(dataType === "WORK"){
+                    // console.log("removing curve from memory");
                     commuteWorkCurves[commuteType][id].remove();
                     commuteWorkCurves[commuteType][id] = undefined;
                     delete commuteWorkCurves[commuteType][id];
                 }
                 else if(dataType === "EDUCATION"){
+                    // console.log("removing curve from memory");
                     commuteEducationCurves[commuteType][id].remove();
                     commuteEducationCurves[commuteType][id] = undefined;
                     delete commuteEducationCurves[commuteType][id];
                 }
             }
         }
+
+        checkCurveMemorySize();
+        
     }
 
+    // Disable on production
+    const checkCurveMemorySize = () => {
+        var totalWork = 0, totalEducation = 0;
+        for(var commuteType of Object.values(commuteWorkCurves)){
+            totalWork += Object.keys(commuteType).length;
+        }
+        for(var commuteType of Object.values(commuteEducationCurves)){
+            totalEducation += Object.keys(commuteType).length;
+        }
+        console.log("total work: ", totalWork)
+        console.log("total education: ", totalEducation);
+    }
+
+    /*
     const clearDrawnObjects = (toDelete, dataType) => {
         // console.log("deleting data: ", Object.keys(toDelete).length);
         // console.log(curvesWork);
@@ -408,6 +477,7 @@ forwardRef(function LeafletMap({
         ci.length = 0;
         setCircles(ci);
     }
+    */
 
     // Draw cluster circles.
     const createCircle = (lat, lon, clusterCount) => {
@@ -448,12 +518,6 @@ forwardRef(function LeafletMap({
     }
 
     const createCurve = (lon1, lat1, lon2, lat2, obj, dataType) => {
-        // console.log(lon1,lat1,lon2,lat2);
-        // console.log(mapRef.current, document.getElementById('mapObj').leafletElement);
-
-        // if(mapRef.current === null) return;
-        // console.log(mapRef)
-        // console.log('mapRef is not null');
         const points = [];
         var delta_x = lon2 - lon1,
             delta_y = lat2 - lat1;
@@ -474,10 +538,12 @@ forwardRef(function LeafletMap({
         points.push([lon1, lat1], midpointLatLng, [lon2, lat2]);
 
         var pathOptions = {
-            color: dataType === "WORK" 
-                ? COMMUTE_PURPOSE_COLOUR.WORK 
-                : COMMUTE_PURPOSE_COLOUR.EDUCATION,
-            weight: INITIAL_STROKE_WEIGHT,
+            // color: dataType === "WORK" 
+            //     ? COMMUTE_PURPOSE_COLOUR.WORK 
+            //     : COMMUTE_PURPOSE_COLOUR.EDUCATION,
+            color: COMMUTE_METHOD_COLOUR[DB_2_COMMUTE_METHOD[obj.COMMUTE_TYPE]],
+            weight: INITIAL_STROKE_WEIGHT + (Number(obj.COUNT) * STROKE_COUNT_MULTIPLIER),
+            opacity: INITIAL_OPACITY + (Number(obj.COUNT) * OPACITY_MULTIPLIER),
         }
 
         // const map = L.map('sampleMap')
@@ -491,9 +557,10 @@ forwardRef(function LeafletMap({
             [lat2, lon2]//[lon2, lat2]
         ], pathOptions)
         .on('mouseover', function(e) {
-            console.log('mouseover: ', obj)
+            // console.log('mouseover: ', obj)
             this.setStyle({
-                weight: HIGHLIGHTED_STROKE_WEIGHT
+                weight: HIGHLIGHTED_STROKE_WEIGHT + (Number(obj.COUNT) * STROKE_COUNT_MULTIPLIER),
+                opacity: HIGHLIGHTED_OPACITY,
             })
             setHoveredData({
                 hoveredData: obj,
@@ -503,7 +570,8 @@ forwardRef(function LeafletMap({
         })
         .on('mouseout', function() {
             this.setStyle({
-                weight: INITIAL_STROKE_WEIGHT
+                weight: INITIAL_STROKE_WEIGHT + (Number(obj.COUNT) * STROKE_COUNT_MULTIPLIER),
+                opacity: INITIAL_OPACITY + (Number(obj.COUNT) * OPACITY_MULTIPLIER),
             })
         })
         //.addTo(mapRef.current.leafletElement)
@@ -566,7 +634,8 @@ forwardRef(function LeafletMap({
             
         </Map>
     );
-})
+}
+//)
 
 export default LeafletMap;
 

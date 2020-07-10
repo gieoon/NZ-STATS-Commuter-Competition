@@ -2,14 +2,7 @@ id,SA2_name_usual_residence_address,SA2_name_educational_address,COMMUTE_TYPE,CO
 E1007,Tindalls-Matakatia,Auckland-University,FERRY,9,EDUCATION,Tindalls-Matakatia,-36.61663904,174.77704003,Auckland-University,-36.85143057,174.76906469,26.11729881063943,Rodney,Waitakere,Auckland,Auckland
 E1010,Gulf Harbour North,Auckland-University,FERRY,12,EDUCATION,Gulf Harbour North,-36.60949658,174.79413674,Auckland-University,-36.85143057,174.76906469,26.99446198050268,Rodney,Waitakere,Auckland,Auckland
 E1015,Gulf Harbour South,Auckland-University,FERRY,18,EDUCATION,Gulf Harbour South,-36.62319574,174.79598006,Auckland-University,-36.85143057,174.76906469,25.49163615605761,Rodney,Waitakere,Auckland,Auckland
-E1290,Oneroa West,Auckland-University,FERRY,12,EDUCATION,Oneroa West,-36.78767524,174.99965402,Auckland-University,-36.85143057,174.76906469,21.715568532434105,Auckland,Waitakere,Auckland,Auckland
 E1311,Oneroa East-Palm Beach,Auckland-University,FERRY,15,EDUCATION,Oneroa East-Palm Beach,-36.77927556,175.05218612,Auckland-University,-36.85143057,174.76906469,26.449550398740286,Auckland,Waitakere,Auckland,Auckland
-E1316,Surfdale,Auckland-University,FERRY,18,EDUCATION,Surfdale,-36.79613493,175.02985004,Auckland-University,-36.85143057,174.76906469,24.012921337476158,Auckland,Waitakere,Auckland,Auckland
 E1325,Ostend,Auckland-University,FERRY,18,EDUCATION,Ostend,-36.79263832,175.05220466,Auckland-University,-36.85143057,174.76906469,26.036816218688504,Auckland,Waitakere,Auckland,Auckland
 E1348,Onetangi,Auckland-University,FERRY,6,EDUCATION,Onetangi,-36.79584373,175.07839806,Auckland-University,-36.85143057,174.76906469,28.218929613998352,Auckland,Waitakere,Auckland,Auckland
 E1354,Waiheke East,Auckland-University,FERRY,9,EDUCATION,Waiheke East,-36.79798055,175.12796937,Auckland-University,-36.85143057,174.76906469,32.49372812952238,Auckland,Waitakere,Auckland,Auckland
-E1378,Shelly Park,Auckland-University,FERRY,6,EDUCATION,Shelly Park,-36.90830816,174.94645122,Auckland-University,-36.85143057,174.76906469,16.997925974964613,Manukau,Waitakere,Auckland,Auckland
-E1384,Sunkist Bay,Auckland-University,FERRY,33,EDUCATION,Sunkist Bay,-36.88262674,174.99783159,Auckland-University,-36.85143057,174.76906469,20.644453488025032,Manukau,Waitakere,Auckland,Auckland
-E1397,Te Puru,Auckland-University,FERRY,33,EDUCATION,Te Puru,-36.89631822,175.00316112,Auckland-University,-36.85143057,174.76906469,21.41302383691349,Manukau,Waitakere,Auckland,Auckland
-E1404,Turanga,Auckland-University,FERRY,12,EDUCATION,Turanga,-36.96408816,174.98854671,Auckland-University,-36.85143057,174.76906469,23.18925751746635,Manukau,Waitakere,Auckland,Auckland
-E1407,Maraetai,Auckland-University,FERRY,27,EDUCATION,Maraetai,-36.88774867,175.03797111,Auckland-University,-36.85143057,174.76906469,24.2594017527498,Manukau,Waitakere,Auckland,Auckland

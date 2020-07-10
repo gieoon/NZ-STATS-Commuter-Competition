@@ -2,12 +2,4 @@ id,SA2_name_usual_residence_address,SA2_name_workplace_address,COMMUTE_TYPE,COUN
 W24829,Te Puke East,Katikati,WALK_OR_JOG,6,EDUCATION,Te Puke East,-37.7898618,176.32555033,Katikati,-37.55213437,175.92548294,44.029746787603464,Western Bay of Plenty,Western Bay of Plenty,Bay of Plenty,Bay of Plenty
 W27767,Kaimanawa,Lake Taupo Bays,WALK_OR_JOG,18,EDUCATION,Kaimanawa,-39.18581719,175.74164069,Lake Taupo Bays,-38.87191067,175.73166979,34.91543687197332,Taupo,Taupo,Waikato,Waikato
 W40231,Richmond Central (Tasman District),Lower Waitaki,WALK_OR_JOG,6,EDUCATION,Richmond Central (Tasman District),-41.33750365,173.18938637,Lower Waitaki,-45.00239341,171.02035686,443.8151924583857,Tasman,Waitaki,Nelson,Otago
-W48577,Cromwell West,Lindis-Nevis Valleys,WALK_OR_JOG,9,EDUCATION,Cromwell West,-45.06411975,169.17047641,Lindis-Nevis Valleys,-44.94314357,169.28090388,16.010357508606827,Central Otago,Central Otago,Otago,Otago
-W48661,Lindis-Nevis Valleys,Cromwell West,WALK_OR_JOG,6,EDUCATION,Lindis-Nevis Valleys,-44.94314357,169.28090388,Cromwell West,-45.06411975,169.17047641,16.010357508606827,Central Otago,Central Otago,Otago,Otago
-W48692,Warren Park,Outer Wakatipu,WALK_OR_JOG,15,EDUCATION,Warren Park,-45.02264371,168.66173004,Outer Wakatipu,-44.83712994,168.71544041,21.057068089717976,Queenstown-Lakes,Queenstown-Lakes,Otago,Otago
-W48696,Queenstown East,Outer Wakatipu,WALK_OR_JOG,9,EDUCATION,Queenstown East,-45.03289461,168.67249766,Outer Wakatipu,-44.83712994,168.71544041,22.0289284663234,Queenstown-Lakes,Queenstown-Lakes,Otago,Otago
-W48697,Frankton Arm,Outer Wakatipu,WALK_OR_JOG,6,EDUCATION,Frankton Arm,-45.02699752,168.68939785,Outer Wakatipu,-44.83712994,168.71544041,21.21161145183839,Queenstown-Lakes,Queenstown-Lakes,Otago,Otago
-W48824,Warren Park,Arrowtown,WALK_OR_JOG,6,EDUCATION,Warren Park,-45.02264371,168.66173004,Arrowtown,-44.9457261,168.83841556,16.317190218349563,Queenstown-Lakes,Queenstown-Lakes,Otago,Otago
 W50216,Fiordland,Te Anau,WALK_OR_JOG,6,EDUCATION,Fiordland,-45.35169124,167.36187219,Te Anau,-45.413515600000004,167.72303047,29.03205396802147,Southland,Southland,Southland,Southland
-W50232,Te Anau,Inland water Lake Te Anau,WALK_OR_JOG,6,EDUCATION,Te Anau,-45.413515600000004,167.72303047,Inland water Lake Te Anau,-45.2107913,167.73070296,22.549896464099326,Southland,Southland,Southland,Southland
-W50267,Oreti River,Winton,WALK_OR_JOG,6,EDUCATION,Oreti River,-46.00268489,168.31789888,Winton,-46.14486071,168.32382512,15.815838011139386,Southland,Southland,Southland,Southland
