@@ -616,9 +616,10 @@ global.commuteEducationCurves = commuteEducationCurves;
                     '<p><b>' + obj.DEPARTURE_NAME_1 + ', ' + obj.SA2_name_usual_residence_address
                     + ' → '//' > ' //<img src={arrow_right} alt="" /> 
                     + obj.DESTINATION_NAME_1 + ', ' + (obj.SA2_name_workplace_address || obj.SA2_name_educational_address) + '</p>'
-                    + '<p>' + Number(obj.HAVERSINE_DISTANCE).toFixed(2) + 'km</p></b>'
+                    + '<p>' + Number(obj.HAVERSINE_DISTANCE).toFixed(2) + 'km <span class="' + obj.COMMUTE_TYPE + '">' + key2CommuteType(obj.COMMUTE_TYPE) + '</span></p></b>'
                     + '<hr/>'
-                    + '<div style="display:flex;justify-content:space-between;"><div><b>' + obj.COUNT + '</b> people ' + '</div><div><span class="' + obj.COMMUTE_TYPE + '">' + key2CommuteType(obj.COMMUTE_TYPE) + '</span></div></div>'
+                    // + '<div style="display:flex;justify-content:space-between;"><div><b>' + obj.COUNT + '</b> people ' + '</div><div><span class="' + obj.COMMUTE_TYPE + '">' + key2CommuteType(obj.COMMUTE_TYPE) + '</span></div></div>'
+                    + '<div><b>' + obj.COUNT + '</b> people ' + '</div>'
                     + '<p>Commuting for <b>' + obj.TYPE.toLowerCase() + '</b></p>' //obj.TYPE.charAt(0) + obj.TYPE.substring(1).toLowerCase() + 
                 )
                 .openOn(mapRef.current.leafletElement);
