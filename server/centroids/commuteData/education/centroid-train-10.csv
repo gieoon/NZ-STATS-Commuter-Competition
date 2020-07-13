@@ -1,0 +1,2 @@
+id,SA2_name_usual_residence_address,SA2_name_educational_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1,cluster_count
+E1310,Mangere Bridge,Auckland-University,TRAIN,9,EDUCATION,Mangere Bridge,-36.94356976,174.78854005,Auckland-University,-36.85143057,174.76906469,10.390748013885403,Manukau,Waitakere,Auckland,Auckland,390

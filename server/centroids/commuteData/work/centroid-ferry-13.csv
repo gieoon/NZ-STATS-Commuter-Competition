@@ -1,0 +1,4 @@
+id,SA2_name_usual_residence_address,SA2_name_workplace_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1,cluster_count
+W1742,Gulf Harbour North,Quay Street-Customs Street,FERRY,21,EDUCATION,Gulf Harbour North,-36.60949658,174.79413674,Quay Street-Customs Street,-36.84601989,174.77646293,26.347316169433345,Rodney,Waitakere,Auckland,Auckland,14
+W1916,Cheltenham,Quay Street-Customs Street,FERRY,42,EDUCATION,Cheltenham,-36.82539766,174.80659852,Quay Street-Customs Street,-36.84601989,174.77646293,3.5286040024968277,Waitakere,Waitakere,Auckland,Auckland,124
+W2053,Ostend,Quay Street-Customs Street,FERRY,9,EDUCATION,Ostend,-36.79263832,175.05220466,Quay Street-Customs Street,-36.84601989,174.77646293,25.252609033378164,Auckland,Waitakere,Auckland,Auckland,39

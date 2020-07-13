@@ -1,5 +1,39 @@
 import pandas as pd
+import os.path
 
+MODES_OF_TRANSPORT = [
+  "home", 
+  "own_vehicle",
+  "passenger",
+  "train",
+  "bicycle",
+  "walk_or_jog",
+  "bus",
+  "ferry",
+  "other"
+]
+
+centroidData = {}
+
+# for commute_purpose in ["education","work"]:
+for commute_purpose in ["work"]:
+    for mode in MODES_OF_TRANSPORT:
+        for zoom_level in range(5,17):
+            # Some centroid data has not been created, so ignore these.
+            if os.path.isfile('./centroids/commuteData/{}/centroid-{}-{}.csv'.format(commute_purpose, mode, zoom_level)):
+                csv = pd.read_csv('./centroids/commuteData/{}/centroid-{}-{}.csv'.format(commute_purpose, mode, zoom_level)).to_csv(index=False)
+            else:
+                csv = []
+            centroidData["{}_{}_{}".format(commute_purpose,mode,zoom_level)] = csv
+
+# centroidData = centroidData.to_json()
+# print("centroidData['education_bicycle_15']: ", centroidData["education_bicycle_15"])
+def getCentroidData(commute_purpose, commute_method, zoom_level):
+    return centroidData
+    # return centroidData["{}_{}_{}".format(commute_purpose,commute_method,zoom_level)]
+
+
+'''
 centroids_5 = pd.read_csv('./centroids/location-5.csv').to_csv(index=False)
 centroids_6 = pd.read_csv('./centroids/location-6.csv').to_csv(index=False)
 centroids_7 = pd.read_csv('./centroids/location-7.csv').to_csv(index=False)
@@ -24,6 +58,10 @@ centroids = {
     14: centroids_14,
     15: centroids_15,
 }
+'''
+centroids_15 = pd.read_csv('./centroids/location-15.csv').to_csv(index=False)
+# print(centroids_15)
+def getAllCentroidDestinations():
+    return centroids_15
 
-def getAllCentroidData():
-    return centroids
+

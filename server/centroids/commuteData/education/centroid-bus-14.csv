@@ -1,0 +1,130 @@
+id,SA2_name_usual_residence_address,SA2_name_educational_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1,cluster_count
+E3,Rangaunu Harbour,Kaitaia East,BUS,18,EDUCATION,Rangaunu Harbour,-34.91627744,173.13744282,Kaitaia East,-35.10383477,173.26414302,23.834850779788407,Far North,Far North,Northland,Northland,5
+E8,Kaitaia West,Kaitaia East,BUS,33,EDUCATION,Kaitaia West,-35.12178170000001,173.26717397,Kaitaia East,-35.10383477,173.26414302,2.0145612602342093,Far North,Far North,Northland,Northland,20
+E22,Taumarumaru,Kaitaia West,BUS,12,EDUCATION,Taumarumaru,-34.99672682,173.50774402,Kaitaia West,-35.12178170000001,173.26717397,25.93880091011843,Far North,Far North,Northland,Northland,14
+E24,Peria,Kaitaia West,BUS,21,EDUCATION,Peria,-35.12407747,173.44813792,Kaitaia West,-35.12178170000001,173.26717397,16.46037768643592,Far North,Far North,Northland,Northland,4
+E59,Maromaku,Whangarei Central,BUS,6,EDUCATION,Maromaku,-35.47825535,174.14132759999995,Whangarei Central,-35.72846995,174.32430322,32.369026355086625,Far North,Whangarei,Northland,Northland,5
+E60,Mangakahia-Hukerenui,Whangarei Central,BUS,12,EDUCATION,Mangakahia-Hukerenui,-35.65301955,174.0023164,Whangarei Central,-35.72846995,174.32430322,30.26472599891327,Whangarei,Whangarei,Northland,Northland,4
+E61,Whangaruru,Whangarei Central,BUS,24,EDUCATION,Whangaruru,-35.48991999,174.33501130000005,Whangarei Central,-35.72846995,174.32430322,26.543203308528863,Whangarei,Whangarei,Northland,Northland,5
+E876,Mairtown,Pukenui,BUS,6,EDUCATION,Mairtown,-35.70451425,174.32430453,Pukenui,-35.74644668,174.25502298,7.8009109968299875,Whangarei,Whangarei,Northland,Northland,67
+E940,Ruakaka,Oakleigh-Mangapai,BUS,6,EDUCATION,Ruakaka,-35.87869623,174.45727498,Oakleigh-Mangapai,-35.89588695,174.21595621,21.82354967295227,Whangarei,Whangarei,Northland,Northland,20
+E99,Waipu,Whangarei Central,BUS,6,EDUCATION,Waipu,-36.03330412,174.45082085,Whangarei Central,-35.72846995,174.32430322,35.76122204449049,Whangarei,Whangarei,Northland,Northland,5
+E111,Kaeo,Kerikeri Central,BUS,24,EDUCATION,Kaeo,-35.15410315,173.74331968,Kerikeri Central,-35.22507309,173.95096304,20.45309740066037,Far North,Far North,Northland,Northland,4
+E122,Puketona-Waitangi,Kerikeri Central,BUS,51,EDUCATION,Puketona-Waitangi,-35.27991822,174.00095246,Kerikeri Central,-35.22507309,173.95096304,7.602382083225976,Far North,Far North,Northland,Northland,32
+E123,Kaikohe,Kerikeri Central,BUS,6,EDUCATION,Kaikohe,-35.40792422,173.79767516,Kerikeri Central,-35.22507309,173.95096304,24.63391228345261,Far North,Far North,Northland,Northland,11
+E399,Eden Terrace,Queen Street,BUS,15,EDUCATION,Eden Terrace,-36.86462613,174.75964083,Queen Street,-36.84774104,174.76524972,1.9427241944996565,Waitakere,Waitakere,Auckland,Auckland,1671
+E636,Matawaia-Taumarere,Pakaraka,BUS,6,EDUCATION,Matawaia-Taumarere,-35.49406405,173.95266307,Pakaraka,-35.36746635,173.98446287,14.368844533273613,Far North,Far North,Northland,Northland,5
+E642,Russell Forest-Rawhiti,Kawakawa,BUS,18,EDUCATION,Russell Forest-Rawhiti,-35.36879174,174.22606034,Kawakawa,-35.37897674,174.07575504,13.674770656237106,Far North,Far North,Northland,Northland,4
+E895,Maungaru,Pukenui,BUS,6,EDUCATION,Maungaru,-35.87696287,173.97089153,Pukenui,-35.74644668,174.25502298,29.44574159020115,Kaipara,Whangarei,Northland,Northland,4
+E896,Dargaville,Pukenui,BUS,12,EDUCATION,Dargaville,-35.93920158,173.86524045,Pukenui,-35.74644668,174.25502298,41.15562275294657,Kaipara,Whangarei,Northland,Northland,4
+E1642,Warkworth East,Warkworth West,BUS,9,EDUCATION,Warkworth East,-36.40528692,174.66791942,Warkworth West,-36.38893228,174.65160073,2.332471957151504,Rodney,Rodney,Auckland,Auckland,22
+E1574,Marotiri,Hilltop (Taupo District),BUS,24,EDUCATION,Marotiri,-38.51214377,175.78064218,Hilltop (Taupo District),-38.69976213,176.09915047,34.6585304847798,Taupo,Taupo,Waikato,Waikato,5
+E1575,Ohakuri,Hilltop (Taupo District),BUS,36,EDUCATION,Ohakuri,-38.52137003,176.09477746,Hilltop (Taupo District),-38.69976213,176.09915047,19.839935223911255,Taupo,Taupo,Bay of Plenty,Waikato,4
+E1576,Lake Taupo Bays,Hilltop (Taupo District),BUS,18,EDUCATION,Lake Taupo Bays,-38.87191067,175.73166979,Hilltop (Taupo District),-38.69976213,176.09915047,37.16100589332628,Taupo,Taupo,Waikato,Waikato,5
+E1580,Brentwood (Taupo District),Hilltop (Taupo District),BUS,15,EDUCATION,Brentwood (Taupo District),-38.68168999,176.05272614,Hilltop (Taupo District),-38.69976213,176.09915047,4.502536447447873,Taupo,Taupo,Waikato,Waikato,17
+E1609,Kaiwaka,Maungaturoto,BUS,90,EDUCATION,Kaiwaka,-36.20144738,174.41954369,Maungaturoto,-36.10952458,174.34693916,12.122985640016177,Kaipara,Kaipara,Northland,Northland,7
+E1611,Mangawhai,Maungaturoto,BUS,9,EDUCATION,Mangawhai,-36.12486297,174.57648718,Maungaturoto,-36.10952458,174.34693916,20.689498592248327,Kaipara,Kaipara,Northland,Northland,11
+E1636,Cape Rodney,Warkworth West,BUS,69,EDUCATION,Cape Rodney,-36.25433822,174.62638047,Warkworth West,-36.38893228,174.65160073,15.135776544052398,Rodney,Rodney,Auckland,Auckland,6
+E1651,Okahukura Peninsula,Wellsford,BUS,84,EDUCATION,Okahukura Peninsula,-36.31614337,174.47831639,Wellsford,-36.292848299999996,174.52152782,4.658686417722469,Rodney,Rodney,Auckland,Auckland,5
+E1638,Kaipara Hills,Warkworth West,BUS,45,EDUCATION,Kaipara Hills,-36.46348663,174.48881947,Warkworth West,-36.38893228,174.65160073,16.758158786597537,Rodney,Rodney,Auckland,Auckland,7
+E9539,Riverlea,Hamilton Central,BUS,9,EDUCATION,Riverlea,-37.80516292,175.32490337,Hamilton Central,-37.78938082,175.28203067,4.155698398721476,Hamilton,Hamilton,Waikato,Waikato,376
+E10768,Rotorua Central,Tihiotonga-Whakarewarewa,BUS,6,EDUCATION,Rotorua Central,-38.13568521,176.25424012,Tihiotonga-Whakarewarewa,-38.16412016,176.25173097,3.1694257552423304,Rotorua,Rotorua,Bay of Plenty,Bay of Plenty,42
+E5754,Kawakawa Bay-Orere,Sunnyhills West-Pakuranga North,BUS,9,EDUCATION,Kawakawa Bay-Orere,-36.98413362,175.15196852,Sunnyhills West-Pakuranga North,-36.908509499999994,174.87269402,26.20413141088472,Manukau,Manukau,Auckland,Auckland,5
+E6962,Belleknowes,Campus South,BUS,21,EDUCATION,Belleknowes,-45.87481662,170.4813773,Campus South,-45.86793792,170.51211679,2.4997998965907104,Dunedin,Dunedin,Otago,Otago,118
+E7018,Ostend,Surfdale,BUS,27,EDUCATION,Ostend,-36.79263832,175.05220466,Surfdale,-36.79613493,175.02985004,2.0281566758268075,Auckland,Auckland,Auckland,Auckland,7
+E8916,Ngatea,Paeroa,BUS,6,EDUCATION,Ngatea,-37.27899729,175.4915105,Paeroa,-37.37535256,175.67393688,19.36438579546429,Hauraki,Hauraki,Waikato,Waikato,22
+E8703,Matatoki-Puriri,Ngatea,BUS,21,EDUCATION,Matatoki-Puriri,-37.23726446,175.66087396,Ngatea,-37.27899729,175.4915105,15.690869129568956,Thames-Coromandel,Hauraki,Waikato,Waikato,4
+E8713,Maramarua,Ngatea,BUS,39,EDUCATION,Maramarua,-37.27897408,175.21484861,Ngatea,-37.27899729,175.4915105,24.478294907924948,Waikato,Hauraki,Waikato,Waikato,4
+E8850,Colville,Colville,BUS,18,EDUCATION,Colville,-36.69966402,175.48157611,Colville,-36.69966402,175.48157611,0.0,Thames-Coromandel,Thames-Coromandel,Waikato,Waikato,5
+E8858,Whitianga South,Whitianga South,BUS,21,EDUCATION,Whitianga South,-36.8336234,175.69356396,Whitianga South,-36.8336234,175.69356396,0.0,Thames-Coromandel,Thames-Coromandel,Waikato,Waikato,7
+E8860,Tairua,Whitianga South,BUS,12,EDUCATION,Tairua,-36.99459914,175.85342329,Whitianga South,-36.8336234,175.69356396,22.855744307669298,Thames-Coromandel,Thames-Coromandel,Waikato,Waikato,5
+E8930,Waiau,Waihi North,BUS,9,EDUCATION,Waiau,-37.44585854,175.90978753,Waihi North,-37.38622736,175.83349229,9.453453783961065,Western Bay of Plenty,Hauraki,Bay of Plenty,Waikato,21
+E8944,Whitikahu,Tahuna-Mangateparu,BUS,9,EDUCATION,Whitikahu,-37.57098670000001,175.31718590000003,Tahuna-Mangateparu,-37.52132213,175.46480172,14.137379959584338,Waikato,Matamata-Piako,Waikato,Waikato,8
+E8945,Tahuna-Mangateparu,Tahuna-Mangateparu,BUS,33,EDUCATION,Tahuna-Mangateparu,-37.52132213,175.46480172,Tahuna-Mangateparu,-37.52132213,175.46480172,0.0,Matamata-Piako,Matamata-Piako,Waikato,Waikato,4
+E10280,Maungatapu,Bethlehem Central,BUS,9,EDUCATION,Maungatapu,-37.718326399999995,176.17894876,Bethlehem Central,-37.706587899999995,176.11498118,5.776329860529372,Western Bay of Plenty,Western Bay of Plenty,Bay of Plenty,Bay of Plenty,190
+E9007,Huntly East,Te Kauwhata,BUS,30,EDUCATION,Huntly East,-37.55408564,175.16553246,Te Kauwhata,-37.4025191,175.14802087,16.924123525892988,Waikato,Waikato,Waikato,Waikato,17
+E9024,Te Uku,Hamilton East Village,BUS,9,EDUCATION,Te Uku,-37.88322634,174.93821165,Hamilton East Village,-37.79028168,175.29324653,32.84653150237803,Waikato,Hamilton,Waikato,Waikato,5
+E10126,Tirau,Hautapu,BUS,9,EDUCATION,Tirau,-37.95916018,175.81429616,Hautapu,-37.87894521,175.44370869,33.709160278440315,South Waikato,Waipa,Waikato,Waikato,6
+E10217,Putararu Rural,Matamata South,BUS,6,EDUCATION,Putararu Rural,-38.09657792,175.73244372,Matamata South,-37.81753128,175.77119821,31.214050302530808,South Waikato,Matamata-Piako,Waikato,Waikato,10
+E10248,Kaimai,Bethlehem Central,BUS,9,EDUCATION,Kaimai,-37.88590858,176.02098429,Bethlehem Central,-37.706587899999995,176.11498118,21.58235963815968,Western Bay of Plenty,Western Bay of Plenty,Bay of Plenty,Bay of Plenty,5
+E10251,Waiorohi,Bethlehem Central,BUS,6,EDUCATION,Waiorohi,-37.87712037,176.14775568,Bethlehem Central,-37.706587899999995,176.11498118,19.179794041137352,Western Bay of Plenty,Western Bay of Plenty,Bay of Plenty,Bay of Plenty,5
+E10255,Pongakawa,Bethlehem Central,BUS,9,EDUCATION,Pongakawa,-37.89305456,176.49614474,Bethlehem Central,-37.706587899999995,176.11498118,39.38848125306236,Western Bay of Plenty,Western Bay of Plenty,Bay of Plenty,Bay of Plenty,4
+E10527,Maihiihi,Goodfellow Park,BUS,15,EDUCATION,Maihiihi,-38.25985712,175.35339708,Goodfellow Park,-38.00680748,175.31677998,28.319511774517192,Otorohanga,Waipa,Waikato,Waikato,5
+E10680,Te Kuiti West,Hangatiki,BUS,12,EDUCATION,Te Kuiti West,-38.33639894,175.16019027,Hangatiki,-38.28355305,175.06938344,9.86425786319068,Waitomo,Waitomo,Waikato,Waikato,8
+E10687,Waipa Valley,Te Kuiti West,BUS,42,EDUCATION,Waipa Valley,-38.45839327,175.27657366,Te Kuiti West,-38.33639894,175.16019027,16.93753496899003,Waitomo,Waitomo,Waikato,Waikato,4
+E10696,Kinleith,Utuhina,BUS,6,EDUCATION,Kinleith,-38.29131119,175.79670359,Utuhina,-38.14249953,176.23214439,41.484346778227135,South Waikato,Rotorua,Waikato,Waikato,10
+E10729,Ngakuru,Utuhina,BUS,48,EDUCATION,Ngakuru,-38.3265856,176.19950049,Utuhina,-38.14249953,176.23214439,20.667052240505868,Rotorua,Rotorua,Waikato,Waikato,4
+E10730,Kaingaroa-Whakarewarewa,Utuhina,BUS,24,EDUCATION,Kaingaroa-Whakarewarewa,-38.25763217,176.45697211,Utuhina,-38.14249953,176.23214439,23.449240609756234,Rotorua,Rotorua,Bay of Plenty,Waikato,6
+E10872,Fitzroy-Glen Avon,Strandon,BUS,6,EDUCATION,Fitzroy-Glen Avon,-39.07427128,174.12360445,Strandon,-39.05369313,174.09475657,3.382159943836085,New Plymouth,New Plymouth,Taranaki,Taranaki,84
+E13511,Stratford North,Pembroke,BUS,6,EDUCATION,Stratford North,-39.32802895,174.28261319,Pembroke,-39.34019567,174.18536541,8.47252031872546,Stratford,Stratford,Taranaki,Taranaki,11
+E10889,Cape Egmont,Strandon,BUS,6,EDUCATION,Cape Egmont,-39.31360193,173.87159509999995,Strandon,-39.05369313,174.09475657,34.715940049187175,South Taranaki,New Plymouth,Taranaki,Taranaki,5
+E11977,Edgecumbe,Edgecumbe,BUS,39,EDUCATION,Edgecumbe,-37.97371477,176.82908816,Edgecumbe,-37.97371477,176.82908816,0.0,Whakatane,Whakatane,Bay of Plenty,Bay of Plenty,45
+E11996,Waingarara-Waimana,Trident,BUS,39,EDUCATION,Waingarara-Waimana,-38.28225314,177.02173872,Trident,-37.96899468,176.97770942,35.045019416726696,Whakatane,Whakatane,Bay of Plenty,Bay of Plenty,6
+E12000,Woodlands,Trident,BUS,6,EDUCATION,Woodlands,-38.01656194,177.25965904,Trident,-37.96899468,176.97770942,25.26743564846522,Opotiki,Whakatane,Bay of Plenty,Bay of Plenty,13
+E12140,Puketitiri-Tutira,McLean Park,BUS,9,EDUCATION,Puketitiri-Tutira,-39.19745874,176.64300698,McLean Park,-39.5083024,176.9160949,41.785447505828685,Hastings,Hastings,Hawke's Bay,Hawke's Bay,5
+E12171,Tareha Reserve,McLean Park,BUS,12,EDUCATION,Tareha Reserve,-39.54400792,176.85143036,McLean Park,-39.5083024,176.9160949,6.8207872713858615,Hastings,Hastings,Hawke's Bay,Hawke's Bay,111
+E12267,Whataupoko West,Te Hapara North,BUS,15,EDUCATION,Whataupoko West,-38.65837976,178.02898274,Te Hapara North,-38.65019278,178.00054269,2.6320467188138834,Gisborne,Gisborne,Gisborne,Gisborne,32
+E12411,Ohau-Manakau,Otaki,BUS,12,EDUCATION,Ohau-Manakau,-40.69886257,175.20752463,Otaki,-40.75304139,175.13966802,8.306052945763339,Horowhenua,Kapiti Coast,Manawatu-Wanganui,Wellington,59
+E12542,Waipawa,Frimley,BUS,9,EDUCATION,Waipawa,-39.93975904,176.5913431,Frimley,-39.62166848,176.82925988,40.79677231187488,Central Hawke's Bay,Hastings city,Hawke's Bay,Hawke's Bay,5
+E12738,Mangarara,Mayfair,BUS,9,EDUCATION,Mangarara,-39.99003717,176.76264858,Mayfair,-39.64014808,176.86339942,39.84616379315394,Central Hawke's Bay,Hastings city,Hawke's Bay,Hawke's Bay,7
+E12756,Poukawa,Maraekakaho,BUS,6,EDUCATION,Poukawa,-39.75996379,176.70227115,Maraekakaho,-39.62634976,176.29699518,37.724896381755904,Hastings,Hastings,Hawke's Bay,Hawke's Bay,4
+E13518,Kaponga-Mangatoki,Opunake,BUS,27,EDUCATION,Kaponga-Mangatoki,-39.43452513,174.22980453,Opunake,-39.45132365,173.85878435,31.91461767379155,South Taranaki,South Taranaki,Taranaki,Taranaki,6
+E13561,Okaiawa,King Edward Park,BUS,18,EDUCATION,Okaiawa,-39.5375084,174.21758799999995,King Edward Park,-39.58215942,174.27683195,7.102468630559543,South Taranaki,South Taranaki,Taranaki,Taranaki,11
+E13571,Manutahi-Waitotora,King Edward Park,BUS,15,EDUCATION,Manutahi-Waitotora,-39.78384701,174.57529167,King Edward Park,-39.58215942,174.27683195,33.98924830702383,South Taranaki,South Taranaki,Taranaki,Taranaki,6
+E13792,Wembley Park,Kaitoke-Fordell,BUS,12,EDUCATION,Wembley Park,-39.90764024,175.06400242,Kaitoke-Fordell,-39.94185467,175.15622153,8.73583856075476,Wanganui,Wanganui,Manawatu-Wanganui,Manawatu-Wanganui,11
+E13664,Turakina,College Estate,BUS,9,EDUCATION,Turakina,-40.0113956,175.25773896,College Estate,-39.9305007,175.03470499,21.027268883515642,Rangitikei,Wanganui,Manawatu-Wanganui,Manawatu-Wanganui,4
+E13721,Taumarunui East,Taumarunui North,BUS,39,EDUCATION,Taumarunui East,-38.88852154,175.31379572,Taumarunui North,-38.86254762,175.24467641,6.644003753936548,Ruapehu,Ruapehu,Manawatu-Wanganui,Manawatu-Wanganui,14
+E14069,Newbury,Tremaine,BUS,12,EDUCATION,Newbury,-40.33398879,175.57992885,Tremaine,-40.33969042,175.59865691,1.7092894837658132,Manawatu,Palmerston North,Manawatu-Wanganui,Manawatu-Wanganui,136
+E13755,Pohangina-Apiti,Kimbolton North,BUS,21,EDUCATION,Pohangina-Apiti,-40.07201708,175.91250803,Kimbolton North,-40.2074565,175.58214784,31.86586480648688,Manawatu,Manawatu,Manawatu-Wanganui,Manawatu-Wanganui,6
+E14691,Norsewood,Norsewood,BUS,30,EDUCATION,Norsewood,-40.11138214,176.15105007,Norsewood,-40.11138214,176.15105007,0.0,Tararua,Tararua,Manawatu-Wanganui,Manawatu-Wanganui,4
+E14692,Waitahora,Norsewood,BUS,15,EDUCATION,Waitahora,-40.30073659,176.21621287,Norsewood,-40.11138214,176.15105007,21.770313684129285,Tararua,Tararua,Manawatu-Wanganui,Manawatu-Wanganui,4
+E14697,Dannevirke East,Papatawa,BUS,9,EDUCATION,Dannevirke East,-40.21019552,176.10213546,Papatawa,-40.2208018,175.99586663,9.100119268315682,Tararua,Tararua,Manawatu-Wanganui,Manawatu-Wanganui,5
+E14747,Carterton North,Solway North,BUS,21,EDUCATION,Carterton North,-41.01943446,175.52683939,Solway North,-40.9574562,175.63029837,11.086171900258334,Carterton,Masterton,Wellington,Wellington,40
+E14746,Mount Holdsworth,Solway North,BUS,18,EDUCATION,Mount Holdsworth,-40.91709663,175.45136445,Solway North,-40.9574562,175.63029837,15.686069578882554,Carterton,Masterton,Wellington,Wellington,7
+E14825,Aorangi Forest,Kuripuni,BUS,9,EDUCATION,Aorangi Forest,-41.37490301,175.45793738,Kuripuni,-40.95167579,175.64326344,49.551893907099064,South Wairarapa,Masterton,Wellington,Wellington,5
+E16217,Petone Central,Hutt Central South,BUS,6,EDUCATION,Petone Central,-41.22362356,174.86969444,Hutt Central South,-41.21349159,174.90936129,3.5038421531476764,Hutt city,Hutt city,Wellington,Wellington,575
+E17492,Motueka West,Motueka West,BUS,9,EDUCATION,Motueka West,-41.12544913,172.99560963,Motueka West,-41.12544913,172.99560963,0.0,Tasman,Tasman,Nelson,Nelson,11
+E17467,Aldinga,Nelson Central-Trafalgar,BUS,6,EDUCATION,Aldinga,-41.31388017,173.22157736,Nelson Central-Trafalgar,-41.27273863,173.28210878,6.819280853072526,Nelson,Nelson,Nelson,Nelson,62
+E17489,Upper Moutere,Motueka West,BUS,78,EDUCATION,Upper Moutere,-41.24935169,172.85150896,Motueka West,-41.12544913,172.99560963,18.309049616444867,Tasman,Tasman,Nelson,Nelson,6
+E17627,Upper Wairau ,Murchison-Nelson Lakes,BUS,12,EDUCATION,Upper Wairau,-41.71793751,173.30406264,Murchison-Nelson Lakes,-41.88459953,172.4650349,71.97462388348177,Marlborough,Tasman,Marlborough,Nelson,6
+E17835,Marlborough Sounds West,Marlborough Sounds West,BUS,51,EDUCATION,Marlborough Sounds West,-41.25619764,173.62635385,Marlborough Sounds West,-41.25619764,173.62635385,0.0,Marlborough,Marlborough,Marlborough,Marlborough,5
+E17838,Marlborough Sounds East,Springlands,BUS,9,EDUCATION,Marlborough Sounds East,-41.321267799999994,174.04011823,Springlands,-41.50422292,173.93617831,22.113242655667065,Marlborough,Marlborough,Marlborough,Marlborough,5
+E17847,Spring Creek-Grovetown,Springlands,BUS,24,EDUCATION,Spring Creek-Grovetown,-41.47495673,173.96410184,Springlands,-41.50422292,173.93617831,3.9999651500545537,Marlborough,Marlborough,Marlborough,Marlborough,21
+E18393,Holmwood,Christchurch Central-South,BUS,6,EDUCATION,Holmwood,-43.519344,172.6084094,Christchurch Central-South,-43.53815861,172.64240289,3.447809736595848,Christchurch,Christchurch,Canterbury,Canterbury,469
+E18062,Southbridge,Merivale,BUS,6,EDUCATION,Southbridge,-43.79254412,172.21023844,Merivale,-43.51635206,172.61911331,45.00238874435411,Selwyn,Christchurch,Canterbury,Canterbury,4
+E18128,Hokitika Rural,Greymouth Central,BUS,9,EDUCATION,Hokitika Rural,-42.78693668,170.96082934,Greymouth Central,-42.45704831,171.19924986,41.546559986362475,Westland,Grey,West Coast,West Coast,4
+E18299,Amberley,Upper Hurunui,BUS,12,EDUCATION,Amberley,-43.15508463,172.73121686,Upper Hurunui,-42.93387941,172.54733326,28.780247066277994,Hurunui,Hurunui,Canterbury,Canterbury,6
+E18301,Ashley Forest,Ashley Forest,BUS,12,EDUCATION,Ashley Forest,-43.12462587,172.56403398,Ashley Forest,-43.12462587,172.56403398,0.0,Hurunui,Hurunui,Canterbury,Canterbury,5
+E18523,Oxford,Southbrook,BUS,12,EDUCATION,Oxford,-43.2987357,172.18309394,Southbrook,-43.32718073,172.59765801,33.69006366009532,Waimakariri,Waimakariri,Canterbury,Canterbury,7
+E18525,Eyrewell,Southbrook,BUS,12,EDUCATION,Eyrewell,-43.39853546,172.28813683,Southbrook,-43.32718073,172.59765801,26.249786355286805,Waimakariri,Waimakariri,Canterbury,Canterbury,4
+E18883,Darfield,Darfield,BUS,12,EDUCATION,Darfield,-43.49796117,172.09991696,Darfield,-43.49796117,172.09991696,0.0,Selwyn,Selwyn,Canterbury,Canterbury,8
+E18885,Bankside,Darfield,BUS,12,EDUCATION,Bankside,-43.65857485,172.03741575,Darfield,-43.49796117,172.09991696,18.555512586346268,Selwyn,Selwyn,Canterbury,Canterbury,5
+E20289,Eastern Bays-Banks Peninsula,Somerfield West,BUS,6,EDUCATION,Eastern Bays-Banks Peninsula,-43.67581961,172.93129665,Somerfield West,-43.56590241,172.61924876,27.93440306584705,Christchurch,Christchurch,Canterbury,Canterbury,4
+E20675,Chertsey,Rakaia,BUS,15,EDUCATION,Chertsey,-43.82506248,171.96646486,Rakaia,-43.74700637,172.00903425,9.327932952738434,Ashburton,Ashburton,Canterbury,Canterbury,10
+E20806,Tinwald South,Allenton East,BUS,57,EDUCATION,Tinwald South,-43.92478814,171.71822146,Allenton East,-43.89118299,171.75756446,4.8884506529967435,Ashburton,Ashburton,Canterbury,Canterbury,23
+E20766,Ashburton Forks,Ashburton Central,BUS,9,EDUCATION,Ashburton Forks,-43.78492258,171.43181981,Ashburton Central,-43.90252481,171.73537846,27.634391151503852,Ashburton,Ashburton,Canterbury,Canterbury,6
+E20791,Ealing-Lowcliffe,Ealing-Lowcliffe,BUS,99,EDUCATION,Ealing-Lowcliffe,-44.03656373,171.49741748,Ealing-Lowcliffe,-44.03656373,171.49741748,0.0,Ashburton,Ashburton,Canterbury,Canterbury,4
+E20836,Levels,Highfield North,BUS,6,EDUCATION,Levels,-44.29433296,171.25526363,Highfield North,-44.38615156,171.22318733,10.523614941397742,Timaru,Timaru,Canterbury,Canterbury,42
+E20852,Levels Valley,Fraser Park,BUS,12,EDUCATION,Levels Valley,-44.27189292,171.01446242,Fraser Park,-44.39596592,171.23045071,22.032820684408044,Timaru,Timaru,Canterbury,Canterbury,8
+E20875,Maungati,Fraser Park,BUS,9,EDUCATION,Maungati,-44.49962787,170.93976175,Fraser Park,-44.39596592,171.23045071,25.793888316236874,Waimate,Timaru,Canterbury,Canterbury,5
+E21019,Makikihi-Willowbridge,Parkside,BUS,6,EDUCATION,Makikihi-Willowbridge,-44.68813769,171.05113933,Parkside,-44.40469035,171.24632921,35.108973097522146,Waimate,Timaru,Canterbury,Canterbury,7
+E21146,Morven-Glenavy-Ikawai,Waimate East,BUS,36,EDUCATION,Morven-Glenavy-Ikawai,-44.85372568,171.00103288,Waimate East,-44.73770602,171.04734729,13.408430063344806,Waimate,Waimate,Canterbury,Canterbury,4
+E21152,Ngapara,Danseys Pass,BUS,18,EDUCATION,Ngapara,-45.06213909,170.69741781,Danseys Pass,-44.89434996,170.50210901,24.16805196422172,Waitaki,Waitaki,Otago,Canterbury,6
+E21211,Oamaru North Orana Park,Lower Waitaki,BUS,6,EDUCATION,Oamaru North Orana Park,-45.08058565,170.97765366,Lower Waitaki,-45.00239341,171.02035686,9.319492817678134,Waitaki,Waitaki,Otago,Otago,10
+E21246,Albert Town,Wanaka North,BUS,165,EDUCATION,Albert Town,-44.68367445,169.18201076,Wanaka North,-44.68004109,169.15232063,2.381876757372521,Queenstown-Lakes,Queenstown-Lakes,Otago,Otago,7
+E21387,Frankton,Warren Park,BUS,9,EDUCATION,Frankton,-45.01825697,168.74585281,Warren Park,-45.02264371,168.66173004,6.629901382604528,Queenstown-Lakes,Queenstown-Lakes,Otago,Otago,23
+E21467,Bruce,Seddon Park,BUS,18,EDUCATION,Bruce,-46.07247342,170.08655606,Seddon Park,-45.87666031,170.35643822,30.150463277466553,Clutha,Dunedin,Otago,Otago,4
+E21973,Waikaka,West Otago,BUS,21,EDUCATION,Waikaka,-45.96604044,168.98043741,West Otago,-45.83535422,169.21290702,23.12492858424089,Gore,Clutha,Southland,Otago,5
+E22019,Waimumu-Kaiwera,Waikaka,BUS,6,EDUCATION,Waimumu-Kaiwera,-46.20791261,169.07308711,Waikaka,-45.96604044,168.98043741,27.827914690579924,Gore,Gore,Southland,Southland,7
+E22021,Clinton,Gore West,BUS,15,EDUCATION,Clinton,-46.23295914,169.36302838,Gore West,-46.10626401,168.92356176,36.65645235104417,Clutha,Gore,Otago,Southland,4
+E22022,Riversdale-Piano Flat,Gore West,BUS,33,EDUCATION,Riversdale-Piano Flat,-45.48645863,169.03162811,Gore West,-46.10626401,168.92356176,69.42654933603336,Southland,Gore,Southland,Southland,5
+E22036,Clutha Valley,Clinton,BUS,15,EDUCATION,Clutha Valley,-46.14666172,169.61562874,Clinton,-46.23295914,169.36302838,21.683302700169314,Clutha,Clutha,Otago,Otago,4
+E22043,Benhar-Stirling,Balclutha South,BUS,15,EDUCATION,Benhar-Stirling,-46.23721671,169.77798335,Balclutha South,-46.24449018,169.72255412,4.3388610613363285,Clutha,Clutha,Otago,Otago,4
+E22066,Edendale-Woodlands,Wyndham-Catlins,BUS,84,EDUCATION,Edendale-Woodlands,-46.3334381,168.67007113,Wyndham-Catlins,-46.47283276,168.99193119999995,29.14319528987156,Southland,Southland,Southland,Southland,6
+E22067,Awarua Plains,Wyndham-Catlins,BUS,6,EDUCATION,Awarua Plains,-46.48269183,168.60409879,Wyndham-Catlins,-46.47283276,168.99193119999995,29.717625153901142,Southland,Southland,Southland,Southland,6
+E22074,Oreti River,Lumsden-Balfour,BUS,6,EDUCATION,Oreti River,-46.00268489,168.31789888,Lumsden-Balfour,-45.74921739,168.61002109,36.13556497366663,Southland,Southland,Southland,Southland,5
+E22076,Longwood Forest,Winton,BUS,18,EDUCATION,Longwood Forest,-46.01707924,167.67301087,Winton,-46.14486071,168.32382512,52.16891342021668,Southland,Southland,Southland,Southland,4
+E22079,Otautau,Winton,BUS,87,EDUCATION,Otautau,-46.19250679,168.05347842,Winton,-46.14486071,168.32382512,21.482042224983925,Southland,Southland,Southland,Southland,6
+E22082,Waianiwa,Winton,BUS,45,EDUCATION,Waianiwa,-46.24535244,168.33027044,Winton,-46.14486071,168.32382512,11.185177534755335,Southland,Southland,Southland,Southland,6
+E22147,Rosedale,Georgetown,BUS,6,EDUCATION,Rosedale,-46.38971341,168.36796259,Georgetown,-46.41932389,168.36900636,3.2935076796038882,Invercargill,Invercargill,Southland,Southland,38
+E22125,Bluff,Gladstone (Invercargill City),BUS,24,EDUCATION,Bluff,-46.60724545,168.33224564,Gladstone (Invercargill City),-46.39213483,168.35330059,23.97343924389996,Invercargill,Invercargill,Southland,Southland,4

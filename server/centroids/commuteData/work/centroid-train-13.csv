@@ -1,0 +1,5 @@
+id,SA2_name_usual_residence_address,SA2_name_workplace_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1,cluster_count
+W2014,Onehunga West,Quay Street-Customs Street,TRAIN,15,EDUCATION,Onehunga West,-36.91965553,174.77421645,Quay Street-Customs Street,-36.84601989,174.77646293,8.19034706248802,Waitakere,Waitakere,Auckland,Auckland,769
+W34423,Otaihanga,Thorndon,TRAIN,6,EDUCATION,Otaihanga,-40.88290094,175.02785593,Thorndon,-41.27246445,174.77422734,48.25307829936457,Kapiti Coast,Wellington,Wellington,Wellington,85
+W34917,Belmont Park,Wellington Central,TRAIN,9,EDUCATION,Belmont Park,-41.1693145,174.91554299,Wellington Central,-41.2849345,174.77572593,17.378428935423912,Hutt city,Wellington,Wellington,Wellington,377
+W34593,Carterton South,Thorndon,TRAIN,9,EDUCATION,Carterton South,-41.03427242,175.51425212,Thorndon,-41.27246445,174.77422734,67.38141062217629,Carterton,Wellington,Wellington,Wellington,25

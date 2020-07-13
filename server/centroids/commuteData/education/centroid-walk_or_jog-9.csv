@@ -1,0 +1,6 @@
+id,SA2_name_usual_residence_address,SA2_name_educational_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1,cluster_count
+E1249,Mount St John,Auckland-University,WALK_OR_JOG,12,EDUCATION,Mount St John,-36.88236812,174.78035947,Auckland-University,-36.85143057,174.76906469,3.5838325281728936,Waitakere,Waitakere,Auckland,Auckland,1307
+E9561,Kirikiriroa,Hamilton Central,WALK_OR_JOG,9,EDUCATION,Kirikiriroa,-37.7819599,175.27469286,Hamilton Central,-37.78938082,175.28203067,1.0472412635282533,Hamilton,Hamilton,Waikato,Waikato,175
+E16459,Newlands South,Paparangi,WALK_OR_JOG,111,EDUCATION,Newlands South,-41.23454859,174.82124819,Paparangi,-41.21674369,174.81983715,1.983328398612457,Wellington,Wellington,Wellington,Wellington,479
+E6970,Arthur Street,Campus South,WALK_OR_JOG,204,EDUCATION,Arthur Street,-45.875749400000004,170.49272725,Campus South,-45.86793792,170.51211679,1.7343432677624204,Dunedin,Dunedin,Otago,Otago,152
+E18022,Holmwood,Merivale,WALK_OR_JOG,36,EDUCATION,Holmwood,-43.519344,172.6084094,Merivale,-43.51635206,172.61911331,0.9249992374139352,Christchurch,Christchurch,Canterbury,Canterbury,385

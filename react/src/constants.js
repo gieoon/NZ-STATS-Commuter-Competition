@@ -1,5 +1,8 @@
 // Server address providing map data, localization, and any other json files
-const DEBUG = false;
+
+// PRODUCTION SETTINGS
+const DEBUG = true;
+
 export const DATA_URL_ROOT = DEBUG 
   ? "http://localhost:5000"
   : "https://nz-commute.ts.r.appspot.com";

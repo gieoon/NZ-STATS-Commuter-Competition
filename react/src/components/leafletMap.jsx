@@ -20,7 +20,7 @@ import {
     txt2Array
 } from '../utils/commonFunctions';
 import arrow_right from '../assets/right.svg';
-// import { Curve } from 'react-leaflet-curve';
+import MarkerClusterGroup from "react-leaflet-markercluster";
 
 const MIN_ZOOM = 5;
 const MAX_ZOOM = 18;
@@ -50,12 +50,14 @@ global.commuteEducationCurves = commuteEducationCurves;
     currentCommuteTypes,
     setCurrentDestinationData,
 }){
+    
+
     // Center of New Zealand
     // const position = [173.299, -41.273]
     const position = [-41.273, 173.299]
     const topLeft = L.latLng(-31.154944, 150.138842); //162
     const bottomRight = L.latLng(-49.285522, 191.794907); // 179
-
+    // console.log('centroidData: ', centroidData);
     // const [curvesWork, setCurvesWork] = useState({});
     // const [curvesEducation, setCurvesEducation] = useState({});
 
@@ -176,14 +178,19 @@ global.commuteEducationCurves = commuteEducationCurves;
         // mapRef.current.leafletElement.on('viewreset', updateData);
 
         mapRef.current.leafletElement.off('zoomstart');
-        mapRef.current.leafletElement.on('zoomstart', updateData);
+        mapRef.current.leafletElement.on('zoomstart', updateDataAndCentroids);
         // console.log('update data called');
-        updateData();
+        updateDataAndCentroids();
         
     },[
         commutePurpose,
         currentCommuteTypes
     ])
+
+    const updateDataAndCentroids = () => {
+        updateData();
+        updateCentroids();
+    }
 
     const updateData = () => {
         const map = mapRef.current.leafletElement;
@@ -207,7 +214,34 @@ global.commuteEducationCurves = commuteEducationCurves;
             createCircle(c.departure_LATITUDE, c.departure_LONGITUDE, c.cluster_count);
         }
         */
+        
+        
     }
+
+    const updateCentroids = () => {
+        if(!centroidData) 
+            return;
+        circles.forEach(circle => {
+            circle.remove();
+        })
+        var ci = circles;
+        ci.length = 0;
+        setCircles(ci);
+
+        // Load data for current centroids
+        var zoom = mapRef.current.leafletElement.getZoom();
+
+        for(var commuteMethod of currentCommuteTypes){
+            //TODO this is hardcoded to 'work' for now
+            var data = centroidData[`${"work"}_${commuteType2Key(commuteMethod)}_${zoom}`]
+            console.log('data to draw: ',data);
+            for(var c of data){
+                createCircle(c.departure_LATITUDE, c.departure_LONGITUDE, c.cluster_count, commuteMethod);
+            }
+        }
+        
+    }
+    // console.log("centroidData: ", centroidData)
 
     const commuteType2Key = (commute_type) => {
         if(commute_type === "Stay home")
@@ -510,13 +544,14 @@ global.commuteEducationCurves = commuteEducationCurves;
     }
 
     // Draw cluster circles.
-    const createCircle = (lat, lon, clusterCount) => {
+    const createCircle = (lat, lon, clusterCount, commuteType) => {
         var circleCenter = [lat, lon];
+        // console.log(COMMUTE_METHOD_COLOUR, commuteType, COMMUTE_METHOD_COLOUR[commuteType])
         var options = {
             weight: 1.5,
             color: 'rgba(255,0,0,0)',//'rgba(255,0,0,.35)',
-            fillColor: '#f03',
-            fillOpacity: 0.35,
+            fillColor: COMMUTE_METHOD_COLOUR[commuteType],
+            fillOpacity: 0.5,//0.35,
         }
 
         // Radius dependent on number of commutes in this circle.

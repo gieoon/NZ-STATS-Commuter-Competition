@@ -1,0 +1,11 @@
+id,SA2_name_usual_residence_address,SA2_name_educational_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1,cluster_count
+E1249,Mount St John,Auckland-University,WALK_OR_JOG,12,EDUCATION,Mount St John,-36.88236812,174.78035947,Auckland-University,-36.85143057,174.76906469,3.5838325281728936,Waitakere,Waitakere,Auckland,Auckland,1331
+E9561,Kirikiriroa,Hamilton Central,WALK_OR_JOG,9,EDUCATION,Kirikiriroa,-37.7819599,175.27469286,Hamilton Central,-37.78938082,175.28203067,1.0472412635282533,Hamilton,Hamilton,Waikato,Waikato,175
+E11717,Kuirau,Kuirau,WALK_OR_JOG,42,EDUCATION,Kuirau,-38.13474084,176.24242829,Kuirau,-38.13474084,176.24242829,0.0,Rotorua,Rotorua,Waikato,Waikato,70
+E16459,Newlands South,Paparangi,WALK_OR_JOG,111,EDUCATION,Newlands South,-41.23454859,174.82124819,Paparangi,-41.21674369,174.81983715,1.983328398612457,Wellington,Wellington,Wellington,Wellington,489
+E6970,Arthur Street,Campus South,WALK_OR_JOG,204,EDUCATION,Arthur Street,-45.875749400000004,170.49272725,Campus South,-45.86793792,170.51211679,1.7343432677624204,Dunedin,Dunedin,Otago,Otago,152
+E11042,Tauranga South,Tauranga South,WALK_OR_JOG,189,EDUCATION,Tauranga South,-37.708425899999995,176.15681961,Tauranga South,-37.708425899999995,176.15681961,0.0,Western Bay of Plenty,Western Bay of Plenty,Bay of Plenty,Bay of Plenty,72
+E12575,Tareha Reserve,Tareha Reserve,WALK_OR_JOG,156,EDUCATION,Tareha Reserve,-39.54400792,176.85143036,Tareha Reserve,-39.54400792,176.85143036,0.0,Hastings,Hastings,Hawke's Bay,Hawke's Bay,127
+E14028,Palmerston North Central,Palmerston North Central,WALK_OR_JOG,21,EDUCATION,Palmerston North Central,-40.35537702,175.61010962,Palmerston North Central,-40.35537702,175.61010962,0.0,Palmerston North,Palmerston North,Manawatu-Wanganui,Manawatu-Wanganui,98
+E17678,Maitlands,Nayland,WALK_OR_JOG,48,EDUCATION,Maitlands,-41.30875019,173.24301865,Nayland,-41.30432817,173.23648616,0.7345114554505591,Nelson,Nelson,Nelson,Nelson,78
+E18208,Mona Vale,Mona Vale,WALK_OR_JOG,30,EDUCATION,Mona Vale,-43.52638334,172.60669389,Mona Vale,-43.52638334,172.60669389,0.0,Christchurch,Christchurch,Canterbury,Canterbury,392

@@ -23,58 +23,70 @@ function Home(props) {
   });
 
   
-  const { data: workData } = useStickySWR(
-    DATA_URL_ROOT + "/work_csv",
-    fetcher,
-    {
-      revalidateOnMount: true,
-      // refreshInterval: 100000,
-      revalidateOnFocus: false,
-    }
-  );
+  // const { data: workData } = useStickySWR(
+  //   DATA_URL_ROOT + "/work_csv",
+  //   fetcher,
+  //   {
+  //     revalidateOnMount: true,
+  //     // refreshInterval: 100000,
+  //     revalidateOnFocus: false,
+  //   }
+  // );
 
-  const { data: educationData } = useStickySWR(
-    DATA_URL_ROOT + "/education_csv",
-    // 'https://api.covid19india.org/v3/min/timeseries.min.json',
-    fetcher,
-    {
-      revalidateOnMount: true,
-      // refreshInterval: 100000,
-      revalidateOnFocus: false,
-    }
-  );
-  
+  // const { data: educationData } = useStickySWR(
+  //   DATA_URL_ROOT + "/education_csv",
+  //   // 'https://api.covid19india.org/v3/min/timeseries.min.json',
+  //   fetcher,
+  //   {
+  //     revalidateOnMount: true,
+  //     // refreshInterval: 100000,
+  //     revalidateOnFocus: false,
+  //   }
+  // );
 
-  const { data: regionalWorkData } = useStickySWR(
-    DATA_URL_ROOT + '/work_regional_data',
-    fetcherJSON,
-    {
-      revalidateOnMount: true,
-      revalidateOnFocus: false,
-    }
-  )
+  // const { data: regionalWorkData } = useStickySWR(
+  //   DATA_URL_ROOT + '/work_regional_data',
+  //   fetcherJSON,
+  //   {
+  //     revalidateOnMount: true,
+  //     revalidateOnFocus: false,
+  //   }
+  // )
 
-  const { data: regionalEducationData } = useStickySWR(
-    DATA_URL_ROOT + '/education_regional_data',
-    fetcherJSON,
-    {
-      revalidateOnMount: true,
-      revalidateOnFocus: false,
-    }
-  )
+  // const { data: regionalEducationData } = useStickySWR(
+  //   DATA_URL_ROOT + '/education_regional_data',
+  //   fetcherJSON,
+  //   {
+  //     revalidateOnMount: true,
+  //     revalidateOnFocus: false,
+  //   }
+  // )
 
-  const { data: regionalTotalData } = useStickySWR(
-    DATA_URL_ROOT + '/total_regional_data',
-    fetcherJSON,
+  // const { data: regionalTotalData } = useStickySWR(
+  //   DATA_URL_ROOT + '/total_regional_data',
+  //   fetcherJSON,
+  //   {
+  //     revalidateOnMount: true,
+  //     revalidateOnFocus: false
+  //   }
+  // )
+
+  const workData = {}, educationData = {}, regionalWorkData = {}, regionalEducationData = {}, regionalTotalData = {};
+
+  const { data: centroidData } = useStickySWR(
+    DATA_URL_ROOT + '/centroidData',
+    fetcherDICT,
     {
       revalidateOnMount: true,
       revalidateOnFocus: false
     }
   )
+  // console.log("centroidData: ",centroidData)
 
-  const { data: centroidData } = useStickySWR(
-    DATA_URL_ROOT + '/centroidData',
-    fetcherDICT,
+  // Data to load for search
+  const { data: allCentroidDestinations } = useStickySWR(
+    DATA_URL_ROOT + '/allCentroidDestinations',
+    fetcher,
     {
       revalidateOnMount: true,
       revalidateOnFocus: false
@@ -116,7 +128,7 @@ function Home(props) {
       </Helmet>
       <div className="Home">
         {/* {console.log(regionalEducationData)} */}
-        {/* {console.log("centroidData: ", centroidData)} */}
+        
         {/* <LeftPanel /> */}
         <div className="home-right" ref={nzMap}>
           {isVisible && (
@@ -132,6 +144,7 @@ function Home(props) {
                     {...{ regionalTotalData }}
                     {...{ centroidData }}
                     {...{ destinationData }}
+                    {...{ allCentroidDestinations }}
                     {...{ mapStatistic, setMapStatistic }}
                     {...{ regionHighlighted, setRegionHighlighted }}
                     {...{ anchor, setAnchor }}

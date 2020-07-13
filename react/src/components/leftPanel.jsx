@@ -26,9 +26,10 @@ function LeftPanel({
     highlightedData,
     centroidData,
     destinationData,
+    allCentroidDestinations,
     currentDestinationData
 }){
-    // console.log(destinationData)
+    // console.log("destinationData: ", destinationData)
     const { t } = useTranslation();
 
     const [currentMapStatistics, setCurrentMapStatistics] = useState(MODES_OF_TRANSPORT);
@@ -69,64 +70,19 @@ function LeftPanel({
     
     return(
         <div className="LeftPanel">
-            <div className="title"> 
-                <Link to="/">
-                    Commute
-                    <span> New Zealand</span>
-                </Link>
-            </div>
-
-            <Suspense fallback={<div></div>}>
-                <SearchBar 
-                  centroidData={centroidData}
-                />
-            </Suspense>
-
-            <div className="meta">
-            <h2 className={classnames("total")}>
-
-              <div>
-                {t("From ")}
-                {/* {t(hoveredRegion.name)} */}
-                {hoveredData.hoveredData.DEPARTURE_NAME_1}
-                {hoveredData.hoveredData.departure_SA22018_V1_NAME && hoveredData.hoveredData.departure_SA22018_V1_NAME.length ? ", " : ""}
-                {t(hoveredData.hoveredData.departure_SA22018_V1_NAME)}
-                <div>
-                  {t("To ")}
-                  {hoveredData.hoveredData.DESTINATION_NAME_1}
-                  {/* {hoveredData.hoveredDestination} */}
-                  { hoveredData.hoveredData.DESTINATION_NAME_1 //Or, use DESTINATION_NAME_2
-                  //hoveredData.hoveredDestination.length 
-                    ? ", "
-                    : ""  
-                  }
-                  {hoveredData.hoveredData.destination_SA22018_V1_NAME}
-                </div>
-
-                <Destination 
-                  obj={destinationData[currentDestinationData.from]}
-                  type="from"
-                />
-                <Destination 
-                  obj={destinationData[currentDestinationData.to]}
-                  type="to"
-                />
-              </div>
-              
-              <div style={{alignSelf: "center"}}>
-                {/* {!isNaN(Number(hoveredData.hoveredData.HAVERSINE_DISTANCE))
-                  ? Number(hoveredData.hoveredData.HAVERSINE_DISTANCE).toFixed(2) + "km"
-                  : ""
-                } */}
-                <animated.h1>
-                  {km.distance.interpolate((distance) => 
-                        // !isNaN(distance) ? distance.toFixed(2) + "km" : ""
-                        distance.toFixed(2).toString() + "km"
-                  )}
-                </animated.h1>
-              </div>
-            </h2>
+          <div className="title"> 
+              <Link to="/">
+                  Commute
+                  <span> New Zealand</span>
+              </Link>
           </div>
+
+          <Suspense fallback={<div></div>}>
+              <SearchBar 
+                allCentroidDestinations={allCentroidDestinations}
+              />
+          </Suspense>
+
           <div className="map-stats">
             <div
                   // key={statistic}
@@ -227,4 +183,59 @@ export default LeftPanel;
   </div>
 ))}
 </div>
+*/
+
+/*
+
+
+          <Suspense fallback={<div></div>}>
+            <div className="meta">
+              <h2 className={classnames("total")}>
+                <div>
+                  {t("From ")}
+                  {hoveredData.hoveredData.DEPARTURE_NAME_1}
+                  {hoveredData.hoveredData.departure_SA22018_V1_NAME && hoveredData.hoveredData.departure_SA22018_V1_NAME.length ? ", " : ""}
+                  {t(hoveredData.hoveredData.departure_SA22018_V1_NAME)}
+                  <div>
+                    {t("To ")}
+                    {hoveredData.hoveredData.DESTINATION_NAME_1}
+                    { hoveredData.hoveredData.DESTINATION_NAME_1 //Or, use DESTINATION_NAME_2
+                    //hoveredData.hoveredDestination.length 
+                      ? ", "
+                      : ""  
+                    }
+                    {hoveredData.hoveredData.destination_SA22018_V1_NAME}
+                  </div>
+
+                  { destinationData
+                    ? <div>
+                      <Destination 
+                        obj={destinationData[currentDestinationData.from]}
+                        type="from"
+                      />
+                      <Destination 
+                        obj={destinationData[currentDestinationData.to]}
+                        type="to"
+                      />
+                    </div>
+                    : ""
+                  }
+                </div>
+              
+                
+                <div style={{alignSelf: "center"}}>
+                  {!isNaN(Number(hoveredData.hoveredData.HAVERSINE_DISTANCE))
+                    ? Number(hoveredData.hoveredData.HAVERSINE_DISTANCE).toFixed(2) + "km"
+                    : ""
+                  }
+                  <animated.h1>
+                    {km.distance.interpolate((distance) => 
+                          // !isNaN(distance) ? distance.toFixed(2) + "km" : ""
+                          distance.toFixed(2).toString() + "km"
+                    )}
+                  </animated.h1>
+                </div>
+              </h2>
+            </div>
+          </Suspense>
 */

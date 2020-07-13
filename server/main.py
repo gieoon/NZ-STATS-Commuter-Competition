@@ -15,7 +15,7 @@ import json
 import csv
 
 from zoom2 import handleZoom
-from centroid import getAllCentroidData
+from centroid import getCentroidData, getAllCentroidDestinations
 from destination import getDestinations
 
 SIZE_DIVISOR = 50 # 5 # 100
@@ -325,7 +325,7 @@ def get_zone_data_with_commute_type():
     right = request.args.get('right')
     bottom = request.args.get('bottom')
     commuteType = request.args.get('commuteType')
-    print(left,top,right,bottom,commuteType)
+    # print(left,top,right,bottom,commuteType)
 
     response = make_response(jsonify("{}"))
     response.headers.add('Access-Control-Allow-Origin', '*')
@@ -334,7 +334,19 @@ def get_zone_data_with_commute_type():
 # All centroid data, loaded once on page load
 @app.route('/centroidData')
 def get_centroid_data():
-    data = getAllCentroidData()
+    commute_purpose = request.args.get('commute_purpose')
+    commute_method = request.args.get('commute_method')
+    zoom = request.args.get('zoom')
+
+    centroidData = getCentroidData(commute_purpose, commute_method, zoom)
+    response = make_response(centroidData)
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
+
+# For use with search to load all information into bloodhound
+@app.route('/allCentroidDestinations')
+def get_all_centroid_destinations():
+    data = getAllCentroidDestinations()
     response = make_response(data)
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
@@ -351,7 +363,7 @@ def helloworld():
     print('hello world')
     return '<h1>hello world</h1>'
 
-
+'''
 # This is only run once to create data which is saved serverside.
 # To set up new dataframe, retrieve series of each destination & departure region name.
 @app.route('/setup', methods=["POST"])
@@ -400,6 +412,7 @@ def setup():
     response = make_response("done")
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
+'''
 
 if __name__ == '__main__' :
     app.run(debug=False, host='127.0.0.1')

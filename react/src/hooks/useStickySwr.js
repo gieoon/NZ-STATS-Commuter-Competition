@@ -13,7 +13,7 @@ export function useStickySWR(key, fetcher, swrOptions, ...args) {
     ...args
   );
 
-  if (error) console.log("SWR error: ", error);
+  // if (error) console.log("SWR error: ", error);
 
   useUpdateEffect(() => {
     setOptions(

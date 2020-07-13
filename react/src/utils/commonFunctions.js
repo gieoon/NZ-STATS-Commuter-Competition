@@ -131,6 +131,7 @@ export const fetcherJSON = (url) => {
   return fetch(url).then((response) => {
     return response.json();
   })
+  // .then((d) => console.log(d))
   .catch(err => {
     console.error("Error fetching data: ", err);
   })
@@ -141,11 +142,17 @@ export const fetcherDICT = (url) => {
   return fetch(url).then((response) => {
     return response.json().then(dict => {
       const d = {};
-      // console.log("dict: ", dict);
+      // global.dict = dict;
+      // global.txt2Array = txt2Array;
+      // console.log("dict: ", Object.keys(dict));
       Object.keys(dict).forEach((k) => {
-        d[k] = txt2Array(dict[k]);
+        if(dict[k].length)
+          d[k] = txt2Array(dict[k]);
+        else 
+          d[k] = []
+        // console.log("key: ", k, dict[k])
       })
-      // console.log("d: ", d);
+      // console.log(d)
       return d;
     })
   })
@@ -155,7 +162,6 @@ export const fetcherDICT = (url) => {
 export const txt2Array = (allText) => {
   // console.log('allText: ', allText)
   var allTextLines = allText.split(/\r\n|\n/);
-  // console.log(allTextLines.length);
   var headers = allTextLines[0].split(",");
   var lines = [];
 
@@ -170,6 +176,8 @@ export const txt2Array = (allText) => {
       lines.push(row);
     }
   }
+  // console.log('lines: ', lines);
   return lines;
 };
+
 

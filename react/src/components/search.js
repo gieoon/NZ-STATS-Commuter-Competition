@@ -18,7 +18,7 @@ const locationSuggestions = [
 ]
 
 function Search({
-  centroidData
+  allCentroidDestinations
 }){
     const [searchValue, setSearchValue] = useState('');
     const [expand, setExpand] = useState(false);
@@ -27,11 +27,13 @@ function Search({
     const {t} = useTranslation();
 
     const [engine, setEngine] = useState(null);
-
+    // console.log("allCentroidDestinations: ", allCentroidDestinations)
     // console.log("CITY_NAMES: ", CITY_NAMES);
     // console.log("centroidData[15]: ", centroidData[15]);
     //useUpdateEffect(()=>{
+    
     useEffect(()=>{
+      if(allCentroidDestinations){
         import('corejs-typeahead').then(Bloodhound => {
             // console.log(Bloodhound);
             setEngine(
@@ -41,7 +43,7 @@ function Search({
                     // Should be using remote
                     local: 
                     //Object.keys(CITY_NAMES),
-                    centroidData[15].map(a => a.DEPARTURE_NAME_2),
+                    allCentroidDestinations.map(a => a.DEPARTURE_NAME_2),
                     datumTokenizer: Bloodhound.tokenizers.whitespace,
                     queryTokenizer: Bloodhound.tokenizers.whitespace,
                     // queryTokenizer: Bloodhound.default.tokenizers.whitespace,
@@ -50,6 +52,7 @@ function Search({
                 })
             )
         })
+      }
     }
     ,[]
     )
@@ -63,7 +66,9 @@ function Search({
             // console.log(datums);
             datums.map((result, index) => {
                 // console.log("search result: ", result);
-                var obj = Object.values(centroidData[15]).find(o => o.DEPARTURE_NAME_2 === result);
+                var obj = Object.values(allCentroidDestinations).find(o => o.DEPARTURE_NAME_2 === result);
+                // console.log(destinationData)
+                // var obj = allCentroidDestinations[result]
                 // console.log(obj)
                 results.push({name: result, ...obj});
                 return null;

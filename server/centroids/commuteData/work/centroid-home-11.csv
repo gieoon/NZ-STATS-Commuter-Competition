@@ -1,0 +1,11 @@
+id,SA2_name_usual_residence_address,SA2_name_workplace_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1,cluster_count
+W13418,Mount St John,Mount St John,WORK_AT_HOME,186,EDUCATION,Mount St John,-36.88236812,174.78035947,Mount St John,-36.88236812,174.78035947,0.0,Waitakere,Waitakere,Auckland,Auckland,497
+W36051,Petone Central,Petone Central,WORK_AT_HOME,51,EDUCATION,Petone Central,-41.22362356,174.86969444,Petone Central,-41.22362356,174.86969444,0.0,Hutt city,Hutt city,Wellington,Wellington,160
+W28542,Tauranga South,Tauranga South,WORK_AT_HOME,288,EDUCATION,Tauranga South,-37.708425899999995,176.15681961,Tauranga South,-37.708425899999995,176.15681961,0.0,Western Bay of Plenty,Western Bay of Plenty,Bay of Plenty,Bay of Plenty,55
+W26281,Whitiora,Whitiora,WORK_AT_HOME,129,EDUCATION,Whitiora,-37.77756896,175.27048029,Whitiora,-37.77756896,175.27048029,0.0,Hamilton,Hamilton,Waikato,Waikato,82
+W29832,Koutu,Koutu,WORK_AT_HOME,81,EDUCATION,Koutu,-38.12154784,176.23823269,Koutu,-38.12154784,176.23823269,0.0,Rotorua,Rotorua,Waikato,Waikato,36
+W31007,Omahu-Pakowhai,Omahu-Pakowhai,WORK_AT_HOME,189,EDUCATION,Omahu-Pakowhai,-39.56659265,176.82024777,Omahu-Pakowhai,-39.56659265,176.82024777,0.0,Hastings city,Hastings city,Hawke's Bay,Hawke's Bay,68
+W33741,Papaioea North,Papaioea North,WORK_AT_HOME,105,EDUCATION,Papaioea North,-40.34721244,175.61892073,Papaioea North,-40.34721244,175.61892073,0.0,Palmerston North,Palmerston North,Manawatu-Wanganui,Manawatu-Wanganui,43
+W40318,Maitlands,Maitlands,WORK_AT_HOME,129,EDUCATION,Maitlands,-41.30875019,173.24301865,Maitlands,-41.30875019,173.24301865,0.0,Nelson,Nelson,Nelson,Nelson,34
+W47333,Holmwood,Holmwood,WORK_AT_HOME,213,EDUCATION,Holmwood,-43.519344,172.6084094,Holmwood,-43.519344,172.6084094,0.0,Christchurch,Christchurch,Canterbury,Canterbury,191
+W50011,Belleknowes,Belleknowes,WORK_AT_HOME,123,EDUCATION,Belleknowes,-45.87481662,170.4813773,Belleknowes,-45.87481662,170.4813773,0.0,Dunedin,Dunedin,Otago,Otago,60

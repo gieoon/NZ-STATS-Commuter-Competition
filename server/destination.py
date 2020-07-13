@@ -7,5 +7,6 @@ df = df.to_dict(orient='index')
 # df = df.to_dict(orient='records')
 # print(df)
 
+
 def getDestinations():
     return df

@@ -1,0 +1,20 @@
+id,SA2_name_usual_residence_address,SA2_name_educational_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1,cluster_count
+E908,Kensington (Whangarei District),Kensington (Whangarei District),STUDY_AT_HOME,54,EDUCATION,Kensington (Whangarei District),-35.71310137,174.30833235,Kensington (Whangarei District),-35.71310137,174.30833235,0.0,Whangarei,Whangarei,Northland,Northland,30
+E6723,Epsom East,Epsom East,STUDY_AT_HOME,24,EDUCATION,Epsom East,-36.89528995,174.7782585,Epsom East,-36.89528995,174.7782585,0.0,Waitakere,Waitakere,Auckland,Auckland,498
+E10479,Hamilton East Cook,Hamilton East Cook,STUDY_AT_HOME,24,EDUCATION,Hamilton East Cook,-37.7913507,175.30343068,Hamilton East Cook,-37.7913507,175.30343068,0.0,Hamilton,Hamilton,Waikato,Waikato,93
+E11936,Koutu,Koutu,STUDY_AT_HOME,21,EDUCATION,Koutu,-38.12154784,176.23823269,Koutu,-38.12154784,176.23823269,0.0,Rotorua,Rotorua,Waikato,Waikato,32
+E21901,Belleknowes,Belleknowes,STUDY_AT_HOME,27,EDUCATION,Belleknowes,-45.87481662,170.4813773,Belleknowes,-45.87481662,170.4813773,0.0,Dunedin,Dunedin,Otago,Otago,60
+E11448,Maungatapu,Maungatapu,STUDY_AT_HOME,42,EDUCATION,Maungatapu,-37.718326399999995,176.17894876,Maungatapu,-37.718326399999995,176.17894876,0.0,Western Bay of Plenty,Western Bay of Plenty,Bay of Plenty,Bay of Plenty,58
+E13416,Merrilands,Merrilands,STUDY_AT_HOME,48,EDUCATION,Merrilands,-39.06454623,174.10205958,Merrilands,-39.06454623,174.10205958,0.0,New Plymouth,New Plymouth,Taranaki,Taranaki,28
+E12575,Tareha Reserve,Tareha Reserve,STUDY_AT_HOME,51,EDUCATION,Tareha Reserve,-39.54400792,176.85143036,Tareha Reserve,-39.54400792,176.85143036,0.0,Hastings,Hastings,Hawke's Bay,Hawke's Bay,65
+E12219,Te Hapara East,Te Hapara East,STUDY_AT_HOME,36,EDUCATION,Te Hapara East,-38.6560244,178.01721277,Te Hapara East,-38.6560244,178.01721277,0.0,Gisborne,Gisborne,Gisborne,Gisborne,21
+E13818,Laird Park,Laird Park,STUDY_AT_HOME,24,EDUCATION,Laird Park,-39.91964278,175.04579452,Laird Park,-39.91964278,175.04579452,0.0,Wanganui,Wanganui,Manawatu-Wanganui,Manawatu-Wanganui,24
+E14684,Papaioea South,Papaioea South,STUDY_AT_HOME,42,EDUCATION,Papaioea South,-40.35209317,175.62547171,Papaioea South,-40.35209317,175.62547171,0.0,Palmerston North,Palmerston North,Manawatu-Wanganui,Manawatu-Wanganui,41
+E15185,Paraparaumu North,Paraparaumu North,STUDY_AT_HOME,48,EDUCATION,Paraparaumu North,-40.89457279999999,175.01141009,Paraparaumu North,-40.89457279999999,175.01141009,0.0,Kapiti Coast,Kapiti Coast,Wellington,Wellington,18
+E14983,Taitoko,Taitoko,STUDY_AT_HOME,27,EDUCATION,Taitoko,-40.63650667,175.2892378,Taitoko,-40.63650667,175.2892378,0.0,Horowhenua,Horowhenua,Manawatu-Wanganui,Manawatu-Wanganui,16
+E16733,Korokoro,Korokoro,STUDY_AT_HOME,30,EDUCATION,Korokoro,-41.21562751,174.86781402,Korokoro,-41.21562751,174.86781402,0.0,Hutt city,Hutt city,Wellington,Wellington,159
+E17831,Aldinga,Aldinga,STUDY_AT_HOME,39,EDUCATION,Aldinga,-41.31388017,173.22157736,Aldinga,-41.31388017,173.22157736,0.0,Nelson,Nelson,Nelson,Nelson,37
+E17848,Springlands,Springlands,STUDY_AT_HOME,45,EDUCATION,Springlands,-41.50422292,173.93617831,Springlands,-41.50422292,173.93617831,0.0,Marlborough,Marlborough,Marlborough,Marlborough,16
+E18615,Strowan,Strowan,STUDY_AT_HOME,39,EDUCATION,Strowan,-43.50761954,172.60874654,Strowan,-43.50761954,172.60874654,0.0,Christchurch,Christchurch,Canterbury,Canterbury,186
+E21122,Highfield South,Highfield South,STUDY_AT_HOME,18,EDUCATION,Highfield South,-44.39352828,171.2178066,Highfield South,-44.39352828,171.2178066,0.0,Timaru,Timaru,Canterbury,Canterbury,17
+E22386,Richmond (Invercargill City),Richmond (Invercargill City),STUDY_AT_HOME,57,EDUCATION,Richmond (Invercargill City),-46.40719619,168.36918138,Richmond (Invercargill City),-46.40719619,168.36918138,0.0,Invercargill,Invercargill,Southland,Southland,28

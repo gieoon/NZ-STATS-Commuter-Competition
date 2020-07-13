@@ -61,6 +61,7 @@ function MapExplorer({
   regionalTotalData,
   centroidData,
   destinationData,
+  allCentroidDestinations,
   regionHighlighted,
   setRegionHighlighted,
   anchor,
@@ -412,6 +413,7 @@ function MapExplorer({
                 highlightedData={highlightedData}
                 centroidData={centroidData}
                 destinationData={destinationData}
+                allCentroidDestinations={allCentroidDestinations}
                 currentDestinationData={currentDestinationData}
               />
 

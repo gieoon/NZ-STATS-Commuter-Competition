@@ -3,7 +3,7 @@ import search from '../assets/search.svg';
 import Search from './search';
 
 function SearchBar({
-    centroidData
+    allCentroidDestinations
 }) {
     return(
         <React.Fragment>
@@ -12,7 +12,7 @@ function SearchBar({
                 <img src={search} className="search-img" />
             </div> */}
 
-            <Search centroidData={centroidData} />
+            <Search allCentroidDestinations={allCentroidDestinations} />
         </React.Fragment>
     )
 }

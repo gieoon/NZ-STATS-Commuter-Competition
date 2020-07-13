@@ -1,0 +1,3 @@
+id,SA2_name_usual_residence_address,SA2_name_workplace_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1,cluster_count
+W2007,Royal Oak East (Auckland),Quay Street-Customs Street,TRAIN,9,EDUCATION,Royal Oak East (Auckland),-36.91176082,174.77658657,Quay Street-Customs Street,-36.84601989,174.77646293,7.3100661609699475,Waitakere,Waitakere,Auckland,Auckland,715
+W34917,Belmont Park,Wellington Central,TRAIN,9,EDUCATION,Belmont Park,-41.1693145,174.91554299,Wellington Central,-41.2849345,174.77572593,17.378428935423912,Hutt city,Wellington,Wellington,Wellington,256

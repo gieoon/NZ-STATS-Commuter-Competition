@@ -1,0 +1,4 @@
+id,SA2_name_usual_residence_address,SA2_name_workplace_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1,cluster_count
+W3387,Eden Terrace,Wynyard-Viaduct,BICYCLE,6,EDUCATION,Eden Terrace,-36.86462613,174.75964083,Wynyard-Viaduct,-36.843309399999995,174.75788827,2.3754357917413493,Waitakere,Waitakere,Auckland,Auckland,94
+W35008,Oriental Bay,Wellington Central,BICYCLE,21,EDUCATION,Oriental Bay,-41.29186473,174.79287237,Wellington Central,-41.2849345,174.77572593,1.6267186733287644,Wellington,Wellington,Wellington,Wellington,200
+W43007,Riccarton East,Christchurch Central-West,BICYCLE,6,EDUCATION,Riccarton East,-43.53245227,172.61070266,Christchurch Central-West,-43.52780609,172.6306519,1.6892050523646305,Christchurch,Christchurch,Canterbury,Canterbury,381

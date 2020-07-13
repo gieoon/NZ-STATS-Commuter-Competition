@@ -6,17 +6,18 @@ import csv
 
 # 11 Layers of zoom, 11 different cluster typs
 zoom_levels = {
-    5:1000,
-    6:500,
-    7:250,
-    8:125,
-    9:62,
-    10:31,
-    11:16,
-    12:8,
-    13:4,
-    14:2,
-    15:1
+    5:2000,
+    6:1000,
+    7:500,
+    8:250,
+    9:125,
+    10:62,
+    11:31,
+    12:16,
+    13:8,
+    14:4,
+    15:2,
+    16:1
 }
 
 df = pd.read_csv('./out/work.csv') # /work.csv /education.csv

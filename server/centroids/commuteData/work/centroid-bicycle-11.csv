@@ -1,0 +1,9 @@
+id,SA2_name_usual_residence_address,SA2_name_workplace_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1,cluster_count
+W3387,Eden Terrace,Wynyard-Viaduct,BICYCLE,6,EDUCATION,Eden Terrace,-36.86462613,174.75964083,Wynyard-Viaduct,-36.843309399999995,174.75788827,2.3754357917413493,Waitakere,Waitakere,Auckland,Auckland,94
+W25164,Whitiora,Hamilton Central,BICYCLE,12,EDUCATION,Whitiora,-37.77756896,175.27048029,Hamilton Central,-37.78938082,175.28203067,1.6599430980910974,Hamilton,Hamilton,Waikato,Waikato,61
+W24868,Tauranga Central,Tauranga Central,BICYCLE,12,EDUCATION,Tauranga Central,-37.67947411,176.16704264,Tauranga Central,-37.67947411,176.16704264,0.0,,,,,51
+W33312,Milverton,Palmerston North Central,BICYCLE,6,EDUCATION,Milverton,-40.35969543,175.61983251,Palmerston North Central,-40.35537702,175.61010962,0.953571957105122,Palmerston North,Palmerston North,Manawatu-Wanganui,Manawatu-Wanganui,46
+W35008,Oriental Bay,Wellington Central,BICYCLE,21,EDUCATION,Oriental Bay,-41.29186473,174.79287237,Wellington Central,-41.2849345,174.77572593,1.6267186733287644,Wellington,Wellington,Wellington,Wellington,201
+W39579,Tahuna Hills,Nelson Airport,BICYCLE,9,EDUCATION,Tahuna Hills,-41.29106093,173.25332264,Nelson Airport,-41.2956675,173.22975091,2.034832663578045,Nelson,Nelson,Nelson,Nelson,54
+W43007,Riccarton East,Christchurch Central-West,BICYCLE,6,EDUCATION,Riccarton East,-43.53245227,172.61070266,Christchurch Central-West,-43.52780609,172.6306519,1.6892050523646305,Christchurch,Christchurch,Canterbury,Canterbury,381
+W48530,Campus North,Dunedin Central,BICYCLE,9,EDUCATION,Campus North,-45.86491215,170.51950247,Dunedin Central,-45.87712471,170.50291221,1.8692043787322592,Dunedin,Dunedin,Otago,Otago,51

@@ -121,10 +121,10 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
     width: $panel-width;
     min-width: $panel-width;
     flex-direction: column;
-    height: 100vh;
+    // height: 100vh;
     max-height: 100vh;
     justify-content: flex-start;
-    position: relative; /* relative */ /* fixed */
+    position: fixed; /* relative */ /* fixed */
     z-index: 999;
     align-items: center;
     // box-shadow: 0 0 20px $border-color;

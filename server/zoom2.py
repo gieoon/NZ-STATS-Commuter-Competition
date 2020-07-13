@@ -39,7 +39,7 @@ def handleZoom(left, top, right, bottom, zoom, data_type, commute_types):
         df = getVisibleData(df, left, top, right, bottom)
         res["{}".format(commute_type)] = df.to_csv(index=False)
 
-    print("after getting visible data size: ", df.describe())
+    # print("after getting visible data size: ", df.describe())
     # return df.to_csv(index=False)
     return res
 

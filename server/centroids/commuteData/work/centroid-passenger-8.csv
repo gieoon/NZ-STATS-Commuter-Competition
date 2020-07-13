@@ -1,0 +1,2 @@
+id,SA2_name_usual_residence_address,SA2_name_workplace_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1,cluster_count
+W6507,Dingwall,Auckland Airport,PASSENGER_IN_VEHICLE,6,EDUCATION,Dingwall,-36.96337293,174.86069682,Auckland Airport,-36.9891029,174.77400859,8.214993224468365,Manukau,Manukau,Auckland,Auckland,321
