@@ -5,6 +5,7 @@ import { fetcher, fetcherJSON, fetcherDICT } from "../utils/commonFunctions";
 import useStickySWR from "../hooks/useStickySwr";
 import { useIsVisible } from "react-is-visible";
 import { Helmet } from "react-helmet";
+import { useGetSetState } from "react-use";
 
 const MapExplorer = lazy(() =>
   import("./mapExplorer" /* webpackChunkName: "MapExplorer" */)
@@ -14,6 +15,8 @@ function Home(props) {
   const [mapStatistic, setMapStatistic] = useState("active");
 
   const [anchor, setAnchor] = useState(null);
+
+  // const [destinationData, setDestinationData] = useState(undefined);
 
   const [regionHighlighted, setRegionHighlighted] = useState({
     id: "NZ",
@@ -93,14 +96,18 @@ function Home(props) {
     }
   )
 
-  const { data: destinationData } = useStickySWR(
-    DATA_URL_ROOT + '/destinations',
-    fetcherJSON,
-    {
-      revalidateOnMount: true,
-      revalidateOnFocus: false
-    }
-  )
+  // const { data: destinationData } = useStickySWR(
+  //   DATA_URL_ROOT + '/destinations',
+  //   fetcherJSON,
+  //   {
+  //     revalidateOnMount: true,
+  //     revalidateOnFocus: true
+  //   }
+  // )
+  // if(Object.keys(_destinationData || {}).length && !Object.keys(destinationData || {}).length){
+  //   setDestinationData(_destinationData)
+  // }
+  // console.log("destinationData: ", destinationData);
 
   const nzMap = useRef();
   const isVisible = useIsVisible(nzMap, { once: true });
@@ -143,7 +150,6 @@ function Home(props) {
                     {...{ regionalEducationData }}
                     {...{ regionalTotalData }}
                     {...{ centroidData }}
-                    {...{ destinationData }}
                     {...{ allCentroidDestinations }}
                     {...{ mapStatistic, setMapStatistic }}
                     {...{ regionHighlighted, setRegionHighlighted }}

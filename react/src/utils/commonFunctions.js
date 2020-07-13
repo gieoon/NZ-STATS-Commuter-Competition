@@ -179,5 +179,3 @@ export const txt2Array = (allText) => {
   // console.log('lines: ', lines);
   return lines;
 };
-
-

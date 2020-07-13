@@ -19,8 +19,8 @@ import {
 import {
     txt2Array
 } from '../utils/commonFunctions';
-import arrow_right from '../assets/right.svg';
-import MarkerClusterGroup from "react-leaflet-markercluster";
+// import arrow_right from '../assets/right.svg';
+// import MarkerClusterGroup from "react-leaflet-markercluster";
 
 const MIN_ZOOM = 5;
 const MAX_ZOOM = 18;
@@ -36,6 +36,9 @@ const curvesWork = {},
     commuteWorkCurves = {},
     commuteEducationCurves = {};
 
+// The curve that is currently selected on the map.    
+var currentSelectedCurve = {};
+
 // Allows for console debugging by calling >> curves in Chrome
 global.commuteWorkCurves = commuteWorkCurves; 
 global.commuteEducationCurves = commuteEducationCurves;
@@ -49,6 +52,7 @@ global.commuteEducationCurves = commuteEducationCurves;
     history,
     currentCommuteTypes,
     setCurrentDestinationData,
+    setClickedData,
 }){
     
 
@@ -219,6 +223,7 @@ global.commuteEducationCurves = commuteEducationCurves;
     }
 
     const updateCentroids = () => {
+        return; //TODO NO ACTION FOR NOW
         if(!centroidData) 
             return;
         circles.forEach(circle => {
@@ -241,6 +246,23 @@ global.commuteEducationCurves = commuteEducationCurves;
         }
         
     }
+
+    const updateCurrentSelectedCurve = (obj) => {
+        
+        if(Object.keys(currentSelectedCurve).length){
+            console.log('removing current selected curve')
+            currentSelectedCurve.remove();
+        }
+        currentSelectedCurve = createCurve(
+            Number(obj.departure_LONGITUDE), 
+            Number(obj.departure_LATITUDE), 
+            Number(obj.destination_LONGITUDE), 
+            Number(obj.destination_LATITUDE),
+            obj,
+            true
+        );
+    }
+
     // console.log("centroidData: ", centroidData)
 
     const commuteType2Key = (commute_type) => {
@@ -333,7 +355,7 @@ global.commuteEducationCurves = commuteEducationCurves;
                     Number(r.destination_LONGITUDE), 
                     Number(r.destination_LATITUDE),
                     r,
-                    dataType
+                    false
                 );
                 if(dataType === "WORK"){
                     if(!commuteWorkCurves[commuteType])
@@ -359,7 +381,7 @@ global.commuteEducationCurves = commuteEducationCurves;
                 Number(r.destination_LONGITUDE), 
                 Number(r.destination_LATITUDE),
                 r,
-                dataType
+                false
             );
             if(dataType === "WORK"){
                 curvesWork[r.id] = curve;
@@ -402,8 +424,9 @@ global.commuteEducationCurves = commuteEducationCurves;
     const checkCurvesExist = (newData, dataType) => {
         // Dictionary of row id;
         var toAdd = [];
-        const toDelete = (dataType === "WORK" 
-            ? curvesWork : curvesEducation);
+        const toDelete = (dataType === "WORK" ? curvesWork : curvesEducation);
+
+        // If too many curves, don't show everything.
 
         // If the new curve is not in the existing curves, remove it.
 
@@ -536,7 +559,7 @@ global.commuteEducationCurves = commuteEducationCurves;
             fillColor: '#f54242',
             fillOpacity: 0.35,
         }
-        var radius = Number(obj.COUNT) * 3.25 + 250;
+        var radius = Number(obj.COUNT) * 1.25 + 2500;
 
         const circle = L.circle(circleCenter, radius, options)
             .addTo(mapRef.current.leafletElement);
@@ -561,7 +584,7 @@ global.commuteEducationCurves = commuteEducationCurves;
             .addTo(mapRef.current.leafletElement);
         circles.push(circle);
     }  
-    
+    /*
     const createCurrentLatLngCircle = () => {
         if(currentPositionCircle !== null)
             currentPositionCircle.remove();
@@ -581,8 +604,9 @@ global.commuteEducationCurves = commuteEducationCurves;
             .addTo(mapRef.current.leafletElement);
         return circle;
     }
+    */
 
-    const createCurve = (lon1, lat1, lon2, lat2, obj, dataType) => {
+    const createCurve = (lon1, lat1, lon2, lat2, obj, b_currentSelectedCurve) => {
         // Draw a circle if it is stay at home
         // console.log(obj.COMMUTE_TYPE);
         if(['STUDY_AT_HOME','WORK_AT_HOME'].includes(obj.COMMUTE_TYPE)){
@@ -613,8 +637,12 @@ global.commuteEducationCurves = commuteEducationCurves;
             //     ? COMMUTE_PURPOSE_COLOUR.WORK 
             //     : COMMUTE_PURPOSE_COLOUR.EDUCATION,
             color: COMMUTE_METHOD_COLOUR[DB_2_COMMUTE_METHOD[obj.COMMUTE_TYPE]],
-            weight: INITIAL_STROKE_WEIGHT + (Number(obj.COUNT) * STROKE_COUNT_MULTIPLIER),
-            opacity: INITIAL_OPACITY + (Number(obj.COUNT) * OPACITY_MULTIPLIER),
+            weight: b_currentSelectedCurve
+                ? HIGHLIGHTED_STROKE_WEIGHT + (Number(obj.COUNT) * STROKE_COUNT_MULTIPLIER + 1.5)
+                : INITIAL_STROKE_WEIGHT + (Number(obj.COUNT) * STROKE_COUNT_MULTIPLIER),
+            opacity: b_currentSelectedCurve
+                ? HIGHLIGHTED_OPACITY
+                : INITIAL_OPACITY + (Number(obj.COUNT) * OPACITY_MULTIPLIER),
         }
 
         // const map = L.map('sampleMap')
@@ -629,43 +657,53 @@ global.commuteEducationCurves = commuteEducationCurves;
         ], pathOptions)
         .on('mouseover', function(e) {
             // console.log('mouseover: ', obj)
-            this.setStyle({
-                weight: HIGHLIGHTED_STROKE_WEIGHT + (Number(obj.COUNT) * STROKE_COUNT_MULTIPLIER),
-                opacity: HIGHLIGHTED_OPACITY,
-            })
-            setHoveredData({
-                hoveredData: obj,
-                hoveredDestination: obj.destination_SA22018_V1_NAME//f.properties.NAME_1
-            });
+
+            if(!b_currentSelectedCurve){
+                this.setStyle({
+                    weight: HIGHLIGHTED_STROKE_WEIGHT + (Number(obj.COUNT) * STROKE_COUNT_MULTIPLIER),
+                    opacity: HIGHLIGHTED_OPACITY,
+                })
+                setHoveredData({
+                    hoveredData: obj,
+                    hoveredDestination: obj.destination_SA22018_V1_NAME//f.properties.NAME_1
+                });
+                setHighlightedData(obj)
+                // console.log(obj)
+                L.popup({
+                    closeButton: false,
+                })
+                    .setLatLng(e.latlng) 
+                    .setContent(
+                        '<p><b>' + obj.DEPARTURE_NAME_1 + ', ' + obj.SA2_name_usual_residence_address
+                        + ' → '//' > ' //<img src={arrow_right} alt="" /> 
+                        + obj.DESTINATION_NAME_1 + ', ' + (obj.SA2_name_workplace_address || obj.SA2_name_educational_address) + '</p>'
+                        + '<p>' + Number(obj.HAVERSINE_DISTANCE).toFixed(2) + 'km <span class="' + obj.COMMUTE_TYPE + '">' + key2CommuteType(obj.COMMUTE_TYPE) + '</span></p></b>'
+                        + '<hr/>'
+                        // + '<div style="display:flex;justify-content:space-between;"><div><b>' + obj.COUNT + '</b> people ' + '</div><div><span class="' + obj.COMMUTE_TYPE + '">' + key2CommuteType(obj.COMMUTE_TYPE) + '</span></div></div>'
+                        + '<div><b>' + obj.COUNT + '</b> people ' + '</div>'
+                        + '<p>Commuting for <b>' + obj.TYPE.toLowerCase() + '</b></p>' //obj.TYPE.charAt(0) + obj.TYPE.substring(1).toLowerCase() + 
+                    )
+                    .openOn(mapRef.current.leafletElement);
+            }
+
+        })
+        .on('mouseout', function() {
+            if(!b_currentSelectedCurve){
+                this.setStyle({
+                    weight: INITIAL_STROKE_WEIGHT + (Number(obj.COUNT) * STROKE_COUNT_MULTIPLIER),
+                    opacity: INITIAL_OPACITY + (Number(obj.COUNT) * OPACITY_MULTIPLIER),
+                })
+                mapRef.current.leafletElement.closePopup();
+            }
+        })
+        .on('mousedown', function(){
+            // console.log('path clicked, ', obj)
+            setClickedData(obj);
             setCurrentDestinationData({
                 from: obj.SA2_name_usual_residence_address,
                 to: obj.SA2_name_workplace_address
             })
-            setHighlightedData(obj)
-            // console.log(obj)
-            L.popup({
-                closeButton: false,
-            })
-                .setLatLng(e.latlng) 
-                .setContent(
-                    '<p><b>' + obj.DEPARTURE_NAME_1 + ', ' + obj.SA2_name_usual_residence_address
-                    + ' → '//' > ' //<img src={arrow_right} alt="" /> 
-                    + obj.DESTINATION_NAME_1 + ', ' + (obj.SA2_name_workplace_address || obj.SA2_name_educational_address) + '</p>'
-                    + '<p>' + Number(obj.HAVERSINE_DISTANCE).toFixed(2) + 'km <span class="' + obj.COMMUTE_TYPE + '">' + key2CommuteType(obj.COMMUTE_TYPE) + '</span></p></b>'
-                    + '<hr/>'
-                    // + '<div style="display:flex;justify-content:space-between;"><div><b>' + obj.COUNT + '</b> people ' + '</div><div><span class="' + obj.COMMUTE_TYPE + '">' + key2CommuteType(obj.COMMUTE_TYPE) + '</span></div></div>'
-                    + '<div><b>' + obj.COUNT + '</b> people ' + '</div>'
-                    + '<p>Commuting for <b>' + obj.TYPE.toLowerCase() + '</b></p>' //obj.TYPE.charAt(0) + obj.TYPE.substring(1).toLowerCase() + 
-                )
-                .openOn(mapRef.current.leafletElement);
-
-        })
-        .on('mouseout', function() {
-            this.setStyle({
-                weight: INITIAL_STROKE_WEIGHT + (Number(obj.COUNT) * STROKE_COUNT_MULTIPLIER),
-                opacity: INITIAL_OPACITY + (Number(obj.COUNT) * OPACITY_MULTIPLIER),
-            })
-            mapRef.current.leafletElement.closePopup();
+            updateCurrentSelectedCurve(obj);
         })
         //.addTo(mapRef.current.leafletElement)
         .addTo(mapRef.current.leafletElement)
@@ -678,14 +716,6 @@ global.commuteEducationCurves = commuteEducationCurves;
         return curve;  
     }
     
-    //TODO get curves based on zoom level
-    const removeCurves = () => {
-
-    }
-
-    const addCurves = () => {
-
-    }
 
     /*
     const pathOne = [

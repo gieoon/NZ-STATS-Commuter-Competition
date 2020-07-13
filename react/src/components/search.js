@@ -13,6 +13,7 @@ import {
 const locationSuggestions = [
     "Auckland",
     "Wellington",
+    "Waitakere",
     "Christchurch",
     "Queenstown",
 ]
@@ -126,7 +127,7 @@ function Search({
           <animated.label style={trail[0]}>
             {t('Search a location in NZ')}
           </animated.label>
-          <animated.div className="line" style={trail[1]}></animated.div>
+          {/* <animated.div className="line" style={trail[1]}></animated.div> */}
     
           <animated.div className="search-input-wrapper" style={trail[2]}>
             <input

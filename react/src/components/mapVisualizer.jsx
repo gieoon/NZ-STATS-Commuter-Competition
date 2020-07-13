@@ -75,6 +75,7 @@ function MapVisualizer({
   isCountryLoaded,
   currentCommuteTypes,
   setCurrentDestinationData,
+  setClickedData,
   leafletMapRef,
 }) {
   const { t } = useTranslation();
@@ -772,6 +773,7 @@ function MapVisualizer({
         centroidData={centroidData}
         currentCommuteTypes={currentCommuteTypes}
         setCurrentDestinationData={setCurrentDestinationData}
+        setClickedData={setClickedData}
         // ref={leafletMapRef} // Can use ref on React.forwardRef components
       />
       {/* <div className="svg-parent">

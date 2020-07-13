@@ -43,6 +43,7 @@
     "react-scripts": "3.3.0",
     "react-spring": "^8.0.27",
     "react-use": "^15.2.5",
+    "styled-components": "^5.1.1",
     "swr": "^0.2.3",
     "topojson": "^3.0.2",
     "use-dark-mode": "^2.3.1"

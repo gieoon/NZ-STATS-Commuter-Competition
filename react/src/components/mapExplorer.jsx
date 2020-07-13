@@ -60,7 +60,6 @@ function MapExplorer({
   regionalWorkData,
   regionalTotalData,
   centroidData,
-  destinationData,
   allCentroidDestinations,
   regionHighlighted,
   setRegionHighlighted,
@@ -93,10 +92,16 @@ function MapExplorer({
 
   const [highlightedData, setHighlightedData] = useState({});
 
+  const [clickedData, setClickedData] = useState({});
+
   const [currentDestinationData, setCurrentDestinationData] = useState({
     from: "",
     to: "",
   })
+
+  // useEffect(()=>{
+  //   console.log('destination data changed: ', destinationData);
+  // },[destinationData])
 
   // What to display at the top
   const [currentMapStatistics, setCurrentMapStatistics] = useState(MODES_OF_TRANSPORT);
@@ -412,9 +417,9 @@ function MapExplorer({
                 hoveredData={hoveredData}
                 highlightedData={highlightedData}
                 centroidData={centroidData}
-                destinationData={destinationData}
                 allCentroidDestinations={allCentroidDestinations}
                 currentDestinationData={currentDestinationData}
+                clickedData={clickedData}
               />
 
               <div className="map-wrapper">
@@ -439,6 +444,7 @@ function MapExplorer({
                   currentCommuteTypes={currentCommuteTypes}
                   leafletMapRef={leafletMapRef}
                   setCurrentDestinationData={setCurrentDestinationData}
+                  setClickedData={setClickedData}
                 />
 
                 <div className="tabs-container">

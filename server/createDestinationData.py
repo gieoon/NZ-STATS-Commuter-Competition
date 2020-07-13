@@ -61,18 +61,20 @@ def getTotalCommuteTypeCountByCommutePurpose(key, commute_type, commute_purpose)
 
 def getCommonDestination(key):
     t = df.loc[df['SA2_name_usual_residence_address'] == key]
-    t = t['SA2_name_workplace_address'].value_counts().values[0:3]#.index.to_list()
-    
+    # t = t['SA2_name_workplace_address'].value_counts().values[0:3]#.index.to_list()
+    t = t['SA2_name_workplace_address'].value_counts().index[0:3]
     while t.shape[0] < 3:
         t = np.append(t,-990)
+    # print("t1: ", t)
     return t
 
 def getCommonArrival(key):
     t = df.loc[df['SA2_name_workplace_address'] == key]
-    t = t['SA2_name_usual_residence_address'].value_counts().values[0:3]#.index.to_list()
-    
+    # t = t['SA2_name_usual_residence_address'].value_counts().values[0:3]#.index.to_list()
+    t = t['SA2_name_usual_residence_address'].value_counts().index[0:3]
     while t.shape[0] < 3:
         t = np.append(t,-990)
+    # print("t2: ", t)
     return t
 
 def getAverageDistance(key, commute_type):

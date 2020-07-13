@@ -18,6 +18,8 @@ MODES_OF_TRANSPORT = [
   "other"
 ]
 
+MAX_RESULT_COUNT = 100
+
 data = {}
 
 for commute_purpose in ["education","work"]:
@@ -27,7 +29,7 @@ for commute_purpose in ["education","work"]:
             data["{}_{}_{}".format(commute_purpose,mode,zoom_level)] = df
 
 def handleZoom(left, top, right, bottom, zoom, data_type, commute_types):
-    print(left,top,right,bottom, zoom, data_type, commute_types)
+    # print(left,top,right,bottom, zoom, data_type, commute_types)
     
     # Dataset created only for zoom up to 16
     zoom = min(int(zoom), 16)
@@ -70,7 +72,7 @@ def getVisibleData(df, left, top, right, bottom):
     # top/bottom = latitude comparison
     # left/right = longitude comparison
     # Add 2 to each to debug
-    return df.loc[
+    ddf = df.loc[
         (
             (df['departure_LATITUDE'] <= float(top)) & 
             (df['departure_LATITUDE'] >= float(bottom)) & 
@@ -85,5 +87,45 @@ def getVisibleData(df, left, top, right, bottom):
             (df['destination_LONGITUDE'] <= float(right))
         )
     ]
+    print('size: ', len(ddf))
+    if len(ddf) > MAX_RESULT_COUNT:
+        ddf = compress1(ddf, left, top, right, bottom)
+    if len(ddf) > MAX_RESULT_COUNT:
+        ddf = compress2(ddf, left, top, right, bottom)
+    
+    return ddf
+
+def compress1(df, left, top, right, bottom):
+    ddf = df.loc[
+        (
+            (df['departure_LATITUDE'] <= float(top)) & 
+            (df['departure_LATITUDE'] >= float(bottom)) & 
+            (df['departure_LONGITUDE'] >= float(left)) &
+            (df['departure_LONGITUDE'] <= float(right))
+        )
+    ]
+    print("compress1: ", len(ddf))
+    return ddf
+
+    
+
+def compress2(df, left, top, right, bottom):
+    ddf = df.loc[
+        (
+            (df['departure_LATITUDE'] <= float(top)) & 
+            (df['departure_LATITUDE'] >= float(bottom)) & 
+            (df['departure_LONGITUDE'] >= float(left)) &
+            (df['departure_LONGITUDE'] <= float(right))
+        )
+        & 
+        (
+            (df['destination_LATITUDE'] <= float(top)) & 
+            (df['destination_LATITUDE'] >= float(bottom)) & 
+            (df['destination_LONGITUDE'] >= float(left)) &
+            (df['destination_LONGITUDE'] <= float(right))
+        )
+    ]
+    print("compress2: ", len(ddf))
+    return ddf
 
     

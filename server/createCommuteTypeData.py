@@ -147,7 +147,7 @@ other_df.to_csv('./commuteData/education/other.csv', index=False)
 '''
 
 work_df = pd.read_csv('./out/work.csv')
-work_df['TYPE'] = 'EDUCATION'
+work_df['TYPE'] = 'WORK'
 # print(work_df.columns)
 
 work_at_home_df = work_df.loc[work_df['Work_at_home'] > 0]
