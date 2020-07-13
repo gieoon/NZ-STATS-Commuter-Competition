@@ -1,6 +1,12 @@
 // Server address providing map data, localization, and any other json files
-export const DATA_URL_ROOT = "http://localhost:5000";
-export const BASE_URL = "http://localhost:3000/";
+const DEBUG = false;
+export const DATA_URL_ROOT = DEBUG 
+  ? "http://localhost:5000"
+  : "https://nz-commute.ts.r.appspot.com";
+export const BASE_URL = DEBUG
+  ? "http://localhost:3000/"
+  : "https://nzcommute.com/";
+export const TRACKING_ID = 'UA-172497512-1';
 
 export const MAP_STROKE_WIDTH = 0.25; //0.05
 export const MAP_STROKE_WIDTH_HIGHLIGHTED = 0.5;
@@ -40,11 +46,11 @@ export const COMMUTE_PURPOSE_COLOUR = {
 export const COMMUTE_METHOD_COLOUR = {
   "Stay home": "#f54242",
   "Drive own vehicle": "#f08c22",
-  "Passenger in vehicle": "#f5ea20",
+  "Passenger in vehicle": "#cfc800",
   "Train": "#a9ed21",
   "Bicycle": "#1de05e",
   "Walk or jog": "#1d89db",
-  "Bus": "#791bde",
+  "Bus": "#a14aff",
   "Ferry": "#384fe8",
   "Other": "#a1a3b3",
 }
@@ -57,6 +63,7 @@ export const DB_2_COMMUTE_METHOD = {
   "BICYCLE": "Bicycle",
   "BUS": "Bus",
   "FERRY": "Ferry",
+  "WALK_OR_JOG": "Walk or jog",
   "OTHER": "Other"
 }
 

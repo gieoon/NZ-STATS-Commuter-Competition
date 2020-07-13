@@ -22,7 +22,7 @@ data = {}
 
 for commute_purpose in ["education","work"]:
     for mode in MODES_OF_TRANSPORT:
-        for zoom_level in range(5,16):
+        for zoom_level in range(5,17):
             df = pd.read_csv('./zoomData/{}/{}_{}_{}.csv'.format(commute_purpose, commute_purpose, mode, zoom_level))
             data["{}_{}_{}".format(commute_purpose,mode,zoom_level)] = df
 

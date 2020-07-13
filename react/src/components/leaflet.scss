@@ -7,7 +7,8 @@ $panel-width: 408px;
     left: 0;
     top: 0; */
     height: 100vh;
-    width: calc(100vw - $panel-width);
+    // width: calc(100vw - $panel-width);
+    width: calc(100vw - 408px);
     position: relative;
 }
 

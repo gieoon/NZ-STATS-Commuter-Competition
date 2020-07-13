@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/statistics.js"],"names":["Statistics","props"],"mappings":"8IAAA,mEAEe,SAASA,EAAWC,GACjC,OACE","file":"static/js/District.18d3635a.chunk.js","sourcesContent":["import React from \"react\";\n\nexport default function Statistics(props) {\n  return (\n    <div>\n      Overall Statistics\n    </div>\n  );\n}\n"],"sourceRoot":""}

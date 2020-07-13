@@ -8,9 +8,9 @@ import React, {
 } from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import {useLocation} from 'react-router-dom';
-import L from 'leaflet';
+import L, { circle } from 'leaflet';
 import '@elfalem/leaflet-curve'
-import './leaflet.scss';
+import './leaflet.scss'; // as opposed to .scss file which is CSS-like, or .sass which is considered SASS
 import {
     DATA_URL_ROOT,
     COMMUTE_METHOD_COLOUR,
@@ -19,7 +19,7 @@ import {
 import {
     txt2Array
 } from '../utils/commonFunctions';
-import { eachWeekOfInterval } from 'date-fns/esm';
+import arrow_right from '../assets/right.svg';
 // import { Curve } from 'react-leaflet-curve';
 
 const MIN_ZOOM = 5;
@@ -48,6 +48,7 @@ global.commuteEducationCurves = commuteEducationCurves;
     currentMap,
     history,
     currentCommuteTypes,
+    setCurrentDestinationData,
 }){
     // Center of New Zealand
     // const position = [173.299, -41.273]
@@ -188,7 +189,7 @@ global.commuteEducationCurves = commuteEducationCurves;
         const map = mapRef.current.leafletElement;
         var bounds = map.getBounds();
         var zoom = map.getZoom();
-        console.log('requesting data with zoom: ', zoom);
+        // console.log('requesting data with zoom: ', zoom);
         // If total, request both data types
         // Can also do if !== education, request work, if !== work, request education, so total will request both.
         if(commutePurpose === "TOTAL"){
@@ -208,8 +209,6 @@ global.commuteEducationCurves = commuteEducationCurves;
         */
     }
 
-    
-
     const commuteType2Key = (commute_type) => {
         if(commute_type === "Stay home")
             return "home"
@@ -227,10 +226,25 @@ global.commuteEducationCurves = commuteEducationCurves;
             return "bus"
         else if(commute_type === "Ferry")
             return "ferry"
-        else if(commute_type === "Ferry")
+        else if(commute_type === "Ferry" || commute_type === "Other")
             return "other";
         else
             return commute_type
+    }
+
+    const key2CommuteType = (key) => {
+        switch(key){
+            case "STAY_HOME": return "Working/Studying from Home";
+            case "DRIVE_OWN_VEHICLE": return "Driving own vehicle";
+            case "PASSENGER_IN_VEHICLE": return "Passenger in vehicle (car/truck/van)";
+            case "TRAIN": return "Train";
+            case "BICYCLE": return "Bicycle";
+            case "WALK_OR_JOG": return "Walking/Jogging";
+            case "BUS": return "Bus";
+            case "FERRY": return "Ferry";
+            case "OTHER": return "Other";
+            default: return "Other";
+        }
     }
 
     const API_zoneData = async (bounds, zoom, type) => {
@@ -252,7 +266,7 @@ global.commuteEducationCurves = commuteEducationCurves;
                 commuteTypes += "&commute_type=" + commuteType2Key(commuteType);
             }
 
-            console.log("currentCommuteTypes: ", currentCommuteTypes)
+            // console.log("currentCommuteTypes: ", currentCommuteTypes)
             // Request new data
             fetch(
                 DATA_URL_ROOT + `/zoneData?left=${bounds._southWest.lng}&top=${bounds._northEast.lat}&right=${bounds._northEast.lng}&bottom=${bounds._southWest.lat}&zoom=${zoom}&data_type=${type.toLowerCase()}${commuteTypes}`,
@@ -335,7 +349,7 @@ global.commuteEducationCurves = commuteEducationCurves;
             // console.log('handling commuteType: ', commuteType, newData[commuteType]);
             toAdd[commuteType] = [];
             var d = txt2Array(newData[commuteType])
-            console.log(commuteType, d);
+            // console.log(commuteType, d);
             for(var r of d){
                 // If new curve is not in existing curves, add it to list of new curves
                 if(!toDelete[r.id]){
@@ -433,8 +447,8 @@ global.commuteEducationCurves = commuteEducationCurves;
         for(var commuteType of Object.values(commuteEducationCurves)){
             totalEducation += Object.keys(commuteType).length;
         }
-        console.log("total work: ", totalWork)
-        console.log("total education: ", totalEducation);
+        // console.log("total work: ", totalWork)
+        // console.log("total education: ", totalEducation);
     }
 
     /*
@@ -479,6 +493,22 @@ global.commuteEducationCurves = commuteEducationCurves;
     }
     */
 
+    const createStayAtHomeCircle = (lat, lon, obj) => {
+        console.log('creating stay at home data');
+        var circleCenter = [lat, lon];
+        var options = {
+            weight: 1.5,
+            color: '#f54242',
+            fillColor: '#f54242',
+            fillOpacity: 0.35,
+        }
+        var radius = Number(obj.COUNT) * 3.25 + 250;
+
+        const circle = L.circle(circleCenter, radius, options)
+            .addTo(mapRef.current.leafletElement);
+        return circle;
+    }
+
     // Draw cluster circles.
     const createCircle = (lat, lon, clusterCount) => {
         var circleCenter = [lat, lon];
@@ -518,6 +548,12 @@ global.commuteEducationCurves = commuteEducationCurves;
     }
 
     const createCurve = (lon1, lat1, lon2, lat2, obj, dataType) => {
+        // Draw a circle if it is stay at home
+        // console.log(obj.COMMUTE_TYPE);
+        if(['STUDY_AT_HOME','WORK_AT_HOME'].includes(obj.COMMUTE_TYPE)){
+            return createStayAtHomeCircle(lat1, lon1, obj);
+        }
+
         const points = [];
         var delta_x = lon2 - lon1,
             delta_y = lat2 - lat1;
@@ -566,13 +602,34 @@ global.commuteEducationCurves = commuteEducationCurves;
                 hoveredData: obj,
                 hoveredDestination: obj.destination_SA22018_V1_NAME//f.properties.NAME_1
             });
+            setCurrentDestinationData({
+                from: obj.SA2_name_usual_residence_address,
+                to: obj.SA2_name_workplace_address
+            })
             setHighlightedData(obj)
+            // console.log(obj)
+            L.popup({
+                closeButton: false,
+            })
+                .setLatLng(e.latlng) 
+                .setContent(
+                    '<p><b>' + obj.DEPARTURE_NAME_1 + ', ' + obj.SA2_name_usual_residence_address
+                    + ' → '//' > ' //<img src={arrow_right} alt="" /> 
+                    + obj.DESTINATION_NAME_1 + ', ' + (obj.SA2_name_workplace_address || obj.SA2_name_educational_address) + '</p>'
+                    + '<p>' + Number(obj.HAVERSINE_DISTANCE).toFixed(2) + 'km</p></b>'
+                    + '<hr/>'
+                    + '<div style="display:flex;justify-content:space-between;"><div><b>' + obj.COUNT + '</b> people ' + '</div><div><span class="' + obj.COMMUTE_TYPE + '">' + key2CommuteType(obj.COMMUTE_TYPE) + '</span></div></div>'
+                    + '<p>Commuting for <b>' + obj.TYPE.toLowerCase() + '</b></p>' //obj.TYPE.charAt(0) + obj.TYPE.substring(1).toLowerCase() + 
+                )
+                .openOn(mapRef.current.leafletElement);
+
         })
         .on('mouseout', function() {
             this.setStyle({
                 weight: INITIAL_STROKE_WEIGHT + (Number(obj.COUNT) * STROKE_COUNT_MULTIPLIER),
                 opacity: INITIAL_OPACITY + (Number(obj.COUNT) * OPACITY_MULTIPLIER),
             })
+            mapRef.current.leafletElement.closePopup();
         })
         //.addTo(mapRef.current.leafletElement)
         .addTo(mapRef.current.leafletElement)

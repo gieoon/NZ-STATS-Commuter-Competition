@@ -205,6 +205,58 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
         color: inherit;
         text-decoration: none;
     }
+
+    .destination-txt {
+        font-size: 9px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+// Popup on mouseover
+.leaflet-popup-content {
+    p {
+        margin-bottom: 0px;
+        margin-top: 0px;
+        // font-weight: 800;
+    }
+
+    span {
+        background-color: #1e1e30;
+        border-radius: 16px;
+        padding: 1px 6px 1px 6px;
+        line-height: 1.8;
+        // margin-left: 4px;
+        // margin-right: 4px;
+
+        &.STAY_HOME {
+            color: #f54242;
+        }
+        &.DRIVE_OWN_VEHICLE {
+            color: #f08c22;
+        }
+        &.PASSENGER_IN_VEHICLE {
+            color: #cfc800;
+        }
+        &.TRAIN {
+            color: #a9ed21;
+        }
+        &.BICYCLE {
+            color: #1de05e;
+        }
+        &.WALK_OR_JOG {
+            color: #1d89db;
+        }
+        &.BUS {
+            color: #a14aff;
+        }
+        &.FERRY {
+            color: #384fe8;
+        }
+        &.OTHER {
+            color: #a1a3b3;
+        }
+    }
 }
 
 .tabs-container {

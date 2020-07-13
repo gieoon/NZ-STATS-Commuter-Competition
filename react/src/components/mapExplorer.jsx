@@ -92,6 +92,11 @@ function MapExplorer({
 
   const [highlightedData, setHighlightedData] = useState({});
 
+  const [currentDestinationData, setCurrentDestinationData] = useState({
+    from: "",
+    to: "",
+  })
+
   // What to display at the top
   const [currentMapStatistics, setCurrentMapStatistics] = useState(MODES_OF_TRANSPORT);
 // console.log(currentMapStatistics)
@@ -407,6 +412,7 @@ function MapExplorer({
                 highlightedData={highlightedData}
                 centroidData={centroidData}
                 destinationData={destinationData}
+                currentDestinationData={currentDestinationData}
               />
 
               <div className="map-wrapper">
@@ -430,6 +436,7 @@ function MapExplorer({
                   isCountryLoaded={isCountryLoaded}
                   currentCommuteTypes={currentCommuteTypes}
                   leafletMapRef={leafletMapRef}
+                  setCurrentDestinationData={setCurrentDestinationData}
                 />
 
                 <div className="tabs-container">
@@ -455,7 +462,7 @@ function MapExplorer({
                   </div>
                 </div>
 
-                <div className="info legend">
+                {/* <div className="info legend">
                 {
                   Object.keys(COMMUTE_PURPOSE_COLOUR).map((commutePurpose, index) => (
                     <div key={index}>
@@ -464,7 +471,7 @@ function MapExplorer({
                     </div>
                   ))
                 }
-                </div>
+                </div> */}
 
               </div>
 

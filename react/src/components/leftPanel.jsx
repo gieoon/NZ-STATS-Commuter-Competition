@@ -5,6 +5,7 @@ import classnames from "classnames";
 import { useTranslation } from "react-i18next";
 import { useSprings, useSpring, animated } from "react-spring";
 import help from '../assets/help_white.svg';
+import Destination from './destination.js';
 
 import {
     MAP_OPTIONS,
@@ -15,6 +16,7 @@ import {
     capitalize,
     getStatistic,
 } from '../utils/commonFunctions'
+import { useEffect } from 'react';
 
 const SearchBar = lazy(() => import('./searchbar'));
 
@@ -24,7 +26,9 @@ function LeftPanel({
     highlightedData,
     centroidData,
     destinationData,
+    currentDestinationData
 }){
+    // console.log(destinationData)
     const { t } = useTranslation();
 
     const [currentMapStatistics, setCurrentMapStatistics] = useState(MODES_OF_TRANSPORT);
@@ -57,6 +61,11 @@ function LeftPanel({
         duration: 350,
       }
     })
+
+    useEffect(()=>{
+      // console.log('currentDestinationData updated: ', currentDestinationData);
+      // console.log(destinationData);
+    }, [currentDestinationData])
     
     return(
         <div className="LeftPanel">
@@ -93,6 +102,15 @@ function LeftPanel({
                   }
                   {hoveredData.hoveredData.destination_SA22018_V1_NAME}
                 </div>
+
+                <Destination 
+                  obj={destinationData[currentDestinationData.from]}
+                  type="from"
+                />
+                <Destination 
+                  obj={destinationData[currentDestinationData.to]}
+                  type="to"
+                />
               </div>
               
               <div style={{alignSelf: "center"}}>

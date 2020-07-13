@@ -12,13 +12,24 @@ import {
   Switch,
   Redirect,
 } from "react-router-dom";
+import {
+  TRACKING_ID
+} from './constants';
+import "firebase/analytics";
+
+
+// ANALYTICS 
+import ReactGA from 'react-ga';
+ReactGA.initialize(TRACKING_ID);
+ReactGA.pageview(window.location.pathname + window.location.search);
+// END OF ANALYTICS
 
 const schemaMarkup = {
   "@context": "http://schema.org/",
   "@type": "GO",
   name: "Visualizing Commuter Data | NZ Statistics",
   alternateName: "NZ Commuter Visualization",
-  url: "http://nz-commuter.com",
+  url: "http://nzcommute.com",
   image: "",
 };
 

@@ -30,4 +30,7 @@ GIS vectors/tables are saved as Geodatabase (What does this mean?)
 Install via pip, need to specify Python3 first,
 `$ python3 -m pip install pandas`
 `$ npm i <PACKAGE-NAME> --save-dev`
+Generate requirements.txt
+`$ python3 -m pip freeze > requirements.txt`
+`$ gcloud app deploy`
 // eslint-disable-next-line react-hooks/rules-of-hooks
