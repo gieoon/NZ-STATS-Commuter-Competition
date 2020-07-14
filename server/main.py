@@ -347,6 +347,7 @@ def get_centroid_data():
 @app.route('/allCentroidDestinations')
 def get_all_centroid_destinations():
     data = getAllCentroidDestinations()
+    # data = {}
     response = make_response(data)
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response

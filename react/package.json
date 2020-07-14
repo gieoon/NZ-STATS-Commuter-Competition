@@ -38,6 +38,7 @@
     "react-i18next": "^11.7.0",
     "react-is-visible": "^1.1.0",
     "react-leaflet": "^2.7.0",
+    "react-leaflet-div-icon": "^1.1.0",
     "react-leaflet-markercluster": "^2.0.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.3.0",

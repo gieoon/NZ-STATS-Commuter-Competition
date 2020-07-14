@@ -66,7 +66,7 @@ function CommuteTab({
             // Add to commute types
             c.push(commuteType)
         }
-        console.log('saving new commute types: ', c);
+        // console.log('saving new commute types: ', c);
         
         // Need to use spread operator here to force the array to register as changed and propagate change to others using this state variable
         setCurrentCommuteTypes([...c]);

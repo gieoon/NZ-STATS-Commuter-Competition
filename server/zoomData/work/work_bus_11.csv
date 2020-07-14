@@ -1,162 +1,162 @@
 id,SA2_name_usual_residence_address,SA2_name_workplace_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1
-W1706,Puhoi Valley,Quay Street-Customs Street,PUBLIC_BUS,6,EDUCATION,Puhoi Valley,-36.46850912,174.62475233,Quay Street-Customs Street,-36.84601989,174.77646293,44.104799220616464,Rodney,Waitakere,Auckland,Auckland
-W1708,Te Kuru,Quay Street-Customs Street,PUBLIC_BUS,6,EDUCATION,Te Kuru,-36.60344402,174.48396116,Quay Street-Customs Street,-36.84601989,174.77646293,37.51199994203978,Rodney,Waitakere,Auckland,Auckland
-W1716,Orewa North,Quay Street-Customs Street,PUBLIC_BUS,9,EDUCATION,Orewa North,-36.58108865,174.67586463,Quay Street-Customs Street,-36.84601989,174.77646293,30.793533411356968,Rodney,Waitakere,Auckland,Auckland
-W1719,Orewa Central,Quay Street-Customs Street,PUBLIC_BUS,6,EDUCATION,Orewa Central,-36.58726477,174.69445280000005,Quay Street-Customs Street,-36.84601989,174.77646293,29.686311701573075,Rodney,Waitakere,Auckland,Auckland
-W1720,Millwater North,Quay Street-Customs Street,PUBLIC_BUS,27,EDUCATION,Millwater North,-36.601498299999996,174.67227556,Quay Street-Customs Street,-36.84601989,174.77646293,28.731474525964828,Rodney,Waitakere,Auckland,Auckland
-W1721,Millwater South,Quay Street-Customs Street,PUBLIC_BUS,18,EDUCATION,Millwater South,-36.61231012,174.67000848,Quay Street-Customs Street,-36.84601989,174.77646293,27.66492316170856,Rodney,Waitakere,Auckland,Auckland
-W1722,Dairy Flat North,Quay Street-Customs Street,PUBLIC_BUS,6,EDUCATION,Dairy Flat North,-36.6446947,174.65374224,Quay Street-Customs Street,-36.84601989,174.77646293,24.914077779064158,Rodney,Waitakere,Auckland,Auckland
-W1726,Red Beach East,Quay Street-Customs Street,PUBLIC_BUS,12,EDUCATION,Red Beach East,-36.60592118,174.70488989,Quay Street-Customs Street,-36.84601989,174.77646293,27.44921707011177,Rodney,Waitakere,Auckland,Auckland
-W1729,Vipond,Quay Street-Customs Street,PUBLIC_BUS,6,EDUCATION,Vipond,-36.61796366,174.7180399,Quay Street-Customs Street,-36.84601989,174.77646293,25.887649474758746,Rodney,Waitakere,Auckland,Auckland
-W1731,Stanmore Bay West,Quay Street-Customs Street,PUBLIC_BUS,9,EDUCATION,Stanmore Bay West,-36.62300197,174.72724226,Quay Street-Customs Street,-36.84601989,174.77646293,25.18337798684652,Rodney,Waitakere,Auckland,Auckland
-W1734,Whangaparoa Central,Quay Street-Customs Street,PUBLIC_BUS,9,EDUCATION,Whangaparoa Central,-36.63661523,174.73358327,Quay Street-Customs Street,-36.84601989,174.77646293,23.59613261487113,Rodney,Waitakere,Auckland,Auckland
-W1735,Kumeu-Huapai,Quay Street-Customs Street,PUBLIC_BUS,6,EDUCATION,Kumeu-Huapai,-36.76998293,174.54286666,Quay Street-Customs Street,-36.84601989,174.77646293,22.449586531356555,Rodney,Waitakere,Auckland,Auckland
-W1736,Stanmore Bay East,Quay Street-Customs Street,PUBLIC_BUS,6,EDUCATION,Stanmore Bay East,-36.6293262,174.74176363,Quay Street-Customs Street,-36.84601989,174.77646293,24.29282283517543,Rodney,Waitakere,Auckland,Auckland
-W1737,Manly West,Quay Street-Customs Street,PUBLIC_BUS,6,EDUCATION,Manly West,-36.63336524,174.75300037,Quay Street-Customs Street,-36.84601989,174.77646293,23.73836263844132,Rodney,Waitakere,Auckland,Auckland
-W1740,Coatesville,Quay Street-Customs Street,PUBLIC_BUS,15,EDUCATION,Coatesville,-36.72270876,174.64336292,Quay Street-Customs Street,-36.84601989,174.77646293,18.124769938620783,Rodney,Waitakere,Auckland,Auckland
-W1741,Dairy Flat South,Quay Street-Customs Street,PUBLIC_BUS,6,EDUCATION,Dairy Flat South,-36.6956027,174.67916408,Quay Street-Customs Street,-36.84601989,174.77646293,18.83759973555481,Rodney,Waitakere,Auckland,Auckland
-W1742,Gulf Harbour North,Quay Street-Customs Street,PUBLIC_BUS,6,EDUCATION,Gulf Harbour North,-36.60949658,174.79413674,Quay Street-Customs Street,-36.84601989,174.77646293,26.347316169433345,Rodney,Waitakere,Auckland,Auckland
-W1750,Long Bay,Quay Street-Customs Street,PUBLIC_BUS,9,EDUCATION,Long Bay,-36.68946348,174.73306962,Quay Street-Customs Street,-36.84601989,174.77646293,17.832225918184093,Waitakere,Waitakere,Auckland,Auckland
-W1752,Albany Heights,Quay Street-Customs Street,PUBLIC_BUS,15,EDUCATION,Albany Heights,-36.71796472,174.69401393,Quay Street-Customs Street,-36.84601989,174.77646293,16.020848850844516,Waitakere,Waitakere,Auckland,Auckland
-W1753,Awaruku,Quay Street-Customs Street,PUBLIC_BUS,30,EDUCATION,Awaruku,-36.69990012,174.72732927,Quay Street-Customs Street,-36.84601989,174.77646293,16.826823190689066,Waitakere,Waitakere,Auckland,Auckland
-W1754,Fairview Heights,Quay Street-Customs Street,PUBLIC_BUS,27,EDUCATION,Fairview Heights,-36.71007322,174.71678985,Quay Street-Customs Street,-36.84601989,174.77646293,16.0236220637917,Waitakere,Waitakere,Auckland,Auckland
-W1757,Torbay,Quay Street-Customs Street,PUBLIC_BUS,15,EDUCATION,Torbay,-36.69512414,174.75092916,Quay Street-Customs Street,-36.84601989,174.77646293,16.93227994794266,Waitakere,Waitakere,Auckland,Auckland
-W1759,Glamorgan,Quay Street-Customs Street,PUBLIC_BUS,18,EDUCATION,Glamorgan,-36.70130329,174.7405506,Quay Street-Customs Street,-36.84601989,174.77646293,16.406575643883734,Waitakere,Waitakere,Auckland,Auckland
-W1760,Oteha East,Quay Street-Customs Street,PUBLIC_BUS,15,EDUCATION,Oteha East,-36.71657898,174.72207262,Quay Street-Customs Street,-36.84601989,174.77646293,15.186415199728696,Waitakere,Waitakere,Auckland,Auckland
-W1761,Northcross,Quay Street-Customs Street,PUBLIC_BUS,12,EDUCATION,Northcross,-36.71165743,174.73076830000005,Quay Street-Customs Street,-36.84601989,174.77646293,15.484775954150127,Waitakere,Waitakere,Auckland,Auckland
-W1763,Waiake,Quay Street-Customs Street,PUBLIC_BUS,15,EDUCATION,Waiake,-36.70665026,174.74439669999995,Quay Street-Customs Street,-36.84601989,174.77646293,15.758161026411855,Waitakere,Waitakere,Auckland,Auckland
-W2261,Orewa North,Takapuna West,PUBLIC_BUS,6,EDUCATION,Orewa North,-36.58108865,174.67586463,Takapuna West,-36.78910918,174.76117008,24.34948785782135,Rodney,Waitakere,Auckland,Auckland
-W2265,Millwater North,Takapuna West,PUBLIC_BUS,9,EDUCATION,Millwater North,-36.601498299999996,174.67227556,Takapuna West,-36.78910918,174.76117008,22.31623082851348,Rodney,Waitakere,Auckland,Auckland
-W2272,Red Beach East,Takapuna West,PUBLIC_BUS,6,EDUCATION,Red Beach East,-36.60592118,174.70488989,Takapuna West,-36.78910918,174.76117008,20.978493934557065,Rodney,Waitakere,Auckland,Auckland
-W2276,Stanmore Bay West,Takapuna West,PUBLIC_BUS,6,EDUCATION,Stanmore Bay West,-36.62300197,174.72724226,Takapuna West,-36.78910918,174.76117008,18.716277475485423,Rodney,Waitakere,Auckland,Auckland
-W2282,Manly West,Takapuna West,PUBLIC_BUS,6,EDUCATION,Manly West,-36.63336524,174.75300037,Takapuna West,-36.78910918,174.76117008,17.33324133251228,Rodney,Waitakere,Auckland,Auckland
-W2292,Gulf Harbour South,Takapuna West,PUBLIC_BUS,6,EDUCATION,Gulf Harbour South,-36.62319574,174.79598006,Takapuna West,-36.78910918,174.76117008,18.707897905039754,Rodney,Waitakere,Auckland,Auckland
-W2879,Symonds Street North West,Albany Central,PUBLIC_BUS,6,EDUCATION,Symonds Street North West,-36.85498533,174.76593774,Albany Central,-36.72820186,174.70483518,15.11122140421735,Waitakere,Waitakere,Auckland,Auckland
-W3162,Te Kuru,Wynyard-Viaduct,PUBLIC_BUS,9,EDUCATION,Te Kuru,-36.60344402,174.48396116,Wynyard-Viaduct,-36.843309399999995,174.75788827,36.158417661231866,Rodney,Waitakere,Auckland,Auckland
-W3167,Waikoukou Valley,Wynyard-Viaduct,PUBLIC_BUS,6,EDUCATION,Waikoukou Valley,-36.70989198,174.51574111,Wynyard-Viaduct,-36.843309399999995,174.75788827,26.176503413452124,Rodney,Waitakere,Auckland,Auckland
-W3168,Orewa North,Wynyard-Viaduct,PUBLIC_BUS,18,EDUCATION,Orewa North,-36.58108865,174.67586463,Wynyard-Viaduct,-36.843309399999995,174.75788827,30.06035211283594,Rodney,Waitakere,Auckland,Auckland
-W3169,Hatfields Beach,Wynyard-Viaduct,PUBLIC_BUS,9,EDUCATION,Hatfields Beach,-36.57001949,174.68935557,Wynyard-Viaduct,-36.843309399999995,174.75788827,30.996491232998128,Rodney,Waitakere,Auckland,Auckland
-W3170,Orewa South,Wynyard-Viaduct,PUBLIC_BUS,6,EDUCATION,Orewa South,-36.59013546,174.685784,Wynyard-Viaduct,-36.843309399999995,174.75788827,28.875962648794648,Rodney,Waitakere,Auckland,Auckland
-W3171,Orewa Central,Wynyard-Viaduct,PUBLIC_BUS,9,EDUCATION,Orewa Central,-36.58726477,174.69445280000005,Wynyard-Viaduct,-36.843309399999995,174.75788827,29.02691429577713,Rodney,Waitakere,Auckland,Auckland
-W3172,Millwater North,Wynyard-Viaduct,PUBLIC_BUS,21,EDUCATION,Millwater North,-36.601498299999996,174.67227556,Wynyard-Viaduct,-36.843309399999995,174.75788827,27.94989976077825,Rodney,Waitakere,Auckland,Auckland
-W3174,Millwater South,Wynyard-Viaduct,PUBLIC_BUS,6,EDUCATION,Millwater South,-36.61231012,174.67000848,Wynyard-Viaduct,-36.843309399999995,174.75788827,26.85343673174809,Rodney,Waitakere,Auckland,Auckland
-W3176,Dairy Flat West,Wynyard-Viaduct,PUBLIC_BUS,6,EDUCATION,Dairy Flat West,-36.67100483,174.61891208,Wynyard-Viaduct,-36.843309399999995,174.75788827,22.81163454783093,Rodney,Waitakere,Auckland,Auckland
-W3178,Red Beach West,Wynyard-Viaduct,PUBLIC_BUS,6,EDUCATION,Red Beach West,-36.61127031,174.69545963,Wynyard-Viaduct,-36.843309399999995,174.75788827,26.3946238904391,Rodney,Waitakere,Auckland,Auckland
-W3179,Red Beach East,Wynyard-Viaduct,PUBLIC_BUS,24,EDUCATION,Red Beach East,-36.60592118,174.70488989,Wynyard-Viaduct,-36.843309399999995,174.75788827,26.8156525016508,Rodney,Waitakere,Auckland,Auckland
-W3182,Vipond,Wynyard-Viaduct,PUBLIC_BUS,9,EDUCATION,Vipond,-36.61796366,174.7180399,Wynyard-Viaduct,-36.843309399999995,174.75788827,25.30769482093136,Rodney,Waitakere,Auckland,Auckland
-W3184,Stanmore Bay West,Wynyard-Viaduct,PUBLIC_BUS,6,EDUCATION,Stanmore Bay West,-36.62300197,174.72724226,Wynyard-Viaduct,-36.843309399999995,174.75788827,24.648829440843247,Rodney,Waitakere,Auckland,Auckland
-W3186,Okura Bush,Wynyard-Viaduct,PUBLIC_BUS,9,EDUCATION,Okura Bush,-36.66711378,174.70992257,Wynyard-Viaduct,-36.843309399999995,174.75788827,20.052661707231177,Rodney,Waitakere,Auckland,Auckland
-W3187,Whangaparoa Central,Wynyard-Viaduct,PUBLIC_BUS,15,EDUCATION,Whangaparoa Central,-36.63661523,174.73358327,Wynyard-Viaduct,-36.843309399999995,174.75788827,23.08515758317419,Rodney,Waitakere,Auckland,Auckland
-W3190,Manly West,Wynyard-Viaduct,PUBLIC_BUS,9,EDUCATION,Manly West,-36.63336524,174.75300037,Wynyard-Viaduct,-36.843309399999995,174.75788827,23.34878830326901,Rodney,Waitakere,Auckland,Auckland
-W3193,Coatesville,Wynyard-Viaduct,PUBLIC_BUS,9,EDUCATION,Coatesville,-36.72270876,174.64336292,Wynyard-Viaduct,-36.843309399999995,174.75788827,16.848092606582014,Rodney,Waitakere,Auckland,Auckland
-W3194,Dairy Flat South,Wynyard-Viaduct,PUBLIC_BUS,6,EDUCATION,Dairy Flat South,-36.6956027,174.67916408,Wynyard-Viaduct,-36.843309399999995,174.75788827,17.858502863104,Rodney,Waitakere,Auckland,Auckland
-W3195,Gulf Harbour North,Wynyard-Viaduct,PUBLIC_BUS,9,EDUCATION,Gulf Harbour North,-36.60949658,174.79413674,Wynyard-Viaduct,-36.843309399999995,174.75788827,26.198741756764413,Rodney,Waitakere,Auckland,Auckland
-W3196,Manly East,Wynyard-Viaduct,PUBLIC_BUS,9,EDUCATION,Manly East,-36.63338986,174.76128799,Wynyard-Viaduct,-36.843309399999995,174.75788827,23.343953658671712,Rodney,Waitakere,Auckland,Auckland
-W3197,Riverhead,Wynyard-Viaduct,PUBLIC_BUS,6,EDUCATION,Riverhead,-36.75810331,174.58371179,Wynyard-Viaduct,-36.843309399999995,174.75788827,18.17320653388923,Rodney,Waitakere,Auckland,Auckland
-W3200,Gulf Harbour South,Wynyard-Viaduct,PUBLIC_BUS,6,EDUCATION,Gulf Harbour South,-36.62319574,174.79598006,Wynyard-Viaduct,-36.843309399999995,174.75788827,24.70979705086731,Rodney,Waitakere,Auckland,Auckland
-W3202,Long Bay,Wynyard-Viaduct,PUBLIC_BUS,12,EDUCATION,Long Bay,-36.68946348,174.73306962,Wynyard-Viaduct,-36.843309399999995,174.75788827,17.24914396857417,Waitakere,Waitakere,Auckland,Auckland
-W3204,Albany Heights,Wynyard-Viaduct,PUBLIC_BUS,24,EDUCATION,Albany Heights,-36.71796472,174.69401393,Wynyard-Viaduct,-36.843309399999995,174.75788827,15.053896316958435,Waitakere,Waitakere,Auckland,Auckland
-W3205,Awaruku,Wynyard-Viaduct,PUBLIC_BUS,27,EDUCATION,Awaruku,-36.69990012,174.72732927,Wynyard-Viaduct,-36.843309399999995,174.75788827,16.177017466767243,Waitakere,Waitakere,Auckland,Auckland
-W3206,Fairview Heights,Wynyard-Viaduct,PUBLIC_BUS,18,EDUCATION,Fairview Heights,-36.71007322,174.71678985,Wynyard-Viaduct,-36.843309399999995,174.75788827,15.260678782490738,Waitakere,Waitakere,Auckland,Auckland
-W3208,Torbay,Wynyard-Viaduct,PUBLIC_BUS,24,EDUCATION,Torbay,-36.69512414,174.75092916,Wynyard-Viaduct,-36.843309399999995,174.75788827,16.489104477192054,Waitakere,Waitakere,Auckland,Auckland
-W3210,Glamorgan,Wynyard-Viaduct,PUBLIC_BUS,12,EDUCATION,Glamorgan,-36.70130329,174.7405506,Wynyard-Viaduct,-36.843309399999995,174.75788827,15.86569136428864,Waitakere,Waitakere,Auckland,Auckland
-W3214,Waiake,Wynyard-Viaduct,PUBLIC_BUS,30,EDUCATION,Waiake,-36.70665026,174.74439669999995,Wynyard-Viaduct,-36.843309399999995,174.75788827,15.243240426541018,Waitakere,Waitakere,Auckland,Auckland
-W3638,Millwater North,Shortland Street,PUBLIC_BUS,9,EDUCATION,Millwater North,-36.601498299999996,174.67227556,Shortland Street,-36.84736853,174.76823915,28.64609653266653,Rodney,Waitakere,Auckland,Auckland
-W3639,Millwater South,Shortland Street,PUBLIC_BUS,9,EDUCATION,Millwater South,-36.61231012,174.67000848,Shortland Street,-36.84736853,174.76823915,27.56436542896398,Rodney,Waitakere,Auckland,Auckland
-W3643,Silverdale South (Auckland),Shortland Street,PUBLIC_BUS,6,EDUCATION,Silverdale South (Auckland),-36.62799753,174.69160348,Shortland Street,-36.84736853,174.76823915,25.330819636054922,Rodney,Waitakere,Auckland,Auckland
-W3646,Whangaparoa Central,Shortland Street,PUBLIC_BUS,9,EDUCATION,Whangaparoa Central,-36.63661523,174.73358327,Shortland Street,-36.84736853,174.76823915,23.637275115200552,Rodney,Waitakere,Auckland,Auckland
-W3648,Stanmore Bay East,Shortland Street,PUBLIC_BUS,6,EDUCATION,Stanmore Bay East,-36.6293262,174.74176363,Shortland Street,-36.84736853,174.76823915,24.35971248587032,Rodney,Waitakere,Auckland,Auckland
-W3661,Albany Heights,Shortland Street,PUBLIC_BUS,6,EDUCATION,Albany Heights,-36.71796472,174.69401393,Shortland Street,-36.84736853,174.76823915,15.834796250688806,Waitakere,Waitakere,Auckland,Auckland
-W3662,Awaruku,Shortland Street,PUBLIC_BUS,18,EDUCATION,Awaruku,-36.69990012,174.72732927,Shortland Street,-36.84736853,174.76823915,16.7977020349099,Waitakere,Waitakere,Auckland,Auckland
-W3663,Fairview Heights,Shortland Street,PUBLIC_BUS,9,EDUCATION,Fairview Heights,-36.71007322,174.71678985,Shortland Street,-36.84736853,174.76823915,15.939373418672115,Waitakere,Waitakere,Auckland,Auckland
-W3665,Torbay,Shortland Street,PUBLIC_BUS,9,EDUCATION,Torbay,-36.69512414,174.75092916,Shortland Street,-36.84736853,174.76823915,16.9988699550193,Waitakere,Waitakere,Auckland,Auckland
-W3667,Glamorgan,Shortland Street,PUBLIC_BUS,6,EDUCATION,Glamorgan,-36.70130329,174.7405506,Shortland Street,-36.84736853,174.76823915,16.42787549125284,Waitakere,Waitakere,Auckland,Auckland
-W3668,Oteha East,Shortland Street,PUBLIC_BUS,9,EDUCATION,Oteha East,-36.71657898,174.72207262,Shortland Street,-36.84736853,174.76823915,15.113148051574973,Waitakere,Waitakere,Auckland,Auckland
-W3669,Northcross,Shortland Street,PUBLIC_BUS,12,EDUCATION,Northcross,-36.71165743,174.73076830000005,Shortland Street,-36.84736853,174.76823915,15.454986100612588,Waitakere,Waitakere,Auckland,Auckland
-W3670,Waiake,Shortland Street,PUBLIC_BUS,12,EDUCATION,Waiake,-36.70665026,174.74439669999995,Shortland Street,-36.84736853,174.76823915,15.790592326659947,Waitakere,Waitakere,Auckland,Auckland
-W5352,Oteha East,Auckland-University,PUBLIC_BUS,6,EDUCATION,Oteha East,-36.71657898,174.72207262,Auckland-University,-36.85143057,174.76906469,15.56784932094087,Waitakere,Waitakere,Auckland,Auckland
-W6317,Hobson Ridge Central,Auckland Airport,PUBLIC_BUS,12,EDUCATION,Hobson Ridge Central,-36.85070899,174.76046696,Auckland Airport,-36.9891029,174.77400859,15.43571467957472,Waitakere,Manukau,Auckland,Auckland
-W6324,Queen Street South West,Auckland Airport,PUBLIC_BUS,6,EDUCATION,Queen Street South West,-36.85433303,174.76134796,Auckland Airport,-36.9891029,174.77400859,15.0279295913316,Waitakere,Manukau,Auckland,Auckland
-W7163,Whangaparoa Central,Newmarket,PUBLIC_BUS,6,EDUCATION,Whangaparoa Central,-36.63661523,174.73358327,Newmarket,-36.86853889,174.77706299,26.07804446167572,Rodney,Waitakere,Auckland,Auckland
-W7179,Albany Heights,Newmarket,PUBLIC_BUS,6,EDUCATION,Albany Heights,-36.71796472,174.69401393,Newmarket,-36.86853889,174.77706299,18.30350947627162,Waitakere,Waitakere,Auckland,Auckland
-W7180,Awaruku,Newmarket,PUBLIC_BUS,9,EDUCATION,Awaruku,-36.69990012,174.72732927,Newmarket,-36.86853889,174.77706299,19.26773685865921,Waitakere,Waitakere,Auckland,Auckland
-W7181,Fairview Heights,Newmarket,PUBLIC_BUS,9,EDUCATION,Fairview Heights,-36.71007322,174.71678985,Newmarket,-36.86853889,174.77706299,18.419899551754906,Waitakere,Waitakere,Auckland,Auckland
-W7184,Torbay,Newmarket,PUBLIC_BUS,9,EDUCATION,Torbay,-36.69512414,174.75092916,Newmarket,-36.86853889,174.77706299,19.42279290744723,Waitakere,Waitakere,Auckland,Auckland
-W7187,Oteha East,Newmarket,PUBLIC_BUS,9,EDUCATION,Oteha East,-36.71657898,174.72207262,Newmarket,-36.86853889,174.77706299,17.592376392630598,Waitakere,Waitakere,Auckland,Auckland
-W7190,Waiake,Newmarket,PUBLIC_BUS,6,EDUCATION,Waiake,-36.70665026,174.74439669999995,Newmarket,-36.86853889,174.77706299,18.234724969456405,Waitakere,Waitakere,Auckland,Auckland
-W7192,Albany South,Newmarket,PUBLIC_BUS,6,EDUCATION,Albany South,-36.73882334,174.70949248,Newmarket,-36.86853889,174.77706299,15.628042288258586,Waitakere,Waitakere,Auckland,Auckland
-W7196,Pinehill ,Newmarket,PUBLIC_BUS,6,EDUCATION,Pinehill,-36.73133656,174.72363265,Newmarket,-36.86853889,174.77706299,15.980724616568315,Waitakere,Waitakere,Auckland,Auckland
-W7842,Oteha East,Parnell West,PUBLIC_BUS,6,EDUCATION,Oteha East,-36.71657898,174.72207262,Parnell West,-36.85679261,174.77798053,16.366691994730434,Waitakere,Waitakere,Auckland,Auckland
-W9066,Orewa North,Queen Street,PUBLIC_BUS,9,EDUCATION,Orewa North,-36.58108865,174.67586463,Queen Street,-36.84774104,174.76524972,30.702220864753752,Rodney,Waitakere,Auckland,Auckland
-W9069,Millwater North,Queen Street,PUBLIC_BUS,27,EDUCATION,Millwater North,-36.601498299999996,174.67227556,Queen Street,-36.84774104,174.76524972,28.607317798565806,Rodney,Waitakere,Auckland,Auckland
-W9070,Millwater South,Queen Street,PUBLIC_BUS,15,EDUCATION,Millwater South,-36.61231012,174.67000848,Queen Street,-36.84774104,174.76524972,27.52030874552116,Rodney,Waitakere,Auckland,Auckland
-W9073,Kingsway,Queen Street,PUBLIC_BUS,6,EDUCATION,Kingsway,-36.60606427,174.68651435,Queen Street,-36.84774104,174.76524972,27.774260799029136,Rodney,Waitakere,Auckland,Auckland
-W9074,Red Beach West,Queen Street,PUBLIC_BUS,9,EDUCATION,Red Beach West,-36.61127031,174.69545963,Queen Street,-36.84774104,174.76524972,27.01992407893518,Rodney,Waitakere,Auckland,Auckland
-W9075,Red Beach East,Queen Street,PUBLIC_BUS,9,EDUCATION,Red Beach East,-36.60592118,174.70488989,Queen Street,-36.84774104,174.76524972,27.421958519575057,Rodney,Waitakere,Auckland,Auckland
-W9080,Okura Bush,Queen Street,PUBLIC_BUS,6,EDUCATION,Okura Bush,-36.66711378,174.70992257,Queen Street,-36.84774104,174.76524972,20.680781980580605,Rodney,Waitakere,Auckland,Auckland
-W9081,Whangaparoa Central,Queen Street,PUBLIC_BUS,12,EDUCATION,Whangaparoa Central,-36.63661523,174.73358327,Queen Street,-36.84774104,174.76524972,23.645077372039427,Rodney,Waitakere,Auckland,Auckland
-W9087,Dairy Flat South,Queen Street,PUBLIC_BUS,9,EDUCATION,Dairy Flat South,-36.6956027,174.67916408,Queen Street,-36.84774104,174.76524972,18.573590295466,Rodney,Waitakere,Auckland,Auckland
-W9089,Manly East,Queen Street,PUBLIC_BUS,6,EDUCATION,Manly East,-36.63338986,174.76128799,Queen Street,-36.84774104,174.76524972,23.837377827143136,Rodney,Waitakere,Auckland,Auckland
-W9093,Gulf Harbour South,Queen Street,PUBLIC_BUS,6,EDUCATION,Gulf Harbour South,-36.62319574,174.79598006,Queen Street,-36.84774104,174.76524972,25.118021239568023,Rodney,Waitakere,Auckland,Auckland
-W9095,Long Bay,Queen Street,PUBLIC_BUS,9,EDUCATION,Long Bay,-36.68946348,174.73306962,Queen Street,-36.84774104,174.76524972,17.831554590733585,Waitakere,Waitakere,Auckland,Auckland
-W9097,Albany Heights,Queen Street,PUBLIC_BUS,21,EDUCATION,Albany Heights,-36.71796472,174.69401393,Queen Street,-36.84774104,174.76524972,15.763421698360936,Waitakere,Waitakere,Auckland,Auckland
-W9098,Awaruku,Queen Street,PUBLIC_BUS,18,EDUCATION,Awaruku,-36.69990012,174.72732927,Queen Street,-36.84774104,174.76524972,16.782532311071943,Waitakere,Waitakere,Auckland,Auckland
-W9099,Fairview Heights,Queen Street,PUBLIC_BUS,21,EDUCATION,Fairview Heights,-36.71007322,174.71678985,Queen Street,-36.84774104,174.76524972,15.904744479335337,Waitakere,Waitakere,Auckland,Auckland
-W9101,Torbay,Queen Street,PUBLIC_BUS,15,EDUCATION,Torbay,-36.69512414,174.75092916,Queen Street,-36.84774104,174.76524972,17.01809429950763,Waitakere,Waitakere,Auckland,Auckland
-W9104,Glamorgan,Queen Street,PUBLIC_BUS,12,EDUCATION,Glamorgan,-36.70130329,174.7405506,Queen Street,-36.84774104,174.76524972,16.431065617974905,Waitakere,Waitakere,Auckland,Auckland
-W9105,Oteha East,Queen Street,PUBLIC_BUS,24,EDUCATION,Oteha East,-36.71657898,174.72207262,Queen Street,-36.84774104,174.76524972,15.082947923819695,Waitakere,Waitakere,Auckland,Auckland
-W9106,Northcross,Queen Street,PUBLIC_BUS,21,EDUCATION,Northcross,-36.71165743,174.73076830000005,Queen Street,-36.84774104,174.76524972,15.440280921745346,Waitakere,Waitakere,Auckland,Auckland
-W9108,Waiake,Queen Street,PUBLIC_BUS,21,EDUCATION,Waiake,-36.70665026,174.74439669999995,Queen Street,-36.84774104,174.76524972,15.798128892514308,Waitakere,Waitakere,Auckland,Auckland
-W9444,Somerville,Queen Street,PUBLIC_BUS,6,EDUCATION,Somerville,-36.91234246,174.93394109,Queen Street,-36.84774104,174.76524972,16.635011779605772,Manukau,Waitakere,Auckland,Auckland
-W9630,Orewa North,Hobson Ridge North,PUBLIC_BUS,6,EDUCATION,Orewa North,-36.58108865,174.67586463,Hobson Ridge North,-36.84707104,174.76276914,30.573518138291146,Rodney,Waitakere,Auckland,Auckland
-W9633,Orewa Central,Hobson Ridge North,PUBLIC_BUS,6,EDUCATION,Orewa Central,-36.58726477,174.69445280000005,Hobson Ridge North,-36.84707104,174.76276914,29.523912786129152,Rodney,Waitakere,Auckland,Auckland
-W9634,Millwater North,Hobson Ridge North,PUBLIC_BUS,9,EDUCATION,Millwater North,-36.601498299999996,174.67227556,Hobson Ridge North,-36.84707104,174.76276914,28.4726176573128,Rodney,Waitakere,Auckland,Auckland
-W9635,Millwater South,Hobson Ridge North,PUBLIC_BUS,9,EDUCATION,Millwater South,-36.61231012,174.67000848,Hobson Ridge North,-36.84707104,174.76276914,27.38191117105089,Rodney,Waitakere,Auckland,Auckland
-W9637,Kingsway,Hobson Ridge North,PUBLIC_BUS,6,EDUCATION,Kingsway,-36.60606427,174.68651435,Hobson Ridge North,-36.84707104,174.76276914,27.64701915738841,Rodney,Waitakere,Auckland,Auckland
-W9639,Red Beach East,Hobson Ridge North,PUBLIC_BUS,12,EDUCATION,Red Beach East,-36.60592118,174.70488989,Hobson Ridge North,-36.84707104,174.76276914,27.306289731693482,Rodney,Waitakere,Auckland,Auckland
-W9645,Whangaparoa Central,Hobson Ridge North,PUBLIC_BUS,6,EDUCATION,Whangaparoa Central,-36.63661523,174.73358327,Hobson Ridge North,-36.84707104,174.76276914,23.545675863753058,Rodney,Waitakere,Auckland,Auckland
-W9647,Stanmore Bay East,Hobson Ridge North,PUBLIC_BUS,6,EDUCATION,Stanmore Bay East,-36.6293262,174.74176363,Hobson Ridge North,-36.84707104,174.76276914,24.284364967626104,Rodney,Waitakere,Auckland,Auckland
-W9648,Manly West,Hobson Ridge North,PUBLIC_BUS,6,EDUCATION,Manly West,-36.63336524,174.75300037,Hobson Ridge North,-36.84707104,174.76276914,23.778938335689343,Rodney,Waitakere,Auckland,Auckland
-W9653,Manly East,Hobson Ridge North,PUBLIC_BUS,6,EDUCATION,Manly East,-36.63338986,174.76128799,Hobson Ridge North,-36.84707104,174.76276914,23.76062968513897,Rodney,Waitakere,Auckland,Auckland
-W9659,Albany Heights,Hobson Ridge North,PUBLIC_BUS,12,EDUCATION,Albany Heights,-36.71796472,174.69401393,Hobson Ridge North,-36.84707104,174.76276914,15.607274405651395,Waitakere,Waitakere,Auckland,Auckland
-W9660,Awaruku,Hobson Ridge North,PUBLIC_BUS,15,EDUCATION,Awaruku,-36.69990012,174.72732927,Hobson Ridge North,-36.84707104,174.76276914,16.66631181075542,Waitakere,Waitakere,Auckland,Auckland
-W9661,Fairview Heights,Hobson Ridge North,PUBLIC_BUS,12,EDUCATION,Fairview Heights,-36.71007322,174.71678985,Hobson Ridge North,-36.84707104,174.76276914,15.774267344498615,Waitakere,Waitakere,Auckland,Auckland
-W9664,Torbay,Hobson Ridge North,PUBLIC_BUS,9,EDUCATION,Torbay,-36.69512414,174.75092916,Hobson Ridge North,-36.84707104,174.76276914,16.928605269210255,Waitakere,Waitakere,Auckland,Auckland
-W9666,Glamorgan,Hobson Ridge North,PUBLIC_BUS,12,EDUCATION,Glamorgan,-36.70130329,174.7405506,Hobson Ridge North,-36.84707104,174.76276914,16.328993872829606,Waitakere,Waitakere,Auckland,Auckland
-W9668,Northcross,Hobson Ridge North,PUBLIC_BUS,18,EDUCATION,Northcross,-36.71165743,174.73076830000005,Hobson Ridge North,-36.84707104,174.76276914,15.324658730093331,Waitakere,Waitakere,Auckland,Auckland
-W9670,Waiake,Hobson Ridge North,PUBLIC_BUS,9,EDUCATION,Waiake,-36.70665026,174.74439669999995,Hobson Ridge North,-36.84707104,174.76276914,15.69958601559685,Waitakere,Waitakere,Auckland,Auckland
-W10517,Oteha East,Grafton,PUBLIC_BUS,6,EDUCATION,Oteha East,-36.71657898,174.72207262,Grafton,-36.86013178,174.76828549,16.484295844888724,Waitakere,Waitakere,Auckland,Auckland
-W10518,Northcross,Grafton,PUBLIC_BUS,6,EDUCATION,Northcross,-36.71165743,174.73076830000005,Grafton,-36.86013178,174.76828549,16.844264943530863,Waitakere,Waitakere,Auckland,Auckland
-W11239,Orewa Central,Victoria Park ,PUBLIC_BUS,6,EDUCATION,Orewa Central,-36.58726477,174.69445280000005,Victoria Park,-36.84857807,174.75659124,29.57985955136494,Rodney,Waitakere,Auckland,Auckland
-W11240,Millwater North,Victoria Park ,PUBLIC_BUS,9,EDUCATION,Millwater North,-36.601498299999996,174.67227556,Victoria Park,-36.84857807,174.75659124,28.48315755557109,Rodney,Waitakere,Auckland,Auckland
-W11242,Millwater South,Victoria Park ,PUBLIC_BUS,6,EDUCATION,Millwater South,-36.61231012,174.67000848,Victoria Park,-36.84857807,174.75659124,27.381473986720362,Rodney,Waitakere,Auckland,Auckland
-W11245,Red Beach East,Victoria Park ,PUBLIC_BUS,6,EDUCATION,Red Beach East,-36.60592118,174.70488989,Victoria Park,-36.84857807,174.75659124,27.372812976838194,Rodney,Waitakere,Auckland,Auckland
-W11247,Vipond,Victoria Park ,PUBLIC_BUS,6,EDUCATION,Vipond,-36.61796366,174.7180399,Victoria Park,-36.84857807,174.75659124,25.872260104332,Rodney,Waitakere,Auckland,Auckland
-W11251,Whangaparoa Central,Victoria Park ,PUBLIC_BUS,9,EDUCATION,Whangaparoa Central,-36.63661523,174.73358327,Victoria Park,-36.84857807,174.75659124,23.658185354909435,Rodney,Waitakere,Auckland,Auckland
-W11253,Stanmore Bay East,Victoria Park ,PUBLIC_BUS,9,EDUCATION,Stanmore Bay East,-36.6293262,174.74176363,Victoria Park,-36.84857807,174.75659124,24.415472219024092,Rodney,Waitakere,Auckland,Auckland
-W11262,Long Bay,Victoria Park ,PUBLIC_BUS,6,EDUCATION,Long Bay,-36.68946348,174.73306962,Victoria Park,-36.84857807,174.75659124,17.816355217613193,Waitakere,Waitakere,Auckland,Auckland
-W11264,Albany Heights,Victoria Park ,PUBLIC_BUS,12,EDUCATION,Albany Heights,-36.71796472,174.69401393,Victoria Park,-36.84857807,174.75659124,15.556052610855259,Waitakere,Waitakere,Auckland,Auckland
-W11265,Awaruku,Victoria Park ,PUBLIC_BUS,18,EDUCATION,Awaruku,-36.69990012,174.72732927,Victoria Park,-36.84857807,174.75659124,16.736410832572528,Waitakere,Waitakere,Auckland,Auckland
-W11266,Fairview Heights,Victoria Park ,PUBLIC_BUS,12,EDUCATION,Fairview Heights,-36.71007322,174.71678985,Victoria Park,-36.84857807,174.75659124,15.80371032338816,Waitakere,Waitakere,Auckland,Auckland
-W11269,Torbay,Victoria Park ,PUBLIC_BUS,9,EDUCATION,Torbay,-36.69512414,174.75092916,Victoria Park,-36.84857807,174.75659124,17.070749689564376,Waitakere,Waitakere,Auckland,Auckland
-W11271,Glamorgan,Victoria Park ,PUBLIC_BUS,15,EDUCATION,Glamorgan,-36.70130329,174.7405506,Victoria Park,-36.84857807,174.75659124,16.4384101772718,Waitakere,Waitakere,Auckland,Auckland
-W11273,Northcross,Victoria Park ,PUBLIC_BUS,12,EDUCATION,Northcross,-36.71165743,174.73076830000005,Victoria Park,-36.84857807,174.75659124,15.397599273973565,Waitakere,Waitakere,Auckland,Auckland
-W11275,Waiake,Victoria Park ,PUBLIC_BUS,9,EDUCATION,Waiake,-36.70665026,174.74439669999995,Victoria Park,-36.84857807,174.75659124,15.818980177460835,Waitakere,Waitakere,Auckland,Auckland
-W11704,Birkdale North,Mount Wellington Industrial,PUBLIC_BUS,6,EDUCATION,Birkdale North,-36.79368225,174.70092376,Mount Wellington Industrial,-36.92046064,174.85162182,19.454969158319628,Waitakere,Waitakere,Auckland,Auckland
-W14296,Awaruku,Queen Street South West,PUBLIC_BUS,6,EDUCATION,Awaruku,-36.69990012,174.72732927,Queen Street South West,-36.85433303,174.76134796,17.437397618812447,Waitakere,Waitakere,Auckland,Auckland
-W14302,Oteha East,Queen Street South West,PUBLIC_BUS,6,EDUCATION,Oteha East,-36.71657898,174.72207262,Queen Street South West,-36.85433303,174.76134796,15.711804577485811,Waitakere,Waitakere,Auckland,Auckland
-W14304,Waiake,Queen Street South West,PUBLIC_BUS,6,EDUCATION,Waiake,-36.70665026,174.74439669999995,Queen Street South West,-36.85433303,174.76134796,16.49082299440747,Waitakere,Waitakere,Auckland,Auckland
-W17395,Albany Heights,Symonds Street North West,PUBLIC_BUS,6,EDUCATION,Albany Heights,-36.71796472,174.69401393,Symonds Street North West,-36.85498533,174.76593774,16.52755127466984,Waitakere,Waitakere,Auckland,Auckland
-W17400,Oteha East,Symonds Street North West,PUBLIC_BUS,6,EDUCATION,Oteha East,-36.71657898,174.72207262,Symonds Street North West,-36.85498533,174.76593774,15.878106780799165,Waitakere,Waitakere,Auckland,Auckland
-W34901,Birchville-Brown Owl,Wellington Central,PUBLIC_BUS,6,EDUCATION,Birchville-Brown Owl,-41.08596013,175.11315290000005,Wellington Central,-41.2849345,174.77572593,35.872525045557325,Upper Hutt,Wellington,Wellington,Wellington
-W34907,Totara Park,Wellington Central,PUBLIC_BUS,6,EDUCATION,Totara Park,-41.1093256,175.08443163,Wellington Central,-41.2849345,174.77572593,32.37941862879475,Upper Hutt,Wellington,Wellington,Wellington
-W34931,Stokes Valley Central,Wellington Central,PUBLIC_BUS,6,EDUCATION,Stokes Valley Central,-41.16891621,174.97736126,Wellington Central,-41.2849345,174.77572593,21.231602582819,Hutt city,Wellington,Wellington,Wellington
-W34935,Stokes Valley North,Wellington Central,PUBLIC_BUS,9,EDUCATION,Stokes Valley North,-41.166931700000006,174.99312135,Wellington Central,-41.2849345,174.77572593,22.42144847957863,Hutt city,Wellington,Wellington,Wellington
-W34949,Manuka,Wellington Central,PUBLIC_BUS,6,EDUCATION,Manuka,-41.18502912,174.98698353,Wellington Central,-41.2849345,174.77572593,20.868006456182915,Hutt city,Wellington,Wellington,Wellington
-W34951,Arakura,Wellington Central,PUBLIC_BUS,12,EDUCATION,Arakura,-41.23870795,174.94479641,Wellington Central,-41.2849345,174.77572593,15.037643785213067,Hutt city,Wellington,Wellington,Wellington
-W34955,Glendale,Wellington Central,PUBLIC_BUS,15,EDUCATION,Glendale,-41.2429916,174.95473935,Wellington Central,-41.2849345,174.77572593,15.672476389923824,Hutt city,Wellington,Wellington,Wellington
-W34958,Homedale East,Wellington Central,PUBLIC_BUS,6,EDUCATION,Homedale East,-41.269130600000004,174.95843259,Wellington Central,-41.2849345,174.77572593,15.36889132522634,Hutt city,Wellington,Wellington,Wellington
-W42443,Sumner,Ilam University,PUBLIC_BUS,6,EDUCATION,Sumner,-43.57493364,172.7635625,Ilam University,-43.52336127,172.57826459,15.996783499930991,Christchurch,Christchurch,Canterbury,Canterbury
-W43085,Rolleston North East,Christchurch Central-West,PUBLIC_BUS,6,EDUCATION,Rolleston North East,-43.59059543,172.39602587,Christchurch Central-West,-43.52780609,172.6306519,20.153872429324814,Selwyn,Christchurch,Canterbury,Canterbury
-W43563,Lincoln West,Christchurch Central,PUBLIC_BUS,6,EDUCATION,Lincoln West,-43.64345571,172.47791199,Christchurch Central,-43.53243368,172.63601635,17.735562209984753,Selwyn,Christchurch,Canterbury,Canterbury
-W48598,Arrowtown,Queenstown Central,PUBLIC_BUS,12,EDUCATION,Arrowtown,-44.9457261,168.83841556,Queenstown Central,-45.0327315,168.65460343,17.394000512139655,Queenstown-Lakes,Queenstown-Lakes,Otago,Otago
+W1706,Puhoi Valley,Quay Street-Customs Street,PUBLIC_BUS,6,WORK,Puhoi Valley,-36.46850912,174.62475233,Quay Street-Customs Street,-36.84601989,174.77646293,44.104799220616464,Rodney,Waitakere,Auckland,Auckland
+W1708,Te Kuru,Quay Street-Customs Street,PUBLIC_BUS,6,WORK,Te Kuru,-36.60344402,174.48396116,Quay Street-Customs Street,-36.84601989,174.77646293,37.51199994203978,Rodney,Waitakere,Auckland,Auckland
+W1716,Orewa North,Quay Street-Customs Street,PUBLIC_BUS,9,WORK,Orewa North,-36.58108865,174.67586463,Quay Street-Customs Street,-36.84601989,174.77646293,30.793533411356968,Rodney,Waitakere,Auckland,Auckland
+W1719,Orewa Central,Quay Street-Customs Street,PUBLIC_BUS,6,WORK,Orewa Central,-36.58726477,174.69445280000005,Quay Street-Customs Street,-36.84601989,174.77646293,29.686311701573075,Rodney,Waitakere,Auckland,Auckland
+W1720,Millwater North,Quay Street-Customs Street,PUBLIC_BUS,27,WORK,Millwater North,-36.601498299999996,174.67227556,Quay Street-Customs Street,-36.84601989,174.77646293,28.731474525964828,Rodney,Waitakere,Auckland,Auckland
+W1721,Millwater South,Quay Street-Customs Street,PUBLIC_BUS,18,WORK,Millwater South,-36.61231012,174.67000848,Quay Street-Customs Street,-36.84601989,174.77646293,27.66492316170856,Rodney,Waitakere,Auckland,Auckland
+W1722,Dairy Flat North,Quay Street-Customs Street,PUBLIC_BUS,6,WORK,Dairy Flat North,-36.6446947,174.65374224,Quay Street-Customs Street,-36.84601989,174.77646293,24.914077779064158,Rodney,Waitakere,Auckland,Auckland
+W1726,Red Beach East,Quay Street-Customs Street,PUBLIC_BUS,12,WORK,Red Beach East,-36.60592118,174.70488989,Quay Street-Customs Street,-36.84601989,174.77646293,27.44921707011177,Rodney,Waitakere,Auckland,Auckland
+W1729,Vipond,Quay Street-Customs Street,PUBLIC_BUS,6,WORK,Vipond,-36.61796366,174.7180399,Quay Street-Customs Street,-36.84601989,174.77646293,25.887649474758746,Rodney,Waitakere,Auckland,Auckland
+W1731,Stanmore Bay West,Quay Street-Customs Street,PUBLIC_BUS,9,WORK,Stanmore Bay West,-36.62300197,174.72724226,Quay Street-Customs Street,-36.84601989,174.77646293,25.18337798684652,Rodney,Waitakere,Auckland,Auckland
+W1734,Whangaparoa Central,Quay Street-Customs Street,PUBLIC_BUS,9,WORK,Whangaparoa Central,-36.63661523,174.73358327,Quay Street-Customs Street,-36.84601989,174.77646293,23.59613261487113,Rodney,Waitakere,Auckland,Auckland
+W1735,Kumeu-Huapai,Quay Street-Customs Street,PUBLIC_BUS,6,WORK,Kumeu-Huapai,-36.76998293,174.54286666,Quay Street-Customs Street,-36.84601989,174.77646293,22.449586531356555,Rodney,Waitakere,Auckland,Auckland
+W1736,Stanmore Bay East,Quay Street-Customs Street,PUBLIC_BUS,6,WORK,Stanmore Bay East,-36.6293262,174.74176363,Quay Street-Customs Street,-36.84601989,174.77646293,24.29282283517543,Rodney,Waitakere,Auckland,Auckland
+W1737,Manly West,Quay Street-Customs Street,PUBLIC_BUS,6,WORK,Manly West,-36.63336524,174.75300037,Quay Street-Customs Street,-36.84601989,174.77646293,23.73836263844132,Rodney,Waitakere,Auckland,Auckland
+W1740,Coatesville,Quay Street-Customs Street,PUBLIC_BUS,15,WORK,Coatesville,-36.72270876,174.64336292,Quay Street-Customs Street,-36.84601989,174.77646293,18.124769938620783,Rodney,Waitakere,Auckland,Auckland
+W1741,Dairy Flat South,Quay Street-Customs Street,PUBLIC_BUS,6,WORK,Dairy Flat South,-36.6956027,174.67916408,Quay Street-Customs Street,-36.84601989,174.77646293,18.83759973555481,Rodney,Waitakere,Auckland,Auckland
+W1742,Gulf Harbour North,Quay Street-Customs Street,PUBLIC_BUS,6,WORK,Gulf Harbour North,-36.60949658,174.79413674,Quay Street-Customs Street,-36.84601989,174.77646293,26.347316169433345,Rodney,Waitakere,Auckland,Auckland
+W1750,Long Bay,Quay Street-Customs Street,PUBLIC_BUS,9,WORK,Long Bay,-36.68946348,174.73306962,Quay Street-Customs Street,-36.84601989,174.77646293,17.832225918184093,Waitakere,Waitakere,Auckland,Auckland
+W1752,Albany Heights,Quay Street-Customs Street,PUBLIC_BUS,15,WORK,Albany Heights,-36.71796472,174.69401393,Quay Street-Customs Street,-36.84601989,174.77646293,16.020848850844516,Waitakere,Waitakere,Auckland,Auckland
+W1753,Awaruku,Quay Street-Customs Street,PUBLIC_BUS,30,WORK,Awaruku,-36.69990012,174.72732927,Quay Street-Customs Street,-36.84601989,174.77646293,16.826823190689066,Waitakere,Waitakere,Auckland,Auckland
+W1754,Fairview Heights,Quay Street-Customs Street,PUBLIC_BUS,27,WORK,Fairview Heights,-36.71007322,174.71678985,Quay Street-Customs Street,-36.84601989,174.77646293,16.0236220637917,Waitakere,Waitakere,Auckland,Auckland
+W1757,Torbay,Quay Street-Customs Street,PUBLIC_BUS,15,WORK,Torbay,-36.69512414,174.75092916,Quay Street-Customs Street,-36.84601989,174.77646293,16.93227994794266,Waitakere,Waitakere,Auckland,Auckland
+W1759,Glamorgan,Quay Street-Customs Street,PUBLIC_BUS,18,WORK,Glamorgan,-36.70130329,174.7405506,Quay Street-Customs Street,-36.84601989,174.77646293,16.406575643883734,Waitakere,Waitakere,Auckland,Auckland
+W1760,Oteha East,Quay Street-Customs Street,PUBLIC_BUS,15,WORK,Oteha East,-36.71657898,174.72207262,Quay Street-Customs Street,-36.84601989,174.77646293,15.186415199728696,Waitakere,Waitakere,Auckland,Auckland
+W1761,Northcross,Quay Street-Customs Street,PUBLIC_BUS,12,WORK,Northcross,-36.71165743,174.73076830000005,Quay Street-Customs Street,-36.84601989,174.77646293,15.484775954150127,Waitakere,Waitakere,Auckland,Auckland
+W1763,Waiake,Quay Street-Customs Street,PUBLIC_BUS,15,WORK,Waiake,-36.70665026,174.74439669999995,Quay Street-Customs Street,-36.84601989,174.77646293,15.758161026411855,Waitakere,Waitakere,Auckland,Auckland
+W2261,Orewa North,Takapuna West,PUBLIC_BUS,6,WORK,Orewa North,-36.58108865,174.67586463,Takapuna West,-36.78910918,174.76117008,24.34948785782135,Rodney,Waitakere,Auckland,Auckland
+W2265,Millwater North,Takapuna West,PUBLIC_BUS,9,WORK,Millwater North,-36.601498299999996,174.67227556,Takapuna West,-36.78910918,174.76117008,22.31623082851348,Rodney,Waitakere,Auckland,Auckland
+W2272,Red Beach East,Takapuna West,PUBLIC_BUS,6,WORK,Red Beach East,-36.60592118,174.70488989,Takapuna West,-36.78910918,174.76117008,20.978493934557065,Rodney,Waitakere,Auckland,Auckland
+W2276,Stanmore Bay West,Takapuna West,PUBLIC_BUS,6,WORK,Stanmore Bay West,-36.62300197,174.72724226,Takapuna West,-36.78910918,174.76117008,18.716277475485423,Rodney,Waitakere,Auckland,Auckland
+W2282,Manly West,Takapuna West,PUBLIC_BUS,6,WORK,Manly West,-36.63336524,174.75300037,Takapuna West,-36.78910918,174.76117008,17.33324133251228,Rodney,Waitakere,Auckland,Auckland
+W2292,Gulf Harbour South,Takapuna West,PUBLIC_BUS,6,WORK,Gulf Harbour South,-36.62319574,174.79598006,Takapuna West,-36.78910918,174.76117008,18.707897905039754,Rodney,Waitakere,Auckland,Auckland
+W2879,Symonds Street North West,Albany Central,PUBLIC_BUS,6,WORK,Symonds Street North West,-36.85498533,174.76593774,Albany Central,-36.72820186,174.70483518,15.11122140421735,Waitakere,Waitakere,Auckland,Auckland
+W3162,Te Kuru,Wynyard-Viaduct,PUBLIC_BUS,9,WORK,Te Kuru,-36.60344402,174.48396116,Wynyard-Viaduct,-36.843309399999995,174.75788827,36.158417661231866,Rodney,Waitakere,Auckland,Auckland
+W3167,Waikoukou Valley,Wynyard-Viaduct,PUBLIC_BUS,6,WORK,Waikoukou Valley,-36.70989198,174.51574111,Wynyard-Viaduct,-36.843309399999995,174.75788827,26.176503413452124,Rodney,Waitakere,Auckland,Auckland
+W3168,Orewa North,Wynyard-Viaduct,PUBLIC_BUS,18,WORK,Orewa North,-36.58108865,174.67586463,Wynyard-Viaduct,-36.843309399999995,174.75788827,30.06035211283594,Rodney,Waitakere,Auckland,Auckland
+W3169,Hatfields Beach,Wynyard-Viaduct,PUBLIC_BUS,9,WORK,Hatfields Beach,-36.57001949,174.68935557,Wynyard-Viaduct,-36.843309399999995,174.75788827,30.996491232998128,Rodney,Waitakere,Auckland,Auckland
+W3170,Orewa South,Wynyard-Viaduct,PUBLIC_BUS,6,WORK,Orewa South,-36.59013546,174.685784,Wynyard-Viaduct,-36.843309399999995,174.75788827,28.875962648794648,Rodney,Waitakere,Auckland,Auckland
+W3171,Orewa Central,Wynyard-Viaduct,PUBLIC_BUS,9,WORK,Orewa Central,-36.58726477,174.69445280000005,Wynyard-Viaduct,-36.843309399999995,174.75788827,29.02691429577713,Rodney,Waitakere,Auckland,Auckland
+W3172,Millwater North,Wynyard-Viaduct,PUBLIC_BUS,21,WORK,Millwater North,-36.601498299999996,174.67227556,Wynyard-Viaduct,-36.843309399999995,174.75788827,27.94989976077825,Rodney,Waitakere,Auckland,Auckland
+W3174,Millwater South,Wynyard-Viaduct,PUBLIC_BUS,6,WORK,Millwater South,-36.61231012,174.67000848,Wynyard-Viaduct,-36.843309399999995,174.75788827,26.85343673174809,Rodney,Waitakere,Auckland,Auckland
+W3176,Dairy Flat West,Wynyard-Viaduct,PUBLIC_BUS,6,WORK,Dairy Flat West,-36.67100483,174.61891208,Wynyard-Viaduct,-36.843309399999995,174.75788827,22.81163454783093,Rodney,Waitakere,Auckland,Auckland
+W3178,Red Beach West,Wynyard-Viaduct,PUBLIC_BUS,6,WORK,Red Beach West,-36.61127031,174.69545963,Wynyard-Viaduct,-36.843309399999995,174.75788827,26.3946238904391,Rodney,Waitakere,Auckland,Auckland
+W3179,Red Beach East,Wynyard-Viaduct,PUBLIC_BUS,24,WORK,Red Beach East,-36.60592118,174.70488989,Wynyard-Viaduct,-36.843309399999995,174.75788827,26.8156525016508,Rodney,Waitakere,Auckland,Auckland
+W3182,Vipond,Wynyard-Viaduct,PUBLIC_BUS,9,WORK,Vipond,-36.61796366,174.7180399,Wynyard-Viaduct,-36.843309399999995,174.75788827,25.30769482093136,Rodney,Waitakere,Auckland,Auckland
+W3184,Stanmore Bay West,Wynyard-Viaduct,PUBLIC_BUS,6,WORK,Stanmore Bay West,-36.62300197,174.72724226,Wynyard-Viaduct,-36.843309399999995,174.75788827,24.648829440843247,Rodney,Waitakere,Auckland,Auckland
+W3186,Okura Bush,Wynyard-Viaduct,PUBLIC_BUS,9,WORK,Okura Bush,-36.66711378,174.70992257,Wynyard-Viaduct,-36.843309399999995,174.75788827,20.052661707231177,Rodney,Waitakere,Auckland,Auckland
+W3187,Whangaparoa Central,Wynyard-Viaduct,PUBLIC_BUS,15,WORK,Whangaparoa Central,-36.63661523,174.73358327,Wynyard-Viaduct,-36.843309399999995,174.75788827,23.08515758317419,Rodney,Waitakere,Auckland,Auckland
+W3190,Manly West,Wynyard-Viaduct,PUBLIC_BUS,9,WORK,Manly West,-36.63336524,174.75300037,Wynyard-Viaduct,-36.843309399999995,174.75788827,23.34878830326901,Rodney,Waitakere,Auckland,Auckland
+W3193,Coatesville,Wynyard-Viaduct,PUBLIC_BUS,9,WORK,Coatesville,-36.72270876,174.64336292,Wynyard-Viaduct,-36.843309399999995,174.75788827,16.848092606582014,Rodney,Waitakere,Auckland,Auckland
+W3194,Dairy Flat South,Wynyard-Viaduct,PUBLIC_BUS,6,WORK,Dairy Flat South,-36.6956027,174.67916408,Wynyard-Viaduct,-36.843309399999995,174.75788827,17.858502863104,Rodney,Waitakere,Auckland,Auckland
+W3195,Gulf Harbour North,Wynyard-Viaduct,PUBLIC_BUS,9,WORK,Gulf Harbour North,-36.60949658,174.79413674,Wynyard-Viaduct,-36.843309399999995,174.75788827,26.198741756764413,Rodney,Waitakere,Auckland,Auckland
+W3196,Manly East,Wynyard-Viaduct,PUBLIC_BUS,9,WORK,Manly East,-36.63338986,174.76128799,Wynyard-Viaduct,-36.843309399999995,174.75788827,23.343953658671712,Rodney,Waitakere,Auckland,Auckland
+W3197,Riverhead,Wynyard-Viaduct,PUBLIC_BUS,6,WORK,Riverhead,-36.75810331,174.58371179,Wynyard-Viaduct,-36.843309399999995,174.75788827,18.17320653388923,Rodney,Waitakere,Auckland,Auckland
+W3200,Gulf Harbour South,Wynyard-Viaduct,PUBLIC_BUS,6,WORK,Gulf Harbour South,-36.62319574,174.79598006,Wynyard-Viaduct,-36.843309399999995,174.75788827,24.70979705086731,Rodney,Waitakere,Auckland,Auckland
+W3202,Long Bay,Wynyard-Viaduct,PUBLIC_BUS,12,WORK,Long Bay,-36.68946348,174.73306962,Wynyard-Viaduct,-36.843309399999995,174.75788827,17.24914396857417,Waitakere,Waitakere,Auckland,Auckland
+W3204,Albany Heights,Wynyard-Viaduct,PUBLIC_BUS,24,WORK,Albany Heights,-36.71796472,174.69401393,Wynyard-Viaduct,-36.843309399999995,174.75788827,15.053896316958435,Waitakere,Waitakere,Auckland,Auckland
+W3205,Awaruku,Wynyard-Viaduct,PUBLIC_BUS,27,WORK,Awaruku,-36.69990012,174.72732927,Wynyard-Viaduct,-36.843309399999995,174.75788827,16.177017466767243,Waitakere,Waitakere,Auckland,Auckland
+W3206,Fairview Heights,Wynyard-Viaduct,PUBLIC_BUS,18,WORK,Fairview Heights,-36.71007322,174.71678985,Wynyard-Viaduct,-36.843309399999995,174.75788827,15.260678782490738,Waitakere,Waitakere,Auckland,Auckland
+W3208,Torbay,Wynyard-Viaduct,PUBLIC_BUS,24,WORK,Torbay,-36.69512414,174.75092916,Wynyard-Viaduct,-36.843309399999995,174.75788827,16.489104477192054,Waitakere,Waitakere,Auckland,Auckland
+W3210,Glamorgan,Wynyard-Viaduct,PUBLIC_BUS,12,WORK,Glamorgan,-36.70130329,174.7405506,Wynyard-Viaduct,-36.843309399999995,174.75788827,15.86569136428864,Waitakere,Waitakere,Auckland,Auckland
+W3214,Waiake,Wynyard-Viaduct,PUBLIC_BUS,30,WORK,Waiake,-36.70665026,174.74439669999995,Wynyard-Viaduct,-36.843309399999995,174.75788827,15.243240426541018,Waitakere,Waitakere,Auckland,Auckland
+W3638,Millwater North,Shortland Street,PUBLIC_BUS,9,WORK,Millwater North,-36.601498299999996,174.67227556,Shortland Street,-36.84736853,174.76823915,28.64609653266653,Rodney,Waitakere,Auckland,Auckland
+W3639,Millwater South,Shortland Street,PUBLIC_BUS,9,WORK,Millwater South,-36.61231012,174.67000848,Shortland Street,-36.84736853,174.76823915,27.56436542896398,Rodney,Waitakere,Auckland,Auckland
+W3643,Silverdale South (Auckland),Shortland Street,PUBLIC_BUS,6,WORK,Silverdale South (Auckland),-36.62799753,174.69160348,Shortland Street,-36.84736853,174.76823915,25.330819636054922,Rodney,Waitakere,Auckland,Auckland
+W3646,Whangaparoa Central,Shortland Street,PUBLIC_BUS,9,WORK,Whangaparoa Central,-36.63661523,174.73358327,Shortland Street,-36.84736853,174.76823915,23.637275115200552,Rodney,Waitakere,Auckland,Auckland
+W3648,Stanmore Bay East,Shortland Street,PUBLIC_BUS,6,WORK,Stanmore Bay East,-36.6293262,174.74176363,Shortland Street,-36.84736853,174.76823915,24.35971248587032,Rodney,Waitakere,Auckland,Auckland
+W3661,Albany Heights,Shortland Street,PUBLIC_BUS,6,WORK,Albany Heights,-36.71796472,174.69401393,Shortland Street,-36.84736853,174.76823915,15.834796250688806,Waitakere,Waitakere,Auckland,Auckland
+W3662,Awaruku,Shortland Street,PUBLIC_BUS,18,WORK,Awaruku,-36.69990012,174.72732927,Shortland Street,-36.84736853,174.76823915,16.7977020349099,Waitakere,Waitakere,Auckland,Auckland
+W3663,Fairview Heights,Shortland Street,PUBLIC_BUS,9,WORK,Fairview Heights,-36.71007322,174.71678985,Shortland Street,-36.84736853,174.76823915,15.939373418672115,Waitakere,Waitakere,Auckland,Auckland
+W3665,Torbay,Shortland Street,PUBLIC_BUS,9,WORK,Torbay,-36.69512414,174.75092916,Shortland Street,-36.84736853,174.76823915,16.9988699550193,Waitakere,Waitakere,Auckland,Auckland
+W3667,Glamorgan,Shortland Street,PUBLIC_BUS,6,WORK,Glamorgan,-36.70130329,174.7405506,Shortland Street,-36.84736853,174.76823915,16.42787549125284,Waitakere,Waitakere,Auckland,Auckland
+W3668,Oteha East,Shortland Street,PUBLIC_BUS,9,WORK,Oteha East,-36.71657898,174.72207262,Shortland Street,-36.84736853,174.76823915,15.113148051574973,Waitakere,Waitakere,Auckland,Auckland
+W3669,Northcross,Shortland Street,PUBLIC_BUS,12,WORK,Northcross,-36.71165743,174.73076830000005,Shortland Street,-36.84736853,174.76823915,15.454986100612588,Waitakere,Waitakere,Auckland,Auckland
+W3670,Waiake,Shortland Street,PUBLIC_BUS,12,WORK,Waiake,-36.70665026,174.74439669999995,Shortland Street,-36.84736853,174.76823915,15.790592326659947,Waitakere,Waitakere,Auckland,Auckland
+W5352,Oteha East,Auckland-University,PUBLIC_BUS,6,WORK,Oteha East,-36.71657898,174.72207262,Auckland-University,-36.85143057,174.76906469,15.56784932094087,Waitakere,Waitakere,Auckland,Auckland
+W6317,Hobson Ridge Central,Auckland Airport,PUBLIC_BUS,12,WORK,Hobson Ridge Central,-36.85070899,174.76046696,Auckland Airport,-36.9891029,174.77400859,15.43571467957472,Waitakere,Manukau,Auckland,Auckland
+W6324,Queen Street South West,Auckland Airport,PUBLIC_BUS,6,WORK,Queen Street South West,-36.85433303,174.76134796,Auckland Airport,-36.9891029,174.77400859,15.0279295913316,Waitakere,Manukau,Auckland,Auckland
+W7163,Whangaparoa Central,Newmarket,PUBLIC_BUS,6,WORK,Whangaparoa Central,-36.63661523,174.73358327,Newmarket,-36.86853889,174.77706299,26.07804446167572,Rodney,Waitakere,Auckland,Auckland
+W7179,Albany Heights,Newmarket,PUBLIC_BUS,6,WORK,Albany Heights,-36.71796472,174.69401393,Newmarket,-36.86853889,174.77706299,18.30350947627162,Waitakere,Waitakere,Auckland,Auckland
+W7180,Awaruku,Newmarket,PUBLIC_BUS,9,WORK,Awaruku,-36.69990012,174.72732927,Newmarket,-36.86853889,174.77706299,19.26773685865921,Waitakere,Waitakere,Auckland,Auckland
+W7181,Fairview Heights,Newmarket,PUBLIC_BUS,9,WORK,Fairview Heights,-36.71007322,174.71678985,Newmarket,-36.86853889,174.77706299,18.419899551754906,Waitakere,Waitakere,Auckland,Auckland
+W7184,Torbay,Newmarket,PUBLIC_BUS,9,WORK,Torbay,-36.69512414,174.75092916,Newmarket,-36.86853889,174.77706299,19.42279290744723,Waitakere,Waitakere,Auckland,Auckland
+W7187,Oteha East,Newmarket,PUBLIC_BUS,9,WORK,Oteha East,-36.71657898,174.72207262,Newmarket,-36.86853889,174.77706299,17.592376392630598,Waitakere,Waitakere,Auckland,Auckland
+W7190,Waiake,Newmarket,PUBLIC_BUS,6,WORK,Waiake,-36.70665026,174.74439669999995,Newmarket,-36.86853889,174.77706299,18.234724969456405,Waitakere,Waitakere,Auckland,Auckland
+W7192,Albany South,Newmarket,PUBLIC_BUS,6,WORK,Albany South,-36.73882334,174.70949248,Newmarket,-36.86853889,174.77706299,15.628042288258586,Waitakere,Waitakere,Auckland,Auckland
+W7196,Pinehill ,Newmarket,PUBLIC_BUS,6,WORK,Pinehill,-36.73133656,174.72363265,Newmarket,-36.86853889,174.77706299,15.980724616568315,Waitakere,Waitakere,Auckland,Auckland
+W7842,Oteha East,Parnell West,PUBLIC_BUS,6,WORK,Oteha East,-36.71657898,174.72207262,Parnell West,-36.85679261,174.77798053,16.366691994730434,Waitakere,Waitakere,Auckland,Auckland
+W9066,Orewa North,Queen Street,PUBLIC_BUS,9,WORK,Orewa North,-36.58108865,174.67586463,Queen Street,-36.84774104,174.76524972,30.702220864753752,Rodney,Waitakere,Auckland,Auckland
+W9069,Millwater North,Queen Street,PUBLIC_BUS,27,WORK,Millwater North,-36.601498299999996,174.67227556,Queen Street,-36.84774104,174.76524972,28.607317798565806,Rodney,Waitakere,Auckland,Auckland
+W9070,Millwater South,Queen Street,PUBLIC_BUS,15,WORK,Millwater South,-36.61231012,174.67000848,Queen Street,-36.84774104,174.76524972,27.52030874552116,Rodney,Waitakere,Auckland,Auckland
+W9073,Kingsway,Queen Street,PUBLIC_BUS,6,WORK,Kingsway,-36.60606427,174.68651435,Queen Street,-36.84774104,174.76524972,27.774260799029136,Rodney,Waitakere,Auckland,Auckland
+W9074,Red Beach West,Queen Street,PUBLIC_BUS,9,WORK,Red Beach West,-36.61127031,174.69545963,Queen Street,-36.84774104,174.76524972,27.01992407893518,Rodney,Waitakere,Auckland,Auckland
+W9075,Red Beach East,Queen Street,PUBLIC_BUS,9,WORK,Red Beach East,-36.60592118,174.70488989,Queen Street,-36.84774104,174.76524972,27.421958519575057,Rodney,Waitakere,Auckland,Auckland
+W9080,Okura Bush,Queen Street,PUBLIC_BUS,6,WORK,Okura Bush,-36.66711378,174.70992257,Queen Street,-36.84774104,174.76524972,20.680781980580605,Rodney,Waitakere,Auckland,Auckland
+W9081,Whangaparoa Central,Queen Street,PUBLIC_BUS,12,WORK,Whangaparoa Central,-36.63661523,174.73358327,Queen Street,-36.84774104,174.76524972,23.645077372039427,Rodney,Waitakere,Auckland,Auckland
+W9087,Dairy Flat South,Queen Street,PUBLIC_BUS,9,WORK,Dairy Flat South,-36.6956027,174.67916408,Queen Street,-36.84774104,174.76524972,18.573590295466,Rodney,Waitakere,Auckland,Auckland
+W9089,Manly East,Queen Street,PUBLIC_BUS,6,WORK,Manly East,-36.63338986,174.76128799,Queen Street,-36.84774104,174.76524972,23.837377827143136,Rodney,Waitakere,Auckland,Auckland
+W9093,Gulf Harbour South,Queen Street,PUBLIC_BUS,6,WORK,Gulf Harbour South,-36.62319574,174.79598006,Queen Street,-36.84774104,174.76524972,25.118021239568023,Rodney,Waitakere,Auckland,Auckland
+W9095,Long Bay,Queen Street,PUBLIC_BUS,9,WORK,Long Bay,-36.68946348,174.73306962,Queen Street,-36.84774104,174.76524972,17.831554590733585,Waitakere,Waitakere,Auckland,Auckland
+W9097,Albany Heights,Queen Street,PUBLIC_BUS,21,WORK,Albany Heights,-36.71796472,174.69401393,Queen Street,-36.84774104,174.76524972,15.763421698360936,Waitakere,Waitakere,Auckland,Auckland
+W9098,Awaruku,Queen Street,PUBLIC_BUS,18,WORK,Awaruku,-36.69990012,174.72732927,Queen Street,-36.84774104,174.76524972,16.782532311071943,Waitakere,Waitakere,Auckland,Auckland
+W9099,Fairview Heights,Queen Street,PUBLIC_BUS,21,WORK,Fairview Heights,-36.71007322,174.71678985,Queen Street,-36.84774104,174.76524972,15.904744479335337,Waitakere,Waitakere,Auckland,Auckland
+W9101,Torbay,Queen Street,PUBLIC_BUS,15,WORK,Torbay,-36.69512414,174.75092916,Queen Street,-36.84774104,174.76524972,17.01809429950763,Waitakere,Waitakere,Auckland,Auckland
+W9104,Glamorgan,Queen Street,PUBLIC_BUS,12,WORK,Glamorgan,-36.70130329,174.7405506,Queen Street,-36.84774104,174.76524972,16.431065617974905,Waitakere,Waitakere,Auckland,Auckland
+W9105,Oteha East,Queen Street,PUBLIC_BUS,24,WORK,Oteha East,-36.71657898,174.72207262,Queen Street,-36.84774104,174.76524972,15.082947923819695,Waitakere,Waitakere,Auckland,Auckland
+W9106,Northcross,Queen Street,PUBLIC_BUS,21,WORK,Northcross,-36.71165743,174.73076830000005,Queen Street,-36.84774104,174.76524972,15.440280921745346,Waitakere,Waitakere,Auckland,Auckland
+W9108,Waiake,Queen Street,PUBLIC_BUS,21,WORK,Waiake,-36.70665026,174.74439669999995,Queen Street,-36.84774104,174.76524972,15.798128892514308,Waitakere,Waitakere,Auckland,Auckland
+W9444,Somerville,Queen Street,PUBLIC_BUS,6,WORK,Somerville,-36.91234246,174.93394109,Queen Street,-36.84774104,174.76524972,16.635011779605772,Manukau,Waitakere,Auckland,Auckland
+W9630,Orewa North,Hobson Ridge North,PUBLIC_BUS,6,WORK,Orewa North,-36.58108865,174.67586463,Hobson Ridge North,-36.84707104,174.76276914,30.573518138291146,Rodney,Waitakere,Auckland,Auckland
+W9633,Orewa Central,Hobson Ridge North,PUBLIC_BUS,6,WORK,Orewa Central,-36.58726477,174.69445280000005,Hobson Ridge North,-36.84707104,174.76276914,29.523912786129152,Rodney,Waitakere,Auckland,Auckland
+W9634,Millwater North,Hobson Ridge North,PUBLIC_BUS,9,WORK,Millwater North,-36.601498299999996,174.67227556,Hobson Ridge North,-36.84707104,174.76276914,28.4726176573128,Rodney,Waitakere,Auckland,Auckland
+W9635,Millwater South,Hobson Ridge North,PUBLIC_BUS,9,WORK,Millwater South,-36.61231012,174.67000848,Hobson Ridge North,-36.84707104,174.76276914,27.38191117105089,Rodney,Waitakere,Auckland,Auckland
+W9637,Kingsway,Hobson Ridge North,PUBLIC_BUS,6,WORK,Kingsway,-36.60606427,174.68651435,Hobson Ridge North,-36.84707104,174.76276914,27.64701915738841,Rodney,Waitakere,Auckland,Auckland
+W9639,Red Beach East,Hobson Ridge North,PUBLIC_BUS,12,WORK,Red Beach East,-36.60592118,174.70488989,Hobson Ridge North,-36.84707104,174.76276914,27.306289731693482,Rodney,Waitakere,Auckland,Auckland
+W9645,Whangaparoa Central,Hobson Ridge North,PUBLIC_BUS,6,WORK,Whangaparoa Central,-36.63661523,174.73358327,Hobson Ridge North,-36.84707104,174.76276914,23.545675863753058,Rodney,Waitakere,Auckland,Auckland
+W9647,Stanmore Bay East,Hobson Ridge North,PUBLIC_BUS,6,WORK,Stanmore Bay East,-36.6293262,174.74176363,Hobson Ridge North,-36.84707104,174.76276914,24.284364967626104,Rodney,Waitakere,Auckland,Auckland
+W9648,Manly West,Hobson Ridge North,PUBLIC_BUS,6,WORK,Manly West,-36.63336524,174.75300037,Hobson Ridge North,-36.84707104,174.76276914,23.778938335689343,Rodney,Waitakere,Auckland,Auckland
+W9653,Manly East,Hobson Ridge North,PUBLIC_BUS,6,WORK,Manly East,-36.63338986,174.76128799,Hobson Ridge North,-36.84707104,174.76276914,23.76062968513897,Rodney,Waitakere,Auckland,Auckland
+W9659,Albany Heights,Hobson Ridge North,PUBLIC_BUS,12,WORK,Albany Heights,-36.71796472,174.69401393,Hobson Ridge North,-36.84707104,174.76276914,15.607274405651395,Waitakere,Waitakere,Auckland,Auckland
+W9660,Awaruku,Hobson Ridge North,PUBLIC_BUS,15,WORK,Awaruku,-36.69990012,174.72732927,Hobson Ridge North,-36.84707104,174.76276914,16.66631181075542,Waitakere,Waitakere,Auckland,Auckland
+W9661,Fairview Heights,Hobson Ridge North,PUBLIC_BUS,12,WORK,Fairview Heights,-36.71007322,174.71678985,Hobson Ridge North,-36.84707104,174.76276914,15.774267344498615,Waitakere,Waitakere,Auckland,Auckland
+W9664,Torbay,Hobson Ridge North,PUBLIC_BUS,9,WORK,Torbay,-36.69512414,174.75092916,Hobson Ridge North,-36.84707104,174.76276914,16.928605269210255,Waitakere,Waitakere,Auckland,Auckland
+W9666,Glamorgan,Hobson Ridge North,PUBLIC_BUS,12,WORK,Glamorgan,-36.70130329,174.7405506,Hobson Ridge North,-36.84707104,174.76276914,16.328993872829606,Waitakere,Waitakere,Auckland,Auckland
+W9668,Northcross,Hobson Ridge North,PUBLIC_BUS,18,WORK,Northcross,-36.71165743,174.73076830000005,Hobson Ridge North,-36.84707104,174.76276914,15.324658730093331,Waitakere,Waitakere,Auckland,Auckland
+W9670,Waiake,Hobson Ridge North,PUBLIC_BUS,9,WORK,Waiake,-36.70665026,174.74439669999995,Hobson Ridge North,-36.84707104,174.76276914,15.69958601559685,Waitakere,Waitakere,Auckland,Auckland
+W10517,Oteha East,Grafton,PUBLIC_BUS,6,WORK,Oteha East,-36.71657898,174.72207262,Grafton,-36.86013178,174.76828549,16.484295844888724,Waitakere,Waitakere,Auckland,Auckland
+W10518,Northcross,Grafton,PUBLIC_BUS,6,WORK,Northcross,-36.71165743,174.73076830000005,Grafton,-36.86013178,174.76828549,16.844264943530863,Waitakere,Waitakere,Auckland,Auckland
+W11239,Orewa Central,Victoria Park ,PUBLIC_BUS,6,WORK,Orewa Central,-36.58726477,174.69445280000005,Victoria Park,-36.84857807,174.75659124,29.57985955136494,Rodney,Waitakere,Auckland,Auckland
+W11240,Millwater North,Victoria Park ,PUBLIC_BUS,9,WORK,Millwater North,-36.601498299999996,174.67227556,Victoria Park,-36.84857807,174.75659124,28.48315755557109,Rodney,Waitakere,Auckland,Auckland
+W11242,Millwater South,Victoria Park ,PUBLIC_BUS,6,WORK,Millwater South,-36.61231012,174.67000848,Victoria Park,-36.84857807,174.75659124,27.381473986720362,Rodney,Waitakere,Auckland,Auckland
+W11245,Red Beach East,Victoria Park ,PUBLIC_BUS,6,WORK,Red Beach East,-36.60592118,174.70488989,Victoria Park,-36.84857807,174.75659124,27.372812976838194,Rodney,Waitakere,Auckland,Auckland
+W11247,Vipond,Victoria Park ,PUBLIC_BUS,6,WORK,Vipond,-36.61796366,174.7180399,Victoria Park,-36.84857807,174.75659124,25.872260104332,Rodney,Waitakere,Auckland,Auckland
+W11251,Whangaparoa Central,Victoria Park ,PUBLIC_BUS,9,WORK,Whangaparoa Central,-36.63661523,174.73358327,Victoria Park,-36.84857807,174.75659124,23.658185354909435,Rodney,Waitakere,Auckland,Auckland
+W11253,Stanmore Bay East,Victoria Park ,PUBLIC_BUS,9,WORK,Stanmore Bay East,-36.6293262,174.74176363,Victoria Park,-36.84857807,174.75659124,24.415472219024092,Rodney,Waitakere,Auckland,Auckland
+W11262,Long Bay,Victoria Park ,PUBLIC_BUS,6,WORK,Long Bay,-36.68946348,174.73306962,Victoria Park,-36.84857807,174.75659124,17.816355217613193,Waitakere,Waitakere,Auckland,Auckland
+W11264,Albany Heights,Victoria Park ,PUBLIC_BUS,12,WORK,Albany Heights,-36.71796472,174.69401393,Victoria Park,-36.84857807,174.75659124,15.556052610855259,Waitakere,Waitakere,Auckland,Auckland
+W11265,Awaruku,Victoria Park ,PUBLIC_BUS,18,WORK,Awaruku,-36.69990012,174.72732927,Victoria Park,-36.84857807,174.75659124,16.736410832572528,Waitakere,Waitakere,Auckland,Auckland
+W11266,Fairview Heights,Victoria Park ,PUBLIC_BUS,12,WORK,Fairview Heights,-36.71007322,174.71678985,Victoria Park,-36.84857807,174.75659124,15.80371032338816,Waitakere,Waitakere,Auckland,Auckland
+W11269,Torbay,Victoria Park ,PUBLIC_BUS,9,WORK,Torbay,-36.69512414,174.75092916,Victoria Park,-36.84857807,174.75659124,17.070749689564376,Waitakere,Waitakere,Auckland,Auckland
+W11271,Glamorgan,Victoria Park ,PUBLIC_BUS,15,WORK,Glamorgan,-36.70130329,174.7405506,Victoria Park,-36.84857807,174.75659124,16.4384101772718,Waitakere,Waitakere,Auckland,Auckland
+W11273,Northcross,Victoria Park ,PUBLIC_BUS,12,WORK,Northcross,-36.71165743,174.73076830000005,Victoria Park,-36.84857807,174.75659124,15.397599273973565,Waitakere,Waitakere,Auckland,Auckland
+W11275,Waiake,Victoria Park ,PUBLIC_BUS,9,WORK,Waiake,-36.70665026,174.74439669999995,Victoria Park,-36.84857807,174.75659124,15.818980177460835,Waitakere,Waitakere,Auckland,Auckland
+W11704,Birkdale North,Mount Wellington Industrial,PUBLIC_BUS,6,WORK,Birkdale North,-36.79368225,174.70092376,Mount Wellington Industrial,-36.92046064,174.85162182,19.454969158319628,Waitakere,Waitakere,Auckland,Auckland
+W14296,Awaruku,Queen Street South West,PUBLIC_BUS,6,WORK,Awaruku,-36.69990012,174.72732927,Queen Street South West,-36.85433303,174.76134796,17.437397618812447,Waitakere,Waitakere,Auckland,Auckland
+W14302,Oteha East,Queen Street South West,PUBLIC_BUS,6,WORK,Oteha East,-36.71657898,174.72207262,Queen Street South West,-36.85433303,174.76134796,15.711804577485811,Waitakere,Waitakere,Auckland,Auckland
+W14304,Waiake,Queen Street South West,PUBLIC_BUS,6,WORK,Waiake,-36.70665026,174.74439669999995,Queen Street South West,-36.85433303,174.76134796,16.49082299440747,Waitakere,Waitakere,Auckland,Auckland
+W17395,Albany Heights,Symonds Street North West,PUBLIC_BUS,6,WORK,Albany Heights,-36.71796472,174.69401393,Symonds Street North West,-36.85498533,174.76593774,16.52755127466984,Waitakere,Waitakere,Auckland,Auckland
+W17400,Oteha East,Symonds Street North West,PUBLIC_BUS,6,WORK,Oteha East,-36.71657898,174.72207262,Symonds Street North West,-36.85498533,174.76593774,15.878106780799165,Waitakere,Waitakere,Auckland,Auckland
+W34901,Birchville-Brown Owl,Wellington Central,PUBLIC_BUS,6,WORK,Birchville-Brown Owl,-41.08596013,175.11315290000005,Wellington Central,-41.2849345,174.77572593,35.872525045557325,Upper Hutt,Wellington,Wellington,Wellington
+W34907,Totara Park,Wellington Central,PUBLIC_BUS,6,WORK,Totara Park,-41.1093256,175.08443163,Wellington Central,-41.2849345,174.77572593,32.37941862879475,Upper Hutt,Wellington,Wellington,Wellington
+W34931,Stokes Valley Central,Wellington Central,PUBLIC_BUS,6,WORK,Stokes Valley Central,-41.16891621,174.97736126,Wellington Central,-41.2849345,174.77572593,21.231602582819,Hutt city,Wellington,Wellington,Wellington
+W34935,Stokes Valley North,Wellington Central,PUBLIC_BUS,9,WORK,Stokes Valley North,-41.166931700000006,174.99312135,Wellington Central,-41.2849345,174.77572593,22.42144847957863,Hutt city,Wellington,Wellington,Wellington
+W34949,Manuka,Wellington Central,PUBLIC_BUS,6,WORK,Manuka,-41.18502912,174.98698353,Wellington Central,-41.2849345,174.77572593,20.868006456182915,Hutt city,Wellington,Wellington,Wellington
+W34951,Arakura,Wellington Central,PUBLIC_BUS,12,WORK,Arakura,-41.23870795,174.94479641,Wellington Central,-41.2849345,174.77572593,15.037643785213067,Hutt city,Wellington,Wellington,Wellington
+W34955,Glendale,Wellington Central,PUBLIC_BUS,15,WORK,Glendale,-41.2429916,174.95473935,Wellington Central,-41.2849345,174.77572593,15.672476389923824,Hutt city,Wellington,Wellington,Wellington
+W34958,Homedale East,Wellington Central,PUBLIC_BUS,6,WORK,Homedale East,-41.269130600000004,174.95843259,Wellington Central,-41.2849345,174.77572593,15.36889132522634,Hutt city,Wellington,Wellington,Wellington
+W42443,Sumner,Ilam University,PUBLIC_BUS,6,WORK,Sumner,-43.57493364,172.7635625,Ilam University,-43.52336127,172.57826459,15.996783499930991,Christchurch,Christchurch,Canterbury,Canterbury
+W43085,Rolleston North East,Christchurch Central-West,PUBLIC_BUS,6,WORK,Rolleston North East,-43.59059543,172.39602587,Christchurch Central-West,-43.52780609,172.6306519,20.153872429324814,Selwyn,Christchurch,Canterbury,Canterbury
+W43563,Lincoln West,Christchurch Central,PUBLIC_BUS,6,WORK,Lincoln West,-43.64345571,172.47791199,Christchurch Central,-43.53243368,172.63601635,17.735562209984753,Selwyn,Christchurch,Canterbury,Canterbury
+W48598,Arrowtown,Queenstown Central,PUBLIC_BUS,12,WORK,Arrowtown,-44.9457261,168.83841556,Queenstown Central,-45.0327315,168.65460343,17.394000512139655,Queenstown-Lakes,Queenstown-Lakes,Otago,Otago

@@ -739,7 +739,7 @@ function MapVisualizer({
         work_destinations_DISTRICT.push("");
       }
     }
-    console.log(work_departures.length, work_destinations.length, education_departures.length, education_destinations.length)
+    // console.log(work_departures.length, work_destinations.length, education_departures.length, education_destinations.length)
   
     fetch(DATA_URL_ROOT + "/setup", {
       method: 'POST',

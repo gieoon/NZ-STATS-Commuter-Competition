@@ -13,6 +13,7 @@ import {
     MAP_OPTIONS,
     MODES_OF_TRANSPORT,
     DATA_URL_ROOT,
+    COMMUTE_METHOD_2_DISPLAY,
 } from '../constants'
 import {
     formatNumber, 
@@ -94,12 +95,16 @@ function LeftPanel({
 
     const updateDestinationPopup = (destination1, destination) => {
       // console.log('showing destination: ', destination, destinationData[destination])
-      if(!destinationData) 
+      if(!destinationData || !destinationData[destination]) 
         return;
       // global.destinationData = destinationData;
       var d = Object.keys(destinationData[destination])
         .filter(f => {
-          return ((Number(destinationData[destination][f]) > 0 || f.includes('common')) && (!f.includes('home') && !f.includes('total')))
+          return (
+            (Number(destinationData[destination][f]) > 0 
+            || (f.includes('common') && destinationData[destination][f] !== "-990")
+            ) 
+            && (!f.includes('home') && !f.includes('total')))
         })
         .map((key) => [key, destinationData[destination][key]])
       // console.log(d)
@@ -117,10 +122,15 @@ function LeftPanel({
         <div className="LeftPanel">
           <div className="inner">
             <div className="title"> 
-                <Link to="/">
-                  <span>New Zealand </span>
-                  Commute  
+              <div className="stats-link">
+                <Link to="/stats">
+                  View more stats
                 </Link>
+              </div>
+              <Link to="/">
+                <span>New Zealand </span>
+                Commute  
+              </Link>
             </div>
 
             <Suspense fallback={<div></div>}>
@@ -145,52 +155,57 @@ function LeftPanel({
             {/* <div style={{height:"16px"}}></div> */}
             <Suspense fallback={<div></div>}>
               <div className="meta">
-                <h2 className={classnames("total",clickedData.COMMUTE_TYPE)}>
-                  <div>
-                    {t("From ")}
-                    {clickedData.DEPARTURE_NAME_1}
-                    {clickedData.departure_SA22018_V1_NAME && clickedData.departure_SA22018_V1_NAME.length ? ", " : ""}
-                    <div className="destination-link"
-                      onClick={()=>{updateDestinationPopup(clickedData.DEPARTURE_NAME_1, clickedData.departure_SA22018_V1_NAME)}}
-                    >{t(clickedData.departure_SA22018_V1_NAME)}</div>
-                    <div style={{marginTop:"8px"}}>
-                      {t("To ")}
-                      {clickedData.DESTINATION_NAME_1}
-                      { clickedData.DESTINATION_NAME_1 //Or, use DESTINATION_NAME_2
-                      //hoveredData.hoveredDestination.length 
-                        ? ", "
-                        : ""  
-                      }
-                      <div className="destination-link"
-                        onClick={()=>{updateDestinationPopup(clickedData.DESTINATION_NAME_1, clickedData.destination_SA22018_V1_NAME)}}
-                      >{clickedData.destination_SA22018_V1_NAME}</div>
-                    </div>
+                {
+                  clickedData.departure_SA22018_V1_NAME && clickedData.departure_SA22018_V1_NAME.length
+                  ? <h2 className={classnames("total",clickedData.COMMUTE_TYPE)}>
+                      <div>
+                        {t("From ")}
+                        {clickedData.DEPARTURE_NAME_1}
+                        {clickedData.departure_SA22018_V1_NAME && clickedData.departure_SA22018_V1_NAME.length ? ", " : ""}
+                        <div className="destination-link"
+                          onClick={()=>{updateDestinationPopup(clickedData.DEPARTURE_NAME_1, clickedData.departure_SA22018_V1_NAME)}}
+                        >{t(clickedData.departure_SA22018_V1_NAME)}</div>
+                        <div style={{marginTop:"8px"}}>
+                          {t("To ")}
+                          {clickedData.DESTINATION_NAME_1}
+                          { clickedData.DESTINATION_NAME_1 //Or, use DESTINATION_NAME_2
+                          //hoveredData.hoveredDestination.length 
+                            ? ", "
+                            : ""  
+                          }
+                          <div className="destination-link"
+                            onClick={()=>{updateDestinationPopup(clickedData.DESTINATION_NAME_1, clickedData.destination_SA22018_V1_NAME)}}
+                          >{clickedData.destination_SA22018_V1_NAME}</div>
+                        </div>
 
-                    {/* { destinationData
-                      ? <div>
-                        <Destination 
-                          obj={destinationData[currentDestinationData.from]}
-                          type="from"
-                        />
-                        <Destination 
-                          obj={destinationData[currentDestinationData.to]}
-                          type="to"
-                        />
+                        {/* { destinationData
+                          ? <div>
+                            <Destination 
+                              obj={destinationData[currentDestinationData.from]}
+                              type="from"
+                            />
+                            <Destination 
+                              obj={destinationData[currentDestinationData.to]}
+                              type="to"
+                            />
+                          </div>
+                          : ""
+                        } */}
                       </div>
-                      : ""
-                    } */}
-                  </div>
+                    
+                      
+                      <div style={{alignSelf: "center"}}>
+                        <animated.h1>
+                          {km.distance.interpolate((distance) => 
+                                // !isNaN(distance) ? distance.toFixed(2) + "km" : ""
+                                Number(distance).toFixed(2).toString() + "km"
+                          )}
+                        </animated.h1>
+                      </div>
+                    </h2>
+                  : ""
+                }
                 
-                  
-                  <div style={{alignSelf: "center"}}>
-                    <animated.h1>
-                      {km.distance.interpolate((distance) => 
-                            // !isNaN(distance) ? distance.toFixed(2) + "km" : ""
-                            distance.toFixed(2).toString() + "km"
-                      )}
-                    </animated.h1>
-                  </div>
-                </h2>
               </div>
             </Suspense>
 
@@ -215,6 +230,8 @@ function LeftPanel({
                   .substring(1)
                   .toLowerCase()
                 }
+                <br/>
+                {COMMUTE_METHOD_2_DISPLAY[clickedData.COMMUTE_TYPE]}
               </h2>
             </div>
 

@@ -3,7 +3,6 @@ import csv
 import pandas as pd
 
 MODES_OF_TRANSPORT = [
-  "home", 
   "own_vehicle",
   "passenger",
   "train",
@@ -13,6 +12,32 @@ MODES_OF_TRANSPORT = [
   "ferry",
   "other"
 ]
+
+# Ignore this and use this as a compression mechanism
+COUNT_CUTOFFS = {
+  "work":       [0,0,0,0,0,30,30,30,10,5,2,0],
+  "education":  [0,0,0,0,0,30,30,30,10,5,2,0]
+}
+
+HAVERSINE_DISTANCE_CUTOFFS = {
+  "work": [100, 65, 45, 32, 25, 20, 15, 10, 7, 5, 3, 0],
+  "education": [100, 65, 45, 32, 25, 20, 15, 10, 7, 5, 3, 0]
+}
+
+
+def createData(commutePurpose, commuteType):
+    print('--------------------------------------')
+    print(commutePurpose.capitalize())
+    print('--------------------------------------')
+    in_df = pd.read_csv('./commuteData/{}/{}.csv'.format(commutePurpose,commuteType))
+    for i in range(5,17):
+        out_df = in_df.loc[in_df['HAVERSINE_DISTANCE'] >= HAVERSINE_DISTANCE_CUTOFFS[commutePurpose][i-5]]
+        # out_df = in_df.loc[(in_df['COUNT'] >= COUNT_CUTOFFS[commutePurpose][i-5]) & (in_df['HAVERSINE_DISTANCE'] >= HAVERSINE_DISTANCE_CUTOFFS[commutePurpose][i-5])]
+        print(i, len(out_df))
+        out_df.to_csv('./zoomData/{}/{}_{}_{}.csv'.format(commutePurpose,commutePurpose, commuteType,i), index=False)
+
+
+'''
 # TODO, Instead of using purely haversine distance, use the kmeans to create clsters of commute paths?
 def createZoomData(dataType,commuteType):
     commute_df = pd.read_csv('./commuteData/{}/{}.csv'.format(dataType,commuteType))
@@ -66,8 +91,9 @@ def createZoomData(dataType,commuteType):
     zoom_14_df.to_csv('./zoomData/{}/{}_{}_14.csv'.format(dataType,dataType,commuteType), index=False)
     zoom_15_df.to_csv('./zoomData/{}/{}_{}_15.csv'.format(dataType,dataType,commuteType), index=False)
     zoom_16_df.to_csv('./zoomData/{}/{}_{}_16.csv'.format(dataType,dataType,commuteType), index=False)
+'''
 
 for mode in MODES_OF_TRANSPORT:
     print("processing: ", mode)
-    createZoomData("education", mode)
-    createZoomData("work", mode)
+    createData("education", mode)
+    createData("work", mode)

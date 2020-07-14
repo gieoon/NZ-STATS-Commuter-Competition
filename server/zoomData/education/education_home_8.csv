@@ -1,1 +1,47 @@
 id,SA2_name_usual_residence_address,SA2_name_educational_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1
+E148,Kaikohe,Kaikohe,STUDY_AT_HOME,69,EDUCATION,Kaikohe,-35.40792422,173.79767516,Kaikohe,-35.40792422,173.79767516,0.0,Far North,Far North,Northland,Northland
+E750,Maungatapere,Maungatapere,STUDY_AT_HOME,66,EDUCATION,Maungatapere,-35.76206371,174.15473729,Maungatapere,-35.76206371,174.15473729,0.0,Whangarei,Whangarei,Northland,Northland
+E1615,Kaipara Coastal,Kaipara Coastal,STUDY_AT_HOME,72,EDUCATION,Kaipara Coastal,-35.72900181,173.65124289,Kaipara Coastal,-35.72900181,173.65124289,0.0,Kaipara,Kaipara,Northland,Northland
+E1624,Dargaville,Dargaville,STUDY_AT_HOME,75,EDUCATION,Dargaville,-35.93920158,173.86524045,Dargaville,-35.93920158,173.86524045,0.0,Kaipara,Kaipara,Northland,Northland
+E3247,Whenuapai,Whenuapai,STUDY_AT_HOME,93,EDUCATION,Whenuapai,-36.79162758,174.62143068,Whenuapai,-36.79162758,174.62143068,0.0,Waitakere,Waitakere,Auckland,Auckland
+E8728,Papakura Kelvin,Papakura Kelvin,STUDY_AT_HOME,66,EDUCATION,Papakura Kelvin,-37.05933436,174.96239449,Papakura Kelvin,-37.05933436,174.96239449,0.0,Franklin,Franklin,Auckland,Auckland
+E8788,Pukekohe North West,Pukekohe North West,STUDY_AT_HOME,72,EDUCATION,Pukekohe North West,-37.18225476,174.89580342,Pukekohe North West,-37.18225476,174.89580342,0.0,Franklin,Franklin,Auckland,Auckland
+E8828,Pukekohe West,Pukekohe West,STUDY_AT_HOME,66,EDUCATION,Pukekohe West,-37.20097025,174.88803986,Pukekohe West,-37.20097025,174.88803986,0.0,Franklin,Franklin,Auckland,Auckland
+E9727,Peachgrove,Peachgrove,STUDY_AT_HOME,69,EDUCATION,Peachgrove,-37.77692046,175.2973258,Peachgrove,-37.77692046,175.2973258,0.0,Hamilton,Hamilton,Waikato,Waikato
+E10264,Bethlehem Central,Bethlehem Central,STUDY_AT_HOME,69,EDUCATION,Bethlehem Central,-37.706587899999995,176.11498118,Bethlehem Central,-37.706587899999995,176.11498118,0.0,Western Bay of Plenty,Western Bay of Plenty,Bay of Plenty,Bay of Plenty
+E10315,Rototuna Central,Rototuna Central,STUDY_AT_HOME,69,EDUCATION,Rototuna Central,-37.72662295,175.26539165,Rototuna Central,-37.72662295,175.26539165,0.0,Hamilton,Hamilton,Waikato,Waikato
+E10449,Fairfield (Hamilton City),Fairfield (Hamilton City),STUDY_AT_HOME,69,EDUCATION,Fairfield (Hamilton City),-37.76889278,175.284084,Fairfield (Hamilton City),-37.76889278,175.284084,0.0,Hamilton,Hamilton,Waikato,Waikato
+E10734,Putararu,Putararu,STUDY_AT_HOME,69,EDUCATION,Putararu,-38.05293796,175.78466514,Putararu,-38.05293796,175.78466514,0.0,South Waikato,South Waikato,Waikato,Waikato
+E11926,Lynmore,Lynmore,STUDY_AT_HOME,75,EDUCATION,Lynmore,-38.14940578,176.28895362,Lynmore,-38.14940578,176.28895362,0.0,Rotorua,Rotorua,Bay of Plenty,Bay of Plenty
+E12434,Wairoa,Wairoa,STUDY_AT_HOME,93,EDUCATION,Wairoa,-39.03908469,177.41898076,Wairoa,-39.03908469,177.41898076,0.0,Wairoa,Wairoa,Hawke's Bay,Hawke's Bay
+E12463,Bluff Hill,Bluff Hill,STUDY_AT_HOME,66,EDUCATION,Bluff Hill,-39.48081517,176.91538913,Bluff Hill,-39.48081517,176.91538913,0.0,Napier,Napier,Hawke's Bay,Hawke's Bay
+E13190,Spotswood,Spotswood,STUDY_AT_HOME,87,EDUCATION,Spotswood,-39.07096507,174.02427884,Spotswood,-39.07096507,174.02427884,0.0,New Plymouth,New Plymouth,Taranaki,Taranaki
+E13271,Welbourn,Welbourn,STUDY_AT_HOME,66,EDUCATION,Welbourn,-39.08571024,174.09311599999995,Welbourn,-39.08571024,174.09311599999995,0.0,New Plymouth,New Plymouth,Taranaki,Taranaki
+E13331,Westown ,Westown ,STUDY_AT_HOME,81,EDUCATION,Westown,-39.0747742,174.06011109,Westown,-39.0747742,174.06011109,0.0,New Plymouth,New Plymouth,Taranaki,Taranaki
+E13410,Lower Vogeltown,Lower Vogeltown,STUDY_AT_HOME,69,EDUCATION,Lower Vogeltown,-39.07209853,174.0782174,Lower Vogeltown,-39.07209853,174.0782174,0.0,New Plymouth,New Plymouth,Taranaki,Taranaki
+E13420,Bell Block West,Bell Block West,STUDY_AT_HOME,90,EDUCATION,Bell Block West,-39.02995252,174.13758616,Bell Block West,-39.02995252,174.13758616,0.0,New Plymouth,New Plymouth,Taranaki,Taranaki
+E13457,Inglewood,Inglewood,STUDY_AT_HOME,78,EDUCATION,Inglewood,-39.15653753,174.20152057,Inglewood,-39.15653753,174.20152057,0.0,New Plymouth,New Plymouth,Taranaki,Taranaki
+E14286,Makino,Makino,STUDY_AT_HOME,66,EDUCATION,Makino,-40.20622477,175.56555066,Makino,-40.20622477,175.56555066,0.0,Manawatu,Manawatu,Manawatu-Wanganui,Manawatu-Wanganui
+E14376,Awapuni South ,Awapuni South ,STUDY_AT_HOME,84,EDUCATION,Awapuni South,-40.37784493,175.59343472,Awapuni South,-40.37784493,175.59343472,0.0,Palmerston North,Palmerston North,Manawatu-Wanganui,Manawatu-Wanganui
+E14466,Ashhurst,Ashhurst,STUDY_AT_HOME,75,EDUCATION,Ashhurst,-40.29115251,175.75860165,Ashhurst,-40.29115251,175.75860165,0.0,Palmerston North,Palmerston North,Manawatu-Wanganui,Manawatu-Wanganui
+E14564,Takaro North,Takaro North,STUDY_AT_HOME,78,EDUCATION,Takaro North,-40.34988583,175.59869127,Takaro North,-40.34988583,175.59869127,0.0,Palmerston North,Palmerston North,Manawatu-Wanganui,Manawatu-Wanganui
+E14627,Palmerston North Hospital,Palmerston North Hospital,STUDY_AT_HOME,66,EDUCATION,Palmerston North Hospital,-40.34174356,175.61482217,Palmerston North Hospital,-40.34174356,175.61482217,0.0,Palmerston North,Palmerston North,Manawatu-Wanganui,Manawatu-Wanganui
+E14655,Westbrook,Westbrook,STUDY_AT_HOME,66,EDUCATION,Westbrook,-40.35570204,175.57802859,Westbrook,-40.35570204,175.57802859,0.0,Palmerston North,Palmerston North,Manawatu-Wanganui,Manawatu-Wanganui
+E14662,West End,West End,STUDY_AT_HOME,66,EDUCATION,West End,-40.36797536,175.60339294,West End,-40.36797536,175.60339294,0.0,Palmerston North,Palmerston North,Manawatu-Wanganui,Manawatu-Wanganui
+E14668,Awapuni North ,Awapuni North ,STUDY_AT_HOME,69,EDUCATION,Awapuni North,-40.37027268,175.58870846,Awapuni North,-40.37027268,175.58870846,0.0,Palmerston North,Palmerston North,Manawatu-Wanganui,Manawatu-Wanganui
+E14675,Kelvin Grove West,Kelvin Grove West,STUDY_AT_HOME,69,EDUCATION,Kelvin Grove West,-40.32856085,175.64441186,Kelvin Grove West,-40.32856085,175.64441186,0.0,Palmerston North,Palmerston North,Manawatu-Wanganui,Manawatu-Wanganui
+E15224,Paraparaumu Beach North,Paraparaumu Beach North,STUDY_AT_HOME,78,EDUCATION,Paraparaumu Beach North,-40.88107643,174.99882094,Paraparaumu Beach North,-40.88107643,174.99882094,0.0,Kapiti Coast,Kapiti Coast,Wellington,Wellington
+E15415,Raumati South,Raumati South,STUDY_AT_HOME,87,EDUCATION,Raumati South,-40.94126612,174.98329156,Raumati South,-40.94126612,174.98329156,0.0,Kapiti Coast,Kapiti Coast,Wellington,Wellington
+E15564,Thorndon,Thorndon,STUDY_AT_HOME,78,EDUCATION,Thorndon,-41.27246445,174.77422734,Thorndon,-41.27246445,174.77422734,0.0,Wellington,Wellington,Wellington,Wellington
+E15965,Trentham South,Trentham South,STUDY_AT_HOME,69,EDUCATION,Trentham South,-41.14890544,175.04082561,Trentham South,-41.14890544,175.04082561,0.0,Upper Hutt,Upper Hutt,Wellington,Wellington
+E16034,Mount Victoria,Mount Victoria,STUDY_AT_HOME,69,EDUCATION,Mount Victoria,-41.29882878,174.78763827,Mount Victoria,-41.29882878,174.78763827,0.0,Wellington,Wellington,Wellington,Wellington
+E16639,Maoribank,Maoribank,STUDY_AT_HOME,69,EDUCATION,Maoribank,-41.10626518,175.10879212,Maoribank,-41.10626518,175.10879212,0.0,Upper Hutt,Upper Hutt,Wellington,Wellington
+E16704,Maungaraki,Maungaraki,STUDY_AT_HOME,75,EDUCATION,Maungaraki,-41.20840978,174.87990307,Maungaraki,-41.20840978,174.87990307,0.0,Hutt city,Hutt city,Wellington,Wellington
+E16932,Karori Park,Karori Park,STUDY_AT_HOME,69,EDUCATION,Karori Park,-41.28258876,174.72565725,Karori Park,-41.28258876,174.72565725,0.0,Wellington,Wellington,Wellington,Wellington
+E17175,Newtown West,Newtown West,STUDY_AT_HOME,72,EDUCATION,Newtown West,-41.31289315,174.77608237,Newtown West,-41.31289315,174.77608237,0.0,Wellington,Wellington,Wellington,Wellington
+E17188,Kingston-Mornington-Vogeltown,Kingston-Mornington-Vogeltown,STUDY_AT_HOME,75,EDUCATION,Kingston-Mornington-Vogeltown,-41.31951669,174.76580188,Kingston-Mornington-Vogeltown,-41.31951669,174.76580188,0.0,Wellington,Wellington,Wellington,Wellington
+E17512,Moutere Hills,Moutere Hills,STUDY_AT_HOME,75,EDUCATION,Moutere Hills,-41.26413088,173.0336074,Moutere Hills,-41.26413088,173.0336074,0.0,Tasman,Tasman,Nelson,Nelson
+E19783,Bishopdale North,Bishopdale North,STUDY_AT_HOME,66,EDUCATION,Bishopdale North,-43.48356448,172.58765972,Bishopdale North,-43.48356448,172.58765972,0.0,Christchurch,Christchurch,Canterbury,Canterbury
+E20699,Rolleston North East,Rolleston North East,STUDY_AT_HOME,96,EDUCATION,Rolleston North East,-43.59059543,172.39602587,Rolleston North East,-43.59059543,172.39602587,0.0,Selwyn,Selwyn,Canterbury,Canterbury
+E20736,Rolleston North West,Rolleston North West,STUDY_AT_HOME,69,EDUCATION,Rolleston North West,-43.60086348,172.36340669999996,Rolleston North West,-43.60086348,172.36340669999996,0.0,Selwyn,Selwyn,Canterbury,Canterbury
+E22352,Otatara,Otatara,STUDY_AT_HOME,66,EDUCATION,Otatara,-46.43520129,168.28791931,Otatara,-46.43520129,168.28791931,0.0,Invercargill,Invercargill,Southland,Southland

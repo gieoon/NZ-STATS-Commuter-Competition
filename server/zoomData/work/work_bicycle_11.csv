@@ -1,8 +1,8 @@
 id,SA2_name_usual_residence_address,SA2_name_workplace_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1
-W34922,Belmont (Lower Hutt City),Wellington Central,BICYCLE,9,EDUCATION,Belmont (Lower Hutt City),-41.1900686,174.92123901,Wellington Central,-41.2849345,174.77572593,16.103320950047152,Hutt city,Wellington,Wellington,Wellington
-W34928,Boulcott,Wellington Central,BICYCLE,6,EDUCATION,Boulcott,-41.19937004,174.92439872,Wellington Central,-41.2849345,174.77572593,15.653866863733635,Hutt city,Wellington,Wellington,Wellington
-W34937,Epuni West,Wellington Central,BICYCLE,6,EDUCATION,Epuni West,-41.20573675,174.92732065,Wellington Central,-41.2849345,174.77572593,15.43344580398304,Hutt city,Wellington,Wellington,Wellington
-W34942,Epuni East,Wellington Central,BICYCLE,6,EDUCATION,Epuni East,-41.20891382,174.93484484,Wellington Central,-41.2849345,174.77572593,15.761573639259668,Hutt city,Wellington,Wellington,Wellington
-W39468,Golden Bay/Mohua,Takaka,BICYCLE,12,EDUCATION,Golden Bay/Mohua,-40.86935481,172.57195655,Takaka,-40.86055176,172.81878698,20.77942410807129,Tasman,Tasman,Nelson,Nelson
-W40708,Kaikoura Ranges,Kaikoura,BICYCLE,12,EDUCATION,Kaikoura Ranges,-42.19710797,173.64408497,Kaikoura,-42.4127248,173.67667951,24.124870547432977,Kaikoura,Kaikoura,Canterbury,Canterbury
-W50232,Te Anau,Inland water Lake Te Anau,BICYCLE,6,EDUCATION,Te Anau,-45.413515600000004,167.72303047,Inland water Lake Te Anau,-45.2107913,167.73070296,22.549896464099326,Southland,Southland,Southland,Southland
+W34922,Belmont (Lower Hutt City),Wellington Central,BICYCLE,9,WORK,Belmont (Lower Hutt City),-41.1900686,174.92123901,Wellington Central,-41.2849345,174.77572593,16.103320950047152,Hutt city,Wellington,Wellington,Wellington
+W34928,Boulcott,Wellington Central,BICYCLE,6,WORK,Boulcott,-41.19937004,174.92439872,Wellington Central,-41.2849345,174.77572593,15.653866863733635,Hutt city,Wellington,Wellington,Wellington
+W34937,Epuni West,Wellington Central,BICYCLE,6,WORK,Epuni West,-41.20573675,174.92732065,Wellington Central,-41.2849345,174.77572593,15.43344580398304,Hutt city,Wellington,Wellington,Wellington
+W34942,Epuni East,Wellington Central,BICYCLE,6,WORK,Epuni East,-41.20891382,174.93484484,Wellington Central,-41.2849345,174.77572593,15.761573639259668,Hutt city,Wellington,Wellington,Wellington
+W39468,Golden Bay/Mohua,Takaka,BICYCLE,12,WORK,Golden Bay/Mohua,-40.86935481,172.57195655,Takaka,-40.86055176,172.81878698,20.77942410807129,Tasman,Tasman,Nelson,Nelson
+W40708,Kaikoura Ranges,Kaikoura,BICYCLE,12,WORK,Kaikoura Ranges,-42.19710797,173.64408497,Kaikoura,-42.4127248,173.67667951,24.124870547432977,Kaikoura,Kaikoura,Canterbury,Canterbury
+W50232,Te Anau,Inland water Lake Te Anau,BICYCLE,6,WORK,Te Anau,-45.413515600000004,167.72303047,Inland water Lake Te Anau,-45.2107913,167.73070296,22.549896464099326,Southland,Southland,Southland,Southland

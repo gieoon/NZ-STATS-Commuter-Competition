@@ -1,7 +1,7 @@
 id,SA2_name_usual_residence_address,SA2_name_workplace_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1
-W34890,Whitby,Wellington Central,OTHER,6,EDUCATION,Whitby,-41.11717134,174.89107268,Wellington Central,-41.2849345,174.77572593,21.002740828457913,Porirua,Wellington,Wellington,Wellington
-W34892,Endeavour,Wellington Central,OTHER,12,EDUCATION,Endeavour,-41.11459136,174.90415779,Wellington Central,-41.2849345,174.77572593,21.77688622922424,Porirua,Wellington,Wellington,Wellington
-W34906,Trentham North,Wellington Central,OTHER,9,EDUCATION,Trentham North,-41.1328255,175.04564394,Wellington Central,-41.2849345,174.77572593,28.211870151397534,Upper Hutt,Wellington,Wellington,Wellington
-W34907,Totara Park,Wellington Central,OTHER,6,EDUCATION,Totara Park,-41.1093256,175.08443163,Wellington Central,-41.2849345,174.77572593,32.37941862879475,Upper Hutt,Wellington,Wellington,Wellington
-W34935,Stokes Valley North,Wellington Central,OTHER,6,EDUCATION,Stokes Valley North,-41.166931700000006,174.99312135,Wellington Central,-41.2849345,174.77572593,22.42144847957863,Hutt city,Wellington,Wellington,Wellington
-W47808,Ashburton Forks,Ealing-Lowcliffe,OTHER,9,EDUCATION,Ashburton Forks,-43.78492258,171.43181981,Ealing-Lowcliffe,-44.03656373,171.49741748,28.470367780342674,Ashburton,Ashburton,Canterbury,Canterbury
+W34890,Whitby,Wellington Central,OTHER,6,WORK,Whitby,-41.11717134,174.89107268,Wellington Central,-41.2849345,174.77572593,21.002740828457913,Porirua,Wellington,Wellington,Wellington
+W34892,Endeavour,Wellington Central,OTHER,12,WORK,Endeavour,-41.11459136,174.90415779,Wellington Central,-41.2849345,174.77572593,21.77688622922424,Porirua,Wellington,Wellington,Wellington
+W34906,Trentham North,Wellington Central,OTHER,9,WORK,Trentham North,-41.1328255,175.04564394,Wellington Central,-41.2849345,174.77572593,28.211870151397534,Upper Hutt,Wellington,Wellington,Wellington
+W34907,Totara Park,Wellington Central,OTHER,6,WORK,Totara Park,-41.1093256,175.08443163,Wellington Central,-41.2849345,174.77572593,32.37941862879475,Upper Hutt,Wellington,Wellington,Wellington
+W34935,Stokes Valley North,Wellington Central,OTHER,6,WORK,Stokes Valley North,-41.166931700000006,174.99312135,Wellington Central,-41.2849345,174.77572593,22.42144847957863,Hutt city,Wellington,Wellington,Wellington
+W47808,Ashburton Forks,Ealing-Lowcliffe,OTHER,9,WORK,Ashburton Forks,-43.78492258,171.43181981,Ealing-Lowcliffe,-44.03656373,171.49741748,28.470367780342674,Ashburton,Ashburton,Canterbury,Canterbury

@@ -1,1 +1,5 @@
 id,SA2_name_usual_residence_address,SA2_name_educational_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1
+E3247,Whenuapai,Whenuapai,STUDY_AT_HOME,93,EDUCATION,Whenuapai,-36.79162758,174.62143068,Whenuapai,-36.79162758,174.62143068,0.0,Waitakere,Waitakere,Auckland,Auckland
+E12434,Wairoa,Wairoa,STUDY_AT_HOME,93,EDUCATION,Wairoa,-39.03908469,177.41898076,Wairoa,-39.03908469,177.41898076,0.0,Wairoa,Wairoa,Hawke's Bay,Hawke's Bay
+E13420,Bell Block West,Bell Block West,STUDY_AT_HOME,90,EDUCATION,Bell Block West,-39.02995252,174.13758616,Bell Block West,-39.02995252,174.13758616,0.0,New Plymouth,New Plymouth,Taranaki,Taranaki
+E20699,Rolleston North East,Rolleston North East,STUDY_AT_HOME,96,EDUCATION,Rolleston North East,-43.59059543,172.39602587,Rolleston North East,-43.59059543,172.39602587,0.0,Selwyn,Selwyn,Canterbury,Canterbury

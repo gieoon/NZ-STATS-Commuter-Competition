@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
-
+import { Link } from 'react-router-dom';
 import {
   DATA_URL_ROOT
 } from '../constants';
@@ -34,9 +34,16 @@ function FAQ(props) {
   return (
     <div className="FAQ">
       <Helmet>
-        <title>FAQ - NZ Commuter Data</title>
+        <title>About | NZ Commute</title>
         <meta name="title" content="Visualization of Commuter data in NZ" />
       </Helmet>
+      <div className="title"> 
+        <Link to="/">
+          <span>New Zealand </span>
+          Commute  
+        </Link>
+      </div>
+
       {faq.map((faq, index) => {
         return (
           <div

@@ -19,6 +19,8 @@ import {
 import {
     txt2Array
 } from '../utils/commonFunctions';
+// import { divIcon } from 'leaflet';
+// import DivIcon from 'react-leaflet-div-icon';
 // import arrow_right from '../assets/right.svg';
 // import MarkerClusterGroup from "react-leaflet-markercluster";
 
@@ -93,6 +95,7 @@ global.commuteEducationCurves = commuteEducationCurves;
     const [currentLatLng, setCurrentLatLng] = useState({
         lat: position[0],
         lng: position[1],
+        zoom: MIN_ZOOM,
     })
 
     // Circle highlighting current selection on the map
@@ -124,25 +127,29 @@ global.commuteEducationCurves = commuteEducationCurves;
     // }, [currentCommuteTypes])
 
     useEffect(()=>{
-        // console.log("Location updated: ", location);
-        var reg = /[\-0-9.]+\/[\-0-9.]+$/;
+        
+        var reg = /[\-0-9.]+\/[\-0-9.]+\/[\-0-9.]+$/;
+        // console.log(location.pathname)
         var match = location.pathname.match(reg);
+        // console.log(match);
         if(match && match.length){
             var lat = match[0].split('/')[0];
             var lng = match[0].split('/')[1];
-            // console.log(lat, lng);
+            var z = match[0].split('/')[2];
+            // console.log("Location updated: ", match, lat, lng, z);
             setCurrentLatLng({
                 lat: lat,
-                lng: lng
+                lng: lng,
+                zoom: z,
             });
             // Zoom into this location, but not the first time
-            if(!initializing){
-                mapRef.current.leafletElement.setView([lat,lng], 12); //9
+            // if(!initializing){
+                mapRef.current.leafletElement.setView([lat,lng], z); //9
                 // var circle = createCurrentLatLngCircle(lat, lng);
                 // setCurrentPositionCircle(circle);
                 // console.log('update data called');
                 updateData();
-            }
+            // }
             setInitializing(false);
         }
     }, [location])
@@ -181,10 +188,13 @@ global.commuteEducationCurves = commuteEducationCurves;
         // mapRef.current.leafletElement.off('viewreset');
         // mapRef.current.leafletElement.on('viewreset', updateData);
 
-        mapRef.current.leafletElement.off('zoomstart');
-        mapRef.current.leafletElement.on('zoomstart', updateDataAndCentroids);
+        // mapRef.current.leafletElement.off('zoomstart');
+        // mapRef.current.leafletElement.on('zoomstart', updateDataAndCentroids);
+        mapRef.current.leafletElement.off('zoomend');
+        mapRef.current.leafletElement.on('zoomend', updateDataAndCentroids);
         // console.log('update data called');
         updateDataAndCentroids();
+        
         
     },[
         commutePurpose,
@@ -193,10 +203,16 @@ global.commuteEducationCurves = commuteEducationCurves;
 
     const updateDataAndCentroids = () => {
         updateData();
-        updateCentroids();
+        // updateCentroids();
     }
 
     const updateData = () => {
+        setClickedData({});
+        setCurrentDestinationData({
+            from: "",
+            to: ""
+        })
+
         const map = mapRef.current.leafletElement;
         var bounds = map.getBounds();
         var zoom = map.getZoom();
@@ -221,12 +237,13 @@ global.commuteEducationCurves = commuteEducationCurves;
         
         
     }
-
+/*
     const updateCentroids = () => {
-        return; //TODO NO ACTION FOR NOW
+        // return; //TODO NO ACTION FOR NOW
         if(!centroidData) 
             return;
         circles.forEach(circle => {
+            console.log('deleting circle')
             circle.remove();
         })
         var ci = circles;
@@ -241,12 +258,12 @@ global.commuteEducationCurves = commuteEducationCurves;
             var data = centroidData[`${"work"}_${commuteType2Key(commuteMethod)}_${zoom}`]
             console.log('data to draw: ',data);
             for(var c of data){
-                createCircle(c.departure_LATITUDE, c.departure_LONGITUDE, c.cluster_count, commuteMethod);
+                createCircle(c.departure_LATITUDE, c.departure_LONGITUDE, c.cluster_count, commuteMethod, MAX_ZOOM - zoom);
             }
         }
         
     }
-
+*/
     const updateCurrentSelectedCurve = (obj) => {
         
         if(Object.keys(currentSelectedCurve).length){
@@ -290,7 +307,9 @@ global.commuteEducationCurves = commuteEducationCurves;
 
     const key2CommuteType = (key) => {
         switch(key){
-            case "STAY_HOME": return "Working/Studying from Home";
+            case "WORK_AT_HOME": 
+            case "STUDY_AT_HOME":
+                return "Working/Studying from Home";
             case "DRIVE_OWN_VEHICLE": return "Driving own vehicle";
             case "PASSENGER_IN_VEHICLE": return "Passenger in vehicle (car/truck/van)";
             case "TRAIN": return "Train";
@@ -328,7 +347,6 @@ global.commuteEducationCurves = commuteEducationCurves;
                 DATA_URL_ROOT + `/zoneData?left=${bounds._southWest.lng}&top=${bounds._northEast.lat}&right=${bounds._northEast.lng}&bottom=${bounds._southWest.lat}&zoom=${zoom}&data_type=${type.toLowerCase()}${commuteTypes}`,
             ).then(async (d)=>{
                 const data = await d.json();
-                // console.log(data);
                 if(type === "WORK"){
                     // setWorkZoneData(data);
                     updateCurvesCommute(data, "WORK");
@@ -551,23 +569,38 @@ global.commuteEducationCurves = commuteEducationCurves;
     */
 
     const createStayAtHomeCircle = (lat, lon, obj) => {
-        console.log('creating stay at home data');
+        // console.log('creating stay at home data');
         var circleCenter = [lat, lon];
         var options = {
-            weight: 1.5,
-            color: '#f54242',
+            // weight: 1.5,
+            color: 'rgba(0,0,0,0)',
             fillColor: '#f54242',
-            fillOpacity: 0.35,
+            fillOpacity: 0.7,
         }
-        var radius = Number(obj.COUNT) * 1.25 + 2500;
+        var radius = Number(obj.COUNT) * .1 + 2;
+        radius *= (MAX_ZOOM - mapRef.current.leafletElement.getZoom()) ** 1.6;
 
         const circle = L.circle(circleCenter, radius, options)
+            .on('mouseover', (e) => {
+                // console.log('mouseover stayathome circle: ', obj);
+                createStayAtHomePopup(e, obj)
+            })
+            .on('mousedown', (e) => {
+                setClickedData(obj);
+                setCurrentDestinationData({
+                    from: obj.SA2_name_usual_residence_address,
+                    to: obj.SA2_name_workplace_address
+                })
+            })
+            .on('mouseout', (e) => {
+                mapRef.current.leafletElement.closePopup();
+            })
             .addTo(mapRef.current.leafletElement);
         return circle;
     }
 
     // Draw cluster circles.
-    const createCircle = (lat, lon, clusterCount, commuteType) => {
+    const createCircle = (lat, lon, clusterCount, commuteType, amplifyAmt) => {
         var circleCenter = [lat, lon];
         // console.log(COMMUTE_METHOD_COLOUR, commuteType, COMMUTE_METHOD_COLOUR[commuteType])
         var options = {
@@ -578,8 +611,20 @@ global.commuteEducationCurves = commuteEducationCurves;
         }
 
         // Radius dependent on number of commutes in this circle.
-        var radius = clusterCount * 3.25 + 2500;
-
+        var radius = clusterCount / 2000 + 2; //3.25
+        if(amplifyAmt)
+            radius *= amplifyAmt ** 4.2;
+        console.log('amplifyAmt: ', amplifyAmt)
+        // console.log(L.divIcon)
+        // L.divIcon({
+        //     className: '',
+        //     html: `
+        //         <div>
+        //             <p>${clusterCount}</p>
+        //         </div>
+        //     `
+        // }).addTo(mapRef.current.leafletElement);
+        
         const circle = L.circle(circleCenter, radius, options)
             .addTo(mapRef.current.leafletElement);
         circles.push(circle);
@@ -669,21 +714,7 @@ global.commuteEducationCurves = commuteEducationCurves;
                 });
                 setHighlightedData(obj)
                 // console.log(obj)
-                L.popup({
-                    closeButton: false,
-                })
-                    .setLatLng(e.latlng) 
-                    .setContent(
-                        '<p><b>' + obj.DEPARTURE_NAME_1 + ', ' + obj.SA2_name_usual_residence_address
-                        + ' → '//' > ' //<img src={arrow_right} alt="" /> 
-                        + obj.DESTINATION_NAME_1 + ', ' + (obj.SA2_name_workplace_address || obj.SA2_name_educational_address) + '</p>'
-                        + '<p>' + Number(obj.HAVERSINE_DISTANCE).toFixed(2) + 'km <span class="' + obj.COMMUTE_TYPE + '">' + key2CommuteType(obj.COMMUTE_TYPE) + '</span></p></b>'
-                        + '<hr/>'
-                        // + '<div style="display:flex;justify-content:space-between;"><div><b>' + obj.COUNT + '</b> people ' + '</div><div><span class="' + obj.COMMUTE_TYPE + '">' + key2CommuteType(obj.COMMUTE_TYPE) + '</span></div></div>'
-                        + '<div><b>' + obj.COUNT + '</b> people ' + '</div>'
-                        + '<p>Commuting for <b>' + obj.TYPE.toLowerCase() + '</b></p>' //obj.TYPE.charAt(0) + obj.TYPE.substring(1).toLowerCase() + 
-                    )
-                    .openOn(mapRef.current.leafletElement);
+                createPopup(e, obj);
             }
 
         })
@@ -714,6 +745,42 @@ global.commuteEducationCurves = commuteEducationCurves;
         // curves.push(curve);
         // console.log(mapRef.current.leafletElement)
         return curve;  
+    }
+
+    const createPopup = (e, obj) => {
+        L.popup({
+            closeButton: false,
+        })
+            .setLatLng(e.latlng)
+            .setContent(
+                '<p><b>' + obj.DEPARTURE_NAME_1 + ', ' + obj.SA2_name_usual_residence_address
+                + ' → '//' > ' //<img src={arrow_right} alt="" /> 
+                + obj.DESTINATION_NAME_1 + ', ' + (obj.SA2_name_workplace_address || obj.SA2_name_educational_address) + '</p>'
+
+                + '<p>' + Number(obj.HAVERSINE_DISTANCE).toFixed(2) + 'km <span class="' + obj.COMMUTE_TYPE + '">' + key2CommuteType(obj.COMMUTE_TYPE) + '</span></p></b>'
+                + '<hr/>'
+                // + '<div style="display:flex;justify-content:space-between;"><div><b>' + obj.COUNT + '</b> people ' + '</div><div><span class="' + obj.COMMUTE_TYPE + '">' + key2CommuteType(obj.COMMUTE_TYPE) + '</span></div></div>'
+                + '<div><b>' + obj.COUNT + '</b> people ' + '</div>'
+                + '<p>Commuting for <b>' + obj.TYPE.toLowerCase() + '</b></p>' //obj.TYPE.charAt(0) + obj.TYPE.substring(1).toLowerCase() + 
+            )
+            // .addTo(mapRef.current.leafletElement);
+            .openOn(mapRef.current.leafletElement);
+    }
+
+    const createStayAtHomePopup = (e, obj) => {
+        L.popup({
+            closeButton: false,
+        })
+            .setLatLng(e.latlng)
+            .setContent(
+                '<p><b>' + obj.DEPARTURE_NAME_1 + ', ' + obj.SA2_name_usual_residence_address
+                + '<p><span class="' + obj.COMMUTE_TYPE + '">' + key2CommuteType(obj.COMMUTE_TYPE) + '</span></p></b>'
+                + '<hr/>'
+                + '<div><b>' + obj.COUNT + '</b> people ' + '</div>'
+                + '<p>Commuting for <b>' + obj.TYPE.toLowerCase() + '</b></p>' //obj.TYPE.charAt(0) + obj.TYPE.substring(1).toLowerCase() + 
+            )
+            // .addTo(mapRef.current.leafletElement);
+            .openOn(mapRef.current.leafletElement);
     }
     
 

@@ -65,7 +65,7 @@ function App() {
     // Lat/Lon coordinates as a route destination
     // :latlng is 
     {
-      pageLink: "/(location)?/:lat?/:lng?",
+      pageLink: "/(location)?/:lat?/:lng?/:zoom?",
       view: Home,
       displayName: "Home",
       showInNavbar: true,

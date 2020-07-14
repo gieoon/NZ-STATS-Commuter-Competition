@@ -47,43 +47,16 @@ function Home(props) {
   //   }
   // );
 
-  // const { data: regionalWorkData } = useStickySWR(
-  //   DATA_URL_ROOT + '/work_regional_data',
-  //   fetcherJSON,
-  //   {
-  //     revalidateOnMount: true,
-  //     revalidateOnFocus: false,
-  //   }
-  // )
-
-  // const { data: regionalEducationData } = useStickySWR(
-  //   DATA_URL_ROOT + '/education_regional_data',
-  //   fetcherJSON,
-  //   {
-  //     revalidateOnMount: true,
-  //     revalidateOnFocus: false,
-  //   }
-  // )
-
-  // const { data: regionalTotalData } = useStickySWR(
-  //   DATA_URL_ROOT + '/total_regional_data',
-  //   fetcherJSON,
+  const workData = {}, educationData = {}, regionalWorkData = {}, regionalEducationData = {}, regionalTotalData = {};
+  const centroidData = {};
+  // const { data: centroidData } = useStickySWR(
+  //   DATA_URL_ROOT + '/centroidData',
+  //   fetcherDICT,
   //   {
   //     revalidateOnMount: true,
   //     revalidateOnFocus: false
   //   }
   // )
-
-  const workData = {}, educationData = {}, regionalWorkData = {}, regionalEducationData = {}, regionalTotalData = {};
-
-  const { data: centroidData } = useStickySWR(
-    DATA_URL_ROOT + '/centroidData',
-    fetcherDICT,
-    {
-      revalidateOnMount: true,
-      revalidateOnFocus: false
-    }
-  )
   // console.log("centroidData: ",centroidData)
 
   // Data to load for search
@@ -127,7 +100,7 @@ function Home(props) {
   return (
     <React.Fragment>
       <Helmet>
-        <title>Visualization of Commuter Data - NZ Stats</title>
+        <title>NZ Commute | Visualizing Commuter Data - New Zealand Statistics</title>
         <meta
           name="title"
           content="Visualization of Commuter Data - New Zealand Statistics"

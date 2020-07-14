@@ -112,10 +112,11 @@ function MapExplorer({
   })
 
   const [currentCommuteTypes, setCurrentCommuteTypes] = useState(
-    // Object.values(MODES_OF_TRANSPORT) // Select all
-    [
-      "Drive own vehicle"
-    ]
+    Object.values(MODES_OF_TRANSPORT) // Select all
+    // [
+    //   //"Drive own vehicle"
+    //   "Stay home"
+    // ]
   )
 
   // const setCurrentCommuteTypes = (e) => {

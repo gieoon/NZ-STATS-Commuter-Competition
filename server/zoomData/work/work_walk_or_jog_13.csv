@@ -1,25 +1,25 @@
 id,SA2_name_usual_residence_address,SA2_name_workplace_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1
-W284,Paihia,Puketona-Waitangi,WALK_OR_JOG,9,EDUCATION,Paihia,-35.28609895,174.09311792,Puketona-Waitangi,-35.27991822,174.00095246,8.393986763481205,Far North,Far North,Northland,Northland
-W4583,Symonds Street West,Penrose,WALK_OR_JOG,15,EDUCATION,Symonds Street West,-36.856766799999995,174.76333185,Penrose,-36.91999811,174.82258914,8.786807961703964,Waitakere,Waitakere,Auckland,Auckland
-W5571,Onehunga West,Auckland-University,WALK_OR_JOG,6,EDUCATION,Onehunga West,-36.91965553,174.77421645,Auckland-University,-36.85143057,174.76906469,7.600093282398943,Waitakere,Waitakere,Auckland,Auckland
-W10909,Whenuapai,Stanley Point,WALK_OR_JOG,9,EDUCATION,Whenuapai,-36.79162758,174.62143068,Stanley Point,-36.82656718,174.7841077,14.994651800400586,Waitakere,,Auckland,
-W10917,Inlet Waitemata Harbour,Stanley Point,WALK_OR_JOG,12,EDUCATION,Inlet Waitemata Harbour,-36.83821248,174.70502503,Stanley Point,-36.82656718,174.7841077,7.156450818934102,,,,
-W16809,Grafton,Middlemore,WALK_OR_JOG,6,EDUCATION,Grafton,-36.86013178,174.76828549,Middlemore,-36.96044494,174.84306701,12.985548311728392,Waitakere,Manukau,Auckland,Auckland
-W24829,Te Puke East,Katikati,WALK_OR_JOG,6,EDUCATION,Te Puke East,-37.7898618,176.32555033,Katikati,-37.55213437,175.92548294,44.029746787603464,Western Bay of Plenty,Western Bay of Plenty,Bay of Plenty,Bay of Plenty
-W27767,Kaimanawa,Lake Taupo Bays,WALK_OR_JOG,18,EDUCATION,Kaimanawa,-39.18581719,175.74164069,Lake Taupo Bays,-38.87191067,175.73166979,34.91543687197332,Taupo,Taupo,Waikato,Waikato
-W29993,Outer Kaiti,Makaraka-Awapuni,WALK_OR_JOG,9,EDUCATION,Outer Kaiti,-38.66939983,178.05655503,Makaraka-Awapuni,-38.65787303,177.97255068,7.405357904120351,Gisborne,Gisborne,Gisborne,Gisborne
-W29994,Tamarau,Makaraka-Awapuni,WALK_OR_JOG,6,EDUCATION,Tamarau,-38.67903252,178.05343956,Makaraka-Awapuni,-38.65787303,177.97255068,7.406284386661434,Gisborne,Gisborne,Gisborne,Gisborne
-W40231,Richmond Central (Tasman District),Lower Waitaki,WALK_OR_JOG,6,EDUCATION,Richmond Central (Tasman District),-41.33750365,173.18938637,Lower Waitaki,-45.00239341,171.02035686,443.8151924583857,Tasman,Waitaki,Nelson,Otago
-W40828,Hokitika Rural,Hokitika,WALK_OR_JOG,9,EDUCATION,Hokitika Rural,-42.78693668,170.96082934,Hokitika,-42.71867868,170.97186323,7.643224157239382,Westland,Westland,West Coast,West Coast
-W48025,Geraldine,Rangitata,WALK_OR_JOG,9,EDUCATION,Geraldine,-44.09410338,171.23854167,Rangitata,-44.11035618,171.32575726,7.1947505304947175,Timaru,Timaru,Canterbury,Canterbury
-W48577,Cromwell West,Lindis-Nevis Valleys,WALK_OR_JOG,9,EDUCATION,Cromwell West,-45.06411975,169.17047641,Lindis-Nevis Valleys,-44.94314357,169.28090388,16.010357508606827,Central Otago,Central Otago,Otago,Otago
-W48603,Frankton,Queenstown Central,WALK_OR_JOG,15,EDUCATION,Frankton,-45.01825697,168.74585281,Queenstown Central,-45.0327315,168.65460343,7.3498342948868265,Queenstown-Lakes,Queenstown-Lakes,Otago,Otago
-W48651,Queenstown Central,Frankton,WALK_OR_JOG,9,EDUCATION,Queenstown Central,-45.0327315,168.65460343,Frankton,-45.01825697,168.74585281,7.3498342948868265,Queenstown-Lakes,Queenstown-Lakes,Otago,Otago
-W48661,Lindis-Nevis Valleys,Cromwell West,WALK_OR_JOG,6,EDUCATION,Lindis-Nevis Valleys,-44.94314357,169.28090388,Cromwell West,-45.06411975,169.17047641,16.010357508606827,Central Otago,Central Otago,Otago,Otago
-W48692,Warren Park,Outer Wakatipu,WALK_OR_JOG,15,EDUCATION,Warren Park,-45.02264371,168.66173004,Outer Wakatipu,-44.83712994,168.71544041,21.057068089717976,Queenstown-Lakes,Queenstown-Lakes,Otago,Otago
-W48696,Queenstown East,Outer Wakatipu,WALK_OR_JOG,9,EDUCATION,Queenstown East,-45.03289461,168.67249766,Outer Wakatipu,-44.83712994,168.71544041,22.0289284663234,Queenstown-Lakes,Queenstown-Lakes,Otago,Otago
-W48697,Frankton Arm,Outer Wakatipu,WALK_OR_JOG,6,EDUCATION,Frankton Arm,-45.02699752,168.68939785,Outer Wakatipu,-44.83712994,168.71544041,21.21161145183839,Queenstown-Lakes,Queenstown-Lakes,Otago,Otago
-W48824,Warren Park,Arrowtown,WALK_OR_JOG,6,EDUCATION,Warren Park,-45.02264371,168.66173004,Arrowtown,-44.9457261,168.83841556,16.317190218349563,Queenstown-Lakes,Queenstown-Lakes,Otago,Otago
-W50216,Fiordland,Te Anau,WALK_OR_JOG,6,EDUCATION,Fiordland,-45.35169124,167.36187219,Te Anau,-45.413515600000004,167.72303047,29.03205396802147,Southland,Southland,Southland,Southland
-W50232,Te Anau,Inland water Lake Te Anau,WALK_OR_JOG,6,EDUCATION,Te Anau,-45.413515600000004,167.72303047,Inland water Lake Te Anau,-45.2107913,167.73070296,22.549896464099326,Southland,Southland,Southland,Southland
-W50267,Oreti River,Winton,WALK_OR_JOG,6,EDUCATION,Oreti River,-46.00268489,168.31789888,Winton,-46.14486071,168.32382512,15.815838011139386,Southland,Southland,Southland,Southland
+W284,Paihia,Puketona-Waitangi,WALK_OR_JOG,9,WORK,Paihia,-35.28609895,174.09311792,Puketona-Waitangi,-35.27991822,174.00095246,8.393986763481205,Far North,Far North,Northland,Northland
+W4583,Symonds Street West,Penrose,WALK_OR_JOG,15,WORK,Symonds Street West,-36.856766799999995,174.76333185,Penrose,-36.91999811,174.82258914,8.786807961703964,Waitakere,Waitakere,Auckland,Auckland
+W5571,Onehunga West,Auckland-University,WALK_OR_JOG,6,WORK,Onehunga West,-36.91965553,174.77421645,Auckland-University,-36.85143057,174.76906469,7.600093282398943,Waitakere,Waitakere,Auckland,Auckland
+W10909,Whenuapai,Stanley Point,WALK_OR_JOG,9,WORK,Whenuapai,-36.79162758,174.62143068,Stanley Point,-36.82656718,174.7841077,14.994651800400586,Waitakere,,Auckland,
+W10917,Inlet Waitemata Harbour,Stanley Point,WALK_OR_JOG,12,WORK,Inlet Waitemata Harbour,-36.83821248,174.70502503,Stanley Point,-36.82656718,174.7841077,7.156450818934102,,,,
+W16809,Grafton,Middlemore,WALK_OR_JOG,6,WORK,Grafton,-36.86013178,174.76828549,Middlemore,-36.96044494,174.84306701,12.985548311728392,Waitakere,Manukau,Auckland,Auckland
+W24829,Te Puke East,Katikati,WALK_OR_JOG,6,WORK,Te Puke East,-37.7898618,176.32555033,Katikati,-37.55213437,175.92548294,44.029746787603464,Western Bay of Plenty,Western Bay of Plenty,Bay of Plenty,Bay of Plenty
+W27767,Kaimanawa,Lake Taupo Bays,WALK_OR_JOG,18,WORK,Kaimanawa,-39.18581719,175.74164069,Lake Taupo Bays,-38.87191067,175.73166979,34.91543687197332,Taupo,Taupo,Waikato,Waikato
+W29993,Outer Kaiti,Makaraka-Awapuni,WALK_OR_JOG,9,WORK,Outer Kaiti,-38.66939983,178.05655503,Makaraka-Awapuni,-38.65787303,177.97255068,7.405357904120351,Gisborne,Gisborne,Gisborne,Gisborne
+W29994,Tamarau,Makaraka-Awapuni,WALK_OR_JOG,6,WORK,Tamarau,-38.67903252,178.05343956,Makaraka-Awapuni,-38.65787303,177.97255068,7.406284386661434,Gisborne,Gisborne,Gisborne,Gisborne
+W40231,Richmond Central (Tasman District),Lower Waitaki,WALK_OR_JOG,6,WORK,Richmond Central (Tasman District),-41.33750365,173.18938637,Lower Waitaki,-45.00239341,171.02035686,443.8151924583857,Tasman,Waitaki,Nelson,Otago
+W40828,Hokitika Rural,Hokitika,WALK_OR_JOG,9,WORK,Hokitika Rural,-42.78693668,170.96082934,Hokitika,-42.71867868,170.97186323,7.643224157239382,Westland,Westland,West Coast,West Coast
+W48025,Geraldine,Rangitata,WALK_OR_JOG,9,WORK,Geraldine,-44.09410338,171.23854167,Rangitata,-44.11035618,171.32575726,7.1947505304947175,Timaru,Timaru,Canterbury,Canterbury
+W48577,Cromwell West,Lindis-Nevis Valleys,WALK_OR_JOG,9,WORK,Cromwell West,-45.06411975,169.17047641,Lindis-Nevis Valleys,-44.94314357,169.28090388,16.010357508606827,Central Otago,Central Otago,Otago,Otago
+W48603,Frankton,Queenstown Central,WALK_OR_JOG,15,WORK,Frankton,-45.01825697,168.74585281,Queenstown Central,-45.0327315,168.65460343,7.3498342948868265,Queenstown-Lakes,Queenstown-Lakes,Otago,Otago
+W48651,Queenstown Central,Frankton,WALK_OR_JOG,9,WORK,Queenstown Central,-45.0327315,168.65460343,Frankton,-45.01825697,168.74585281,7.3498342948868265,Queenstown-Lakes,Queenstown-Lakes,Otago,Otago
+W48661,Lindis-Nevis Valleys,Cromwell West,WALK_OR_JOG,6,WORK,Lindis-Nevis Valleys,-44.94314357,169.28090388,Cromwell West,-45.06411975,169.17047641,16.010357508606827,Central Otago,Central Otago,Otago,Otago
+W48692,Warren Park,Outer Wakatipu,WALK_OR_JOG,15,WORK,Warren Park,-45.02264371,168.66173004,Outer Wakatipu,-44.83712994,168.71544041,21.057068089717976,Queenstown-Lakes,Queenstown-Lakes,Otago,Otago
+W48696,Queenstown East,Outer Wakatipu,WALK_OR_JOG,9,WORK,Queenstown East,-45.03289461,168.67249766,Outer Wakatipu,-44.83712994,168.71544041,22.0289284663234,Queenstown-Lakes,Queenstown-Lakes,Otago,Otago
+W48697,Frankton Arm,Outer Wakatipu,WALK_OR_JOG,6,WORK,Frankton Arm,-45.02699752,168.68939785,Outer Wakatipu,-44.83712994,168.71544041,21.21161145183839,Queenstown-Lakes,Queenstown-Lakes,Otago,Otago
+W48824,Warren Park,Arrowtown,WALK_OR_JOG,6,WORK,Warren Park,-45.02264371,168.66173004,Arrowtown,-44.9457261,168.83841556,16.317190218349563,Queenstown-Lakes,Queenstown-Lakes,Otago,Otago
+W50216,Fiordland,Te Anau,WALK_OR_JOG,6,WORK,Fiordland,-45.35169124,167.36187219,Te Anau,-45.413515600000004,167.72303047,29.03205396802147,Southland,Southland,Southland,Southland
+W50232,Te Anau,Inland water Lake Te Anau,WALK_OR_JOG,6,WORK,Te Anau,-45.413515600000004,167.72303047,Inland water Lake Te Anau,-45.2107913,167.73070296,22.549896464099326,Southland,Southland,Southland,Southland
+W50267,Oreti River,Winton,WALK_OR_JOG,6,WORK,Oreti River,-46.00268489,168.31789888,Winton,-46.14486071,168.32382512,15.815838011139386,Southland,Southland,Southland,Southland

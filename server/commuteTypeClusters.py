@@ -74,6 +74,7 @@ def dbscan(zoom_level, min_samples, commute_purpose, commute_type):
 
 for commutePurpose in ["education","work"]:
     for commuteType in ["bicycle","bus","ferry","home","other","own_vehicle","passenger","train","walk_or_jog"]:
+    # for commuteType in ["bicycle","bus","ferry","home","other","own_vehicle","passenger","train","walk_or_jog"]:
         df = pd.read_csv('./commuteData/{}/{}.csv'.format(commutePurpose, commuteType))
         
         coords = df[['departure_LATITUDE', 'departure_LONGITUDE']].values

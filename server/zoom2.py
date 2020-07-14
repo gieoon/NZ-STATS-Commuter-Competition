@@ -20,7 +20,14 @@ MODES_OF_TRANSPORT = [
 
 MAX_RESULT_COUNT = 100
 
+# For compression and removing smaller data
+COUNT_CUTOFFS = {
+  "work":       [0,20,30,30,30,30,30,30,10,8,2,0],
+  "education":  [0,20,30,30,30,30,30,30,10,8,2,0]
+}
+
 data = {}
+
 
 for commute_purpose in ["education","work"]:
     for mode in MODES_OF_TRANSPORT:
@@ -38,7 +45,7 @@ def handleZoom(left, top, right, bottom, zoom, data_type, commute_types):
     for commute_type in commute_types:
         commute_type = commuteType2Key(commute_type)
         df = data["{}_{}_{}".format(data_type, commute_type, zoom)]
-        df = getVisibleData(df, left, top, right, bottom)
+        df = getVisibleData(df, left, top, right, bottom, zoom, data_type)
         res["{}".format(commute_type)] = df.to_csv(index=False)
 
     # print("after getting visible data size: ", df.describe())
@@ -67,7 +74,7 @@ def commuteType2Key(commute_type):
     else:
         return commute_type
 
-def getVisibleData(df, left, top, right, bottom):
+def getVisibleData(df, left, top, right, bottom, zoom, commute_purpose):
     # Smaller than top, larger than bottom, since these are both negative
     # top/bottom = latitude comparison
     # left/right = longitude comparison
@@ -89,13 +96,20 @@ def getVisibleData(df, left, top, right, bottom):
     ]
     print('size: ', len(ddf))
     if len(ddf) > MAX_RESULT_COUNT:
-        ddf = compress1(ddf, left, top, right, bottom)
+        ddf = compress1(ddf, zoom, commute_purpose)
     if len(ddf) > MAX_RESULT_COUNT:
         ddf = compress2(ddf, left, top, right, bottom)
+    if len(ddf) > MAX_RESULT_COUNT:
+        ddf = compress3(ddf, left, top, right, bottom)
     
     return ddf
 
-def compress1(df, left, top, right, bottom):
+def compress1(df, zoom, commute_purpose):
+    ddf = df.loc[df['COUNT'] >= COUNT_CUTOFFS[commute_purpose][int(zoom)-5]]
+    print('compress1: ', len(ddf))
+    return ddf
+
+def compress2(df, left, top, right, bottom):
     ddf = df.loc[
         (
             (df['departure_LATITUDE'] <= float(top)) & 
@@ -104,12 +118,12 @@ def compress1(df, left, top, right, bottom):
             (df['departure_LONGITUDE'] <= float(right))
         )
     ]
-    print("compress1: ", len(ddf))
+    print("compress2: ", len(ddf))
     return ddf
 
     
 
-def compress2(df, left, top, right, bottom):
+def compress3(df, left, top, right, bottom):
     ddf = df.loc[
         (
             (df['departure_LATITUDE'] <= float(top)) & 
@@ -125,7 +139,7 @@ def compress2(df, left, top, right, bottom):
             (df['destination_LONGITUDE'] <= float(right))
         )
     ]
-    print("compress2: ", len(ddf))
+    print("compress3: ", len(ddf))
     return ddf
 
     

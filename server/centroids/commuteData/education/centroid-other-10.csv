@@ -1,0 +1,2 @@
+id,SA2_name_usual_residence_address,SA2_name_educational_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1,cluster_count
+E18022,Holmwood,Merivale,OTHER,6,EDUCATION,Holmwood,-43.519344,172.6084094,Merivale,-43.51635206,172.61911331,0.9249992374139352,Christchurch,Christchurch,Canterbury,Canterbury,42

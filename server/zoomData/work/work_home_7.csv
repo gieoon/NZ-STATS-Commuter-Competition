@@ -1,1 +1,115 @@
 id,SA2_name_usual_residence_address,SA2_name_workplace_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1
+W499,Mangakahia-Hukerenui,Mangakahia-Hukerenui,WORK_AT_HOME,306,WORK,Mangakahia-Hukerenui,-35.65301955,174.0023164,Mangakahia-Hukerenui,-35.65301955,174.0023164,0.0,Whangarei,Whangarei,Northland,Northland
+W666,Maungatapere,Maungatapere,WORK_AT_HOME,426,WORK,Maungatapere,-35.76206371,174.15473729,Maungatapere,-35.76206371,174.15473729,0.0,Whangarei,Whangarei,Northland,Northland
+W750,Whangaruru,Whangaruru,WORK_AT_HOME,324,WORK,Whangaruru,-35.48991999,174.33501130000005,Whangaruru,-35.48991999,174.33501130000005,0.0,Whangarei,Whangarei,Northland,Northland
+W1091,Oakleigh-Mangapai,Oakleigh-Mangapai,WORK_AT_HOME,300,WORK,Oakleigh-Mangapai,-35.89588695,174.21595621,Oakleigh-Mangapai,-35.89588695,174.21595621,0.0,Whangarei,Whangarei,Northland,Northland
+W1132,Kaipara Coastal,Kaipara Coastal,WORK_AT_HOME,567,WORK,Kaipara Coastal,-35.72900181,173.65124289,Kaipara Coastal,-35.72900181,173.65124289,0.0,Kaipara,Kaipara,Northland,Northland
+W1138,Ruawai-Matakohe,Ruawai-Matakohe,WORK_AT_HOME,363,WORK,Ruawai-Matakohe,-36.08477059,174.14649781,Ruawai-Matakohe,-36.08477059,174.14649781,0.0,Kaipara,Kaipara,Northland,Northland
+W1142,Maungaru,Maungaru,WORK_AT_HOME,414,WORK,Maungaru,-35.87696287,173.97089153,Maungaru,-35.87696287,173.97089153,0.0,Kaipara,Kaipara,Northland,Northland
+W1227,Cape Rodney,Cape Rodney,WORK_AT_HOME,531,WORK,Cape Rodney,-36.25433822,174.62638047,Cape Rodney,-36.25433822,174.62638047,0.0,Rodney,Rodney,Auckland,Auckland
+W2227,Puhoi Valley,Puhoi Valley,WORK_AT_HOME,387,WORK,Puhoi Valley,-36.46850912,174.62475233,Puhoi Valley,-36.46850912,174.62475233,0.0,Rodney,Rodney,Auckland,Auckland
+W5626,South Head,South Head,WORK_AT_HOME,327,WORK,South Head,-36.59353204,174.31227374,South Head,-36.59353204,174.31227374,0.0,Rodney,Rodney,Auckland,Auckland
+W7652,Whenuapai,Whenuapai,WORK_AT_HOME,303,WORK,Whenuapai,-36.79162758,174.62143068,Whenuapai,-36.79162758,174.62143068,0.0,Waitakere,Waitakere,Auckland,Auckland
+W14819,Freemans Bay,Freemans Bay,WORK_AT_HOME,345,WORK,Freemans Bay,-36.85220128,174.7504171,Freemans Bay,-36.85220128,174.7504171,0.0,Waitakere,Waitakere,Auckland,Auckland
+W19485,Castor Bay,Castor Bay,WORK_AT_HOME,354,WORK,Castor Bay,-36.76039959,174.76178337,Castor Bay,-36.76039959,174.76178337,0.0,Waitakere,Waitakere,Auckland,Auckland
+W20679,Titirangi South,Titirangi South,WORK_AT_HOME,324,WORK,Titirangi South,-36.94580721,174.65622649,Titirangi South,-36.94580721,174.65622649,0.0,Waitakere,Waitakere,Auckland,Auckland
+W21308,Parnell East,Parnell East,WORK_AT_HOME,303,WORK,Parnell East,-36.85621249,174.78751844,Parnell East,-36.85621249,174.78751844,0.0,Waitakere,Waitakere,Auckland,Auckland
+W21470,Mission Bay,Mission Bay,WORK_AT_HOME,339,WORK,Mission Bay,-36.855756,174.83237219,Mission Bay,-36.855756,174.83237219,0.0,Waitakere,Waitakere,Auckland,Auckland
+W21517,Kohimarama,Kohimarama,WORK_AT_HOME,357,WORK,Kohimarama,-36.85773003,174.84092129,Kohimarama,-36.85773003,174.84092129,0.0,Waitakere,Waitakere,Auckland,Auckland
+W21545,Saint Heliers North,Saint Heliers North,WORK_AT_HOME,321,WORK,Saint Heliers North,-36.85233733,174.86193821,Saint Heliers North,-36.85233733,174.86193821,0.0,Waitakere,Waitakere,Auckland,Auckland
+W21560,Marlborough Sounds East,Marlborough Sounds East,WORK_AT_HOME,330,WORK,Marlborough Sounds East,-41.321267799999994,174.04011823,Marlborough Sounds East,-41.321267799999994,174.04011823,0.0,Marlborough,Marlborough,Marlborough,Marlborough
+W21936,Glendowie North,Glendowie North,WORK_AT_HOME,333,WORK,Glendowie North,-36.85540475,174.87371093,Glendowie North,-36.85540475,174.87371093,0.0,Waitakere,Waitakere,Auckland,Auckland
+W22808,Turanga,Turanga,WORK_AT_HOME,342,WORK,Turanga,-36.96408816,174.98854671,Turanga,-36.96408816,174.98854671,0.0,Manukau,Manukau,Auckland,Auckland
+W23249,Awhitu,Awhitu,WORK_AT_HOME,366,WORK,Awhitu,-37.14989636,174.63216856,Awhitu,-37.14989636,174.63216856,0.0,Franklin,Franklin,Auckland,Auckland
+W23470,Kingseat-Karaka,Kingseat-Karaka,WORK_AT_HOME,345,WORK,Kingseat-Karaka,-37.12442419,174.82148593,Kingseat-Karaka,-37.12442419,174.82148593,0.0,Franklin,Franklin,Auckland,Auckland
+W23555,Aka Aka,Aka Aka,WORK_AT_HOME,372,WORK,Aka Aka,-37.29132737,174.77509206,Aka Aka,-37.29132737,174.77509206,0.0,Franklin,Franklin,Auckland,Auckland
+W24444,Whitianga South,Whitianga South,WORK_AT_HOME,318,WORK,Whitianga South,-36.8336234,175.69356396,Whitianga South,-36.8336234,175.69356396,0.0,Thames-Coromandel,Thames-Coromandel,Waikato,Waikato
+W24555,Waihi Rural,Waihi Rural,WORK_AT_HOME,369,WORK,Waihi Rural,-37.43661886,175.78432191,Waihi Rural,-37.43661886,175.78432191,0.0,Hauraki,Hauraki,Waikato,Waikato
+W24607,Paeroa Rural,Paeroa Rural,WORK_AT_HOME,321,WORK,Paeroa Rural,-37.39345524,175.57864603,Paeroa Rural,-37.39345524,175.57864603,0.0,Hauraki,Hauraki,Waikato,Waikato
+W25230,Te Akau,Te Akau,WORK_AT_HOME,399,WORK,Te Akau,-37.69707947,175.04556188,Te Akau,-37.69707947,175.04556188,0.0,Waikato,Waikato,Waikato,Waikato
+W25865,Te Uku,Te Uku,WORK_AT_HOME,405,WORK,Te Uku,-37.88322634,174.93821165,Te Uku,-37.88322634,174.93821165,0.0,Waikato,Waikato,Waikato,Waikato
+W25870,Whitikahu,Whitikahu,WORK_AT_HOME,429,WORK,Whitikahu,-37.57098670000001,175.31718590000003,Whitikahu,-37.57098670000001,175.31718590000003,0.0,Waikato,Waikato,Waikato,Waikato
+W26300,Tamahere North,Tamahere North,WORK_AT_HOME,375,WORK,Tamahere North,-37.8125973,175.35271026,Tamahere North,-37.8125973,175.35271026,0.0,Waikato,Waikato,Waikato,Waikato
+W26601,Karapiro,Karapiro,WORK_AT_HOME,357,WORK,Karapiro,-37.87109072,175.56894865,Karapiro,-37.87109072,175.56894865,0.0,Waipa,Waipa,Waikato,Waikato
+W26610,Tahuna-Mangateparu,Tahuna-Mangateparu,WORK_AT_HOME,321,WORK,Tahuna-Mangateparu,-37.52132213,175.46480172,Tahuna-Mangateparu,-37.52132213,175.46480172,0.0,Matamata-Piako,Matamata-Piako,Waikato,Waikato
+W26652,Tahuroa,Tahuroa,WORK_AT_HOME,315,WORK,Tahuroa,-37.69903344,175.52480796,Tahuroa,-37.69903344,175.52480796,0.0,Matamata-Piako,Matamata-Piako,Waikato,Waikato
+W26659,Tatuanui,Tatuanui,WORK_AT_HOME,327,WORK,Tatuanui,-37.64163374,175.59349461,Tatuanui,-37.64163374,175.59349461,0.0,Matamata-Piako,Matamata-Piako,Waikato,Waikato
+W26681,Mangaiti,Mangaiti,WORK_AT_HOME,336,WORK,Mangaiti,-37.50073616,175.62867197,Mangaiti,-37.50073616,175.62867197,0.0,Matamata-Piako,Matamata-Piako,Waikato,Waikato
+W26728,Richmond Downs-Wardville,Richmond Downs-Wardville,WORK_AT_HOME,330,WORK,Richmond Downs-Wardville,-37.71603663,175.7456246,Richmond Downs-Wardville,-37.71603663,175.7456246,0.0,Matamata-Piako,Matamata-Piako,Waikato,Waikato
+W26758,Tirau,Tirau,WORK_AT_HOME,390,WORK,Tirau,-37.95916018,175.81429616,Tirau,-37.95916018,175.81429616,0.0,South Waikato,South Waikato,Waikato,Waikato
+W27408,Thornton-Awakeri,Thornton-Awakeri,WORK_AT_HOME,312,WORK,Thornton-Awakeri,-37.98393622,176.90843855,Thornton-Awakeri,-37.98393622,176.90843855,0.0,Whakatane,Whakatane,Bay of Plenty,Bay of Plenty
+W27555,Puniu,Puniu,WORK_AT_HOME,345,WORK,Puniu,-38.28518422,175.55136504,Puniu,-38.28518422,175.55136504,0.0,Otorohanga,Otorohanga,Waikato,Waikato
+W27560,Rotoorangi,Rotoorangi,WORK_AT_HOME,339,WORK,Rotoorangi,-38.02123915,175.43705434,Rotoorangi,-38.02123915,175.43705434,0.0,Waipa,Waipa,Waikato,Waikato
+W27596,Maihiihi,Maihiihi,WORK_AT_HOME,432,WORK,Maihiihi,-38.25985712,175.35339708,Maihiihi,-38.25985712,175.35339708,0.0,Otorohanga,Otorohanga,Waikato,Waikato
+W27628,Putararu Rural,Putararu Rural,WORK_AT_HOME,486,WORK,Putararu Rural,-38.09657792,175.73244372,Putararu Rural,-38.09657792,175.73244372,0.0,South Waikato,South Waikato,Waikato,Waikato
+W27641,Kinleith,Kinleith,WORK_AT_HOME,333,WORK,Kinleith,-38.29131119,175.79670359,Kinleith,-38.29131119,175.79670359,0.0,South Waikato,South Waikato,Waikato,Waikato
+W27733,Marotiri,Marotiri,WORK_AT_HOME,357,WORK,Marotiri,-38.51214377,175.78064218,Marotiri,-38.51214377,175.78064218,0.0,Taupo,Taupo,Waikato,Waikato
+W27887,Golden Springs,Golden Springs,WORK_AT_HOME,390,WORK,Golden Springs,-38.43903714,176.35043100000001,Golden Springs,-38.43903714,176.35043100000001,0.0,Rotorua,Rotorua,Waikato,Waikato
+W28172,Aongatete,Aongatete,WORK_AT_HOME,549,WORK,Aongatete,-37.61688515,175.89393796,Aongatete,-37.61688515,175.89393796,0.0,Western Bay of Plenty,Western Bay of Plenty,Bay of Plenty,Bay of Plenty
+W28326,Rangiuru,Rangiuru,WORK_AT_HOME,444,WORK,Rangiuru,-37.85543327,176.33462575,Rangiuru,-37.85543327,176.33462575,0.0,Western Bay of Plenty,Western Bay of Plenty,Bay of Plenty,Bay of Plenty
+W28342,Te Puna,Te Puna,WORK_AT_HOME,309,WORK,Te Puna,-37.68313647,176.068803,Te Puna,-37.68313647,176.068803,0.0,Western Bay of Plenty,Western Bay of Plenty,Bay of Plenty,Bay of Plenty
+W28434,Mount Maunganui North,Mount Maunganui North,WORK_AT_HOME,327,WORK,Mount Maunganui North,-37.63000366,176.1731587,Mount Maunganui North,-37.63000366,176.1731587,0.0,,,,
+W28578,Pahoia,Pahoia,WORK_AT_HOME,483,WORK,Pahoia,-37.70302699,175.96812271,Pahoia,-37.70302699,175.96812271,0.0,Western Bay of Plenty,Western Bay of Plenty,Bay of Plenty,Bay of Plenty
+W28896,Waiorohi,Waiorohi,WORK_AT_HOME,321,WORK,Waiorohi,-37.87712037,176.14775568,Waiorohi,-37.87712037,176.14775568,0.0,Western Bay of Plenty,Western Bay of Plenty,Bay of Plenty,Bay of Plenty
+W28984,Pongakawa,Pongakawa,WORK_AT_HOME,525,WORK,Pongakawa,-37.89305456,176.49614474,Pongakawa,-37.89305456,176.49614474,0.0,Western Bay of Plenty,Western Bay of Plenty,Bay of Plenty,Bay of Plenty
+W29858,Ngakuru,Ngakuru,WORK_AT_HOME,387,WORK,Ngakuru,-38.3265856,176.19950049,Ngakuru,-38.3265856,176.19950049,0.0,Rotorua,Rotorua,Waikato,Waikato
+W29944,Hangaroa,Hangaroa,WORK_AT_HOME,333,WORK,Hangaroa,-38.67842084,177.63331484,Hangaroa,-38.67842084,177.63331484,0.0,Gisborne,Gisborne,Gisborne,Gisborne
+W29962,Waipaoa,Waipaoa,WORK_AT_HOME,363,WORK,Waipaoa,-38.34127548,177.70733968,Waipaoa,-38.34127548,177.70733968,0.0,Gisborne,Gisborne,Gisborne,Gisborne
+W30001,Hexton,Hexton,WORK_AT_HOME,378,WORK,Hexton,-38.62021616,177.96813152,Hexton,-38.62021616,177.96813152,0.0,Gisborne,Gisborne,Gisborne,Gisborne
+W30301,Puketitiri-Tutira,Puketitiri-Tutira,WORK_AT_HOME,429,WORK,Puketitiri-Tutira,-39.19745874,176.64300698,Puketitiri-Tutira,-39.19745874,176.64300698,0.0,Hastings,Hastings,Hawke's Bay,Hawke's Bay
+W30740,Puketapu-Eskdale,Puketapu-Eskdale,WORK_AT_HOME,402,WORK,Puketapu-Eskdale,-39.43779470000001,176.79125757,Puketapu-Eskdale,-39.43779470000001,176.79125757,0.0,Hastings,Hastings,Hawke's Bay,Hawke's Bay
+W31897,Mangarara,Mangarara,WORK_AT_HOME,336,WORK,Mangarara,-39.99003717,176.76264858,Mangarara,-39.99003717,176.76264858,0.0,Central Hawke's Bay,Central Hawke's Bay,Hawke's Bay,Hawke's Bay
+W31901,Makaretu,Makaretu,WORK_AT_HOME,363,WORK,Makaretu,-39.94160872,176.31273142,Makaretu,-39.94160872,176.31273142,0.0,Central Hawke's Bay,Central Hawke's Bay,Hawke's Bay,Hawke's Bay
+W31916,Taurekaitai,Taurekaitai,WORK_AT_HOME,432,WORK,Taurekaitai,-40.20716661,176.53337716,Taurekaitai,-40.20716661,176.53337716,0.0,Central Hawke's Bay,Central Hawke's Bay,Hawke's Bay,Hawke's Bay
+W32240,Fitzroy-Glen Avon,Fitzroy-Glen Avon,WORK_AT_HOME,303,WORK,Fitzroy-Glen Avon,-39.07427128,174.12360445,Fitzroy-Glen Avon,-39.07427128,174.12360445,0.0,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32496,Cape Egmont,Cape Egmont,WORK_AT_HOME,480,WORK,Cape Egmont,-39.31360193,173.87159509999995,Cape Egmont,-39.31360193,173.87159509999995,0.0,South Taranaki,South Taranaki,Taranaki,Taranaki
+W32547,Toko,Toko,WORK_AT_HOME,306,WORK,Toko,-39.31711879,174.34830199,Toko,-39.31711879,174.34830199,0.0,Stratford,Stratford,Taranaki,Taranaki
+W32572,Everett Park,Everett Park,WORK_AT_HOME,354,WORK,Everett Park,-39.22793305,174.18116727,Everett Park,-39.22793305,174.18116727,0.0,New Plymouth,New Plymouth,Taranaki,Taranaki
+W32707,Kaponga-Mangatoki,Kaponga-Mangatoki,WORK_AT_HOME,309,WORK,Kaponga-Mangatoki,-39.43452513,174.22980453,Kaponga-Mangatoki,-39.43452513,174.22980453,0.0,South Taranaki,South Taranaki,Taranaki,Taranaki
+W32733,Taungatara,Taungatara,WORK_AT_HOME,405,WORK,Taungatara,-39.44771938,173.97542033,Taungatara,-39.44771938,173.97542033,0.0,South Taranaki,South Taranaki,Taranaki,Taranaki
+W33348,Mokai Patea,Mokai Patea,WORK_AT_HOME,489,WORK,Mokai Patea,-39.59566818,175.89442958,Mokai Patea,-39.59566818,175.89442958,0.0,Rangitikei,Rangitikei,Manawatu-Wanganui,Manawatu-Wanganui
+W33662,Kiwitea,Kiwitea,WORK_AT_HOME,324,WORK,Kiwitea,-40.00817686,175.69603871,Kiwitea,-40.00817686,175.69603871,0.0,Manawatu,Manawatu,Manawatu-Wanganui,Manawatu-Wanganui
+W34630,Mangatainoka,Mangatainoka,WORK_AT_HOME,330,WORK,Mangatainoka,-40.39758846,175.82546085,Mangatainoka,-40.39758846,175.82546085,0.0,Tararua,Tararua,Manawatu-Wanganui,Manawatu-Wanganui
+W34640,Nireaha-Eketahuna,Nireaha-Eketahuna,WORK_AT_HOME,360,WORK,Nireaha-Eketahuna,-40.65364269,175.79396455,Nireaha-Eketahuna,-40.65364269,175.79396455,0.0,Tararua,Tararua,Manawatu-Wanganui,Manawatu-Wanganui
+W39225,Whareama,Whareama,WORK_AT_HOME,345,WORK,Whareama,-40.91901694,175.98994746,Whareama,-40.91901694,175.98994746,0.0,Masterton,Masterton,Wellington,Wellington
+W39457,Aorangi Forest,Aorangi Forest,WORK_AT_HOME,345,WORK,Aorangi Forest,-41.37490301,175.45793738,Aorangi Forest,-41.37490301,175.45793738,0.0,South Wairarapa,South Wairarapa,Wellington,Wellington
+W39465,Golden Bay/Mohua,Golden Bay/Mohua,WORK_AT_HOME,417,WORK,Golden Bay/Mohua,-40.86935481,172.57195655,Golden Bay/Mohua,-40.86935481,172.57195655,0.0,Tasman,Tasman,Nelson,Nelson
+W39622,Upper Moutere,Upper Moutere,WORK_AT_HOME,324,WORK,Upper Moutere,-41.24935169,172.85150896,Upper Moutere,-41.24935169,172.85150896,0.0,Tasman,Tasman,Nelson,Nelson
+W39655,Moutere Hills,Moutere Hills,WORK_AT_HOME,465,WORK,Moutere Hills,-41.26413088,173.0336074,Moutere Hills,-41.26413088,173.0336074,0.0,Tasman,Tasman,Nelson,Nelson
+W39851,Golden Downs,Golden Downs,WORK_AT_HOME,312,WORK,Golden Downs,-41.50890922,172.78826525,Golden Downs,-41.50890922,172.78826525,0.0,Tasman,Tasman,Nelson,Nelson
+W40423,Woodbourne,Woodbourne,WORK_AT_HOME,303,WORK,Woodbourne,-41.5308031,173.90363794,Woodbourne,-41.5308031,173.90363794,0.0,Marlborough,Marlborough,Marlborough,Marlborough
+W40462,Upper Wairau ,Upper Wairau ,WORK_AT_HOME,408,WORK,Upper Wairau,-41.71793751,173.30406264,Upper Wairau,-41.71793751,173.30406264,0.0,Marlborough,Marlborough,Marlborough,Marlborough
+W40578,Awatere,Awatere,WORK_AT_HOME,333,WORK,Awatere,-42.09611412,173.2944504,Awatere,-42.09611412,173.2944504,0.0,Marlborough,Marlborough,Marlborough,Marlborough
+W40706,Kaikoura Ranges,Kaikoura Ranges,WORK_AT_HOME,336,WORK,Kaikoura Ranges,-42.19710797,173.64408497,Kaikoura Ranges,-42.19710797,173.64408497,0.0,Kaikoura,Kaikoura,Canterbury,Canterbury
+W45135,Amuri,Amuri,WORK_AT_HOME,531,WORK,Amuri,-42.64453066,172.95870738,Amuri,-42.64453066,172.95870738,0.0,Hurunui,Hurunui,Canterbury,Canterbury
+W45720,Mandeville-Ohoka,Mandeville-Ohoka,WORK_AT_HOME,324,WORK,Mandeville-Ohoka,-43.36686582,172.54447057,Mandeville-Ohoka,-43.36686582,172.54447057,0.0,Waimakariri,Waimakariri,Canterbury,Canterbury
+W46465,Newtons Road,Newtons Road,WORK_AT_HOME,471,WORK,Newtons Road,-43.56941172,172.31944743,Newtons Road,-43.56941172,172.31944743,0.0,Selwyn,Selwyn,Canterbury,Canterbury
+W47246,Bankside,Bankside,WORK_AT_HOME,303,WORK,Bankside,-43.65857485,172.03741575,Bankside,-43.65857485,172.03741575,0.0,Selwyn,Selwyn,Canterbury,Canterbury
+W47665,Southbridge,Southbridge,WORK_AT_HOME,333,WORK,Southbridge,-43.79254412,172.21023844,Southbridge,-43.79254412,172.21023844,0.0,Selwyn,Selwyn,Canterbury,Canterbury
+W47715,Cairnbrae,Cairnbrae,WORK_AT_HOME,405,WORK,Cairnbrae,-43.66455634,171.77355459,Cairnbrae,-43.66455634,171.77355459,0.0,Ashburton,Ashburton,Canterbury,Canterbury
+W47733,Winchmore-Wakanui,Winchmore-Wakanui,WORK_AT_HOME,345,WORK,Winchmore-Wakanui,-43.96318598,171.82829097,Winchmore-Wakanui,-43.96318598,171.82829097,0.0,Ashburton,Ashburton,Canterbury,Canterbury
+W47765,Ashburton Forks,Ashburton Forks,WORK_AT_HOME,612,WORK,Ashburton Forks,-43.78492258,171.43181981,Ashburton Forks,-43.78492258,171.43181981,0.0,Ashburton,Ashburton,Canterbury,Canterbury
+W47797,Eiffelton,Eiffelton,WORK_AT_HOME,483,WORK,Eiffelton,-43.95897704,171.66500519,Eiffelton,-43.95897704,171.66500519,0.0,Ashburton,Ashburton,Canterbury,Canterbury
+W47809,Ealing-Lowcliffe,Ealing-Lowcliffe,WORK_AT_HOME,330,WORK,Ealing-Lowcliffe,-44.03656373,171.49741748,Ealing-Lowcliffe,-44.03656373,171.49741748,0.0,Ashburton,Ashburton,Canterbury,Canterbury
+W47818,Chertsey,Chertsey,WORK_AT_HOME,417,WORK,Chertsey,-43.82506248,171.96646486,Chertsey,-43.82506248,171.96646486,0.0,Ashburton,Ashburton,Canterbury,Canterbury
+W47965,Arundel,Arundel,WORK_AT_HOME,315,WORK,Arundel,-44.06044997,171.05797729,Arundel,-44.06044997,171.05797729,0.0,Timaru,Timaru,Canterbury,Canterbury
+W48111,Opua (Mackenzie District),Opua (Mackenzie District),WORK_AT_HOME,411,WORK,Opua (Mackenzie District),-43.856187299999995,171.06857118,Opua (Mackenzie District),-43.856187299999995,171.06857118,0.0,Mackenzie,Mackenzie,Canterbury,Canterbury
+W48406,Ngapara,Ngapara,WORK_AT_HOME,414,WORK,Ngapara,-45.06213909,170.69741781,Ngapara,-45.06213909,170.69741781,0.0,Waitaki,Waitaki,Otago,Otago
+W48576,Lindis-Nevis Valleys,Lindis-Nevis Valleys,WORK_AT_HOME,381,WORK,Lindis-Nevis Valleys,-44.94314357,169.28090388,Lindis-Nevis Valleys,-44.94314357,169.28090388,0.0,Central Otago,Central Otago,Otago,Otago
+W48733,Wanaka North,Wanaka North,WORK_AT_HOME,303,WORK,Wanaka North,-44.68004109,169.15232063,Wanaka North,-44.68004109,169.15232063,0.0,Queenstown-Lakes,Queenstown-Lakes,Otago,Otago
+W48788,Manuherikia-Ida Valleys,Manuherikia-Ida Valleys,WORK_AT_HOME,303,WORK,Manuherikia-Ida Valleys,-45.0524266,169.7255609,Manuherikia-Ida Valleys,-45.0524266,169.7255609,0.0,Central Otago,Central Otago,Otago,Otago
+W48803,Teviot Valley,Teviot Valley,WORK_AT_HOME,345,WORK,Teviot Valley,-45.58227059,169.42667896,Teviot Valley,-45.58227059,169.42667896,0.0,Central Otago,Central Otago,Otago,Otago
+W49584,Bruce,Bruce,WORK_AT_HOME,351,WORK,Bruce,-46.07247342,170.08655606,Bruce,-46.07247342,170.08655606,0.0,Clutha,Clutha,Otago,Otago
+W50045,West Otago,West Otago,WORK_AT_HOME,552,WORK,West Otago,-45.83535422,169.21290702,West Otago,-45.83535422,169.21290702,0.0,Clutha,Clutha,Otago,Otago
+W50137,Clinton,Clinton,WORK_AT_HOME,333,WORK,Clinton,-46.23295914,169.36302838,Clinton,-46.23295914,169.36302838,0.0,Clutha,Clutha,Otago,Otago
+W50173,Waikaka,Waikaka,WORK_AT_HOME,426,WORK,Waikaka,-45.96604044,168.98043741,Waikaka,-45.96604044,168.98043741,0.0,Gore,Gore,Southland,Southland
+W50185,Clutha Valley,Clutha Valley,WORK_AT_HOME,438,WORK,Clutha Valley,-46.14666172,169.61562874,Clutha Valley,-46.14666172,169.61562874,0.0,Clutha,Clutha,Otago,Otago
+W50226,Mossburn,Mossburn,WORK_AT_HOME,324,WORK,Mossburn,-45.5465414,168.37465706,Mossburn,-45.5465414,168.37465706,0.0,Southland,Southland,Southland,Southland
+W50244,Longwood Forest,Longwood Forest,WORK_AT_HOME,498,WORK,Longwood Forest,-46.01707924,167.67301087,Longwood Forest,-46.01707924,167.67301087,0.0,Southland,Southland,Southland,Southland
+W50254,Otautau,Otautau,WORK_AT_HOME,582,WORK,Otautau,-46.19250679,168.05347842,Otautau,-46.19250679,168.05347842,0.0,Southland,Southland,Southland,Southland
+W50284,Ohai-Nightcaps,Ohai-Nightcaps,WORK_AT_HOME,345,WORK,Ohai-Nightcaps,-45.89093509,168.02614043,Ohai-Nightcaps,-45.89093509,168.02614043,0.0,Southland,Southland,Southland,Southland
+W50290,Oreti River,Oreti River,WORK_AT_HOME,456,WORK,Oreti River,-46.00268489,168.31789888,Oreti River,-46.00268489,168.31789888,0.0,Southland,Southland,Southland,Southland
+W50300,Hedgehope,Hedgehope,WORK_AT_HOME,315,WORK,Hedgehope,-46.12903119,168.56584014,Hedgehope,-46.12903119,168.56584014,0.0,Southland,Southland,Southland,Southland
+W50343,Edendale-Woodlands,Edendale-Woodlands,WORK_AT_HOME,429,WORK,Edendale-Woodlands,-46.3334381,168.67007113,Edendale-Woodlands,-46.3334381,168.67007113,0.0,Southland,Southland,Southland,Southland
+W50571,Wyndham-Catlins,Wyndham-Catlins,WORK_AT_HOME,525,WORK,Wyndham-Catlins,-46.47283276,168.99193119999995,Wyndham-Catlins,-46.47283276,168.99193119999995,0.0,Southland,Southland,Southland,Southland
+W50656,Waimumu-Kaiwera,Waimumu-Kaiwera,WORK_AT_HOME,351,WORK,Waimumu-Kaiwera,-46.20791261,169.07308711,Waimumu-Kaiwera,-46.20791261,169.07308711,0.0,Gore,Gore,Southland,Southland

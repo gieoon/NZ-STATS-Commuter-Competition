@@ -1,18 +1,24 @@
 id,SA2_name_usual_residence_address,SA2_name_educational_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1,cluster_count
-E1190,Karangahape,Auckland-University,BICYCLE,6,EDUCATION,Karangahape,-36.85896498,174.75639764,Auckland-University,-36.85143057,174.76906469,1.4043065651337363,Waitakere,Waitakere,Auckland,Auckland,153
+E1190,Karangahape,Auckland-University,BICYCLE,6,EDUCATION,Karangahape,-36.85896498,174.75639764,Auckland-University,-36.85143057,174.76906469,1.4043065651337363,Waitakere,Waitakere,Auckland,Auckland,155
+E1587,Hilltop (Taupo District),Hilltop (Taupo District),BICYCLE,21,EDUCATION,Hilltop (Taupo District),-38.69976213,176.09915047,Hilltop (Taupo District),-38.69976213,176.09915047,0.0,Taupo,Taupo,Waikato,Waikato,9
 E2221,Red Beach East,Orewa South,BICYCLE,33,EDUCATION,Red Beach East,-36.60592118,174.70488989,Orewa South,-36.59013546,174.685784,2.447480556889788,Rodney,Rodney,Auckland,Auckland,18
 E9068,Fairfield (Hamilton City),Hamilton East Village,BICYCLE,9,EDUCATION,Fairfield (Hamilton City),-37.76889278,175.284084,Hamilton East Village,-37.79028168,175.29324653,2.510960166485501,Hamilton,Hamilton,Waikato,Waikato,77
+E10722,Glenholme South,Utuhina,BICYCLE,9,EDUCATION,Glenholme South,-38.15361117,176.24756632,Utuhina,-38.14249953,176.23214439,1.8290083560849688,Rotorua,Rotorua,Bay of Plenty,Waikato,13
 E6974,Mornington,Campus South,BICYCLE,6,EDUCATION,Mornington,-45.88564448,170.48404236,Campus South,-45.86793792,170.51211679,2.932574320311846,Dunedin,Dunedin,Otago,Otago,35
 E10055,Cambridge West,Cambridge North,BICYCLE,21,EDUCATION,Cambridge West,-37.887004499999996,175.45779762,Cambridge North,-37.873954299999994,175.4699974,1.8033791424778882,Waipa,Waipa,Waikato,Waikato,27
 E11630,Matapihi,Matapihi,BICYCLE,6,EDUCATION,Matapihi,-37.69819147,176.19717384,Matapihi,-37.69819147,176.19717384,0.0,Western Bay of Plenty,Western Bay of Plenty,Bay of Plenty,Bay of Plenty,87
-E10866,Lower Vogeltown,Strandon,BICYCLE,9,EDUCATION,Lower Vogeltown,-39.07209853,174.0782174,Strandon,-39.05369313,174.09475657,2.4955113070958133,New Plymouth,New Plymouth,Taranaki,Taranaki,41
+E10866,Lower Vogeltown,Strandon,BICYCLE,9,EDUCATION,Lower Vogeltown,-39.07209853,174.0782174,Strandon,-39.05369313,174.09475657,2.4955113070958133,New Plymouth,New Plymouth,Taranaki,Taranaki,43
+E12053,Allandale,Whakatane West,BICYCLE,12,EDUCATION,Allandale,-37.96801926,176.98635382,Whakatane West,-37.96340527,176.96559282,1.8909192801899082,Whakatane,Whakatane,Bay of Plenty,Bay of Plenty,10
 E13003,Clive,Clive,BICYCLE,30,EDUCATION,Clive,-39.58681014,176.91303792,Clive,-39.58681014,176.91303792,0.0,Hastings city,Hastings city,Hawke's Bay,Hawke's Bay,73
+E12222,Whataupoko West,Te Hapara East,BICYCLE,6,EDUCATION,Whataupoko West,-38.65837976,178.02898274,Te Hapara East,-38.6560244,178.01721277,1.0550325470732016,Gisborne,Gisborne,Gisborne,Gisborne,8
 E13651,Laird Park,College Estate,BICYCLE,6,EDUCATION,Laird Park,-39.91964278,175.04579452,College Estate,-39.9305007,175.03470499,1.5335994924747478,Wanganui,Wanganui,Manawatu-Wanganui,Manawatu-Wanganui,22
 E13918,Milverton,Turitea,BICYCLE,24,EDUCATION,Milverton,-40.35969543,175.61983251,Turitea,-40.39053678,175.60862529,3.5583840780259597,Palmerston North,Palmerston North,Manawatu-Wanganui,Manawatu-Wanganui,59
+E14784,Kuripuni,Douglas Park,BICYCLE,6,EDUCATION,Kuripuni,-40.95167579,175.64326344,Douglas Park,-40.94626766,175.65254353,0.9844152061509184,Masterton,Masterton,Wellington,Wellington,13
 E14954,Paraparaumu Central,Raumati Beach West,BICYCLE,21,EDUCATION,Paraparaumu Central,-40.90799495,174.99886348,Raumati Beach West,-40.91582202,174.98216422,1.6512556143451769,Kapiti Coast,Kapiti Coast,Wellington,Wellington,33
 E15325,Petone Esplanade,Petone East,BICYCLE,6,EDUCATION,Petone Esplanade,-41.22967597,174.88725425,Petone East,-41.224818400000004,174.89062655,0.6093326314359927,Hutt city,Hutt city,Wellington,Wellington,80
-E17652,Maitlands,Grampians,BICYCLE,9,EDUCATION,Maitlands,-41.30875019,173.24301865,Grampians,-41.29660057,173.27351504,2.883524713793842,Nelson,Nelson,Nelson,Nelson,65
+E17652,Maitlands,Grampians,BICYCLE,9,EDUCATION,Maitlands,-41.30875019,173.24301865,Grampians,-41.29660057,173.27351504,2.883524713793842,Nelson,Nelson,Nelson,Nelson,66
 E17851,Whitney West,Springlands,BICYCLE,21,EDUCATION,Whitney West,-41.52198108,173.9421136,Springlands,-41.50422292,173.93617831,2.0355192456587514,Marlborough,Marlborough,Marlborough,Marlborough,26
-E18754,Mona Vale,Ilam University,BICYCLE,21,EDUCATION,Mona Vale,-43.52638334,172.60669389,Ilam University,-43.52336127,172.57826459,2.3166060992473843,Christchurch,Christchurch,Canterbury,Canterbury,360
-E18535,Lilybrook,Southbrook,BICYCLE,15,EDUCATION,Lilybrook,-43.31092043,172.59368431,Southbrook,-43.32718073,172.59765801,1.836418780713768,Waimakariri,Waimakariri,Canterbury,Canterbury,14
+E18205,Holmwood,Mona Vale,BICYCLE,9,EDUCATION,Holmwood,-43.519344,172.6084094,Mona Vale,-43.52638334,172.60669389,0.7948659010793335,Christchurch,Christchurch,Canterbury,Canterbury,375
+E20861,Glenwood,Fraser Park,BICYCLE,15,EDUCATION,Glenwood,-44.38744935,171.20852652,Fraser Park,-44.39596592,171.23045071,1.9827953189717409,Timaru,Timaru,Canterbury,Canterbury,13
+E21181,Oamaru North Orana Park,Oamaru North Milner Park,BICYCLE,24,EDUCATION,Oamaru North Orana Park,-45.08058565,170.97765366,Oamaru North Milner Park,-45.06404471,171.0000369,2.5440929296840173,Waitaki,Waitaki,Otago,Otago,11
 E22001,Richmond (Invercargill City),Invercargill Central,BICYCLE,9,EDUCATION,Richmond (Invercargill City),-46.40719619,168.36918138,Invercargill Central,-46.41489239,168.32850731,3.2336411984953366,Invercargill,Invercargill,Southland,Southland,35

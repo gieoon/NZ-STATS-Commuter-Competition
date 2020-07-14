@@ -1,3 +1,3 @@
 id,SA2_name_usual_residence_address,SA2_name_workplace_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1
-W3527,Waiheke East,Wynyard-Viaduct,FERRY,6,EDUCATION,Waiheke East,-36.79798055,175.12796937,Wynyard-Viaduct,-36.843309399999995,174.75788827,33.32547234331552,Auckland,Waitakere,Auckland,Auckland
-W9426,Waiheke East,Queen Street,FERRY,12,EDUCATION,Waiheke East,-36.79798055,175.12796937,Queen Street,-36.84774104,174.76524972,32.756599137986484,Auckland,Waitakere,Auckland,Auckland
+W3527,Waiheke East,Wynyard-Viaduct,FERRY,6,WORK,Waiheke East,-36.79798055,175.12796937,Wynyard-Viaduct,-36.843309399999995,174.75788827,33.32547234331552,Auckland,Waitakere,Auckland,Auckland
+W9426,Waiheke East,Queen Street,FERRY,12,WORK,Waiheke East,-36.79798055,175.12796937,Queen Street,-36.84774104,174.76524972,32.756599137986484,Auckland,Waitakere,Auckland,Auckland

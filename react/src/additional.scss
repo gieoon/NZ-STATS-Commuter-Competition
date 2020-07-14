@@ -148,6 +148,8 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
 
         .Search {
 
+            margin-bottom: 0!important;
+
             .results {
                 max-height: calc(100vh - 45px - 38px - 64px - 1rem - 1rem - 14px - 1rem);
                 overflow: scroll;
@@ -214,6 +216,18 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
             }
         }
 
+        .stats-link {
+            position: absolute;
+            left: 8px;
+            top: 8px;
+            // color: rgb(252, 119, 3)!important;
+            font-size: .5rem;
+
+            &:hover {
+                opacity: .75;
+            }
+        }
+
         a {
             color: inherit;
             text-decoration: none;
@@ -232,7 +246,8 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
 
         
 
-        .STAY_HOME {
+        .WORK_AT_HOME,
+        .STUDY_AT_HOME {
             color: #f54242;
         }
         .DRIVE_OWN_VEHICLE {
@@ -262,10 +277,55 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
     }
 }
 
-// Popup on mouseover
-.leaflet-popup-content {
-    z-index: 99999;
+.title {
+    color: $title-first-color!important;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    text-align: center;
+    // order: 1;
+    font-size: .65rem;
+    font-family: $default-font;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-decoration: none;
+    
+    a {
+        color: $title-first-color;
+        text-decoration: none!important;
+    }
 
+    span {
+        color: $title-span-color;
+    }
+}
+
+// Popup on mouseover
+.leaflet-popup,
+.leaflet-popup-tip  {
+    // background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.65);
+    z-index: 10000;
+    pointer-events: none;
+}
+
+.leaflet-popup {
+    border-radius: 12px;
+}
+
+.leaflet-popup-content-wrapper {
+    background-color: transparent;
+    // background-color: rgba(255,255,255,.25);
+    box-shadow: none!important;
+}
+
+// Sometimes this is disabled
+.leaflet-bar a.leaflet-disabled {
+    background: #fff!important;
+    color: black!important;
+}
+
+.leaflet-popup-content {
+    
     p {
         margin-bottom: 0px;
         margin-top: 0px;
@@ -281,9 +341,10 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
         // margin-left: 4px;
         // margin-right: 4px;
 
-        &.STAY_HOME {
+        &.WORK_AT_HOME,
+        &.STUDY_AT_HOME {
             color: #f54242;
-        }
+        } 
         &.DRIVE_OWN_VEHICLE {
             color: #f08c22;
         }
@@ -597,7 +658,7 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
 .meta {
 
     width: 100%;
-    min-height: 82px;
+    // min-height: 82px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -613,7 +674,8 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
         
         &.total {
         //   color: $brick;
-            color: $blue;
+            // color: $blue;
+            min-height: 62px;
         }
   
         &.home {

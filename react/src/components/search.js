@@ -190,7 +190,7 @@ function Search({
                     <Link
                       key={index}
                       //window.location.href + 
-                      to={"../../location/" + result.departure_LATITUDE + "/" + result.departure_LONGITUDE}
+                      to={"../../../location/" + result.departure_LATITUDE + "/" + result.departure_LONGITUDE + "/12"}
                       // target="_noblank"
                       className="essential-result"
 

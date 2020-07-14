@@ -67,7 +67,23 @@ export const DB_2_COMMUTE_METHOD = {
   "BUS": "Bus",
   "FERRY": "Ferry",
   "WALK_OR_JOG": "Walk or jog",
+  "WORK_AT_HOME": "Work from home",
+  "STUDY_AT_HOME": "Study from home",
   "OTHER": "Other"
+}
+
+export const COMMUTE_METHOD_2_DISPLAY = {
+  "HOME": "Working/Studying from home",
+  "DRIVE_OWN_VEHICLE": "Driving own vehicle",
+  "PASSENGER_IN_VEHICLE": "As a passenger in car/truck/van",
+  "TRAIN": "Train",
+  "BICYCLE": "Bicycle",
+  "BUS": "Bus",
+  "FERRY": "Ferry",
+  "WALK_OR_JOG": "Walking/jogging",
+  "WORK_AT_HOME": "Working from home",
+  "STUDY_AT_HOME": "Studying from home",
+  "OTHER": "Other means"
 }
 
 

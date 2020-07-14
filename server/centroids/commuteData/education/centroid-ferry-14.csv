@@ -1,3 +1,3 @@
 id,SA2_name_usual_residence_address,SA2_name_educational_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1,cluster_count
+E1010,Gulf Harbour North,Auckland-University,FERRY,12,EDUCATION,Gulf Harbour North,-36.60949658,174.79413674,Auckland-University,-36.85143057,174.76906469,26.99446198050268,Rodney,Waitakere,Auckland,Auckland,3
 E1187,Cheltenham,Auckland-University,FERRY,45,EDUCATION,Cheltenham,-36.82539766,174.80659852,Auckland-University,-36.85143057,174.76906469,4.4200227483558665,Waitakere,Waitakere,Auckland,Auckland,23
-E1325,Ostend,Auckland-University,FERRY,18,EDUCATION,Ostend,-36.79263832,175.05220466,Auckland-University,-36.85143057,174.76906469,26.036816218688504,Auckland,Waitakere,Auckland,Auckland,6
