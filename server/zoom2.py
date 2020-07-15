@@ -94,7 +94,7 @@ def getVisibleData(df, left, top, right, bottom, zoom, commute_purpose):
             (df['destination_LONGITUDE'] <= float(right))
         )
     ]
-    print('size: ', len(ddf))
+    # print('size: ', len(ddf))
     if len(ddf) > MAX_RESULT_COUNT:
         ddf = compress1(ddf, zoom, commute_purpose)
     if len(ddf) > MAX_RESULT_COUNT:
@@ -106,7 +106,7 @@ def getVisibleData(df, left, top, right, bottom, zoom, commute_purpose):
 
 def compress1(df, zoom, commute_purpose):
     ddf = df.loc[df['COUNT'] >= COUNT_CUTOFFS[commute_purpose][int(zoom)-5]]
-    print('compress1: ', len(ddf))
+    # print('compress1: ', len(ddf))
     return ddf
 
 def compress2(df, left, top, right, bottom):
@@ -118,7 +118,7 @@ def compress2(df, left, top, right, bottom):
             (df['departure_LONGITUDE'] <= float(right))
         )
     ]
-    print("compress2: ", len(ddf))
+    # print("compress2: ", len(ddf))
     return ddf
 
     
@@ -139,7 +139,7 @@ def compress3(df, left, top, right, bottom):
             (df['destination_LONGITUDE'] <= float(right))
         )
     ]
-    print("compress3: ", len(ddf))
+    # print("compress3: ", len(ddf))
     return ddf
 
     

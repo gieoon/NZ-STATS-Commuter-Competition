@@ -19,7 +19,8 @@ const locationSuggestions = [
 ]
 
 function Search({
-  allCentroidDestinations
+  allCentroidDestinations,
+  setClickedData,
 }){
     const [searchValue, setSearchValue] = useState('');
     const [expand, setExpand] = useState(false);
@@ -35,6 +36,7 @@ function Search({
     
     useEffect(()=>{
       if(allCentroidDestinations){
+        console.log('creating bloodhound')
         import('corejs-typeahead').then(Bloodhound => {
             // console.log(Bloodhound);
             setEngine(
@@ -55,7 +57,7 @@ function Search({
         })
       }
     }
-    ,[]
+    ,[allCentroidDestinations]
     )
 
     const handleSearch = useCallback((searchInput)=>{
@@ -77,7 +79,6 @@ function Search({
 
             setResults([...results]);
         }
-
         engine.search(searchInput, sync);
     },[
         engine
@@ -86,6 +87,7 @@ function Search({
     useDebounce(
       ()=>{
           if(searchValue) {
+              setClickedData({});
               handleSearch(searchValue);
           } else {
               setResults(

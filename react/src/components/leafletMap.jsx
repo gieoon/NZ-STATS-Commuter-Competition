@@ -7,7 +7,7 @@ import React, {
     useImperativeHandle // Child only exposes certain properties to parent.
 } from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
-import {useLocation} from 'react-router-dom';
+import {useLocation, useHistory} from 'react-router-dom';
 import L, { circle } from 'leaflet';
 import '@elfalem/leaflet-curve'
 import './leaflet.scss'; // as opposed to .scss file which is CSS-like, or .sass which is considered SASS
@@ -29,7 +29,7 @@ const MAX_ZOOM = 18;
 const INITIAL_STROKE_WEIGHT = 1;
 const HIGHLIGHTED_STROKE_WEIGHT = INITIAL_STROKE_WEIGHT * 3.5;
 const STROKE_COUNT_MULTIPLIER = 0.1;
-const INITIAL_OPACITY = 0.35;
+const INITIAL_OPACITY = .75;//0.35;
 const OPACITY_MULTIPLIER = 0.01;
 const HIGHLIGHTED_OPACITY = 1;
 
@@ -51,7 +51,6 @@ global.commuteEducationCurves = commuteEducationCurves;
     setHighlightedData,
     centroidData,
     currentMap,
-    history,
     currentCommuteTypes,
     setCurrentDestinationData,
     setClickedData,
@@ -104,6 +103,7 @@ global.commuteEducationCurves = commuteEducationCurves;
     const [initializing, setInitializing] = useState(true);
 
     const location = useLocation();
+    const history = useHistory();
 
     // useImperativeHandle(ref, () => {
     //     return {
@@ -143,13 +143,13 @@ global.commuteEducationCurves = commuteEducationCurves;
                 zoom: z,
             });
             // Zoom into this location, but not the first time
-            // if(!initializing){
+            if(initializing){
                 mapRef.current.leafletElement.setView([lat,lng], z); //9
                 // var circle = createCurrentLatLngCircle(lat, lng);
                 // setCurrentPositionCircle(circle);
                 // console.log('update data called');
                 updateData();
-            // }
+            }
             setInitializing(false);
         }
     }, [location])
@@ -185,6 +185,10 @@ global.commuteEducationCurves = commuteEducationCurves;
         mapRef.current.leafletElement.off('movestart');
         mapRef.current.leafletElement.on('movestart', updateData);
 
+        // mapRef.current.leafletElement.off('moveend');
+        // mapRef.current.leafletElement.on('moveend', updateData);
+
+
         // mapRef.current.leafletElement.off('viewreset');
         // mapRef.current.leafletElement.on('viewreset', updateData);
 
@@ -212,10 +216,22 @@ global.commuteEducationCurves = commuteEducationCurves;
             from: "",
             to: ""
         })
+        
 
         const map = mapRef.current.leafletElement;
         var bounds = map.getBounds();
+        var center = bounds.getCenter();
         var zoom = map.getZoom();
+        // console.log(center);
+        // Update URL
+        // setCurrentLatLng({
+        //     lat: center.lat,
+        //     lng: center.lng,
+        //     zoom: zoom,
+        // });
+        // console.log('history: ', history);
+        history.replace(`/location/${center.lat}/${center.lng}/${zoom}`)
+
         // console.log('requesting data with zoom: ', zoom);
         // If total, request both data types
         // Can also do if !== education, request work, if !== work, request education, so total will request both.
@@ -267,7 +283,7 @@ global.commuteEducationCurves = commuteEducationCurves;
     const updateCurrentSelectedCurve = (obj) => {
         
         if(Object.keys(currentSelectedCurve).length){
-            console.log('removing current selected curve')
+            // console.log('removing current selected curve')
             currentSelectedCurve.remove();
         }
         currentSelectedCurve = createCurve(
@@ -750,6 +766,7 @@ global.commuteEducationCurves = commuteEducationCurves;
     const createPopup = (e, obj) => {
         L.popup({
             closeButton: false,
+            autoPan: false,
         })
             .setLatLng(e.latlng)
             .setContent(
@@ -770,6 +787,7 @@ global.commuteEducationCurves = commuteEducationCurves;
     const createStayAtHomePopup = (e, obj) => {
         L.popup({
             closeButton: false,
+            autoPan: false,
         })
             .setLatLng(e.latlng)
             .setContent(
@@ -810,7 +828,11 @@ global.commuteEducationCurves = commuteEducationCurves;
             <TileLayer
                 // This defines what kind of tiles we want, and the type of the map
                 // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                url="https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=9Ada5vIEJbJjNQrKmV7i"
+
+                // jun.a.kagaya@gmail.com
+                // url="https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=9Ada5vIEJbJjNQrKmV7i"
+                // a.jun.kagaya@gmail.com
+                url="https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=tYXqZFaglZBPM8w9KlP7"
                 //attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
                 // url="http://tile.stamen.com/terrain/{z}/{x}/{y}.jpg"
                 // url="http://tile.stamen.com/watercolor/{z}/{x}/{y}.jpg"

@@ -44,12 +44,12 @@ export default function DestinationPopup({
         ref: springRef,
         config: config.stiff,
         from: { 
-            size: '20%', 
+            size: '1%', 
             background: '#161625' ,
             opacity: 0,
         },
         to: { 
-            size: open ? '100%' : '20%', 
+            size: open ? '100%' : '1%', 
             background: open ? '#161625' : '#1e1e30',
             opacity: open ? 1 : 0,
         }
@@ -87,28 +87,30 @@ export default function DestinationPopup({
             }}
             style={{
                 display: hide ? 'none' : 'block',
+                pointerEvents: open ? 'all' : 'none',
                 opacity: opacity,
             }}
         >
         </Background>
 
-        <Wrapper>
+        <Wrapper id="destination-popup-wrapper">
             <Container 
+                id="destination-popup-container"
                 style={{...rest, width: size, height: size, top: top, opacity: opacity }}
                 // onClick={()=>set(open => !open)}
             >
                 {
                     open
                     ? <>
-                        <TopDescription>Details about this location</TopDescription>
-                        <Header>{name1 + ", "}<br/>{name}</Header>
+                        <TopDescription id="destination-popup-top-description">Details about this location</TopDescription>
+                        <Header id="destination-popup-header">{name1 + ", "}<br/>{name}</Header>
                     </>
                     : ""
                 }
-                <Contents>
+                <Contents id="destination-popup-contents">
                 {
                     transitions.map(({item, key, props}) => (
-                        <Item key={key} style={{ ...props, background: '#1e1e30' }}>
+                        <Item key={key} className="destination-popup-item" style={{ ...props, background: '#1e1e30' }}>
                             <>
                                 <div style={{color:'#6c757d',marginBottom:"4px"}}>{key2Display(item[0])}</div>
                                 <div style={{color:'white'}}>{
@@ -148,6 +150,7 @@ const Wrapper = styled(animated.div)`
   left: calc(408px + 8px + 8px + 8px);
   top: calc(8px);
   z-index: 9999;
+  pointer-events: none;
 `
 const TopDescription = styled(animated.h6)`
     margin: 0;
@@ -163,6 +166,7 @@ const Header = styled(animated.h1)`
 const Contents = styled(animated.div)`
     max-height: 70vh;
     overflow-y: scroll; 
+    pointer-events: all;
 `
 
 const Container = styled(animated.div)`

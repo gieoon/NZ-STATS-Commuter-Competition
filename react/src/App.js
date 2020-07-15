@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import "./App.scss";
 import './additional.scss';
+import './mobile.scss';
 // import './App.css';
 import Navbar from "./components/navbar.js";
 import { Helmet } from "react-helmet";

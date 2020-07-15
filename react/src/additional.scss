@@ -106,6 +106,7 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
 .Home {
     margin-left: 0!important;
     margin-right: 0!important;
+    padding-top: 0!important;
 
     .home-right {
         margin-left: 0!important;
@@ -206,7 +207,7 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
             padding-top: 1rem;
             text-align: center;
             // order: 1;
-            font-size: .65rem;
+            font-size: 12px;//1.1rem;
             font-family: $default-font;
             text-transform: uppercase;
             font-weight: 900;
@@ -481,8 +482,8 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
         margin-left: 0.15rem;
         margin-right: 0.15rem;
         margin-top: 0.15rem;
-        padding-left: .1rem;
-        padding-right: .1rem;
+        padding-left: .2rem;
+        padding-right: .2rem;
         padding-top: .2rem;
         padding-bottom: .2rem;
         text-align: center;
@@ -515,6 +516,7 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
             margin-top: 0;
             vertical-align: middle;
             text-align: center;
+
         }
 
         &.Stay_home {
@@ -545,6 +547,24 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
             color: #6c757d;
         }
 
+    }
+}
+
+.FAQ {
+    margin: auto;
+
+    max-height: calc(100vh - 45px);
+    overflow-y: scroll;
+
+    #back-button {
+        color: transparent;
+        background-color: transparent;
+    }
+
+    img {
+        transform: rotate(180deg);
+        width: 7.5%!important;
+        opacity: .35;
     }
 }
 
@@ -638,7 +658,7 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
 
 .stats-bottom {
     width: 100%;
-    padding-bottom: 16px;
+    // padding-bottom: 16px;
 
     h1,
     h2 {
@@ -671,11 +691,15 @@ $border-color: rgba(0, 0, 0, 0.3); //#DADCE0;
         word-wrap: break-word;
         margin-left: 12px;
         margin-right: 12px;
+
+        .to {
+            margin-top: 8px;
+        }
         
         &.total {
         //   color: $brick;
             // color: $blue;
-            min-height: 62px;
+            // min-height: 62px;
         }
   
         &.home {

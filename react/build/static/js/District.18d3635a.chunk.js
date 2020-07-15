@@ -1,2 +1,0 @@
-(this["webpackJsonpvisualizing-commuter-data"]=this["webpackJsonpvisualizing-commuter-data"]||[]).push([[3],{210:function(t,i,n){"use strict";n.r(i),n.d(i,"default",(function(){return u}));var a=n(5),e=n.n(a);function u(t){return e.a.createElement("div",null,"Overall Statistics")}}}]);
-//# sourceMappingURL=District.18d3635a.chunk.js.map

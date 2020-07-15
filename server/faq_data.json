@@ -1,14 +1,26 @@
 [
     {
         "question": "What is this site?",
-        "answer": "<div><p>This site was created to visualize New Zealand Commuter data obtained in the 2018 census by NZ Statistics.</p></div>"
+        "answer": "<div><p>This site helps to visualize New Zealand Commuter data in understanding the population's commute patterns. You can move around the map to view different commute paths and understand numbers of people moving from A to B</p></div>"
     },
     {
-        "question": "Who created this site?",
+        "question": "Where is the data from?",
+        "answer": "<div><p>Data was obtained from the NZ Statistics 2018 census.</p></div>"
+    },
+    {
+        "question": "How do I use this site?",
+        "answer": "<div><p>Commute methods can be selected/deselected to customize data you are interested in. You can also select between data for people commuting for educational or work purposes, or both combined.</p></div>"
+    },
+    {
+        "question": "Some commute paths unrealistic?",
+        "answer": "<div><p>Some unrealistic paths exist, e.g. commutes that are more than 1,000km, or walking/jogging commutes of travelling a distance of more than 100km one way. This data is displayed as is and has not been filtered out. Ideas are currently being considered to handle this data in the future.</p></div>"
+    },
+    {
+        "question": "Who built this site?",
         "answer": "<div><p>Jun Kagaya built this site as an entry to the <a style='color:red' href='https://www.stats.govt.nz/2018-census/there-and-back-again-data-visualisation-competition/' target='_blank'>There & Back Again Data Visualization Competition</a></p></div>"
     },
     {
         "question": "Who can I contact for more information?",
-        "answer": "<div><p>You can contact NZ Stats <a style='color:red' href='mailto:info@stats.govt.nz?subject=There and back data visualisation competition'>info@stats.govt.nz</a><br/>Or email me directly <a style='color:red' href='mailto:jun.a.kagaya@gmail.com'>jun.a.kagaya@gmail.com</a></p></div>"
+        "answer": "<div><p>You can contact NZ Stats <a style='color:red' href='mailto:info@stats.govt.nz?subject=There and back data visualisation competition'>info@stats.govt.nz</a><br/>Or email me directly <a style='color:red' href='mailto:jun.a.kagaya@gmail.com?subject=There and back data visualisation competition'>jun.a.kagaya@gmail.com</a></p></div>"
     }
 ]

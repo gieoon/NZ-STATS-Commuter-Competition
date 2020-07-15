@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import {
   DATA_URL_ROOT
 } from '../constants';
+import right from '../assets/right.svg';
 
 function FAQ(props) {
   const [faq, setFaq] = useState([]);
@@ -23,7 +24,7 @@ function FAQ(props) {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setFaq(data);
       })
       .catch((error) => {
@@ -32,7 +33,7 @@ function FAQ(props) {
   };
 
   return (
-    <div className="FAQ">
+    <div>
       <Helmet>
         <title>About | NZ Commute</title>
         <meta name="title" content="Visualization of Commuter data in NZ" />
@@ -43,22 +44,26 @@ function FAQ(props) {
           Commute  
         </Link>
       </div>
-
-      {faq.map((faq, index) => {
-        return (
-          <div
-            key={index}
-            className="faq fadeInUp"
-            style={{ animationDelay: `${0.5 + index * 0.1}s` }}
-          >
-            <h2 className="question">{faq.question}</h2>
-            <h2
-              className="answer"
-              dangerouslySetInnerHTML={{ __html: faq.answer }}
-            ></h2>
-          </div>
-        );
-      })}
+      <div className="FAQ">
+        {faq.map((faq, index) => {
+          return (
+            <div
+              key={index}
+              className="faq fadeInUp"
+              style={{ animationDelay: `${0.5 + index * 0.1}s` }}
+            >
+              <h2 className="question">{faq.question}</h2>
+              <h2
+                className="answer"
+                dangerouslySetInnerHTML={{ __html: faq.answer }}
+              ></h2>
+            </div>
+          );
+        })}
+        <Link to='/' id="back-button" className="faq fadeInUp">
+          <img src={right} alt="" />
+        </Link>
+      </div>
     </div>
   );
 }

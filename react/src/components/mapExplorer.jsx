@@ -421,6 +421,7 @@ function MapExplorer({
                 allCentroidDestinations={allCentroidDestinations}
                 currentDestinationData={currentDestinationData}
                 clickedData={clickedData}
+                setClickedData={setClickedData}
               />
 
               <div className="map-wrapper">

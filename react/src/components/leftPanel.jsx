@@ -32,6 +32,7 @@ function LeftPanel({
     allCentroidDestinations,
     currentDestinationData,
     clickedData,
+    setClickedData,
 }){
     const { t } = useTranslation();
 
@@ -122,20 +123,23 @@ function LeftPanel({
         <div className="LeftPanel">
           <div className="inner">
             <div className="title"> 
-              <div className="stats-link">
+              {/* <div className="stats-link">
                 <Link to="/stats">
                   View more stats
                 </Link>
-              </div>
-              <Link to="/">
+              </div> */}
+              {/* <Link to="/"> */}
+              <a href='/'>
                 <span>New Zealand </span>
                 Commute  
-              </Link>
+              </a>
+              {/* </Link> */}
             </div>
 
             <Suspense fallback={<div></div>}>
                 <SearchBar 
                   allCentroidDestinations={allCentroidDestinations}
+                  setClickedData={setClickedData}
                 />
             </Suspense>
 
@@ -158,14 +162,14 @@ function LeftPanel({
                 {
                   clickedData.departure_SA22018_V1_NAME && clickedData.departure_SA22018_V1_NAME.length
                   ? <h2 className={classnames("total",clickedData.COMMUTE_TYPE)}>
-                      <div>
+                      <div style={{paddingTop:"6px"}}>
                         {t("From ")}
                         {clickedData.DEPARTURE_NAME_1}
                         {clickedData.departure_SA22018_V1_NAME && clickedData.departure_SA22018_V1_NAME.length ? ", " : ""}
                         <div className="destination-link"
                           onClick={()=>{updateDestinationPopup(clickedData.DEPARTURE_NAME_1, clickedData.departure_SA22018_V1_NAME)}}
                         >{t(clickedData.departure_SA22018_V1_NAME)}</div>
-                        <div style={{marginTop:"8px"}}>
+                        <div className="to">
                           {t("To ")}
                           {clickedData.DESTINATION_NAME_1}
                           { clickedData.DESTINATION_NAME_1 //Or, use DESTINATION_NAME_2
@@ -194,7 +198,7 @@ function LeftPanel({
                       </div>
                     
                       
-                      <div style={{alignSelf: "center"}}>
+                      <div style={{alignSelf: "center",paddingLeft: "6px"}}>
                         <animated.h1>
                           {km.distance.interpolate((distance) => 
                                 // !isNaN(distance) ? distance.toFixed(2) + "km" : ""
@@ -210,29 +214,35 @@ function LeftPanel({
             </Suspense>
 
             <div className="stats-bottom">
-              
-              <animated.h1 className={classnames(clickedData.COMMUTE_TYPE)}>
-                {spring.count.interpolate((count) => 
-                  count > 0
-                  ? Math.floor(count).toFixed() + " people"//" commutes"
-                  : ""
-                )}
-              </animated.h1>
-              <h2 className={classnames(clickedData.COMMUTE_TYPE)}>
-                {
-                  clickedData.TYPE 
-                  ? "Commuting for "
-                  : ""
-                }
-                {(clickedData.TYPE || "")
-                  .charAt(0)
-                + (clickedData.TYPE || "")
-                  .substring(1)
-                  .toLowerCase()
-                }
-                <br/>
-                {COMMUTE_METHOD_2_DISPLAY[clickedData.COMMUTE_TYPE]}
-              </h2>
+              { Object.keys(clickedData).length
+                ? <div style={{paddingBottom:"1em",paddingTop:"1em",display:"flex","justifyContent": "space-between"}}>
+                  <animated.h1 
+                    style={{whiteSpace: "nowrap"}}
+                    className={classnames(clickedData.COMMUTE_TYPE)}>
+                    {spring.count.interpolate((count) => 
+                      count > 0
+                      ? Math.floor(count).toFixed() + " people"//" commutes"
+                      : ""
+                    )}
+                  </animated.h1>
+                  <h2 className={classnames(clickedData.COMMUTE_TYPE)}>
+                    {
+                      clickedData.TYPE 
+                      ? "Commuting for "
+                      : ""
+                    }
+                    {(clickedData.TYPE || "")
+                      .charAt(0)
+                    + (clickedData.TYPE || "")
+                      .substring(1)
+                      .toLowerCase()
+                    }
+                    <br/>
+                    {COMMUTE_METHOD_2_DISPLAY[clickedData.COMMUTE_TYPE]}
+                  </h2>
+                </div>
+                : ""
+              }
             </div>
 
             <div className="about-wrapper">
@@ -241,7 +251,8 @@ function LeftPanel({
               </Link>
             
               <h6 className={classnames("footnote")}>
-                &dagger; {`${t("Based on 2018 Census by NZ Statistics, see ")}`}
+                {/* &dagger;  */}
+                {`${t("* Based on 2018 Census by NZ Statistics, see ")}`}
                 <a
                     href="https://datafinder.stats.govt.nz/data/category/census/2018/commuter-view/?_ga=2.217129552.794612537.1592401476-705599149.1592401476"
                     target="_noblank"

@@ -1,0 +1,198 @@
+@media screen and (max-width: 769px){
+    .LeftPanel {
+        width: 100vw!important;
+        left: 0!important;
+        top: 0!important;
+        border-top-left-radius: 0em;
+        border-top-right-radius: 0em;
+        
+        padding: 0!important;
+
+        .inner {
+            width: 100vw!important;
+            min-width: 100vw!important;
+
+            .title {
+                padding-top: .35rem;
+                padding-bottom: .35rem;
+            }
+
+            .meta {
+
+                h1 {
+                    margin: 0!important;
+                }
+
+                h2 {
+                    margin-bottom: 0!important;
+
+                    .to {
+                        margin-top: 0px;
+                    }
+
+                    .total {
+                        min-height: inherit!important;
+                    }
+                }
+            }
+
+            .Search {
+                // Search for a location in NZ txt
+                label {
+                    display: none;
+                }
+                input {
+                    width: calc(100vw - 4rem);
+                    border-radius: 0;
+                    height: 1.2em!important;
+                }
+                .search-button svg {
+                    top: .75rem!important;
+                }
+
+                .results {
+                    max-height: 40vh!important;
+                }
+
+                .close-button {
+                    top: 1rem!important;
+                }
+            }
+
+            .stats-bottom {
+                padding-bottom: 0px!important;
+
+                h1 {
+                    font-size: 22px!important; //2.6em!important;
+                }
+            }
+
+            .map-stats {
+                padding-top: 0px!important;
+            }
+
+            .about-wrapper {
+                border-bottom-left-radius: 12px;
+                border-bottom-right-radius: 12px;
+
+                img {
+                    width: 22px!important; //2.25em!important;
+                }
+
+                h6 {
+                    font-size: 10px!important//.85rem!important;
+                }
+
+                a {
+                    // margin-bottom: 0px!important;
+                    // margin-top: 2px!important;
+                }
+            }
+        }
+    
+    }
+
+    #destination-popup-wrapper {
+        left: 0!important;
+        // top: -500px!important;
+        // pointer-events: none;
+        width: 100vw!important;
+        // height: 1px;
+    }
+
+    #destination-popup-top-description {
+        font-size: 10px!important; //1.1em!important;
+    }
+
+    #destination-popup-header {
+        font-size: 20px!important; //1.9em!important;
+    }
+
+    #destination-popup-container {
+        border-bottom-right-radius: 12px!important;
+        border-bottom-left-radius: 12px!important;
+        max-width: calc(100vw - 25px  - 25px)!important;
+    }
+
+    #destination-popup-contents {
+        max-height: 40vh!important;
+    }
+
+    .destination-popup-item {
+        font-size: 15px!important; //1.5em!important;
+    }
+
+    .commutes-wrapper {
+        top: inherit!important;
+        left: 0px!important;
+        right: inherit!important;
+        bottom: 3.6em!important;
+        border-top-left-radius: 0px!important;
+        border-bottom-left-radius: 0px!important;
+        padding: .05em!important;
+        width: fit-content!important;
+
+        .CommuteTab {
+            margin-bottom: .17em!important;
+            width: 40px!important; //75px!important;
+            // padding: .35em .25em!important;
+            padding: 3px 6px!important;
+
+            img {
+                width: 20px!important; //1.5em!important;
+            }
+
+            h4 {
+                font-size: 7.5px!important; //.7em!important;
+            }
+        }
+    }
+
+    .tabs-container {
+        bottom: 9em!important;
+        top: inherit!important;
+        left: inherit!important;
+        right: 0px!important;
+        border-top-right-radius: 0px!important;
+        border-bottom-right-radius: 0px!important;
+
+        // &:before {
+        //     content: "commute purpose";
+        //     position: fixed;
+        //     bottom: 10em;
+        //     right: 0;
+        // }
+
+        .tabs-map {
+            flex-direction: column!important;
+
+            .tab {
+                margin-right: 0rem;
+                min-width: inherit!important;
+                padding-left: .25rem!important;
+                padding-right: .25rem!important;
+                display: inline-table!important;
+            }
+
+            h4 {
+                font-size: 10px!important; //.75em!important;
+            }
+        }
+    }
+
+    h1 {
+        font-size: 26px!important; //1.65em!important;
+    }
+
+    h2 {
+        font-size: 16px!important; //1.5em!important;
+    }
+
+    .FAQ {
+        * {
+            width: 100%!important;
+        }
+    }
+
+}
+
