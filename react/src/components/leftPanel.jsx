@@ -54,7 +54,7 @@ function LeftPanel({
       fetcherJSON,
       {
         revalidateOnMount: true,
-        revalidateOnFocus: true
+        revalidateOnFocus: false // This saves a massive network request each time!
       }
     )
     // console.log('destinationData: ', destinationData)
