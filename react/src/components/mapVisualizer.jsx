@@ -76,7 +76,7 @@ function MapVisualizer({
   currentCommuteTypes,
   setCurrentDestinationData,
   setClickedData,
-  leafletMapRef,
+  mapRef,
 }) {
   const { t } = useTranslation();
   const svgRef = useRef(null);
@@ -774,6 +774,7 @@ function MapVisualizer({
         currentCommuteTypes={currentCommuteTypes}
         setCurrentDestinationData={setCurrentDestinationData}
         setClickedData={setClickedData}
+        mapRef={mapRef}
         // ref={leafletMapRef} // Can use ref on React.forwardRef components
       />
       {/* <div className="svg-parent">

@@ -54,6 +54,7 @@ global.commuteEducationCurves = commuteEducationCurves;
     currentCommuteTypes,
     setCurrentDestinationData,
     setClickedData,
+    mapRef,
 }){
     
 
@@ -69,7 +70,7 @@ global.commuteEducationCurves = commuteEducationCurves;
     const [circles, setCircles] = useState([]);
 
     // const mapRef = React.createRef();
-    const mapRef = useRef(null);
+    // const mapRef = useRef(null);
 
     const isInitialMount = useRef(true);
 
@@ -97,6 +98,8 @@ global.commuteEducationCurves = commuteEducationCurves;
         zoom: MIN_ZOOM,
     })
 
+    const [searchUpdatedLocation, setSearchUpdatedLocation] = useState(false);
+
     // Circle highlighting current selection on the map
     const [currentPositionCircle, setCurrentPositionCircle] = useState(null);
 
@@ -114,6 +117,10 @@ global.commuteEducationCurves = commuteEducationCurves;
     // componentDidMount
     useEffect(()=>{
         L.control.scale().addTo(mapRef.current.leafletElement);
+
+        // To make this function accessible from search
+        // console.log(updateData);
+        mapRef.current.leafletElement.updateData = updateData;
     },[])
 
     // useEffect(()=>{
@@ -127,7 +134,7 @@ global.commuteEducationCurves = commuteEducationCurves;
     // }, [currentCommuteTypes])
 
     useEffect(()=>{
-        
+        // console.log('location changed: ', location.pathname)
         var reg = /[\-0-9.]+\/[\-0-9.]+\/[\-0-9.]+$/;
         // console.log(location.pathname)
         var match = location.pathname.match(reg);
@@ -137,18 +144,22 @@ global.commuteEducationCurves = commuteEducationCurves;
             var lng = match[0].split('/')[1];
             var z = match[0].split('/')[2];
             // console.log("Location updated: ", match, lat, lng, z);
-            setCurrentLatLng({
-                lat: lat,
-                lng: lng,
-                zoom: z,
-            });
+            // console.log("searchUpdatedLocation: ", searchUpdatedLocation);
             // Zoom into this location, but not the first time
-            if(initializing){
+            if(
+                searchUpdatedLocation
+                // currentLatLng.lat !== lat
+                // || currentLatLng.lng !== lng
+                // || currentLatLng.zoom !== z
+            ){
                 mapRef.current.leafletElement.setView([lat,lng], z); //9
                 // var circle = createCurrentLatLngCircle(lat, lng);
                 // setCurrentPositionCircle(circle);
                 // console.log('update data called');
                 updateData();
+                
+                setSearchUpdatedLocation(true);
+
             }
             setInitializing(false);
         }
@@ -221,6 +232,11 @@ global.commuteEducationCurves = commuteEducationCurves;
         const map = mapRef.current.leafletElement;
         var bounds = map.getBounds();
         var center = bounds.getCenter();
+            // {
+            //     lat: currentLatLng.lat,
+            //     lng: currentLatLng.lng,
+            //     zoom: currentLatLng.zoom
+            // };
         var zoom = map.getZoom();
         // console.log(center);
         // Update URL

@@ -59,16 +59,6 @@ function Home(props) {
   // )
   // console.log("centroidData: ",centroidData)
 
-  // Data to load for search
-  const { data: allCentroidDestinations } = useStickySWR(
-    DATA_URL_ROOT + '/allCentroidDestinations',
-    fetcher,
-    {
-      revalidateOnMount: true,
-      revalidateOnFocus: false
-    }
-  )
-
   // const { data: destinationData } = useStickySWR(
   //   DATA_URL_ROOT + '/destinations',
   //   fetcherJSON,
@@ -123,7 +113,7 @@ function Home(props) {
                     {...{ regionalEducationData }}
                     {...{ regionalTotalData }}
                     {...{ centroidData }}
-                    {...{ allCentroidDestinations }}
+                    // {...{ allCentroidDestinations }}
                     {...{ mapStatistic, setMapStatistic }}
                     {...{ regionHighlighted, setRegionHighlighted }}
                     {...{ anchor, setAnchor }}

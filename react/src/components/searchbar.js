@@ -5,6 +5,7 @@ import Search from './search';
 function SearchBar({
     allCentroidDestinations,
     setClickedData,
+    mapRef,
 }) {
     return(
         <React.Fragment>
@@ -13,7 +14,11 @@ function SearchBar({
                 <img src={search} className="search-img" />
             </div> */}
 
-            <Search allCentroidDestinations={allCentroidDestinations} setClickedData={setClickedData} />
+            <Search 
+                allCentroidDestinations={allCentroidDestinations} 
+                setClickedData={setClickedData} 
+                mapRef={mapRef}
+            />
         </React.Fragment>
     )
 }

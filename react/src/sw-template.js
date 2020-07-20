@@ -40,7 +40,7 @@ if (typeof importScripts === "function") {
 
     // Adding networkFirst for all json data. In offline mode will be fetched from cache
     workbox.routing.registerRoute(
-      new RegExp("https://nz-commuter.com/.*\\.json"),
+      new RegExp("https://nzcommute.com/.*\\.json"),
       new workbox.strategies.NetworkFirst(),
       "GET"
     );

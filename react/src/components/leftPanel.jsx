@@ -29,10 +29,11 @@ function LeftPanel({
     hoveredData,
     highlightedData,
     centroidData,
-    allCentroidDestinations,
+    // allCentroidDestinations,
     currentDestinationData,
     clickedData,
     setClickedData,
+    mapRef,
 }){
     const { t } = useTranslation();
 
@@ -138,8 +139,9 @@ function LeftPanel({
 
             <Suspense fallback={<div></div>}>
                 <SearchBar 
-                  allCentroidDestinations={allCentroidDestinations}
+                  // allCentroidDestinations={allCentroidDestinations}
                   setClickedData={setClickedData}
+                  mapRef={mapRef}
                 />
             </Suspense>
 

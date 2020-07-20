@@ -3,24 +3,27 @@ import * as Icon from 'react-feather';
 import {useTrail, animated, config} from 'react-spring';
 import {useDebounce, useUpdateEffect} from 'react-use';
 import produce from 'immer';
-import {capitalize} from '../utils/commonFunctions';
+import {capitalize, fetcher } from '../utils/commonFunctions';
 import {useTranslation} from 'react-i18next';
 import {Link} from 'react-router-dom';
 import {
-    CITY_NAMES
+    CITY_NAMES,
+    DATA_URL_ROOT
 } from '../constants';
+import useStickySWR from "../hooks/useStickySwr";
 
 const locationSuggestions = [
     "Auckland",
-    "Wellington",
+    // "Wellington",
     "Waitakere",
     "Christchurch",
     "Queenstown",
 ]
 
 function Search({
-  allCentroidDestinations,
+  // allCentroidDestinations,
   setClickedData,
+  mapRef
 }){
     const [searchValue, setSearchValue] = useState('');
     const [expand, setExpand] = useState(false);
@@ -33,6 +36,16 @@ function Search({
     // console.log("CITY_NAMES: ", CITY_NAMES);
     // console.log("centroidData[15]: ", centroidData[15]);
     //useUpdateEffect(()=>{
+
+    // Data to load for search
+    const { data: allCentroidDestinations } = useStickySWR(
+      DATA_URL_ROOT + '/allCentroidDestinations',
+      fetcher,
+      {
+        revalidateOnMount: true,
+        revalidateOnFocus: false
+      }
+    )
     
     useEffect(()=>{
       if(allCentroidDestinations){
@@ -199,6 +212,13 @@ function Search({
                       onClick={()=>{
                         setSearchValue('');
                         setResults([]);
+                        mapRef.current.leafletElement.setView(
+                          [
+                            result.departure_LATITUDE,
+                            result.departure_LONGITUDE
+                          ], 12
+                        ); //9
+                        mapRef.current.leafletElement.updateData();
                       }}
                     >
                       <div className="result-top">

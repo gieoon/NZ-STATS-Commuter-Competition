@@ -75,6 +75,8 @@ function MapExplorer({
   const mapExplorerRef = useRef();
   const leafletMapRef = useRef();
 
+  const mapRef = useRef(null);
+
   const [currentMap, setCurrentMap] = useState({
     code: districtCode,
     view: MAP_TYPES.COUNTRY,
@@ -418,10 +420,11 @@ function MapExplorer({
                 hoveredData={hoveredData}
                 highlightedData={highlightedData}
                 centroidData={centroidData}
-                allCentroidDestinations={allCentroidDestinations}
+                // allCentroidDestinations={allCentroidDestinations}
                 currentDestinationData={currentDestinationData}
                 clickedData={clickedData}
                 setClickedData={setClickedData}
+                mapRef={mapRef}
               />
 
               <div className="map-wrapper">
@@ -447,6 +450,7 @@ function MapExplorer({
                   leafletMapRef={leafletMapRef}
                   setCurrentDestinationData={setCurrentDestinationData}
                   setClickedData={setClickedData}
+                  mapRef={mapRef}
                 />
 
                 <div className="tabs-container">
