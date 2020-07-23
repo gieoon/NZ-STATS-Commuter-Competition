@@ -1,5 +1,0 @@
-id,SA2_name_usual_residence_address,SA2_name_workplace_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1,cluster_count
-W13418,Mount St John,Mount St John,WORK_AT_HOME,186,WORK,Mount St John,-36.88236812,174.78035947,Mount St John,-36.88236812,174.78035947,0.0,Waitakere,Waitakere,Auckland,Auckland,478
-W26281,Whitiora,Whitiora,WORK_AT_HOME,129,WORK,Whitiora,-37.77756896,175.27048029,Whitiora,-37.77756896,175.27048029,0.0,Hamilton,Hamilton,Waikato,Waikato,76
-W39061,Woodridge,Woodridge,WORK_AT_HOME,63,WORK,Woodridge,-41.21623239,174.83461826,Woodridge,-41.21623239,174.83461826,0.0,Wellington,Wellington,Wellington,Wellington,143
-W46943,Mona Vale,Mona Vale,WORK_AT_HOME,99,WORK,Mona Vale,-43.52638334,172.60669389,Mona Vale,-43.52638334,172.60669389,0.0,Christchurch,Christchurch,Canterbury,Canterbury,174

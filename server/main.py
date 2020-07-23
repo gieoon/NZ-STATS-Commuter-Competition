@@ -2,6 +2,7 @@
 import ast
 from flask import Flask
 from flask_cors import CORS
+from flask import Response
 from flask import make_response, request, jsonify
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -15,8 +16,10 @@ import json
 import csv
 
 from zoom2 import handleZoom
-from centroid import getCentroidData, getAllCentroidDestinations
+from centroid import getAllCentroidDestinations #getCentroidData
 from destination import getDestinations
+
+print('INITIALIZING FLASK APP')
 
 SIZE_DIVISOR = 50 # 5 # 100
 
@@ -199,22 +202,23 @@ work_csv_out = work_df_combined.to_csv(index=False)
 education_csv_out = education_df_combined.to_csv(index=False)
 '''
 
-work_csv_out = pd.read_csv('./out/work.csv')
+# work_csv_out = pd.read_csv('./out/work.csv')
+
 # work_csv_out = work_csv_out.sample(int(len(work_csv_out.index) / SIZE_DIVISOR), axis=0)
 # work_csv_out = work_csv_out.to_csv('./out/work.csv',index=True,index_label="id")
 # work_csv_out = work_csv_out.to_csv(index=True)
 # work_csv_out.drop(work_csv_out.columns[1], axis=1,inplace=True)
 # work_csv_out['id'] = 'W' + work_csv_out['id'].astype(str)
 # work_csv_out = work_csv_out.to_csv('./out/work.csv',index=False)
-work_csv_out = work_csv_out.to_csv(index=False)
+# work_csv_out = work_csv_out.to_csv(index=False)
 
-education_csv_out = pd.read_csv('./out/education.csv')
+# education_csv_out = pd.read_csv('./out/education.csv')
 # education_csv_out = education_csv_out.sample(int(len(education_csv_out.index) / SIZE_DIVISOR), axis=0)
 # education_csv_out = education_csv_out.to_csv('./out/education.csv',index=True,index_label="id")
 # education_csv_out.drop(education_csv_out.columns[1], axis=1,inplace=True)
 # education_csv_out['id'] = 'E' + education_csv_out['id'].astype(str)
 # education_csv_out = education_csv_out.to_csv('./out/education.csv',index=False)
-education_csv_out = education_csv_out.to_csv(index=False)
+# education_csv_out = education_csv_out.to_csv(index=False)
 
 
 # with open('./out/work.csv') as work_csv:
@@ -231,7 +235,7 @@ app = Flask(__name__)
 # @cross_origin(origin='localhost',headers=['Content-Type','Authorization'])
 def hello():
     return 'Hello World'
-
+'''
 @app.route('/work_csv')
 # @cross_origin(origin='localhost',headers=['Content-Type','Authorization'])
 def work_csv():
@@ -247,7 +251,7 @@ def education_csv():
     # response = make_response("")
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
-
+'''
 locale_english = {}
 with open('./locale/english.json') as en:
     locale_english = json.load(en)
@@ -269,7 +273,7 @@ def faq_data():
     response = make_response(jsonify(faq))
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
-
+'''
 with open('./regional_data/work.json') as work_file:
     work_regional_dict = work_file.read()
     work_regional_dict = json.loads(work_regional_dict)
@@ -299,7 +303,7 @@ def total_regional_data():
     response = make_response(jsonify(total_regional_dict))
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
-
+'''
 # Handle zone data, retrieve data based on the current visible boundary
 @app.route('/zoneData')
 def get_zone_data():
@@ -316,7 +320,7 @@ def get_zone_data():
     response = make_response(jsonify(data))
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
-
+'''
 # Same as above, but loading for a specific commute type
 @app.route('/zoneDataWithCommuteType')
 def get_zone_data_with_commute_type():
@@ -330,7 +334,8 @@ def get_zone_data_with_commute_type():
     response = make_response(jsonify("{}"))
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
-
+'''
+'''
 # All centroid data, loaded once on page load
 @app.route('/centroidData')
 def get_centroid_data():
@@ -342,6 +347,7 @@ def get_centroid_data():
     response = make_response(centroidData)
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
+'''
 
 # For use with search to load all information into bloodhound
 @app.route('/allCentroidDestinations')
@@ -363,6 +369,10 @@ def get_destinations():
 def helloworld():
     print('hello world')
     return '<h1>hello world</h1>'
+
+@app.route('/_ah/start')
+def startup():
+    return Response("",status=200, mimetype='application/json')
 
 '''
 # This is only run once to create data which is saved serverside.
@@ -415,7 +425,14 @@ def setup():
     return response
 '''
 
+import os
+import psutil
+process = psutil.Process(os.getpid())
+print("Using memory: ", process.memory_info().rss)  # in bytes 
+
+
+
 if __name__ == '__main__' :
     app.run(debug=False, host='127.0.0.1')
 
-print('RUNNING FLASK APP')
+print('ENDING FLASK APP')

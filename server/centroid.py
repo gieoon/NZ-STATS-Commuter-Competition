@@ -1,6 +1,7 @@
 import pandas as pd
 import os.path
 
+'''
 MODES_OF_TRANSPORT = [
   "home", 
   "own_vehicle",
@@ -31,7 +32,7 @@ for commute_purpose in ["work"]:
 def getCentroidData(commute_purpose, commute_method, zoom_level):
     return centroidData
     # return centroidData["{}_{}_{}".format(commute_purpose,commute_method,zoom_level)]
-
+'''
 
 '''
 centroids_5 = pd.read_csv('./centroids/location-5.csv').to_csv(index=False)

@@ -42,8 +42,8 @@ const curvesWork = {},
 var currentSelectedCurve = {};
 
 // Allows for console debugging by calling >> curves in Chrome
-global.commuteWorkCurves = commuteWorkCurves; 
-global.commuteEducationCurves = commuteEducationCurves;
+// global.commuteWorkCurves = commuteWorkCurves; 
+// global.commuteEducationCurves = commuteEducationCurves;
 
 //forwardRef(
     function LeafletMap({

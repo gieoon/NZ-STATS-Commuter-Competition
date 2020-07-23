@@ -1,6 +1,0 @@
-id,SA2_name_usual_residence_address,SA2_name_workplace_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1,cluster_count
-W1936,Grafton,Quay Street-Customs Street,WALK_OR_JOG,6,EDUCATION,Grafton,-36.86013178,174.76828549,Quay Street-Customs Street,-36.84601989,174.77646293,1.7296492210702483,Waitakere,Waitakere,Auckland,Auckland,929
-W25174,Claudelands,Hamilton Central,WALK_OR_JOG,81,EDUCATION,Claudelands,-37.77969313,175.28791146,Hamilton Central,-37.78938082,175.28203067,1.1947765749799808,Hamilton,Hamilton,Waikato,Waikato,111
-W34546,Pipitea-Kaiwharawhara,Thorndon,WALK_OR_JOG,42,EDUCATION,Pipitea-Kaiwharawhara,-41.27624822,174.78772639,Thorndon,-41.27246445,174.77422734,1.204014696799054,Wellington,Wellington,Wellington,Wellington,479
-W43189,Hagley Park,Hagley Park,WALK_OR_JOG,6,EDUCATION,Hagley Park,-43.53053792,172.61981252,Hagley Park,-43.53053792,172.61981252,0.0,Christchurch,Christchurch,Canterbury,Canterbury,241
-W48515,Roslyn (Dunedin City),Dunedin Central,WALK_OR_JOG,84,EDUCATION,Roslyn (Dunedin City),-45.86711907,170.4917572,Dunedin Central,-45.87712471,170.50291221,1.408432814734888,Dunedin,Dunedin,Otago,Otago,150

@@ -1,4 +1,0 @@
-id,SA2_name_usual_residence_address,SA2_name_workplace_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1,cluster_count
-W1894,Freemans Bay,Quay Street-Customs Street,OTHER,6,EDUCATION,Freemans Bay,-36.85220128,174.7504171,Quay Street-Customs Street,-36.84601989,174.77646293,2.4173388207571787,Waitakere,Waitakere,Auckland,Auckland,28
-W32074,Lower Vogeltown,New Plymouth Central,OTHER,6,EDUCATION,Lower Vogeltown,-39.07209853,174.0782174,New Plymouth Central,-39.05700192,174.07537454,1.6965146918672798,New Plymouth,New Plymouth,Taranaki,Taranaki,20
-W35008,Oriental Bay,Wellington Central,OTHER,9,EDUCATION,Oriental Bay,-41.29186473,174.79287237,Wellington Central,-41.2849345,174.77572593,1.6267186733287644,Wellington,Wellington,Wellington,Wellington,88

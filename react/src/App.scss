@@ -950,7 +950,7 @@ h6 {
     -moz-box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
     -webkit-appearance: none !important;
     -webkit-box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
-    background: #fff;
+    background: #1e1e30 !important;
     border: 0;
     border-radius: 5px;
     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
@@ -2558,7 +2558,7 @@ abbr {
 input {
   &.switch {
     appearance: none;
-    background-color: #fff;
+    background-color: #1e1e30 !important;
     border: 2px solid #d9dadc;
     border-radius: 10px;
     cursor: pointer;

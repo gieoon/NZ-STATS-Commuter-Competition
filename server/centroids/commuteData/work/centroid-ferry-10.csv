@@ -1,2 +1,0 @@
-id,SA2_name_usual_residence_address,SA2_name_workplace_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1,cluster_count
-W1859,Northcote Point (Auckland),Quay Street-Customs Street,FERRY,9,EDUCATION,Northcote Point (Auckland),-36.81611854,174.74451838,Quay Street-Customs Street,-36.84601989,174.77646293,4.374704585724417,Waitakere,Waitakere,Auckland,Auckland,96

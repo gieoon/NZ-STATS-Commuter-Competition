@@ -1,7 +1,7 @@
 // Server address providing map data, localization, and any other json files
 
 // PRODUCTION SETTINGS = false;
-const DEBUG = true;
+const DEBUG = false;
 
 export const DATA_URL_ROOT = DEBUG 
   ? "http://localhost:5000"

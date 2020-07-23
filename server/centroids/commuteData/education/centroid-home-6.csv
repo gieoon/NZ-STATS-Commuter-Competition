@@ -1,5 +1,0 @@
-id,SA2_name_usual_residence_address,SA2_name_educational_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1,cluster_count
-E1736,Mount St John,Mount St John,STUDY_AT_HOME,33,EDUCATION,Mount St John,-36.88236812,174.78035947,Mount St John,-36.88236812,174.78035947,0.0,Waitakere,Waitakere,Auckland,Auckland,461
-E10418,Whitiora,Whitiora,STUDY_AT_HOME,27,EDUCATION,Whitiora,-37.77756896,175.27048029,Whitiora,-37.77756896,175.27048029,0.0,Hamilton,Hamilton,Waikato,Waikato,71
-E17152,Newlands South,Newlands South,STUDY_AT_HOME,60,EDUCATION,Newlands South,-41.23454859,174.82124819,Newlands South,-41.23454859,174.82124819,0.0,Wellington,Wellington,Wellington,Wellington,140
-E18023,Merivale,Merivale,STUDY_AT_HOME,48,EDUCATION,Merivale,-43.51635206,172.61911331,Merivale,-43.51635206,172.61911331,0.0,Christchurch,Christchurch,Canterbury,Canterbury,157

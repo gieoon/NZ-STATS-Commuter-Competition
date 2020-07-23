@@ -1,2 +1,0 @@
-id,SA2_name_usual_residence_address,SA2_name_workplace_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1,cluster_count
-W43007,Riccarton East,Christchurch Central-West,BICYCLE,6,EDUCATION,Riccarton East,-43.53245227,172.61070266,Christchurch Central-West,-43.52780609,172.6306519,1.6892050523646305,Christchurch,Christchurch,Canterbury,Canterbury,380

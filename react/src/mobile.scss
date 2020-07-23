@@ -143,7 +143,7 @@
             }
 
             h4 {
-                font-size: 7.5px!important; //.7em!important;
+                font-size: 7.5px!important;//7.5px!important; //.7em!important;
             }
         }
     }
@@ -196,3 +196,18 @@
 
 }
 
+@media screen and (max-width: 350px){
+    .commutes-wrapper {
+
+        .CommuteTab {
+
+            img {
+                width: 18px!important; 
+            }
+
+            h4 {
+                font-size: 6.5px!important;
+            }
+        }
+    }
+}

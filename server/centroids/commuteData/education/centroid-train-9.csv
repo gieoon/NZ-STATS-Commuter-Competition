@@ -1,2 +1,0 @@
-id,SA2_name_usual_residence_address,SA2_name_educational_address,COMMUTE_TYPE,COUNT,TYPE,departure_SA22018_V1_NAME,departure_LATITUDE,departure_LONGITUDE,destination_SA22018_V1_NAME,destination_LATITUDE,destination_LONGITUDE,HAVERSINE_DISTANCE,DEPARTURE_NAME_2,DESTINATION_NAME_2,DEPARTURE_NAME_1,DESTINATION_NAME_1,cluster_count
-E1298,Onehunga-Te Papapa Industrial,Auckland-University,TRAIN,9,EDUCATION,Onehunga-Te Papapa Industrial,-36.92606886,174.79489131,Auckland-University,-36.85143057,174.76906469,8.61136516474142,Waitakere,Waitakere,Auckland,Auckland,382

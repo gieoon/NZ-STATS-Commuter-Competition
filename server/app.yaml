@@ -3,22 +3,24 @@ runtime: python38
 # https://cloud.google.com/appengine/docs/the-appengine-environments
 # https://cloud.google.com/appengine/docs/managing-costs
 # https://cloud.google.com/appengine/docs/standard#second-gen-runtimes
+# https://stackoverflow.com/questions/18101642/appengine-limit-the-number-of-instances
 
 # Using Flexible Environment
-# instance_class: F4_1G
+instance_class: F4_1G
 
 # entrypoint: gunicorn -b :$PORT main:app
 
-# automatic_scaling:
-#     max_instances: 1
-#     max_idle_instances: 1
-#     max_concurrent_requests: 80
+automatic_scaling:
+    max_instances: 1
+    # max_idle_instances: 1
+    max_concurrent_requests: 80
 
 # Using Standard Environment
 
-instance_class: B2
-basic_scaling:
-    max_instances: 1
+# instance_class: B4_1G
+# basic_scaling:
+#     max_instances: 1
+#     idle_timeout: 10m
 
 # handlers:
 #   # This configures Google App Engine to serve the files in the app's static
